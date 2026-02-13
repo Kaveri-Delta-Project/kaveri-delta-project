@@ -64,6 +64,7 @@ WORK_MAPPING = {
     "editor_role": {"element": "editor", "element_attr": "role", "all_results": True},
     "pub_place": {"parent_tag": "pubPlace", "attributes": ["key"], "child_elements": ["placeName"]},
     "genre": {"element": "note", "filter_attr": "type", "filter_value": "genre", "all_results": True},
+    "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
@@ -116,7 +117,7 @@ ENTITY_CONFIG = {
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_work.xml"),
         "mapping": WORK_MAPPING,
         "child_order": ["title", "idno", "editor", "pubPlace", "note"],
-        "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "general": 1},
+        "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "general": 2},
         "element_tag": "bibl",
         "name_tag": "title",
         "container_tag": ".//tei:listBibl",

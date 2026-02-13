@@ -214,9 +214,40 @@ def handle_genre(work, context, form_data):
         "error": None
     }
 
+@section_handler("subject")
+def handle_genre(work, context, form_data):
+    subject = form_data.get("subject")
+
+    if not subject:
+        flash("No subject entered.", "subject-error")
+        return {"ok": False}
+
+    el = add_simple_element_attr(
+        parent=work,
+        tag="note",
+        text=subject,
+        attrs={"type": "subject"},
+        allow_multiple=True
+    )
+
+    insert_in_order(
+        parent=work, 
+        tag="note", 
+        new_elem=el, 
+        child_order=CHILD_ORDER, 
+        nsmap=NSMAP, 
+        sort_attr="type", 
+        attr_priority=ATTR_PRIORITY
+    )
+
+    return {
+        "ok": True,
+        "error": None
+    }
+
 
 @section_handler("notes")
-def handle_notes(person, context, form_data):
+def handle_notes(work, context, form_data):
     
     notes = form_data.get("notes")
 

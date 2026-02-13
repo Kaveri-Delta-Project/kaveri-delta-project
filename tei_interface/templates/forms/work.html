@@ -193,14 +193,12 @@
         {{ ui.select_field("editor_role",
               [
                 ("", "-- Select MARC role --"),
-                ("arr", "Arranger (arr)"),
                 ("aut", "Author (aut)"),
                 ("com", "Compiler (com)"),
                 ("ctb", "Contributor (ctb)"),
                 ("edt", "Editor (edt)"),
                 ("oth", "Other (oth)"),
                 ("pat", "Patron (pat)"),
-                ("pbl", "Publisher (pbl)"),
                 ("trl", "Translator (trl)"),
                 ("wac", "Writer of added commentary (wac)"),
                 ("wst", "Writer of supplementary textual content (wst)"),
@@ -291,28 +289,78 @@
         {{ ui.select_field("genre",
             [
             ("", "-- Select genre --"),
-            ("astronomy", "Astronomy"),
             ("commentary", "Commentary"),
-            ("catalogue", "Catalogue/Inventory"),
             ("debate", "Debate/Argumentative"),
             ("drama", "Drama"),
-            ("didactic", "Didactic/Educational"),
-            ("grammar", "Grammar"),
+            ("didactic", "Didactic"),
+            ("doxography", "Doxography"),
             ("history", "Historical Work"),
-            ("law", "Legal Text"),
+            ("hymn", "Hymn"),
             ("lexicon", "Lexicon"),
-            ("medicine", "Medical Treatise"),
-            ("mathematics", "mathematics"),
+            ("narrative", "Narrative"),
             ("philosophy", "Philosophy"),
             ("poetry", "Poetry"),
             ("ritual_manual", "Ritual Manual"),
-            ("theology", "Theology / Religious Doctrine"),
+            ("theology", "Theology/Religious Doctrine"),
             ],
             required=True
         ) }}
       </div>
 
       {{ ui.form_actions("toggleEntryForm('genres-form')") }}
+
+    </form>
+  </div>
+</section>
+
+<section class="panel">
+  {{ ui.section_header("Subjects", "+ add subject", "toggleEntryForm('subjects-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('subject-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['subject-error'] }}
+    </div>
+  {% endif %}
+
+  <!-- Delete identifier -->
+  {% for val in data.subject %}
+    <div class="border rounded p-2 mb-2">
+
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "subject"}
+      ) }}
+    </div>
+  {% endfor %}
+
+  <!-- Add new subject -->
+  <div id="subjects-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="subject">
+
+      <div class="mb-3">
+        {{ ui.select_field("subject",
+            [
+            ("", "-- Select subject --"),
+            ("grammar", "Grammar"),
+            ("vedānta", "Vedānta"),
+            ("mīmāṃsā", "Mīmāṃsā"),
+            ("jurisprudence", "Jurisprudence"),
+            ("epic", "Epic"),
+            ("nāmasiddhānta", "Nāmasiddhānta"),
+            ("nyāya", "Nyāya"),
+            ("alaṃkāraśāstra", "Alaṃkāraśāstra"),
+            ("saiva", "Śaiva"),
+            ("Vaiṣṇava", "Vaiṣṇava"),
+            ],
+            required=True
+        ) }}
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('subjects-form')") }}
 
     </form>
   </div>
