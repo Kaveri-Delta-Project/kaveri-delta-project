@@ -24,6 +24,10 @@
     "name": "hello"
   },
   {
+    "xml_id": "ms_9",
+    "name": "new ms"
+  },
+  {
     "xml_id": "ms_2",
     "name": "test"
   }
