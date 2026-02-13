@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+}
+
+.alphabet {
+  margin-bottom: 1.5rem;
+}
+
+.alphabet button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.letter-group {
+  display: none;
+}
+
+.letter-group.active {
+  display: block;
+}
+
+.index-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.index-item {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle {
+  margin-left: 0.4rem;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.item-details {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  color: #444;
+}
+
+.index-item.open .item-details {
+  display: block;
+}
+
+.index-item.open .toggle {
+  transform: rotate(90deg);
+}

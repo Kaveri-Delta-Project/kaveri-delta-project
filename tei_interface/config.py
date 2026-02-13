@@ -3,7 +3,7 @@ import sys
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "data"))
 INDEX_DIR = os.path.join(BASE_DIR, "index")
 TEI_TEMPLATES_DIR = os.path.join(BASE_DIR, "tei_templates")
 
