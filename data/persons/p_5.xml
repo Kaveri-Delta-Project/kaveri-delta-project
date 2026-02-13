@@ -1,0 +1,65 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    
+    <teiHeader>
+        <!-- METADATA: DO NOT EDIT -->
+        <fileDesc>
+            <titleStmt>
+                <title>Sanskrit Project – Person</title>
+            </titleStmt>
+            
+            <publicationStmt>
+                <p>Research data</p>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    
+    <text>
+            
+            <!-- EDIT BELOW THIS LINE ONLY -->
+            
+            <body>
+                <listPerson>
+                    <!-- Identifier and gender for the person file -->
+                    <person sex="M" xml:id="p_5">
+                        
+                        <!-- Primary name of person -->
+                        <persName type="preferred">A Person</persName>
+                        
+                        <!-- Optional variant(s) for name of person -->
+                        <persName type="variant">Alternative Name of Person</persName>
+                        
+                        <!-- External authority identifier for person -->
+                        <!-- Use VIAF if an item exists for this person -->
+                        <!-- If not found on VIAF try Wikidata -->
+                        <!-- Enter only the identifier (e.g. VIAF 12345678, Wikidata Q123456), not the full URL --> 
+                        <idno type="VIAF">12345678</idno>
+                        <idno type="Wikidata">Q123456</idno>
+                        
+                        <!-- Optional life dates for person -->
+                        <!-- Birth/death dates -->
+                        <!-- Approximate period of activity -->
+                        <birth when="1600-06-15">15 June 1600</birth>
+                        <death when="1650-12-31">31 December 1650</death>
+                        <floruit from="1620" to="1650">active c. 1620–1650</floruit>
+                        
+                        <!-- Affiliation place(s) for person -->
+                        <!-- Must link to place file in places directory via key -->
+                        <affiliation from="1620" to="1640" key="l_1">
+                            <placeName>Name of Place</placeName>
+                        </affiliation>
+                        
+                        <!-- Any notes of interest related to person -->
+                        <note>Any notes on the person added in this section</note>
+                    </person>
+                
+                </listPerson>
+            </body>
+            
+    
+    </text>
+    
+</TEI>

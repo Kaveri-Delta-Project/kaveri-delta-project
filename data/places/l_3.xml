@@ -1,0 +1,52 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    
+    <teiHeader>
+        <!-- METADATA: DO NOT EDIT -->
+        <fileDesc>
+            <titleStmt>
+                <title>Sanskrit Project – Place</title>
+            </titleStmt>
+            
+            <publicationStmt>
+                <p>Unpublished research data</p>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    
+    <text>
+        <body>
+            
+            <!-- EDIT BELOW THIS LINE ONLY -->
+            <listPlace>
+                <!-- Identifier for the place file -->
+                <place xml:id="l_3">
+                    <!-- Primary name of place -->
+                    <placeName type="preferred">D Place</placeName>
+                    
+                    <!-- Optional variant(s) for name of place -->
+                    <placeName type="variant">Alternative Name of Place</placeName>
+                    
+                    <!-- External authority identifier for place -->
+                    <!-- Use Getty Thesaurus of Geographic Names if item exists for this place -->
+                    <!-- If not found on Getty Thesaurus try Wikidata -->
+                    <!-- Enter only the identifier (e.g. TGN 1234567, Wikidata Q123456), not the full URL --> 
+                    <idno type="TGN">1234567</idno>
+                    <idno type="Wikidata">Q123456</idno>
+                                      
+                    <!-- Alternative for entering place coordinates -->
+                    <!-- Use if external authority identifier cannot be found --> 
+                    <note type="coordinates">Lat: 25.3176, Long: 75.3200</note>
+                    
+                    <!-- Any notes of interest related to place -->
+                    <note>Any notes on the place added in this section</note>
+                </place>
+            </listPlace>
+            
+        </body>
+    </text>
+    
+</TEI>

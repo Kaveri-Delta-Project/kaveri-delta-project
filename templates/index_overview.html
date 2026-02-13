@@ -1,0 +1,12 @@
+<h1>Entities</h1>
+
+<ul>
+  {% for entity, items in all_entities.items() %}
+    <li>
+      <a href="{{ url_for('entity_index', entity=entity) }}">
+        {{ entity|capitalize }}
+      </a>
+      ({{ items|length }})
+    </li>
+  {% endfor %}
+</ul>

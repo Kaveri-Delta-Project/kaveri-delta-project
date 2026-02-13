@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui %}
+
+{% block title %}Edit {{ entity|capitalize }}{% endblock %}
+{% block heading %}{{ entity|capitalize }}{% endblock %}
+
+{% block content %}
+
+<div class="container my-4">
+
+  {% if data %}
+    {% set form_action = url_for('edit_entity', entity=entity, xml_id=data.xml_id) %}
+  {% else %}
+    {% set form_action = url_for('new_entity', entity=entity) %}
+  {% endif %}
+
+  <div class="mb-3">
+    <a href="{{ url_for('index') }}" class="btn btn-secondary me-2">
+      <i class="bi bi-house-door-fill"></i> Return to Home
+    </a>
+    <a href="{{ url_for('entity_index', entity=entity) }}" class="btn btn-primary">
+      <i class="bi bi-list-ul"></i> Return to {{ entity|capitalize }} Index
+    </a>
+  </div>
+
+
+  {% if xml_id %}
+    <div class="alert alert-info">
+      XML ID: <strong>{{ xml_id }}</strong>
+    </div>
+  {% endif %}
+
+    <div class="card shadow-sm">
+    <div class="card-body">
+
+      {% block entity_form %}
+      {# entity-specific panels go here #}
+      {% endblock %}
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

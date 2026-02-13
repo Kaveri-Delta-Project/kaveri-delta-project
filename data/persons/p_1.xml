@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_1" sex="M">
+          <persName type="variant">Alternative Name of Bhāvamiśra</persName>
+          <persName type="variant">Another name</persName>
+          <idno type="VIAF">66711850</idno>
+          <floruit from="1500" to="1550">1500-1550 approx.</floruit>
+          <affiliation from="1620" to="1650" key="p_1">
+            <placeName>Magadha</placeName>
+          </affiliation>
+          <note>Dates are approximate.</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

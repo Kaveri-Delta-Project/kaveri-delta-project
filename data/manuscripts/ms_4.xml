@@ -1,0 +1,84 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    
+    <teiHeader>
+        <!-- METADATA: DO NOT EDIT -->
+        <fileDesc>
+            <titleStmt>
+                <title>Sanskrit Project – Manuscript</title>
+            </titleStmt>
+            
+            <publicationStmt>
+                <p>Unpublished research data</p>
+            </publicationStmt>
+            
+            <!-- EDIT BELOW THIS LINE ONLY -->
+            <sourceDesc>
+                <!-- Identifier for the manuscript file -->
+                <msDesc xml:id="ms_4">
+                    
+                    <!-- Name of current repository containing the manuscript -->
+                    <!-- Shelfmark of the manuscript within repository -->
+                    <msIdentifier>
+                        <repository>Name of Repository for Manuscript</repository>
+                        <idno>Shelfmark or call number of manuscript</idno>
+                        <msName type="preferred">C Manuscript</msName>
+                        <msName type="variant"></msName>
+                    </msIdentifier>
+                    
+                    <!-- Work(s) contained within the manuscript -->
+                    <!-- Must link to work file in works directory via key -->
+                    <msContents>
+                        <msItem>
+                            <title key="w_1">Name of Associated Work</title>
+                        </msItem>
+                    </msContents>
+                                                            
+                    <!-- Minimal physical description of manuscript -->
+                    <physDesc>
+                        <p>Palm-leaf manuscript, 45 folios.</p>
+                    </physDesc>
+                                        
+                    <!-- Origin date(s) and production place(s) for manuscript -->
+                    <!-- Must link to place file in places directory via key -->
+                    <history>
+                        <origin>
+                            <origDate from="1620" to="1650">1620-1650</origDate>
+                            <origPlace key="l_1">Name of Manuscript Origin Place</origPlace>
+                            <origPlace key="l_2">Name of Manuscript Origin Place</origPlace>
+                        </origin>
+                    </history>
+                    
+                    <!-- Any notes of interest related to manuscript -->
+                    <additional>
+                        <adminInfo>
+                            <note></note>
+                        </adminInfo>
+                    </additional>
+
+                </msDesc>
+                
+                <!-- Associated person(s) for manuscript -->
+                <!-- Must link to person file in persons directory via key -->
+                <!-- Associated persons should also have a role attribute with a Marc Relator code -->
+                <!-- Full list of applicable codes provided for the project -->
+                <listPerson>
+                    <person role="scr">
+                        <persName key="p_1">Name of associated person (scribe)</persName>
+                    </person>
+                    <person role="fmo">
+                        <persName key="p_2">Name of associated person (former owner)</persName>
+                    </person>   
+                </listPerson>
+                
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+
+    <!-- DO NOT EDIT BELOW THIS LINE -->
+    <text>
+        <body>
+            <p></p>
+        </body>
+    </text>
+    
+</TEI>

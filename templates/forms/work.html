@@ -1,0 +1,363 @@
+{% extends "form_base.html" %}
+
+{% block entity_form %}
+
+{% set section_messages = {} %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% for category, message in messages %}
+    {% set _ = section_messages.update({category: message}) %}
+  {% endfor %}
+{% endwith %}
+
+
+<section class="panel">
+  
+  {{ ui.section_header("Main Title (Unique Value)", "+ add main title", "toggleEntryForm('main-title-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('main-title-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['main-title-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.title %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="title",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "preferred"}
+      ) }}
+    </div>
+  {% endfor %}
+
+  <!-- Preferred title -->
+  <div id="main-title-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="preferred_title">
+
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="title",
+              name="title",
+              label="Main Title",
+              extra_attrs="required",
+              help_text="Enter main title here"
+          ) }}
+        </div>
+
+        {{ ui.form_actions("toggleEntryForm('main-title-form')") }}
+
+    </form>
+  </div>  
+</section>
+
+
+<section class="panel">
+
+  {{ ui.section_header("Alternative Titles", "+ add alternative titles", "toggleEntryForm('alt-titles-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('alt-titles-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['alt-titles-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.alt_title %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+            section="title",
+            index=loop.index0,
+            extra_fields={"element_attr_name": "type", "element_attr_value": "variant"}
+      ) }}
+    </div>
+  {% endfor %}
+
+    <!-- Alternative title -->
+    <div id="alt-titles-form" class="border rounded p-3 mt-3 d-none">
+      <form method="POST" action="{{ form_action }}">
+        <input type="hidden" name="section" value="add_work_variant">
+
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="alt_title",
+              name="alt_title",
+              label="Alternative Titles",
+              extra_attrs="required",
+              help_text="Enter any alternative titles here"
+          ) }}
+        </div>
+
+        {{ ui.form_actions("toggleEntryForm('alt-titles-form')") }}  
+
+    </form>
+  </div>  
+</section>
+
+
+<section class="panel">
+  {{ ui.section_header("Identifier (Unique Value)", "+ add identifier", "toggleEntryForm('idno-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('idno-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['idno-error'] }}
+    </div>
+  {% endif %}
+
+  <!-- Delete identifier -->
+  {% for type, value in zip(data.idno_type, data.idno_value) %}
+    <div class="border rounded p-2 mb-2">
+
+      <span class="fw-semibold">{{ type }}</span>
+      <span class="text-muted">({{ value }})</span>
+
+      {{ ui.delete_button("idno", loop.index0) }}
+
+    </div>
+  {% endfor %}
+
+  <!-- Add new idno -->
+  <div id="idno-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="idno">
+
+      <div class="mb-3">
+        {{ ui.select_field("idno_type",
+            [
+              ("", "-- Select type --"),
+              ("Wikidata", "Wikidata"),
+              ("LCNAF", "Library of Congress"),
+            ],
+            required=True
+        ) }}
+      </div>
+
+      <div class="mb-3">
+        {{ ui.input_field(
+            id="idno_value",
+            name="idno_value",
+            label="Identifier Number",
+            label_option="(required)",
+            placeholder="e.g. Q123456 (Wikidata), n12345678 (LCNAF)",
+            extra_attrs="required",
+            help_text="Enter identifier number in correct format"
+        ) }}
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('idno-form')") }}
+
+    </form>
+  </div>
+</section>
+
+
+<section class="panel">
+  {{ ui.section_header("Editors", "+ add editor", "toggleEntryForm('editor-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('editor-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['editor-error'] }}
+    </div>
+  {% endif %}
+
+  {% for text, key, role in zip(data.editor_text, data.editor_key, data.editor_role) %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ text }}</span>
+      <span class="text-muted">(role: {{ role }}) [{{ key }}]</span>
+      {{ ui.delete_button("editor", loop.index0) }}
+    </div>
+  {% endfor %} 
+
+<div id="editor-form" class="border rounded p-3 mt-3 d-none">
+  <form method="POST" action="{{ form_action }}">
+    <input type="hidden" name="section" value="editor">
+
+      <div class="mb-3">
+        {{ ui.input_field(
+            id="editor_key",
+            name="editor_key",
+            label="Key",
+            label_option="(required)",
+            placeholder="e.g. p_20",
+            extra_attrs="required",
+            help_text="Enter person key – must link to a person file"
+        ) }}
+      </div>
+
+      <div class="mb-3">
+        {{ ui.select_field("editor_role",
+              [
+                ("", "-- Select MARC role --"),
+                ("arr", "Arranger (arr)"),
+                ("aut", "Author (aut)"),
+                ("com", "Compiler (com)"),
+                ("ctb", "Contributor (ctb)"),
+                ("edt", "Editor (edt)"),
+                ("oth", "Other (oth)"),
+                ("pat", "Patron (pat)"),
+                ("pbl", "Publisher (pbl)"),
+                ("trl", "Translator (trl)"),
+                ("wac", "Writer of added commentary (wac)"),
+                ("wst", "Writer of supplementary textual content (wst)"),
+              ],
+            required=True
+        ) }}
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('editor-form')") }}
+
+    </form>
+  </div>  
+</section>  
+
+
+<section class="panel">
+  {{ ui.section_header("Publication Places", "+ add publication place", "toggleEntryForm('pub-places-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('pub-places-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['pub-places-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.pub_place %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val.placeName }}</span>
+      <span class="text-muted">[{{ val.key }}]</span>
+      {{ ui.delete_button("pubPlace", loop.index0) }}
+    </div>
+  {% endfor %}  
+
+  
+  <!-- Add publication place -->
+  <div id="pub-places-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="pub_place">
+
+      <div class="mb-3">
+        {{ ui.input_field(
+            id="pub_place_key",
+            name="pub_place_key",
+            label="Key",
+            label_option="(required)",
+            placeholder="e.g. l_20",
+            extra_attrs="required",
+            help_text="Enter place key – must link to a place file"
+        ) }}
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('pub-places-form')") }}      
+
+   </form>
+  </div>
+</section>
+
+
+<section class="panel">
+  {{ ui.section_header("Genres", "+ add genre", "toggleEntryForm('genres-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('genre-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['genre-error'] }}
+    </div>
+  {% endif %}
+
+  <!-- Delete identifier -->
+  {% for val in data.genre %}
+    <div class="border rounded p-2 mb-2">
+
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "genre"}
+      ) }}
+    </div>
+  {% endfor %}
+
+  <!-- Add new genre -->
+  <div id="genres-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="genre">
+
+      <div class="mb-3">
+        {{ ui.select_field("genre",
+            [
+            ("", "-- Select genre --"),
+            ("astronomy", "Astronomy"),
+            ("commentary", "Commentary"),
+            ("catalogue", "Catalogue/Inventory"),
+            ("debate", "Debate/Argumentative"),
+            ("drama", "Drama"),
+            ("didactic", "Didactic/Educational"),
+            ("grammar", "Grammar"),
+            ("history", "Historical Work"),
+            ("law", "Legal Text"),
+            ("lexicon", "Lexicon"),
+            ("medicine", "Medical Treatise"),
+            ("mathematics", "mathematics"),
+            ("philosophy", "Philosophy"),
+            ("poetry", "Poetry"),
+            ("ritual_manual", "Ritual Manual"),
+            ("theology", "Theology / Religious Doctrine"),
+            ],
+            required=True
+        ) }}
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('genres-form')") }}
+
+    </form>
+  </div>
+</section>
+
+
+<section class="panel">
+  {{ ui.section_header("Notes", "+ add notes", "toggleEntryForm('notes-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('notes-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['notes-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.notes %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "general"}
+      ) }}
+    </div>
+  {% endfor %}
+
+  <div id="notes-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="notes">
+
+      <div class="mb-3">
+        {{ ui.input_field(
+            id="notes",
+            name="notes",
+            label="Notes",
+            extra_attrs="required",
+            help_text="Enter any extra notes here"
+        ) }}
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('notes-form')") }}  
+
+    </form>
+  </div>  
+</section>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+/* ---- Global form sanity ---- */
+
+form {
+  margin: 0;
+}
+
+/* Base input styling (valid CSS only) */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Search / text inputs */
+input[type="text"],
+input[type="search"],
+textarea {
+  line-height: 1.4;
+}
+
+/* Stop Chrome autofill background */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+}
+
+/* Panels */
+.panel {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: #fafafa;
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 0.3em 0.6em;
+}
+
+button:hover {
+  background: #eee;
+}
+
+button[type="submit"] {
+  font-weight: 500;
+}
+
+.section-error {
+  color: #842029;
+  background: #f8d7da;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}

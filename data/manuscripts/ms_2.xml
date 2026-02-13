@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Manuscript</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc xml:id="ms_2">
+          <msIdentifier>
+            <msName type="preferred">test</msName>
+          </msIdentifier>
+          <msContents>
+                    </msContents>
+          <physDesc>
+                    </physDesc>
+          <history>
+            <origin>
+                        </origin>
+          </history>
+          <additional>
+            <adminInfo>
+                        </adminInfo>
+          </additional>
+        </msDesc>
+        <listPerson>
+                </listPerson>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p/>
+    </body>
+  </text>
+</TEI>
