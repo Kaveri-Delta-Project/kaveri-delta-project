@@ -4,8 +4,8 @@ on:
   push:
     paths:
       - 'data/**'
-      - '*.py'
-      - 'static/**'
+      - 'tei_index_build/*.py'
+      - 'tei_index_build/static/**'
 
 jobs:
   build-indexes:
@@ -64,19 +64,19 @@ jobs:
       # 5. Run index builders conditionally
       - name: Build manuscripts index
         if: steps.changes.outputs.manuscripts == 'true'
-        run: python build_ms_index.py
+        run: python tei_index_build/build_ms_index.py
 
       - name: Build persons index
         if: steps.changes.outputs.persons == 'true'
-        run: python build_person_index.py
+        run: python tei_index_build/build_person_index.py
 
       - name: Build places index
         if: steps.changes.outputs.places == 'true'
-        run: python build_place_index.py
+        run: python tei_index_build/build_place_index.py
 
       - name: Build works index
         if: steps.changes.outputs.works == 'true'
-        run: python build_work_index.py
+        run: python tei_index_build/build_work_index.py
 
       # 6. Commit generated HTML (only if changed)
       - name: Commit generated indexes
@@ -84,7 +84,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add build/
+          git add tei_index_build/build/
 
           if git diff --cached --quiet; then
             echo "No index changes to commit"
