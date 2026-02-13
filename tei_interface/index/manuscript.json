@@ -4,6 +4,10 @@
     "name": "A test MS"
   },
   {
+    "xml_id": "ms_8",
+    "name": "another test_ms"
+  },
+  {
     "xml_id": "ms_4",
     "name": "C Manuscript"
   },
