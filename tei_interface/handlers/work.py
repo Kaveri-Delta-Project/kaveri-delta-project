@@ -23,15 +23,15 @@ def section_handler(name):
         return func
     return wrapper
 
+
+
 @section_handler("preferred_title")
 def handle_preferred_title(work, context, form_data):
     title = form_data.get("title")
     
     if not title:
-        return {
-            "ok": False,
-            "error": "Main title cannot be empty."
-        }
+        flash("Main title cannot be empty.", "main-title-error")
+        return {"ok": False}
 
     el = add_simple_element_attr(
         parent=work,
@@ -62,10 +62,9 @@ def handle_variant_title(work, context, form_data):
     alt_title = form_data.get("alt_title")
 
     if not alt_title:
-        return {
-            "ok": False,
-            "error": "Alternative name cannot be empty."
-        }
+        flash("Alternative title cannot be empty.", "alt-titles-error")
+        return {"ok": False}
+
 
     el = add_simple_element_attr(
         parent=work,
@@ -246,16 +245,15 @@ def handle_genre(work, context, form_data):
     }
 
 
+
 @section_handler("notes")
 def handle_notes(work, context, form_data):
     
     notes = form_data.get("notes")
 
     if not notes:
-        return {
-            "ok": False,
-            "error": "Notes cannot be empty."
-        }
+        flash("Notes cannot be empty.", "notes-error")
+        return {"ok": False}
 
     el = add_simple_element_attr(
         parent=work,
