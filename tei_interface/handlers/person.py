@@ -23,15 +23,15 @@ def section_handler(name):
         return func
     return wrapper
 
+
+
 @section_handler("preferred_name")
 def handle_preferred_name(person, context, form_data):
     name = form_data.get("name")
     
     if not name:
-        return {
-            "ok": False,
-            "error": "Preferred name cannot be empty."
-        }
+        flash("Preferred name cannot be empty.", "pref-name-error")
+        return {"ok": False}
 
     el = add_simple_element_attr(
         parent=person,
@@ -56,15 +56,15 @@ def handle_preferred_name(person, context, form_data):
         "error": None
     }
 
+
+
 @section_handler("add_variant")
 def handle_variant_name(person, context, form_data):
     alt_name = form_data.get("alt_name")
 
     if not alt_name:
-        return {
-            "ok": False,
-            "error": "Alternative name cannot be empty."
-        }
+        flash("Alternative name cannot be empty.", "alt-names-error")
+        return {"ok": False}
 
     el = add_simple_element_attr(
         parent=person,
@@ -310,15 +310,15 @@ def handle_affiliation(person, context, form_data):
         "error": None
     }
 
+
+
 @section_handler("notes")
 def handle_notes(person, context, form_data):
     notes = form_data.get("notes")
 
     if not notes:
-        return {
-            "ok": False,
-            "error": "Notes cannot be empty."
-        }
+        flash("Notes cannot be empty.", "notes-error")
+        return {"ok": False}
 
     el = add_simple_element_attr(
         parent=person,

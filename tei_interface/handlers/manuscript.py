@@ -23,15 +23,15 @@ def section_handler(name):
         return func
     return wrapper
 
+
 @section_handler("preferred_ms_name")
 def handle_preferred_title(manuscript, context, form_data):
     name = form_data.get("name")
     
     if not name:
-        return {
-            "ok": False,
-            "error": "Manuscript name cannot be empty."
-        }
+        flash("Manuscript name cannot be empty.", "ms-name-error")
+        return {"ok": False}
+        
 
     msIdentifier_el = context["root"].find(".//tei:msIdentifier", namespaces=NSMAP)
 
@@ -64,10 +64,9 @@ def handle_variant_name(manuscript, context, form_data):
     alt_name = form_data.get("alt_name")
     
     if not alt_name:
-        return {
-            "ok": False,
-            "error": "Alternative name cannot be empty."
-        }
+        flash("Alternative name cannot be empty.", "alt-ms-names-error")
+        return {"ok": False}
+
 
     msIdentifier_el = context["root"].find(".//tei:msIdentifier", namespaces=NSMAP)
 
@@ -95,15 +94,14 @@ def handle_variant_name(manuscript, context, form_data):
     }
 
 
+
 @section_handler("repository")
 def handle_repository(manuscript, context, form_data):
     repository = form_data.get("repository")
 
     if not repository:
-        return {
-            "ok": False,
-            "error": "Repository cannot be empty."
-        }
+        flash("Repository cannot be empty.", "repository-error")
+        return {"ok": False}
 
     msIdentifier_el = context["root"].find(".//tei:msIdentifier", namespaces=NSMAP)
 
@@ -120,15 +118,14 @@ def handle_repository(manuscript, context, form_data):
         "error": None
     }
 
+
 @section_handler("idno")
 def handle_idno(manuscript, context, form_data):
     idno = form_data.get("idno")
     
     if not idno:
-        return {
-            "ok": False,
-            "error": "Manuscript identifier cannot be empty."
-        }
+        flash("Manuscript identifier cannot be empty.", "ms-id-error")
+        return {"ok": False}
 
     msIdentifier_el = context["root"].find(".//tei:msIdentifier", namespaces=NSMAP)
 
@@ -181,10 +178,8 @@ def handle_physical(manuscript, context, form_data):
     physical = form_data.get("physical")
     
     if not physical:
-        return {
-            "ok": False,
-            "error": "Physical description cannot be empty."
-        }
+        flash("Physical description cannot be empty.", "phys-desc-error")
+        return {"ok": False}
 
     msphys_el = context["root"].find(".//tei:physDesc", namespaces=NSMAP)
 
@@ -276,10 +271,8 @@ def handle_notes(manuscript, context, form_data):
     notes = form_data.get("notes")
 
     if not notes:
-        return {
-            "ok": False,
-            "error": "Notes cannot be empty."
-        }
+        flash("Notes cannot be empty.", "notes-error")
+        return {"ok": False}
 
     msadmin_el = context["root"].find(".//tei:adminInfo", namespaces=NSMAP)
 
