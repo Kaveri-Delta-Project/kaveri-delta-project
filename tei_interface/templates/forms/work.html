@@ -178,18 +178,6 @@
     <input type="hidden" name="section" value="editor">
 
       <div class="mb-3">
-        {{ ui.input_field(
-            id="editor_key",
-            name="editor_key",
-            label="Key",
-            label_option="(required)",
-            placeholder="e.g. p_20",
-            extra_attrs="required",
-            help_text="Enter person key – must link to a person file"
-        ) }}
-      </div>
-
-      <div class="mb-3">
         {{ ui.select_field("editor_role",
               [
                 ("", "-- Select MARC role --"),
@@ -204,6 +192,18 @@
                 ("wst", "Writer of supplementary textual content (wst)"),
               ],
             required=True
+        ) }}
+      </div>
+
+      <div class="mb-3">
+        {{ ui.input_field(
+            id="editor_key",
+            name="editor_key",
+            label="Key",
+            label_option="(required)",
+            placeholder="e.g. p_20",
+            extra_attrs="required",
+            help_text="Enter person key – must link to a person file"
         ) }}
       </div>
 

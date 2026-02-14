@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<div class="container my-4">
+<div>
 
   {% if data %}
     {% set form_action = url_for('edit_entity', entity=entity, xml_id=data.xml_id) %}
@@ -30,14 +30,13 @@
     </div>
   {% endif %}
 
-    <div class="card shadow-sm">
-    <div class="card-body">
+  <div class="card shadow-sm">
+  <div class="card-body">
 
-      {% block entity_form %}
-      {# entity-specific panels go here #}
-      {% endblock %}
+    {% block entity_form %}
+    {# entity-specific panels go here #}
+    {% endblock %}
 
-    </div>
   </div>
 
 </div>

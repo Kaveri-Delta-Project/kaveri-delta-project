@@ -1,22 +1,14 @@
 [
   {
-    "xml_id": "l_3",
-    "name": "D Place"
-  },
-  {
-    "xml_id": "l_4",
-    "name": "D Place"
-  },
-  {
-    "xml_id": "l_5",
-    "name": "D Place"
-  },
-  {
     "xml_id": "l_1",
-    "name": "l_1"
+    "name": "Test Place 1"
   },
   {
     "xml_id": "l_2",
-    "name": "test"
+    "name": "Testing Place 2"
+  },
+  {
+    "xml_id": "l_3",
+    "name": "Testing Place 3"
   }
 ]

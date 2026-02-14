@@ -1,12 +1,22 @@
-<h1>Entities</h1>
+{% extends "base.html" %}
 
-<ul>
+{% block title %}
+  Index
+{% endblock %}
+
+{% block heading %}
+  Index of Categories
+{% endblock %}
+
+{% block content %}
+<ul class="home-list">
   {% for entity, items in all_entities.items() %}
     <li>
-      <a href="{{ url_for('entity_index', entity=entity) }}">
+      <a href="{{ url_for('entity_index', entity=entity) }}" class="entity-link fw-semibold">
         {{ entity|capitalize }}
       </a>
-      ({{ items|length }})
+      <span class="entity-count">({{ items|length }})</span>
     </li>
   {% endfor %}
 </ul>
+{% endblock %}

@@ -10,78 +10,110 @@
 
 {% block content %}
 
-<a href="{{ url_for('index') }}">← Home</a>
-<a href="{{ url_for('new_entity', entity=entity) }}">
-  + New {{ entity|capitalize }}
-</a>
+<!-- Action Bar -->
+<div class="entity-toolbar d-flex flex-wrap justify-content-between align-items-center mb-4">
 
-<form method="POST"
-      action="{{ url_for('refresh_entity_index', entity=entity) }}"
-      style="display:inline;"
-      onsubmit="return confirm('⚠ Manually refresh the index?');">
-  <button type="submit">Refresh Index</button>
-</form>
+  <!-- LEFT: Buttons -->
+  <div class="d-flex gap-2 align-items-center">
 
-<form method="GET" action="{{ url_for('entity_index', entity=entity) }}" style="margin-top: 1em;">
-  <input type="text" name="q" 
-         placeholder="Search {{ entity|capitalize }}..." 
-         value="{{ request.args.get('q', '') }}"
-         autocomplete="off">
-  <button type="submit">Filter</button>
-
-  {% if query %}
-    <!-- Show all results button -->
-    <a href="{{ url_for('entity_index', entity=entity) }}">
-      <button type="button">Show All</button>
+    <a href="{{ url_for('index') }}"
+       class="btn btn-outline-secondary btn-sm">
+      ← Home
     </a>
-  {% endif %}
 
-</form>
+    <a href="{{ url_for('new_entity', entity=entity) }}"
+       class="btn btn-primary btn-sm">
+      + New {{ entity|capitalize }}
+    </a>
+
+    <form method="POST"
+          action="{{ url_for('refresh_entity_index', entity=entity) }}"
+          onsubmit="return confirm('⚠ Manually refresh the index?');"
+          class="d-inline">
+      <button type="submit"
+              class="btn btn-outline-warning btn-sm">
+        ⟳ Refresh
+      </button>
+    </form>
+
+  </div>
+
+  <!-- RIGHT: Search -->
+  <form method="GET"
+        action="{{ url_for('entity_index', entity=entity) }}"
+        class="d-flex mt-3 mt-md-0">
+
+    <div class="input-group input-group-sm search-group">
+
+      <input type="text"
+             name="q"
+             class="form-control"
+             placeholder="Filter by {{ entity|capitalize }} name..."
+             value="{{ request.args.get('q', '') }}"
+             autocomplete="off">
+
+      <button type="submit" class="btn btn-outline-primary">
+        Search
+      </button>
+
+      {% if query %}
+        <button type="button"
+                class="btn btn-outline-secondary"
+                onclick="window.location='{{ url_for('entity_index', entity=entity) }}'">
+          Clear
+        </button>
+      {% endif %}
+
+    </div>
+
+  </form>
+
+</div>
+
 
 <hr>
 
-<!-- Alphabet Navigation -->
-<div class="alphabet mb-3">
+<div class="alphabet mb-4 d-flex flex-wrap gap-2">
   {% for letter in grouped_items.keys() %}
-    <button type="button" class="btn btn-sm btn-outline-secondary me-1 mb-1" data-letter="{{ letter }}">
+    <button type="button" class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="{{ letter }}">
       {{ letter }}
     </button>
   {% endfor %}
-  <button type="button" class="btn btn-sm btn-outline-primary mb-1" data-letter="all">
+  <button type="button" class="btn btn-sm btn-outline-primary alphabet-btn" data-letter="all">
     Show All
   </button>
 </div>
 
 <!-- Letter Groups -->
 {% for letter, items in grouped_items.items() %}
-  <div class="letter-group" id="letter-{{ letter }}">
-    <h4 class="border-bottom pb-1">{{ letter }}</h4>
-    {% if items %}
-      <ul class="list-unstyled">
-        {% for item in items %}
-          <li class="mb-1 d-flex align-items-center">
-            <!-- Item Link -->
-            <a href="{{ url_for('edit_entity', entity=entity, xml_id=item.xml_id) }}">
-              {{ item.xml_id }}{% if item.name %} — {{ item.name }}{% endif %}
-            </a>
-
-            <!-- Delete Button -->
-            <form method="POST"
-                  action="{{ url_for('delete_file', entity=entity, xml_id=item.xml_id) }}"
-                  onsubmit="return confirm('⚠ Are you sure you want to delete this file?');"
-                  class="ms-2 d-inline">
-              <button type="submit"
-                      class="btn btn-outline-danger btn-sm d-flex justify-content-center align-items-center"
-                      style="width: 1.25rem; height: 1.25rem;"
-                      title="Delete">&times;</button>
-            </form>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p class="text-muted small">No entries</p>
-    {% endif %}
-  </div>
+<div class="letter-group mb-4" id="letter-{{ letter }}">
+  <h4 class="letter-heading">{{ letter }}</h4>
+  {% if items %}
+    <ul class="entity-list list-unstyled">
+      {% for item in items %}
+      <li class="entity-row d-flex align-items-center">
+        <a href="{{ url_for('edit_entity', entity=entity, xml_id=item.xml_id) }}"
+           class="entity-link">
+          {% if item.name %}
+            <span class="entity-name">{{ item.name }}</span>
+            <span class="entity-id"> ({{ item.xml_id }})</span>
+          {% else %}
+            <span class="entity-id">{{ item.xml_id }}</span>
+          {% endif %}
+        </a>
+        <form method="POST"
+              action="{{ url_for('delete_file', entity=entity, xml_id=item.xml_id) }}"
+              onsubmit="return confirm('⚠ Are you sure you want to delete this file?');"
+              class="delete-form">
+          <button type="submit" class="btn-sm delete-btn" title="Delete">&times;</button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted small">No entries</p>
+  {% endif %}
+</div>
 {% endfor %}
 
 {% endblock %}

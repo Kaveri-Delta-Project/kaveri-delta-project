@@ -266,6 +266,7 @@ def handle_floruit(person, context, form_data):
         "error": None
     }
 
+
 @section_handler("affiliation")
 def handle_affiliation(person, context, form_data):
     key = form_data.get("affiliation_key")
@@ -283,26 +284,47 @@ def handle_affiliation(person, context, form_data):
     date_from = form_data.get("affiliation_from")
     date_to = form_data.get("affiliation_to")
 
-    if date_from and not valid_date(date_from):
-        flash(f"Invalid 'From' date: {date_from}", "affiliation-error")
-        return {"ok": False}
+    if not date_to and not date_from:
 
-    if date_to and not valid_date(date_to):
-        flash(f"Invalid 'To' date: {date_to}", "affiliation-error")
-        return {"ok": False}
+        el = build_section(
+            parent=person,
+            item_tag="affiliation",
+            attrs={"key": key,},
+            child_tag="placeName",
+            child_text=affil_text,
+        )
+
+    else:
+
+        if date_to and not date_from:
+            flash(f"'From' and 'To' dates must both be entered if dates included.", "affiliation-error")
+            return {"ok": False}
+
+        if date_from and not date_to:
+            flash(f"'From' and 'To' dates must both be entered if dates included.", "affiliation-error")
+            return {"ok": False}
+
+        if date_from and not valid_date(date_from):
+            flash(f"Invalid 'From' date: {date_from}", "affiliation-error")
+            return {"ok": False}
+
+        if date_to and not valid_date(date_to):
+            flash(f"Invalid 'To' date: {date_to}", "affiliation-error")
+            return {"ok": False}
 
 
-    el = build_section(
-        parent=person,
-        item_tag="affiliation",
-        attrs={
-            "from": date_from,
-            "to": date_to,
-            "key": key,
-        },
-        child_tag="placeName",
-        child_text=affil_text,
-    )
+        el = build_section(
+            parent=person,
+            item_tag="affiliation",
+            attrs={
+                "from": date_from,
+                "to": date_to,
+                "key": key,
+            },
+            child_tag="placeName",
+            child_text=affil_text,
+            )
+    
     insert_in_order(person, "affiliation", el, CHILD_ORDER, NSMAP)
 
     return {

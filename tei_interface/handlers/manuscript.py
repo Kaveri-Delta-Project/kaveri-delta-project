@@ -274,15 +274,15 @@ def handle_notes(manuscript, context, form_data):
         flash("Notes cannot be empty.", "notes-error")
         return {"ok": False}
 
-    msadmin_el = context["root"].find(".//tei:adminInfo", namespaces=NSMAP)
+    msorigin_el = context["root"].find(".//tei:origin", namespaces=NSMAP)
 
     el = add_simple_element_attr(
-        parent=msadmin_el,
+        parent=msorigin_el,
         tag="note",
         text=notes,
         allow_multiple=True
     )
-    insert_in_order(msadmin_el, "note", el, CHILD_ORDER, NSMAP)
+    insert_in_order(msorigin_el, "note", el, CHILD_ORDER, NSMAP)
 
     return {
         "ok": True,

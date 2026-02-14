@@ -1,21 +1,20 @@
-/* ---- Global form sanity ---- */
+/* ----------------------------
+   Global Form & Input Styles
+---------------------------- */
 
 form {
-  margin: 0;
+  margin: 0; /* reset default form margins */
 }
 
-/* Base input styling (valid CSS only) */
 input,
 textarea,
 select {
   font-family: inherit;
   font-size: inherit;
-
   -webkit-appearance: none;
   appearance: none;
 }
 
-/* Search / text inputs */
 input[type="text"],
 input[type="search"],
 textarea {
@@ -28,7 +27,124 @@ input:-webkit-autofill {
   box-shadow: 0 0 0 1000px white inset !important;
 }
 
-/* Panels */
+/* ----------------------------
+   Toolbar & Search Inputs
+---------------------------- */
+
+.entity-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.entity-toolbar form {
+  margin-bottom: 0; /* remove extra spacing inside inline forms */
+}
+
+.entity-toolbar .search-group {
+  width: 100%;
+  max-width: 500px; /* controls overall input group width */
+}
+
+.entity-toolbar .search-group .form-control {
+  flex: 1 1 auto;   /* allow input to expand */
+  min-width: 300px; /* don’t shrink too small */
+  height: 2.5rem;   /* slightly taller input */
+  font-size: 1rem;  /* larger font for usability */
+}
+
+/* ----------------------------
+   Buttons
+---------------------------- */
+
+button {
+  cursor: pointer;
+  padding: 0.3em 0.6em;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+button[type="submit"] {
+  font-weight: 500;
+}
+
+.btn-sm {
+  border-radius: 0.5rem; /* softer corners for small buttons */
+}
+
+/* Delete button (toolbar / list items) */
+.delete-btn {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  line-height: 1;
+  border-radius: 50%;
+  border: 1px solid #dc3545;
+  background: transparent;
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  margin-left: 0.5rem;
+  transform: translateY(1px);
+}
+
+.delete-btn:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* ----------------------------
+   Alphabet Navigation
+---------------------------- */
+
+.alphabet-btn {
+  min-width: 2.2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.4rem;
+  transition: background 0.15s;
+}
+
+.alphabet-btn:hover {
+  background-color: #e9ecef;
+}
+
+/* ----------------------------
+   Entity links / letter groups
+---------------------------- */
+
+.entity-link {
+  text-decoration: none;          /* remove underline */
+  color: #1c1c1c;;                 /* dark text */
+  transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.entity-link:hover {
+  color: #495057;                 /* Bootstrap primary on hover */
+  text-decoration: underline;     /* subtle underline on hover */
+  text-decoration-color: currentColor; 
+}
+
+.entity-name {
+  color: #212529;                 /* normal text */
+  font-weight: normal;            /* not bold */
+}
+
+.entity-id {
+  color: #6c757d;                 /* muted secondary text */
+  font-weight: normal;            /* not bold */
+}
+
+
+/* ----------------------------
+   Panels / Sections
+---------------------------- */
+
 .panel {
   border: 1px solid #ddd;
   padding: 1rem;
@@ -41,19 +157,30 @@ input:-webkit-autofill {
   font-size: 1.1rem;
 }
 
-/* Buttons */
-button {
-  cursor: pointer;
-  padding: 0.3em 0.6em;
+
+/* ----------------------------
+   Home Page links
+---------------------------- */
+
+.home-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
 }
 
-button:hover {
-  background: #eee;
+.home-list li {
+  padding: 0.4rem 0;
 }
 
-button[type="submit"] {
-  font-weight: 500;
+.home-list li:last-child {
+  border-bottom: none;
 }
+
+/* ----------------------------
+   Error / Section messages
+---------------------------- */
 
 .section-error {
   color: #842029;
@@ -62,4 +189,19 @@ button[type="submit"] {
   margin-bottom: 0.5rem;
   border-radius: 4px;
   font-size: 0.9rem;
+}
+
+/* ----------------------------
+   Page / Headings
+---------------------------- */
+
+.page-heading {
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Optional: subtle divider instead of harsh <hr> */
+hr {
+  opacity: 0.15;
 }
