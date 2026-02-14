@@ -1,14 +1,34 @@
 [
   {
+    "xml_id": "ms_7",
+    "name": "A test MS"
+  },
+  {
+    "xml_id": "ms_8",
+    "name": "another test_ms"
+  },
+  {
+    "xml_id": "ms_4",
+    "name": "C Manuscript"
+  },
+  {
+    "xml_id": "ms_5",
+    "name": "C Manuscript"
+  },
+  {
     "xml_id": "ms_1",
-    "name": "Test MS 1"
+    "name": "Harvard Ms"
+  },
+  {
+    "xml_id": "ms_6",
+    "name": "hello"
+  },
+  {
+    "xml_id": "ms_9",
+    "name": "new ms"
   },
   {
     "xml_id": "ms_2",
-    "name": "Testing MS 2"
-  },
-  {
-    "xml_id": "ms_3",
-    "name": "Testing MS 3"
+    "name": "test"
   }
 ]

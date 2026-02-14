@@ -1,18 +1,22 @@
 [
   {
+    "xml_id": "p_4",
+    "name": "A Person"
+  },
+  {
+    "xml_id": "p_5",
+    "name": "A Person"
+  },
+  {
     "xml_id": "p_1",
-    "name": "Aneirin Jones"
+    "name": "p_1"
   },
   {
     "xml_id": "p_2",
-    "name": "Test Person 2"
+    "name": "p_2"
   },
   {
     "xml_id": "p_3",
-    "name": "Test Person 3"
-  },
-  {
-    "xml_id": "p_4",
-    "name": "Test Person 4"
+    "name": "test_2"
   }
 ]
