@@ -7,6 +7,9 @@ on:
       - 'tei_index_build/*.py'
       - 'tei_index_build/static/**'
 
+permissions:
+  contents: write
+
 jobs:
   build-indexes:
     runs-on: ubuntu-latest
@@ -32,7 +35,6 @@ jobs:
         id: changes
         run: |
           echo "Checking which data directories changed..."
-
           git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
 
           CHANGED_MANUSCRIPTS=false
@@ -78,17 +80,11 @@ jobs:
         if: steps.changes.outputs.works == 'true'
         run: python tei_index_build/build_work_index.py
 
-      # 6. Commit generated HTML (only if changed)
-      - name: Commit generated indexes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add tei_index_build/build/
-
-          if git diff --cached --quiet; then
-            echo "No index changes to commit"
-          else
-            git commit -m "Auto-generate TEI indexes"
-            git push
-          fi
+      # 6. Push generated HTML to separate branch
+      - name: Push generated indexes to generated branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./tei_index_build/build
+          publish_branch: generated
+          force_orphan: true
