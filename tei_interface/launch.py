@@ -33,9 +33,16 @@ def run_app():
         python_exe = os.path.join(venv_dir, "Scripts", "python.exe")
     else:
         python_exe = os.path.join(venv_dir, "bin", "python")
-    
-    print("Launching app...")
-    subprocess.check_call([python_exe, "run_app.py"])
+    print("Launching Flask app... (press Ctrl+C to stop)")
+
+    try:
+        subprocess.check_call([python_exe, "run_app.py"])
+    except KeyboardInterrupt:
+        print("\nFlask app terminated by user. Goodbye!")
+        sys.exit(0)
+    except subprocess.CalledProcessError as e:
+        print(f"\nFlask app exited with error code {e.returncode}.")
+        sys.exit(e.returncode)
 
 if __name__ == "__main__":
     create_venv()
