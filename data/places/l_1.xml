@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_1">
+          <placeName type="preferred">Tiruvisainallur</placeName>
+          <note type="coordinates">11.009161779356686, 79.4298421918878</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

@@ -16,14 +16,8 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_1">
-          <persName type="preferred">Nīlakaṇṭha Dīkṣita</persName>
-          <trait type="member of family" key="p_2">
-            <label>Appayya Dīkṣita</label>
-          </trait>
-          <affiliation key="l_1">
-            <placeName>Tiruvisainallur</placeName>
-          </affiliation>
+        <person xml:id="p_2">
+          <persName type="preferred">Appayya Dīkṣita</persName>
         </person>
       </listPerson>
     </body>
