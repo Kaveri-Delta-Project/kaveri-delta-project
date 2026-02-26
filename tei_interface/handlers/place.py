@@ -5,8 +5,12 @@ from utils import (
     load_ent_name_by_key,
     valid_date,
     valid_identifier,
-    valid_coordinates
-)
+    valid_coordinates,
+    load_or_create_entity,
+    write_entity_to_file,
+    )
+
+from index_utils import update_connection_index, related_add
 from config import NSMAP, ENTITY_CONFIG
 
 from flask import flash

@@ -4,8 +4,12 @@ from utils import (
     build_section,
     load_ent_name_by_key,
     valid_date,
-    valid_identifier
-)
+    valid_identifier,
+    load_or_create_entity,
+    write_entity_to_file,
+    )
+
+from index_utils import update_connection_index, related_add
 from config import NSMAP, ENTITY_CONFIG
 
 from flask import flash
@@ -148,6 +152,8 @@ def handle_editor(work, context, form_data):
     )
     insert_in_order(work, "editor", el, CHILD_ORDER, NSMAP)
 
+    update_connection_index("person", editor_key, context['xml_id'], "work", editor_text)
+
     return {
         "ok": True,
         "error": None
@@ -174,7 +180,10 @@ def handle_pub_place(work, context, form_data):
         child_tag="placeName",
         child_text=pub_place_text
         )
+    
     insert_in_order(work, "pubPlace", el, CHILD_ORDER, NSMAP)
+
+    update_connection_index("place", pub_place_key, context['xml_id'], "work", pub_place_text)
 
     return {
         "ok": True,

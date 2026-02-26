@@ -3,10 +3,18 @@ import json
 import re
 import string
 from flask import Flask, request, render_template, redirect, url_for, flash, jsonify
-from config import ENTITY_CONFIG, NSMAP
+from config import ENTITY_CONFIG, NSMAP, KEYS_TO_LOWERCASE
 from utils import load_entity, load_or_create_entity, handle_deletions, write_entity_to_file, group_items_alphabetically
-from index_utils import load_index, get_index_file, update_index_entry, rebuild_entity_index, delete_index_entry
 from handlers import person, place, work, manuscript
+from index_utils import (load_index, 
+            get_index_file, 
+            update_index_entry, 
+            rebuild_entity_index, 
+            delete_index_entry, 
+            delete_connection_entry, 
+            update_connection_files, 
+            related_delete
+            )
 
 SECTION_HANDLERS = {
     "person": person.SECTION_HANDLERS,
@@ -146,6 +154,12 @@ def update_entity(entity, config, xml_id=None):
 
     form_data = request.form.to_dict(flat=True)
 
+    for key in KEYS_TO_LOWERCASE:
+        if key in form_data and form_data[key]:
+            form_data[key] = form_data[key].strip().lower()
+
+    print(form_data)
+
     context = load_or_create_entity(
         entity_name=entity,
         entity_dir=config["dir"],
@@ -161,11 +175,19 @@ def update_entity(entity, config, xml_id=None):
     if handle_deletions(entity_elem, form_data, context):
         write_entity_to_file(context)
         update_index_entry(entity, context["xml_id"])
+        if form_data.get("connection") == "related":
+            related_delete(xml_id, entity, form_data, config)
+        if form_data.get("connection") == "cascade":
+            delete_connection_entry(xml_id, form_data)
+        
         return redirect(url_for("edit_entity", entity=context["entity_name"], xml_id=context["xml_id"]))
 
     update_section(entity, entity_elem, form_data, context)
 
     write_entity_to_file(context)
     update_index_entry(entity, context["xml_id"])
+    update_connection_files(entity, context["xml_id"])
 
     return redirect(url_for("edit_entity", entity=context["entity_name"], xml_id=context["xml_id"]))
+
+

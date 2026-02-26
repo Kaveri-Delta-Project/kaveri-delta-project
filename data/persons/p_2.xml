@@ -18,6 +18,9 @@
       <listPerson>
         <person xml:id="p_2">
           <persName type="preferred">Appayya Dīkṣita</persName>
+          <trait type="member of family" key="p_1">
+            <label>Nīlakaṇṭha Dīkṣita</label>
+          </trait>
         </person>
       </listPerson>
     </body>

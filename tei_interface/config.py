@@ -20,6 +20,9 @@ NSMAP = {
 
 DEFAULT_NSMAP = {None: NS_TEI}
 
+TEXT_ELEMS = ["title", "persName", "placeName", "label", "editor"]
+
+KEYS_TO_LOWERCASE = ["rel_persons_key", "affiliation_key", "editor_key", "pub_place_key", "work_key", "orig_place_key", "person_key"]
 
 #xml structure mappings
 
@@ -40,6 +43,27 @@ PERSON_MAPPING = {
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
     "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key"], "child_elements": ["placeName"]},
     "notes": {"element": "note", "all_results": True}
+}
+
+RELATIONSHIP_INVERSES = {
+    "associate": "associate",
+    "ancestor": "descendant",
+    "beneficiary": "patron",
+    "brother": "brother",
+    "collaborator": "collaborator",
+    "descendant": "ancestor",
+    "disciple": "mentor",
+    "father": "son",
+    "grandfather": "grandson",
+    "grandson": "grandfather",
+    "member of family": "member of family",
+    "mentor": "disciple",
+    "other": "other",
+    "patron": "beneficiary",
+    "rival": "rival",
+    "son": "father",
+    "teacher": "student",
+    "student": "teacher",
 }
 
 PLACE_MAPPING = {

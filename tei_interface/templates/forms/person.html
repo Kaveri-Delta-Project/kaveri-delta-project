@@ -110,7 +110,10 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ rel.label }}</span>
       <span class="text-muted">(Relationship: {{ rel.type }}) [{{ rel.key }}]</span>
-      {{ ui.delete_button("trait", loop.index0) }}
+      {{ ui.delete_button("trait", 
+        loop.index0, 
+        extra_fields={"connection": "related", "key": rel.key, "name_type": rel.type}
+      ) }}
     </div>
   {% endfor %}
 
@@ -124,6 +127,8 @@
             [
               ("", "-- Select relationship --"),
               ("associate", "Associate"),
+              ("ancestor", "Ancestor"),
+              ("beneficiary", "Beneficiary"),
               ("brother", "Brother"),
               ("collaborator", "Collaborator"),
               ("descendant", "Descendant"),
@@ -132,6 +137,7 @@
               ("grandfather", "Grandfather"),
               ("grandson", "Grandson"),
               ("member of family", "Member of family"),
+              ("mentor", "Mentor"),
               ("other", "Other"),
               ("patron", "Patron"),
               ("rival", "Rival"),
@@ -160,7 +166,6 @@
     </form>
   </div>
 </section>
-
 
 
 <section class="panel">
@@ -481,7 +486,10 @@
         <span class="text-muted ms-1">[{{ aff.key }}]</span>
       {% endif %}
 
-      {{ ui.delete_button("affiliation", loop.index0) }}
+      {{ ui.delete_button("affiliation",
+          loop.index0,
+          extra_fields={"connection": "cascade", "name_type": "place", "key": aff.key, "name": aff.placeName}
+      ) }}
 
     </div>
   {% endfor %}

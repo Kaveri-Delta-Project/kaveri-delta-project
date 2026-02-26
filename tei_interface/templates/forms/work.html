@@ -169,7 +169,10 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ text }}</span>
       <span class="text-muted">(role: {{ role }}) [{{ key }}]</span>
-      {{ ui.delete_button("editor", loop.index0) }}
+      {{ ui.delete_button("editor", 
+            loop.index0,
+            extra_fields={"connection": "cascade", "name_type": "person", "key": key, "name": text}
+      ) }}
     </div>
   {% endfor %} 
 
@@ -228,7 +231,10 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val.placeName }}</span>
       <span class="text-muted">[{{ val.key }}]</span>
-      {{ ui.delete_button("pubPlace", loop.index0) }}
+      {{ ui.delete_button("pubPlace", 
+          loop.index0,
+          extra_fields={"connection": "cascade", "name_type": "place", "key": val.key, "name": val.placeName}
+      ) }}
     </div>
   {% endfor %}  
 

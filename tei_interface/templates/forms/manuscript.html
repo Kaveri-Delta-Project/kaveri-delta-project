@@ -186,7 +186,14 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val.title }}</span>
       <span class="text-muted">[{{ val.title_key }}]</span>
-      {{ ui.delete_button("msItem", loop.index0) }}
+      
+
+      {{ ui.delete_button("msItem", 
+          loop.index0,
+          extra_fields={"connection": "cascade", "name_type": "work", "key": val.title_key, "name": val.title}
+      ) }}
+
+
     </div>
   {% endfor %}
 
@@ -333,7 +340,13 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ text }}</span>
       <span class="text-muted">[{{ key }}]</span>
-      {{ ui.delete_button("origPlace", loop.index0) }}
+
+      {{ ui.delete_button("origPlace", 
+          loop.index0,
+          extra_fields={"connection": "cascade", "name_type": "place", "key": key, "name": text}
+      ) }}
+
+
     </div>
   {% endfor %}  
 
@@ -373,7 +386,12 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val.persName }}</span>
       <span class="text-muted">(role: {{ val.role }}) [{{ val.persName_key }}]</span>
-      {{ ui.delete_button("person", loop.index0, extra_fields={"from_root": "1"}) }}
+      
+
+      {{ ui.delete_button("person", 
+          loop.index0, 
+          extra_fields={"connection": "cascade", "name_type": "person", "key": val.persName_key, "name": val.role, "from_root": "1"}) }}
+
     </div>
   {% endfor %}
 

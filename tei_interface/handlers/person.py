@@ -4,11 +4,16 @@ from utils import (
     build_section,
     load_ent_name_by_key,
     valid_date,
-    valid_identifier
-)
-from config import NSMAP, ENTITY_CONFIG
+    valid_identifier,
+    load_or_create_entity,
+    write_entity_to_file,
+    )
+
+from index_utils import update_connection_index, related_add
+from config import NSMAP, ENTITY_CONFIG, RELATIONSHIP_INVERSES
 
 from flask import flash
+
 
 PERSON_CONFIG = ENTITY_CONFIG["person"]
 CHILD_ORDER = PERSON_CONFIG["child_order"]
@@ -119,6 +124,33 @@ def handle_editor(person, context, form_data):
     )
     
     insert_in_order(person, "trait", el, CHILD_ORDER, NSMAP)
+
+    update_connection_index("person", rel_persons_key, context['xml_id'], "person", rel_persons_text)
+
+
+    reverse_type = RELATIONSHIP_INVERSES.get(relationships)
+    if reverse_type:
+        person_a_key = context["xml_id"]
+        person_a_text = load_ent_name_by_key("person", person_a_key, "persName")
+
+        if not person_a_key or not person_a_text:
+            flash("Record needs to be saved with name to create relationship.", "rel-persons-error")
+            return {"ok": False}
+
+
+        related_build = related_add(
+            relationship=relationships,
+            key=rel_persons_key,       
+            person_a_key=person_a_key, 
+            person_a_text=person_a_text,
+            reverse_type=reverse_type,
+            config=ENTITY_CONFIG["person"]
+        )
+
+        if not related_build.get("ok"):
+            return related_build
+
+        update_connection_index("person", person_a_key, rel_persons_key, "person", person_a_text)
 
     return {
         "ok": True,
@@ -327,11 +359,12 @@ def handle_affiliation(person, context, form_data):
     
     insert_in_order(person, "affiliation", el, CHILD_ORDER, NSMAP)
 
+    update_connection_index("place", key, context['xml_id'], "person", affil_text)
+
     return {
         "ok": True,
-        "error": None
+        "error": None,
     }
-
 
 
 @section_handler("notes")

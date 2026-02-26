@@ -4,8 +4,12 @@ from utils import (
     build_section,
     load_ent_name_by_key,
     valid_date,
-    valid_identifier
-)
+    valid_identifier,
+    load_or_create_entity,
+    write_entity_to_file,
+    )
+
+from index_utils import update_connection_index, related_add
 from config import NSMAP, ENTITY_CONFIG
 
 from flask import flash
@@ -167,6 +171,8 @@ def handle_work(manuscript, context, form_data):
     )
     insert_in_order(mscontents_el, "msItem", el, CHILD_ORDER, NSMAP)
 
+    update_connection_index("work", work_key, context['xml_id'], "manuscript", work_text)
+
     return {
         "ok": True,
         "error": None
@@ -260,6 +266,8 @@ def handle_orig_place(manuscript, context, form_data):
     )
     insert_in_order(msorigin_el, "origPlace", el, CHILD_ORDER, NSMAP)
 
+    update_connection_index("place", orig_place_key, context['xml_id'], "manuscript", orig_place_text)
+
     return {
         "ok": True,
         "error": None
@@ -321,6 +329,8 @@ def handle_person(manuscript, context, form_data):
     )
 
     insert_in_order(mslistpers_el, "person", el, CHILD_ORDER, NSMAP)
+
+    update_connection_index("person", person_key, context['xml_id'], "manuscript", person_text)
 
     return {
         "ok": True,
