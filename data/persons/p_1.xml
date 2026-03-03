@@ -21,6 +21,10 @@
           <trait type="member of family" key="p_2">
             <label>Appayya Dīkṣita</label>
           </trait>
+          <trait type="teacher" key="p_3">
+            <label>Cokkanāthamakhin</label>
+          </trait>
+          <floruit from="1638" to="1638">Active around 1638</floruit>
           <affiliation key="l_1">
             <placeName>Tiruvisainallur</placeName>
           </affiliation>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_1">
+          <title type="preferred">Nīlakaṇṭhavijayacampū</title>
+          <editor key="p_1" role="aut">Nīlakaṇṭha Dīkṣita</editor>
+          <note type="genre">narrative</note>
+          <note type="genre">poetry</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

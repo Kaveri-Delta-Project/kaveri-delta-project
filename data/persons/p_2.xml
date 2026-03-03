@@ -21,6 +21,9 @@
           <trait type="member of family" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
+          <trait type="associate" key="p_3">
+            <label>Cokkanāthamakhin</label>
+          </trait>
         </person>
       </listPerson>
     </body>

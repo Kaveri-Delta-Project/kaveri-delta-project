@@ -1,6 +1,42 @@
 [
   {
+    "xml_id": "l_4",
+    "name": "Kandaramanikkam"
+  },
+  {
+    "xml_id": "l_3",
+    "name": "Kumbakonam"
+  },
+  {
+    "xml_id": "l_10",
+    "name": "Madurai"
+  },
+  {
+    "xml_id": "l_7",
+    "name": "Mahalingeswarar Temple"
+  },
+  {
+    "xml_id": "l_5",
+    "name": "Mannargudi"
+  },
+  {
+    "xml_id": "l_2",
+    "name": "Thanjavur"
+  },
+  {
+    "xml_id": "l_8",
+    "name": "Thiruvaiyaru"
+  },
+  {
+    "xml_id": "l_9",
+    "name": "Thiruvavaduthurai Adhinam"
+  },
+  {
     "xml_id": "l_1",
-    "name": "Tiruvisainallur"
+    "name": "Thiruvisanallur"
+  },
+  {
+    "xml_id": "l_6",
+    "name": "Tiruvidaimarudur"
   }
 ]

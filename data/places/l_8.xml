@@ -16,12 +16,10 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_1">
-          <placeName type="preferred">Thiruvisanallur</placeName>
-          <placeName type="variant">Tiruvicanallūr, Thiruvishaloor, Thiruvisanalluru, Tiruvisalur, Śāhajipuram</placeName>
-          <desc type="function">village</desc>
-          <idno type="Wikidata">Q7785558</idno>
-          <note type="coordinates">11.009161779356686, 79.4298421918878</note>
+        <place xml:id="l_8">
+          <placeName type="preferred">Thiruvaiyaru</placeName>
+          <idno type="Wikidata">Q2229514</idno>
+          <note type="coordinates">10.881034156000599, 79.10831543586647</note>
         </place>
       </listPlace>
     </body>

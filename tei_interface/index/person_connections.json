@@ -4,6 +4,11 @@
       "p_1",
       "person",
       "Appayya Dīkṣita"
+    ],
+    [
+      "p_3",
+      "person",
+      "Appayya Dīkṣita"
     ]
   ],
   "p_1": [
@@ -11,6 +16,55 @@
       "p_2",
       "person",
       "Nīlakaṇṭha Dīkṣita"
+    ],
+    [
+      "w_1",
+      "work",
+      "Nīlakaṇṭha Dīkṣita"
+    ],
+    [
+      "p_3",
+      "person",
+      "Nīlakaṇṭha Dīkṣita"
+    ]
+  ],
+  "p_3": [
+    [
+      "p_2",
+      "person",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "p_1",
+      "person",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "p_4",
+      "person",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "w_2",
+      "work",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "w_3",
+      "work",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "w_4",
+      "work",
+      "Cokkanāthamakhin"
+    ]
+  ],
+  "p_4": [
+    [
+      "p_3",
+      "person",
+      "Rāmabhadra Dīkṣita"
     ]
   ]
 }

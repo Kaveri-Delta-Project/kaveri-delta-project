@@ -16,12 +16,10 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_1">
-          <placeName type="preferred">Thiruvisanallur</placeName>
-          <placeName type="variant">Tiruvicanallūr, Thiruvishaloor, Thiruvisanalluru, Tiruvisalur, Śāhajipuram</placeName>
-          <desc type="function">village</desc>
-          <idno type="Wikidata">Q7785558</idno>
-          <note type="coordinates">11.009161779356686, 79.4298421918878</note>
+        <place xml:id="l_7">
+          <placeName type="preferred">Mahalingeswarar Temple</placeName>
+          <desc type="function">temple</desc>
+          <note type="coordinates">10.995438731169399, 79.45263665463665</note>
         </place>
       </listPlace>
     </body>
