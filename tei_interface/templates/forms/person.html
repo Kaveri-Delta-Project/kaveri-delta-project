@@ -138,26 +138,29 @@
               ("grandson", "Grandson"),
               ("member of family", "Member of family"),
               ("mentor", "Mentor"),
-              ("other", "Other"),
               ("patron", "Patron"),
               ("rival", "Rival"),
               ("son", "Son"),
               ("student", "Student"),
               ("teacher", "Teacher"),
+              ("other", "Other")
             ],
-            required=True
+            required=True,
         ) }}
       </div>
 
       <div class="mb-3">
         {{ ui.input_field(
-            id="rel_persons_key",
+            id="rel_persons_search",
             name="rel_persons_key",
-            label="Key",
+            label="Related Person",
             label_option="(required)",
-            placeholder="e.g. p_20",
+            placeholder="Type to search persons...",
+            entity_lookup="person",
+            results_id="rel_persons_results",
+            hidden_id="rel_persons_key",
             extra_attrs="required",
-            help_text="Enter person key – must link to a person file"
+            help_text="Search for an existing person and select them from the list."
         ) }}
       </div>
 
@@ -465,7 +468,7 @@
 
 <section class="panel">
 
-  {{ ui.section_header("Affiliations", "+ add affiliation", "toggleEntryForm('affiliation-form')") }}
+  {{ ui.section_header("Affiliated Places", "+ add affiliation", "toggleEntryForm('affiliation-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('affiliation-error') %}
@@ -482,7 +485,9 @@
       {% if aff.from %}
         <span class="text-muted">({{ aff.from }} to {{ aff.to }})</span>
       {% endif %}
-      {% if aff.key %}
+      {% if aff.key and aff.role %}
+        <span class="text-muted ms-1">(affiliation type: {{ aff.role }}) [{{ aff.key }}]</span>
+      {% else %}
         <span class="text-muted ms-1">[{{ aff.key }}]</span>
       {% endif %}
 
@@ -499,15 +504,37 @@
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="affiliation">
 
+      
+      <div class="mb-3">
+        {{ ui.select_field("affiliation_type",
+            [
+            ("", "-- Select affiliation type --"),
+            ("born", "Born"),
+            ("died", "Died"),
+            ("member", "Member"),
+            ("patronage", "Patronage"),
+            ("resided", "Resided"),
+            ("student", "Student"),
+            ("teaching", "Teaching"),
+            ("other", "Other")
+            ],
+            required=True,
+            allow_other=True
+        ) }}
+      </div>
+
       <div class="mb-3">
         {{ ui.input_field(
-            id="affiliation_key",
+            id="affiliation_search",
             name="affiliation_key",
-            label="Key",
+            label="Affiliated Place",
             label_option="(required)",
-            placeholder="e.g. l_20",
+            placeholder="Type to search places...",
+            entity_lookup="place",
+            results_id="affiliation_results",
+            hidden_id="affiliation_key",
             extra_attrs="required",
-            help_text="Enter place key – must link to a place file"
+            help_text="Search for an existing place and select it from the list."
         ) }}
       </div>
 

@@ -1,5 +1,3 @@
-{# macros.html #}
-
 {% macro input_field(
     id,
     name,
@@ -8,7 +6,10 @@
     value="",
     placeholder="",
     extra_attrs="",
-    help_text=""
+    help_text="",
+    entity_lookup=None,
+    results_id=None,
+    hidden_id=None
 ) %}
   <label class="form-label ps-1" for="{{ id }}">
     {{ label }}
@@ -17,13 +18,39 @@
     {% endif %}
   </label>
 
-  <input type="text"
-         class="form-control"
-         id="{{ id }}"
-         name="{{ name }}"
-         value="{{ value }}"
-         placeholder="{{ placeholder }}"
-         {{ extra_attrs }}>
+  {% if entity_lookup %}
+    <!-- Visible input for typing only (no name) -->
+    <input type="text"
+           class="form-control"
+           id="{{ id }}"
+           placeholder="{{ placeholder }}"
+           autocomplete="off"
+           {{ extra_attrs }}
+           data-entity-lookup="{{ entity_lookup }}"
+           data-results-id="{{ results_id }}"
+           data-hidden-id="{{ hidden_id }}">
+
+    <!-- Hidden input that actually gets submitted -->
+    <input type="hidden"
+           id="{{ hidden_id }}"
+           name="{{ name }}"
+           value="{{ value }}"
+           required>
+
+    <!-- Results container -->
+    <div id="{{ results_id }}"
+         class="list-group position-absolute w-100 d-none"
+         style="z-index: 1000;"></div>
+  {% else %}
+    <!-- Normal input -->
+    <input type="text"
+           class="form-control"
+           id="{{ id }}"
+           name="{{ name }}"
+           value="{{ value }}"
+           placeholder="{{ placeholder }}"
+           {{ extra_attrs }}>
+  {% endif %}
 
   {% if help_text %}
     <div class="form-text ps-1">{{ help_text }}</div>
@@ -74,9 +101,13 @@
   </form>
 {% endmacro %}
 
-{% macro select_field(name, options, selected=None, required=False) %}
+{% macro select_field(name, options, selected=None, required=False, allow_other=False) %}
 <label>
-  <select name="{{ name }}" class="form-select" {% if required %}required{% endif %}>
+    <select name="{{ name }}"
+          id="{{ name }}"
+          class="form-select"
+          {% if required %}required{% endif %}
+          {% if allow_other %}data-allow-other="true"{% endif %}>
     {% for value, text in options %}
       <option value="{{ value }}"
         {% if selected == value %}selected{% endif %}>
@@ -85,5 +116,13 @@
     {% endfor %}
   </select>
 </label>
+
+{% if allow_other %}
+  <input type="text"
+         id="{{ name }}_other"
+         name="{{ name }}_other"
+         class="form-control mt-2 d-none"
+         placeholder="Enter custom value">
+{% endif %}
 {% endmacro %}
 

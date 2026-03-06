@@ -302,7 +302,11 @@ def handle_floruit(person, context, form_data):
 @section_handler("affiliation")
 def handle_affiliation(person, context, form_data):
     key = form_data.get("affiliation_key")
+    affiliation_type = form_data.get("affiliation_type")
+    affiliation_type_other = form_data.get("affiliation_type_other")
     affil_text = load_ent_name_by_key("place", key, "placeName")
+    date_from = form_data.get("affiliation_from")
+    date_to = form_data.get("affiliation_to")
     
     if not key:
         flash("No affiliation key selected.", "affiliation-error")
@@ -311,51 +315,43 @@ def handle_affiliation(person, context, form_data):
     if not affil_text:
         flash("Selected affiliation could not be resolved.", "affiliation-error")
         return {"ok": False}
-        
 
-    date_from = form_data.get("affiliation_from")
-    date_to = form_data.get("affiliation_to")
+    if not affiliation_type:
+        flash("Affiliation type cannot be empty.", "affiliation-error")
+        return {"ok": False}         
 
-    if not date_to and not date_from:
-
-        el = build_section(
-            parent=person,
-            item_tag="affiliation",
-            attrs={"key": key,},
-            child_tag="placeName",
-            child_text=affil_text,
-        )
-
+    
+    if affiliation_type == "other" and affiliation_type_other:
+        attrs = {"key": key, "role": affiliation_type_other.lower()}
     else:
-
-        if date_to and not date_from:
-            flash(f"'From' and 'To' dates must both be entered if dates included.", "affiliation-error")
-            return {"ok": False}
-
-        if date_from and not date_to:
-            flash(f"'From' and 'To' dates must both be entered if dates included.", "affiliation-error")
-            return {"ok": False}
-
-        if date_from and not valid_date(date_from):
-            flash(f"Invalid 'From' date: {date_from}", "affiliation-error")
-            return {"ok": False}
-
-        if date_to and not valid_date(date_to):
-            flash(f"Invalid 'To' date: {date_to}", "affiliation-error")
-            return {"ok": False}
+        attrs = {"key": key, "role": affiliation_type}
 
 
-        el = build_section(
-            parent=person,
-            item_tag="affiliation",
-            attrs={
-                "from": date_from,
-                "to": date_to,
-                "key": key,
-            },
-            child_tag="placeName",
-            child_text=affil_text,
-            )
+    if bool(date_from) != bool(date_to):
+        flash("'From' and 'To' dates must both be entered if dates included.", "affiliation-error")
+        return {"ok": False}
+
+    if date_from and not valid_date(date_from):
+        flash(f"Invalid 'From' date: {date_from}", "affiliation-error")
+        return {"ok": False}
+
+    if date_to and not valid_date(date_to):
+        flash(f"Invalid 'To' date: {date_to}", "affiliation-error")
+        return {"ok": False}
+
+    if date_from and date_to:
+        attrs.update({
+            "from": date_from,
+            "to": date_to
+        })
+
+    el = build_section(
+        parent=person,
+        item_tag="affiliation",
+        attrs=attrs,
+        child_tag="placeName",
+        child_text=affil_text,
+        )
     
     insert_in_order(person, "affiliation", el, CHILD_ORDER, NSMAP)
 

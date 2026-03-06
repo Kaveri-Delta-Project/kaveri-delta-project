@@ -98,16 +98,24 @@ def handle_variant_name(place, context, form_data):
 @section_handler("place_type")
 def handle_place_type(place, context, form_data):
     place_type = form_data.get("place_type")
+    place_type_other = form_data.get("place_type_other")
 
     if not place_type:
         flash("No place type entered.", "place-type-error")
         return {"ok": False}
 
+    if place_type == "other" and place_type_other:
+        text_value = place_type_other.lower()
+        attrs = {"type": "function", "source": "other"}
+    else:
+        text_value = place_type
+        attrs = {"type": "function"}
+
     el = add_simple_element_attr(
         parent=place,
         tag="desc",
-        text=place_type,
-        attrs={"type": "function"},
+        text=text_value,
+        attrs=attrs,
         allow_multiple=True
     )
 

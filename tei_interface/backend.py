@@ -86,6 +86,28 @@ def entity_index(entity):
 
     return render_template("entity_index.html", entity=entity, grouped_items=grouped, query=query)
 
+@app.route("/api/<entity>/search")
+def api_entity_search(entity):
+    if entity not in ENTITY_CONFIG:
+        return jsonify([]), 404
+
+    query = request.args.get("q", "").strip().lower()
+    path = get_index_file(entity)
+    items = []
+
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            items = json.load(f)
+
+    # filter by name containing query
+    if query:
+        items = [item for item in items if item.get("name") and query in item["name"].lower()]
+
+    # optionally sort alphabetically
+    items.sort(key=lambda x: x.get("name", x["xml_id"]).lower())
+
+    return jsonify(items)
+
 
 @app.route("/<entity>/new", methods=["GET", "POST"])
 def new_entity(entity):
@@ -111,7 +133,8 @@ def edit_entity(entity, xml_id):
     if not os.path.exists(file_path):
         return f"{entity} not found", 404
 
-    if request.method == "POST":
+    if request.method == "POST": 
+        print("Form submitted:", request.form)
         return update_entity(entity, config, xml_id=xml_id)
 
     data = load_entity(file_path, entity, config["mapping"], NSMAP)
@@ -157,8 +180,6 @@ def update_entity(entity, config, xml_id=None):
     for key in KEYS_TO_LOWERCASE:
         if key in form_data and form_data[key]:
             form_data[key] = form_data[key].strip().lower()
-
-    print(form_data)
 
     context = load_or_create_entity(
         entity_name=entity,

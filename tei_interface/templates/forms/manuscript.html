@@ -173,7 +173,7 @@
 
 <section class="panel">
     
-  {{ ui.section_header("Works", "+ add works", "toggleEntryForm('works-form')") }}
+  {{ ui.section_header("Associated Works", "+ add works", "toggleEntryForm('works-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('works-error') %}
@@ -204,13 +204,16 @@
 
       <div class="mb-3">
         {{ ui.input_field(
-            id="work_key",
+            id="work_search",
             name="work_key",
-            label="Key",
+            label="Work",
             label_option="(required)",
-            placeholder="e.g. w_20",
+            placeholder="Type to search works...",
+            entity_lookup="work",
+            results_id="work_results",
+            hidden_id="work_key",
             extra_attrs="required",
-            help_text="Enter work key – must link to a work file"
+            help_text="Search for an existing work and select it from the list."
         ) }}
       </div>
 
@@ -327,7 +330,7 @@
 </section>
 
 <section class="panel">
-  {{ ui.section_header("Origin Places", "+ add origin place", "toggleEntryForm('orig-places-form')") }}
+  {{ ui.section_header("Associated Places", "+ add origin place", "toggleEntryForm('orig-places-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('orig-places-error') %}
@@ -356,13 +359,16 @@
 
       <div class="mb-3">
         {{ ui.input_field(
-            id="orig_place_key",
+            id="orig_place_search",
             name="orig_place_key",
-            label="Key",
+            label="Origin Place",
             label_option="(required)",
-            placeholder="e.g. l_20",
+            placeholder="Type to search places...",
+            entity_lookup="place",
+            results_id="orig_place_results",
+            hidden_id="orig_place_key",
             extra_attrs="required",
-            help_text="Enter place key – must link to a place file"
+            help_text="Search for an existing place and select it from the list."
         ) }}
       </div>
 
@@ -401,13 +407,16 @@
 
         <div class="mb-3">
           {{ ui.input_field(
-              id="person_key",
+              id="person_search",
               name="person_key",
-              label="Key",
+              label="Person",
               label_option="(required)",
-              placeholder="e.g. p_20",
+              placeholder="Type to search persons...",
+              entity_lookup="person",
+              results_id="person_results",
+              hidden_id="person_key",
               extra_attrs="required",
-              help_text="Enter person key – must link to a person file"
+              help_text="Search for an existing person and select them from the list."
           ) }}
         </div>
 

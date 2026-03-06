@@ -95,7 +95,7 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Place Type", "+ add place type", "toggleEntryForm('place-type-form')") }}
+  {{ ui.section_header("Place Types", "+ add place type", "toggleEntryForm('place-type-form')") }}
 
 <!-- Section-level error -->
   {% if section_messages.get('place-type-error') %}
@@ -124,10 +124,12 @@
               ("library", "Library"),
               ("matha", "Matha"),
               ("temple", "Temple"),
+              ("town", "Town"),
               ("village", "Village"),
               ("other", "Other"),
             ],
-            required=True
+            required=True,
+            allow_other=True
         ) }}
       </div>
 

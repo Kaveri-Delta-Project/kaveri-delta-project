@@ -41,7 +41,7 @@ PERSON_MAPPING = {
     "floruit_text": {"element": "floruit", "all_results": True},
     "floruit_from": {"element": "floruit", "element_attr": "from", "all_results": True},
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
-    "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key"], "child_elements": ["placeName"]},
+    "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
     "notes": {"element": "note", "all_results": True}
 }
 
@@ -86,7 +86,7 @@ WORK_MAPPING = {
     "editor_text": {"element": "editor", "all_results": True},
     "editor_key": {"element": "editor", "element_attr": "key", "all_results": True},
     "editor_role": {"element": "editor", "element_attr": "role", "all_results": True},
-    "pub_place": {"parent_tag": "pubPlace", "attributes": ["key"], "child_elements": ["placeName"]},
+    "pub_place": {"parent_tag": "pubPlace", "attributes": ["key", "role"], "child_elements": ["placeName"]},
     "genre": {"element": "note", "filter_attr": "type", "filter_value": "genre", "all_results": True},
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}

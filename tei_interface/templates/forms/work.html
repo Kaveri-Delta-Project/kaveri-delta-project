@@ -156,7 +156,7 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Editors", "+ add editor", "toggleEntryForm('editor-form')") }}
+  {{ ui.section_header("Associated Persons", "+ add editor", "toggleEntryForm('editor-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('editor-error') %}
@@ -200,13 +200,16 @@
 
       <div class="mb-3">
         {{ ui.input_field(
-            id="editor_key",
+            id="editor_search",
             name="editor_key",
-            label="Key",
+            label="Person",
             label_option="(required)",
-            placeholder="e.g. p_20",
+            placeholder="Type to search persons...",
+            entity_lookup="person",
+            results_id="editor_results",
+            hidden_id="editor_key",
             extra_attrs="required",
-            help_text="Enter person key – must link to a person file"
+            help_text="Search for an existing person and select them from the list."
         ) }}
       </div>
 
@@ -218,7 +221,7 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Publication Places", "+ add publication place", "toggleEntryForm('pub-places-form')") }}
+  {{ ui.section_header("Associated Places", "+ add publication place", "toggleEntryForm('pub-places-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('pub-places-error') %}
@@ -230,7 +233,12 @@
   {% for val in data.pub_place %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val.placeName }}</span>
-      <span class="text-muted">[{{ val.key }}]</span>
+      {% if val.role %}
+        <span class="text-muted">(connection: {{ val.role }}) [{{ val.key }}]</span>
+      {% else %}
+        <span class="text-muted">[{{ val.key }}]</span>
+      {% endif %}
+
       {{ ui.delete_button("pubPlace", 
           loop.index0,
           extra_fields={"connection": "cascade", "name_type": "place", "key": val.key, "name": val.placeName}
@@ -243,16 +251,35 @@
   <div id="pub-places-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="pub_place">
+      
+      <div class="mb-3">
+        {{ ui.select_field("connection",
+            [
+            ("", "-- Select connection --"),
+            ("composition", "Composition"),
+            ("dedication", "Dedication"),
+            ("performance", "Performance"),
+            ("published", "Published"),
+            ("reference", "Reference"),
+            ("teaching", "Teaching"),
+            ("other", "Other")
+            ],
+            required=True,
+            allow_other=True
+        ) }}
+      </div>
 
       <div class="mb-3">
         {{ ui.input_field(
-            id="pub_place_key",
+            id="pub_place_search",
             name="pub_place_key",
-            label="Key",
-            label_option="(required)",
-            placeholder="e.g. l_20",
+            label="Search Place (required)",
+            placeholder="Type to search places...",
+            entity_lookup="place",
+            results_id="pub_place_results",
+            hidden_id="pub_place_key",
             extra_attrs="required",
-            help_text="Enter place key – must link to a place file"
+            help_text="Search for an existing place and select it from the list."
         ) }}
       </div>
 
@@ -308,8 +335,10 @@
             ("poetry", "Poetry"),
             ("ritual_manual", "Ritual Manual"),
             ("theology", "Theology/Religious Doctrine"),
+            ("other", "Other")
             ],
-            required=True
+            required=True,
+            allow_other=True
         ) }}
       </div>
 
@@ -361,8 +390,10 @@
             ("alaṃkāraśāstra", "Alaṃkāraśāstra"),
             ("saiva", "Śaiva"),
             ("Vaiṣṇava", "Vaiṣṇava"),
+            ("other", "Other")
             ],
-            required=True
+            required=True,
+            allow_other=True
         ) }}
       </div>
 

@@ -163,6 +163,8 @@ def handle_editor(work, context, form_data):
 @section_handler("pub_place")
 def handle_pub_place(work, context, form_data):
     pub_place_key = form_data.get("pub_place_key")
+    connection = form_data.get("connection")
+    connection_other = form_data.get("connection_other")
     pub_place_text = load_ent_name_by_key("place", pub_place_key, "placeName")
 
     if not pub_place_key:
@@ -171,12 +173,21 @@ def handle_pub_place(work, context, form_data):
 
     if not pub_place_text:
         flash("Selected place could not be resolved.", "pub-places-error")
-        return {"ok": False} 
+        return {"ok": False}
+
+    if not connection:
+        flash("Place connection cannot be empty.", "pub-places-error")
+        return {"ok": False}  
+
+    if connection == "other" and connection_other:
+        attrs = {"key": pub_place_key, "role": connection_other.lower()}
+    else:
+        attrs = {"key": pub_place_key, "role": connection}
 
     el = build_section(
         parent=work,
         item_tag="pubPlace",
-        attrs={"key": pub_place_key},
+        attrs=attrs,
         child_tag="placeName",
         child_text=pub_place_text
         )
@@ -194,16 +205,24 @@ def handle_pub_place(work, context, form_data):
 @section_handler("genre")
 def handle_genre(work, context, form_data):
     genre = form_data.get("genre")
+    genre_other = form_data.get("genre_other")
 
     if not genre:
         flash("No genre entered.", "genre-error")
         return {"ok": False}
 
+    if genre == "other" and genre_other:
+        text_value = genre_other.lower()
+        attrs = {"type": "genre", "source": "other"}
+    else:
+        text_value = genre
+        attrs = {"type": "genre"}
+
     el = add_simple_element_attr(
         parent=work,
         tag="note",
-        text=genre,
-        attrs={"type": "genre"},
+        text=text_value,
+        attrs=attrs,
         allow_multiple=True
     )
 
@@ -222,19 +241,28 @@ def handle_genre(work, context, form_data):
         "error": None
     }
 
+
 @section_handler("subject")
 def handle_genre(work, context, form_data):
     subject = form_data.get("subject")
+    subject_other = form_data.get("subject_other")
 
     if not subject:
         flash("No subject entered.", "subject-error")
         return {"ok": False}
 
+    if subject == "other" and subject_other:
+        text_value = subject_other.lower()
+        attrs = {"type": "subject", "source": "other"}
+    else:
+        text_value = subject
+        attrs = {"type": "subject"}
+
     el = add_simple_element_attr(
         parent=work,
         tag="note",
-        text=subject,
-        attrs={"type": "subject"},
+        text=text_value,
+        attrs=attrs,
         allow_multiple=True
     )
 
@@ -252,7 +280,6 @@ def handle_genre(work, context, form_data):
         "ok": True,
         "error": None
     }
-
 
 
 @section_handler("notes")
