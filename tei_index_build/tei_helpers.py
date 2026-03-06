@@ -1,91 +1,190 @@
 import os
+from bs4 import BeautifulSoup
 from lxml import etree
+from collections import defaultdict
+
+from config import (
+
+    NSMAP,
+    ENTITY_CONFIG
+)
 
 
-#1. XML loading helpers
+def load_dir_data(entity_tag, directory):
 
-def get_xml_tree(filename, directory):
+    all_data = []
+
+    for filename in sorted(os.listdir(directory)):
+
+        if not filename.endswith(".xml") or filename.startswith("."):
+            continue
+
+        file_path = os.path.join(directory, filename)
+
+        data = load_entity(file_path, entity_tag)
+
+        all_data.append(data)
+
+    return all_data
+
+
+def group_items_alphabetically(items):
+    """Group list of items by first letter of name, fallback to # for missing names."""
+    grouped = defaultdict(list)
+    for item in items:
+        name = item.get("name")
+        if name:
+            first_letter = name[0][0].upper()
+        else:
+            first_letter = "#"
+        grouped[first_letter].append(item)
+    # Return as a sorted dictionary by letter
+    return dict(sorted(grouped.items()))
+
+
+def create_entity_cache(entity_data):
+    """Returns a cache of id and name (if present) for link validation."""
+    entity_cache = {}
+
+    for item in entity_data:
+        xml_id = item.get("xml_id")
+        name_list = item.get("name")
+
+        entity_cache[xml_id] = (
+            name_list[0] if name_list else xml_id
+        )
+
+    return entity_cache
+
+
+def remove_broken_links(html_path, entities_cache):
     """
-    Load an XML file by filename from a directory.
-
-    Hidden files and non-XML files are ignored.
-
-    Args:
-        filename (str): Name of the XML file.
-        directory (str): Directory containing the XML files.
-
-    Returns:
-        lxml.etree._ElementTree or None:
-            Parsed XML tree, or None if the file is missing or invalid.
+    Disable links whose ID is missing from cache or whose text
+    does not match the cached preferred name.
     """
-    if not filename.endswith(".xml") or filename.startswith("."):
-        return None
-    path = os.path.join(directory, filename)
-    if not os.path.isfile(path):
-        return None
     
-    return etree.parse(path)
+    with open(html_path, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f, "html.parser")
 
-def load_xml_by_id(identifier, directory, cache):
+    modified = False
+
+    for tag in soup.find_all("a", href=True):
+        href = tag["href"]
+        text = tag.get_text(strip=True)
+
+        if "#" not in href:
+            continue
+
+        file_part, id_part = href.split("#", 1)
+        if not file_part:
+            file_part = os.path.basename(html_path)
+
+        if id_part not in entities_cache or not text.startswith(entities_cache[id_part]):
+            #remove <a> but keep inner text
+            tag.attrs.pop("href", None)
+            tag.attrs.pop("target", None)
+            if "[entity no longer indexed at location]" not in tag.text:
+                tag.append(" [entity no longer indexed at location]")
+            
+            modified = True
+
+    #save the file only if changes were made
+    if modified:
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(str(soup))
+        print(f"Removed broken links in {html_path}")
+
+
+def load_entity(file_path, entity_tag):
     """
-    Load an XML file using an identifier mapped to <identifier>.xml,
-    with caching to avoid repeated parsing.
-
-    The identifier is sanitized to prevent path traversal.
+    Load a TEI entity from an XML file according to a specified mapping.
 
     Args:
-        identifier (str): XML identifier (without .xml extension).
-        directory (str): Directory containing the XML files.
-        cache (dict): Dictionary to store parsed XML trees for reuse.
-
-    Returns:
-        lxml.etree._ElementTree or None:
-            Parsed XML tree if the file exists and is valid; otherwise None.
-    """
-    safe_id = os.path.basename(identifier)
-    filename = f"{safe_id}.xml"
-    path = os.path.join(directory, filename)
-    if not os.path.isfile(path):
-        return None
-    tree = get_cached_tree(filename, directory, cache)
-
-    return tree
-
-def get_cached_tree(filename, directory, cache):
-    """
-    Load an XML file and cache its parsed tree to avoid repeated parsing.
-
-    If the file has already been loaded during this run, the cached
-    tree is returned instead of re-parsing the file from disk.
-
-    Args:
-        filename (str): Name of the XML file.
-        directory (str): Directory containing the XML files.
-        cache (dict[str, lxml.etree._ElementTree]): Dictionary used to
-            store cached XML trees keyed by filename.
-
-    Returns:
-        lxml.etree._ElementTree or None:
-            Parsed XML tree, or None if the file is missing or invalid.
-    """
-    if filename not in cache:
-        tree = get_xml_tree(filename, directory)
-        if tree is None:
-            return None
-        cache[filename] = tree
+        file_path (str): Path to the TEI XML file.
+        entity_tag (str): The TEI element tag of the entity to load (e.g., 'person', 'msDesc', 'place').
     
-    return cache[filename]
+    Mapping:
+            A dictionary defining how to extract data from the entity.
+            Each key maps to a specification dict with one of:
+                - "attr": extract the entity's attribute value.
+                - "element": extract text content from a child element.
+                - "element_attr": extract an attribute from a child element.
+                - "parent_tag": extract data from nested child elements under a specific parent.
+            Additional options in the spec:
+                - "filter_attr" / "filter_value": filter elements by attribute/value.
+                - "all_results": whether to return all matches as a list.
+                - "attributes", "child_elements", "child_attributes": passed to extract_from_parent.
 
-#2. Element and attribute extractors
-
-def extract_element_text(tree, ns, element, filter_attr=None, filter_value=None, all_results=False):
+    Returns:
+        dict or None: A dictionary of extracted data according to the mapping.
+            Keys correspond to mapping keys. Values are:
+                - str for single attribute/text values
+                - list[str] for multiple matches if "all_results" is True
+                - list[dict] for parent_tag extractions (nested elements/attributes)
+            Returns None if the entity_tag element is not found in the XML.
     """
-    Extract text content from matching TEI elements.
+
+    config = ENTITY_CONFIG[entity_tag]
+    container_tag = config["container_tag"]
+    element_tag = config["element_tag"]
+    mapping = config["mapping"]
+
+    tree = etree.parse(file_path)
+    root = tree.getroot()
+    entity = tree.find(f".//tei:{element_tag}", namespaces=NSMAP)
+    if entity is None:
+        return None
+
+    data = {}
+    for key, spec in mapping.items():
+
+        search_base = root if spec.get("from_root") else entity
+
+        if spec.get("all_results") or "parent_tag" in spec:
+            data[key] = []
+        else:
+            data[key] = None
+
+        if "attr" in spec:
+            data[key] = search_base.get(spec["attr"])
+        elif "element" in spec:
+            if "element_attr" in spec:
+                data[key] = extract_attribute_values(
+                    search_base,
+                    NSMAP,
+                    element=spec["element"],
+                    filter_attr=spec["element_attr"],
+                    all_results=spec.get("all_results", False)
+                )
+            else:
+                data[key] = extract_element_text(
+                    search_base,
+                    NSMAP,
+                    element=spec["element"],
+                    filter_attr=spec.get("filter_attr"),
+                    filter_value=spec.get("filter_value"),
+                    all_results=spec.get("all_results", False)
+                )
+        elif "parent_tag" in spec:
+            data[key] = extract_from_parent(
+                search_base,
+                NSMAP,
+                parent_tag=spec["parent_tag"],
+                attributes=spec.get("attributes"),
+                child_elements=spec.get("child_elements"),
+                child_attributes=spec.get("child_attributes")
+            )
+    return data
+
+
+def extract_element_text(parent, ns, element, filter_attr=None, filter_value=None, all_results=False):
+    """
+    Extract text content from matching TEI elements under a given parent element.
 
     Optionally filters by attribute presence/value.
 
     Args:
-        tree (lxml.etree._ElementTree): XML tree to query.
+        parent (lxml.etree._Element): The parent element to search under.
         ns (dict): Namespace mapping for XPath.
         element (str): TEI element name (without namespace prefix).
         filter_attr (str or None): Attribute name to filter on.
@@ -96,29 +195,30 @@ def extract_element_text(tree, ns, element, filter_attr=None, filter_value=None,
         str or list[str] or None:
             First matching text, list of texts, or None if no match.
     """
-    if not tree:
+    if parent is None:
         return [] if all_results else None
     
-    xpath = f"//tei:{element}"
+    xpath = f".//tei:{element}"
     if filter_attr:
         if filter_value is not None:
             xpath += f'[@{filter_attr}="{filter_value}"]'
         else:
             xpath += f'[@{filter_attr}]'
     
-    results = tree.xpath(xpath, namespaces=ns)
+    results = parent.xpath(xpath, namespaces=ns)
     texts = [el.text.strip() for el in results if el.text and el.text.strip()]
 
     return texts if all_results else (texts[0] if texts else None)
 
-def extract_attribute_values(tree, ns, element, filter_attr, all_results=False):
+
+def extract_attribute_values(parent, ns, element, filter_attr, all_results=False):
     """
-    Extract attribute values from matching TEI elements and attribute names.
+    Extract attribute values from matching TEI elements under a given parent element.
 
     Args:
-        tree (lxml.etree._ElementTree): XML tree to query.
+        parent (lxml.etree._Element): The parent element to search under.
         ns (dict): Namespace mapping for XPath.
-        element (str): TEI element name.
+        element (str): TEI element name (without namespace prefix).
         filter_attr (str): Attribute name to extract.
         all_results (bool): Whether to return all matches or only the first.
 
@@ -126,85 +226,80 @@ def extract_attribute_values(tree, ns, element, filter_attr, all_results=False):
         str or list[str] or None:
             First matching attribute value, list of values, or None if no match.
     """
-    if not tree:
+    if parent is None:
         return [] if all_results else None
     
-    xpath = f"//tei:{element}/@{filter_attr}"
+    xpath = f".//tei:{element}/@{filter_attr}"
     
-    results = tree.xpath(xpath, namespaces=ns)
+    results = parent.xpath(xpath, namespaces=ns)
     values = [val.strip() for val in results if val and val.strip()]
 
     return values if all_results else (values[0] if values else None)
 
-#3. Mid-level helpers
 
-def get_main_file_data(filename, directory, ns, id_elem, name_elem, cache):
+def extract_from_parent(
+    parent,
+    ns,
+    parent_tag,
+    *,
+    attributes=None,
+    child_elements=None,
+    child_attributes=None,
+):
     """
-    Extract key metadata from a TEI XML file for indexing purposes.
-
-    Retrieves the parsed XML tree (using the cache if available), the XML ID,
-    the preferred name, and the first letter of the preferred name (for alphabetical grouping).
+    Extract information from a parent element and its child/grandchild elements.
 
     Args:
-        filename (str): XML filename.
-        directory (str): Directory containing XML files.
-        ns (dict): Namespace mapping for XPath.
-        id_elem (str): Element containing the xml:id attribute.
-        name_elem (str): Element containing the preferred name.
-        cache (dict): Dictionary to store parsed XML trees for reuse.
+        parent (lxml.etree._Element): The parent element to search under.
+        parent_tag (str): Tag name of the parent element(s) to extract.
+        attributes (list[str], optional): List of attributes to extract from the parent element(s).
+        child_elements (list[str], optional): List of child/grandchild element tag names to extract text from.
+        child_attributes (dict, optional): Dictionary mapping child/grandchild element tag names to lists of
+                                           attribute names to extract from those child elements.
+        namespaces (dict, optional): Namespace mapping for XPath searches (default: NSMAP).
 
     Returns:
-        tuple or None:
-            (tree, id_text, name_text, first_letter) or None if missing data.
-    """ 
-    tree = get_cached_tree(filename, directory, cache)
-    if not tree:
-        return None
-
-    id_text = extract_attribute_values(tree, ns, element=id_elem, filter_attr="xml:id", all_results=False)
-    if not id_text:
-        return None
-
-    name_text = extract_element_text(tree, ns, element=name_elem, filter_attr="type", filter_value="preferred", all_results=False)
-    if not name_text:
-        return None
-
-    first_letter = name_text[0].upper()
-
-    return tree, id_text, name_text, first_letter
-
-def extract_reference_data(tree, ns, directory, id_elem, name_elem, cache):
+        list[dict]: A list of dictionaries, one per parent element found, containing:
+                    - Parent attributes (if requested)
+                    - Child/grandchild element text (if requested)
+                    - Child/grandchild element attributes (if requested)
+                    Keys for child attributes are formatted as "{child_tag}_{attribute_name}".
+                    Missing elements or attributes will have value None.
     """
-    Extract direct reference data to indexed items in another directory
-    from an XML tree. Checks for and extracts all references.
 
-    Each reference is resolved to its target XML file and its preferred name 
-    The target XML file is loaded (using caching to avoid repeated parsing)
-    and its preferred name is extracted.
+    results = []
 
-    Args:
-        tree (lxml.etree._ElementTree): Source XML tree.
-        ns (dict): Namespace mapping for XPath.
-        directory (str): Directory containing target XML files.
-        id_elem (str): Element containing @key references in source tree.
-        name_elem (str): Element containing preferred names in target files.
-        cache (dict): Dictionary to store parsed XML trees for reuse.
+    if parent is None:
+        return results
 
-    Returns:
-        list[tuple[str, str]]:
-            List of (identifier, preferred_name) tuples.
-    """
-    data = []
+    for el in parent.xpath(f".//tei:{parent_tag}", namespaces=ns):
+        item = {}
 
-    target_ids = extract_attribute_values(tree, ns, element=id_elem, filter_attr="key", all_results=True)
+        # Extract parent attributes
+        if attributes:
+            for attr in attributes:
+                val = el.get(attr)
+                item[attr] = val.strip() if val else None
 
-    for target_id in target_ids:
-        target_tree = load_xml_by_id(target_id, directory, cache)
-        if not target_tree:
-            continue
-        name_text = extract_element_text(target_tree, ns, element=name_elem, filter_attr="type", filter_value="preferred", all_results=False)
-        if not name_text:
-            continue
-        data.append((target_id, name_text))
+        # Extract child/grandchild elements text
+        if child_elements:
+            for child in child_elements:
+                child_el = el.find(f".//tei:{child}", namespaces=ns)
+                item[child] = child_el.text.strip() if child_el is not None and child_el.text else None
 
-    return data
+        # Extract child/grandchild element attributes
+        if child_attributes:
+            for child_name, attr_list in child_attributes.items():
+                child_el = el.find(f".//tei:{child_name}", namespaces=ns)
+                if child_el is not None:
+                    for attr in attr_list:
+                        val = child_el.get(attr)
+                        item[f"{child_name}_{attr}"] = val.strip() if val else None
+                else:
+                    for attr in attr_list:
+                        item[f"{child_name}_{attr}"] = None
+
+        results.append(item)
+
+    return results
+

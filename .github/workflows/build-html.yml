@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout FULL history (required for git diff)
+      # 1. Checkout FULL history (needed for gh-pages deploy)
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -30,57 +30,11 @@ jobs:
       - name: Install dependencies
         run: pip install lxml
 
-      # 4. Detect which data directories changed
-      - name: Detect changed data directories
-        id: changes
-        run: |
-          echo "Checking which data directories changed..."
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+      # 4. Build all indexes
+      - name: Build TEI indexes
+        run: python tei_index_build/build_indexes.py
 
-          CHANGED_MANUSCRIPTS=false
-          CHANGED_PERSONS=false
-          CHANGED_PLACES=false
-          CHANGED_WORKS=false
-
-          if grep -q '^data/manuscripts/' changed_files.txt; then
-            CHANGED_MANUSCRIPTS=true
-          fi
-
-          if grep -q '^data/persons/' changed_files.txt; then
-            CHANGED_PERSONS=true
-          fi
-
-          if grep -q '^data/places/' changed_files.txt; then
-            CHANGED_PLACES=true
-          fi
-
-          if grep -q '^data/works/' changed_files.txt; then
-            CHANGED_WORKS=true
-          fi
-
-          echo "manuscripts=$CHANGED_MANUSCRIPTS" >> $GITHUB_OUTPUT
-          echo "persons=$CHANGED_PERSONS" >> $GITHUB_OUTPUT
-          echo "places=$CHANGED_PLACES" >> $GITHUB_OUTPUT
-          echo "works=$CHANGED_WORKS" >> $GITHUB_OUTPUT
-
-      # 5. Run index builders conditionally
-      - name: Build manuscripts index
-        if: steps.changes.outputs.manuscripts == 'true'
-        run: python tei_index_build/build_ms_index.py
-
-      - name: Build persons index
-        if: steps.changes.outputs.persons == 'true'
-        run: python tei_index_build/build_person_index.py
-
-      - name: Build places index
-        if: steps.changes.outputs.places == 'true'
-        run: python tei_index_build/build_place_index.py
-
-      - name: Build works index
-        if: steps.changes.outputs.works == 'true'
-        run: python tei_index_build/build_work_index.py
-
-      # 6. Push generated HTML to separate branch
+      # 5. Push generated HTML to generated branch
       - name: Push generated indexes to generated branch
         uses: peaceiris/actions-gh-pages@v3
         with:
