@@ -25,7 +25,9 @@
           <affiliation key="l_1">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
-          <note>Born in Kandaramanikkam</note>
+          <affiliation key="l_4" role="born">
+            <placeName>Kandaramanikkam</placeName>
+          </affiliation>
         </person>
       </listPerson>
     </body>
