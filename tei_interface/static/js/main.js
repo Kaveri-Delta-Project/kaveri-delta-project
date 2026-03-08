@@ -76,7 +76,7 @@ function setupEntityLookup(entity, searchInputId, resultsId, hiddenInputId) {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(async () => {
       const query = input.value.trim();
-      if (query.length < 2) {
+      if (query.length < 1) {
         resultsBox.classList.add("d-none");
         return;
       }

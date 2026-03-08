@@ -101,7 +101,12 @@ def api_entity_search(entity):
 
     # filter by name containing query
     if query:
-        items = [item for item in items if item.get("name") and query in item["name"].lower()]
+        items = [
+            item for item in items
+            if item.get("name") and any(
+                word.startswith(query) for word in item["name"].lower().split()
+            )
+]
 
     # optionally sort alphabetically
     items.sort(key=lambda x: x.get("name", x["xml_id"]).lower())
