@@ -16,18 +16,18 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_3">
-          <persName type="preferred">Cokkanāthamakhin</persName>
-          <trait type="student" key="p_1">
-            <label>Nīlakaṇṭha Dīkṣita</label>
+        <person xml:id="p_6">
+          <persName type="preferred">Śāhaji Bhonsle</persName>
+          <trait type="associate" key="p_5">
+            <label>Tryambakarāyamakhin</label>
           </trait>
-          <trait type="teacher" key="p_4">
-            <label>Rāmabhadra Dīkṣita</label>
+          <trait type="associate" key="p_7">
+            <label>Gaṅgadhāramakhin</label>
           </trait>
-          <affiliation key="l_4">
-            <placeName>Kandaramanikkam</placeName>
+          <floruit from="1684" to="1710">r. 1684-1710</floruit>
+          <affiliation key="l_2" role="resided">
+            <placeName>Thanjavur</placeName>
           </affiliation>
-          <note>NCC, vol. 7,  85</note>
         </person>
       </listPerson>
     </body>

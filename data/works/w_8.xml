@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_8">
+          <title type="preferred">Dharmākūtam</title>
+          <editor key="p_5" role="aut">Tryambakarāyamakhin</editor>
+          <note type="subject">jurisprudence</note>
+          <note type="general">This work is sometimes attributed to Tryambakarāyamakhin but this was more probably the work of Dhuṇḍirāja Vyāsa, whom he patronised.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

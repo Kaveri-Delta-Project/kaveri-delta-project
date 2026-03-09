@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_12">
+          <placeName type="preferred">Thiruvalangadu</placeName>
+          <desc type="function">village</desc>
+          <idno type="Wikidata">Q2436407</idno>
+          <note type="coordinates">13.131313365440096, 79.77603509425785</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

@@ -4,8 +4,16 @@
     "name": "Appayya Dīkṣita"
   },
   {
+    "xml_id": "p_8",
+    "name": "Bhāskararāya"
+  },
+  {
     "xml_id": "p_3",
     "name": "Cokkanāthamakhin"
+  },
+  {
+    "xml_id": "p_7",
+    "name": "Gaṅgadhāramakhin"
   },
   {
     "xml_id": "p_1",
@@ -14,5 +22,13 @@
   {
     "xml_id": "p_4",
     "name": "Rāmabhadra Dīkṣita"
+  },
+  {
+    "xml_id": "p_5",
+    "name": "Tryambakarāyamakhin"
+  },
+  {
+    "xml_id": "p_6",
+    "name": "Śāhaji Bhonsle"
   }
 ]

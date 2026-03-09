@@ -9,6 +9,11 @@
       "p_3",
       "person",
       "Appayya Dīkṣita"
+    ],
+    [
+      "w_11",
+      "work",
+      "Appayya Dīkṣita"
     ]
   ],
   "p_1": [
@@ -63,6 +68,21 @@
       "w_4",
       "work",
       "Cokkanāthamakhin"
+    ],
+    [
+      "w_7",
+      "work",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "w_9",
+      "work",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "w_10",
+      "work",
+      "Cokkanāthamakhin"
     ]
   ],
   "p_4": [
@@ -70,6 +90,59 @@
       "p_3",
       "person",
       "Rāmabhadra Dīkṣita"
+    ]
+  ],
+  "p_6": [
+    [
+      "p_5",
+      "person",
+      "Śāhaji Bhonsle"
+    ],
+    [
+      "p_7",
+      "person",
+      "Śāhaji Bhonsle"
+    ]
+  ],
+  "p_5": [
+    [
+      "p_6",
+      "person",
+      "Tryambakarāyamakhin"
+    ],
+    [
+      "w_8",
+      "work",
+      "Tryambakarāyamakhin"
+    ]
+  ],
+  "p_7": [
+    [
+      "p_6",
+      "person",
+      "Gaṅgadhāramakhin"
+    ],
+    [
+      "p_8",
+      "person",
+      "Gaṅgadhāramakhin"
+    ],
+    [
+      "w_12",
+      "work",
+      "Gaṅgadhāramakhin"
+    ],
+    [
+      "w_13",
+      "work",
+      "Gaṅgadhāramakhin"
+    ]
+  ],
+  "p_8": [
+    [
+      "p_7",
+      "person",
+      "Bhāskararāya"
     ]
   ]
 }
