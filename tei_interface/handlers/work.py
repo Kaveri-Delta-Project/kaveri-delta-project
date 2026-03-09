@@ -281,6 +281,36 @@ def handle_genre(work, context, form_data):
         "error": None
     }
 
+@section_handler("references")
+def handle_references(work, context, form_data):
+    references = form_data.get("references")
+
+    if not references:
+        flash("References cannot be empty.", "references-error")
+        return {"ok": False}
+
+    el = add_simple_element_attr(
+        parent=work,
+        tag="note",
+        text=references,
+        attrs={"type": "bibliographical"},
+        allow_multiple=True
+    )
+
+    insert_in_order(
+        parent=work, 
+        tag="note", 
+        new_elem=el, 
+        child_order=CHILD_ORDER, 
+        nsmap=NSMAP, 
+        sort_attr="type", 
+        attr_priority=ATTR_PRIORITY)
+
+    return {
+        "ok": True,
+        "error": None
+    }
+
 
 @section_handler("notes")
 def handle_notes(work, context, form_data):

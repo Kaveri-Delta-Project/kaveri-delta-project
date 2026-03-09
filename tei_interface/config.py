@@ -42,6 +42,7 @@ PERSON_MAPPING = {
     "floruit_from": {"element": "floruit", "element_attr": "from", "all_results": True},
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
     "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
+    "references": {"element": "bibl", "all_results": True},
     "notes": {"element": "note", "all_results": True}
 }
 
@@ -74,6 +75,7 @@ PLACE_MAPPING = {
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
     "coords": {"element": "note", "filter_attr": "type", "filter_value": "coordinates", "all_results": True},
+    "references": {"element": "bibl", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
@@ -89,6 +91,7 @@ WORK_MAPPING = {
     "pub_place": {"parent_tag": "pubPlace", "attributes": ["key", "role"], "child_elements": ["placeName"]},
     "genre": {"element": "note", "filter_attr": "type", "filter_value": "genre", "all_results": True},
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
+    "references": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
@@ -105,7 +108,8 @@ MS_MAPPING = {
     "date_to": {"element": "origDate", "element_attr": "to", "all_results": True},
     "place": {"element": "origPlace", "all_results": True},
     "place_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
-    "notes": {"element": "note", "all_results": True},
+    "references": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
     "person": {"parent_tag": "person", "attributes": ["role"], "child_elements": ["persName"], "child_attributes": {"persName": ["key"]}, "from_root": True}
 }
 
@@ -117,7 +121,7 @@ ENTITY_CONFIG = {
         "dir": os.path.join(DATA_DIR, "persons"),
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_person.xml"),
         "mapping": PERSON_MAPPING,
-        "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "note"],
+        "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "bibl", "note"],
         "attribute_priority": {"preferred": 0, "variant": 1},
         "element_tag": "person",
         "name_tag": "persName",
@@ -128,7 +132,7 @@ ENTITY_CONFIG = {
         "dir": os.path.join(DATA_DIR, "places"),
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_place.xml"),
         "mapping": PLACE_MAPPING,
-        "child_order": ["place", "placeName", "desc", "idno", "note"],
+        "child_order": ["place", "placeName", "desc", "idno", "bibl", "note"],
         "attribute_priority": {"preferred": 0, "variant": 1, "coordinates": 0, "general": 1},
         "element_tag": "place",
         "name_tag": "placeName",
@@ -141,7 +145,7 @@ ENTITY_CONFIG = {
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_work.xml"),
         "mapping": WORK_MAPPING,
         "child_order": ["title", "idno", "editor", "pubPlace", "note"],
-        "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "general": 2},
+        "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "bibliographical": 2, "general": 3},
         "element_tag": "bibl",
         "name_tag": "title",
         "container_tag": ".//tei:listBibl",
@@ -153,7 +157,7 @@ ENTITY_CONFIG = {
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_manuscript.xml"),
         "mapping": MS_MAPPING,
         "child_order": ["repository", "idno", "msName", "msItem", "p", "origDate", "origPlace", "note", "person"],
-        "attribute_priority": {"preferred": 0, "variant": 1},
+        "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1},
         "element_tag": "msDesc",
         "name_tag": "msName",
         "container_tag": ".//tei:sourceDesc",

@@ -362,6 +362,28 @@ def handle_affiliation(person, context, form_data):
         "error": None,
     }
 
+@section_handler("references")
+def handle_references(person, context, form_data):
+    references = form_data.get("references")
+
+    if not references:
+        flash("References cannot be empty.", "references-error")
+        return {"ok": False}
+
+    el = add_simple_element_attr(
+        parent=person,
+        tag="bibl",
+        text=references,
+        allow_multiple=True
+    )
+
+    insert_in_order(person, "bibl", el, CHILD_ORDER, NSMAP)
+
+    return {
+        "ok": True,
+        "error": None
+    }
+
 
 @section_handler("notes")
 def handle_notes(person, context, form_data):

@@ -274,6 +274,39 @@ def handle_orig_place(manuscript, context, form_data):
     }
 
 
+@section_handler("references")
+def handle_references(manuscript, context, form_data):
+    references = form_data.get("references")
+
+    if not references:
+        flash("References cannot be empty.", "references-error")
+        return {"ok": False}
+
+    msorigin_el = context["root"].find(".//tei:origin", namespaces=NSMAP)
+
+    el = add_simple_element_attr(
+        parent=msorigin_el,
+        tag="note",
+        text=references,
+        attrs={"type": "bibliographical"},
+        allow_multiple=True
+    )
+
+    insert_in_order(
+        parent=msorigin_el, 
+        tag="note", 
+        new_elem=el, 
+        child_order=CHILD_ORDER, 
+        nsmap=NSMAP,
+        sort_attr="type", 
+        attr_priority=ATTR_PRIORITY)
+        
+
+    return {
+        "ok": True,
+        "error": None
+    }
+
 @section_handler("notes")
 def handle_notes(manuscript, context, form_data):
     notes = form_data.get("notes")
@@ -288,9 +321,19 @@ def handle_notes(manuscript, context, form_data):
         parent=msorigin_el,
         tag="note",
         text=notes,
+        attrs={"type": "general"},
         allow_multiple=True
     )
-    insert_in_order(msorigin_el, "note", el, CHILD_ORDER, NSMAP)
+
+    insert_in_order(
+        parent=msorigin_el, 
+        tag="note", 
+        new_elem=el, 
+        child_order=CHILD_ORDER, 
+        nsmap=NSMAP,
+        sort_attr="type", 
+        attr_priority=ATTR_PRIORITY)
+        
 
     return {
         "ok": True,

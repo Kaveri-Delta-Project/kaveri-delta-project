@@ -403,6 +403,47 @@
   </div>
 </section>
 
+<section class="panel">
+  {{ ui.section_header("Bibliographical References", "+ add references", "toggleEntryForm('references-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('references-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['references-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.references %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "bibliographical"}
+      ) }}
+    </div>
+  {% endfor %}
+
+  <div id="references-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="references">
+
+      <div class="mb-3">
+        {{ ui.input_field(
+            id="references",
+            name="references",
+            label="Bibliographical References",
+            extra_attrs="required",
+            help_text="Enter any bibliographical references here"
+        ) }}
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('references-form')") }}  
+
+    </form>
+  </div>  
+</section>
+
 
 <section class="panel">
   {{ ui.section_header("Notes", "+ add notes", "toggleEntryForm('notes-form')") }}
