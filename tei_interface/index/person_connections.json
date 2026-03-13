@@ -83,6 +83,26 @@
       "w_10",
       "work",
       "Cokkanāthamakhin"
+    ],
+    [
+      "w_14",
+      "work",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "p_3",
+      "person",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "p_3",
+      "person",
+      "Cokkanāthamakhin"
+    ],
+    [
+      "w_15",
+      "work",
+      "Cokkanāthamakhin"
     ]
   ],
   "p_4": [
@@ -102,6 +122,11 @@
       "p_7",
       "person",
       "Śāhaji Bhonsle"
+    ],
+    [
+      "p_9",
+      "person",
+      "Śāhaji Bhonsle"
     ]
   ],
   "p_5": [
@@ -113,6 +138,11 @@
     [
       "w_8",
       "work",
+      "Tryambakarāyamakhin"
+    ],
+    [
+      "p_9",
+      "person",
       "Tryambakarāyamakhin"
     ]
   ],
@@ -143,6 +173,45 @@
       "p_7",
       "person",
       "Bhāskararāya"
+    ]
+  ],
+  "p_9": [
+    [
+      "w_8",
+      "work",
+      "Dhuṇḍirāja Vyāsa"
+    ],
+    [
+      "p_5",
+      "person",
+      "Dhuṇḍirāja Vyāsa"
+    ],
+    [
+      "p_6",
+      "person",
+      "Dhuṇḍirāja Vyāsa"
+    ],
+    [
+      "p_10",
+      "person",
+      "Dhuṇḍirāja Vyāsa"
+    ],
+    [
+      "w_17",
+      "work",
+      "Dhuṇḍirāja Vyāsa"
+    ],
+    [
+      "w_18",
+      "work",
+      "Dhuṇḍirāja Vyāsa"
+    ]
+  ],
+  "p_10": [
+    [
+      "p_9",
+      "person",
+      "Serfoji I"
     ]
   ]
 }

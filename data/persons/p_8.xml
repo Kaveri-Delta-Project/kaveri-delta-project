@@ -21,6 +21,12 @@
           <trait type="student" key="p_7">
             <label>Gaṅgadhāramakhin</label>
           </trait>
+          <affiliation key="l_11" role="resided">
+            <placeName>Bhāskararāyapuram</placeName>
+          </affiliation>
+          <affiliation key="l_6" role="died">
+            <placeName>Tiruvidaimarudur</placeName>
+          </affiliation>
         </person>
       </listPerson>
     </body>

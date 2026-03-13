@@ -16,17 +16,13 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_4">
-          <persName type="preferred">Rāmabhadra Dīkṣita</persName>
-          <trait type="student" key="p_3">
-            <label>Cokkanāthamakhin</label>
+        <person xml:id="p_10">
+          <persName type="preferred">Serfoji I</persName>
+          <trait type="beneficiary" key="p_9">
+            <label>Dhuṇḍirāja Vyāsa</label>
           </trait>
-          <idno type="Wikidata">Q113774201</idno>
-          <affiliation key="l_4" role="born">
-            <placeName>Kandaramanikkam</placeName>
-          </affiliation>
-          <affiliation key="l_1" role="resided">
-            <placeName>Thiruvisanallur</placeName>
+          <affiliation key="l_14" role="resided">
+            <placeName>Sakkottai</placeName>
           </affiliation>
         </person>
       </listPerson>

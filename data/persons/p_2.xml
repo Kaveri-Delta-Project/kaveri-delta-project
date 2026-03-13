@@ -21,9 +21,10 @@
           <trait type="member of family" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
-          <trait type="associate" key="p_3">
-            <label>Cokkanāthamakhin</label>
-          </trait>
+          <floruit from="1520" to="1593">c. 1520-1593</floruit>
+          <affiliation key="l_13" role="born">
+            <placeName>Adaiyapulam</placeName>
+          </affiliation>
         </person>
       </listPerson>
     </body>

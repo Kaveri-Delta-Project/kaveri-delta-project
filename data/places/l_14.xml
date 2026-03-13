@@ -3,7 +3,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Sanskrit Project – Work</title>
+        <title>Sanskrit Project – Place</title>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -15,13 +15,14 @@
   </teiHeader>
   <text>
     <body>
-      <listBibl>
-        <bibl xml:id="w_4">
-          <title type="preferred">Śabdakaumudī</title>
-          <editor key="p_3" role="aut">Cokkanāthamakhin</editor>
-          <note type="subject">grammar</note>
-        </bibl>
-      </listBibl>
+      <listPlace>
+        <place xml:id="l_14">
+          <placeName type="preferred">Sakkottai</placeName>
+          <desc type="function">village</desc>
+          <idno type="Wikidata">Q15274500</idno>
+          <note type="coordinates">10.94314405069567, 79.39938459107618</note>
+        </place>
+      </listPlace>
     </body>
   </text>
 </TEI>

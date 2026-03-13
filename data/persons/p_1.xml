@@ -25,8 +25,8 @@
             <label>Cokkanāthamakhin</label>
           </trait>
           <floruit from="1638" to="1638">Active around 1638</floruit>
-          <affiliation key="l_1">
-            <placeName>Tiruvisainallur</placeName>
+          <affiliation key="l_1" role="affiliation to this place">
+            <placeName>Thiruvisanallur</placeName>
           </affiliation>
         </person>
       </listPerson>

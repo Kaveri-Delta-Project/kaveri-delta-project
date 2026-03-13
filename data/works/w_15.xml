@@ -16,11 +16,10 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_3">
-          <title type="preferred">Dhāturatnāvali</title>
-          <title type="variant">Dhāturūpāvalī</title>
+        <bibl xml:id="w_15">
+          <title type="preferred">Śābdikarakṣā</title>
           <editor key="p_3" role="aut">Cokkanāthamakhin</editor>
-          <note type="genre" source="other">versified treatise on grammar</note>
+          <note type="genre">commentary</note>
           <note type="subject">grammar</note>
         </bibl>
       </listBibl>

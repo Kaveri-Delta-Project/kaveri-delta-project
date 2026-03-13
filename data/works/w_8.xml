@@ -18,7 +18,8 @@
       <listBibl>
         <bibl xml:id="w_8">
           <title type="preferred">Dharmākūtam</title>
-          <editor key="p_5" role="aut">Tryambakarāyamakhin</editor>
+          <editor key="p_5" role="att">Tryambakarāyamakhin</editor>
+          <editor key="p_9" role="aut">Dhuṇḍirāja Vyāsa</editor>
           <note type="subject">jurisprudence</note>
           <note type="general">This work is sometimes attributed to Tryambakarāyamakhin but this was more probably the work of Dhuṇḍirāja Vyāsa, whom he patronised.</note>
         </bibl>

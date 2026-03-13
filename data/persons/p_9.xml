@@ -16,17 +16,23 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_5">
-          <persName type="preferred">Tryambakarāyamakhin</persName>
-          <persName type="variant">Tryambakayajvan</persName>
-          <trait type="associate" key="p_6">
+        <person xml:id="p_9">
+          <persName type="preferred">Dhuṇḍirāja Vyāsa</persName>
+          <trait type="patron" key="p_5">
+            <label>Tryambakarāyamakhin</label>
+          </trait>
+          <trait type="patron" key="p_6">
             <label>Śāhaji Bhonsle</label>
           </trait>
-          <trait type="beneficiary" key="p_9">
-            <label>Dhuṇḍirāja Vyāsa</label>
+          <trait type="patron" key="p_10">
+            <label>Serfoji I</label>
           </trait>
           <floruit from="1680" to="1680">fl. 1680</floruit>
-          <note>He was the mantrin of Śāhaji Bhonsle.</note>
+          <affiliation key="l_15" role="resided">
+            <placeName>Svamimalai</placeName>
+          </affiliation>
+          <bibl>Introduction to Raghavan's Śāhendravilāsa</bibl>
+          <bibl>NCC, vol. 8, pp. 11-12</bibl>
         </person>
       </listPerson>
     </body>

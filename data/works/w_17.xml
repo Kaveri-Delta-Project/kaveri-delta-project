@@ -16,11 +16,9 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_10">
-          <title type="preferred">Śābdikarakṣā</title>
-          <editor key="p_3" role="aut">Cokkanāthamakhin</editor>
-          <note type="genre">commentary</note>
-          <note type="subject">grammar</note>
+        <bibl xml:id="w_17">
+          <title type="preferred">Śāhajivilāsagītā</title>
+          <editor key="p_9" role="aut">Dhuṇḍirāja Vyāsa</editor>
         </bibl>
       </listBibl>
     </body>

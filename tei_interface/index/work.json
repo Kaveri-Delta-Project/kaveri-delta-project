@@ -24,6 +24,10 @@
     "name": "Mahābhāṣyaratnāvali"
   },
   {
+    "xml_id": "w_16",
+    "name": "Mudrārākṣasavyākhyāna"
+  },
+  {
     "xml_id": "w_1",
     "name": "Nīlakaṇṭhavijayacampū"
   },
@@ -32,23 +36,23 @@
     "name": "Rasikarañjanī"
   },
   {
+    "xml_id": "w_18",
+    "name": "Rājavyavahārakośa"
+  },
+  {
     "xml_id": "w_5",
     "name": "Subhadrāpariṇaya"
   },
   {
-    "xml_id": "w_4",
+    "xml_id": "w_14",
     "name": "Śabdakaumudī"
   },
   {
-    "xml_id": "w_7",
-    "name": "Śabdakaumudī"
-  },
-  {
-    "xml_id": "w_9",
-    "name": "Śabdakaumudī"
-  },
-  {
-    "xml_id": "w_10",
+    "xml_id": "w_15",
     "name": "Śābdikarakṣā"
+  },
+  {
+    "xml_id": "w_17",
+    "name": "Śāhajivilāsagītā"
   }
 ]

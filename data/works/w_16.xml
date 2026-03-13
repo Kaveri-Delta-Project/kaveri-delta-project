@@ -16,12 +16,9 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_3">
-          <title type="preferred">Dhāturatnāvali</title>
-          <title type="variant">Dhāturūpāvalī</title>
-          <editor key="p_3" role="aut">Cokkanāthamakhin</editor>
-          <note type="genre" source="other">versified treatise on grammar</note>
-          <note type="subject">grammar</note>
+        <bibl xml:id="w_16">
+          <title type="preferred">Mudrārākṣasavyākhyāna</title>
+          <note type="genre">commentary</note>
         </bibl>
       </listBibl>
     </body>
