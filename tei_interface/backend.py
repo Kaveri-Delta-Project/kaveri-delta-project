@@ -4,7 +4,13 @@ import re
 import string
 from flask import Flask, request, render_template, redirect, url_for, flash, jsonify
 from config import ENTITY_CONFIG, NSMAP, KEYS_TO_LOWERCASE
-from utils import load_entity, load_or_create_entity, handle_deletions, write_entity_to_file, group_items_alphabetically
+from utils import (load_entity, 
+            load_or_create_entity, 
+            handle_deletions, 
+            write_entity_to_file, 
+            group_items_alphabetically,
+            normalize_for_sort
+            )
 from handlers import person, place, work, manuscript
 from index_utils import (load_index, 
             get_index_file, 
@@ -58,31 +64,26 @@ def entity_index(entity):
             items = json.load(f)
 
     query = request.args.get("q", "").strip().lower()
+    norm_query = normalize_for_sort(query)
 
-    if query:
-        # Use regex to match whole words (case-insensitive)
-        pattern = re.compile(rf"\b{re.escape(query)}\b", re.IGNORECASE)
+    filtered_items = items
+
+    if norm_query:
+        # Build regex for whole-word match using normalized query
+        pattern = re.compile(rf"\b{re.escape(norm_query)}\b", re.IGNORECASE)
+
         filtered_items = []
         for item in items:
-            if item.get("name") and pattern.search(item["name"]):
-                filtered_items.append(item)
-        items = filtered_items
+            name = item.get("name")
+            if name:
+                # Normalize the name before regex matching
+                norm_name = normalize_for_sort(name)
+                if pattern.search(norm_name):
+                    filtered_items.append(item)
+                  
+    items = filtered_items
 
-    #sort alphabetically by name, fallback to xml_id
-    items.sort(key=lambda x: (x.get("name") or x["xml_id"]).lower())
-
-    grouped = {letter: [] for letter in string.ascii_uppercase}
-    grouped["#"] = []
-
-    for item in items:
-        name = item.get("name")
-
-        if name and name[0].upper() in grouped:
-            letter = name[0].upper()
-        else:
-            letter = "#"
-
-        grouped[letter].append(item)
+    grouped = group_items_alphabetically(items)
 
     return render_template("entity_index.html", entity=entity, grouped_items=grouped, query=query)
 
@@ -99,17 +100,22 @@ def api_entity_search(entity):
         with open(path, encoding="utf-8") as f:
             items = json.load(f)
 
-    # filter by name containing query
     if query:
-        items = [
-            item for item in items
-            if item.get("name") and any(
-                word.startswith(query) for word in item["name"].lower().split()
-            )
-]
+        query_norm = normalize_for_sort(query)
 
-    # optionally sort alphabetically
-    items.sort(key=lambda x: x.get("name", x["xml_id"]).lower())
+        filtered = []
+        for item in items:
+            name = item.get("name")
+            if not name:
+                continue
+            name_norm = normalize_for_sort(name)
+            # match if starts with normalized query
+            if name_norm.startswith(query_norm):
+                filtered.append(item)
+        items = filtered
+
+    # Sort alphabetically by normalized name
+    items.sort(key=lambda x: normalize_for_sort(x.get("name") or x["xml_id"]))
 
     return jsonify(items)
 

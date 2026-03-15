@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
 // ---- Preserve scroll position across form submissions ----
 document.addEventListener("DOMContentLoaded", () => {
   // Restore scroll position if we have one
@@ -30,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 function toggleEntryForm(formId) {
   const el = document.getElementById(formId);
@@ -163,4 +166,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const genreSelect = document.getElementById("genre");
+  const commentaryWrapper = document.getElementById("genre_commentary_wrapper");
+  const commentaryInput = document.getElementById("genre_commentary");
+  const commentaryHidden = document.getElementById("genre_commentary_id");
+
+  if (!genreSelect || !commentaryWrapper || !commentaryInput || !commentaryHidden) return;
+
+  function toggleCommentary() {
+    if (genreSelect.value === "commentary") {
+      commentaryWrapper.classList.remove("d-none");
+      commentaryInput.required = true;
+    } else {
+      commentaryWrapper.classList.add("d-none");
+      commentaryInput.required = false;
+      commentaryInput.value = "";
+      commentaryHidden.value = "";
+    }
+  }
+
+  // Initial check in case Commentary is preselected
+  toggleCommentary();
+
+  // Update visibility whenever the dropdown changes
+  genreSelect.addEventListener("change", toggleCommentary);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const letterGroups = document.querySelectorAll('.letter-group');
+  const noEntries = document.querySelectorAll('.no-entries');
+
+  // Check if there is a "q" parameter in the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const q = urlParams.get('q');
+
+  if (q && q.trim() !== "") {
+    // Hide letter headings and remove spacing
+    letterGroups.forEach(group => {
+      const heading = group.querySelector('.letter-heading');
+      if (heading) heading.style.display = 'none';
+      group.style.margin = '0';
+      group.style.padding = '0';
+    });
+
+    // Hide any "no entries" messages
+    noEntries.forEach(el => el.style.display = 'none');
+  }
+});
 

@@ -154,6 +154,90 @@
   </div>
 </section>
 
+<section class="panel">
+  {{ ui.section_header("Associated Dates", "+ add add associated dates", "toggleEntryForm('dates-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('dates-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['dates-error'] }}
+    </div>
+  {% endif %}
+
+  {% for text, from, to, activity in zip(data.dates_text, data.dates_from, data.dates_to, data.activity) %}
+    <div class="border rounded p-2 mb-2">
+
+      <span class="fw-semibold">{{ text }}</span>
+      <span class="text-muted">({{ from }} to {{ to }}: {{ activity }})</span>
+
+      {{ ui.delete_button("date", loop.index0) }}
+
+    </div>
+  {% endfor %}
+
+  <div id="dates-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="dates">
+
+      <div class="mb-3">
+        {{ ui.select_field("activity",
+            [
+            ("", "-- Select activity --"),
+            ("composition", "Composition"),
+            ("performance", "Performance"),
+            ("published", "Published"),
+            ("other", "Other")
+            ],
+            required=True,
+            allow_other=True
+        ) }}
+      </div>
+
+      <div class="mb-3">
+      {{ ui.input_field(
+          id="dates_text",
+          name="dates_text",
+          label="Period",
+          label_option="(required)",
+          placeholder="e.g. c. 1620–1650",
+          extra_attrs="required",
+          help_text="Enter dates associated with work."
+      ) }}
+      </div>
+
+      <div class="row">
+        <div class="col">
+          {{ ui.input_field(
+              id="dates_from",
+              name="dates_from",
+              label="From",
+              label_option="(required)",
+              placeholder="e.g. 1620 or 1620-05-12",
+              extra_attrs="required",
+              help_text="Start year or full ISO date"
+          ) }}
+        </div>
+
+        <div class="col">
+          {{ ui.input_field(
+              id="dates_to",
+              name="dates_to",
+              label="To",
+              label_option="(required)",
+              placeholder="e.g. 1650 or 1650-05-12",
+              extra_attrs="required",
+              help_text="End year or full ISO date"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("toggleEntryForm('dates-form')") }}
+
+    </form>
+  </div>
+
+</section>
+
 
 <section class="panel">
   {{ ui.section_header("Associated Persons", "+ add editor", "toggleEntryForm('editor-form')") }}
@@ -223,7 +307,7 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Associated Places", "+ add publication place", "toggleEntryForm('pub-places-form')") }}
+  {{ ui.section_header("Associated Places", "+ add associated place", "toggleEntryForm('pub-places-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('pub-places-error') %}
@@ -302,18 +386,42 @@
     </div>
   {% endif %}
 
-  <!-- Delete identifier -->
-  {% for val in data.genre %}
-    <div class="border rounded p-2 mb-2">
+{% for val in data.genre %}
+  <div class="border rounded p-2 mb-2">
 
-      <span class="fw-semibold">{{ val }}</span>
-        {{  ui.delete_button(
+    {% if val.key %}
+      <span class="fw-semibold">commentary</span>
+      <span class="text-muted ms-1"> ({{ val.parent_text }} [{{ val.key }}])</span>
+
+      {{ ui.delete_button(
         section="note",
         index=loop.index0,
-        extra_fields={"element_attr_name": "type", "element_attr_value": "genre"}
+        extra_fields={
+          "element_attr_name": "type",
+          "element_attr_value": "genre",
+          "connection": "cascade",
+          "name_type": "work",
+          "key": val.key,
+          "name": val.parent_text
+        }
       ) }}
-    </div>
-  {% endfor %}
+
+    {% else %}
+      <span class="fw-semibold">{{ val.parent_text }}</span>
+
+      {{ ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={
+          "element_attr_name": "type",
+          "element_attr_value": "genre"
+        }
+      ) }}
+
+    {% endif %}
+
+  </div>
+{% endfor %}
 
   <!-- Add new genre -->
   <div id="genres-form" class="border rounded p-3 mt-3 d-none">
@@ -324,23 +432,40 @@
         {{ ui.select_field("genre",
             [
             ("", "-- Select genre --"),
+            ("anthology", "Anthology"),
+            ("arthaśāstra", "Arthaśāstra"),
             ("commentary", "Commentary"),
-            ("debate", "Debate/Argumentative"),
-            ("drama", "Drama"),
+            ("debate/argumentative", "Debate/Argumentative"),
             ("didactic", "Didactic"),
             ("doxography", "Doxography"),
-            ("history", "Historical Work"),
             ("hymn", "Hymn"),
             ("lexicon", "Lexicon"),
-            ("narrative", "Narrative"),
-            ("philosophy", "Philosophy"),
+            ("musical", "Musical Composition"),
+            ("narrative (historical, fiction, biographical, etc.)", "Narrative (Historical, Fiction, Biographical, etc.)"),
+            ("play", "Play"),
             ("poetry", "Poetry"),
-            ("ritual_manual", "Ritual Manual"),
-            ("theology", "Theology/Religious Doctrine"),
+            ("ritual manual", "Ritual Manual"),
+            ("treatise/exposition (philosophical, theological, etc.)", "Treatise/Exposition (Philosophical, Theological, etc.)"),
+            ("verse and prose (campū)", "Verse and Prose (Campū)"),
             ("other", "Other")
             ],
             required=True,
             allow_other=True
+        ) }}
+      </div>
+
+      <div class="mb-3 d-none" id="genre_commentary_wrapper">
+        {{ ui.input_field(
+            id="genre_commentary",
+            name="genre_commentary_id",
+            label="Commentary Work",
+            label_option="(required)",
+            placeholder="Type to search works...",
+            entity_lookup="work",
+            results_id="genre_commentary_results",
+            hidden_id="genre_commentary_id",
+            extra_attrs="required",
+            help_text="Select a commentary work from existing works."
         ) }}
       </div>
 

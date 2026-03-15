@@ -124,6 +124,64 @@ def handle_idno(work, context, form_data):
         "error": None
     }
 
+
+@section_handler("dates")
+def handle_dates(work, context, form_data):
+    dates_text = form_data.get("dates_text")
+    dates_from = form_data.get("dates_from")
+    dates_to = form_data.get("dates_to")
+    activity = form_data.get("activity")
+    activity_other = form_data.get("activity_other")
+
+
+    if not dates_text:
+        flash("No dates text entered.", "dates-error")
+        return {"ok": False}
+
+    if not activity:
+        flash("No activity entered.", "dates-error")
+        return {"ok": False}
+
+    if not dates_from or not dates_to:
+        flash("Both 'From' and 'To' dates are required.", "dates-error")
+        return {"ok": False}
+
+    if dates_from and not valid_date(dates_from):
+        flash(f"Invalid 'From' date: {dates_from}", "dates-error")
+        return {"ok": False}
+
+    if dates_to and not valid_date(dates_to):
+        flash(f"Invalid 'To' date: {dates_to}", "dates-error")
+        return {"ok": False}
+
+    if activity == "other" and activity_other:
+        activity = activity_other.lower()
+        attrs = {"type": activity, "source": "other"}
+    else:
+        attrs = {"type": activity}
+
+    attrs.update({
+        "from": dates_from,
+        "to": dates_to
+        })
+
+    el = add_simple_element_attr(
+        parent=work,
+        tag="date",
+        text=dates_text,
+        attrs=attrs,
+        allow_multiple=True
+    )
+    
+    insert_in_order(work, "date", el, CHILD_ORDER, NSMAP)
+
+    return {
+        "ok": True,
+        "error": None
+    }
+
+
+
 @section_handler("editor")
 def handle_editor(work, context, form_data):
 
@@ -206,6 +264,9 @@ def handle_pub_place(work, context, form_data):
 def handle_genre(work, context, form_data):
     genre = form_data.get("genre")
     genre_other = form_data.get("genre_other")
+    genre_commentary_key = form_data.get("genre_commentary_id")
+    genre_commentary_text = load_ent_name_by_key("work", genre_commentary_key, "title")
+
 
     if not genre:
         flash("No genre entered.", "genre-error")
@@ -214,13 +275,18 @@ def handle_genre(work, context, form_data):
     if genre == "other" and genre_other:
         text_value = genre_other.lower()
         attrs = {"type": "genre", "source": "other"}
+
+    elif genre == "commentary" and genre_commentary_key:
+        text_value = genre_commentary_text
+        attrs = {"type": "genre", "source": "commentary", "key": genre_commentary_key}
+
     else:
-        text_value = genre
+        text_value = genre.lower()
         attrs = {"type": "genre"}
 
-    el = add_simple_element_attr(
+    el = build_section(
         parent=work,
-        tag="note",
+        item_tag="note",
         text=text_value,
         attrs=attrs,
         allow_multiple=True
@@ -235,6 +301,9 @@ def handle_genre(work, context, form_data):
         sort_attr="type", 
         attr_priority=ATTR_PRIORITY
     )
+
+    if genre == "commentary" and genre_commentary_key:
+        update_connection_index("work", genre_commentary_key, context['xml_id'], "work", genre_commentary_text)
 
     return {
         "ok": True,

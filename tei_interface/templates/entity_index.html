@@ -11,77 +11,78 @@
 {% block content %}
 
 <!-- Action Bar -->
-<div class="entity-toolbar d-flex flex-wrap justify-content-between align-items-center mb-4">
+<div class="sticky-top bg-white border-bottom pt-2">
+  <div class="entity-toolbar d-flex flex-wrap justify-content-between align-items-center mb-4">
 
-  <!-- LEFT: Buttons -->
-  <div class="d-flex gap-2 align-items-center">
+    <!-- LEFT: Buttons -->
+    <div class="d-flex gap-2 align-items-center">
 
-    <a href="{{ url_for('index') }}"
-       class="btn btn-outline-secondary btn-sm">
-      ← Home
-    </a>
+      <a href="{{ url_for('index') }}"
+         class="btn btn-outline-secondary btn-sm">
+        ← Home
+      </a>
 
-    <a href="{{ url_for('new_entity', entity=entity) }}"
-       class="btn btn-primary btn-sm">
-      + New {{ entity|capitalize }}
-    </a>
+      <a href="{{ url_for('new_entity', entity=entity) }}"
+         class="btn btn-primary btn-sm">
+        + New {{ entity|capitalize }}
+      </a>
 
-    <form method="POST"
-          action="{{ url_for('refresh_entity_index', entity=entity) }}"
-          onsubmit="return confirm('⚠ Manually refresh the index?');"
-          class="d-inline">
-      <button type="submit"
-              class="btn btn-outline-warning btn-sm">
-        ⟳ Refresh
-      </button>
-    </form>
-
-  </div>
-
-  <!-- RIGHT: Search -->
-  <form method="GET"
-        action="{{ url_for('entity_index', entity=entity) }}"
-        class="d-flex mt-3 mt-md-0">
-
-    <div class="input-group input-group-sm search-group">
-
-      <input type="text"
-             name="q"
-             class="form-control"
-             placeholder="Filter by {{ entity|capitalize }} name..."
-             value="{{ request.args.get('q', '') }}"
-             autocomplete="off">
-
-      <button type="submit" class="btn btn-outline-primary">
-        Search
-      </button>
-
-      {% if query %}
-        <button type="button"
-                class="btn btn-outline-secondary"
-                onclick="window.location='{{ url_for('entity_index', entity=entity) }}'">
-          Clear
+      <form method="POST"
+            action="{{ url_for('refresh_entity_index', entity=entity) }}"
+            onsubmit="return confirm('⚠ Manually refresh the index?');"
+            class="d-inline">
+        <button type="submit"
+                class="btn btn-outline-warning btn-sm">
+          ⟳ Refresh
         </button>
-      {% endif %}
+      </form>
 
     </div>
 
-  </form>
+    <!-- RIGHT: Search -->
+    <form method="GET"
+          action="{{ url_for('entity_index', entity=entity) }}"
+          class="d-flex mt-3 mt-md-0">
 
-</div>
+      <div class="input-group input-group-sm search-group">
+
+        <input type="text"
+               id="index-search" 
+               name="q"
+               class="form-control"
+               placeholder="Search by {{ entity|capitalize }} name..."
+               value="{{ request.args.get('q', '') }}"
+               autocomplete="off">
+
+        <button type="submit" class="btn btn-outline-primary">
+          Search
+        </button>
+
+        {% if query %}
+          <button type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="window.location='{{ url_for('entity_index', entity=entity) }}'">
+            Clear
+          </button>
+        {% endif %}
+
+      </div>
+    </form>
+  </div>
 
 
-<hr>
+  <hr>
 
-<div class="alphabet mb-4 d-flex flex-wrap gap-2">
-  {% for letter in grouped_items.keys() %}
-    <button type="button" class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="{{ letter }}">
-      {{ letter }}
+  <div class="alphabet mb-4 d-flex flex-wrap gap-2">
+    {% for letter in grouped_items.keys() %}
+      <button type="button" class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="{{ letter }}">
+        {{ letter }}
+      </button>
+    {% endfor %}
+    <button type="button" class="btn btn-sm btn-outline-primary alphabet-btn" data-letter="all">
+      Show All
     </button>
-  {% endfor %}
-  <button type="button" class="btn btn-sm btn-outline-primary alphabet-btn" data-letter="all">
-    Show All
-  </button>
+  </div>
 </div>
 
 <!-- Letter Groups -->
@@ -111,7 +112,7 @@
       {% endfor %}
     </ul>
   {% else %}
-    <p class="text-muted small">No entries</p>
+    <p class="no-entries text-muted small">No entries</p>
   {% endif %}
 </div>
 {% endfor %}

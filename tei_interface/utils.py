@@ -1,10 +1,56 @@
 from lxml import etree
+from unidecode import unidecode
+import string
 import os, re
 from config import ENTITY_CONFIG, NS_TEI, NS_XML, NSMAP, DEFAULT_NSMAP
 from flask import request, redirect, url_for
 from collections import defaultdict
 
 
+
+def normalize_for_sort(text):
+    """
+    Normalize a string for sorting or comparison:
+    - Strip diacritics (é → e, Ł → L)
+    - Lowercase
+    """
+    if not text:
+        return ""
+    return unidecode(text).lower()
+
+
+def group_items_alphabetically(items):
+    """
+    Group a list of items alphabetically by the first letter of their name.
+    Handles diacritics and sorts items within each group.
+    
+    Args:
+        items (list[dict]): Each item should have at least 'name' and 'xml_id'.
+        
+    Returns:
+        dict[str, list[dict]]: Keys are 'A'-'Z' plus '#' for non-letter starts.
+    """
+    # Initialize A-Z plus '#' for non-letter starting items
+    grouped = {letter: [] for letter in string.ascii_uppercase}
+    grouped["#"] = []
+
+    for item in items:
+        name = item.get("name") or ""
+        normalized = normalize_for_sort(name)
+
+        # Determine first letter for grouping
+        if normalized and normalized[0].isalpha():
+            first_letter = normalized[0].upper()
+        else:
+            first_letter = "#"
+
+        grouped[first_letter].append(item)
+
+    # Sort items within each group alphabetically
+    for letter, items_in_group in grouped.items():
+        items_in_group.sort(key=lambda x: normalize_for_sort(x.get("name") or x["xml_id"]))
+
+    return grouped
 
 def extract_element_text(parent, ns, element, filter_attr=None, filter_value=None, all_results=False):
     """
@@ -64,18 +110,6 @@ def extract_attribute_values(parent, ns, element, filter_attr, all_results=False
 
     return values if all_results else (values[0] if values else None)
 
-def group_items_alphabetically(items):
-    """Group list of items by first letter of name, fallback to # for missing names."""
-    grouped = defaultdict(list)
-    for item in items:
-        name = item.get("name")
-        if name:
-            first_letter = name[0].upper()
-        else:
-            first_letter = "#"
-        grouped[first_letter].append(item)
-    # Return as a sorted dictionary by letter
-    return dict(sorted(grouped.items()))
 
 def extract_from_parent(
     parent,
@@ -85,9 +119,13 @@ def extract_from_parent(
     attributes=None,
     child_elements=None,
     child_attributes=None,
+    filter_attr=None,
+    filter_value=None,
+    extract_parent_text=False,
 ):
     """
-    Extract information from a parent element and its child/grandchild elements.
+    Extract information from parent elements and their children, optionally filtering parents by attribute.
+
 
     Args:
         parent (lxml.etree._Element): The parent element to search under.
@@ -96,6 +134,9 @@ def extract_from_parent(
         child_elements (list[str], optional): List of child/grandchild element tag names to extract text from.
         child_attributes (dict, optional): Dictionary mapping child/grandchild element tag names to lists of
                                            attribute names to extract from those child elements.
+        filter_attr (str, optional): Attribute name to filter parent elements by.
+        filter_value (str, optional): Attribute value to match for filtering parent elements.
+        extract_parent_text (bool, optional): Whether to extract the parent element’s own text.                                   
         namespaces (dict, optional): Namespace mapping for XPath searches (default: NSMAP).
 
     Returns:
@@ -109,10 +150,17 @@ def extract_from_parent(
 
     results = []
 
-    if not parent:
+    if parent is None:
         return results
 
-    for el in parent.xpath(f".//tei:{parent_tag}", namespaces=ns):
+    xpath = f".//tei:{parent_tag}"
+    if filter_attr:
+        if filter_value is not None:
+            xpath += f'[@{filter_attr}="{filter_value}"]'
+        else:
+            xpath += f'[@{filter_attr}]'
+
+    for el in parent.xpath(xpath, namespaces=ns):
         item = {}
 
         # Extract parent attributes
@@ -120,6 +168,10 @@ def extract_from_parent(
             for attr in attributes:
                 val = el.get(attr)
                 item[attr] = val.strip() if val else None
+
+        if extract_parent_text:
+            parent_text = el.text.strip() if el.text and el.text.strip() else None
+            item["parent_text"] = parent_text
 
         # Extract child/grandchild elements text
         if child_elements:
@@ -291,8 +343,11 @@ def load_entity(file_path, entity_tag, mapping, nsmap):
                 NSMAP,
                 parent_tag=spec["parent_tag"],
                 attributes=spec.get("attributes"),
+                filter_attr=spec.get("filter_attr"),
+                filter_value=spec.get("filter_value"),
                 child_elements=spec.get("child_elements"),
-                child_attributes=spec.get("child_attributes")
+                child_attributes=spec.get("child_attributes"),
+                extract_parent_text=spec.get("extract_parent_text")
             )
     return data
 
