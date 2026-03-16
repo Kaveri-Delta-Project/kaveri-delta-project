@@ -64,31 +64,34 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+.alphabet button.active-letter {
+  background-color: rgba(128, 0, 0, 0.1);
+  border-color: rgba(128, 0, 0, 1);
+  color: rgba(128, 0, 0, 1);
+  font-weight: 600;
+}
+
+.alphabet button.active-all {
+  border-color: rgba(128, 0, 0, 1);
+  color: rgba(128, 0, 0, 1);
+  font-weight: 600;
+}
+
+
+.alphabet button.active-all:active {
+  background-color: inherit;  
+  color: inherit;            
+}
+
+
 .alphabet button:hover {
   background-color: #e9ecef;
 }
 
-.letter-heading {
-  margin-bottom: 1rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid #ddd;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.letter-group {
-  display: none;
-  margin-bottom: 2.5rem;
-}
-
-.letter-group.active {
-  display: block;
-}
 
 .show-all {
   color: rgba(128, 0, 0, 1) !important;
   border: 1.5px solid rgba(128, 0, 0, 1) !important;
-  background: transparent;
   padding: 0.3rem 0.7rem !important;
   border-radius: 0.4rem !important;
   font-weight: 500 !important;
@@ -122,9 +125,6 @@ button[type="submit"] {
   border-radius: 0.2rem !important;
 }
 
-.search-group .clear-button {
-  border-radius: 0.6rem !important;
-}
 
 /* Search input styling */
 .index-header .index-search input {
@@ -135,22 +135,22 @@ button[type="submit"] {
   border-radius: 0.25rem;
 }
 
-.clear-button {
+
+
+.search-button:hover {
+  background-color: #e9ecef !important; /* pale grey */
+}
+
+.search-button {
   color: rgba(128, 0, 0, 1) !important;
   border: 1.5px solid rgba(128, 0, 0, 1) !important;
-  background: transparent;
+  background: transparent !important;
   padding: 0.3rem 0.7rem !important;
   border-radius: 0.4rem !important;
   font-weight: 500 !important;
   letter-spacing: 0.03em;
   margin-left: 0.5rem! important;
 }
-
-.clear-button:hover {
-  background-color: #e9ecef !important; /* pale grey */
-}
-
-
 
 /* ----------------------------
    Index Entries
@@ -220,6 +220,15 @@ button[type="submit"] {
 
 .index-entry.open .toggle {
   transform: rotate(90deg);
+}
+
+.hash-highlight {
+  background-color: rgba(255, 215, 0, 0.7);
+  border-radius: 8px;
+  transition: background-color 2s ease}
+
+.hash-highlight.fade {
+  background-color: transparent;
 }
 
 

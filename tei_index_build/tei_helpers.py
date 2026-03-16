@@ -1,13 +1,44 @@
 import os
+import json
 from bs4 import BeautifulSoup
 from lxml import etree
 from collections import defaultdict
+from unidecode import unidecode
 
 from config import (
 
     NSMAP,
     ENTITY_CONFIG
 )
+
+
+def build_search_index(all_entities, build_dir):
+
+    records = []
+
+    for entity_type, items in all_entities.items():
+
+        for item in items:
+
+            xml_id = item.get("xml_id")
+
+            name_list = item.get("name")
+            name = name_list[0] if name_list else xml_id
+
+            alt_names = item.get("alt_names") or []
+
+            records.append({
+                "type": entity_type,
+                "id": xml_id,
+                "name": name,
+                "alt_names": alt_names,
+                "url": f"indexes/{entity_type}_index.html#{xml_id}"
+            })
+
+    output_path = os.path.join(build_dir, "search_index.json")
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(records, f, ensure_ascii=False, indent=2)
 
 
 def load_dir_data(entity_tag, directory):
@@ -28,17 +59,32 @@ def load_dir_data(entity_tag, directory):
     return all_data
 
 
+def normalize_for_sort(text):
+    if not text:
+        return ""
+    return unidecode(text).lower()
+    
+
 def group_items_alphabetically(items):
-    """Group list of items by first letter of name, fallback to # for missing names."""
     grouped = defaultdict(list)
+
     for item in items:
-        name = item.get("name")
-        if name:
-            first_letter = name[0][0].upper()
+        name_list = item.get("name")
+
+        if name_list:
+            name = name_list[0]
+            normalized = normalize_for_sort(name)
+            first_letter = normalized[0].upper() if normalized else "#"
         else:
             first_letter = "#"
+
         grouped[first_letter].append(item)
-    # Return as a sorted dictionary by letter
+
+    for letter in grouped:
+        grouped[letter].sort(
+            key=lambda x: normalize_for_sort(x["name"][0]) if x.get("name") else ""
+        )
+
     return dict(sorted(grouped.items()))
 
 
@@ -93,6 +139,70 @@ def remove_broken_links(html_path, entities_cache):
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(str(soup))
         print(f"Removed broken links in {html_path}")
+
+
+def link_persons_to_places(entity_data):
+    """
+    Build a dictionary mapping place XML IDs to lists of affiliated persons.
+    """
+    place_dict = {}
+
+    for person in entity_data:
+        xml_id = person.get("xml_id")
+        name_list = person.get("name")
+        name = name_list[0] if name_list else person.get("xml_id")
+        affiliations = person.get("affiliations") or []
+
+        for affil in affiliations:
+            place_key = affil.get("key")
+            if not place_key:
+                continue
+
+            # initialize list if key not already present
+            if place_key not in place_dict:
+                place_dict[place_key] = []
+
+            # append person info
+            place_dict[place_key].append({
+                "xml_id": xml_id,
+                "name": name,
+                "from": affil.get("from"),
+                "to": affil.get("to"),
+                "role": affil.get("role")
+            })
+
+    return place_dict
+
+
+def link_works_to_persons(work_data):
+    """
+    Build a mapping of person XML IDs to works they are associated with.
+    """
+    person_dict = {}
+
+    for work in work_data:
+        work_id = work.get("xml_id")
+        work_name = work.get("name")[0] if work.get("name") else work_id
+
+        # Associated persons in the work
+        editors = work.get("editor_text") or []
+        editor_keys = work.get("editor_key") or []
+        editor_roles = work.get("editor_role") or []
+
+        for name, key, role in zip(editors, editor_keys, editor_roles):
+            if not key:
+                continue
+
+            if key not in person_dict:
+                person_dict[key] = []
+
+            person_dict[key].append({
+                "xml_id": work_id,
+                "title": work_name,
+                "role": role
+            })
+
+    return person_dict
 
 
 def load_entity(file_path, entity_tag):
@@ -171,8 +281,11 @@ def load_entity(file_path, entity_tag):
                 NSMAP,
                 parent_tag=spec["parent_tag"],
                 attributes=spec.get("attributes"),
+                filter_attr=spec.get("filter_attr"),
+                filter_value=spec.get("filter_value"),
                 child_elements=spec.get("child_elements"),
-                child_attributes=spec.get("child_attributes")
+                child_attributes=spec.get("child_attributes"),
+                extract_parent_text=spec.get("extract_parent_text")
             )
     return data
 
@@ -245,9 +358,13 @@ def extract_from_parent(
     attributes=None,
     child_elements=None,
     child_attributes=None,
+    filter_attr=None,
+    filter_value=None,
+    extract_parent_text=False,
 ):
     """
-    Extract information from a parent element and its child/grandchild elements.
+    Extract information from parent elements and their children, optionally filtering parents by attribute.
+
 
     Args:
         parent (lxml.etree._Element): The parent element to search under.
@@ -256,6 +373,9 @@ def extract_from_parent(
         child_elements (list[str], optional): List of child/grandchild element tag names to extract text from.
         child_attributes (dict, optional): Dictionary mapping child/grandchild element tag names to lists of
                                            attribute names to extract from those child elements.
+        filter_attr (str, optional): Attribute name to filter parent elements by.
+        filter_value (str, optional): Attribute value to match for filtering parent elements.
+        extract_parent_text (bool, optional): Whether to extract the parent element’s own text.                                   
         namespaces (dict, optional): Namespace mapping for XPath searches (default: NSMAP).
 
     Returns:
@@ -272,7 +392,14 @@ def extract_from_parent(
     if parent is None:
         return results
 
-    for el in parent.xpath(f".//tei:{parent_tag}", namespaces=ns):
+    xpath = f".//tei:{parent_tag}"
+    if filter_attr:
+        if filter_value is not None:
+            xpath += f'[@{filter_attr}="{filter_value}"]'
+        else:
+            xpath += f'[@{filter_attr}]'
+
+    for el in parent.xpath(xpath, namespaces=ns):
         item = {}
 
         # Extract parent attributes
@@ -280,6 +407,10 @@ def extract_from_parent(
             for attr in attributes:
                 val = el.get(attr)
                 item[attr] = val.strip() if val else None
+
+        if extract_parent_text:
+            parent_text = el.text.strip() if el.text and el.text.strip() else None
+            item["parent_text"] = parent_text
 
         # Extract child/grandchild elements text
         if child_elements:
