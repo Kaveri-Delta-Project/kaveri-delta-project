@@ -3,7 +3,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Sanskrit Project – Work</title>
+        <title>Sanskrit Project – Place</title>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -15,13 +15,13 @@
   </teiHeader>
   <text>
     <body>
-      <listBibl>
-        <bibl xml:id="w_16">
-          <title type="preferred">Mudrārākṣasavyākhyāna</title>
-          <date type="composition" from="1714" to="1714">1714</date>
-          <note type="genre">commentary</note>
-        </bibl>
-      </listBibl>
+      <listPlace>
+        <place xml:id="l_16">
+          <placeName type="preferred">Madurai</placeName>
+          <desc type="function">city</desc>
+          <note type="coordinates">9.927390636036197, 78.11904709974091</note>
+        </place>
+      </listPlace>
     </body>
   </text>
 </TEI>
