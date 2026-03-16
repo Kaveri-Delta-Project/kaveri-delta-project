@@ -30,13 +30,7 @@
       "Thanjavur"
     ]
   ],
-  "l_12": [
-    [
-      "p_7",
-      "person",
-      "Thiruvalangadu"
-    ]
-  ],
+  "l_12": [],
   "l_13": [
     [
       "p_2",
@@ -70,6 +64,13 @@
       "p_9",
       "person",
       "Svamimalai"
+    ]
+  ],
+  "l_17": [
+    [
+      "p_7",
+      "person",
+      "Tiruvalangadu"
     ]
   ]
 }
