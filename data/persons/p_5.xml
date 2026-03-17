@@ -19,11 +19,12 @@
         <person xml:id="p_5">
           <persName type="preferred">Tryambakarāyamakhin</persName>
           <persName type="variant">Tryambakayajvan</persName>
+          <persName type="variant">Tryaṃbakādhvarin</persName>
           <trait type="associate" key="p_6">
             <label>Śāhaji Bhonsle</label>
           </trait>
           <trait type="beneficiary" key="p_9">
-            <label>Dhuṇḍirāja Vyāsa</label>
+            <label>Ḍhuṇḍirāja Vyāsa</label>
           </trait>
           <floruit from="1680" to="1680">fl. 1680</floruit>
           <note>He was the mantrin of Śāhaji Bhonsle.</note>

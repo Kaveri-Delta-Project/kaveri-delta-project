@@ -17,13 +17,13 @@
     <body>
       <listPerson>
         <person xml:id="p_7">
-          <persName type="preferred">Gaṅgadhāramakhin</persName>
-          <persName type="variant">Gaṅgādharavājapeyin</persName>
+          <persName type="preferred">Gaṅgādharavājapeyin</persName>
+          <persName type="variant">Gaṅgādharamakhin</persName>
           <trait type="associate" key="p_6">
             <label>Śāhaji Bhonsle</label>
           </trait>
           <trait type="teacher" key="p_8">
-            <label>Bhāskararāya</label>
+            <label>Bhāskararāyamakhin</label>
           </trait>
           <affiliation key="l_17" role="born">
             <placeName>Tiruvalangadu</placeName>

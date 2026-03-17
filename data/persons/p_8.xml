@@ -17,9 +17,10 @@
     <body>
       <listPerson>
         <person xml:id="p_8">
-          <persName type="preferred">Bhāskararāya</persName>
+          <persName type="preferred">Bhāskararāyamakhin</persName>
+          <persName type="variant">Bhāskararāya</persName>
           <trait type="student" key="p_7">
-            <label>Gaṅgadhāramakhin</label>
+            <label>Gaṅgādharavājapeyin</label>
           </trait>
           <affiliation key="l_11" role="resided">
             <placeName>Bhāskararāyapuram</placeName>
