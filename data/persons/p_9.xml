@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_9">
-          <persName type="preferred">Dhuṇḍirāja Vyāsa</persName>
+          <persName type="preferred">Ḍhuṇḍirāja Vyāsa</persName>
           <trait type="patron" key="p_5">
             <label>Tryambakarāyamakhin</label>
           </trait>
@@ -25,7 +25,7 @@
             <label>Śāhaji Bhonsle</label>
           </trait>
           <trait type="patron" key="p_10">
-            <label>Serfoji I</label>
+            <label>Serfoji Bhonsle</label>
           </trait>
           <floruit from="1680" to="1680">fl. 1680</floruit>
           <affiliation key="l_15" role="resided">

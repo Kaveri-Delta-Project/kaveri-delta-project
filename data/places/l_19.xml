@@ -16,11 +16,10 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_5">
-          <placeName type="preferred">Mannargudi</placeName>
-          <desc type="function">town</desc>
-          <idno type="Wikidata">Q2673456</idno>
-          <note type="coordinates">10.664907912399869, 79.44842292371418</note>
+        <place xml:id="l_19">
+          <placeName type="preferred">Sri Bodhendra Mutt </placeName>
+          <desc type="function">matha</desc>
+          <note type="coordinates">11.011389616557265, 79.46445934095365</note>
         </place>
       </listPlace>
     </body>
