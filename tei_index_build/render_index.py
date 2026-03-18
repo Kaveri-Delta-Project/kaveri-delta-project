@@ -29,7 +29,7 @@ def render_search():
     html = [
         "  <form id='index-search-form' class='d-flex mt-3 mt-md-0 index-search-form'>",
         "    <div class='input-group input-group-sm search-group'>",
-        "      <input type='text' id='index-search' class='form-control' placeholder='Search by name...' autocomplete='off'>",
+        "      <input type='text' id='index-search' class='search-input form-control' placeholder='Search by name, diacritics ignored..' autocomplete='off'>",
         "      <button type='submit' class='btn btn-primary search-button'>Search</button>",
         "    </div>",
         "  </form>"
@@ -511,7 +511,7 @@ def render_work(work):
     genres = work.get("genre")
     if genres:
         html.append("<div class='entry-block entry-genre'>")
-        html.append("<span class='subheading'>Genres</span>")
+        html.append("<span class='subheading'>Genre</span>")
         for genre in genres:
             type = genre.get("type")
             source = genre.get("source")
@@ -532,7 +532,7 @@ def render_work(work):
     subject_html = render_list(work.get("subject"), "item-name")
     if subject_html:
         html.append("<div class='entry-block entry-subject'>")
-        html.append("<span class='subheading'>Subjects</span>")
+        html.append("<span class='subheading'>Subject</span>")
         html.append(subject_html)
         html.append("</div>")
 

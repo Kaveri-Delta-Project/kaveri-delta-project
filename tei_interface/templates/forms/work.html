@@ -240,7 +240,7 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Associated Persons", "+ add editor", "toggleEntryForm('editor-form')") }}
+  {{ ui.section_header("Associated Persons", "+ add associated person", "toggleEntryForm('editor-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('editor-error') %}
@@ -391,7 +391,7 @@
 
     {% if val.key %}
       <span class="fw-semibold">commentary</span>
-      <span class="text-muted ms-1"> ({{ val.parent_text }} [{{ val.key }}])</span>
+      <span class="text-muted ms-1"> (on {{ val.parent_text }} [{{ val.key }}])</span>
 
       {{ ui.delete_button(
         section="note",

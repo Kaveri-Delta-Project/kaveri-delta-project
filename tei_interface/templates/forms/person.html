@@ -109,7 +109,7 @@
   {% for rel in data.relationship %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ rel.label }}</span>
-      <span class="text-muted">(Relationship: {{ rel.type }}) [{{ rel.key }}]</span>
+      <span class="text-muted">(Relationship: {{ rel.type }}) of [{{ rel.key }}]</span>
       {{ ui.delete_button("trait", 
         loop.index0, 
         extra_fields={"connection": "related", "key": rel.key, "name_type": rel.type}

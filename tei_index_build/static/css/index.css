@@ -123,6 +123,7 @@ button[type="submit"] {
 /* Fully rounded input and button inside the search group */
 .search-group .form-control {
   border-radius: 0.2rem !important;
+  width: 250px !important; 
 }
 
 
@@ -134,8 +135,6 @@ button[type="submit"] {
   border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
-
-
 
 .search-button:hover {
   background-color: #e9ecef !important; /* pale grey */
