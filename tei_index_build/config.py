@@ -97,7 +97,10 @@ MS_MAPPING = {
 ROLES = {
     "ann": "Annotator",
     "arr": "Arranger",
+    "att": "Attributed Author",
     "aut": "Author",
+    "att": "Attributed Author",
+    "csl": "Advisor/Minister",
     "com": "Compiler",
     "ctb": "Contributor",
     "edt": "Editor",

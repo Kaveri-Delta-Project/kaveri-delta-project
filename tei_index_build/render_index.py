@@ -221,7 +221,10 @@ def render_person(person):
             url = make_entity_url("person", key, single_page=True)
             connection = rel["type"]
             rel_name = rel["label"]
-            html.append(f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(rel_name)} ({esc(key)}) (relationship: {esc(connection)})</a>")
+            html.append(f"<div class='item-name'>")
+            html.append(f"  <span>relationship: {esc(connection)} of</span>")
+            html.append(f"  <a href='{esc(url)}' target='_blank'>{esc(rel_name)} ({esc(key)})</a>")
+            html.append(f"</div>")
         html.append("</div>")
 
 
@@ -301,7 +304,7 @@ def render_person(person):
         for work in linked_data:
             key = work.get("xml_id")
             title = work.get("title")
-            role = work.get("role")
+            role = ROLES.get(work.get("role"))
 
             if not key or not title:
                 continue
