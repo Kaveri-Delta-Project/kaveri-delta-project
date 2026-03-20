@@ -21,19 +21,35 @@ def build_search_index(all_entities, build_dir):
         for item in items:
 
             xml_id = item.get("xml_id")
+            if not xml_id:
+                continue 
 
             name_list = item.get("name")
             name = name_list[0] if name_list else xml_id
 
             alt_names = item.get("alt_names") or []
 
-            records.append({
+            record = {
                 "type": entity_type,
                 "id": xml_id,
                 "name": name,
                 "alt_names": alt_names,
                 "url": f"indexes/{entity_type}_index.html#{xml_id}"
-            })
+            }
+
+            if entity_type == "person":
+                assoc_places = item.get("affiliations")
+                places = [f"{assoc.get('placeName')} [{assoc.get('key')}]" for assoc in assoc_places if assoc.get("placeName")]
+                record["places"] = places
+
+            if entity_type == "work":
+                assoc_places = item.get("pub_place")
+                places = [f"{assoc.get('placeName')} [{assoc.get('key')}]" for assoc in assoc_places if assoc.get("placeName")]
+                record["places"] = places
+
+
+            records.append(record)
+
 
     output_path = os.path.join(build_dir, "search_index.json")
 

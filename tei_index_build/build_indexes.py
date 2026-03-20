@@ -75,7 +75,7 @@ for entity_tag, entity_data in all_entities.items():
         print(f"Index built in {output_path}")
 
     remove_broken_links(output_path, entities_cache)
-
+    
 build_search_index(all_entities, BUILD_DIR)
 
 

@@ -21,16 +21,16 @@ def render_alphabet_nav():
 
 def render_search():
     """
-    Render a conventional search box for the index.
+    Render a search box with a clear button for the index.
 
     Returns:
         list[str]: HTML lines for a search form.
     """
     html = [
-        "  <form id='index-search-form' class='d-flex mt-3 mt-md-0 index-search-form'>",
+        "  <form id='index-search-form' class='d-flex mt-3 mt-md-0 index-search-form' onsubmit='return false;'>",
         "    <div class='input-group input-group-sm search-group'>",
         "      <input type='text' id='index-search' class='search-input form-control' placeholder='Search by name, diacritics ignored..' autocomplete='off'>",
-        "      <button type='submit' class='btn btn-primary search-button'>Search</button>",
+        "      <button type='button' id='search-clear' class='btn btn-secondary search-button'>Clear</button>",
         "    </div>",
         "  </form>"
     ]

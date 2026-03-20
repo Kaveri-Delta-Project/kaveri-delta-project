@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.alphabet button');
   const entries = document.querySelectorAll('.letter-entry');
+  const entriesIndex = document.querySelectorAll('.index-entry')
 
   const showAllEntries = () => {
     const searchInput = document.getElementById("index-search");
@@ -9,6 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show all entries (both letter and search entries)
     const allEntries = document.querySelectorAll('.letter-entry');
     allEntries.forEach(entry => {
+      entry.style.display = 'block';
+      entry.classList.remove('open');
+    });
+
+    const allEntriesIndex = document.querySelectorAll('.index-entry');
+    allEntriesIndex.forEach(entry => {
       entry.style.display = 'block';
       entry.classList.remove('open');
     });
@@ -30,25 +37,38 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const letter = button.dataset.letter;
 
-      const searchInput = document.getElementById("index-search");
-      if (searchInput) searchInput.value = "";
+    const searchInput = document.getElementById("index-search");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.dispatchEvent(new Event("input")); // reset live search
+    }
 
-      if (letter === 'all') {
-        button.classList.add('active-all');
-        showAllEntries();
-        return;
+    buttons.forEach(btn => btn.classList.remove('active-letter', 'active-all'));
+
+    if (letter === 'all') {
+      button.classList.add('active-all');
+      showAllEntries();
+      return;
+      } else {
+        button.classList.add('active-letter');
       }
 
-      buttons.forEach(btn => btn.classList.remove('active-letter'));
-      button.classList.add('active-letter');
+    buttons.forEach(btn => btn.classList.remove('active-letter'));
+    button.classList.add('active-letter');
 
-      entries.forEach(entry => {
-        if (entry.dataset.letter && entry.dataset.letter.toUpperCase() === letter.toUpperCase()) {
-          entry.style.display = 'block';
-        } else {
-          entry.style.display = 'none';
-        }
-      });
+    entries.forEach(entry => {
+      if (entry.dataset.letter && entry.dataset.letter.toUpperCase() === letter.toUpperCase()) {
+        entry.style.display = 'block';
+      } else {
+        entry.style.display = 'none';
+      }
+    });
+
+    entriesIndex.forEach(entry => {
+      entry.style.display = 'block';
+      entry.classList.remove('open');
+    });
+
     });
   });
 
@@ -129,11 +149,10 @@ document.addEventListener('click', function (e) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("index-search-form");
   const searchInput = document.getElementById("index-search");
   const entries = document.querySelectorAll(".index-entry");
 
-  if (!form || !searchInput) return;
+  if (!searchInput) return;
 
   const normalizeText = (text) =>
     text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -147,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const query = normalizeText(rawQuery);
-    const regex = new RegExp(`\\b${query}\\b`, "i");
+    const regex = new RegExp(`\\b${query}`, "i");
 
     entries.forEach(entry => {
       const title = entry.querySelector(".entry-title");
@@ -158,8 +177,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    performSearch();
-  });
+  // Live filtering as the user types
+  searchInput.addEventListener("input", performSearch);
+
+  const clearButton = document.getElementById("search-clear");
+  if (searchInput && clearButton) {
+    clearButton.addEventListener("click", () => {
+      searchInput.value = "";
+      searchInput.dispatchEvent(new Event("input")); // trigger live filtering
+      searchInput.focus();
+
+      // Also reset alphabet buttons
+      const buttons = document.querySelectorAll('.alphabet button');
+      buttons.forEach(btn => btn.classList.remove('active-letter', 'active-all'));
+
+      // Show all entries again
+      const allEntries = document.querySelectorAll('.letter-entry, .index-entry');
+      allEntries.forEach(entry => {
+        entry.style.display = 'block';
+        entry.classList.remove('open');
+      });
+
+      // Reset groups
+      document.querySelectorAll('.letter-group').forEach(group => group.classList.remove('active'));
+    });
+  }
 });
+
+
