@@ -16,11 +16,8 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_16">
-          <placeName type="preferred">Madurai</placeName>
-          <desc type="function">city</desc>
-          <note type="coordinates">9.927390636036197, 78.11904709974091</note>
-        </place>
+        <place xml:id="l_20">
+          </place>
       </listPlace>
     </body>
   </text>
