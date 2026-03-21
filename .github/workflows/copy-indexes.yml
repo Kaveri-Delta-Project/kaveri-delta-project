@@ -13,7 +13,6 @@ jobs:
 copy-indexes:
 runs-on: ubuntu-latest
 
-```
 steps:
   # 1. Checkout main branch (your site)
   - name: Checkout main
