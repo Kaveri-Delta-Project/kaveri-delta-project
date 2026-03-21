@@ -1,0 +1,364 @@
+[
+  {
+    "type": "person",
+    "id": "p_1",
+    "name": "Nīlakaṇṭha Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_1",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_10",
+    "name": "Serfoji Bhonsle",
+    "alt_names": [
+      "Serfoji I",
+      "Śarabhoji Bhonsle"
+    ],
+    "url": "indexes/person_index.html#p_10",
+    "places": [
+      "Sakkottai [l_14]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_2",
+    "name": "Appayya Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_2",
+    "places": [
+      "Adaiyapulam [l_13]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_3",
+    "name": "Cokkanāthamakhin",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_3",
+    "places": [
+      "Kandaramanikkam [l_4]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_4",
+    "name": "Rāmabhadra Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_4",
+    "places": [
+      "Kandaramanikkam [l_4]",
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_5",
+    "name": "Tryambakarāyamakhin",
+    "alt_names": [
+      "Tryambakayajvan",
+      "Tryaṃbakādhvarin"
+    ],
+    "url": "indexes/person_index.html#p_5",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_6",
+    "name": "Śāhaji Bhonsle",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_6",
+    "places": [
+      "Thanjavur [l_2]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_7",
+    "name": "Gaṅgādharavājapeyin",
+    "alt_names": [
+      "Gaṅgādharamakhin"
+    ],
+    "url": "indexes/person_index.html#p_7",
+    "places": [
+      "Tiruvalangadu [l_17]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_8",
+    "name": "Bhāskararāyamakhin",
+    "alt_names": [
+      "Bhāskararāya"
+    ],
+    "url": "indexes/person_index.html#p_8",
+    "places": [
+      "Bhāskararāyapuram [l_11]",
+      "Tiruvidaimarudur [l_6]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_9",
+    "name": "Ḍhuṇḍirāja Vyāsa",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_9",
+    "places": [
+      "Svamimalai [l_15]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_1",
+    "name": "Nīlakaṇṭhavijayacampū",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_1",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_11",
+    "name": "Kuvalayānanda",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_11",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_12",
+    "name": "Rasikarañjanī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_12",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_13",
+    "name": "Avaidikadarśanasaṃgraha",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_13",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_14",
+    "name": "Śabdakaumudī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_14",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_15",
+    "name": "Śābdikarakṣā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_15",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_16",
+    "name": "Mudrārākṣasavyākhyāna",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_16",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_17",
+    "name": "Śāhajivilāsagītā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_17",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_18",
+    "name": "Rājavyavahārakośa",
+    "alt_names": [
+      "Rājakośanighaṇṭu"
+    ],
+    "url": "indexes/work_index.html#w_18",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_2",
+    "name": "Mahābhāṣyaratnāvali",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_2",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_3",
+    "name": "Dhāturatnāvali",
+    "alt_names": [
+      "Dhāturūpāvalī"
+    ],
+    "url": "indexes/work_index.html#w_3",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_5",
+    "name": "Subhadrāpariṇaya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_5",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_6",
+    "name": "Kaliviḍambana",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_6",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_8",
+    "name": "Dharmākūtam",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_8",
+    "places": []
+  },
+  {
+    "type": "place",
+    "id": "l_1",
+    "name": "Thiruvisanallur",
+    "alt_names": [
+      "Tiruvicanallūr",
+      "Thiruvishaloor",
+      "Thiruvisanalluru",
+      "Tiruvisalur",
+      "Śāhajipuram"
+    ],
+    "url": "indexes/place_index.html#l_1"
+  },
+  {
+    "type": "place",
+    "id": "l_10",
+    "name": "Madurai",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_10"
+  },
+  {
+    "type": "place",
+    "id": "l_11",
+    "name": "Bhāskararāyapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_11"
+  },
+  {
+    "type": "place",
+    "id": "l_13",
+    "name": "Adaiyapulam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_13"
+  },
+  {
+    "type": "place",
+    "id": "l_14",
+    "name": "Sakkottai",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_14"
+  },
+  {
+    "type": "place",
+    "id": "l_15",
+    "name": "Svamimalai",
+    "alt_names": [
+      "Svamigiri"
+    ],
+    "url": "indexes/place_index.html#l_15"
+  },
+  {
+    "type": "place",
+    "id": "l_17",
+    "name": "Tiruvalangadu",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_17"
+  },
+  {
+    "type": "place",
+    "id": "l_18",
+    "name": "Govindapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_18"
+  },
+  {
+    "type": "place",
+    "id": "l_19",
+    "name": "Sri Bodhendra Mutt",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_19"
+  },
+  {
+    "type": "place",
+    "id": "l_2",
+    "name": "Thanjavur",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_2"
+  },
+  {
+    "type": "place",
+    "id": "l_20",
+    "name": "l_20",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_20"
+  },
+  {
+    "type": "place",
+    "id": "l_3",
+    "name": "Kumbakonam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_3"
+  },
+  {
+    "type": "place",
+    "id": "l_4",
+    "name": "Kandaramanikkam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_4"
+  },
+  {
+    "type": "place",
+    "id": "l_5",
+    "name": "Mannargudi",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_5"
+  },
+  {
+    "type": "place",
+    "id": "l_6",
+    "name": "Tiruvidaimarudur",
+    "alt_names": [
+      "Madhyarjuna"
+    ],
+    "url": "indexes/place_index.html#l_6"
+  },
+  {
+    "type": "place",
+    "id": "l_7",
+    "name": "Mahalingeswarar Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_7"
+  },
+  {
+    "type": "place",
+    "id": "l_8",
+    "name": "Thiruvaiyaru",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_8"
+  },
+  {
+    "type": "place",
+    "id": "l_9",
+    "name": "Thiruvavaduthurai Adhinam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_9"
+  }
+]
