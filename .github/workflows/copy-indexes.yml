@@ -49,4 +49,3 @@ steps:
       git add site/indexes
       git commit -m "Auto-copy indexes from generated branch" || echo "No changes to commit"
       git push
-```
