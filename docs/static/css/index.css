@@ -1,0 +1,233 @@
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  margin: 2rem !important;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+/* Links inside items */
+a {
+  color: rgba(133, 38, 59, 0.9) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: rgba(100, 0, 0, 1) !important; 
+}
+
+.index-entry a::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+/* ----------------------------
+   Buttons
+---------------------------- */
+
+button {
+  cursor: pointer;
+  padding: 0.3em 0.6em;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+button[type="submit"] {
+  font-weight: 500;
+}
+
+.btn-sm {
+  border-radius: 0.5rem; /* softer corners for small buttons */
+}
+  
+/* ----------------------------
+   alphabet
+---------------------------- */
+
+.alphabet {
+  margin-bottom: 2rem;
+}
+
+.alphabet button {
+
+  min-width: 2.2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.4rem;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.alphabet button.active-letter {
+  background-color: rgba(128, 0, 0, 0.1);
+  border-color: rgba(128, 0, 0, 1);
+  color: rgba(128, 0, 0, 1);
+  font-weight: 600;
+}
+
+.alphabet button.active-all {
+  border-color: rgba(128, 0, 0, 1);
+  color: rgba(128, 0, 0, 1);
+  font-weight: 600;
+}
+
+
+.alphabet button.active-all:active {
+  background-color: inherit;  
+  color: inherit;            
+}
+
+
+.alphabet button:hover {
+  background-color: #e9ecef;
+}
+
+
+.show-all {
+  color: rgba(128, 0, 0, 1) !important;
+  border: 1.5px solid rgba(128, 0, 0, 1) !important;
+  padding: 0.3rem 0.7rem !important;
+  border-radius: 0.4rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.03em;
+}
+
+/* ----------------------------
+   Index header (title + search)
+---------------------------- */
+.index-header {
+  display: flex;
+  justify-content: space-between; /* title left, search right */
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.index-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* Search container */
+.index-header .index-search {
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Fully rounded input and button inside the search group */
+.search-group .form-control {
+  border-radius: 0.2rem !important;
+  width: 250px !important; 
+}
+
+
+/* Search input styling */
+.index-header .index-search input {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.search-button:hover {
+  background-color: #e9ecef !important; /* pale grey */
+}
+
+.search-button {
+  color: rgba(128, 0, 0, 1) !important;
+  border: 1.5px solid rgba(128, 0, 0, 1) !important;
+  background: transparent !important;
+  padding: 0.3rem 0.7rem !important;
+  border-radius: 0.4rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.03em;
+  margin-left: 0.5rem! important;
+}
+
+/* ----------------------------
+   Index Entries
+---------------------------- */
+.index-entry {
+  padding: 0.6rem 0.8rem;
+}
+
+/* Entry Header */
+.entry-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.entry-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Entry Blocks (subsections) */
+.entry-block {
+  margin-top: 0.6rem;
+  padding-left: 0.5rem;
+}
+
+/* Subheadings inside entry blocks */
+.subheading {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Item names inside entry blocks */
+.entry-block .item-name {
+  display: block;           
+  padding-left: 1rem;      
+  margin: 0.2rem 0;         
+  font-size: 0.95rem;       
+  color: #333;             
+  border-left: 2px solid #ddd;  
+  padding-left: 0.8rem;     
+}
+
+.toggle {
+  margin-left: 0.4rem;
+  background: none !important;
+  border: none;
+  font-size: 1.4rem;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.item-details {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  color: #444;
+}
+
+.index-entry.open .item-details {
+  display: block;
+}
+
+.index-entry.open .toggle {
+  transform: rotate(90deg);
+}
+
+.hash-highlight {
+  background-color: rgba(255, 215, 0, 0.7);
+  border-radius: 8px;
+  transition: background-color 2s ease}
+
+.hash-highlight.fade {
+  background-color: transparent;
+}
+
+
