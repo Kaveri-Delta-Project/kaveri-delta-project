@@ -34,7 +34,7 @@ jobs:
           # Add generated branch as temporary worktree
           git worktree add gen origin/generated
 
-          # Copy all generated files into site/indexes
+          # Copy all files from the root of generated branch into site/indexes
           cp -r gen/* site/indexes/
 
           # Clean up temporary worktree
