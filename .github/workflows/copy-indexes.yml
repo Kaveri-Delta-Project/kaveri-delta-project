@@ -1,10 +1,10 @@
 name: Copy Indexes
 
 on:
-  push:
-    branches:
-      - generated
-  workflow_dispatch: # manual trigger
+  workflow_run:
+    workflows: ["Build TEI Indexes"]
+    types:
+      - completed
 
 permissions:
   contents: write
@@ -12,6 +12,7 @@ permissions:
 jobs:
   copy-indexes:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       # 1. Checkout site branch (where the site lives)
@@ -28,13 +29,16 @@ jobs:
       # 3. Copy generated content into site/indexes
       - name: Copy generated indexes
         run: |
+          # Ensure site/indexes exists
+          mkdir -p site/indexes
+
           # Remove old indexes but keep .gitignore
           find site/indexes -type f ! -name ".gitignore" -delete
 
           # Add generated branch as temporary worktree
           git worktree add gen origin/generated
 
-          # Copy all files except manuscripts.html
+          # Copy all files except manuscripts.html using rsync
           rsync -av --exclude='manuscripts.html' gen/ site/indexes/
 
           # Clean up temporary worktree
@@ -47,5 +51,5 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add site/indexes
-          git commit -m "Auto-copy indexes from generated branch" || echo "No changes to commit"
+          git commit -m "Auto-copy indexes from generated branch (excluding manuscripts.html)" || echo "No changes to commit"
           git push origin site
