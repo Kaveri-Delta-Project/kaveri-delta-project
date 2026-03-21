@@ -185,6 +185,14 @@
   },
   {
     "type": "work",
+    "id": "w_19",
+    "name": "Test Work",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_19",
+    "places": []
+  },
+  {
+    "type": "work",
     "id": "w_2",
     "name": "Mahābhāṣyaratnāvali",
     "alt_names": [],
