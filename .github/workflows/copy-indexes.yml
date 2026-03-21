@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout main branch (your site)
-      - name: Checkout main
+      # 1. Checkout site branch (where the site lives)
+      - name: Checkout site branch
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: site
           fetch-depth: 0
 
       # 2. Fetch generated branch
@@ -49,4 +49,4 @@ jobs:
 
           git add site/indexes
           git commit -m "Auto-copy indexes from generated branch (excluding manuscripts.html)" || echo "No changes to commit"
-          git push origin main
+          git push origin site
