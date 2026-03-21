@@ -35,8 +35,7 @@ jobs:
           git worktree add gen origin/generated
 
           # Copy all files except manuscripts.html
-          shopt -s extglob
-          cp -r gen/!(manuscripts.html) site/indexes/
+          rsync -av --exclude='manuscripts.html' gen/ site/indexes/
 
           # Clean up temporary worktree
           rm -rf gen
@@ -48,5 +47,5 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add site/indexes
-          git commit -m "Auto-copy indexes from generated branch (excluding manuscripts.html)" || echo "No changes to commit"
+          git commit -m "Auto-copy indexes from generated branch" || echo "No changes to commit"
           git push origin site
