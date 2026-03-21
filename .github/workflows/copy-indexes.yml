@@ -34,8 +34,9 @@ jobs:
           # Add generated branch as temporary worktree
           git worktree add gen origin/generated
 
-          # Copy all files from the root of generated branch into site/indexes
-          cp -r gen/* site/indexes/
+          # Copy all files except manuscripts.html
+          shopt -s extglob
+          cp -r gen/!(manuscripts.html) site/indexes/
 
           # Clean up temporary worktree
           rm -rf gen
@@ -47,5 +48,5 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add site/indexes
-          git commit -m "Auto-copy indexes from generated branch" || echo "No changes to commit"
+          git commit -m "Auto-copy indexes from generated branch (excluding manuscripts.html)" || echo "No changes to commit"
           git push origin main
