@@ -26,20 +26,20 @@ jobs:
       - name: Fetch generated branch
         run: git fetch origin generated
 
-      # 3. Copy generated content into site/indexes
+      # 3. Copy generated content into docs/indexes
       - name: Copy generated indexes
         run: |
-          # Ensure site/indexes exists
-          mkdir -p site/indexes
+          # Ensure docs/indexes exists
+          mkdir -p docs/indexes
 
           # Remove old indexes but keep .gitignore
-          find site/indexes -type f ! -name ".gitignore" -delete
+          find docs/indexes -type f ! -name ".gitignore" -delete
 
           # Add generated branch as temporary worktree
           git worktree add gen origin/generated
 
-          # Copy all files except manuscripts.html using rsync
-          rsync -av --exclude='manuscripts.html' gen/ site/indexes/
+          # Copy all files except manuscripts.html
+          rsync -av --exclude='manuscripts.html' gen/ docs/indexes/
 
           # Clean up temporary worktree
           rm -rf gen
@@ -50,6 +50,6 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add site/indexes
-          git commit -m "Auto-copy indexes from generated branch (excluding manuscripts.html)" || echo "No changes to commit"
-          git push origin site
+          git add docs/indexes
+          git commit -m "Auto-copy indexes into docs/indexes (excluding manuscripts.html)" || echo "No changes to commit"
+          git push origin site --force
