@@ -1,0 +1,53 @@
+name: Copy Indexes
+
+on:
+push:
+branches:
+- generated
+workflow_dispatch: # manual trigger
+
+permissions:
+contents: write
+
+jobs:
+copy-indexes:
+runs-on: ubuntu-latest
+
+```
+steps:
+  # 1. Checkout main branch (your site)
+  - name: Checkout main
+    uses: actions/checkout@v3
+    with:
+      ref: main
+      fetch-depth: 0
+
+  # 2. Fetch generated branch
+  - name: Fetch generated branch
+    run: git fetch origin generated
+
+  # 3. Copy generated content into site/indexes
+  - name: Copy generated indexes
+    run: |
+      # Remove old indexes but keep .gitignore
+      find site/indexes -type f ! -name ".gitignore" -delete
+
+      # Add generated branch as temporary worktree
+      git worktree add gen origin/generated
+
+      # Copy all generated files into site/indexes
+      cp -r gen/* site/indexes/
+
+      # Clean up temporary worktree
+      rm -rf gen
+
+  # 4. Commit and push changes (only if there are changes)
+  - name: Commit and push
+    run: |
+      git config user.name "github-actions"
+      git config user.email "github-actions@github.com"
+
+      git add site/indexes
+      git commit -m "Auto-copy indexes from generated branch" || echo "No changes to commit"
+      git push
+```
