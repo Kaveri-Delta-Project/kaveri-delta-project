@@ -127,7 +127,7 @@ def render_place(place):
     linked_data = place.get("linked_data")
     if linked_data:
         html.append("<div class='entry-block entry-place-pers'>")
-        html.append("<span class='subheading'>Affiliated Persons</span>")
+        html.append("<span class='subheading'>Associated Persons</span>")
         for affil in linked_data:
             key = affil.get("xml_id")
             person_name = affil.get("name")
@@ -215,7 +215,7 @@ def render_person(person):
     relationships = person.get("relationship")
     if relationships:
         html.append("<div class='entry-block entry-relationships'>")
-        html.append("<span class='subheading'>Related Persons</span>")
+        html.append("<span class='subheading'>Associated Persons</span>")
         for rel in relationships:
             key = rel["key"]
             url = make_entity_url("person", key, single_page=True)
@@ -265,7 +265,7 @@ def render_person(person):
     affiliations = person.get("affiliations")
     if affiliations:
         html.append("<div class='entry-block entry-affils'>")
-        html.append("<span class='subheading'>Affiliated Places</span>")
+        html.append("<span class='subheading'>Associated Places</span>")
         for affil in affiliations:
             key = affil.get("key")
             place_name = affil.get("placeName")
