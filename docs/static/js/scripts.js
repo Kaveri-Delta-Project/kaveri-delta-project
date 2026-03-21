@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         </div>
         ${item.alt_names && item.alt_names.length ? `
           <div class="result-alt text-muted small">
-            Alt names: ${item.alt_names.join(', ')}
+            Alternative Names: ${item.alt_names.join(', ')}
           </div>
         ` : ''}
         ${item.places && item.places.length ? `
