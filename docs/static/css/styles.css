@@ -594,6 +594,13 @@ h1 {
     align-items: center;
 }
 
+.data-search-dropdown {
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    margin-top: 8px;
+}
+
 
 /* -----------------------------
    Results Page

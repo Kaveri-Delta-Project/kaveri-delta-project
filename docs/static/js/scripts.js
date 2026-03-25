@@ -1,21 +1,86 @@
-// --- Data Page Search Box ---
+// --- Data Search Box (homepage / main search) ---
 const dataSearchBox = document.getElementById('data-search-box');
 const dataCategory = document.getElementById('search-category');
 const dataSearchButton = document.getElementById('search-button');
+const dropdown = document.getElementById('autocomplete-dropdown');
 
-function performDataSearch() {
-  const query = dataSearchBox.value.trim();
-  const category = dataCategory ? dataCategory.value : 'all';
+let searchIndex = [];
 
-  if (query) {
-    // Include both query and category in URL
-    window.open(`search_results.html?q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}`, '_blank');
-  }
+// Load search index
+fetch('indexes/search_index.json')
+  .then(res => res.json())
+  .then(data => { searchIndex = data; })
+  .catch(err => console.error('Error loading search index:', err));
+
+// Normalize helper
+function normalize(str) {
+  return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-// Enter key triggers search
+// Get dropdown matches
+function getDropdownMatches(query, category = 'all') {
+  const words = normalize(query).split(/\s+/).filter(Boolean);
+  if (!words.length) return [];
+
+  return searchIndex
+    .filter(item => {
+      const searchable = normalize(item.name)
+
+      const matchesQuery = words.every(word => {
+        const regex = new RegExp(`\\b${word}`, "i"); // word boundary at start
+        return regex.test(searchable);
+      });
+      const matchesCategory =
+        category === 'all' ||
+        item.type.toLowerCase() === category.toLowerCase();
+      return matchesQuery && matchesCategory;
+    })
+    .slice(0, 10);
+}
+
+// Render dropdown
+function renderDropdown(matches) {
+  dropdown.innerHTML = '';
+
+  if (!matches.length) {
+    dropdown.style.display = 'none';
+    return;
+  }
+
+  const header = document.createElement('div');
+  header.className = 'list-group-item disabled';
+  header.textContent = 'Suggested searches..';
+  dropdown.appendChild(header);
+
+  matches.forEach(item => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'list-group-item list-group-item-action';
+    btn.textContent = `${item.name}`;
+
+    btn.addEventListener('click', () => {
+      dataSearchBox.value = item.name;
+      dropdown.style.display = 'none';
+    });
+
+    dropdown.appendChild(btn);
+  });
+
+  dropdown.style.display = 'block';
+}
+
+// Live filtering
 if (dataSearchBox) {
-  dataSearchBox.addEventListener('keypress', function(e) {
+  dataSearchBox.addEventListener('input', () => {
+    const matches = getDropdownMatches(
+      dataSearchBox.value,
+      dataCategory ? dataCategory.value : 'all'
+    );
+    renderDropdown(matches);
+  });
+
+  // Enter key triggers full search
+  dataSearchBox.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
       performDataSearch();
@@ -23,10 +88,35 @@ if (dataSearchBox) {
   });
 }
 
-// Click on search button triggers search
+// Hide dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (
+    dropdown &&
+    !dropdown.contains(e.target) &&
+    e.target !== dataSearchBox
+  ) {
+    dropdown.style.display = 'none';
+  }
+});
+
+// Perform full search
+function performDataSearch() {
+  const query = dataSearchBox.value.trim();
+  const category = dataCategory ? dataCategory.value : 'all';
+
+  if (query) {
+    window.open(
+      `search_results.html?q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}`,
+      '_blank'
+    );
+  }
+}
+
+// Search button click
 if (dataSearchButton && dataSearchBox) {
   dataSearchButton.addEventListener('click', performDataSearch);
 }
+
 
 
 // --- Search Results Page ---
@@ -67,10 +157,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     return;
   }
 
-  function performSearch(query, category = 'all', liveFilter = false) {
-
+  function performSearch(query, category = 'all') {
     const words = normalize(query).split(/\s+/).filter(Boolean);
-
     resultsContainer.innerHTML = '';
 
     if (!words.length) {
@@ -87,21 +175,12 @@ document.addEventListener('DOMContentLoaded', async function() {
       const places = (item.places || []).map(p => normalize(p));
       const searchable = [name, id, ...altNames, ...places].join(" ");
 
-      let matchesQuery;
-      if (liveFilter) {
-        // match words only at the start of any word
-        matchesQuery = words.every(word => {
-          const regex = new RegExp(`\\b${word}`, "i"); // word boundary at start
-          return regex.test(searchable);
-        });
-      } else {
-        // whole-word match for data-search-box referrals
-        matchesQuery = words.every(word => {
-          const regex = new RegExp(`\\b${word}\\b`, "i");
-          return regex.test(searchable);
-        });
-      }
-      
+      // Start-of-word match for every search
+      const matchesQuery = words.every(word => {
+        const regex = new RegExp(`\\b${word}`, "i");
+        return regex.test(searchable);
+      });
+
       const matchesCategory = category === 'all' || item.type.toLowerCase() === category.toLowerCase();
       return matchesQuery && matchesCategory;
     });
@@ -164,29 +243,21 @@ document.addEventListener('DOMContentLoaded', async function() {
   performSearch(initialQuery, initialCategory, false);
 
   searchBox.addEventListener('input', () => {
-    performSearch(
-      searchBox.value,
-      categorySelect ? categorySelect.value : 'all',
-      true
-    );
+    performSearch(searchBox.value, categorySelect?.value || 'all');
   });
 
   if (categorySelect) {
     categorySelect.addEventListener('change', () => {
-      performSearch(
-        searchBox.value,
-        categorySelect.value,
-        true
-      );
+      performSearch(searchBox.value, categorySelect.value);
     });
   }
 
   if (clearButton) {
     clearButton.addEventListener('click', () => {
-      searchBox.value = '';                        
-      if (categorySelect) categorySelect.value = 'all'; 
-      searchBox.dispatchEvent(new Event('input')); 
-      searchBox.focus();                           
+      searchBox.value = '';
+      if (categorySelect) categorySelect.value = 'all';
+      performSearch('', categorySelect?.value || 'all');
+      searchBox.focus();
     });
   }
 });

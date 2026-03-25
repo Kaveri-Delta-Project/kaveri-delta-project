@@ -58,6 +58,8 @@
     <p class='my-3'>Search across all project records. Use the category filter to narrow your results.</p>
     <div class="search-group-wrapper mt-4">
         <div class="search-group">
+            <input type="text" class="search-input form-control" id="data-search-box" placeholder="Search records, diacritics ignored..">
+
             <select class="form-select" id="search-category">
                 <option value="all" selected>All Categories</option>
                 <option value="person">Person</option>
@@ -65,9 +67,12 @@
                 <option value="place">Place</option>
             </select>
 
-            <input type="text" class="form-control" id="data-search-box" placeholder="Search records...">
-
             <button class="btn btn-primary search-grp-btn" id="search-button">Search</button>
+
+        </div>
+
+        <div>
+            <div id="autocomplete-dropdown" class="data-search-dropdown list-group position-absolute"></div>
         </div>
     </div>
 </div>
