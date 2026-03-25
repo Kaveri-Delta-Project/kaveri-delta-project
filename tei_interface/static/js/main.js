@@ -193,25 +193,67 @@ document.addEventListener("DOMContentLoaded", function () {
   genreSelect.addEventListener("change", toggleCommentary);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const letterGroups = document.querySelectorAll('.letter-group');
-  const noEntries = document.querySelectorAll('.no-entries');
 
-  // Check if there is a "q" parameter in the URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const q = urlParams.get('q');
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("index-search");
+  const rows = document.querySelectorAll(".entity-row");
+  const groups = document.querySelectorAll(".letter-group");
+  const buttons = document.querySelectorAll('.alphabet button');
 
-  if (q && q.trim() !== "") {
-    // Hide letter headings and remove spacing
-    letterGroups.forEach(group => {
-      const heading = group.querySelector('.letter-heading');
-      if (heading) heading.style.display = 'none';
-      group.style.margin = '0';
-      group.style.padding = '0';
+  if (!input) return;
+
+  const normalize = str =>
+    str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+  input.addEventListener("input", () => {
+    const query = input.value.trim();
+    const q = normalize(query);
+
+    rows.forEach(row => {
+      const nameEl = row.querySelector(".entity-name");
+      if (!nameEl) return;
+
+      const text = normalize(nameEl.textContent);
+      
+      const regex = new RegExp(`\\b${q}`);
+      const match = regex.test(text);
+
+      row.style.display = match ? "" : "none";
     });
 
-    // Hide any "no entries" messages
-    noEntries.forEach(el => el.style.display = 'none');
-  }
+    // Update groups
+    groups.forEach(group => {
+      const visibleRows = group.querySelectorAll(
+        ".entity-row:not([style*='display: none'])"
+      );
+
+      const heading = group.querySelector(".letter-heading");
+      const noEntries = group.querySelector(".no-entries");
+
+      if (visibleRows.length > 0) {
+        group.style.display = "";
+        if (heading) heading.style.display = query ? "none" : "";
+        if (noEntries) noEntries.style.display = "none";
+      } else {
+        group.style.display = "none";
+      }
+    });
+
+    // Disable alphabet buttons during search
+    if (query.length > 0) {
+      buttons.forEach(btn => btn.disabled = true);
+    } else {
+      buttons.forEach(btn => btn.disabled = false);
+
+      // Reset view when cleared
+      groups.forEach(group => {
+        group.style.display = "";
+        const heading = group.querySelector(".letter-heading");
+        if (heading) heading.style.display = "";
+      });
+
+      rows.forEach(row => (row.style.display = ""));
+    }
+  });
 });
 
