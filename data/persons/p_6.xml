@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_6">
-          <persName type="preferred">Śāhaji Bhonsle</persName>
+          <persName type="preferred">Śāhaji I (of Thanjavur)</persName>
           <trait type="associate" key="p_5">
             <label>Tryambakarāyamakhin</label>
           </trait>
