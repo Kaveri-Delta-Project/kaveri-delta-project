@@ -2,7 +2,7 @@ name: Copy Indexes
 
 on:
   workflow_run:
-    workflows: ["Build TEI Indexes"]
+    workflows: ["Build TEI Indexes & Kaveri Map"]
     types:
       - completed
 
@@ -52,4 +52,4 @@ jobs:
 
           git add docs/indexes
           git commit -m "Auto-copy indexes into docs/indexes (excluding manuscripts.html)" || echo "No changes to commit"
-          git push origin site --force
+          git push origin site
