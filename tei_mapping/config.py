@@ -13,6 +13,7 @@ OUTPUT_DIR = BASE_DIR / "tei_mapping" / "outputs"
 STATIC_DIR = BASE_DIR / "tei_mapping" / "static"
 CSS_PATH = STATIC_DIR / "css" / "map.css"
 JS_PATH = STATIC_DIR / "js" / "map.js"
+GIS_PATH = STATIC_DIR / "gis"
 
 DATA_PATHS = {
     "places": DATA_DIR / "places",

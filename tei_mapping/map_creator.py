@@ -10,6 +10,7 @@ from config import (
     PLACE_SCHEMA,
     PERSON_SCHEMA,
     WORK_SCHEMA,
+    GIS_PATH
 )
 
 from map_utils import create_kaveri_map, generate_popup_html
@@ -17,6 +18,7 @@ from map_utils import create_kaveri_map, generate_popup_html
 import pandas as pd
 import geopandas as gpd
 
+RIVERS_PATH = GIS_PATH / "kaveri_delta_rivers_final.gpkg"
 
 place_objects = soup_objects(get_xml_files(DATA_PATHS["places"]))
 person_objects = soup_objects(get_xml_files(DATA_PATHS["persons"]))
@@ -114,8 +116,7 @@ nodes_df["type_filled"] = nodes_df["type"].fillna("other")
 for idx, row in nodes_df.iterrows():
     nodes_df.at[idx, "popup_html"] = generate_popup_html(row)
 
-rivers_gdf = gpd.read_file("static/gis/kaveri_delta_rivers_final.gpkg").to_crs(epsg=4326)
+rivers_gdf = gpd.read_file(RIVERS_PATH).to_crs(epsg=4326)
 
-create_kaveri_map(nodes_df, rivers_gdf, output_path="outputs/kaveri_map.html")
-
+create_kaveri_map(nodes_df, rivers_gdf)
 
