@@ -1,0 +1,82 @@
+.leaflet-interactive:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.popup-content {
+    font-family: Arial, sans-serif;
+    font-size: 12px;       
+    line-height: 1.8;      
+    color: #333333;        
+    background-color: rgba(255, 255, 255, 0.85); 
+    white-space: normal;
+}
+
+.popup-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.popup-subtitle {
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.popup-content ul {
+    list-style: none;
+    padding-left: 5px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.popup-content details {
+    margin-bottom: 3px;    /* optional spacing between dropdowns */
+    margin-left: 1px;
+}
+
+.popup-content a {
+    color: maroon;         /* make links maroon */
+    text-decoration: underline;  /* optional: keep underline for clarity */
+}     
+
+/* Labels */
+.map-label {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    padding: 1px;
+}
+
+.label-large { 
+    font-size: 14px; 
+}
+
+.label-small { 
+    font-size: 11px; 
+}
+
+/* Legend */
+.map-legend {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 130px;
+    background: white;
+    border: 2px solid grey;
+    padding: 10px;
+    z-index:9999;
+    box-shadow:3px 3px 6px rgba(0,0,0,0.4);
+    overflow: hidden;         
+    pointer-events: auto;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+
+.legend-item-text {
+    margin-left: 7px;
+}
