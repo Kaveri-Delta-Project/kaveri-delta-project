@@ -227,6 +227,14 @@
   },
   {
     "type": "work",
+    "id": "w_22",
+    "name": "test work",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_22",
+    "places": []
+  },
+  {
+    "type": "work",
     "id": "w_3",
     "name": "Dhāturatnāvali",
     "alt_names": [
