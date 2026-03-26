@@ -1,8 +1,18 @@
 from pathlib import Path
 
+# BASE_DIR points to repo root
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Data lives in repo root
 DATA_DIR = BASE_DIR / "data"
+
+# Outputs live inside tei_mapping/outputs
 OUTPUT_DIR = BASE_DIR / "tei_mapping" / "outputs"
+
+# Static assets are inside tei_mapping/static
+STATIC_DIR = BASE_DIR / "tei_mapping" / "static"
+CSS_PATH = STATIC_DIR / "css" / "map.css"
+JS_PATH = STATIC_DIR / "js" / "map.js"
 
 DATA_PATHS = {
     "places": DATA_DIR / "places",

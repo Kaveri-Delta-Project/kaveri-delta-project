@@ -1,13 +1,13 @@
 import folium
 from folium import Element, IFrame, CssLink, JavascriptLink
-from config import OUTPUT_DIR
+from config import OUTPUT_DIR, CSS_PATH, JS_PATH
 
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_PATH = OUTPUT_DIR / "kaveri_map.html"
 
 #read CSS from relative path
-with open("./static/css/map.css") as f:
+with open(CSS_PATH) as f:
     POPUP_CSS = f.read()
 
 def make_scrollable_popup(html_content, width=300, height=200):
@@ -221,10 +221,10 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
     folium.LayerControl(collapsed=False, position="bottomright").add_to(m)
 
     # Link external CSS
-    m.get_root().header.add_child(CssLink('../static/css/map.css'))
+    m.get_root().header.add_child(CssLink(CSS_PATH))
 
     # Link external JS
-    m.get_root().html.add_child(JavascriptLink('../static/js/map.js'))
+    m.get_root().html.add_child(JavascriptLink(JS_PATH))
 
     # Legend
     legend_html = generate_legend_html(type_colors)
