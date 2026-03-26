@@ -27,7 +27,11 @@
             <label>Ḍhuṇḍirāja Vyāsa</label>
           </trait>
           <floruit from="1680" to="1680">fl. 1680</floruit>
-          <note>He was the mantrin of Śāhaji Bhonsle.</note>
+          <affiliation key="l_15" role="performed a grand-scale yajña in 1698 in svāmimalai, evidenced in the ācāraṇavanitā by appādhvarin ">
+            <placeName>Svamimalai</placeName>
+          </affiliation>
+          <note>He was the mantrin of Śāhaji I of Thanjavur. </note>
+          <note>Much of the earlier patronage of scholars by Śāhaji I flowed through Tryambakarāyamakhin’s hands (Raghavan, Intro to Śāhendravilāsa, p.27)</note>
         </person>
       </listPerson>
     </body>

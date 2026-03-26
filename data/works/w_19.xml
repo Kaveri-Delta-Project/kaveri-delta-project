@@ -16,12 +16,10 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_16">
-          <title type="preferred">Mudrārākṣasavyākhyāna</title>
-          <date type="composition" from="1714" to="1714">1714</date>
-          <editor key="p_9" role="aut">Ḍhuṇḍirāja Vyāsa</editor>
-          <editor key="p_10" role="pat">Serfoji Bhonsle</editor>
-          <note type="genre">commentary</note>
+        <bibl xml:id="w_19">
+          <title type="preferred">Daharavidyāprakāśikā</title>
+          <editor key="p_11" role="aut">Paramaśivendra Sarasvatī</editor>
+          <editor key="p_5" role="pat">Tryambakarāyamakhin</editor>
         </bibl>
       </listBibl>
     </body>

@@ -19,7 +19,9 @@
         <bibl xml:id="w_13">
           <title type="preferred">Avaidikadarśanasaṃgraha</title>
           <editor key="p_7" role="aut">Gaṅgādharavājapeyin</editor>
+          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
           <note type="genre">doxography</note>
+          <note type="bibliographical">See 'A Descriptive of the Sanskrit Manuscripts in the Tanjore Serfoji's Sarasvatī Mahāl Library', Vol. 4, Entry 8244</note>
         </bibl>
       </listBibl>
     </body>
