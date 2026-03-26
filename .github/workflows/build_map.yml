@@ -28,7 +28,7 @@ jobs:
 
       # 3. Install dependencies
       - name: Install dependencies
-        run: pip install pandas geopandas folium lxml beautifulsoup4
+        run: pip install pandas geopandas folium lxml beautifulsoup4 natsort
 
       # 4. Build the map
       - name: Build Kaveri map
