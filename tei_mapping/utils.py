@@ -38,6 +38,7 @@ def tei_extractor(soup_ls, element, attributes=None, attribute_vals=None):
 
 
 def tei_values(object_lists, subelement=None, attribute=None, strip=True, flatten=False):
+    
     results = []
 
     for sublist in object_lists:
@@ -47,21 +48,32 @@ def tei_values(object_lists, subelement=None, attribute=None, strip=True, flatte
 
         values = []
         for obj in sublist:
-            target = obj.find(subelement) if subelement else obj
-            if not target:
+            if not obj:
                 values.append(None)
                 continue
 
-            val = target.get(attribute) if attribute else target.get_text()
+            target = obj
+            if subelement:
+                target = obj.find(subelement)
+                if not target:
+                    values.append(None)
+                    continue
+
+            if attribute:
+                val = target.get(attribute)
+            else:
+                val = target.get_text() if target else None
 
             if val and strip:
                 val = val.strip()
 
             values.append(val if val else None)
 
-        results.append(values)
+        # Ensure at least one value per parent element
+        if not values:
+            values.append(None)
 
-    return [v for sub in results for v in sub] if flatten else results
+        results.append(values)
 
     if flatten:
         return [val for sublist in results for val in sublist]

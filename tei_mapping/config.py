@@ -25,7 +25,7 @@ PLACE_SCHEMA = {
     "place_id": dict(element="place", attribute="xml:id", flatten=True),
     "place_name": dict(element="placeName", attributes=["type"], attribute_vals=["preferred"], flatten=True),
     "alt_name": dict(element="placeName", attributes=["type"], attribute_vals=["variant"]),
-    "coords": dict(element="note", attributes=["type"], flatten=True),
+    "coords": dict(element="note", attributes=["type"], attribute_vals=["coordinates"],  flatten=True),
     "type": dict(element="desc", attributes=["type"], attribute_vals=["function"]),
 }
 

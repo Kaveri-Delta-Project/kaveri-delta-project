@@ -202,9 +202,19 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
 
     placetype_fgs = {t: folium.FeatureGroup(name=f"Place Type: {t.capitalize()}") for t in type_colors}
 
+
     for idx, row in nodes_df.iterrows():
-        color = type_colors.get(row["type_filled"], type_colors["other"])
-        shape_svg = get_svg(row["type_filled"], color)
+        # Determine main type for marker
+        row_type = row["type_filled"]
+        if isinstance(row_type, list):
+            # pick first valid type that exists in placetype_fgs
+            row_type = next((t for t in row_type if t in placetype_fgs), None) 
+
+        if not row_type or row_type not in placetype_fgs:
+            row_type = "other"
+
+        color = type_colors.get(row_type, type_colors["other"])
+        shape_svg = get_svg(row_type, color)
 
         folium.Marker(
             location=[row["lat"], row["lon"]],
@@ -212,7 +222,8 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
             popup=make_scrollable_popup(row["popup_html"], width=250, height=100),
             tooltip=row["place_name"],
             pane="places"
-        ).add_to(placetype_fgs[row["type_filled"]])
+        ).add_to(placetype_fgs[row_type])
+
 
     for fg in placetype_fgs.values():
         fg.add_to(m)
