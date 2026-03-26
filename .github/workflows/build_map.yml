@@ -10,22 +10,19 @@ on:
 permissions:
   contents: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build-map:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout
-      - uses: actions/checkout@v4
+      # 1. Checkout FULL history (needed for gh-pages deploy)
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      # Python setup
+      # 2. Set up Python
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
