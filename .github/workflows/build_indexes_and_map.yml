@@ -1,0 +1,56 @@
+name: Build TEI Indexes & Kaveri Map
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'tei_index_build/*.py'
+      - 'tei_index_build/static/**'
+      - 'tei_mapping/*.py'
+      - 'tei_mapping/static/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout full history
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install pandas geopandas folium lxml beautifulsoup4 natsort Unidecode
+
+      # 4. Build TEI indexes
+      - name: Build TEI indexes
+        run: python tei_index_build/build_indexes.py
+
+      # 5. Build Kaveri map
+      - name: Build Kaveri map
+        run: python tei_mapping/map_creator.py
+
+      # 6. Merge map into index build folder
+      - name: Merge map into build folder
+        run: |
+          mkdir -p tei_index_build/build/map
+          cp tei_mapping/outputs/kaveri_map.html tei_index_build/build/map/
+
+      # 7. Deploy all outputs to generated branch
+      - name: Deploy to generated branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./tei_index_build/build
+          publish_branch: generated
