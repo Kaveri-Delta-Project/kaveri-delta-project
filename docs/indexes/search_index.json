@@ -24,6 +24,14 @@
   },
   {
     "type": "person",
+    "id": "p_11",
+    "name": "Paramaśivendra Sarasvatī",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_11",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_2",
     "name": "Appayya Dīkṣita",
     "alt_names": [],
@@ -62,7 +70,9 @@
       "Tryaṃbakādhvarin"
     ],
     "url": "indexes/person_index.html#p_5",
-    "places": []
+    "places": [
+      "Svamimalai [l_15]"
+    ]
   },
   {
     "type": "person",
@@ -185,10 +195,34 @@
   },
   {
     "type": "work",
+    "id": "w_19",
+    "name": "Daharavidyāprakāśikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_19",
+    "places": []
+  },
+  {
+    "type": "work",
     "id": "w_2",
     "name": "Mahābhāṣyaratnāvali",
     "alt_names": [],
     "url": "indexes/work_index.html#w_2",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_20",
+    "name": "Kāṇādasiddhāntacandrikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_20",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_21",
+    "name": "Prasāda (on Kāṇādasiddhāntacandrikā)",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_21",
     "places": []
   },
   {
