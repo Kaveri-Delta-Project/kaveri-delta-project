@@ -44,4 +44,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./tei_mapping/outputs
           publish_branch: generated
-          
+          force_orphan: true
