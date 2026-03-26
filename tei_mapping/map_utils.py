@@ -1,5 +1,10 @@
 import folium
 from folium import Element, IFrame, CssLink, JavascriptLink
+from config import OUTPUT_DIR
+
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_PATH = OUTPUT_DIR / "kaveri_map.html"
 
 #read CSS from relative path
 with open("./static/css/map.css") as f:
@@ -133,7 +138,7 @@ def generate_legend_html(type_colors):
     return legend_html
 
 
-def create_kaveri_map(nodes_df, rivers_gdf, output_path="kaveri_map.html"):
+def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
     """
     Create a Folium map with rivers, place markers, labels, and legend.
     nodes_df must contain 'lat', 'lon', 'type_filled', 'popup_html', 'place_name'.
