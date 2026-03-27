@@ -108,8 +108,8 @@
 
   {% for rel in data.relationship %}
     <div class="border rounded p-2 mb-2">
-      <span class="fw-semibold">{{ rel.label }}</span>
-      <span class="text-muted">(Relationship: {{ rel.type }}) of [{{ rel.key }}]</span>
+      <span class="text-muted">Relationship: {{ rel.type }} of</span>
+      <span class="fw-semibold">{{ rel.label }} [{{ rel.key }}]</span>
       {{ ui.delete_button("trait", 
         loop.index0, 
         extra_fields={"connection": "related", "key": rel.key, "name_type": rel.type}
@@ -481,14 +481,12 @@
   {% for aff in data.affiliations %}
     <div class="border rounded p-2 mb-2">
 
-      <span class="fw-semibold">{{ aff.placeName }}</span>
+      <span class="fw-semibold">{{ aff.placeName }} [{{ aff.key }}]</span>
       {% if aff.from %}
         <span class="text-muted">({{ aff.from }} to {{ aff.to }})</span>
       {% endif %}
-      {% if aff.key and aff.role %}
-        <span class="text-muted ms-1">(affiliation type: {{ aff.role }}) [{{ aff.key }}]</span>
-      {% else %}
-        <span class="text-muted ms-1">[{{ aff.key }}]</span>
+      {% if aff.role %}
+        <span class="text-muted ms-1">(affiliation type: {{ aff.role }})</span>
       {% endif %}
 
       {{ ui.delete_button("affiliation",
