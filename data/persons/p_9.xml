@@ -18,13 +18,13 @@
       <listPerson>
         <person xml:id="p_9">
           <persName type="preferred">Ḍhuṇḍirāja Vyāsa</persName>
-          <trait type="patron" key="p_5">
+          <trait type="beneficiary" key="p_5">
             <label>Tryambakarāyamakhin</label>
           </trait>
-          <trait type="patron" key="p_6">
+          <trait type="beneficiary" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
-          <trait type="patron" key="p_10">
+          <trait type="beneficiary" key="p_10">
             <label>Serfoji Bhonsle</label>
           </trait>
           <floruit from="1680" to="1680">fl. 1680</floruit>

@@ -149,11 +149,6 @@
       "Śāhaji I (of Thanjavur)"
     ],
     [
-      "p_9",
-      "person",
-      "Śāhaji I (of Thanjavur)"
-    ],
-    [
       "w_17",
       "work",
       "Śāhaji I (of Thanjavur)"
@@ -166,6 +161,11 @@
     [
       "w_12",
       "work",
+      "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "p_9",
+      "person",
       "Śāhaji I (of Thanjavur)"
     ]
   ],
@@ -181,13 +181,13 @@
       "Tryambakarāyamakhin"
     ],
     [
-      "p_9",
-      "person",
+      "w_19",
+      "work",
       "Tryambakarāyamakhin"
     ],
     [
-      "w_19",
-      "work",
+      "p_9",
+      "person",
       "Tryambakarāyamakhin"
     ]
   ],
@@ -242,21 +242,6 @@
       "Ḍhuṇḍirāja Vyāsa"
     ],
     [
-      "p_5",
-      "person",
-      "Ḍhuṇḍirāja Vyāsa"
-    ],
-    [
-      "p_6",
-      "person",
-      "Ḍhuṇḍirāja Vyāsa"
-    ],
-    [
-      "p_10",
-      "person",
-      "Ḍhuṇḍirāja Vyāsa"
-    ],
-    [
       "w_17",
       "work",
       "Ḍhuṇḍirāja Vyāsa"
@@ -270,14 +255,24 @@
       "w_16",
       "work",
       "Ḍhuṇḍirāja Vyāsa"
+    ],
+    [
+      "p_5",
+      "person",
+      "Ḍhuṇḍirāja Vyāsa"
+    ],
+    [
+      "p_6",
+      "person",
+      "Ḍhuṇḍirāja Vyāsa"
+    ],
+    [
+      "p_10",
+      "person",
+      "Ḍhuṇḍirāja Vyāsa"
     ]
   ],
   "p_10": [
-    [
-      "p_9",
-      "person",
-      "Serfoji Bhonsle"
-    ],
     [
       "w_8",
       "work",
@@ -286,6 +281,11 @@
     [
       "w_16",
       "work",
+      "Serfoji Bhonsle"
+    ],
+    [
+      "p_9",
+      "person",
       "Serfoji Bhonsle"
     ]
   ],
