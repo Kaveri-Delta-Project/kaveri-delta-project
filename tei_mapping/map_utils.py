@@ -4,7 +4,7 @@ from config import OUTPUT_DIR, CSS_PATH, JS_PATH, GIS_PATH
 
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-OUTPUT_PATH = OUTPUT_DIR / "kaveri_map.html"
+OUTPUT_PATH = OUTPUT_DIR / "map.html"
 
 RIVERS_PATH = GIS_PATH / "kaveri_delta_rivers_final.gpkg"
 
