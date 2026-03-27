@@ -1,4 +1,4 @@
-name: Copy Indexes
+name: Copy Indexes & Map
 
 on:
   workflow_run:
@@ -26,10 +26,10 @@ jobs:
       - name: Fetch generated branch
         run: git fetch origin generated
 
-      # 3. Copy generated content into docs/indexes
-      - name: Copy generated indexes
+      # 3. Copy indexes and map
+      - name: Copy generated content
         run: |
-          # Ensure docs/indexes exists
+          # Ensure indexes directory exists
           mkdir -p docs/indexes
 
           # Remove old indexes but keep .gitignore
@@ -38,8 +38,11 @@ jobs:
           # Add generated branch as temporary worktree
           git worktree add gen origin/generated
 
-          # Copy all files except manuscripts.html
-          rsync -av --exclude='manuscripts.html' gen/ docs/indexes/
+          # Copy indexes (exclude map folder + manuscripts)
+          rsync -av --exclude='manuscripts.html' --exclude='map/' gen/ docs/indexes/
+
+          # Copy map to docs root (overwrite existing)
+          cp gen/map/map.html docs/map.html
 
           # Clean up temporary worktree
           rm -rf gen
@@ -50,6 +53,6 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add docs/indexes
-          git commit -m "Auto-copy indexes into docs/indexes (excluding manuscripts.html)" || echo "No changes to commit"
+          git add docs
+          git commit -m "Auto-update indexes and map" || echo "No changes to commit"
           git push origin site
