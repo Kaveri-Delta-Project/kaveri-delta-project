@@ -1,10 +1,9 @@
 import folium
 from folium import Element, IFrame, CssLink, JavascriptLink
-from config import OUTPUT_DIR, CSS_PATH, JS_PATH, GIS_PATH
+from config import CSS_PATH, GIS_PATH, BASE_DIR
 
 
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-OUTPUT_PATH = OUTPUT_DIR / "map.html"
+OUTPUT_PATH =  BASE_DIR / "tei_mapping" / "map.html"
 
 RIVERS_PATH = GIS_PATH / "kaveri_delta_rivers_final.gpkg"
 
@@ -234,10 +233,10 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
     folium.LayerControl(collapsed=False, position="bottomright").add_to(m)
 
     # Link external CSS
-    m.get_root().header.add_child(CssLink(CSS_PATH))
+    m.get_root().header.add_child(CssLink("static/css/map.css"))
 
     # Link external JS
-    m.get_root().html.add_child(JavascriptLink(JS_PATH))
+    m.get_root().html.add_child(JavascriptLink("static/js/map.js"))
 
     # Legend
     legend_html = generate_legend_html(type_colors)
