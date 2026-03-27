@@ -346,6 +346,13 @@
   },
   {
     "type": "place",
+    "id": "l_21",
+    "name": "Test file",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_21"
+  },
+  {
+    "type": "place",
     "id": "l_3",
     "name": "Kumbakonam",
     "alt_names": [],
