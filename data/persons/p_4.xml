@@ -21,6 +21,9 @@
           <trait type="student" key="p_3">
             <label>Cokkanāthamakhin</label>
           </trait>
+          <trait type="member of family" key="p_3">
+            <label>Cokkanāthamakhin</label>
+          </trait>
           <idno type="Wikidata">Q113774201</idno>
           <affiliation key="l_4" role="born">
             <placeName>Kandaramanikkam</placeName>
