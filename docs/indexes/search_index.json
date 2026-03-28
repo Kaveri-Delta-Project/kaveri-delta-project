@@ -93,7 +93,7 @@
     ],
     "url": "indexes/person_index.html#p_7",
     "places": [
-      "Tiruvalangadu [l_17]"
+      "Thiruvalangadu [l_17]"
     ]
   },
   {
@@ -106,7 +106,7 @@
     "url": "indexes/person_index.html#p_8",
     "places": [
       "Bhāskararāyapuram [l_11]",
-      "Tiruvidaimarudur [l_6]"
+      "Thiruvidaimarudur [l_6]"
     ]
   },
   {
@@ -312,7 +312,7 @@
   {
     "type": "place",
     "id": "l_17",
-    "name": "Tiruvalangadu",
+    "name": "Thiruvalangadu",
     "alt_names": [],
     "url": "indexes/place_index.html#l_17"
   },
@@ -368,7 +368,7 @@
   {
     "type": "place",
     "id": "l_6",
-    "name": "Tiruvidaimarudur",
+    "name": "Thiruvidaimarudur",
     "alt_names": [
       "Madhyarjuna"
     ],
