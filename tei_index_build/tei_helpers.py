@@ -227,7 +227,7 @@ def load_entity(file_path, entity_tag):
 
     Args:
         file_path (str): Path to the TEI XML file.
-        entity_tag (str): The TEI element tag of the entity to load (e.g., 'person', 'msDesc', 'place').
+        entity_tag (str): The TEI element tag of the entity to load (e.g., 'person', 'place').
     
     Mapping:
             A dictionary defining how to extract data from the entity.

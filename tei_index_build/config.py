@@ -2,7 +2,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "data"))
-MS_DIR = os.path.join(DATA_DIR, "manuscripts")
 PERSONS_DIR = os.path.join(DATA_DIR, "persons")
 WORKS_DIR = os.path.join(DATA_DIR, "works")
 PLACES_DIR = os.path.join(DATA_DIR, "places")
@@ -76,23 +75,6 @@ WORK_MAPPING = {
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
-MS_MAPPING = {
-    "xml_id": {"attr": f"{{{NS_XML}}}id"},
-    "repository": {"element": "repository", "all_results": True},
-    "idno": {"element": "idno", "all_results": True},
-    "name": {"element": "msName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
-    "alt_names": {"element": "msName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
-    "work": {"parent_tag": "msItem", "child_elements": ["title"], "child_attributes": {"title": ["key"]}},
-    "phys_desc": {"element": "p", "all_results": True},
-    "date_text": {"element": "origDate", "all_results": True},
-    "date_from": {"element": "origDate", "element_attr": "from", "all_results": True},
-    "date_to": {"element": "origDate", "element_attr": "to", "all_results": True},
-    "place": {"element": "origPlace", "all_results": True},
-    "place_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
-    "references": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
-    "notes": {"element": "note", "all_results": True},
-    "person": {"parent_tag": "person", "attributes": ["role"], "child_elements": ["persName"], "child_attributes": {"persName": ["key"]}, "from_root": True}
-}
 
 ROLES = {
     "ann": "Annotator",
@@ -150,17 +132,6 @@ ENTITY_CONFIG = {
         "name_tag": "title",
         "container_tag": ".//tei:listBibl",
         "prefix": "w"
-
-    },
-    "manuscript": {
-        "dir": os.path.join(DATA_DIR, "manuscripts"),
-        "mapping": MS_MAPPING,
-        "child_order": ["repository", "idno", "msName", "msItem", "p", "origDate", "origPlace", "note", "person"],
-        "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1},
-        "element_tag": "msDesc",
-        "name_tag": "msName",
-        "container_tag": ".//tei:sourceDesc",
-        "prefix": "ms"
 
     }
 }

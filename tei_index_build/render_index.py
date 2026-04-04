@@ -329,113 +329,6 @@ def render_person(person):
     return "\n".join(html)    
 
 
-def render_manuscript(manuscript):
-
-    html = []
-
-    xml_id = manuscript.get("xml_id")
-    name = first(manuscript.get("name"))
-
-    html.append(f"<div class='index-entry' id='{esc(xml_id)}'>")
-
-    html.append("<div class='entry-header'>")
-    if name:
-        html.append(f"<span class='entry-title'>{esc(name)}</span>")
-        html.append(f"<span class='entry-id'>({esc(xml_id)})</span>")
-    else:
-        html.append(f"<span class='entry-title'>{esc(xml_id)}</span>")
-    html.append("  <button class='toggle' aria-label='Show details'>▸</button>")
-    html.append("</div>")
-
-    html.append("<div class='item-details'>")
-
-
-    alt_names_html = render_list(manuscript.get("alt_names"), "item-name")
-    if alt_names_html:
-        html.append("<div class='entry-block entry-alt-names'>")
-        html.append("<span class='subheading'>Alternative Manuscript Names</span>")
-        html.append(alt_names_html)
-        html.append("</div>")
-
-    repository = first(manuscript.get("repository"))
-    if repository:
-        html.append("<div class='entry-block entry-repo'>")
-        html.append("<span class='subheading'>Repository</span>")
-        html.append(f"<span class='item-name'>{esc(repository)}</span>")
-        html.append("</div>")
-
-    classmark = first(manuscript.get("idno"))
-    if classmark:
-        html.append("<div class='entry-block entry-idno'>")
-        html.append("<span class='subheading'>Classmark</span>")
-        html.append(f"<span class='item-name'>{esc(classmark)}</span>")
-        html.append("</div>")
-
-    works = manuscript.get("work")
-    if works:
-        html.append("<div class='entry-block entry-works'>")
-        html.append("<span class='subheading'>Associated Works</span>")
-        for work in works:
-            key = work.get("title_key")
-            url = make_entity_url("work", key, single_page=False)
-            work_title = work.get("title")
-            html.append(f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(work_title)} ({esc(key)})</a>")
-        html.append("</div>")
-
-
-    physical_html = render_list(manuscript.get("phys_desc"), "item-name")
-    if physical_html:
-        html.append("<div class='entry-block entry-phys'>")
-        html.append("<span class='subheading'>Physical Description</span>")
-        html.append(physical_html)
-        html.append("</div>")
-
-
-    date_text = first(manuscript.get("date_text"))
-    date_from = first(manuscript.get("date_from"))
-    date_to = first(manuscript.get("date_to"))
-    if date_text and date_from and date_to:
-        html.append("<div class='entry-block entry-dates'>")
-        html.append("<span class='subheading'>Manuscript Creation Period</span>")
-        html.append(f"<span data-from='{esc(date_from)}' data-to='{esc(date_to)}' class='item-name'>{esc(date_text)}</span>")
-        html.append("</div>")
-
-   
-    places = manuscript.get("place")
-    place_keys = manuscript.get("place_key")
-    if places and place_keys:
-        html.append("<div class='entry-block entry-places'>")
-        html.append("<span class='subheading'>Associated Places</span>")
-        for place, key in zip(places, place_keys):
-            url = make_entity_url("place", key, single_page=False)
-            html.append(f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(place)} ({esc(key)})</a>")
-        html.append("</div>")
-
-
-    persons = manuscript.get("person")
-    if persons:
-        html.append("<div class='entry-block entry-persons'>")
-        html.append("<span class='subheading'>Associated Persons</span>")
-        for person in persons:
-            key = person.get("persName_key")
-            role = ROLES.get(person.get("role"))
-            url = make_entity_url("person", key, single_page=False)
-            person_name = person.get("persName")
-            html.append(f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(person_name)} ({esc(key)}) (role: {esc(role)})</a>")
-        html.append("</div>")
-
-
-    notes_html = render_list(manuscript.get("notes"), "item-name")
-    if notes_html:
-        html.append("<div class='entry-block entry-notes'>")
-        html.append("<span class='subheading'>Notes</span>")
-        html.append(notes_html)
-        html.append("</div>")
-
-    html.append("</div>")
-    return "\n".join(html)   
-
-
 def render_work(work):
 
     html = []
@@ -555,7 +448,6 @@ def render_work(work):
 def render_index_sections(items_by_letter, entity_tag):
     renderers = {
         "person": render_person,
-        "manuscript": render_manuscript,
         "work": render_work,
         "place": render_place
     }
