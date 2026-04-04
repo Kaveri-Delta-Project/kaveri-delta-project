@@ -171,14 +171,12 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
     labels = {
         "Kaveri River": [(10.919786, 78.498563), (10.873635, 79.049462)],
         "Kollidam River": [(11.081690, 79.409749)],
-        "Kumbakonam": [(10.962807, 79.384513)],
-        "Mannargudi": [(10.664908, 79.448423)],
-        "Thanjavur": [(10.792270, 79.136594)],
-        "Madurai": [(9.928649, 78.122132)]
     }
+
+    large_list = ["Kaveri River", "Madurai", "Thanjavur"]
     
     for item, coords_list in labels.items():
-        size_class = "label-large" if item in ["Kaveri River", "Madurai", "Thanjavur"] else "label-small"
+        size_class = "label-large" if item in large_list else "label-small"
 
         for coord in coords_list:
             folium.Marker(
@@ -217,9 +215,21 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
         color = type_colors.get(row_type, type_colors["other"])
         shape_svg = get_svg(row_type, color)
 
+        item = row["place_name"]
+        size_class = "label-large" if item in large_list else "label-small"
+
         folium.Marker(
             location=[row["lat"], row["lon"]],
-            icon=folium.DivIcon(html=shape_svg, icon_size=(20, 20)),
+            icon=folium.DivIcon(
+                html=f"""
+                <div>
+                    {shape_svg}
+                    <div class="map-label {size_class}">{item}</div>
+                </div>
+                """,
+                icon_size=(40, 40),
+                icon_anchor=(10, 10)
+            ),
             popup=make_scrollable_popup(row["popup_html"], width=250, height=100),
             tooltip=row["place_name"],
             pane="places"

@@ -36,7 +36,7 @@ places_df = (
     .dropna(subset=["coords"])
 )
 
-works_df = (
+works_place_df = (
     works_df
     .explode("place_id")
     .dropna(subset=["place_id"])
@@ -70,7 +70,7 @@ def aggregate_with_metadata(df, group_key, id_col, metadata_df):
 
 
 works_agg = aggregate_with_metadata(
-    works_df,
+    works_place_df,
     group_key="place_id",
     id_col="work_id",
     metadata_df=works_df
@@ -93,7 +93,6 @@ people_agg = people_agg.rename(columns={
     "count": "num_people",
     "items": "people"
 })
-
 
 
 nodes_df = (
