@@ -3,7 +3,7 @@ from unidecode import unidecode
 import string
 import os, re
 from config import ENTITY_CONFIG, NS_TEI, NS_XML, NSMAP, DEFAULT_NSMAP
-from flask import request, redirect, url_for
+from flask import request, redirect, url_for, flash
 from collections import defaultdict
 
 
@@ -195,6 +195,32 @@ def extract_from_parent(
 
     return results
 
+
+def get_element_attr_by_index(parent, tag, index, attr, match_attrs=None):
+    """
+    Get an attribute value from an element by index (optionally filtered).
+
+    Args:
+        parent: XML parent element
+        tag (str): element tag
+        index (int): index in filtered list
+        attr (str): attribute name to retrieve
+        match_attrs (dict, optional): filter elements
+
+    Returns:
+        str or None
+    """
+    match_attrs = match_attrs or {}
+
+    elements = [
+        el for el in parent.findall(f"{{{NS_TEI}}}{tag}")
+        if all(el.get(k) == v for k, v in match_attrs.items())
+    ]
+
+    if index < 0 or index >= len(elements):
+        return None
+
+    return elements[index].get(attr)
 
 def load_ent_name_by_key(entity_type, key, elem_name):
     """
@@ -545,6 +571,7 @@ def delete_tei_element(
 
     return False
 
+
 def add_simple_element_attr(
     *,
     parent,
@@ -593,6 +620,53 @@ def add_simple_element_attr(
             el.set(k, v)
     if text:
         el.text = text
+
+    return el
+
+def update_simple_element_attr(parent, tag, text, update_attrs=None, match_attrs=None, index=0, error_category=None):
+    """
+    Update the text of an existing child element matching tag + attrs at a given index.
+
+    Args:
+        parent: XML/TEI element to update.
+        tag (str): The child tag name.
+        text (str): New text content.
+        update_attrs (dict): Attributes to set on the element.
+        match_attrs (dict): Optional attributes to filter which elements to consider.
+        index (int): Which matching element to update.
+        error_category (str): Optional flash category for errors.
+
+    Returns:
+        bool: True if update succeeded, False otherwise.
+    """
+    
+    match_attrs = match_attrs or {}
+    update_attrs = update_attrs or {}
+
+
+    # Find all matching elements
+    elements = [
+        el for el in parent.findall(f"{{{NS_TEI}}}{tag}")
+        if all(el.get(k) == v for k, v in match_attrs.items())
+    ]
+
+    if index < 0 or index >= len(elements):
+        if error_category:
+            flash("Edit index out of range.", error_category)
+        return None
+
+    el = elements[index]
+
+    if text is not None:
+        el.text = text
+
+    for k, v in update_attrs.items():
+        el.set(k, v)
+
+    # Remove old attributes not present in the new attrs
+    for k in list(el.attrib.keys()):
+        if k not in update_attrs and k not in match_attrs:
+            del el.attrib[k]
 
     return el
 
@@ -652,6 +726,89 @@ def build_section(
             child.text = child_text
 
     return el
+
+
+
+def update_build_section(
+    *,
+    parent,
+    item_tag,
+    index=0,
+    match_attrs=None,
+    text=None,
+    element_attrs=None,
+    child_tag=None,
+    child_text=None,
+    child_attrs=None,
+    error_category=None
+):
+    """
+    Update an existing TEI element by index from a filtered list, or create it if needed.
+    Mirrors build_section logic for attributes and children.
+
+    Args:
+        parent: Parent XML element
+        item_tag: Tag of element to update
+        index: Which matching element to update
+        match_attrs: Attributes to filter elements
+        text: Text to set on the element
+        element_attrs: Attributes to update/set on the element itself
+        child_tag: Optional child element tag
+        child_text: Optional child element text
+        child_attrs: Optional child element attributes
+        error_category: Optional flash category
+
+    Returns:
+        lxml.etree._Element: The updated element
+    """
+    match_attrs = match_attrs or {}
+    element_attrs = element_attrs or {}
+
+    # Filter elements by match_attrs
+    elements = [
+        el for el in parent.findall(f"{{{NS_TEI}}}{item_tag}")
+        if all(el.get(k) == v for k, v in match_attrs.items())
+    ]
+
+    # Check index
+    if index < 0 or index >= len(elements):
+        if error_category:
+            flash("Edit index out of range.", error_category)
+        return None
+
+    # Pick the element
+    el = elements[index]
+
+    # Update element attributes
+    for k, v in element_attrs.items():
+        if v is None:
+            if k in el.attrib:
+                del el.attrib[k]
+        else:
+            el.set(k, v)
+
+    # Remove old attributes not present in the new attrs
+    for k in list(el.attrib.keys()):
+        if k not in element_attrs and k not in match_attrs:
+            del el.attrib[k]
+
+    # Update text
+    if text is not None:
+        el.text = text
+
+    # Update or create child element
+    if child_tag:
+        child = el.find(f"{{{NS_TEI}}}{child_tag}")
+        if child is None:
+            child = etree.SubElement(el, f"{{{NS_TEI}}}{child_tag}")
+        if child_attrs:
+            for k, v in child_attrs.items():
+                child.set(k, v)
+        if child_text is not None:
+            child.text = child_text
+
+    return el
+
 
 def load_or_create_entity(entity_name, entity_dir, template_path, nsmap, xml_id=None):
     """Load existing TEI entity XML or create a new one from template."""

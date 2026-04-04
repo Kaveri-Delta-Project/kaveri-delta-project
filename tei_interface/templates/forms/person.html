@@ -12,16 +12,18 @@
 
 <section class="panel">
 
-  {{ ui.section_header("Preferred Name (Unique Value)", "+ add preferred name", "toggleEntryForm('pref-name-form')") }}
+  {{ ui.section_header("Preferred Name (Unique Value)", 
+    "+ add preferred name", 
+    "resetEditForm('preferred_name'); toggleEntryForm('preferred-name-form')") }}
 
    <!-- Section-level error -->
-  {% if section_messages.get('pref-name-error') %}
+  {% if section_messages.get('preferred-name-error') %}
     <div class="alert alert-danger">
-      {{ section_messages['pref-name-error'] }}
+      {{ section_messages['preferred-name-error'] }}
     </div>
   {% endif %}
 
-  {% for val in data.names %}
+  {% for val in data.preferred_name %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
         {{  ui.delete_button(
@@ -29,25 +31,40 @@
         index=loop.index0,
         extra_fields={"element_attr_name": "type", "element_attr_value": "preferred"}
       ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("preferred_name", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("preferred-name-form")'>
+
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
   <!-- Preferred name -->
-  <div id="pref-name-form" class="border rounded p-3 mt-3 d-none">
+  <div id="preferred-name-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="preferred_name">
+      <input type="hidden" name="edit_index" id="preferred-name-edit-index" value="">
 
+      <div id="preferred-name-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
         <div class="mb-3">
           {{ ui.input_field(
-              id="name",
-              name="name",
+              id="preferred_name",
+              name="preferred_name",
               label="Preferred Name",
               extra_attrs="required",
               help_text="Enter preferred name here"
           ) }}
         </div>
+      </div> 
 
-        {{ ui.form_actions("toggleEntryForm('pref-name-form')") }}  
+      {{ ui.form_actions("resetEditForm('preferred_name'); toggleEntryForm('preferred-name-form');") }}    
 
     </form>
   </div>  
@@ -56,16 +73,18 @@
 
 <section class="panel">
 
-  {{ ui.section_header("Alternative Names", "+ add alternative names", "toggleEntryForm('alt-names-form')") }}
+  {{ ui.section_header("Alternative Name", 
+      "+ add alternative name", 
+      "resetEditForm('alt_name'); toggleEntryForm('alt-name-form')") }}
   
   <!-- Section-level error -->
-  {% if section_messages.get('alt-names-error') %}
+  {% if section_messages.get('alt-name-error') %}
     <div class="alert alert-danger">
-      {{ section_messages['alt-names-error'] }}
+      {{ section_messages['alt-name-error'] }}
     </div>
   {% endif %}
 
-  {% for val in data.alt_names %}
+  {% for val in data.alt_name %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
         {{  ui.delete_button(
@@ -73,24 +92,38 @@
             index=loop.index0,
             extra_fields={"element_attr_name": "type", "element_attr_value": "variant"}
       ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("alt_name", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("alt-name-form")'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
-    <div id="alt-names-form" class="border rounded p-3 mt-3 d-none">
+    <div id="alt-name-form" class="border rounded p-3 mt-3 d-none">
       <form method="POST" action="{{ form_action }}">
-        <input type="hidden" name="section" value="add_variant">
+        <input type="hidden" name="section" value="alt_name">
+        <input type="hidden" name="edit_index" id="alt-name-edit-index" value="">
 
-        <div class="mb-3">
-          {{ ui.input_field(
-              id="alt_name",
-              name="alt_name",
-              label="Alternative Names",
-              extra_attrs="required",
-              help_text="Enter any alternative names here, please upload multiple names one at a time"
-          ) }}
+        <div id="alt-name-edit-label" class="mb-2 d-none">
+          <span class="badge bg-warning text-dark">Edit Mode</span>
         </div>
 
-        {{ ui.form_actions("toggleEntryForm('alt-names-form')") }}  
+        <div class="editable-fields">
+          <div class="mb-3">
+            {{ ui.input_field(
+                id="alt_name",
+                name="alt_name",
+                label="Alternative Name",
+                extra_attrs="required",
+                help_text="Enter any alternative names here, please upload multiple names one at a time"
+            ) }}
+          </div>
+        </div>
+
+        {{ ui.form_actions("resetEditForm('alt_name'); toggleEntryForm('alt-name-form');") }}    
 
     </form>
   </div>  
@@ -172,7 +205,9 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Identifier (Unique Value)", "+ add identifier", "toggleEntryForm('idno-form')") }}
+  {{ ui.section_header("Identifier (Unique Value)", 
+  "+ add identifier", 
+  "resetEditForm('idno'); toggleEntryForm('idno-form')") }}
 
     <!-- Section-level error -->
   {% if section_messages.get('idno-error') %}
@@ -190,6 +225,12 @@
 
       {{ ui.delete_button("idno", loop.index0) }}
 
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem("idno", {{ loop.index0 }}, {{ {"idno": value, "idno_type": type}|tojson }}); showEntryForm("idno-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
   
@@ -197,31 +238,38 @@
   <div id="idno-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="idno">
+      <input type="hidden" name="edit_index" id="idno-edit-index" value="">
 
-      <div class="mb-3">
-        {{ ui.select_field("idno_type",
-            [
-              ("", "-- Select type --"),
-              ("VIAF", "VIAF"),
-              ("Wikidata", "Wikidata"),
-            ],
-            required=True
-        ) }}
+      <div id="idno-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      <div class="mb-3">
-        {{ ui.input_field(
-            id="idno_value",
-            name="idno_value",
-            label="Identifier Number",
-            label_option="(required)",
-            placeholder="e.g. Q123456 (Wikidata), 12345678 (VIAF)",
-            extra_attrs="required",
-            help_text="Enter identifier number in correct format"
-        ) }}
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("idno_type",
+              [
+                ("", "-- Select type --"),
+                ("VIAF", "VIAF"),
+                ("Wikidata", "Wikidata"),
+              ],
+              required=True
+          ) }}
+        </div>
+
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="idno",
+              name="idno",
+              label="Identifier Number",
+              label_option="(required)",
+              placeholder="e.g. Q123456 (Wikidata), 12345678 (VIAF)",
+              extra_attrs="required",
+              help_text="Enter identifier number in correct format"
+          ) }}
+        </div>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('idno-form')") }}
+      {{ ui.form_actions("resetEditForm('idno'); toggleEntryForm('idno-form');") }}    
 
     </form>
   </div>
@@ -230,7 +278,7 @@
 
 <section class="panel">
   
-  {{ ui.section_header("Gender (Unique Value)", "+ add gender", "toggleEntryForm('gender-form')") }}
+  {{ ui.section_header("Gender (Unique Value)", "+ set gender", "toggleEntryForm('gender-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('gender-error') %}
@@ -277,7 +325,9 @@
 
 <section class="panel">
 
-  {{ ui.section_header("Birth (Unique Value)", "+ add birth", "toggleEntryForm('birth-form')") }}
+  {{ ui.section_header("Birth (Unique Value)", 
+    "+ add birth", 
+    "resetEditForm('birth'); toggleEntryForm('birth-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('birth-error') %}
@@ -295,40 +345,53 @@
 
       {{ ui.delete_button("birth", loop.index0) }}
 
+      <button type="button"
+          class="btn btn-sm btn-outline-secondary ms-2"
+          onclick='editItem("birth", {{ loop.index0 }}, {{ {"birth_text": text, "birth_when": when}|tojson }}); showEntryForm("birth-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
   <div id="birth-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="birth">
+      <input type="hidden" name="edit_index" id="birth-edit-index" value="">
 
-      <div class="row">
-        <div class="col">
-          {{ ui.input_field(
-              id="birth_text",
-              name="birth_text",
-              label="Birth Text",
-              label_option="(required)",
-              placeholder="e.g. c. 1620",
-              extra_attrs="required",
-              help_text="Enter birth date in text format"
-          ) }}
-        </div>
+      <div id="birth-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
 
-        <div class="col">
-          {{ ui.input_field(
-              id="birth_when",
-              name="birth_when",
-              label="Birth Date (ISO)",
-              label_option="(required)",
-              placeholder="e.g. 1650 or 1650-05-12",
-              extra_attrs="required",
-              help_text="Year or full ISO date"
-          ) }}
+      <div class="editable-fields">
+        <div class="row">
+          <div class="col">
+            {{ ui.input_field(
+                id="birth_text",
+                name="birth_text",
+                label="Birth Text",
+                label_option="(required)",
+                placeholder="e.g. c. 1620",
+                extra_attrs="required",
+                help_text="Enter birth date in text format"
+            ) }}
+          </div>
+
+          <div class="col">
+            {{ ui.input_field(
+                id="birth_when",
+                name="birth_when",
+                label="Birth Date (ISO)",
+                label_option="(required)",
+                placeholder="e.g. 1650 or 1650-05-12",
+                extra_attrs="required",
+                help_text="Year or full ISO date"
+            ) }}
+          </div>
         </div>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('birth-form')") }}
+      {{ ui.form_actions("resetEditForm('birth'); toggleEntryForm('birth-form');") }}   
 
     </form>
   </div>
@@ -336,7 +399,9 @@
 
 <section class="panel">
 
-  {{ ui.section_header("Death (Unique Value)", "+ add death", "toggleEntryForm('death-form')") }}
+  {{ ui.section_header("Death (Unique Value)", 
+    "+ add death", 
+    "resetEditForm('death'); toggleEntryForm('death-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('death-error') %}
@@ -354,47 +419,63 @@
 
       {{ ui.delete_button("death", loop.index0) }}
 
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem("death", {{ loop.index0 }}, {{ {"death_text": text, "death_when": when}|tojson }}); showEntryForm("death-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
   <div id="death-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="death">
+      <input type="hidden" name="edit_index" id="death-edit-index" value="">
 
-      <div class="row">
-        <div class="col">
-          {{ ui.input_field(
-              id="death_text",
-              name="death_text",
-              label="Death Text",
-              label_option="(required)",
-              placeholder="e.g. c. 1700",
-              extra_attrs="required",
-              help_text="Enter death date in text format"
-          ) }}
-        </div>
+      <div id="death-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
 
-        <div class="col">
-          {{ ui.input_field(
-              id="death_when",
-              name="death_when",
-              label="Death Date (ISO)",
-              label_option="(required)",
-              placeholder="e.g. 1760 or 1760-05-12",
-              extra_attrs="required",
-              help_text="Year or full ISO date"
-          ) }}
+      <div class="editable-fields">
+        <div class="row">
+          <div class="col">
+            {{ ui.input_field(
+                id="death_text",
+                name="death_text",
+                label="Death Text",
+                label_option="(required)",
+                placeholder="e.g. c. 1700",
+                extra_attrs="required",
+                help_text="Enter death date in text format"
+            ) }}
+          </div>
+
+          <div class="col">
+            {{ ui.input_field(
+                id="death_when",
+                name="death_when",
+                label="Death Date (ISO)",
+                label_option="(required)",
+                placeholder="e.g. 1760 or 1760-05-12",
+                extra_attrs="required",
+                help_text="Year or full ISO date"
+            ) }}
+          </div>
         </div>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('death-form')") }}
+      {{ ui.form_actions("resetEditForm('death'); toggleEntryForm('death-form');") }}   
 
     </form>
   </div>
 </section>
 
 <section class="panel">
-  {{ ui.section_header("Floruit – Period of Activity (Unique Value)", "+ add floruit", "toggleEntryForm('floruit-form')") }}
+
+  {{ ui.section_header("Floruit – Period of Activity (Unique Value)", 
+    "+ add floruit", 
+    "resetEditForm('floruit'); toggleEntryForm('floruit-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('floruit-error') %}
@@ -412,6 +493,20 @@
 
       {{ ui.delete_button("floruit", loop.index0) }}
 
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem(
+            "floruit",
+            {{ loop.index0 }},
+            {{ {
+                "floruit_text": text,
+                "floruit_from": from,
+                "floruit_to": to
+            }|tojson }}
+        ); showEntryForm("floruit-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
@@ -419,46 +514,53 @@
   <div id="floruit-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="floruit">
+      <input type="hidden" name="edit_index" id="floruit-edit-index" value="">
 
-      <div class="mb-3">
-      {{ ui.input_field(
-          id="floruit_text",
-          name="floruit_text",
-          label="Activity",
-          label_option="(required)",
-          placeholder="e.g. active c. 1620–1650",
-          extra_attrs="required",
-          help_text="Enter period during which active."
-      ) }}
+      <div id="floruit-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      <div class="row">
-        <div class="col">
-          {{ ui.input_field(
-              id="floruit_from",
-              name="floruit_from",
-              label="From",
-              label_option="(required)",
-              placeholder="e.g. 1620 or 1620-05-12",
-              extra_attrs="required",
-              help_text="Start year or full ISO date"
-          ) }}
+      <div class="editable-fields">
+        <div class="mb-3">
+        {{ ui.input_field(
+            id="floruit_text",
+            name="floruit_text",
+            label="Activity",
+            label_option="(required)",
+            placeholder="e.g. active c. 1620–1650",
+            extra_attrs="required",
+            help_text="Enter period during which active."
+        ) }}
         </div>
 
-        <div class="col">
-          {{ ui.input_field(
-              id="floruit_to",
-              name="floruit_to",
-              label="To",
-              label_option="(required)",
-              placeholder="e.g. 1650 or 1650-05-12",
-              extra_attrs="required",
-              help_text="End year or full ISO date"
-          ) }}
+        <div class="row">
+          <div class="col">
+            {{ ui.input_field(
+                id="floruit_from",
+                name="floruit_from",
+                label="From",
+                label_option="(required)",
+                placeholder="e.g. 1620 or 1620-05-12",
+                extra_attrs="required",
+                help_text="Start year or full ISO date"
+            ) }}
+          </div>
+
+          <div class="col">
+            {{ ui.input_field(
+                id="floruit_to",
+                name="floruit_to",
+                label="To",
+                label_option="(required)",
+                placeholder="e.g. 1650 or 1650-05-12",
+                extra_attrs="required",
+                help_text="End year or full ISO date"
+            ) }}
+          </div>
         </div>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('floruit-form')") }}
+      {{ ui.form_actions("resetEditForm('floruit'); toggleEntryForm('floruit-form');") }}    
 
     </form>
   </div>
@@ -468,137 +570,180 @@
 
 <section class="panel">
 
-  {{ ui.section_header("Associated Places", "+ add place", "toggleEntryForm('affiliation-form')") }}
+  {{ ui.section_header("Associated Places", 
+    "+ add associated place",
+    "resetEditForm('associated_place'); toggleEntryForm('associated-place-form')") }}
 
   <!-- Section-level error -->
-  {% if section_messages.get('affiliation-error') %}
+  {% if section_messages.get('associated-place-error') %}
     <div class="alert alert-danger">
-      {{ section_messages['affiliation-error'] }}
+      {{ section_messages['associated-place-error'] }}
     </div>
   {% endif %}
 
-  <!-- Existing affiliations -->
-  {% for aff in data.affiliations %}
+  <!-- Existing associated places -->
+  {% for val in data.associated_place %}
     <div class="border rounded p-2 mb-2">
 
-      <span class="fw-semibold">{{ aff.placeName }} [{{ aff.key }}]</span>
-      {% if aff.from %}
-        <span class="text-muted">({{ aff.from }} to {{ aff.to }})</span>
+      <span class="fw-semibold">{{ val.placeName }} [{{ val.key }}]</span>
+      {% if val.from %}
+        <span class="text-muted">({{ val.from }} to {{ val.to }})</span>
       {% endif %}
-      {% if aff.role %}
-        <span class="text-muted ms-1">(affiliation type: {{ aff.role }})</span>
+      {% if val.role %}
+        <span class="text-muted ms-1">(association type: {{ val.role }})</span>
       {% endif %}
 
       {{ ui.delete_button("affiliation",
           loop.index0,
-          extra_fields={"connection": "cascade", "name_type": "place", "key": aff.key, "name": aff.placeName}
+          extra_fields={"connection": "cascade", "name_type": "place", "key": val.key, "name": val.placeName}
       ) }}
+
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem(
+            "associated_place",
+            {{ loop.index0 }},
+            {{ {
+                "associated_place_search": val.placeName,
+                "associated_place_key": val.key,
+                "associated_place_from": val.from or "",
+                "associated_place_to": val.to or "",
+                "association": val.role
+            }|tojson }}
+        ); showEntryForm("associated-place-form");'>
+        ✎ Edit
+      </button>
 
     </div>
   {% endfor %}
 
   <!-- Add affiliation form (hidden by default) -->
-  <div id="affiliation-form" class="border rounded p-3 mt-3 d-none">
+  <div id="associated-place-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
-      <input type="hidden" name="section" value="affiliation">
+      <input type="hidden" name="section" value="associated_place">
+      <input type="hidden" name="edit_index" id="associated-place-edit-index" value="">
 
-      
-      <div class="mb-3">
-        {{ ui.select_field("affiliation_type",
-            [
-            ("", "-- Select affiliation type --"),
-            ("born", "Born"),
-            ("died", "Died"),
-            ("member", "Member"),
-            ("patronage", "Patronage"),
-            ("resided", "Resided"),
-            ("student", "Student"),
-            ("teaching", "Teaching"),
-            ("visited", "Visited"),
-            ("other", "Other")
-            ],
-            required=True,
-            allow_other=True
-        ) }}
+      <div id="associated-place-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      <div class="mb-3">
-        {{ ui.input_field(
-            id="affiliation_search",
-            name="affiliation_key",
-            label="Affiliated Place",
-            label_option="(required)",
-            placeholder="Type to search places...",
-            entity_lookup="place",
-            results_id="affiliation_results",
-            hidden_id="affiliation_key",
-            extra_attrs="required",
-            help_text="Search for an existing place and select it from the list."
-        ) }}
-      </div>
-
-      <div class="row">
-        <div class="col">
-          {{ ui.input_field(
-              id="affiliation_from",
-              name="affiliation_from",
-              label="From",
-              label_option="(optional)",
-              placeholder="e.g. 1620 or 1620-05-12",
-              help_text="Start year or full ISO date"
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("association",
+              [
+              ("", "-- Select association type --"),
+              ("born", "Born"),
+              ("died", "Died"),
+              ("member", "Member"),
+              ("patronage", "Patronage"),
+              ("resided", "Resided"),
+              ("student", "Student"),
+              ("teaching", "Teaching"),
+              ("visited", "Visited"),
+              ("other", "Other")
+              ],
+              required=True,
+              allow_other=True
           ) }}
         </div>
-        
-        <div class="col">
+
+        <div class="mb-3">
           {{ ui.input_field(
-              id="affiliation_to",
-              name="affiliation_to",
-              label="To",
-              label_option="(optional)",
-              placeholder="e.g. 1650 or 1650-05-12",
-              help_text="End year or full ISO date"
+              id="associated_place_search",
+              name="associated_place_key",
+              label="Associated Place",
+              label_option="(required)",
+              placeholder="Type to search places...",
+              entity_lookup="place",
+              results_id="associated_place_results",
+              hidden_id="associated_place_key",
+              extra_attrs="required",
+              help_text="Search for an existing place and select it from the list."
           ) }}
+        </div>
+
+        <div class="row">
+          <div class="col">
+            {{ ui.input_field(
+                id="associated_place_from",
+                name="associated_place_from",
+                label="From",
+                label_option="(optional)",
+                placeholder="e.g. 1620 or 1620-05-12",
+                help_text="Start year or full ISO date"
+            ) }}
+          </div>
+          
+          <div class="col">
+            {{ ui.input_field(
+                id="associated_place_to",
+                name="associated_place_to",
+                label="To",
+                label_option="(optional)",
+                placeholder="e.g. 1650 or 1650-05-12",
+                help_text="End year or full ISO date"
+            ) }}
+          </div>
         </div>
       </div>  
 
-      {{ ui.form_actions("toggleEntryForm('affiliation-form')") }}
+      {{ ui.form_actions("resetEditForm('associated_place'); toggleEntryForm('associated-place-form')") }}
 
     </form>
   </div>
 </section>
 
 <section class="panel">
-  {{ ui.section_header("Bibliographical References", "+ add references", "toggleEntryForm('references-form')") }}
+
+  {{ ui.section_header(
+      "Bibliographical Reference", 
+      "+ add reference", 
+      "resetEditForm('reference'); toggleEntryForm('reference-form')"
+  ) }}
 
   <!-- Section-level error -->
-  {% if section_messages.get('references-error') %}
+  {% if section_messages.get('reference-error') %}
     <div class="alert alert-danger">
-      {{ section_messages['references-error'] }}
+      {{ section_messages['reference-error'] }}
     </div>
   {% endif %}
 
-  {% for val in data.references %}
+  {% for val in data.reference %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
         {{  ui.delete_button(section="bibl", index=loop.index0) }}
+      
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("reference", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("reference-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
-<div id="references-form" class="border rounded p-3 mt-3 d-none">
-  <form method="POST" action="{{ form_action }}">
-    <input type="hidden" name="section" value="references">
+  <div id="reference-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="reference">
+      <input type="hidden" name="edit_index" id="reference-edit-index" value="">
 
-    <div class="mb-3">
-      {{ ui.input_field(
-          id="references",
-          name="references",
-          label="Bibliographical References",
-          extra_attrs="required",
-          help_text="Enter any bibliographical references here"
-      ) }}
-    </div>
+      <div id="reference-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
 
-      {{ ui.form_actions("toggleEntryForm('references-form')") }}  
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="reference",
+              name="reference",
+              label="Bibliographical Reference",
+              extra_attrs="required",
+              help_text="Enter any bibliographical references here"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('reference'); toggleEntryForm('reference-form');") }}   
 
     </form>
   </div>  
@@ -606,7 +751,11 @@
 
 <section class="panel">
   
-  {{ ui.section_header("Notes", "+ add notes", "toggleEntryForm('notes-form')") }}
+  {{ ui.section_header(
+      "Notes", 
+      "+ add notes", 
+      "resetEditForm('notes'); toggleEntryForm('notes-form')"
+  ) }}
 
   <!-- Section-level error -->
   {% if section_messages.get('notes-error') %}
@@ -619,24 +768,38 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
       {{ ui.delete_button("note", loop.index0) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("notes", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("notes-form")'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
   <div id="notes-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="notes">
+      <input type="hidden" name="edit_index" id="notes-edit-index" value="">
 
-      <div class="mb-3">
-        {{ ui.input_field(
-            id="notes",
-            name="notes",
-            label="Notes",
-            extra_attrs="required",
-            help_text="Enter any extra notes here"
-        ) }}
+      <div id="notes-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('notes-form')") }}  
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="notes",
+              name="notes",
+              label="Notes",
+              extra_attrs="required",
+              help_text="Enter any extra notes here"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('notes'); toggleEntryForm('notes-form');") }}    
 
     </form>
   </div>  

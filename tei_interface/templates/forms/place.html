@@ -11,16 +11,18 @@
 
 <section class="panel">
 
-  {{ ui.section_header("Main Place Name (Unique Value)", "+ add main name", "toggleEntryForm('main-name-form')") }}
+  {{ ui.section_header("Main Place Name (Unique Value)", 
+    "+ add main place name",
+    "resetEditForm('main_place_name'); toggleEntryForm('main-place-name-form')") }}
 
    <!-- Section-level error -->
-  {% if section_messages.get('main-name-error') %}
+  {% if section_messages.get('main-place-name-error') %}
     <div class="alert alert-danger">
-      {{ section_messages['main-name-error'] }}
+      {{ section_messages['main-place-name-error'] }}
     </div>
   {% endif %}
 
-  {% for val in data.names %}
+  {% for val in data.main_name %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
       {{  ui.delete_button(
@@ -28,24 +30,39 @@
       index=loop.index0,
       extra_fields={"element_attr_name": "type", "element_attr_value": "preferred"}
     ) }}
+
+    <button type="button"
+            class="btn btn-sm btn-outline-secondary ms-2"
+            onclick='editItem("main_place_name", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("main-place-name-form")'>
+
+      ✎ Edit
+    </button>
+
     </div>
   {% endfor %}
 
-<div id="main-name-form" class="border rounded p-3 mt-3 d-none">
-  <form method="POST" action="{{ form_action }}">
-    <input type="hidden" name="section" value="main_place_name">
+  <div id="main-place-name-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="main_place_name">
+      <input type="hidden" name="edit_index" id="main-place-name-edit-index" value="">
 
+      <div id="main-place-name-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
         <div class="mb-3">
           {{ ui.input_field(
-              id="name",
-              name="name",
+              id="main_place_name",
+              name="main_place_name",
               label="Main Place Name",
               extra_attrs="required",
               help_text="Enter main place name here"
           ) }}
         </div>
+      </div>
 
-        {{ ui.form_actions("toggleEntryForm('main-name-form')") }}  
+      {{ ui.form_actions("resetEditForm('main_place_name'); toggleEntryForm('main-place-name-form');") }}  
 
     </form>
   </div>  
@@ -53,16 +70,18 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Alternative Place Names", "+ add alternative names", "toggleEntryForm('alt-names-form')") }}
+  {{ ui.section_header("Alternative Place Name", 
+      "+ add alternative place name", 
+      "resetEditForm('alt_place_name'); toggleEntryForm('alt-place-name-form')") }}
 
   <!-- Section-level error -->
-  {% if section_messages.get('alt-names-error') %}
+  {% if section_messages.get('alt-place-name-error') %}
     <div class="alert alert-danger">
-      {{ section_messages['alt-names-error'] }}
+      {{ section_messages['alt-place-name-error'] }}
     </div>
   {% endif %}
 
-  {% for val in data.alt_names %}
+  {% for val in data.alt_name %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
         {{  ui.delete_button(
@@ -70,24 +89,38 @@
             index=loop.index0,
             extra_fields={"element_attr_name": "type", "element_attr_value": "variant"}
       ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("alt_place_name", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("alt-place-name-form")'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
-<div id="alt-names-form" class="border rounded p-3 mt-3 d-none">
-  <form method="POST" action="{{ form_action }}">
-    <input type="hidden" name="section" value="add_variant">
+  <div id="alt-place-name-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="alt_place_name">
+      <input type="hidden" name="edit_index" id="alt-place-name-edit-index" value="">
 
-      <div class="mb-3">
-        {{ ui.input_field(
-            id="alt_name",
-            name="alt_name",
-            label="Alternative Place Names",
-            extra_attrs="required",
-            help_text="Enter any alternative place names here, please upload multiple names one at a time"
-        ) }}
+      <div id="alt-place-name-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('alt-names-form')") }}
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="alt_place_name",
+              name="alt_place_name",
+              label="Alternative Place Names",
+              extra_attrs="required",
+              help_text="Enter any alternative place names here, please upload multiple names one at a time"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('alt_place_name'); toggleEntryForm('alt-place-name-form');") }}    
 
     </form>
   </div>  
@@ -95,7 +128,12 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Place Types", "+ add place type", "toggleEntryForm('place-type-form')") }}
+
+  {{ ui.section_header(
+      "Place Types", 
+      "+ add place type", 
+      "resetEditForm('place_type'); toggleEntryForm('place-type-form')"
+  ) }}
 
 <!-- Section-level error -->
   {% if section_messages.get('place-type-error') %}
@@ -108,33 +146,47 @@
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
       {{ ui.delete_button("desc", loop.index0) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("place_type", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("place-type-form")'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
   <div id="place-type-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="place_type">
+      <input type="hidden" name="edit_index" id="place-type-edit-index" value="">
 
-      <div class="mb-3">
-        {{ ui.select_field("place_type",
-            [
-              ("", "-- Select place type --"),
-              ("city", "City"),
-              ("court", "Court"),
-              ("land donation", "Land Donation"),
-              ("library", "Library"),
-              ("matha", "Matha"),
-              ("temple", "Temple"),
-              ("town", "Town"),
-              ("village", "Village"),
-              ("other", "Other"),
-            ],
-            required=True,
-            allow_other=True
-        ) }}
+      <div id="place-type-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('place-type-form')") }}  
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("place_type",
+              [
+                ("", "-- Select place type --"),
+                ("city", "City"),
+                ("court", "Court"),
+                ("land donation", "Land Donation"),
+                ("library", "Library"),
+                ("matha", "Matha"),
+                ("temple", "Temple"),
+                ("town", "Town"),
+                ("village", "Village"),
+                ("other", "Other"),
+              ],
+              required=True,
+              allow_other=True
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('place_type'); toggleEntryForm('place-type-form');") }}   
 
     </form>
   </div>  
@@ -143,7 +195,9 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Identifier (Unique Value)", "+ add identifier", "toggleEntryForm('idno-form')") }}
+  {{ ui.section_header("Identifier (Unique Value)", 
+    "+ add identifier", 
+    "resetEditForm('idno'); toggleEntryForm('idno-form')") }}
 
   <!-- Section-level error -->
   {% if section_messages.get('idno-error') %}
@@ -152,7 +206,7 @@
     </div>
   {% endif %}
 
-    <!-- Delete identifier -->
+  <!-- Delete identifier -->
   {% for type, value in zip(data.idno_type, data.idno_value) %}
     <div class="border rounded p-2 mb-2">
 
@@ -161,44 +215,61 @@
 
       {{ ui.delete_button("idno", loop.index0) }}
 
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem("idno", {{ loop.index0 }}, {{ {"idno": value, "idno_type": type}|tojson }}); showEntryForm("idno-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
 <div id="idno-form" class="border rounded p-3 mt-3 d-none">  
   <form method="POST" action="{{ form_action }}">
     <input type="hidden" name="section" value="idno">
+    <input type="hidden" name="edit_index" id="idno-edit-index" value="">
 
-      <div class="mb-3">
-        {{ ui.select_field("idno_type",
-            [
-              ("", "-- Select type --"),
-              ("TGN", "Getty Thesaurus"),
-              ("Wikidata", "Wikidata"),
-            ],
-            required=True
-        ) }}
+      <div id="idno-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      <div class="mb-3">
-        {{ ui.input_field(
-            id="idno_value",
-            name="idno_value",
-            label="Identifier Number",
-            label_option="(required)",
-            placeholder="e.g. Q123456 (Wikidata), 1234567 (TGN)",
-            extra_attrs="required",
-            help_text="Enter identifier number in correct format"
-        ) }}
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("idno_type",
+              [
+                ("", "-- Select type --"),
+                ("TGN", "Getty Thesaurus"),
+                ("Wikidata", "Wikidata"),
+              ],
+              required=True
+          ) }}
+        </div>
+
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="idno",
+              name="idno",
+              label="Identifier Number",
+              label_option="(required)",
+              placeholder="e.g. Q123456 (Wikidata), 1234567 (TGN)",
+              extra_attrs="required",
+              help_text="Enter identifier number in correct format"
+          ) }}
+        </div>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('idno-form')") }}
+      {{ ui.form_actions("resetEditForm('idno'); toggleEntryForm('idno-form');") }}    
 
     </form>
   </div>
 </section>
 
 <section class="panel">
-  {{ ui.section_header("Coordinates (Unique Value)", "+ add coordinates", "toggleEntryForm('coordinates-form')") }}
+  
+  {{ ui.section_header("Coordinates (Unique Value)", 
+      "+ add coordinates", 
+      "resetEditForm('coordinates'); toggleEntryForm('coordinates-form')") }}
 
   {% if section_messages.get('coordinates-error') %}
     <div class="alert alert-danger">
@@ -206,7 +277,7 @@
     </div>
   {% endif %}
 
-  {% for val in data.coords %}
+  {% for val in data.coordinates %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
         {{  ui.delete_button(
@@ -214,63 +285,95 @@
         index=loop.index0,
         extra_fields={"element_attr_name": "type", "element_attr_value": "coordinates"}
       ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("coordinates", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("coordinates-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
-
   
-<div id="coordinates-form" class="border rounded p-3 mt-3 d-none">
-  <form method="POST" action="{{ form_action }}">
-    <input type="hidden" name="section" value="coordinates">
+  <div id="coordinates-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="coordinates">
+      <input type="hidden" name="edit_index" id="coordinates-edit-index" value="">
 
-        <div class="mb-3">
-        {{ ui.input_field(
-            id="coordinates",
-            name="coordinates",
-            label="Coordinates (lat, lon)",
-            placeholder="e.g. 52.200660245312285, 0.1525227968873202",
-            extra_attrs="required",
-            help_text="Paste Google coordinates in directly"
-        ) }}
+      <div id="coordinates-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
 
-      {{ ui.form_actions("toggleEntryForm('coordinates-form')") }}
+      <div class="editable-fields">    
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="coordinates",
+              name="coordinates",
+              label="Coordinates (lat, lon)",
+              placeholder="e.g. 52.200660245312285, 0.1525227968873202",
+              extra_attrs="required",
+              help_text="Paste Google coordinates in directly"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('coordinates'); toggleEntryForm('coordinates-form');") }}
 
     </form>
   </div>
 </section>
 
 <section class="panel">
-  {{ ui.section_header("Bibliographical References", "+ add references", "toggleEntryForm('references-form')") }}
+
+  {{ ui.section_header(
+      "Bibliographical Reference", 
+      "+ add reference", 
+      "resetEditForm('reference'); toggleEntryForm('reference-form')"
+  ) }}
 
   <!-- Section-level error -->
-  {% if section_messages.get('references-error') %}
+  {% if section_messages.get('reference-error') %}
     <div class="alert alert-danger">
-      {{ section_messages['references-error'] }}
+      {{ section_messages['reference-error'] }}
     </div>
   {% endif %}
 
-  {% for val in data.references %}
+  {% for val in data.reference %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val }}</span>
         {{  ui.delete_button(section="bibl", index=loop.index0) }}
+
+        <button type="button"
+                class="btn btn-sm btn-outline-secondary ms-2"
+                onclick='editItem("reference", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("reference-form");'>
+          ✎ Edit
+        </button>
+
     </div>
   {% endfor %}
 
-<div id="references-form" class="border rounded p-3 mt-3 d-none">
+<div id="reference-form" class="border rounded p-3 mt-3 d-none">
   <form method="POST" action="{{ form_action }}">
-    <input type="hidden" name="section" value="references">
+    <input type="hidden" name="section" value="reference">
+    <input type="hidden" name="edit_index" id="reference-edit-index" value="">
 
-    <div class="mb-3">
-      {{ ui.input_field(
-          id="references",
-          name="references",
-          label="Bibliographical References",
-          extra_attrs="required",
-          help_text="Enter any bibliographical references here"
-      ) }}
-    </div>
+      <div id="reference-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
 
-      {{ ui.form_actions("toggleEntryForm('references-form')") }}  
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="reference",
+              name="reference",
+              label="Bibliographical Reference",
+              extra_attrs="required",
+              help_text="Enter any bibliographical references here"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('reference'); toggleEntryForm('reference-form');") }}     
 
     </form>
   </div>  
@@ -278,7 +381,11 @@
 
 
 <section class="panel">
-  {{ ui.section_header("Notes", "+ add notes", "toggleEntryForm('notes-form')") }}
+  {{ ui.section_header(
+      "Notes", 
+      "+ add notes", 
+      "resetEditForm('notes'); toggleEntryForm('notes-form')"
+  ) }}
 
     <!-- Section-level error -->
   {% if section_messages.get('notes-error') %}
@@ -295,24 +402,38 @@
         index=loop.index0,
         extra_fields={"element_attr_name": "type", "element_attr_value": "general"}
       ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("notes", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("notes-form");'>
+        ✎ Edit
+      </button>
+
     </div>
   {% endfor %}
 
-<div id="notes-form" class="border rounded p-3 mt-3 d-none">
-  <form method="POST" action="{{ form_action }}">
-    <input type="hidden" name="section" value="notes">
+  <div id="notes-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="notes">
+      <input type="hidden" name="edit_index" id="notes-edit-index" value="">
 
-    <div class="mb-3">
-      {{ ui.input_field(
-          id="notes",
-          name="notes",
-          label="Notes",
-          extra_attrs="required",
-          help_text="Enter any extra notes here"
-      ) }}
-    </div>
+      <div id="notes-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
 
-      {{ ui.form_actions("toggleEntryForm('notes-form')") }}  
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="notes",
+              name="notes",
+              label="Notes",
+              extra_attrs="required",
+              help_text="Enter any extra notes here"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('notes'); toggleEntryForm('notes-form');") }}    
 
     </form>
   </div>  

@@ -318,3 +318,87 @@ def related_delete(entity_a_key, entity, form_data, config):
     return {"ok": removed}
 
 
+def remove_connection_index(entity, key, xml_id, target_type):
+    """
+    Remove a connection entry from the index for a given key + xml_id.
+
+    Args:
+        entity (str): e.g. "place"
+        key (str): entity key
+        xml_id (str): current record id
+        target_type (str): e.g. "work"
+    """
+
+    entity_ind_name = f"{entity}_connections"
+    path = get_index_file(entity_ind_name)
+
+    if not os.path.exists(path):
+        return
+
+    with open(path, encoding="utf-8") as f:
+        index_data = json.load(f)
+
+    if key not in index_data:
+        return
+
+def remove_connection_index(entity, key, xml_id, target_type):
+    entity_ind_name = f"{entity}_connections"
+    path = get_index_file(entity_ind_name)
+
+    if not os.path.exists(path):
+        return
+
+    with open(path, encoding="utf-8") as f:
+        index_data = json.load(f)
+
+    if key not in index_data:
+        return
+
+    # Remove only ONE matching entry
+    for i, item in enumerate(index_data[key]):
+        if item[0] == xml_id and item[1] == target_type:
+            del index_data[key][i]
+            break
+
+    # Clean up if empty
+    if not index_data[key]:
+        del index_data[key]
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(index_data, f, ensure_ascii=False, indent=2)
+
+def remove_all_connections_from_index(entity, xml_id):
+    """
+    Remove all entries in a specific entity connection index that reference the given xml_id.
+
+    Args:
+        entity (str): Entity type, e.g., "place", "person", "work".
+        xml_id (str): The ID of the entity being deleted.
+    """
+
+    index_name = f"{entity}_connections"
+    path = get_index_file(index_name)
+
+    if not os.path.exists(path):
+        return
+
+    with open(path, encoding="utf-8") as f:
+        index_data = json.load(f)
+
+
+    changed = False
+    for key, entries in list(index_data.items()):
+        # Keep only entries not matching xml_id
+        new_entries = [entry for entry in entries if entry[0] != xml_id]
+        if len(new_entries) != len(entries):
+            changed = True
+            if new_entries:
+                index_data[key] = new_entries
+            else:
+                del index_data[key]
+
+    if changed:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(index_data, f, ensure_ascii=False, indent=2)
+
+

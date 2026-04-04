@@ -62,7 +62,7 @@
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="button"
             class="btn btn-secondary"
-            onclick="{{ on_cancel }}">
+            onclick="{{ on_cancel|safe }}">
       Cancel
     </button>
   </div>
@@ -73,7 +73,7 @@
     <h3 class="mb-0">{{ title }}</h3>
     <button type="button"
             class="btn btn-sm btn-outline-primary"
-            onclick="{{ onclick }}">
+            onclick="{{ onclick|safe }}">
       {{ button_label }}
     </button>
   </div>

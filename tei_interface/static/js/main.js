@@ -40,6 +40,12 @@ function toggleEntryForm(formId) {
   el.classList.toggle("d-none");
 }
 
+function showEntryForm(formId) {
+  const el = document.getElementById(formId);
+  if (!el) return;
+  el.classList.remove("d-none");
+}
+
 const buttons = document.querySelectorAll('.alphabet button');
 const groups = document.querySelectorAll('.letter-group');
 
@@ -256,4 +262,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+function editItem(sectionName, index, values) {
+  const baseId = sectionName.replace(/_/g, '-')
+
+  const editIndexEl = document.getElementById(`${baseId}-edit-index`);
+  const editLabelEl = document.getElementById(`${baseId}-edit-label`);
+
+  if (!editIndexEl) {
+    console.warn(`Edit index element not found for section: ${sectionName}`);
+    return;
+  }
+
+  // ---- SINGLE FIELD ----
+  if (typeof values === "string") {
+    const inputEl = document.getElementById(sectionName);
+
+    if (!inputEl) {
+      console.warn(`Input element not found for section: ${sectionName}`);
+      return;
+    }
+
+    inputEl.value = values;
+  }
+
+  // ---- MULTIPLE FIELDS ----
+  else if (typeof values === "object" && values !== null) {
+    Object.entries(values).forEach(([key, val]) => {
+      const el = document.getElementById(key);
+      if (el) {
+        el.value = val;
+      } else {
+        console.warn(`Element not found: ${key}`);
+      }
+    });
+  }
+
+  // Set index
+  editIndexEl.value = index;
+
+  // Show edit label
+  if (editLabelEl) {
+    editLabelEl.classList.remove("d-none");
+  }
+}
+
+function resetEditForm(sectionName) {
+  const formEl = document.getElementById(`${sectionName.replace('_', '-')}-form`);
+  const editIndexEl = document.getElementById(`${sectionName.replace('_', '-')}-edit-index`);
+  const editLabelEl = document.getElementById(`${sectionName.replace('_', '-')}-edit-label`);
+
+  if (!formEl) return;
+
+  // Reset only the editable fields
+  const inputsWrapper = formEl.querySelector('.editable-fields');
+  if (inputsWrapper) {
+    inputsWrapper.querySelectorAll('input, select, textarea').forEach(el => {
+      if (el.type === 'checkbox' || el.type === 'radio') el.checked = false;
+      else el.value = '';
+    });
+  }
+
+  if (editIndexEl) editIndexEl.value = '';
+  if (editLabelEl) editLabelEl.classList.add('d-none');
+}
+
+
 

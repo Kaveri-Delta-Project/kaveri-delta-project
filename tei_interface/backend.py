@@ -11,7 +11,7 @@ from utils import (load_entity,
             group_items_alphabetically,
             normalize_for_sort
             )
-from handlers import person, place, work, manuscript
+from handlers import person, place, work
 from index_utils import (load_index, 
             get_index_file, 
             update_index_entry, 
@@ -19,14 +19,14 @@ from index_utils import (load_index,
             delete_index_entry, 
             delete_connection_entry, 
             update_connection_files, 
-            related_delete
+            related_delete,
+            remove_all_connections_from_index
             )
 
 SECTION_HANDLERS = {
     "person": person.SECTION_HANDLERS,
     "place": place.SECTION_HANDLERS,
     "work": work.SECTION_HANDLERS,
-    "manuscript": manuscript.SECTION_HANDLERS
 }
 
 app = Flask(__name__)
@@ -164,6 +164,10 @@ def delete_file(entity, xml_id):
         return f"{entity} not found", 404
 
     os.remove(file_path)
+
+    for ent in ENTITY_CONFIG.keys():
+        remove_all_connections_from_index(ent, xml_id)
+
     delete_index_entry(entity, xml_id)
 
     return redirect(url_for("entity_index", entity=entity))

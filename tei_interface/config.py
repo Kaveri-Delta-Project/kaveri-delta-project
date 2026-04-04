@@ -29,8 +29,8 @@ KEYS_TO_LOWERCASE = ["rel_persons_key", "affiliation_key", "editor_key", "pub_pl
 PERSON_MAPPING = {
     "xml_id": {"attr": f"{{{NS_XML}}}id"}, 
     "sex": {"attr": "sex"},
-    "names": {"element": "persName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
-    "alt_names": {"element": "persName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "preferred_name": {"element": "persName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
+    "alt_name": {"element": "persName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
     "relationship": {"parent_tag": "trait", "attributes": ["type", "key"], "child_elements": ["label"]},
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
@@ -41,8 +41,8 @@ PERSON_MAPPING = {
     "floruit_text": {"element": "floruit", "all_results": True},
     "floruit_from": {"element": "floruit", "element_attr": "from", "all_results": True},
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
-    "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
-    "references": {"element": "bibl", "all_results": True},
+    "associated_place": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
+    "reference": {"element": "bibl", "all_results": True},
     "notes": {"element": "note", "all_results": True}
 }
 
@@ -69,13 +69,13 @@ RELATIONSHIP_INVERSES = {
 
 PLACE_MAPPING = {
     "xml_id": {"attr": f"{{{NS_XML}}}id"},
-    "names": {"element": "placeName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
-    "alt_names": {"element": "placeName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "main_name": {"element": "placeName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
+    "alt_name": {"element": "placeName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
     "place_type": {"element": "desc", "filter_attr": "type", "filter_value": "function", "all_results": True},
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
-    "coords": {"element": "note", "filter_attr": "type", "filter_value": "coordinates", "all_results": True},
-    "references": {"element": "bibl", "all_results": True},
+    "coordinates": {"element": "note", "filter_attr": "type", "filter_value": "coordinates", "all_results": True},
+    "reference": {"element": "bibl", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
@@ -102,28 +102,9 @@ WORK_MAPPING = {
         "all_results": True
         }, 
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
-    "references": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
+    "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
-
-MS_MAPPING = {
-    "xml_id": {"attr": f"{{{NS_XML}}}id"},
-    "repository": {"element": "repository", "all_results": True},
-    "idno": {"element": "idno", "all_results": True},
-    "names": {"element": "msName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
-    "alt_names": {"element": "msName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
-    "work": {"parent_tag": "msItem", "child_elements": ["title"], "child_attributes": {"title": ["key"]}},
-    "phys_desc": {"element": "p", "all_results": True},
-    "date_text": {"element": "origDate", "all_results": True},
-    "date_from": {"element": "origDate", "element_attr": "from", "all_results": True},
-    "date_to": {"element": "origDate", "element_attr": "to", "all_results": True},
-    "place": {"element": "origPlace", "all_results": True},
-    "place_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
-    "references": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
-    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
-    "person": {"parent_tag": "person", "attributes": ["role"], "child_elements": ["persName"], "child_attributes": {"persName": ["key"]}, "from_root": True}
-}
-
 
 #entity configs
 
@@ -161,18 +142,6 @@ ENTITY_CONFIG = {
         "name_tag": "title",
         "container_tag": ".//tei:listBibl",
         "prefix": "w"
-
-    },
-    "manuscript": {
-        "dir": os.path.join(DATA_DIR, "manuscripts"),
-        "template": os.path.join(TEI_TEMPLATES_DIR, "tei_manuscript.xml"),
-        "mapping": MS_MAPPING,
-        "child_order": ["repository", "idno", "msName", "msItem", "p", "origDate", "origPlace", "note", "person"],
-        "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1},
-        "element_tag": "msDesc",
-        "name_tag": "msName",
-        "container_tag": ".//tei:sourceDesc",
-        "prefix": "ms"
 
     }
 }
