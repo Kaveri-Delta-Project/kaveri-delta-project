@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_21">
+          <title type="preferred">Prasāda (on Kāṇādasiddhāntacandrikā)</title>
+          <editor key="p_7" role="aut">Gaṅgādharavājapeyin</editor>
+          <note type="genre" source="commentary" key="w_20">Kāṇādasiddhāntacandrikā</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
