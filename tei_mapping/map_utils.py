@@ -1,11 +1,11 @@
 import folium
+import math
 from folium import Element, IFrame, CssLink, JavascriptLink
+from utils import scale_size
 from config import CSS_PATH, GIS_PATH, BASE_DIR
 
 
 OUTPUT_PATH =  BASE_DIR / "tei_mapping" / "map.html"
-
-RIVERS_PATH = GIS_PATH / "kaveri_delta_rivers_final.gpkg"
 
 #read CSS from relative path
 with open(CSS_PATH) as f:
@@ -31,8 +31,54 @@ def make_scrollable_popup(html_content, width=300, height=200):
     return folium.Popup(iframe, max_width=width)
 
 
-def get_svg(shape_type, color):
-    """Return SVG marker for each place type with consistent fill and black stroke."""
+def get_svg(shape_type, color, size, works, people):
+    """
+    Returns an SVG for a map node.
+    - size can be scaled dynamically based on works/people
+    - includes data attributes for JS (zoom/scale interactivity)
+    - used only for actual map markers
+    """
+    if shape_type in ["city", "town", "village", "other"]:
+        # Circle
+        return f"""
+        <svg class="map-node"
+             data-works="{works}"
+             data-people="{people}"
+             data-type="{shape_type}"
+             width="{size}" height="{size}">
+            <circle cx="{size/2}" cy="{size/2}" r="{(size/2)-1}"
+            style="fill:{color};stroke:black;stroke-width:1"/>
+        </svg>
+        """
+    elif shape_type == "matha":
+        # Square
+        return f"""
+        <svg class="map-node"
+             data-works="{works}"
+             data-people="{people}"
+             width="{size}" height="{size}">
+            <rect x="1" y="1" width="{size-2}" height="{size-2}"
+            style="fill:{color};stroke:black;stroke-width:1"/>
+        </svg>
+        """
+    elif shape_type == "temple":
+        # Triangle
+        return f"""
+        <svg class="map-node"
+             data-works="{works}"
+             data-people="{people}"
+             width="{size}" height="{size}">
+            <polygon points="{size/2},0 {size},{size} 0,{size}"
+            style="fill:{color};stroke:black;stroke-width:1"/>
+        </svg>
+        """
+
+def get_svg_legend(shape_type, color):
+    """
+    Returns a fixed-size SVG for the legend.
+    - no dynamic sizing or data attributes needed
+    - used only in the map legend
+    """
     if shape_type in ["city", "town", "village", "other"]:
         # Circle
         return f"""
@@ -54,19 +100,11 @@ def get_svg(shape_type, color):
             <polygon points="8,0 16,16 0,16" style="fill:{color};stroke:black;stroke-width:1"/>
         </svg>
         """
-    else:
-        # Pentagon
-        return f"""
-        <svg width="16" height="16">
-            <polygon points="8,0 16,6 12,16 4,16 0,6" style="fill:{color};stroke:black;stroke-width:1"/>
-        </svg>
-        """
-
 
 def generate_popup_html(place):
     place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/indexes/place_index.html#{place['place_id']}"
-    pers_place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/search_results?q={place['place_id']}&category=person"
-    work_place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/search_results?q={place['place_id']}&category=work"
+    pers_place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/search_results?q={place['place_name']} {place['place_id']}&category=person"
+    work_place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/search_results?q={place['place_name']} {place['place_id']}&category=work"
 
     html = f'<div class="popup-title">{place["place_name"]}</div>'
     metadata_html = ""
@@ -127,7 +165,7 @@ def generate_legend_html(type_colors):
     legend_html += "<b>Place Types</b>"
 
     for t, color in type_colors.items():
-        shape = get_svg(t, color)
+        shape = get_svg_legend(t, color)
         legend_html += f"""
         <div class='legend-item'>
             {shape}
@@ -136,20 +174,33 @@ def generate_legend_html(type_colors):
         """
 
     legend_html += "</div>"
-    return legend_html
+    return legend_html 
+
+def generate_scale_selector_html():
+    selector_html = '<div class="scale-selector">'
+    selector_html += f""" 
+                    <b>Scale nodes by:</b><br>
+                      <select class="scale-menu" id="scaleSelector">
+                        <option value="normal">No Filter</option>
+                         <option value="works">Works</option>
+                         <option value="people">People</option>
+                      </select>
+                      """
+    selector_html += "</div>"
+    return selector_html                   
 
 
-def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
+def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
     """
-    Create a Folium map with rivers, place markers, labels, and legend.
+    Create a Folium map with gdf_layers, place markers, labels, and legend.
     nodes_df must contain 'lat', 'lon', 'type_filled', 'popup_html', 'place_name'.
-    rivers_gdf is a GeoDataFrame of river geometries.
     """
     # Base map
     m = folium.Map(location=[11.0, 78.5], zoom_start=7, tiles=None)
 
     # Custom panes
     folium.map.CustomPane("rivers", z_index=400).add_to(m)
+    folium.map.CustomPane("tamil_nadu", z_index=450).add_to(m)
     folium.map.CustomPane("places", z_index=600).add_to(m)
     folium.map.CustomPane("labels", z_index=650).add_to(m)
 
@@ -161,10 +212,18 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
 
     # Rivers
     folium.GeoJson(
-        rivers_gdf,
+        gdf_layers["rivers_gdf"],
         name="Kaveri Delta Waterways",
-        style_function=lambda f: {"color": "#1f78b4", "weight": 2, "opacity": 0.7},
+        style_function=lambda f: {"color": "#1f78b4", "weight": 2.5, "opacity": 0.8},
         pane="rivers"
+    ).add_to(m)
+
+    # Border
+    folium.GeoJson(
+        gdf_layers["tamil_nadu_gdf"],
+        name="Tamil Nadu",
+        style_function=lambda f: {"color": "#f0f0f0", "weight": 2, "opacity": 0.8, "fill": False},
+        pane="tamil_nadu"
     ).add_to(m)
 
     # Labels
@@ -213,7 +272,16 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
             row_type = "other"
 
         color = type_colors.get(row_type, type_colors["other"])
-        shape_svg = get_svg(row_type, color)
+        
+        size = 14
+
+        shape_svg = get_svg(
+            row_type,
+            color,
+            size,
+            row["num_works"],
+            row["num_people"]
+        )
 
         item = row["place_name"]
         size_class = "label-large" if item in large_list else "label-small"
@@ -251,6 +319,9 @@ def create_kaveri_map(nodes_df, rivers_gdf, output_path=OUTPUT_PATH):
     # Legend
     legend_html = generate_legend_html(type_colors)
     m.get_root().html.add_child(Element(legend_html))
+
+    scale_selector_html = generate_scale_selector_html()
+    m.get_root().html.add_child(Element(scale_selector_html))
 
     # Save
     m.save(output_path)

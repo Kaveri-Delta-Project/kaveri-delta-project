@@ -1,5 +1,6 @@
 import glob
 import os
+import math
 from pathlib import Path
 from natsort import natsorted
 from natsort import os_sorted
@@ -35,6 +36,11 @@ def tei_extractor(soup_ls, element, attributes=None, attribute_vals=None):
             attrib_dict = {attr: True for attr in attributes}
 
     return [soup.find_all(element, attrib_dict) for soup in soup_ls]
+
+def scale_size(value, min_size=10, max_size=30):
+    if value <= 0:
+        return min_size
+    return min(max_size, min_size + math.log(value + 1) * 6)
 
 
 def tei_values(object_lists, subelement=None, attribute=None, strip=True, flatten=False):

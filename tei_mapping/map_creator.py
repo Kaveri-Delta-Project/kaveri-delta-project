@@ -19,6 +19,7 @@ import pandas as pd
 import geopandas as gpd
 
 RIVERS_PATH = GIS_PATH / "kaveri_delta_rivers_final.gpkg"
+TAMIL_NADU_PATH = GIS_PATH / "tamil_nadu.gpkg"
 
 place_objects = soup_objects(get_xml_files(DATA_PATHS["places"]))
 person_objects = soup_objects(get_xml_files(DATA_PATHS["persons"]))
@@ -116,6 +117,9 @@ for idx, row in nodes_df.iterrows():
     nodes_df.at[idx, "popup_html"] = generate_popup_html(row)
 
 rivers_gdf = gpd.read_file(RIVERS_PATH).to_crs(epsg=4326)
+tamil_nadu_gdf = gpd.read_file(TAMIL_NADU_PATH).to_crs(epsg=4326)
 
-create_kaveri_map(nodes_df, rivers_gdf)
+gdf_layers = {"rivers_gdf": rivers_gdf, "tamil_nadu_gdf": tamil_nadu_gdf}
+
+create_kaveri_map(nodes_df, gdf_layers)
 
