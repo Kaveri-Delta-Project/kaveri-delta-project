@@ -32,6 +32,22 @@
   },
   {
     "type": "person",
+    "id": "p_12",
+    "name": "Bhagavantarāyamakhin",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_12",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_13",
+    "name": "Gaṅgādharādhvarin (alias Kākoji)",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_13",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_2",
     "name": "Appayya Dīkṣita",
     "alt_names": [],
@@ -223,6 +239,57 @@
     "name": "Prasāda (on Kāṇādasiddhāntacandrikā)",
     "alt_names": [],
     "url": "indexes/work_index.html#w_21",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_22",
+    "name": "Candraśekharavilāsa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_22",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_23",
+    "name": "Śabdaratnasamanvayakośa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_23",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_24",
+    "name": "Śabdārthasaṃgraha",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_24",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_25",
+    "name": "Mukundavilāsa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_25",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_26",
+    "name": "Uttaracampū",
+    "alt_names": [
+      "Rāmāyaṇacampū",
+      "Uttararāmāyaṇacampū"
+    ],
+    "url": "indexes/work_index.html#w_26",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_27",
+    "name": "Rāghavābhyudaya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_27",
     "places": []
   },
   {
