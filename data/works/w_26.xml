@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_26">
+          <title type="preferred">Uttaracampū</title>
+          <title type="variant">Rāmāyaṇacampū</title>
+          <title type="variant">Uttararāmāyaṇacampū</title>
+          <editor key="p_12" role="aut">Bhagavantarāyamakhin</editor>
+          <note type="genre">verse and prose (campū)</note>
+          <note type="bibliographical">Descriptive Catalogue of Sarasvati Mahal Library, vol. 7 , entries 4028 and 4029.</note>
+          <note type="general">On Rāmāyaṇa (Uttarakāṇḍa). </note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

@@ -177,6 +177,21 @@
       "p_9",
       "person",
       "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "w_22",
+      "work",
+      "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "w_23",
+      "work",
+      "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "w_24",
+      "work",
+      "Śāhaji I (of Thanjavur)"
     ]
   ],
   "p_5": [
@@ -197,6 +212,16 @@
     ],
     [
       "p_9",
+      "person",
+      "Tryambakarāyamakhin"
+    ],
+    [
+      "p_13",
+      "person",
+      "Tryambakarāyamakhin"
+    ],
+    [
+      "p_12",
       "person",
       "Tryambakarāyamakhin"
     ]
@@ -304,6 +329,45 @@
       "w_19",
       "work",
       "Paramaśivendra Sarasvatī"
+    ]
+  ],
+  "p_12": [
+    [
+      "p_13",
+      "person",
+      "Bhagavantarāyamakhin"
+    ],
+    [
+      "p_5",
+      "person",
+      "Bhagavantarāyamakhin"
+    ],
+    [
+      "w_25",
+      "work",
+      "Bhagavantarāyamakhin"
+    ],
+    [
+      "w_26",
+      "work",
+      "Bhagavantarāyamakhin"
+    ],
+    [
+      "w_27",
+      "work",
+      "Bhagavantarāyamakhin"
+    ]
+  ],
+  "p_13": [
+    [
+      "p_5",
+      "person",
+      "Gaṅgādharādhvarin (alias Kākoji)"
+    ],
+    [
+      "p_12",
+      "person",
+      "Gaṅgādharādhvarin (alias Kākoji)"
     ]
   ]
 }

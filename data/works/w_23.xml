@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_23">
+          <title type="preferred">Śabdaratnasamanvayakośa</title>
+          <editor key="p_6" role="att">Śāhaji I (of Thanjavur)</editor>
+          <note type="genre">lexicon</note>
+          <note type="bibliographical">Descriptive catalogue of Sarasvati Mahal Library, Vol. 9, entries 5056-5057.</note>
+          <note type="general">Lexicon of homonyms with words arranged in a strict alphabetical order and by the number of syllables</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

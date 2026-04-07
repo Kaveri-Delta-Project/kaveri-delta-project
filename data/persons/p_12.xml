@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_12">
+          <persName type="preferred">Bhagavantarāyamakhin</persName>
+          <trait type="son" key="p_13">
+            <label>Gaṅgādharādhvarin (alias Kākoji)</label>
+          </trait>
+          <trait type="brother" key="p_5">
+            <label>Tryambakarāyamakhin</label>
+          </trait>
+          <floruit from="1700" to="1700">ca. 1700</floruit>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_27">
+          <title type="preferred">Rāghavābhyudaya</title>
+          <editor key="p_12" role="aut">Bhagavantarāyamakhin</editor>
+          <note type="genre">play</note>
+          <note type="bibliographical">Descriptive catalogue of Sarasvati Mahal Library, vol. 8, entry 4492.</note>
+          <note type="general">Composed at the occasion of the sacrifice which Tryambakarāyamakhin performed in Svāmimalai near Kumbhakonam. It received the approbation of Rāmabhadra Dīkṣita. </note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

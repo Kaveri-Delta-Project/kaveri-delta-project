@@ -26,6 +26,12 @@
           <trait type="patron" key="p_9">
             <label>Ḍhuṇḍirāja Vyāsa</label>
           </trait>
+          <trait type="son" key="p_13">
+            <label>Gaṅgādharādhvarin (alias Kākoji)</label>
+          </trait>
+          <trait type="brother" key="p_12">
+            <label>Bhagavantarāyamakhin</label>
+          </trait>
           <floruit from="1680" to="1680">fl. 1680</floruit>
           <affiliation key="l_15" role="performed a grand-scale yajña in 1698 in svāmimalai, evidenced in the ācāraṇavanitā by appādhvarin ">
             <placeName>Svamimalai</placeName>

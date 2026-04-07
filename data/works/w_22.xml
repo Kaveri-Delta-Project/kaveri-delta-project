@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_22">
+          <title type="preferred">Candraśekharavilāsa</title>
+          <editor key="p_6" role="att">Śāhaji I (of Thanjavur)</editor>
+          <note type="genre" source="other">said to be an 'operative composition'</note>
+          <note type="bibliographical">Descriptive catalogue of Sarasvati Mahal Library, vol. 8, entry 4359</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

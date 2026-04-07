@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_25">
+          <title type="preferred">Mukundavilāsa</title>
+          <editor key="p_12" role="aut">Bhagavantarāyamakhin</editor>
+          <note type="genre">poetry</note>
+          <note type="bibliographical">Descriptive Catalogue of Sarasvati Mahal Library, vol. 6, entry 3719</note>
+          <note type="general">Kāvya dealing with the story of Krishna.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
