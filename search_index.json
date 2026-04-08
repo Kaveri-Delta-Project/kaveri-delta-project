@@ -48,6 +48,24 @@
   },
   {
     "type": "person",
+    "id": "p_14",
+    "name": "Nṛsiṃharāya II",
+    "alt_names": [
+      "Nṛsiṃhāmātya"
+    ],
+    "url": "indexes/person_index.html#p_14",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_15",
+    "name": "Ānandarāyamakhin",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_15",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_2",
     "name": "Appayya Dīkṣita",
     "alt_names": [],
@@ -290,6 +308,14 @@
     "name": "Rāghavābhyudaya",
     "alt_names": [],
     "url": "indexes/work_index.html#w_27",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_28",
+    "name": "Tripuravijayacampū",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_28",
     "places": []
   },
   {
