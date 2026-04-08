@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_15">
+          <persName type="preferred">Ānandarāyamakhin</persName>
+          <trait type="father" key="p_14">
+            <label>Nṛsiṃharāya II</label>
+          </trait>
+          <floruit from="1700" to="1700">ca. 1700</floruit>
+          <note>Since he was the son of Nṛsiṃharāya I, who was minister of Ekoji I, and that the latter ruled around 1676-83, I add roughly one generation (approx. 25 years) to get his date of activity.</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>
