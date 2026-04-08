@@ -52,6 +52,7 @@ RELATIONSHIP_INVERSES = {
     "beneficiary": "patron",
     "brother": "brother",
     "collaborator": "collaborator",
+    "contemporary of": "contemporary of",
     "descendant": "ancestor",
     "disciple": "mentor",
     "father": "son",
