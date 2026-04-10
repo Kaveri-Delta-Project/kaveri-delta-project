@@ -1,0 +1,444 @@
+{% extends "form_base.html" %}
+
+{% block entity_form %}
+
+{% set section_messages = {} %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% for category, message in messages %}
+    {% set _ = section_messages.update({category: message}) %}
+  {% endfor %}
+{% endwith %}
+
+<section class="panel">
+  {{ ui.section_header("Inscription Name (Unique Value)", 
+    "+ add inscription name", 
+    "resetEditForm('main_isc_name'); toggleEntryForm('main-isc-name-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('main-isc-name-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['main-isc-name-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.name %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="msName",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "preferred"}
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("main_isc_name", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("main-isc-name-form")'>
+
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <!-- Preferred name -->
+  <div id="main-isc-name-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="main_isc_name">
+      <input type="hidden" name="edit_index" id="main-isc-name-edit-index" value="">
+
+      <div id="main-isc-name-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="main_isc_name",
+              name="main_isc_name",
+              label="Inscription Name",
+              extra_attrs="required",
+              help_text="Enter inscription name here"
+          ) }}
+
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('main_isc_name_'); toggleEntryForm('main-isc-name-form');") }}    
+
+    </form>
+  </div>  
+</section>
+
+
+<section class="panel">
+
+  {{ ui.section_header("Alternative Inscription Name", 
+      "+ add alternative inscription name", 
+      "resetEditForm('alt_isc_name'); toggleEntryForm('alt-isc-name-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('alt-isc-name-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['alt-isc-name-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.alt_name %}
+    <div class="border rounded p-2 mb-2">
+        <span class="fw-semibold">{{ val }}</span>
+          {{  ui.delete_button(
+                section="msName",
+                index=loop.index0,
+                extra_fields={"element_attr_name": "type", "element_attr_value": "variant"}
+        ) }}
+
+        <button type="button"
+                class="btn btn-sm btn-outline-secondary ms-2"
+                onclick='editItem("alt_isc_name", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("alt-isc-name-form");'>
+          ✎ Edit
+        </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="alt-isc-name-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="alt_isc_name">
+      <input type="hidden" name="edit_index" id="alt-isc-name-edit-index" value="">
+
+      <div id="alt-isc-name-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="alt_isc_name",
+              name="alt_isc_name",
+              label="Alternative Name",
+              extra_attrs="required",
+              help_text="Enter any alternative names here, please upload multiple names one at a time"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('alt_isc_name'); toggleEntryForm('alt-isc-name-form');") }}    
+ 
+    </form>
+  </div>  
+</section>
+
+<section class="panel">
+    
+  {{ ui.section_header("Recipient", 
+      "+ add recipient", 
+      "resetEditForm('recipient'); toggleEntryForm('recipient-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('recipient-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['recipient-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.recipient %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="orgName",
+        index=loop.index0,
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("recipient", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("recipient-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="recipient-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="recipient">
+      <input type="hidden" name="edit_index" id="recipient-edit-index" value="">
+
+      <div id="recipient-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("recipient",
+              [
+              ("", "-- Select recipient --"),
+              ("brahmins", "Brahmins"),
+              ("monastery", "Monastery"),
+              ("temple", "Temple"),
+              ("other", "Other")
+              ],
+              required=True,
+              allow_other=True
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('recipient'); toggleEntryForm('recipient-form');") }}    
+
+    </form>
+  </div>  
+</section>
+
+<section class="panel">
+    
+  {{ ui.section_header("Material", 
+      "+ add material", 
+      "resetEditForm('material'); toggleEntryForm('material-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('material-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['material-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.material %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="material",
+        index=loop.index0,
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("material", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("material-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="material-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="material">
+      <input type="hidden" name="edit_index" id="material-edit-index" value="">
+
+      <div id="material-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("material",
+              [
+              ("", "-- Select material --"),
+              ("copper", "Copper"),            
+              ("stone", "Stone"),
+              ("other", "Other")
+              ],
+              required=True,
+              allow_other=True
+          ) }}
+        </div>
+      </div>  
+
+      {{ ui.form_actions("resetEditForm('material'); toggleEntryForm('material-form');") }}    
+
+    </form>
+  </div>
+</section>
+
+<section class="panel">
+
+  {{ ui.section_header("Location", 
+      "+ add location", 
+      "resetEditForm('location'); toggleEntryForm('location-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('location-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['location-error'] }}
+    </div>
+  {% endif %}
+
+  {% for text, key in zip(data.location, data.location_key) %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ text }}</span>
+      <span class="text-muted">[{{ key }}]</span>
+
+      {{ ui.delete_button("origPlace", 
+          loop.index0,
+          extra_fields={"connection": "cascade", "name_type": "place", "key": key, "name": text}
+      ) }}
+
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem(
+            "location",
+            {{ loop.index0 }},
+            {{ {
+                "location": text,
+                "location_key": key,
+            }|tojson }}
+        ); showEntryForm("location-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="location-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="location">
+      <input type="hidden" name="edit_index" id="location-edit-index" value="">
+
+      <div id="location-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="location_search",
+              name="location_key",
+              label="Search Location",
+              label_option="(required)",
+              placeholder="Type to search places...",
+              entity_lookup="place",
+              results_id="location_results",
+              hidden_id="location_key",
+              extra_attrs="required",
+              help_text="Search for an existing place and select it from the list."
+          ) }}
+        </div>
+      </div>  
+
+      {{ ui.form_actions("resetEditForm('location'); toggleEntryForm('location-form')") }}
+     
+   </form>
+  </div>
+</section>
+
+<section class="panel">
+
+  {{ ui.section_header(
+      "Bibliographical Reference", 
+      "+ add reference", 
+      "resetEditForm('reference'); toggleEntryForm('reference-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('reference-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['reference-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.reference %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "bibliographical"}
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("reference", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("reference-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="reference-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="reference">
+      <input type="hidden" name="edit_index" id="reference-edit-index" value="">
+
+      <div id="reference-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>      
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="reference",
+              name="reference",
+              label="Bibliographical Reference",
+              extra_attrs="required",
+              help_text="Enter any bibliographical reference here"
+          ) }}
+        </div>
+      </div>  
+
+      {{ ui.form_actions("resetEditForm('reference'); toggleEntryForm('reference-form');") }}   
+
+    </form>
+  </div>  
+</section>
+
+<section class="panel">
+
+  {{ ui.section_header(
+      "Notes", 
+      "+ add notes", 
+      "resetEditForm('notes'); toggleEntryForm('notes-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('notes-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['notes-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.notes %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "general"}
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("notes", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("notes-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="notes-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="notes">
+      <input type="hidden" name="edit_index" id="notes-edit-index" value="">
+
+      <div id="notes-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="notes",
+              name="notes",
+              label="Notes",
+              extra_attrs="required",
+              help_text="Enter any extra notes here"
+          ) }}
+        </div>
+      </div>  
+
+      {{ ui.form_actions("resetEditForm('notes'); toggleEntryForm('notes-form');") }}   
+
+    </form>
+  </div>  
+</section>
+
+{% endblock %}
+

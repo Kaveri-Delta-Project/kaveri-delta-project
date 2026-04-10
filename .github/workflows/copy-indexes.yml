@@ -38,8 +38,8 @@ jobs:
           # Add generated branch as temporary worktree
           git worktree add gen origin/generated
 
-          # Copy indexes (exclude map folder + manuscripts)
-          rsync -av --exclude='manuscripts.html' --exclude='map/' gen/ docs/indexes/
+          # Copy indexes (exclude map folder + inscriptions)
+          rsync -av --exclude='inscriptions.html' --exclude='map/' gen/ docs/indexes/
 
           # Copy map to docs root (overwrite existing)
           cp gen/map/map.html docs/map.html

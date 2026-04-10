@@ -11,7 +11,7 @@ from utils import (load_entity,
             group_items_alphabetically,
             normalize_for_sort
             )
-from handlers import person, place, work
+from handlers import person, place, work, inscription
 from index_utils import (load_index, 
             get_index_file, 
             update_index_entry, 
@@ -27,6 +27,7 @@ SECTION_HANDLERS = {
     "person": person.SECTION_HANDLERS,
     "place": place.SECTION_HANDLERS,
     "work": work.SECTION_HANDLERS,
+    "inscription": inscription.SECTION_HANDLERS
 }
 
 app = Flask(__name__)

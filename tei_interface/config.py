@@ -107,6 +107,18 @@ WORK_MAPPING = {
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
+ISC_MAPPING = {
+    "xml_id": {"attr": f"{{{NS_XML}}}id"},
+    "name":   {"element": "msName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
+    "alt_name": {"element": "msName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "recipient": {"element": "orgName", "filter_attr": "type", "filter_value": "recipient", "all_results": True},
+    "material": {"element": "material", "all_results": True},
+    "location": {"element": "origPlace", "all_results": True},
+    "location_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
+    "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
+}
+
 #entity configs
 
 ENTITY_CONFIG = {
@@ -143,6 +155,16 @@ ENTITY_CONFIG = {
         "name_tag": "title",
         "container_tag": ".//tei:listBibl",
         "prefix": "w"
-
+    },
+    "inscription": {
+        "dir": os.path.join(DATA_DIR, "inscriptions"),
+        "template": os.path.join(TEI_TEMPLATES_DIR, "tei_inscription.xml"),
+        "mapping": ISC_MAPPING,
+        "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note"],
+        "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1},
+        "element_tag": "msDesc",
+        "name_tag": "msName",
+        "container_tag": ".//tei:sourceDesc",
+        "prefix": "isc"
     }
 }
