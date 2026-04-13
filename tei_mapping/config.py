@@ -15,6 +15,7 @@ DATA_PATHS = {
     "places": DATA_DIR / "places",
     "persons": DATA_DIR / "persons",
     "works": DATA_DIR / "works",
+    "inscriptions": DATA_DIR / "inscriptions"
 }
 
 
@@ -45,4 +46,13 @@ WORK_SCHEMA = {
     "genre": dict(element="note", attributes=["type"], attribute_vals=["genre"]),
     "subject": dict(element="note", attributes=["type"], attribute_vals=["subject"]),
     "place_id": dict(element="pubPlace", attribute="key"),
+}
+
+ISC_SCHEMA = {
+    "inscription_id": dict(element="msDesc", attribute="xml:id", flatten=True),
+    "inscription_name": dict(element="msName", attributes=["type"], attribute_vals=["preferred"], flatten=True),
+    "alt_name": dict(element="msName", attributes=["type"], attribute_vals=["variant"]),
+    "recipient": dict(element="orgName", attributes=["type"], attribute_vals=["recipient"]),
+    "material": dict(element="material"),
+    "place_id": dict(element="origPlace", attribute="key")
 }

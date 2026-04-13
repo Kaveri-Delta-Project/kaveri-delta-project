@@ -10,6 +10,7 @@ from config import (
     PLACE_SCHEMA,
     PERSON_SCHEMA,
     WORK_SCHEMA,
+    ISC_SCHEMA,
     GIS_PATH
 )
 
@@ -24,11 +25,13 @@ TAMIL_NADU_PATH = GIS_PATH / "tamil_nadu.gpkg"
 place_objects = soup_objects(get_xml_files(DATA_PATHS["places"]))
 person_objects = soup_objects(get_xml_files(DATA_PATHS["persons"]))
 work_objects = soup_objects(get_xml_files(DATA_PATHS["works"]))
+inscription_objects = soup_objects(get_xml_files(DATA_PATHS["inscriptions"]))
 
 
 places_df = build_df(place_objects, PLACE_SCHEMA)
 persons_df = build_df(person_objects, PERSON_SCHEMA)
 works_df = build_df(work_objects, WORK_SCHEMA)
+inscriptions_df = build_df(inscription_objects, ISC_SCHEMA)
 
 
 places_df = (
@@ -41,6 +44,12 @@ works_place_df = (
     works_df
     .explode("place_id")
     .dropna(subset=["place_id"])
+)
+
+inscriptions_place_df = (
+    inscriptions_df
+    .explode("place_id")
+    .dropna(subset="place_id")
 )
 
 affiliations_df = (
@@ -84,6 +93,13 @@ people_agg = aggregate_with_metadata(
     metadata_df=persons_df
 )
 
+inscriptions_agg = aggregate_with_metadata(
+    inscriptions_place_df,
+    group_key="place_id",
+    id_col="inscription_id",
+    metadata_df=inscriptions_df
+    )
+
 # Rename columns for clarity
 works_agg = works_agg.rename(columns={
     "count": "num_works",
@@ -95,19 +111,27 @@ people_agg = people_agg.rename(columns={
     "items": "people"
 })
 
+inscriptions_agg = inscriptions_agg.rename(columns={
+    "count": "num_inscriptions",
+    "items": "inscriptions"
+})
+
 
 nodes_df = (
     places_df
     .merge(works_agg, on="place_id", how="left")
     .merge(people_agg, on="place_id", how="left")
+    .merge(inscriptions_agg, on="place_id", how="left")
 )
 
 
 nodes_df["num_works"] = nodes_df["num_works"].fillna(0).astype(int)
 nodes_df["num_people"] = nodes_df["num_people"].fillna(0).astype(int)
+nodes_df["num_inscriptions"] = nodes_df["num_inscriptions"].fillna(0).astype(int)
 
 nodes_df["works"] = nodes_df["works"].apply(lambda x: x if isinstance(x, list) else [])
 nodes_df["people"] = nodes_df["people"].apply(lambda x: x if isinstance(x, list) else [])
+nodes_df["inscriptions"] = nodes_df["inscriptions"].apply(lambda x: x if isinstance(x, list) else [])
 
 nodes_df["lat"] = nodes_df["coords"].apply(lambda x: float(x.split(",")[0].strip()))
 nodes_df["lon"] = nodes_df["coords"].apply(lambda x: float(x.split(",")[1].strip()))

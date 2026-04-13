@@ -31,10 +31,10 @@ def make_scrollable_popup(html_content, width=300, height=200):
     return folium.Popup(iframe, max_width=width)
 
 
-def get_svg(shape_type, color, size, works, people):
+def get_svg(shape_type, color, size, works, people, inscriptions):
     """
     Returns an SVG for a map node.
-    - size can be scaled dynamically based on works/people
+    - size can be scaled dynamically based on works/people/inscriptions
     - includes data attributes for JS (zoom/scale interactivity)
     - used only for actual map markers
     """
@@ -44,6 +44,7 @@ def get_svg(shape_type, color, size, works, people):
         <svg class="map-node"
              data-works="{works}"
              data-people="{people}"
+             data-inscriptions="{inscriptions}"
              data-type="{shape_type}"
              width="{size}" height="{size}">
             <circle cx="{size/2}" cy="{size/2}" r="{(size/2)-1}"
@@ -56,6 +57,7 @@ def get_svg(shape_type, color, size, works, people):
         <svg class="map-node"
              data-works="{works}"
              data-people="{people}"
+             data-inscriptions="{inscriptions}"
              width="{size}" height="{size}">
             <rect x="1" y="1" width="{size-2}" height="{size-2}"
             style="fill:{color};stroke:black;stroke-width:1"/>
@@ -67,6 +69,7 @@ def get_svg(shape_type, color, size, works, people):
         <svg class="map-node"
              data-works="{works}"
              data-people="{people}"
+             data-inscriptions="{inscriptions}"
              width="{size}" height="{size}">
             <polygon points="{size/2},0 {size},{size} 0,{size}"
             style="fill:{color};stroke:black;stroke-width:1"/>
@@ -105,6 +108,8 @@ def generate_popup_html(place):
     place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/indexes/place_index.html#{place['place_id']}"
     pers_place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/search_results?q={place['place_name']} {place['place_id']}&category=person"
     work_place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/search_results?q={place['place_name']} {place['place_id']}&category=work"
+    inscription_place_link = f"https://kaveri-delta-project.github.io/kaveri-delta-project/search_results?q={place['place_name']} {place['place_id']}&category=inscription"
+
 
     html = f'<div class="popup-title">{place["place_name"]}</div>'
     metadata_html = ""
@@ -127,6 +132,7 @@ def generate_popup_html(place):
     # Works & People
     num_works = place.get("num_works", 0)
     num_people = place.get("num_people", 0)
+    num_inscriptions = place.get("num_inscriptions", 0)
 
     if num_works > 0:
         metadata_html += (
@@ -143,6 +149,14 @@ def generate_popup_html(place):
         )
     else:
         metadata_html += "<li><b>Associated People:</b> None</li>"
+
+    if num_inscriptions > 0:
+        metadata_html += (
+            f"<li><b>Associated Inscriptions:</b> "
+            f"<a href='{inscription_place_link}' target='_blank'>{num_people}</a></li>"
+        )
+    else:
+        metadata_html += "<li><b>Associated Inscriptions:</b> None</li>"
 
     metadata_html += f"""
     <li><b>Place Record:</b>
@@ -184,6 +198,7 @@ def generate_scale_selector_html():
                         <option value="normal">No Filter</option>
                          <option value="works">Works</option>
                          <option value="people">People</option>
+                         <option value="inscriptions">Inscription</option>
                       </select>
                       """
     selector_html += "</div>"
@@ -280,7 +295,8 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
             color,
             size,
             row["num_works"],
-            row["num_people"]
+            row["num_people"],
+            row["num_inscriptions"]
         )
 
         item = row["place_name"]
