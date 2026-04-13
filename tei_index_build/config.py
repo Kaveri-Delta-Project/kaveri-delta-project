@@ -2,6 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "data"))
+ISC_DIR = os.path.join(DATA_DIR, "inscriptions")
 PERSONS_DIR = os.path.join(DATA_DIR, "persons")
 WORKS_DIR = os.path.join(DATA_DIR, "works")
 PLACES_DIR = os.path.join(DATA_DIR, "places")
@@ -32,7 +33,7 @@ PERSON_MAPPING = {
     "floruit_from": {"element": "floruit", "element_attr": "from", "all_results": True},
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
     "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
-    "references": {"element": "bibl", "all_results": True},
+    "reference": {"element": "bibl", "all_results": True},
     "notes": {"element": "note", "all_results": True}
 }
 
@@ -44,7 +45,7 @@ PLACE_MAPPING = {
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
     "coords": {"element": "note", "filter_attr": "type", "filter_value": "coordinates", "all_results": True},
-    "references": {"element": "bibl", "all_results": True},
+    "reference": {"element": "bibl", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
@@ -71,10 +72,21 @@ WORK_MAPPING = {
         "all_results": True
         },    
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
-    "references": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
+    "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
+ISC_MAPPING = {
+    "xml_id": {"attr": f"{{{NS_XML}}}id"},
+    "name":   {"element": "msName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
+    "alt_names": {"element": "msName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "recipient": {"element": "orgName", "filter_attr": "type", "filter_value": "recipient", "all_results": True},
+    "material": {"element": "material", "all_results": True},
+    "location": {"element": "origPlace", "all_results": True},
+    "location_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
+    "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
+}
 
 ROLES = {
     "ann": "Annotator",
@@ -133,5 +145,15 @@ ENTITY_CONFIG = {
         "container_tag": ".//tei:listBibl",
         "prefix": "w"
 
+    },
+        "inscription": {
+        "dir": os.path.join(DATA_DIR, "inscriptions"),
+        "mapping": ISC_MAPPING,
+        "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note"],
+        "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1},
+        "element_tag": "msDesc",
+        "name_tag": "msName",
+        "container_tag": ".//tei:sourceDesc",
+        "prefix": "isc"
     }
 }

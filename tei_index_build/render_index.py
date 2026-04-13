@@ -165,6 +165,13 @@ def render_place(place):
                     f"<a href='{url}' target='_blank' class='item-name'>{esc(person_name)} ({esc(key)})</a>"
                 )
 
+    reference_html = render_list(place.get("reference"), "item-name")
+    if reference_html:
+        html.append("<div class='entry-block entry-reference'>")
+        html.append("<span class='subheading'>Reference</span>")
+        html.append(reference_html)
+        html.append("</div>")
+
     notes_html = render_list(place.get("notes"), "item-name")
     if notes_html:
         html.append("<div class='entry-block entry-notes'>")
@@ -318,6 +325,13 @@ def render_person(person):
             )
         html.append("</div>")
 
+    reference_html = render_list(person.get("reference"), "item-name")
+    if reference_html:
+        html.append("<div class='entry-block entry-reference'>")
+        html.append("<span class='subheading'>Reference</span>")
+        html.append(reference_html)
+        html.append("</div>")
+
     notes_html = render_list(person.get("notes"), "item-name")
     if notes_html:
         html.append("<div class='entry-block entry-notes'>")
@@ -432,6 +446,13 @@ def render_work(work):
         html.append(subject_html)
         html.append("</div>")
 
+    reference_html = render_list(work.get("reference"), "item-name")
+    if reference_html:
+        html.append("<div class='entry-block entry-reference'>")
+        html.append("<span class='subheading'>Reference</span>")
+        html.append(reference_html)
+        html.append("</div>")
+
     notes_html = render_list(work.get("notes"), "item-name")
     if notes_html:
         html.append("<div class='entry-block entry-notes'>")
@@ -442,6 +463,81 @@ def render_work(work):
     html.append("</div>")
 
     html.append("</div>")
+    return "\n".join(html)
+
+def render_inscription(inscription):
+    html = []
+
+    xml_id = inscription.get("xml_id")
+    name = first(inscription.get("name"))
+
+    html.append(f"<div class='index-entry' id='{esc(xml_id)}'>")
+
+    # Header
+    html.append("<div class='entry-header'>")
+    if name:
+        html.append(f"<span class='entry-title'>{esc(name)}</span>")
+        html.append(f"<span class='entry-id'>({esc(xml_id)})</span>")
+    else:
+        html.append(f"<span class='entry-title'>{esc(xml_id)}</span>")
+    html.append("  <button class='toggle' aria-label='Show details'>▸</button>")
+    html.append("</div>")
+
+    html.append("<div class='item-details'>")
+
+    alt_names_html = render_list(inscription.get("alt_names"), "item-name")
+    if alt_names_html:
+        html.append("<div class='entry-block entry-alt-names'>")
+        html.append("<span class='subheading'>Alternative Titles</span>")
+        html.append(alt_names_html)
+        html.append("</div>")
+
+    recipient_html = render_list(inscription.get("recipient"), "item-name")
+    if recipient_html:
+        html.append("<div class='entry-block entry-recipient'>")
+        html.append("<span class='subheading'>Recipient</span>")
+        html.append(recipient_html)
+        html.append("</div>")
+
+    material_html = render_list(inscription.get("material"), "item-name")
+    if material_html:
+        html.append("<div class='entry-block entry-material'>")
+        html.append("<span class='subheading'>Material</span>")
+        html.append(material_html)
+        html.append("</div>")
+
+    location_names = inscription.get("location")
+    location_keys = inscription.get("location_key")
+    if location_names and location_keys:
+        html.append("<div class='entry-block entry-locations'>")
+        html.append("<span class='subheading'>Locations</span>")
+
+        for place_name, key in zip(location_names, location_keys):
+            url = make_entity_url("place", key, single_page=False)
+
+            html.append(
+                f"<a href='{esc(url)}' target='_blank' class='item-name'>"
+                f"{esc(place_name)} ({esc(key)})"
+                f"</a>"
+            )
+
+        html.append("</div>")
+
+    reference_html = render_list(inscription.get("reference"), "item-name")
+    if reference_html:
+        html.append("<div class='entry-block entry-reference'>")
+        html.append("<span class='subheading'>Reference</span>")
+        html.append(reference_html)
+        html.append("</div>")
+
+    notes_html = render_list(inscription.get("notes"), "item-name")
+    if notes_html:
+        html.append("<div class='entry-block entry-notes'>")
+        html.append("<span class='subheading'>Notes</span>")
+        html.append(notes_html)
+        html.append("</div>")
+
+    html.append("</div>")
     return "\n".join(html)   
 
 
@@ -449,7 +545,8 @@ def render_index_sections(items_by_letter, entity_tag):
     renderers = {
         "person": render_person,
         "work": render_work,
-        "place": render_place
+        "place": render_place,
+        "inscription": render_inscription
     }
 
     html = []

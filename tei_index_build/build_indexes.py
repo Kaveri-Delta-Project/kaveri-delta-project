@@ -15,6 +15,7 @@ from tei_helpers import (
 
 from config import (
     BASE_DIR,
+    ISC_DIR,
     PERSONS_DIR,
     WORKS_DIR,
     PLACES_DIR,
@@ -23,6 +24,7 @@ from config import (
 
 
 file_directories = {
+    "inscription": ISC_DIR,
     "person": PERSONS_DIR,
     "work": WORKS_DIR,
     "place": PLACES_DIR    
