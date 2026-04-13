@@ -138,7 +138,7 @@ ENTITY_CONFIG = {
     "work": {
         "dir": os.path.join(DATA_DIR, "works"),
         "mapping": WORK_MAPPING,
-        "child_order": ["title", "idno", "date" "editor", "pubPlace", "note"],
+        "child_order": ["title", "idno", "date", "editor", "pubPlace", "note"],
         "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "bibliographical": 2, "general": 3},
         "element_tag": "bibl",
         "name_tag": "title",

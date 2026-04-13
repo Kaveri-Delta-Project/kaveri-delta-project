@@ -47,6 +47,11 @@ def build_search_index(all_entities, build_dir):
                 places = [f"{assoc.get('placeName')} [{assoc.get('key')}]" for assoc in assoc_places if assoc.get("placeName")]
                 record["places"] = places
 
+            if entity_type == "inscription":
+                assoc_places = item.get("location", [])
+                assoc_place_keys = item.get("location_key", [])
+                places = [f"{place} [{key}]" for place, key in zip(assoc_places, assoc_place_keys)]
+                record["places"] = places
 
             records.append(record)
 
