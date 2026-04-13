@@ -1,5 +1,19 @@
 [
   {
+    "type": "inscription",
+    "id": "isc_1",
+    "name": "test inscription",
+    "alt_names": [
+      "alt name test",
+      "alt name test again"
+    ],
+    "url": "indexes/inscription_index.html#isc_1",
+    "places": [
+      "Adaiyapulam [l_13]",
+      "Bhāskararāyapuram [l_11]"
+    ]
+  },
+  {
     "type": "person",
     "id": "p_1",
     "name": "Nīlakaṇṭha Dīkṣita",
