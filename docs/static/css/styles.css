@@ -648,6 +648,10 @@ h1 {
   background-color: #c55d12;
 }
 
+.badge-inscription {
+  background-color: #6a4c93;
+}
+
 .results-num {
   color: #555;
 }

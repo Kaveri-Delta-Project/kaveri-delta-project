@@ -206,7 +206,8 @@ document.addEventListener('DOMContentLoaded', async function() {
       const badgeClass = {
         person: "badge-person",
         place: "badge-place",
-        work: "badge-work"
+        work: "badge-work",
+        inscription: "badge-inscription"
       }[item.type.toLowerCase()] || "bg-secondary";
 
       el.innerHTML = `
