@@ -1,12 +1,5 @@
 [
   {
-    "type": "inscription",
-    "id": "isc_1",
-    "name": "a test inscription file",
-    "alt_names": [],
-    "url": "indexes/inscription_index.html#isc_1"
-  },
-  {
     "type": "person",
     "id": "p_1",
     "name": "Nīlakaṇṭha Dīkṣita",
