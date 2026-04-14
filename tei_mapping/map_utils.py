@@ -165,10 +165,10 @@ def generate_popup_html(place):
     """
 
     html += f"""
-    <details>
+    <div>
         <summary class="popup-subtitle">Place Metadata</summary>
         <ul>{metadata_html}</ul>
-    </details>
+    </div>
     """
 
     return f'<div class="popup-content">{html}</div>'
@@ -300,6 +300,12 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
         )
 
         item = row["place_name"]
+
+        if all(x is None for x in row["alt_name"]):
+            popup_height=180
+        else:
+            popup_height=205
+
         size_class = "label-large" if item in large_list else "label-small"
 
         folium.Marker(
@@ -314,7 +320,7 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
                 icon_size=(40, 40),
                 icon_anchor=(10, 10)
             ),
-            popup=make_scrollable_popup(row["popup_html"], width=250, height=100),
+            popup=make_scrollable_popup(row["popup_html"], width=300, height=popup_height),
             tooltip=row["place_name"],
             pane="places"
         ).add_to(placetype_fgs[row_type])
