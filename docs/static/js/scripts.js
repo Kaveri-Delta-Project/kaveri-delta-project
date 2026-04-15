@@ -134,7 +134,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     return str
       .toLowerCase()
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^\w\s]/g, " ");
   }
 
   // Get query from URL
