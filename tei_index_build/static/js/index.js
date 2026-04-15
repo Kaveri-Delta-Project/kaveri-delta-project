@@ -91,7 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const navbarOffset = 140; // adjust to your navbar height
+
+        const y =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          navbarOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        });
+
         target.classList.add('hash-highlight');
         setTimeout(() => target.classList.remove('hash-highlight'), 2500);
 
@@ -102,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   focusHashTarget();
+  window.addEventListener('hashchange', focusHashTarget); 
 });
 
 
@@ -203,5 +215,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 
