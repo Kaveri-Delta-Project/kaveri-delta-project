@@ -119,7 +119,7 @@ def render_place(place):
         html.append("<div class='entry-block entry-coords'>")
         html.append("<span class='subheading'>Coordinates</span>")
         html.append(f"<span class='item-name'>{esc(coordinates)}</span>")
-        html.append(f"<a class='map-link' href='{map_url}'>View on map ↗</a>")
+        html.append(f"<a class='map-link item-name' target='_blank' href='{map_url}'>View on map</a>")
         html.append("</div>")
 
 
