@@ -39,7 +39,6 @@ cross_refs = {
     "work": ("person", link_works_to_persons)
 }
 
-
 for entity_tag, directory in file_directories.items():
     entity_data = load_dir_data(entity_tag, directory)
     all_entities[entity_tag] = entity_data
@@ -51,7 +50,6 @@ for entity_tag, directory in file_directories.items():
         linked_ent, ref_function = cross_refs[entity_tag]
         ref_data = ref_function(entity_data)
         ref_cache[linked_ent] = ref_data
-
 
 for entity_tag, entity_data in all_entities.items():
 

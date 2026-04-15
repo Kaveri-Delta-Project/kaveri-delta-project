@@ -143,6 +143,10 @@ def remove_broken_links(html_path, entities_cache):
             continue
 
         file_part, id_part = href.split("#", 1)
+
+        if file_part == "/map.html":
+            continue
+
         if not file_part:
             file_part = os.path.basename(html_path)
 

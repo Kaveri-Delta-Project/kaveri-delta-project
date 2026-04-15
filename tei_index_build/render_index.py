@@ -72,6 +72,9 @@ def make_entity_url(entity_type, key, single_page=True):
         return f"#{esc(key)}"
     return f"{entity_type}_index.html#{esc(key)}"
 
+def make_map_url(coordinates, filename="/map.html"):
+    coordinates = coordinates.replace(' ', '')
+    return f"{filename}#{coordinates}"
 
 def render_place(place):
     
@@ -111,9 +114,12 @@ def render_place(place):
 
     coordinates = first(place.get("coords"))
     if coordinates:
+        map_url = make_map_url(coordinates)
+
         html.append("<div class='entry-block entry-coords'>")
         html.append("<span class='subheading'>Coordinates</span>")
         html.append(f"<span class='item-name'>{esc(coordinates)}</span>")
+        html.append(f"<a class='map-link' href='{map_url}'>View on map ↗</a>")
         html.append("</div>")
 
 
