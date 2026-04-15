@@ -1,14 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
 
-    let mapObj = null;
-
-    // Attempt to find the Leaflet map object dynamically
+function getMap() {
     for (let key in window) {
         if (window[key] instanceof L.Map) {
-            mapObj = window[key];
-            break;
+            return window[key];
         }
     }
+    return null;
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const mapObj = getMap();
 
     if (!mapObj) {
         console.warn("Leaflet map object not found. Label zoom toggle will not run.");
@@ -101,4 +104,62 @@ document.addEventListener("DOMContentLoaded", function () {
         updateNodeSizes(selector ? selector.value : "works");
     }, 500); // half-second delay, adjust if needed
 
+});
+
+
+
+function openPopupAt(lat, lon, zoom = 10) {
+
+    const map = getMap();
+
+    if (!map) {
+        console.warn("Leaflet map not found");
+        return;
+    }
+
+    map.setView([lat, lon], zoom);
+
+    map.eachLayer(function(layer) {
+        if (layer.getLatLng && layer.getPopup) {
+            const pos = layer.getLatLng();
+
+            if (
+                Math.abs(pos.lat - lat) < 0.00001 &&
+                Math.abs(pos.lng - lon) < 0.00001
+            ) {
+                layer.openPopup();
+            }
+        }
+    });
+}
+
+window.addEventListener("load", function () {
+
+    if (!window.location.hash) return;
+
+    const coords = window.location.hash.substring(1).split(",");
+    if (coords.length !== 2) return;
+
+    const lat = parseFloat(coords[0]);
+    const lon = parseFloat(coords[1]);
+
+    if (isNaN(lat) || isNaN(lon)) return;
+
+    function tryOpen(retries = 10) {
+
+        const map = getMap();
+
+        if (!map) {
+            if (retries > 0) {
+                setTimeout(() => tryOpen(retries - 1), 300);
+            }
+            return;
+        }
+
+        setTimeout(() => {
+            openPopupAt(lat, lon);
+        }, 500);
+    }
+
+    tryOpen();
 });
