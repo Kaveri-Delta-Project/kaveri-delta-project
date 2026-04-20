@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let lbl of smallLabels) lbl.style.display = zoom >= 11 ? 'block' : 'none';
     }
 
-    // Initial run (slight delay ensures labels exist in DOM)
-    setTimeout(toggleLabelsByZoom, 500);
+    mapObj.whenReady(toggleLabelsByZoom);
 
     // Update labels on zoom change
     mapObj.on('zoomend', toggleLabelsByZoom);
@@ -117,7 +116,10 @@ function openPopupAt(lat, lon, zoom = 10) {
         return;
     }
 
-    map.setView([lat, lon], zoom);
+    map.flyTo([lat, lon], zoom, {
+      duration: 0.5,   // seconds (tweak this)
+      easeLinearity: 0.25
+    });
 
     map.eachLayer(function(layer) {
         if (layer.getLatLng && layer.getPopup) {
@@ -133,7 +135,7 @@ function openPopupAt(lat, lon, zoom = 10) {
     });
 }
 
-window.addEventListener("load", function () {
+function handleMapHash() {
 
     if (!window.location.hash) return;
 
@@ -145,21 +147,17 @@ window.addEventListener("load", function () {
 
     if (isNaN(lat) || isNaN(lon)) return;
 
-    function tryOpen(retries = 10) {
+    const map = getMap();
 
-        const map = getMap();
-
-        if (!map) {
-            if (retries > 0) {
-                setTimeout(() => tryOpen(retries - 1), 300);
-            }
-            return;
-        }
-
-        setTimeout(() => {
-            openPopupAt(lat, lon);
-        }, 500);
+    if (!map) {
+        setTimeout(handleMapHash, 200);
+        return;
     }
 
-    tryOpen();
-});
+    map.whenReady(() => {
+        openPopupAt(lat, lon);
+    });
+}
+
+window.addEventListener("load", handleMapHash);
+window.addEventListener("hashchange", handleMapHash);
