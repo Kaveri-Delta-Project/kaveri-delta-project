@@ -119,7 +119,7 @@ def render_place(place):
         html.append("<div class='entry-block entry-coords'>")
         html.append("<span class='subheading'>Coordinates</span>")
         html.append(f"<span class='item-name'>{esc(coordinates)}</span>")
-        html.append(f"<a class='map-link item-name' target='_blank' href='{map_url}'>View on map</a>")
+        html.append(f"<a class='map-link item-name' target='map-page' href='{map_url}'>View on map</a>")
         html.append("</div>")
 
 
@@ -163,12 +163,12 @@ def render_place(place):
 
             if affil_from or affil_to or affil_role:
                 html.append(
-                    f"<a href='{url}' target='_blank' class='item-name' {data_attrs}>"
+                    f"<a href='{url}' target='person-index' class='item-name' {data_attrs}>"
                     f"{esc(person_name)} ({esc(key)}) {data_attrs_contents}</a>"
                 )
             else:
                 html.append(
-                    f"<a href='{url}' target='_blank' class='item-name'>{esc(person_name)} ({esc(key)})</a>"
+                    f"<a href='{url}' target='person-index' class='item-name'>{esc(person_name)} ({esc(key)})</a>"
                 )
 
     reference_html = render_list(place.get("reference"), "item-name")
@@ -236,7 +236,7 @@ def render_person(person):
             rel_name = rel["label"]
             html.append(f"<div class='item-name'>")
             html.append(f"  <span>relationship: {esc(connection)} of</span>")
-            html.append(f"  <a href='{esc(url)}' target='_blank'>{esc(rel_name)} ({esc(key)})</a>")
+            html.append(f"  <a href='{esc(url)}'>{esc(rel_name)} ({esc(key)})</a>")
             html.append(f"</div>")
         html.append("</div>")
 
@@ -305,9 +305,9 @@ def render_person(person):
                 data_attrs_contents += f" (connection: {esc(affil_role)})"
 
             if affil_from or affil_to or affil_role:
-                html.append(f"<a href='{esc(url)}' target='_blank' class='item-name' {data_attrs}>{esc(place_name)} ({esc(key)}) {data_attrs_contents}</a>")
+                html.append(f"<a href='{esc(url)}' target='place-index' class='item-name' {data_attrs}>{esc(place_name)} ({esc(key)}) {data_attrs_contents}</a>")
             else:
-                html.append(f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(place_name)} ({esc(key)})</a>")
+                html.append(f"<a href='{esc(url)}' target='place-index' class='item-name'>{esc(place_name)} ({esc(key)})</a>")
         html.append("</div>")
 
     linked_data = person.get("linked_data")
@@ -327,7 +327,7 @@ def render_person(person):
             # Append role if available
             role_text = f" (role: {esc(role)})" if role else ""
             html.append(
-                f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(title)} ({esc(key)}){role_text}</a>"
+                f"<a href='{esc(url)}' target='work-index' class='item-name'>{esc(title)} ({esc(key)}){role_text}</a>"
             )
         html.append("</div>")
 
@@ -406,7 +406,7 @@ def render_work(work):
         for name, key, role in zip(editor_names, editor_keys, editor_roles):
             role = ROLES.get(role)
             url = make_entity_url("person", key, single_page=False)
-            html.append(f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(name)} ({esc(key)}) (role: {esc(role)})</a>")
+            html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(name)} ({esc(key)}) (role: {esc(role)})</a>")
         html.append("</div>")
 
     places = work.get("pub_place")
@@ -419,9 +419,9 @@ def render_work(work):
             role = place.get("role")
             url = make_entity_url("place", key, single_page=False)
             if role:
-                html.append(f"<a href='{esc(url)}' role='{esc(role)}' target='_blank' class='item-name'>{esc(place_name)} ({esc(key)}) (connection: {esc(role)})</a>")
+                html.append(f"<a href='{esc(url)}' role='{esc(role)}' target='place_index' class='item-name'>{esc(place_name)} ({esc(key)}) (connection: {esc(role)})</a>")
             else:
-                html.append(f"<a href='{esc(url)}' target='_blank' class='item-name'>{esc(place_name)} ({esc(key)})</a>")
+                html.append(f"<a href='{esc(url)}' target='place-index' class='item-name'>{esc(place_name)} ({esc(key)})</a>")
         html.append("</div>")
 
     genres = work.get("genre")
@@ -438,7 +438,7 @@ def render_work(work):
                 url = make_entity_url("work", linked_key, single_page=False)
                 html.append(f"<div class='item-name'>")
                 html.append(f"  <span>commentary on </span>")
-                html.append(f"  <a href='{esc(url)}' target='_blank'>{esc(linked_text)} ({esc(linked_key)})</a>")
+                html.append(f"  <a href='{esc(url)}' target='work-index'>{esc(linked_text)} ({esc(linked_key)})</a>")
                 html.append(f"</div>")
             else:
                 html.append(f"<div class='item-name'>{esc(linked_text)}</div>")
@@ -522,7 +522,7 @@ def render_inscription(inscription):
             url = make_entity_url("place", key, single_page=False)
 
             html.append(
-                f"<a href='{esc(url)}' target='_blank' class='item-name'>"
+                f"<a href='{esc(url)}' target='place-index' class='item-name'>"
                 f"{esc(place_name)} ({esc(key)})"
                 f"</a>"
             )
