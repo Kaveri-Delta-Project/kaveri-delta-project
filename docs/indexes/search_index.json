@@ -66,6 +66,16 @@
   },
   {
     "type": "person",
+    "id": "p_16",
+    "name": "Hershini",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_16",
+    "places": [
+      "High Wycombe [l_21]"
+    ]
+  },
+  {
+    "type": "person",
     "id": "p_2",
     "name": "Appayya Dīkṣita",
     "alt_names": [],
@@ -436,6 +446,13 @@
     "name": "l_20",
     "alt_names": [],
     "url": "indexes/place_index.html#l_20"
+  },
+  {
+    "type": "place",
+    "id": "l_21",
+    "name": "High Wycombe",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_21"
   },
   {
     "type": "place",
