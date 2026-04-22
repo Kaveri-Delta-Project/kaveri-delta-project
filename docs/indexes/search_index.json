@@ -66,6 +66,14 @@
   },
   {
     "type": "person",
+    "id": "p_16",
+    "name": "test person",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_16",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_2",
     "name": "Appayya Dīkṣita",
     "alt_names": [],
