@@ -225,7 +225,7 @@ def delete_connection_entry(xml_id, form_data):
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
 
-def related_add(relationship, key, person_a_key, person_a_text, reverse_type, config):    
+def related_add(relationship, key, person_a_key, person_a_text, reverse_type, config, person_a_from=None, person_a_to=None):    
 
     context = load_or_create_entity(
         entity_name="person",
@@ -241,13 +241,21 @@ def related_add(relationship, key, person_a_key, person_a_text, reverse_type, co
             flash("Record needs to be saved with name to create relationship.", "rel-persons-error")
             return {"ok": False}
 
+        element_attrs = {
+            "type": reverse_type,
+            "key": person_a_key,
+        }
+
+        if person_a_from and person_a_to:
+            element_attrs.update({
+                "from": person_a_from,
+                "to": person_a_to
+        })
+
         el = build_section(
             parent=person_b,
             item_tag="trait",
-            attrs={
-                "type": reverse_type,
-                "key": person_a_key,
-            },
+            attrs=element_attrs,
             child_tag="label",
             child_text=person_a_text,
         )

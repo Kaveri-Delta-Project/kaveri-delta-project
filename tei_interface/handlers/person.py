@@ -146,11 +146,14 @@ def handle_editor(person, context, form_data):
 
     rel_persons_key = form_data.get("rel_persons_key")
     relationships = form_data.get("relationships")
-    rel_persons_text = load_ent_name_by_key("person", rel_persons_key, "persName")
+    date_from = form_data.get("rel_persons_from")
+    date_to = form_data.get("rel_persons_to")
 
     if not rel_persons_key:
         flash("No person key selected.", "rel-persons-error")
         return {"ok": False}
+
+    rel_persons_text = load_ent_name_by_key("person", rel_persons_key, "persName")
 
     if not rel_persons_text:
         flash("Selected person could not be resolved.", "rel-persons-error")
@@ -158,15 +161,36 @@ def handle_editor(person, context, form_data):
 
     if not relationships:
         flash("Relationship cannot be empty.", "rel-persons-error")
-        return {"ok": False}   
+        return {"ok": False}
+
+    if bool(date_from) != bool(date_to):
+        flash("'From' and 'To' dates must both be entered if dates included.", "rel-persons-error")
+        return {"ok": False}
+
+    if date_from and not valid_date(date_from):
+        flash(f"Invalid 'From' date: {date_from}", "rel-persons-error")
+        return {"ok": False}
+
+    if date_to and not valid_date(date_to):
+        flash(f"Invalid 'To' date: {date_to}", "rel-persons-error")
+        return {"ok": False}
+
+
+    element_attrs = {
+        "type": relationships,
+        "key": rel_persons_key,
+    }
+
+    if date_from and date_to:
+        element_attrs.update({
+            "from": date_from,
+            "to": date_to
+    })
 
     el = build_section(
         parent=person,
         item_tag="trait",
-        attrs={
-            "type": relationships,
-            "key": rel_persons_key,
-        },
+        attrs=element_attrs,
         child_tag="label",
         child_text=rel_persons_text,
     )
@@ -174,7 +198,6 @@ def handle_editor(person, context, form_data):
     insert_in_order(person, "trait", el, CHILD_ORDER, NSMAP)
 
     update_connection_index("person", rel_persons_key, context['xml_id'], "person", rel_persons_text)
-
 
     reverse_type = RELATIONSHIP_INVERSES.get(relationships)
     if reverse_type:
@@ -191,6 +214,8 @@ def handle_editor(person, context, form_data):
             key=rel_persons_key,       
             person_a_key=person_a_key, 
             person_a_text=person_a_text,
+            person_a_from=date_from,
+            person_a_to=date_to,
             reverse_type=reverse_type,
             config=ENTITY_CONFIG["person"]
         )

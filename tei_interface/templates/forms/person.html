@@ -143,10 +143,15 @@
     <div class="border rounded p-2 mb-2">
       <span class="text-muted">Relationship: {{ rel.type }} of</span>
       <span class="fw-semibold">{{ rel.label }} [{{ rel.key }}]</span>
+      {% if rel.from %}
+        <span class="text-muted">({{ rel.from }} to {{ rel.to }})</span>
+      {% endif %}
+      
       {{ ui.delete_button("trait", 
         loop.index0, 
         extra_fields={"connection": "related", "key": rel.key, "name_type": rel.type}
       ) }}
+
     </div>
   {% endfor %}
 
@@ -195,6 +200,30 @@
             extra_attrs="required",
             help_text="Search for an existing person and select them from the list."
         ) }}
+      </div>
+
+      <div class="row">
+        <div class="col">
+          {{ ui.input_field(
+              id="rel_persons_from",
+              name="rel_persons_from",
+              label="From",
+              label_option="(optional)",
+              placeholder="e.g. 1620 or 1620-05-12",
+              help_text="Start year or full ISO date of relationship"
+          ) }}
+        </div>
+
+        <div class="col">
+          {{ ui.input_field(
+              id="rel_persons_to",
+              name="rel_persons_to",
+              label="To",
+              label_option="(optional)",
+              placeholder="e.g. 1650 or 1650-05-12",
+              help_text="End year or full ISO date of relationship"
+          ) }}
+        </div>
       </div>
 
       {{ ui.form_actions("toggleEntryForm('related-persons-form')") }}

@@ -31,7 +31,7 @@ PERSON_MAPPING = {
     "sex": {"attr": "sex"},
     "preferred_name": {"element": "persName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
     "alt_name": {"element": "persName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
-    "relationship": {"parent_tag": "trait", "attributes": ["type", "key"], "child_elements": ["label"]},
+    "relationship": {"parent_tag": "trait", "attributes": ["type", "key", "from", "to"], "child_elements": ["label"]},
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
     "birth_text": {"element": "birth", "all_results": True},
