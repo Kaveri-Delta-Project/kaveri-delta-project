@@ -19,11 +19,6 @@
       "w_19",
       "work",
       "Appayya Dīkṣita"
-    ],
-    [
-      "p_16",
-      "person",
-      "Appayya Dīkṣita"
     ]
   ],
   "p_1": [
@@ -394,11 +389,5 @@
       "Ānandarāyamakhin"
     ]
   ],
-  "p_16": [
-    [
-      "p_2",
-      "person",
-      "test person"
-    ]
-  ]
+  "p_16": []
 }

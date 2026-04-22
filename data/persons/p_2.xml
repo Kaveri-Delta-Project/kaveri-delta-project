@@ -21,9 +21,6 @@
           <trait type="member of family" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
-          <trait type="descendant" key="p_16" from="1620" to="1650">
-            <label>test person</label>
-          </trait>
           <floruit from="1520" to="1593">c. 1520-1593</floruit>
           <affiliation key="l_13" role="born">
             <placeName>Adaiyapulam</placeName>
