@@ -18,7 +18,7 @@
       <listPlace>
         <place xml:id="l_5">
           <placeName type="preferred">Mannargudi</placeName>
-          <desc type="function">town</desc>
+          <desc type="function">city/town</desc>
           <idno type="Wikidata">Q2673456</idno>
           <note type="coordinates">10.664907912399869, 79.44842292371418</note>
         </place>

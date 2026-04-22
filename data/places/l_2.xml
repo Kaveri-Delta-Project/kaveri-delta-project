@@ -18,7 +18,7 @@
       <listPlace>
         <place xml:id="l_2">
           <placeName type="preferred">Thanjavur</placeName>
-          <desc type="function">city</desc>
+          <desc type="function">city/town</desc>
           <idno type="Wikidata">Q41496</idno>
           <note type="coordinates">10.792269867841028, 79.13659424312229</note>
         </place>

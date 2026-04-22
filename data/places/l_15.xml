@@ -19,7 +19,7 @@
         <place xml:id="l_15">
           <placeName type="preferred">Svamimalai</placeName>
           <placeName type="variant">Svamigiri</placeName>
-          <desc type="function">village</desc>
+          <desc type="function">settlement</desc>
           <note type="coordinates">10.95989672343953, 79.33280683150029</note>
         </place>
       </listPlace>

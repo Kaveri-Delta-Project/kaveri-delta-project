@@ -18,7 +18,7 @@
       <listPlace>
         <place xml:id="l_10">
           <placeName type="preferred">Madurai</placeName>
-          <desc type="function">city</desc>
+          <desc type="function">city/town</desc>
           <idno type="Wikidata">Q228405</idno>
           <note type="coordinates">9.928648731961433, 78.12213199611796</note>
         </place>

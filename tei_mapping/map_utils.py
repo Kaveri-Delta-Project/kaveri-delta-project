@@ -38,7 +38,7 @@ def get_svg(shape_type, color, size, works, people, inscriptions):
     - includes data attributes for JS (zoom/scale interactivity)
     - used only for actual map markers
     """
-    if shape_type in ["city", "town", "village", "other"]:
+    if shape_type in ["city/town", "settlement", "other"]:
         # Circle
         return f"""
         <svg class="map-node"
@@ -82,7 +82,7 @@ def get_svg_legend(shape_type, color):
     - no dynamic sizing or data attributes needed
     - used only in the map legend
     """
-    if shape_type in ["city", "town", "village", "other"]:
+    if shape_type in ["city/town", "settlement", "other"]:
         # Circle
         return f"""
         <svg width="16" height="16">
@@ -265,9 +265,8 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
 
     # Place markers
     type_colors = {
-        "city": "rgba(228, 26, 28, 0.7)",
-        "town": "rgba(255, 127, 0, 0.7)",
-        "village": "rgba(255, 217, 47, 0.7)",
+        "city/town": "rgba(228, 26, 28, 0.7)",
+        "settlement": "rgba(255, 217, 47, 0.7)",
         "matha": "rgba(166, 86, 40, 0.7)",
         "temple": "rgba(148, 103, 189, 0.7)",
         "other": "rgba(247, 129, 191, 0.7)"
