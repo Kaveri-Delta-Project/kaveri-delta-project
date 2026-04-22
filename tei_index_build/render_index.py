@@ -230,14 +230,40 @@ def render_person(person):
         html.append("<div class='entry-block entry-relationships'>")
         html.append("<span class='subheading'>Associated Persons</span>")
         for rel in relationships:
-            key = rel["key"]
+            key = rel.get("key")
+            connection = rel.get("type")
+            rel_name = rel.get("label")
+            rel_from = rel.get("from")
+            rel_to = rel.get("to")
+
             url = make_entity_url("person", key, single_page=True)
-            connection = rel["type"]
-            rel_name = rel["label"]
-            html.append(f"<div class='item-name'>")
+
+            html.append("<div class='item-name'>")
+
+            data_attrs = ""
+            data_attrs_contents = ""
+
+            if connection:
+                data_attrs += f" data-connection='{esc(connection)}'"
+
+            if rel_from and rel_to:
+                data_attrs += f" data-from='{esc(rel_from)}'"
+                data_attrs += f" data-to='{esc(rel_to)}'"
+
+                if rel_from == rel_to:
+                    data_attrs_contents += f" ({esc(rel_from)})"
+                else:
+                    data_attrs_contents += f" ({esc(rel_from)}-{esc(rel_to)})"
+
+                    
             html.append(f"  <span>relationship: {esc(connection)} of</span>")
-            html.append(f"  <a href='{esc(url)}'>{esc(rel_name)} ({esc(key)})</a>")
-            html.append(f"</div>")
+            html.append(
+                f"  <a href='{esc(url)}' {data_attrs}>"
+                f"{esc(rel_name)} ({esc(key)}) {data_attrs_contents}</a>"
+            )
+
+            html.append("</div>")
+
         html.append("</div>")
 
 
