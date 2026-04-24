@@ -196,6 +196,8 @@ h1 {
     justify-content: flex-start
 }
 
+
+
 /* INTRO BOX STYLING */
 .intro-box {
     max-width: 75%;
@@ -239,6 +241,14 @@ h1 {
     line-height: 1.6;
 }
 
+.intro-text a {
+    font-size: 0.95rem;
+    color: #6B0000;
+}
+
+.intro-text a:hover {
+    color: #C08000;           
+}
 
 @media (max-width: 910px) {
 
