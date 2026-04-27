@@ -43,11 +43,6 @@
       "Nīlakaṇṭha Dīkṣita"
     ],
     [
-      "p_16",
-      "person",
-      "Nīlakaṇṭha Dīkṣita"
-    ],
-    [
       "w_32",
       "work",
       "Nīlakaṇṭha Dīkṣita"
@@ -55,11 +50,6 @@
     [
       "w_35",
       "work",
-      "Nīlakaṇṭha Dīkṣita"
-    ],
-    [
-      "p_19",
-      "person",
       "Nīlakaṇṭha Dīkṣita"
     ]
   ],
@@ -234,7 +224,7 @@
       "Śāhaji I (of Thanjavur)"
     ],
     [
-      "p_18",
+      "p_10",
       "person",
       "Śāhaji I (of Thanjavur)"
     ]
@@ -367,6 +357,11 @@
       "p_9",
       "person",
       "Serfoji Bhonsle"
+    ],
+    [
+      "p_6",
+      "person",
+      "Serfoji Bhonsle"
     ]
   ],
   "p_11": [
@@ -449,18 +444,8 @@
   ],
   "p_18": [
     [
-      "w_33",
-      "work",
-      "Nallā Dīkṣita"
-    ],
-    [
       "w_36",
       "work",
-      "Nallā Dīkṣita"
-    ],
-    [
-      "p_19",
-      "person",
       "Nallā Dīkṣita"
     ],
     [
@@ -472,11 +457,6 @@
   "p_19": [
     [
       "p_1",
-      "person",
-      "Nārayaṇa Dīkṣita"
-    ],
-    [
-      "p_18",
       "person",
       "Nārayaṇa Dīkṣita"
     ]

@@ -23,6 +23,9 @@
           <trait type="patron" key="p_9">
             <label>Ḍhuṇḍirāja Vyāsa</label>
           </trait>
+          <trait type="brother" key="p_6">
+            <label>Śāhaji I (of Thanjavur)</label>
+          </trait>
           <floruit from="1711" to="1728">r. 1711-1728</floruit>
           <affiliation key="l_14" role="resided">
             <placeName>Sakkottai</placeName>
