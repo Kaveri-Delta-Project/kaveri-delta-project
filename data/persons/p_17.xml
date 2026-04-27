@@ -16,21 +16,19 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_1">
-          <persName type="preferred">Nīlakaṇṭha Dīkṣita</persName>
-          <trait type="member of family" key="p_2">
-            <label>Appayya Dīkṣita</label>
+        <person xml:id="p_17">
+          <persName type="preferred">Śrīdhara Veṅkaṭeśa Ayyāvāl</persName>
+          <persName type="variant">Ayyāvāl of Tiruvisanallur</persName>
+          <trait type="beneficiary" key="p_6">
+            <label>Śāhaji I (of Thanjavur)</label>
           </trait>
-          <trait type="teacher" key="p_3">
-            <label>Cokkanāthamakhin</label>
-          </trait>
-          <trait type="son" key="p_19">
-            <label>Nārayaṇa Dīkṣita</label>
-          </trait>
-          <floruit from="1638" to="1638">Active around 1638</floruit>
-          <affiliation key="l_1" role="affiliation to this place">
+          <birth when="1635">1635</birth>
+          <death when="1720">1720</death>
+          <affiliation key="l_1" role="resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <bibl>Raghavan preface</bibl>
+          <note>Biographer of King Śāhaji</note>
         </person>
       </listPerson>
     </body>

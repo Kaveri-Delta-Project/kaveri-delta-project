@@ -20,6 +20,10 @@
     "name": "Dhāturatnāvali"
   },
   {
+    "xml_id": "w_35",
+    "name": "Gaṅgāvataraṇa"
+  },
+  {
     "xml_id": "w_6",
     "name": "Kaliviḍambana"
   },
@@ -46,6 +50,10 @@
   {
     "xml_id": "w_1",
     "name": "Nīlakaṇṭhavijayacampū"
+  },
+  {
+    "xml_id": "w_30",
+    "name": "Patañjalicarita"
   },
   {
     "xml_id": "w_21",
@@ -76,6 +84,18 @@
     "name": "Uttaracampū"
   },
   {
+    "xml_id": "w_29",
+    "name": "w_29"
+  },
+  {
+    "xml_id": "w_34",
+    "name": "w_34"
+  },
+  {
+    "xml_id": "w_36",
+    "name": "w_36"
+  },
+  {
     "xml_id": "w_14",
     "name": "Śabdakaumudī"
   },
@@ -88,11 +108,23 @@
     "name": "Śabdārthasaṃgraha"
   },
   {
+    "xml_id": "w_32",
+    "name": "Śivalīlārṇava"
+  },
+  {
     "xml_id": "w_15",
     "name": "Śābdikarakṣā"
   },
   {
     "xml_id": "w_17",
     "name": "Śāhajivilāsagītā"
+  },
+  {
+    "xml_id": "w_31",
+    "name": "Śṛṅgāratilakabhāṇa"
+  },
+  {
+    "xml_id": "w_33",
+    "name": "Śṛṇgārasarvasvabhāṇa"
   }
 ]

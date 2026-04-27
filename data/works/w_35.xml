@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_35">
+          <title type="preferred">Gaṅgāvataraṇa</title>
+          <editor key="p_1" role="aut">Nīlakaṇṭha Dīkṣita</editor>
+          <note type="genre">poetry</note>
+          <note type="bibliographical">Raghavan footnote 1</note>
+          <note type="bibliographical">NCC Vol 10 Page 172</note>
+          <note type="bibliographical">NCC Vol 5 Page 217</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
