@@ -66,43 +66,15 @@
   },
   {
     "type": "person",
-    "id": "p_16",
-    "name": "p_16",
-    "alt_names": [],
-    "url": "indexes/person_index.html#p_16",
-    "places": [
-      "Kandaramanikkam [l_4]"
-    ]
-  },
-  {
-    "type": "person",
     "id": "p_17",
     "name": "Śrīdhara Veṅkaṭeśa Ayyāvāl",
     "alt_names": [
-      "Ayyāvāl of Tiruvisanallur"
+      "Ayyāvāl of Thiruvisanallur"
     ],
     "url": "indexes/person_index.html#p_17",
     "places": [
       "Thiruvisanallur [l_1]"
     ]
-  },
-  {
-    "type": "person",
-    "id": "p_18",
-    "name": "Nallā Dīkṣita",
-    "alt_names": [
-      "Bhūminātha Kavi"
-    ],
-    "url": "indexes/person_index.html#p_18",
-    "places": []
-  },
-  {
-    "type": "person",
-    "id": "p_19",
-    "name": "Nārayaṇa Dīkṣita",
-    "alt_names": [],
-    "url": "indexes/person_index.html#p_19",
-    "places": []
   },
   {
     "type": "person",
@@ -398,14 +370,6 @@
     "name": "Śivalīlārṇava",
     "alt_names": [],
     "url": "indexes/work_index.html#w_32",
-    "places": []
-  },
-  {
-    "type": "work",
-    "id": "w_33",
-    "name": "Śṛṇgārasarvasvabhāṇa",
-    "alt_names": [],
-    "url": "indexes/work_index.html#w_33",
     "places": []
   },
   {
