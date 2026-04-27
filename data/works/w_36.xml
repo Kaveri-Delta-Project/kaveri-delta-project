@@ -17,8 +17,10 @@
     <body>
       <listBibl>
         <bibl xml:id="w_36">
+          <title type="preferred">Dharmavijayacampū</title>
           <editor key="p_18" role="aut">Nallā Dīkṣita</editor>
-          <note type="bibliographical">NCC Vol 9 Page 263</note>
+          <note type="genre">verse and prose (campū)</note>
+          <note type="bibliographical">NCC vol. 9, 263</note>
         </bibl>
       </listBibl>
     </body>
