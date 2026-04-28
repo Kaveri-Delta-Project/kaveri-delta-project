@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_39">
+          <title type="preferred">Śabdabhedanirūpaṇa </title>
+          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
+          <note type="bibliographical">NCC vol. 24, 188</note>
+          <note type="bibliographical">Tanjore Mss 5301; 5302; 5303; 5324–5325</note>
+          <note type="general">Raghavan 34 — 3 different works of the same name (on primary, secondary, and suggestive śabdaśakti) were produced at the behest of Śāhaji by Rāmabhadra Dīkṣita and his pupils Nārāyaṇa and Veṅkaṭakṛṣṇa.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

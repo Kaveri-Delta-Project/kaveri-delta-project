@@ -28,6 +28,10 @@
     "name": "Gaṅgāvataraṇa"
   },
   {
+    "xml_id": "w_37",
+    "name": "Jānakīpariṇaya"
+  },
+  {
     "xml_id": "w_6",
     "name": "Kaliviḍambana"
   },
@@ -88,6 +92,10 @@
     "name": "Uttaracampū"
   },
   {
+    "xml_id": "w_39",
+    "name": "Śabdabhedanirūpaṇa"
+  },
+  {
     "xml_id": "w_14",
     "name": "Śabdakaumudī"
   },
@@ -118,5 +126,9 @@
   {
     "xml_id": "w_31",
     "name": "Śṛṅgāratilakabhāṇa"
+  },
+  {
+    "xml_id": "w_38",
+    "name": "Ṣaḍdarśanīsiddhāntasaṁgraha"
   }
 ]

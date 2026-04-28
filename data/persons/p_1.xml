@@ -24,9 +24,6 @@
           <trait type="teacher" key="p_3">
             <label>Cokkanāthamakhin</label>
           </trait>
-          <trait type="son" key="p_19">
-            <label>Nārayaṇa Dīkṣita</label>
-          </trait>
           <floruit from="1638" to="1638">Active around 1638</floruit>
           <affiliation key="l_1" role="affiliation to this place">
             <placeName>Thiruvisanallur</placeName>

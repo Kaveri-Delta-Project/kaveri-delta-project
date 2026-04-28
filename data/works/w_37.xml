@@ -16,10 +16,12 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_36">
-          <title type="preferred">Dharmavijayacampū</title>
-          <note type="genre">verse and prose (campū)</note>
-          <note type="bibliographical">NCC vol. 9, 263</note>
+        <bibl xml:id="w_37">
+          <title type="preferred">Jānakīpariṇaya</title>
+          <title type="variant">Jānakīpariṇayanāṭaka</title>
+          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <note type="genre">play</note>
+          <note type="bibliographical">NCC vol. 24, 188</note>
         </bibl>
       </listBibl>
     </body>
