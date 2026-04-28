@@ -141,12 +141,41 @@
   },
   {
     "type": "person",
-    "id": "p_23",
+    "id": "p_24",
     "name": "Periyappā Kavi",
     "alt_names": [
-      "Periyappā Śāstrī"
+      "Periappā Kavi",
+      "Vinateya",
+      "Periappā Śāstrī",
+      "Vainateya"
     ],
-    "url": "indexes/person_index.html#p_23",
+    "url": "indexes/person_index.html#p_24",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_25",
+    "name": "Vedakavīśvara",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_25",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_26",
+    "name": "Viśvanātha Dīkṣita",
+    "alt_names": [
+      "Viśvanātha Śāstrī"
+    ],
+    "url": "indexes/person_index.html#p_26",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_27",
+    "name": "Kṛṣṇānanda Sarasvatī",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_27",
     "places": []
   },
   {
@@ -163,14 +192,7 @@
     "type": "person",
     "id": "p_4",
     "name": "Rāmabhadra Dīkṣita",
-    "alt_names": [
-      "Rāmabhadrādhvarin",
-      "Rāmabhadra Makhin",
-      "Rāmabhadrācārya",
-      "Ayyā Dīkṣita",
-      "Ācārya Rāmabhadra",
-      "Pratyagra Patañjali"
-    ],
+    "alt_names": [],
     "url": "indexes/person_index.html#p_4",
     "places": [
       "Kandaramanikkam [l_4]",
@@ -461,27 +483,25 @@
   {
     "type": "work",
     "id": "w_37",
-    "name": "Jānakīpariṇaya",
-    "alt_names": [
-      "Jānakīpariṇayanāṭaka"
-    ],
+    "name": "Advaitarasamañjarī",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_37",
     "places": []
   },
   {
     "type": "work",
     "id": "w_38",
-    "name": "Ṣaḍdarśanīsiddhāntasaṁgraha",
-    "alt_names": [
-      "Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)"
-    ],
+    "name": "Śṛṅgārasarvasvabhāṇa",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_38",
-    "places": []
+    "places": [
+      "Thiruvidaimarudur [l_6]"
+    ]
   },
   {
     "type": "work",
     "id": "w_39",
-    "name": "Śabdabhedanirūpaṇa",
+    "name": "Cittavṛttikalyāṇa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_39",
     "places": []
@@ -507,10 +527,38 @@
   {
     "type": "work",
     "id": "w_42",
-    "name": "Padamaṇimañjarī",
+    "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ",
     "alt_names": [],
     "url": "indexes/work_index.html#w_42",
     "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_43",
+    "name": "Padamaṇimañjarī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_43",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_44",
+    "name": "Paribhāṣārthasaṃgraha",
+    "alt_names": [
+      "Paribhāṣāsaṃgraha"
+    ],
+    "url": "indexes/work_index.html#w_44",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_45",
+    "name": "Śṛṅgāramañjarīśāhajīya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_45",
+    "places": [
+      "Thiruvaiyaru [l_8]"
+    ]
   },
   {
     "type": "work",
@@ -546,7 +594,7 @@
       "Thiruvisanalluru",
       "Tiruvisalur",
       "Śāhajipuram",
-      "Śāhajimahārājapuram"
+      "Śāhajirājapuram"
     ],
     "url": "indexes/place_index.html#l_1"
   },
