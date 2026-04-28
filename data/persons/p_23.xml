@@ -16,14 +16,9 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_11">
-          <persName type="preferred">Paramaśivendra Sarasvatī</persName>
-          <trait type="teacher" key="p_21">
-            <label>Sadāśivendra Sarasvatī</label>
-          </trait>
-          <trait type="teacher" key="p_19">
-            <label>Nallādhvarin</label>
-          </trait>
+        <person xml:id="p_23">
+          <persName type="preferred">Periyappā Kavi </persName>
+          <persName type="variant">Periyappā Śāstrī </persName>
         </person>
       </listPerson>
     </body>

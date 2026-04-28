@@ -14,6 +14,16 @@
       "p_17",
       "person",
       "Thiruvisanallur"
+    ],
+    [
+      "p_18",
+      "person",
+      "Thiruvisanallur"
+    ],
+    [
+      "p_21",
+      "person",
+      "Thiruvisanallur"
     ]
   ],
   "l_4": [
@@ -24,6 +34,11 @@
     ],
     [
       "p_4",
+      "person",
+      "Kandaramanikkam"
+    ],
+    [
+      "p_19",
       "person",
       "Kandaramanikkam"
     ]
@@ -54,6 +69,16 @@
     [
       "p_8",
       "person",
+      "Thiruvidaimarudur"
+    ],
+    [
+      "w_38",
+      "work",
+      "Thiruvidaimarudur"
+    ],
+    [
+      "w_40",
+      "work",
       "Thiruvidaimarudur"
     ]
   ],

@@ -16,14 +16,13 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_11">
-          <persName type="preferred">Paramaśivendra Sarasvatī</persName>
-          <trait type="teacher" key="p_21">
-            <label>Sadāśivendra Sarasvatī</label>
-          </trait>
+        <person xml:id="p_20">
+          <persName type="preferred">Rāmanāthamakhin</persName>
           <trait type="teacher" key="p_19">
             <label>Nallādhvarin</label>
           </trait>
+          <note>Described as a sarvantantrasvatantra and sarvatomukhayājin by Nallādhvarin in the latter's prologue to his Śṛṅgārasarvasvabhāṇa (Raghavan, Intro to Śāhendravilāsa, p. 53)</note>
+          <note>Possibly mentioned in a letter preserved in Descriptive Catalogues of Sanskrit Manuscripts, Vol. 11, entry 6594.</note>
         </person>
       </listPerson>
     </body>
