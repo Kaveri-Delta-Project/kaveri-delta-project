@@ -78,6 +78,33 @@
   },
   {
     "type": "person",
+    "id": "p_18",
+    "name": "Bhūminātha Kavi",
+    "alt_names": [
+      "Nallā Dīkṣita"
+    ],
+    "url": "indexes/person_index.html#p_18",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_19",
+    "name": "Nallādhvarin",
+    "alt_names": [
+      "Nallābudha",
+      "Nallākavi",
+      "Nallā Dīkṣita",
+      "Nallāsudhī"
+    ],
+    "url": "indexes/person_index.html#p_19",
+    "places": [
+      "Kandaramanikkam [l_4]"
+    ]
+  },
+  {
+    "type": "person",
     "id": "p_2",
     "name": "Appayya Dīkṣita",
     "alt_names": [],
@@ -85,6 +112,42 @@
     "places": [
       "Adaiyapulam [l_13]"
     ]
+  },
+  {
+    "type": "person",
+    "id": "p_20",
+    "name": "Rāmanāthamakhin",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_20",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_21",
+    "name": "Sadāśivendra Sarasvatī",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_21",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_22",
+    "name": "Vaidyanātha Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_22",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_23",
+    "name": "Periyappā Kavi",
+    "alt_names": [
+      "Periyappā Śāstrī"
+    ],
+    "url": "indexes/person_index.html#p_23",
+    "places": []
   },
   {
     "type": "person",
@@ -390,6 +453,58 @@
   },
   {
     "type": "work",
+    "id": "w_37",
+    "name": "Advaitarasamañjarī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_37",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_38",
+    "name": "Śṛṅgārasarvasvabhāṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_38",
+    "places": [
+      "Thiruvidaimarudur [l_6]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_39",
+    "name": "Cittavṛttikalyāṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_39",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_40",
+    "name": "Jīvanmuktikalyāṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_40",
+    "places": [
+      "Thiruvidaimarudur [l_6]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_41",
+    "name": "Subhadrāpariṇaya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_41",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_42",
+    "name": "Padamaṇimañjarī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_42",
+    "places": []
+  },
+  {
+    "type": "work",
     "id": "w_5",
     "name": "Subhadrāpariṇaya",
     "alt_names": [],
@@ -421,7 +536,8 @@
       "Thiruvishaloor",
       "Thiruvisanalluru",
       "Tiruvisalur",
-      "Śāhajipuram"
+      "Śāhajipuram",
+      "Śāhajirājapuram"
     ],
     "url": "indexes/place_index.html#l_1"
   },
