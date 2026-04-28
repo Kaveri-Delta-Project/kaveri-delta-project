@@ -60,7 +60,6 @@
     "name": "Nīlakaṇṭhavijayacampū"
   },
   {
-<<<<<<< HEAD
     "xml_id": "w_43",
     "name": "Padamaṇimañjarī"
   },
@@ -69,8 +68,6 @@
     "name": "Paribhāṣārthasaṃgraha"
   },
   {
-=======
->>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     "xml_id": "w_30",
     "name": "Patañjalicarita"
   },
@@ -135,7 +132,6 @@
     "name": "Śāhendravilāsa"
   },
   {
-<<<<<<< HEAD
     "xml_id": "w_45",
     "name": "Śṛṅgāramañjarīśāhajīya"
   },
@@ -144,18 +140,14 @@
     "name": "Śṛṅgārasarvasvabhāṇa"
   },
   {
-=======
->>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     "xml_id": "w_31",
     "name": "Śṛṅgāratilakabhāṇa"
   },
   {
-<<<<<<< HEAD
     "xml_id": "w_42",
-    "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ"
-=======
+    "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ",
     "xml_id": "w_38",
     "name": "Ṣaḍdarśanīsiddhāntasaṁgraha"
->>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
+
   }
 ]

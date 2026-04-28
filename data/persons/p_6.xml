@@ -33,15 +33,12 @@
           <trait type="brother" key="p_10">
             <label>Serfoji Bhonsle</label>
           </trait>
-<<<<<<< HEAD
           <trait type="patron" key="p_18">
             <label>Bhūminātha Kavi</label>
           </trait>
           <trait type="patron" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
-=======
->>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
           <floruit from="1684" to="1710">r. 1684-1710</floruit>
           <affiliation key="l_2" role="resided">
             <placeName>Thanjavur</placeName>
