@@ -48,22 +48,20 @@ function showEntryForm(formId) {
 
 const buttons = document.querySelectorAll('.alphabet button');
 const groups = document.querySelectorAll('.letter-group');
+let activeLetter = "all";
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    const letter = button.dataset.letter;
+    activeLetter = button.dataset.letter;
 
-    // Show all groups if "all" clicked
-    if (letter === 'all') {
+    if (activeLetter === 'all') {
       groups.forEach(group => group.style.display = '');
       return;
     }
 
-    // Hide all letter groups
     groups.forEach(group => group.style.display = 'none');
 
-    // Show only the selected letter group
-    const target = document.getElementById('letter-' + letter);
+    const target = document.getElementById('letter-' + activeLetter);
     if (target) {
       target.style.display = '';
     }
@@ -224,24 +222,34 @@ document.addEventListener("DOMContentLoaded", () => {
       const regex = new RegExp(`\\b${q}`);
       const match = regex.test(text);
 
-      row.style.display = match ? "" : "none";
+      const rowLetter = row.closest(".letter-group")?.id?.replace("letter-", "");
+
+      const inScope =
+        activeLetter === "all" || rowLetter === activeLetter;
+
+      row.style.display =
+        row.classList.toggle("d-none", !(match && inScope));
     });
+
 
     // Update groups
     groups.forEach(group => {
       const visibleRows = group.querySelectorAll(
-        ".entity-row:not([style*='display: none'])"
+        ".entity-row:not(.d-none)"
       );
 
       const heading = group.querySelector(".letter-heading");
       const noEntries = group.querySelector(".no-entries");
 
-      if (visibleRows.length > 0) {
-        group.style.display = "";
-        if (heading) heading.style.display = query ? "none" : "";
-        if (noEntries) noEntries.style.display = "none";
-      } else {
-        group.style.display = "none";
+      // show/hide whole group based on rows
+      group.style.display = visibleRows.length ? "" : "none";
+
+      // ALWAYS show headings (do NOT tie to query or alphabet)
+      if (heading) heading.style.display = "";
+
+      // optional empty message
+      if (noEntries) {
+        noEntries.style.display = visibleRows.length ? "none" : "";
       }
     });
 
@@ -258,7 +266,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (heading) heading.style.display = "";
       });
 
-      rows.forEach(row => (row.style.display = ""));
+      rows.forEach(row => row.classList.remove("d-none"));
+
+      buttons.forEach(btn => {
+        if (btn.dataset.letter === activeLetter) {
+          btn.click();
+        }
+      });
+
     }
   });
 });
