@@ -1,11 +1,19 @@
 [
   {
+    "xml_id": "w_37",
+    "name": "Advaitarasamañjarī"
+  },
+  {
     "xml_id": "w_13",
     "name": "Avaidikadarśanasaṃgraha"
   },
   {
     "xml_id": "w_22",
     "name": "Candraśekharavilāsa"
+  },
+  {
+    "xml_id": "w_39",
+    "name": "Cittavṛttikalyāṇa"
   },
   {
     "xml_id": "w_19",
@@ -26,6 +34,10 @@
   {
     "xml_id": "w_35",
     "name": "Gaṅgāvataraṇa"
+  },
+  {
+    "xml_id": "w_40",
+    "name": "Jīvanmuktikalyāṇa"
   },
   {
     "xml_id": "w_6",
@@ -56,6 +68,10 @@
     "name": "Nīlakaṇṭhavijayacampū"
   },
   {
+    "xml_id": "w_42",
+    "name": "Padamaṇimañjarī"
+  },
+  {
     "xml_id": "w_30",
     "name": "Patañjalicarita"
   },
@@ -77,6 +93,10 @@
   },
   {
     "xml_id": "w_5",
+    "name": "Subhadrāpariṇaya"
+  },
+  {
+    "xml_id": "w_41",
     "name": "Subhadrāpariṇaya"
   },
   {
@@ -114,6 +134,10 @@
   {
     "xml_id": "w_29",
     "name": "Śāhendravilāsa"
+  },
+  {
+    "xml_id": "w_38",
+    "name": "Śṛṅgārasarvasvabhāṇa"
   },
   {
     "xml_id": "w_31",

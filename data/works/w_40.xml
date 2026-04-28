@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_40">
+          <title type="preferred">Jīvanmuktikalyāṇa</title>
+          <editor key="p_19" role="aut">Nallādhvarin</editor>
+          <pubPlace key="l_6" role="performance">
+            <placeName>Thiruvidaimarudur</placeName>
+          </pubPlace>
+          <note type="genre">play</note>
+          <note type="subject">vedānta</note>
+          <note type="bibliographical">NCC, vol. 7, p. 291b</note>
+          <note type="general">Allegorical play on Advaita Vedānta</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

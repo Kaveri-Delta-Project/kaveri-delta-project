@@ -12,6 +12,10 @@
     "name": "Bhāskararāyamakhin"
   },
   {
+    "xml_id": "p_18",
+    "name": "Bhūminātha Kavi"
+  },
+  {
     "xml_id": "p_3",
     "name": "Cokkanāthamakhin"
   },
@@ -22,6 +26,10 @@
   {
     "xml_id": "p_13",
     "name": "Gaṅgādharādhvarin (alias Kākoji)"
+  },
+  {
+    "xml_id": "p_19",
+    "name": "Nallādhvarin"
   },
   {
     "xml_id": "p_1",
@@ -36,8 +44,20 @@
     "name": "Paramaśivendra Sarasvatī"
   },
   {
+    "xml_id": "p_23",
+    "name": "Periyappā Kavi"
+  },
+  {
     "xml_id": "p_4",
     "name": "Rāmabhadra Dīkṣita"
+  },
+  {
+    "xml_id": "p_20",
+    "name": "Rāmanāthamakhin"
+  },
+  {
+    "xml_id": "p_21",
+    "name": "Sadāśivendra Sarasvatī"
   },
   {
     "xml_id": "p_10",
@@ -46,6 +66,10 @@
   {
     "xml_id": "p_5",
     "name": "Tryambakarāyamakhin"
+  },
+  {
+    "xml_id": "p_22",
+    "name": "Vaidyanātha Dīkṣita"
   },
   {
     "xml_id": "p_15",

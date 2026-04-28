@@ -24,6 +24,15 @@
           <trait type="member of family" key="p_3">
             <label>Cokkanāthamakhin</label>
           </trait>
+          <trait type="teacher" key="p_18">
+            <label>Bhūminātha Kavi</label>
+          </trait>
+          <trait type="contemporary of" key="p_19">
+            <label>Nallādhvarin</label>
+          </trait>
+          <trait type="member of family" key="p_22">
+            <label>Vaidyanātha Dīkṣita</label>
+          </trait>
           <idno type="Wikidata">Q113774201</idno>
           <affiliation key="l_4" role="born">
             <placeName>Kandaramanikkam</placeName>

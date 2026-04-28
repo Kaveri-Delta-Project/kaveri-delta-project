@@ -165,6 +165,26 @@
       "w_31",
       "work",
       "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "p_18",
+      "person",
+      "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "p_19",
+      "person",
+      "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "p_22",
+      "person",
+      "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "w_42",
+      "work",
+      "Rāmabhadra Dīkṣita"
     ]
   ],
   "p_6": [
@@ -225,6 +245,11 @@
     ],
     [
       "p_10",
+      "person",
+      "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "p_18",
       "person",
       "Śāhaji I (of Thanjavur)"
     ]
@@ -369,6 +394,16 @@
       "w_19",
       "work",
       "Paramaśivendra Sarasvatī"
+    ],
+    [
+      "p_21",
+      "person",
+      "Paramaśivendra Sarasvatī"
+    ],
+    [
+      "p_19",
+      "person",
+      "Paramaśivendra Sarasvatī"
     ]
   ],
   "p_12": [
@@ -440,25 +475,133 @@
       "w_29",
       "work",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
+    ],
+    [
+      "w_42",
+      "work",
+      "Śrīdhara Veṅkaṭeśa Ayyāvāl"
     ]
   ],
   "p_18": [
     [
       "w_36",
       "work",
-      "Nallā Dīkṣita"
+      "Bhūminātha Kavi"
     ],
     [
       "p_6",
       "person",
-      "Nallā Dīkṣita"
+      "Bhūminātha Kavi"
+    ],
+    [
+      "p_4",
+      "person",
+      "Bhūminātha Kavi"
+    ],
+    [
+      "p_6",
+      "person",
+      "Bhūminātha Kavi"
     ]
   ],
   "p_19": [
     [
       "p_1",
       "person",
-      "Nārayaṇa Dīkṣita"
+      "Nallādhvarin"
+    ],
+    [
+      "p_4",
+      "person",
+      "Nallādhvarin"
+    ],
+    [
+      "p_20",
+      "person",
+      "Nallādhvarin"
+    ],
+    [
+      "p_21",
+      "person",
+      "Nallādhvarin"
+    ],
+    [
+      "w_37",
+      "work",
+      "Nallādhvarin"
+    ],
+    [
+      "p_11",
+      "person",
+      "Nallādhvarin"
+    ],
+    [
+      "w_38",
+      "work",
+      "Nallādhvarin"
+    ],
+    [
+      "w_39",
+      "work",
+      "Nallādhvarin"
+    ],
+    [
+      "w_40",
+      "work",
+      "Nallādhvarin"
+    ],
+    [
+      "w_41",
+      "work",
+      "Nallādhvarin"
+    ],
+    [
+      "w_42",
+      "work",
+      "Nallādhvarin"
+    ]
+  ],
+  "p_20": [
+    [
+      "p_19",
+      "person",
+      "Rāmanāthamakhin"
+    ],
+    [
+      "w_42",
+      "work",
+      "Rāmanāthamakhin"
+    ]
+  ],
+  "p_21": [
+    [
+      "p_11",
+      "person",
+      "Sadāśivendra Sarasvatī"
+    ],
+    [
+      "p_19",
+      "person",
+      "Sadāśivendra Sarasvatī"
+    ],
+    [
+      "w_37",
+      "work",
+      "Sadāśivendra Sarasvatī"
+    ]
+  ],
+  "p_22": [
+    [
+      "p_4",
+      "person",
+      "Vaidyanātha Dīkṣita"
+    ]
+  ],
+  "p_23": [
+    [
+      "w_42",
+      "work",
+      "Periyappā Kavi"
     ]
   ]
 }

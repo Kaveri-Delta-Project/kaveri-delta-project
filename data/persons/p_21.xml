@@ -16,16 +16,15 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_1">
-          <persName type="preferred">Nīlakaṇṭha Dīkṣita</persName>
-          <trait type="member of family" key="p_2">
-            <label>Appayya Dīkṣita</label>
+        <person xml:id="p_21">
+          <persName type="preferred">Sadāśivendra Sarasvatī</persName>
+          <trait type="student" key="p_11">
+            <label>Paramaśivendra Sarasvatī</label>
           </trait>
-          <trait type="teacher" key="p_3">
-            <label>Cokkanāthamakhin</label>
+          <trait type="teacher" key="p_19">
+            <label>Nallādhvarin</label>
           </trait>
-          <floruit from="1638" to="1638">Active around 1638</floruit>
-          <affiliation key="l_1" role="affiliation to this place">
+          <affiliation key="l_1" role="born">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
         </person>

@@ -16,18 +16,19 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_1">
-          <persName type="preferred">Nīlakaṇṭha Dīkṣita</persName>
-          <trait type="member of family" key="p_2">
-            <label>Appayya Dīkṣita</label>
+        <person xml:id="p_18">
+          <persName type="preferred">Bhūminātha Kavi</persName>
+          <persName type="variant">Nallā Dīkṣita</persName>
+          <trait type="student" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
           </trait>
-          <trait type="teacher" key="p_3">
-            <label>Cokkanāthamakhin</label>
+          <trait type="beneficiary" key="p_6">
+            <label>Śāhaji I (of Thanjavur)</label>
           </trait>
-          <floruit from="1638" to="1638">Active around 1638</floruit>
-          <affiliation key="l_1" role="affiliation to this place">
+          <affiliation key="l_1" role="resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <note>Same lineage as Rāmabhadra Dīkṣita (rāmabhadrādhvarivarapriyaśiṣyasya tadīyavaṃśajanmanaḥ), see Raghavan Intro to Śāhendravilāsa, p.24.</note>
         </person>
       </listPerson>
     </body>
