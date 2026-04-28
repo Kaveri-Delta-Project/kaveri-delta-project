@@ -192,7 +192,14 @@
     "type": "person",
     "id": "p_4",
     "name": "Rāmabhadra Dīkṣita",
-    "alt_names": [],
+    "alt_names": [
+      "Rāmabhadrādhvarin",
+      "Rāmabhadra Makhin",
+      "Rāmabhadrācārya",
+      "Ayyā Dīkṣita",
+      "Ācārya Rāmabhadra",
+      "Pratyagra Patañjali"
+    ],
     "url": "indexes/person_index.html#p_4",
     "places": [
       "Kandaramanikkam [l_4]",
@@ -483,25 +490,27 @@
   {
     "type": "work",
     "id": "w_37",
-    "name": "Advaitarasamañjarī",
-    "alt_names": [],
+    "name": "Jānakīpariṇaya",
+    "alt_names": [
+      "Jānakīpariṇayanāṭaka"
+    ],
     "url": "indexes/work_index.html#w_37",
     "places": []
   },
   {
     "type": "work",
     "id": "w_38",
-    "name": "Śṛṅgārasarvasvabhāṇa",
-    "alt_names": [],
+    "name": "Ṣaḍdarśanīsiddhāntasaṁgraha",
+    "alt_names": [
+      "Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)"
+    ],
     "url": "indexes/work_index.html#w_38",
-    "places": [
-      "Thiruvidaimarudur [l_6]"
-    ]
+    "places": []
   },
   {
     "type": "work",
     "id": "w_39",
-    "name": "Cittavṛttikalyāṇa",
+    "name": "Śabdabhedanirūpaṇa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_39",
     "places": []
@@ -594,7 +603,7 @@
       "Thiruvisanalluru",
       "Tiruvisalur",
       "Śāhajipuram",
-      "Śāhajirājapuram"
+      "Śāhajimahārājapuram"
     ],
     "url": "indexes/place_index.html#l_1"
   },
