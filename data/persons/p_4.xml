@@ -18,6 +18,12 @@
       <listPerson>
         <person xml:id="p_4">
           <persName type="preferred">Rāmabhadra Dīkṣita</persName>
+          <persName type="variant">Rāmabhadrādhvarin</persName>
+          <persName type="variant">Rāmabhadra Makhin</persName>
+          <persName type="variant">Rāmabhadrācārya</persName>
+          <persName type="variant">Ayyā Dīkṣita</persName>
+          <persName type="variant">Ācārya Rāmabhadra</persName>
+          <persName type="variant">Pratyagra Patañjali</persName>
           <trait type="student" key="p_3">
             <label>Cokkanāthamakhin</label>
           </trait>
@@ -43,6 +49,7 @@
           <affiliation key="l_1" role="resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <note>Due to his profiency in vyākaraṇa, he was called Pratyagra-Patañjali, i.e. 'The Modern Patañjali', by his contemporaries (The Indian Antiquary vol. 43, 129 T. S. Kuppuswami Sastri).</note>
         </person>
       </listPerson>
     </body>

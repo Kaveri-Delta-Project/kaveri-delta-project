@@ -167,22 +167,17 @@
       "Rāmabhadra Dīkṣita"
     ],
     [
-      "p_18",
-      "person",
+      "w_37",
+      "work",
       "Rāmabhadra Dīkṣita"
     ],
     [
-      "p_19",
-      "person",
+      "w_38",
+      "work",
       "Rāmabhadra Dīkṣita"
     ],
     [
-      "p_22",
-      "person",
-      "Rāmabhadra Dīkṣita"
-    ],
-    [
-      "w_42",
+      "w_39",
       "work",
       "Rāmabhadra Dīkṣita"
     ],
@@ -254,8 +249,8 @@
       "Śāhaji I (of Thanjavur)"
     ],
     [
-      "p_18",
-      "person",
+      "w_39",
+      "work",
       "Śāhaji I (of Thanjavur)"
     ],
     [
@@ -404,16 +399,6 @@
       "w_19",
       "work",
       "Paramaśivendra Sarasvatī"
-    ],
-    [
-      "p_21",
-      "person",
-      "Paramaśivendra Sarasvatī"
-    ],
-    [
-      "p_19",
-      "person",
-      "Paramaśivendra Sarasvatī"
     ]
   ],
   "p_12": [
@@ -490,6 +475,7 @@
       "w_29",
       "work",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
+<<<<<<< HEAD
     ],
     [
       "w_42",
@@ -505,34 +491,22 @@
       "p_24",
       "person",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
+=======
+>>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     ]
   ],
   "p_18": [
     [
-      "w_36",
-      "work",
-      "Bhūminātha Kavi"
-    ],
-    [
       "p_6",
       "person",
-      "Bhūminātha Kavi"
-    ],
-    [
-      "p_4",
-      "person",
-      "Bhūminātha Kavi"
-    ],
-    [
-      "p_6",
-      "person",
-      "Bhūminātha Kavi"
+      "Nallā Dīkṣita"
     ]
   ],
   "p_19": [
     [
       "p_1",
       "person",
+<<<<<<< HEAD
       "Nallādhvarin"
     ],
     [
@@ -689,6 +663,9 @@
       "p_24",
       "person",
       "Kṛṣṇānanda Sarasvatī"
+=======
+      "Nārayaṇa Dīkṣita"
+>>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     ]
   ]
 }

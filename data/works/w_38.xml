@@ -17,13 +17,14 @@
     <body>
       <listBibl>
         <bibl xml:id="w_38">
-          <title type="preferred">Śṛṅgārasarvasvabhāṇa</title>
-          <editor key="p_19" role="aut">Nallādhvarin</editor>
-          <pubPlace key="l_6" role="performance">
-            <placeName>Thiruvidaimarudur</placeName>
-          </pubPlace>
-          <note type="genre">play</note>
-          <note type="subject" source="other">erotic play</note>
+          <title type="preferred">Ṣaḍdarśanīsiddhāntasaṁgraha</title>
+          <title type="variant">Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)</title>
+          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <note type="bibliographical">NCC vol 24, 188</note>
+          <note type="bibliographical">Oppert II. 5029</note>
+          <note type="bibliographical">Tanjore vol 13, Mss 7631–7633</note>
+          <note type="general">Prepared alongside 6 other scholars of the court (Raghavan, 20).</note>
+          <note type="general">Rāmabhadra Dīkṣita wrote the Vyākāraṇa system. NCC vol. 24, 188.</note>
         </bibl>
       </listBibl>
     </body>

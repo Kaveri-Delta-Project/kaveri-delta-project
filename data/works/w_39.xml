@@ -17,12 +17,12 @@
     <body>
       <listBibl>
         <bibl xml:id="w_39">
-          <title type="preferred">Cittavṛttikalyāṇa</title>
-          <editor key="p_19" role="aut">Nallādhvarin</editor>
-          <note type="genre">play</note>
-          <note type="subject">vedānta</note>
-          <note type="bibliographical">NCC, vol. 7, p. 35b.</note>
-          <note type="general">Allegorical play on Advaita Vedānta, referred to in the prologue of the Jīvanmuktikalyāṇa</note>
+          <title type="preferred">Śabdabhedanirūpaṇa </title>
+          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
+          <note type="bibliographical">NCC vol. 24, 188</note>
+          <note type="bibliographical">Tanjore Mss 5301; 5302; 5303; 5324–5325</note>
+          <note type="general">Raghavan 34 — 3 different works of the same name (on primary, secondary, and suggestive śabdaśakti) were produced at the behest of Śāhaji by Rāmabhadra Dīkṣita and his pupils Nārāyaṇa and Veṅkaṭakṛṣṇa.</note>
         </bibl>
       </listBibl>
     </body>

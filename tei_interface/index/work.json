@@ -1,19 +1,11 @@
 [
   {
-    "xml_id": "w_37",
-    "name": "Advaitarasamañjarī"
-  },
-  {
     "xml_id": "w_13",
     "name": "Avaidikadarśanasaṃgraha"
   },
   {
     "xml_id": "w_22",
     "name": "Candraśekharavilāsa"
-  },
-  {
-    "xml_id": "w_39",
-    "name": "Cittavṛttikalyāṇa"
   },
   {
     "xml_id": "w_19",
@@ -36,8 +28,8 @@
     "name": "Gaṅgāvataraṇa"
   },
   {
-    "xml_id": "w_40",
-    "name": "Jīvanmuktikalyāṇa"
+    "xml_id": "w_37",
+    "name": "Jānakīpariṇaya"
   },
   {
     "xml_id": "w_6",
@@ -68,6 +60,7 @@
     "name": "Nīlakaṇṭhavijayacampū"
   },
   {
+<<<<<<< HEAD
     "xml_id": "w_43",
     "name": "Padamaṇimañjarī"
   },
@@ -76,6 +69,8 @@
     "name": "Paribhāṣārthasaṃgraha"
   },
   {
+=======
+>>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     "xml_id": "w_30",
     "name": "Patañjalicarita"
   },
@@ -100,16 +95,16 @@
     "name": "Subhadrāpariṇaya"
   },
   {
-    "xml_id": "w_41",
-    "name": "Subhadrāpariṇaya"
-  },
-  {
     "xml_id": "w_28",
     "name": "Tripuravijayacampū"
   },
   {
     "xml_id": "w_26",
     "name": "Uttaracampū"
+  },
+  {
+    "xml_id": "w_39",
+    "name": "Śabdabhedanirūpaṇa"
   },
   {
     "xml_id": "w_14",
@@ -140,6 +135,7 @@
     "name": "Śāhendravilāsa"
   },
   {
+<<<<<<< HEAD
     "xml_id": "w_45",
     "name": "Śṛṅgāramañjarīśāhajīya"
   },
@@ -148,11 +144,18 @@
     "name": "Śṛṅgārasarvasvabhāṇa"
   },
   {
+=======
+>>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     "xml_id": "w_31",
     "name": "Śṛṅgāratilakabhāṇa"
   },
   {
+<<<<<<< HEAD
     "xml_id": "w_42",
     "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ"
+=======
+    "xml_id": "w_38",
+    "name": "Ṣaḍdarśanīsiddhāntasaṁgraha"
+>>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
   }
 ]

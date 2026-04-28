@@ -17,13 +17,11 @@
     <body>
       <listBibl>
         <bibl xml:id="w_37">
-          <title type="preferred">Advaitarasamañjarī</title>
-          <editor key="p_19" role="aut">Nallādhvarin</editor>
-          <editor key="p_21" role="att">Sadāśivendra Sarasvatī</editor>
-          <note type="genre">treatise/exposition (philosophical, theological, etc.)</note>
-          <note type="subject">vedānta</note>
-          <note type="general">Nallādhvarin wrote it and its auto-commentary (Parimala) at the instance of Sadāśivendra Sarasvatī</note>
-          <note type="general">Work of Advaita Vedānta, in 44 verses with auto-commentary (Parimala) in prose</note>
+          <title type="preferred">Jānakīpariṇaya</title>
+          <title type="variant">Jānakīpariṇayanāṭaka</title>
+          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <note type="genre">play</note>
+          <note type="bibliographical">NCC vol. 24, 188</note>
         </bibl>
       </listBibl>
     </body>
