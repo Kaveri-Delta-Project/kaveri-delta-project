@@ -16,12 +16,13 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_14">
-          <title type="preferred">Śabdakaumudī</title>
-          <editor key="p_3" role="aut">Cokkanāthamakhin</editor>
-          <editor key="p_22" role="wac">Vaidyanātha Dīkṣita</editor>
+        <bibl xml:id="w_44">
+          <title type="preferred">Paribhāṣārthasaṃgraha</title>
+          <title type="variant">Paribhāṣāsaṃgraha</title>
+          <editor key="p_22" role="aut">Vaidyanātha Dīkṣita</editor>
           <note type="subject">grammar</note>
-          <note type="general">Vaidyanātha Dīkṣita wrote a commentary on this work.</note>
+          <note type="bibliographical">Descriptive Catalogue of Sanskrit Manuscripts, Sarasvati Mahal Library, vol. 10, entry 5722</note>
+          <note type="general">This work received an anonymous commentary; see entry 5723 in the catalogue mentioned above.</note>
         </bibl>
       </listBibl>
     </body>

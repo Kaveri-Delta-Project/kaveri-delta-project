@@ -33,6 +33,9 @@
           <trait type="member of family" key="p_22">
             <label>Vaidyanātha Dīkṣita</label>
           </trait>
+          <trait type="contemporary of" key="p_12">
+            <label>Bhagavantarāyamakhin</label>
+          </trait>
           <idno type="Wikidata">Q113774201</idno>
           <affiliation key="l_4" role="born">
             <placeName>Kandaramanikkam</placeName>

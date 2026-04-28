@@ -24,6 +24,9 @@
           <trait type="brother" key="p_5">
             <label>Tryambakarāyamakhin</label>
           </trait>
+          <trait type="contemporary of" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
+          </trait>
           <floruit from="1700" to="1700">ca. 1700</floruit>
         </person>
       </listPerson>

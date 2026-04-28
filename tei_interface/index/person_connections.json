@@ -185,6 +185,11 @@
       "w_42",
       "work",
       "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "p_12",
+      "person",
+      "Rāmabhadra Dīkṣita"
     ]
   ],
   "p_6": [
@@ -250,6 +255,11 @@
     ],
     [
       "p_18",
+      "person",
+      "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "p_24",
       "person",
       "Śāhaji I (of Thanjavur)"
     ]
@@ -431,6 +441,11 @@
       "w_27",
       "work",
       "Bhagavantarāyamakhin"
+    ],
+    [
+      "p_4",
+      "person",
+      "Bhagavantarāyamakhin"
     ]
   ],
   "p_13": [
@@ -479,6 +494,16 @@
     [
       "w_42",
       "work",
+      "Śrīdhara Veṅkaṭeśa Ayyāvāl"
+    ],
+    [
+      "w_43",
+      "work",
+      "Śrīdhara Veṅkaṭeśa Ayyāvāl"
+    ],
+    [
+      "p_24",
+      "person",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
     ]
   ],
@@ -595,13 +620,75 @@
       "p_4",
       "person",
       "Vaidyanātha Dīkṣita"
+    ],
+    [
+      "w_44",
+      "work",
+      "Vaidyanātha Dīkṣita"
+    ],
+    [
+      "w_14",
+      "work",
+      "Vaidyanātha Dīkṣita"
     ]
   ],
-  "p_23": [
+  "p_23": [],
+  "p_25": [
+    [
+      "p_24",
+      "person",
+      "Vedakavīśvara"
+    ]
+  ],
+  "p_24": [
+    [
+      "p_25",
+      "person",
+      "Periyappā Kavi"
+    ],
+    [
+      "w_45",
+      "work",
+      "Periyappā Kavi"
+    ],
+    [
+      "p_26",
+      "person",
+      "Periyappā Kavi"
+    ],
+    [
+      "p_27",
+      "person",
+      "Periyappā Kavi"
+    ],
+    [
+      "p_6",
+      "person",
+      "Periyappā Kavi"
+    ],
     [
       "w_42",
       "work",
       "Periyappā Kavi"
+    ],
+    [
+      "p_17",
+      "person",
+      "Periyappā Kavi"
+    ]
+  ],
+  "p_26": [
+    [
+      "p_24",
+      "person",
+      "Viśvanātha Dīkṣita"
+    ]
+  ],
+  "p_27": [
+    [
+      "p_24",
+      "person",
+      "Kṛṣṇānanda Sarasvatī"
     ]
   ]
 }

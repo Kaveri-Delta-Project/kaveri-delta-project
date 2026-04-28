@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_43">
+          <title type="preferred">Padamaṇimañjarī</title>
+          <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāl</editor>
+          <note type="genre">lexicon</note>
+          <note type="bibliographical">Descriptive Catalogue of Sanskrit manuscripts, Sarasvati Mahal Library, Vol.9, entries 5011-5012</note>
+          <note type="general">Co-authored also with a certain Nallāśāstrī (possibly Nallādhvarin, but not sure) and Veṅkaṭeśa Śāstrī (also known as Veṅkaṭeśvara Śāstrī).</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

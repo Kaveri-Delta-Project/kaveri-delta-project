@@ -22,6 +22,9 @@
           <trait type="beneficiary" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
+          <trait type="contemporary of" key="p_24">
+            <label>Periyappā Kavi</label>
+          </trait>
           <affiliation key="l_1" role="resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>

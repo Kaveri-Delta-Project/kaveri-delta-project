@@ -16,9 +16,12 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_23">
-          <persName type="preferred">Periyappā Kavi </persName>
-          <persName type="variant">Periyappā Śāstrī </persName>
+        <person xml:id="p_26">
+          <persName type="preferred">Viśvanātha Dīkṣita</persName>
+          <persName type="variant">Viśvanātha Śāstrī</persName>
+          <trait type="brother" key="p_24">
+            <label>Periyappā Kavi</label>
+          </trait>
         </person>
       </listPerson>
     </body>

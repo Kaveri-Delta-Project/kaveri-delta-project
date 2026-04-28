@@ -16,13 +16,11 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_22">
-          <persName type="preferred">Vaidyanātha Dīkṣita</persName>
-          <trait type="member of family" key="p_4">
-            <label>Rāmabhadra Dīkṣita</label>
+        <person xml:id="p_27">
+          <persName type="preferred">Kṛṣṇānanda Sarasvatī</persName>
+          <trait type="teacher" key="p_24">
+            <label>Periyappā Kavi</label>
           </trait>
-          <note>Nephew of Rāmabhadra Dīkṣita</note>
-          <note>Son of Ratnagiri Dīkṣita</note>
         </person>
       </listPerson>
     </body>

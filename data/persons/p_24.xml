@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_24">
+          <persName type="preferred">Periyappā Kavi</persName>
+          <persName type="variant">Periappā Kavi</persName>
+          <persName type="variant">Vinateya</persName>
+          <persName type="variant">Periappā Śāstrī</persName>
+          <persName type="variant">Vainateya</persName>
+          <trait type="contemporary of" key="p_25">
+            <label>Vedakavīśvara</label>
+          </trait>
+          <trait type="brother" key="p_26">
+            <label>Viśvanātha Dīkṣita</label>
+          </trait>
+          <trait type="student" key="p_27">
+            <label>Kṛṣṇānanda Sarasvatī</label>
+          </trait>
+          <trait type="beneficiary" key="p_6">
+            <label>Śāhaji I (of Thanjavur)</label>
+          </trait>
+          <trait type="contemporary of" key="p_17">
+            <label>Śrīdhara Veṅkaṭeśa Ayyāvāl</label>
+          </trait>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>
