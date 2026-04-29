@@ -18,14 +18,20 @@
       <listBibl>
         <bibl xml:id="w_42">
           <title type="preferred">Ṣaḍdarśanīsiddhāntasaṃgrahaḥ</title>
+          <title type="variant">Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)</title>
+          <title type="variant">Ṣaḍdarśanīsiddhāntasaṁgraha</title>
           <editor key="p_19" role="aut">Nallādhvarin</editor>
           <editor key="p_20" role="aut">Rāmanāthamakhin</editor>
           <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
           <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāl</editor>
           <editor key="p_24" role="aut">Periyappā Kavi</editor>
           <note type="genre">doxography</note>
+          <note type="bibliographical">NCC vol. 24, 188</note>
+          <note type="bibliographical">Oppert II. 5029</note>
+          <note type="bibliographical">Tanjore vol 13, Mss 7631–7633</note>
           <note type="general">Co-authored doxography covering six darśanas, namely Nyāya, Vaiśeṣika, Pūrvamīmāṃsā (both schools), Sāṃkhya (including the Seśvara system), Advaita Vedānta and grammar. </note>
           <note type="general">Seven co-authors. Aside from those mentioned in this record, there is also Yajñeśvarādhvarī and Śrīnivāsamakhī</note>
+          <note type="general">Rāmabhadra Dīkṣita wrote the Vyākāraṇa system. NCC vol. 24, 188.</note>
         </bibl>
       </listBibl>
     </body>

@@ -475,7 +475,6 @@
       "w_29",
       "work",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
-<<<<<<< HEAD
     ],
     [
       "w_42",
@@ -491,8 +490,6 @@
       "p_24",
       "person",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
-=======
->>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     ]
   ],
   "p_18": [
@@ -500,13 +497,17 @@
       "p_6",
       "person",
       "Nallā Dīkṣita"
+    ],
+    [
+      "w_36",
+      "work",
+      "Bhūminātha Kavi"
     ]
   ],
   "p_19": [
     [
       "p_1",
       "person",
-<<<<<<< HEAD
       "Nallādhvarin"
     ],
     [
@@ -558,6 +559,21 @@
       "w_42",
       "work",
       "Nallādhvarin"
+    ],
+    [
+      "w_46",
+      "work",
+      "Nallādhvarin"
+    ],
+    [
+      "w_47",
+      "work",
+      "Nallādhvarin"
+    ],
+    [
+      "w_48",
+      "work",
+      "Nallādhvarin"
     ]
   ],
   "p_20": [
@@ -585,6 +601,11 @@
     ],
     [
       "w_37",
+      "work",
+      "Sadāśivendra Sarasvatī"
+    ],
+    [
+      "w_48",
       "work",
       "Sadāśivendra Sarasvatī"
     ]
@@ -663,9 +684,6 @@
       "p_24",
       "person",
       "Kṛṣṇānanda Sarasvatī"
-=======
-      "Nārayaṇa Dīkṣita"
->>>>>>> 6538a6f31146f591ad175341b7829e5c5bc96d40
     ]
   ]
 }

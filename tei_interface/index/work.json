@@ -1,11 +1,19 @@
 [
   {
+    "xml_id": "w_48",
+    "name": "Advaitarasamañjarī"
+  },
+  {
     "xml_id": "w_13",
     "name": "Avaidikadarśanasaṃgraha"
   },
   {
     "xml_id": "w_22",
     "name": "Candraśekharavilāsa"
+  },
+  {
+    "xml_id": "w_46",
+    "name": "Cittavṛttikalyāṇa"
   },
   {
     "xml_id": "w_19",
@@ -136,7 +144,7 @@
     "name": "Śṛṅgāramañjarīśāhajīya"
   },
   {
-    "xml_id": "w_38",
+    "xml_id": "w_47",
     "name": "Śṛṅgārasarvasvabhāṇa"
   },
   {
@@ -145,9 +153,6 @@
   },
   {
     "xml_id": "w_42",
-    "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ",
-    "xml_id": "w_38",
-    "name": "Ṣaḍdarśanīsiddhāntasaṁgraha"
-
+    "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ"
   }
 ]

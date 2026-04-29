@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_48">
+          <title type="preferred">Advaitarasamañjarī</title>
+          <editor key="p_19" role="aut">Nallādhvarin</editor>
+          <editor key="p_21" role="att">Sadāśivendra Sarasvatī</editor>
+          <note type="genre">treatise/exposition (philosophical, theological, etc.)</note>
+          <note type="subject">vedānta</note>
+          <note type="general">Nallādhvarin wrote it and its auto-commentary (Parimala) at the instance of Sadāśivendra Sarasvatī</note>
+          <note type="general">Work of Advaita Vedānta, in 44 verses with auto-commentary (Parimala) in prose</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
