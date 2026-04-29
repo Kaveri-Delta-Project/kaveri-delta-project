@@ -201,8 +201,7 @@
       "Rāmabhadrācārya",
       "Ayyā Dīkṣita",
       "Ācārya Rāmabhadra",
-      "Pratyagra Patañjali",
-      "Dvitīya Prācetasa"
+      "Pratyagra Patañjali"
     ],
     "url": "indexes/person_index.html#p_4",
     "places": [
@@ -591,6 +590,14 @@
     "name": "Advaitarasamañjarī",
     "alt_names": [],
     "url": "indexes/work_index.html#w_48",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_49",
+    "name": "Paribhāṣāvṛttivyākhyāna",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_49",
     "places": []
   },
   {
