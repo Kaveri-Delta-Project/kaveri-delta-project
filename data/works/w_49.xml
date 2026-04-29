@@ -16,12 +16,10 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_30">
-          <title type="preferred">Patañjalicarita</title>
+        <bibl xml:id="w_49">
+          <title type="preferred">Paribhāṣāvṛttivyākhyāna</title>
           <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
-          <note type="genre">poetry</note>
-          <note type="bibliographical">Kāvyamālā 51</note>
-          <note type="bibliographical">NCC vol. 24, 188</note>
+          <note type="subject">grammar</note>
         </bibl>
       </listBibl>
     </body>
