@@ -18,7 +18,12 @@
       <listBibl>
         <bibl xml:id="w_5">
           <title type="preferred">Subhadrāpariṇaya</title>
+          <editor key="p_19" role="aut">Nallādhvarin</editor>
+          <pubPlace key="l_6" role="performance">
+            <placeName>Thiruvidaimarudur</placeName>
+          </pubPlace>
           <note type="genre">drama</note>
+          <note type="general">A drama in five acts based on the Puranic account of the marriage between Subhadrā and Arjuna.</note>
         </bibl>
       </listBibl>
     </body>

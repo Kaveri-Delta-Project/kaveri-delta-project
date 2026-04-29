@@ -19,6 +19,10 @@
         <bibl xml:id="w_31">
           <title type="preferred">Śṛṅgāratilakabhāṇa</title>
           <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <pubPlace key="l_10" role="performance">
+            <placeName>Madurai</placeName>
+          </pubPlace>
+          <note type="genre">play</note>
           <note type="bibliographical">NCC vol. 24, 188</note>
           <note type="bibliographical">Adyar D. XIII. 1343</note>
           <note type="bibliographical">Oppert II. 3849–3850</note>
