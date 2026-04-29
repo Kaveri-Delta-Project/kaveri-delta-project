@@ -499,16 +499,6 @@
   },
   {
     "type": "work",
-    "id": "w_38",
-    "name": "Ṣaḍdarśanīsiddhāntasaṁgraha",
-    "alt_names": [
-      "Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)"
-    ],
-    "url": "indexes/work_index.html#w_38",
-    "places": []
-  },
-  {
-    "type": "work",
     "id": "w_39",
     "name": "Śabdabhedanirūpaṇa",
     "alt_names": [],
@@ -537,7 +527,10 @@
     "type": "work",
     "id": "w_42",
     "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ",
-    "alt_names": [],
+    "alt_names": [
+      "Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)",
+      "Ṣaḍdarśanīsiddhāntasaṁgraha"
+    ],
     "url": "indexes/work_index.html#w_42",
     "places": []
   },
@@ -568,6 +561,32 @@
     "places": [
       "Thiruvaiyaru [l_8]"
     ]
+  },
+  {
+    "type": "work",
+    "id": "w_46",
+    "name": "Cittavṛttikalyāṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_46",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_47",
+    "name": "Śṛṅgārasarvasvabhāṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_47",
+    "places": [
+      "Thiruvidaimarudur [l_6]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_48",
+    "name": "Advaitarasamañjarī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_48",
+    "places": []
   },
   {
     "type": "work",
@@ -603,7 +622,8 @@
       "Thiruvisanalluru",
       "Tiruvisalur",
       "Śāhajipuram",
-      "Śāhajimahārājapuram"
+      "Śāhajimahārājapuram",
+      "Śāhajirājapuram"
     ],
     "url": "indexes/place_index.html#l_1"
   },
