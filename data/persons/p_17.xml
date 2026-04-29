@@ -19,6 +19,9 @@
         <person xml:id="p_17">
           <persName type="preferred">Śrīdhara Veṅkaṭeśa Ayyāvāl</persName>
           <persName type="variant">Ayyāvāl of Thiruvisanallur</persName>
+          <persName type="variant">Veṅkaṭeśa</persName>
+          <persName type="variant">Veṅkaṭeśa Śāstrin</persName>
+          <persName type="variant">Ayyāvāl</persName>
           <trait type="beneficiary" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
@@ -28,8 +31,9 @@
           <affiliation key="l_1" role="resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
-          <bibl>Raghavan preface</bibl>
+          <bibl>Raghavan, intro to Śāhendravilāsa</bibl>
           <note>Biographer of King Śāhaji</note>
+          <note>That he was as a resident of Thiruvissannalur is borne out by the existence in that village of his house and the annual festival (Ayyāvāl utsava) that takes place there in his honour (see Raghavan, intro to Śāhendravilāsa pg. 60–64)</note>
         </person>
       </listPerson>
     </body>

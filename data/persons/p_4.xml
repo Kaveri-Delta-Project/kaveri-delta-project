@@ -24,6 +24,7 @@
           <persName type="variant">Ayyā Dīkṣita</persName>
           <persName type="variant">Ācārya Rāmabhadra</persName>
           <persName type="variant">Pratyagra Patañjali</persName>
+          <persName type="variant">Dvitīya Prācetasa</persName>
           <trait type="student" key="p_3">
             <label>Cokkanāthamakhin</label>
           </trait>
@@ -49,7 +50,13 @@
           <affiliation key="l_1" role="resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
-          <note>Due to his profiency in vyākaraṇa, he was called Pratyagra-Patañjali, i.e. 'The Modern Patañjali', by his contemporaries (The Indian Antiquary vol. 43, 129 T. S. Kuppuswami Sastri).</note>
+          <affiliation key="l_10" role="visited">
+            <placeName>Madurai</placeName>
+          </affiliation>
+          <note>Due to his profiency in vyākaraṇa, he was called Pratyagra-Patañjali, i.e. 'The Modern Patañjali', by his contemporaries (The Indian Antiquary vol. 43, pg. 129 T. S. Kuppuswami Sastri).</note>
+          <note>Raghavan in his intro to Śāhendravilāsa (pg. 41) suggests a sojourn at Madura for Rāmabhadra Dīkṣita on account of the mention of Madura as the venue of the enactment of of his Śṛṅgāratilakabhāṇa</note>
+          <note>His contemporaries and pupils paid him tributes. E.g. Bhagavantarāya in his play Rāghavābhyudaya calls him Pratyagra-Patañjali and Dvitīya-Prācetasa</note>
+          <note>Ṛgvedin, Kauṇḍinyagotra (Raghavan intro to Śāhendravilāsa pg. 40)</note>
         </person>
       </listPerson>
     </body>
