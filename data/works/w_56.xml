@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_56">
+          <title type="preferred">Rāmakarṇarasāyaṇastava</title>
+          <title type="variant">Rāmastavakarṇarasāyana</title>
+          <title type="variant">Rāmakarṇāmṛta</title>
+          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <note type="genre">hymn</note>
+          <note type="subject">vaiṣṇava</note>
+          <note type="bibliographical">Stavamaṇimālā, Sarasvatī Vilāsa Series 6</note>
+          <note type="bibliographical">NCC vol. 24, 38 and 252</note>
+          <note type="general">In 3 parts</note>
+          <note type="general">One of the 9 hymns that are printed in the Stavamaṇimālā as Sarasvatī Vilāsa Series 6 (ed. Subrahmanya Sastri)</note>
+          <note type="general">See Thiruvengadathan pg. 17 and Raghavan introduction to Śāhendravilāsa pg. 41</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

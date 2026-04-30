@@ -16,13 +16,16 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_49">
-          <title type="preferred">Paribhāṣāvṛttivyākhyāna</title>
+        <bibl xml:id="w_50">
+          <title type="preferred">Uṇādimaṇidīpikā</title>
           <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
+          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
           <note type="genre">commentary</note>
           <note type="subject">grammar</note>
-          <note type="bibliographical">Tanjore 5720, 5721</note>
-          <note type="general">Commentary on the Paribhāṣavṛtti by the twelfth century grammarian Sīradeva</note>
+          <note type="bibliographical">Tanjore Ms. 5675</note>
+          <note type="bibliographical">NCC vol. 24, 188</note>
+          <note type="bibliographical">NCC vol. 2, 293</note>
+          <note type="general">See Thiruvengadathan pg. 17, and Raghavan introduction to Śāhendravilāsa pg. 42</note>
         </bibl>
       </listBibl>
     </body>
