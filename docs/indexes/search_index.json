@@ -606,6 +606,100 @@
   },
   {
     "type": "work",
+    "id": "w_50",
+    "name": "Uṇādimaṇidīpikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_50",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_51",
+    "name": "Rāmacitrastava",
+    "alt_names": [
+      "Rāmavicitrastava"
+    ],
+    "url": "indexes/work_index.html#w_51",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_52",
+    "name": "Rāmacāpastava",
+    "alt_names": [
+      "Cāpastava"
+    ],
+    "url": "indexes/work_index.html#w_52",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_53",
+    "name": "Rāmabāṇastava",
+    "alt_names": [
+      "Bāṇastava"
+    ],
+    "url": "indexes/work_index.html#w_53",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_54",
+    "name": "Ācāryastavarājabhūṣaṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_54",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_55",
+    "name": "Viśvagarbhastava",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_55",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_56",
+    "name": "Rāmakarṇarasāyaṇastava",
+    "alt_names": [
+      "Rāmastavakarṇarasāyana",
+      "Rāmakarṇāmṛta"
+    ],
+    "url": "indexes/work_index.html#w_56",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_57",
+    "name": "Rāmaprasādastava",
+    "alt_names": [
+      "Prasādastava"
+    ],
+    "url": "indexes/work_index.html#w_57",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_58",
+    "name": "Varṇamālāstava",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_58",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_59",
+    "name": "Rāmāṣṭaprāsastava",
+    "alt_names": [
+      "Aṣṭaprāsarāmaśataka",
+      "Aṣṭaprāsa"
+    ],
+    "url": "indexes/work_index.html#w_59",
+    "places": []
+  },
+  {
+    "type": "work",
     "id": "w_6",
     "name": "Kaliviḍambana",
     "alt_names": [],
