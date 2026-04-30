@@ -18,11 +18,11 @@
       <listPerson>
         <person xml:id="p_21">
           <persName type="preferred">Sadāśivendra Sarasvatī</persName>
-          <trait type="student" key="p_11">
-            <label>Paramaśivendra Sarasvatī</label>
-          </trait>
           <trait type="teacher" key="p_19">
             <label>Nallādhvarin</label>
+          </trait>
+          <trait type="student" key="p_11">
+            <label>Paramaśivendra Sarasvatī</label>
           </trait>
           <affiliation key="l_1" role="born">
             <placeName>Thiruvisanallur</placeName>

@@ -22,14 +22,14 @@
           <persName type="variant">Nallākavi</persName>
           <persName type="variant">Nallā Dīkṣita</persName>
           <persName type="variant">Nallāsudhī</persName>
-          <trait type="contemporary of" key="p_4">
-            <label>Rāmabhadra Dīkṣita</label>
-          </trait>
           <trait type="student" key="p_20">
             <label>Rāmanāthamakhin</label>
           </trait>
           <trait type="student" key="p_21">
             <label>Sadāśivendra Sarasvatī</label>
+          </trait>
+          <trait type="contemporary of" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
           </trait>
           <trait type="student" key="p_11">
             <label>Paramaśivendra Sarasvatī</label>

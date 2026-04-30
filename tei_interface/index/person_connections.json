@@ -245,6 +245,21 @@
       "w_59",
       "work",
       "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "p_18",
+      "person",
+      "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "p_19",
+      "person",
+      "Rāmabhadra Dīkṣita"
+    ],
+    [
+      "p_22",
+      "person",
+      "Rāmabhadra Dīkṣita"
     ]
   ],
   "p_6": [
@@ -321,6 +336,11 @@
     [
       "w_50",
       "work",
+      "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "p_18",
+      "person",
       "Śāhaji I (of Thanjavur)"
     ]
   ],
@@ -464,6 +484,16 @@
       "w_19",
       "work",
       "Paramaśivendra Sarasvatī"
+    ],
+    [
+      "p_19",
+      "person",
+      "Paramaśivendra Sarasvatī"
+    ],
+    [
+      "p_21",
+      "person",
+      "Paramaśivendra Sarasvatī"
     ]
   ],
   "p_12": [
@@ -559,24 +589,24 @@
   ],
   "p_18": [
     [
-      "p_6",
-      "person",
-      "Nallā Dīkṣita"
-    ],
-    [
       "w_36",
       "work",
+      "Bhūminātha Kavi"
+    ],
+    [
+      "p_4",
+      "person",
+      "Bhūminātha Kavi"
+    ],
+    [
+      "p_6",
+      "person",
       "Bhūminātha Kavi"
     ]
   ],
   "p_19": [
     [
       "p_1",
-      "person",
-      "Nallādhvarin"
-    ],
-    [
-      "p_4",
       "person",
       "Nallādhvarin"
     ],
@@ -593,11 +623,6 @@
     [
       "w_37",
       "work",
-      "Nallādhvarin"
-    ],
-    [
-      "p_11",
-      "person",
       "Nallādhvarin"
     ],
     [
@@ -639,6 +664,16 @@
       "w_5",
       "work",
       "Nallādhvarin"
+    ],
+    [
+      "p_4",
+      "person",
+      "Nallādhvarin"
+    ],
+    [
+      "p_11",
+      "person",
+      "Nallādhvarin"
     ]
   ],
   "p_20": [
@@ -655,11 +690,6 @@
   ],
   "p_21": [
     [
-      "p_11",
-      "person",
-      "Sadāśivendra Sarasvatī"
-    ],
-    [
       "p_19",
       "person",
       "Sadāśivendra Sarasvatī"
@@ -673,14 +703,14 @@
       "w_48",
       "work",
       "Sadāśivendra Sarasvatī"
+    ],
+    [
+      "p_11",
+      "person",
+      "Sadāśivendra Sarasvatī"
     ]
   ],
   "p_22": [
-    [
-      "p_4",
-      "person",
-      "Vaidyanātha Dīkṣita"
-    ],
     [
       "w_44",
       "work",
@@ -689,6 +719,11 @@
     [
       "w_14",
       "work",
+      "Vaidyanātha Dīkṣita"
+    ],
+    [
+      "p_4",
+      "person",
       "Vaidyanātha Dīkṣita"
     ]
   ],
