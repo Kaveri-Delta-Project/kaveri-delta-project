@@ -7,7 +7,6 @@ from flask import request, redirect, url_for, flash
 from collections import defaultdict
 
 
-
 def normalize_for_sort(text):
     """
     Normalize a string for sorting or comparison:
@@ -21,9 +20,12 @@ def normalize_for_sort(text):
 
 def group_items_alphabetically(items):
     """
-    Group a list of items alphabetically by the first letter of their name.
-    Handles diacritics and sorts items within each group.
-    
+    Group items alphabetically by the first letter of their normalized name.
+
+    - Uses normalize_for_sort() to remove diacritics and lowercase
+    - Groups under A–Z, with '#' for non-letter or missing names
+    - Sorts items within each group alphabetically
+
     Args:
         items (list[dict]): Each item should have at least 'name' and 'xml_id'.
         
@@ -35,10 +37,11 @@ def group_items_alphabetically(items):
     grouped["#"] = []
 
     for item in items:
+        #get name safely (fallback to empty string)
         name = item.get("name") or ""
         normalized = normalize_for_sort(name)
 
-        # Determine first letter for grouping
+        #determine grouping key (first letter or '#')
         if normalized and normalized[0].isalpha():
             first_letter = normalized[0].upper()
         else:
@@ -46,34 +49,39 @@ def group_items_alphabetically(items):
 
         grouped[first_letter].append(item)
 
-    # Sort items within each group alphabetically
+    #sort items within each group by normalized name (fallback to xml_id)
     for letter, items_in_group in grouped.items():
         items_in_group.sort(key=lambda x: normalize_for_sort(x.get("name") or x["xml_id"]))
 
     return grouped
 
+
 def extract_element_text(parent, ns, element, filter_attr=None, filter_value=None, all_results=False):
     """
-    Extract text content from matching TEI elements under a given parent element.
-
-    Optionally filters by attribute presence/value.
+    Extract text content from TEI elements under a given parent, with optional attribute filtering.
 
     Args:
-        parent (lxml.etree._Element): The parent element to search under.
+        parent (lxml.etree._Element): Parent element to search within.
         ns (dict): Namespace mapping for XPath.
         element (str): TEI element name (without namespace prefix).
         filter_attr (str or None): Attribute name to filter on.
-        filter_value (str or None): Attribute value to match.
-        all_results (bool): Whether to return all matches or only the first.
+        filter_value (str, optional): If provided, only elements with this attribute value are matched.
+        If omitted, any element containing the attribute is matched.
+        all_results (bool): If True, return all matches; otherwise return only the first.
 
     Returns:
         str or list[str] or None:
-            First matching text, list of texts, or None if no match.
+            - First matching text (default)
+            - List of texts if all_results=True
+            - None if no match (or empty list if all_results=True)
     """
     if not parent:
         return [] if all_results else None
     
+    #build XPath for target TEI element, optionally filtering by attribute
     xpath = f".//tei:{element}"
+    #specific attribute and value if provided
+    #otherwise match any element with the attribute present
     if filter_attr:
         if filter_value is not None:
             xpath += f'[@{filter_attr}="{filter_value}"]'
@@ -83,31 +91,37 @@ def extract_element_text(parent, ns, element, filter_attr=None, filter_value=Non
     results = parent.xpath(xpath, namespaces=ns)
     texts = [el.text.strip() for el in results if el.text and el.text.strip()]
 
+    #return all values or just the first match
     return texts if all_results else (texts[0] if texts else None)
+
 
 def extract_attribute_values(parent, ns, element, filter_attr, all_results=False):
     """
     Extract attribute values from matching TEI elements under a given parent element.
 
     Args:
-        parent (lxml.etree._Element): The parent element to search under.
+        parent (lxml.etree._Element): Parent element to search within.
         ns (dict): Namespace mapping for XPath.
         element (str): TEI element name (without namespace prefix).
-        filter_attr (str): Attribute name to extract.
-        all_results (bool): Whether to return all matches or only the first.
+        filter_attr (str): Attribute name to extract values from.
+        all_results (bool): If True, return all matches; otherwise return only the first.
 
     Returns:
         str or list[str] or None:
-            First matching attribute value, list of values, or None if no match.
+            - First matching value (default)
+            - List of values if all_results=True
+            - None if no match (or empty list if all_results=True)
     """
     if not parent:
         return [] if all_results else None
     
+    #XPath directly selects attribute values from matching elements
     xpath = f".//tei:{element}/@{filter_attr}"
     
     results = parent.xpath(xpath, namespaces=ns)
     values = [val.strip() for val in results if val and val.strip()]
 
+    #return all values or just the first match
     return values if all_results else (values[0] if values else None)
 
 
@@ -124,28 +138,32 @@ def extract_from_parent(
     extract_parent_text=False,
 ):
     """
-    Extract information from parent elements and their children, optionally filtering parents by attribute.
+    Extract structured data from specified parent TEI elements and their children.
 
+    Optionally filters parent elements by attribute and extracts:
+        - Parent attributes
+        - Parent text
+        - Child element text
+        - Child element attributes
 
     Args:
-        parent (lxml.etree._Element): The parent element to search under.
+        parent (lxml.etree._Element): Parent element to search within.
+        ns (dict): Namespace mapping for XPath.
         parent_tag (str): Tag name of the parent element(s) to extract.
-        attributes (list[str], optional): List of attributes to extract from the parent element(s).
-        child_elements (list[str], optional): List of child/grandchild element tag names to extract text from.
+        attributes (list[str], optional): Attribute names to extract from each parent.
+        child_elements (list[str], optional): Child element tags to extract text from.
         child_attributes (dict, optional): Dictionary mapping child/grandchild element tag names to lists of
                                            attribute names to extract from those child elements.
-        filter_attr (str, optional): Attribute name to filter parent elements by.
-        filter_value (str, optional): Attribute value to match for filtering parent elements.
-        extract_parent_text (bool, optional): Whether to extract the parent element’s own text.                                   
-        namespaces (dict, optional): Namespace mapping for XPath searches (default: NSMAP).
+        filter_attr (str, optional): Attribute name to filter parent elements.
+        filter_value (str, optional): If provided, only parents with this value are matched.
+        If omitted, any parent with the attribute is matched.
+        extract_parent_text (bool, optional): Whether to extract the parent element’s text.                                  
 
     Returns:
-        list[dict]: A list of dictionaries, one per parent element found, containing:
-                    - Parent attributes (if requested)
-                    - Child/grandchild element text (if requested)
-                    - Child/grandchild element attributes (if requested)
-                    Keys for child attributes are formatted as "{child_tag}_{attribute_name}".
-                    Missing elements or attributes will have value None.
+        list[dict]:
+            One dictionary per parent element, containing requested fields.
+            Missing values are set to None.
+            Child attribute keys are formatted as "{child}_{attribute}".
     """
 
     results = []
@@ -153,6 +171,7 @@ def extract_from_parent(
     if parent is None:
         return results
 
+    #build XPath for parent elements, optionally applying attribute filter
     xpath = f".//tei:{parent_tag}"
     if filter_attr:
         if filter_value is not None:
@@ -160,26 +179,30 @@ def extract_from_parent(
         else:
             xpath += f'[@{filter_attr}]'
 
+    #iterate over all matching parent elements
     for el in parent.xpath(xpath, namespaces=ns):
         item = {}
 
-        # Extract parent attributes
+        #extract requested attributes from the parent element
         if attributes:
             for attr in attributes:
                 val = el.get(attr)
                 item[attr] = val.strip() if val else None
 
+        #optionally extract the parent element’s own text content
         if extract_parent_text:
             parent_text = el.text.strip() if el.text and el.text.strip() else None
             item["parent_text"] = parent_text
 
-        # Extract child/grandchild elements text
+        #extract text from the first matching descendant element (child, grandchild, etc.)
+        #uses .find(), so only the first match is returned
         if child_elements:
             for child in child_elements:
                 child_el = el.find(f".//tei:{child}", namespaces=ns)
                 item[child] = child_el.text.strip() if child_el is not None and child_el.text else None
 
-        # Extract child/grandchild element attributes
+        #extract attributes from the first matching descendant element
+        #if no matching element is found, populate keys with None
         if child_attributes:
             for child_name, attr_list in child_attributes.items():
                 child_el = el.find(f".//tei:{child_name}", namespaces=ns)
@@ -198,49 +221,81 @@ def extract_from_parent(
 
 def get_element_attr_by_index(parent, tag, index, attr, match_attrs=None):
     """
-    Get an attribute value from an element by index (optionally filtered).
+    Retrieve an attribute value from a child element by index.
+
+    Elements are first filtered by tag name and optional attribute criteria,
+    then the element at the given index is selected.
 
     Args:
-        parent: XML parent element
-        tag (str): element tag
-        index (int): index in filtered list
-        attr (str): attribute name to retrieve
-        match_attrs (dict, optional): filter elements
+        parent (lxml.etree._Element): Parent element to search within.
+        tag (str): Tag name of child elements.
+        index (int): Index within the filtered list of elements.
+        attr (str): Attribute name to retrieve
+        match_attrs (dict, optional): Attribute-value pairs used to filter elements.
 
     Returns:
-        str or None
+        str or None: The attribute value, or None if not found or index is out of range.
     """
     match_attrs = match_attrs or {}
 
+    #find direct child elements matching the tag
+    elements = parent.findall(f"{{{NS_TEI}}}{tag}")
+
+    #apply attribute filtering
     elements = [
-        el for el in parent.findall(f"{{{NS_TEI}}}{tag}")
+        el for el in elements
         if all(el.get(k) == v for k, v in match_attrs.items())
     ]
 
+    #return None if index is out of range
     if index < 0 or index >= len(elements):
         return None
 
-    return elements[index].get(attr)
+    #return the requested attribute
+    val = elements[index].get(attr)
+    return val.strip() if val else None
 
 def load_ent_name_by_key(entity_type, key, elem_name):
     """
-    Load an entity XML file by key and return the preferred name text
-    for the given element name (e.g. persName, placeName, title).
-    """
-    config = ENTITY_CONFIG[entity_type]
-    path = os.path.join(config["dir"], f"{key}.xml")
+    Load a TEI XML file and return the preferred name for a given element.
 
-    if not os.path.exists(path):
+    Searches for the first matching element with @type="preferred"
+    (e.g. persName, placeName, title) and returns its text content.
+
+    Args:
+        entity_type (str): Entity type key used in ENTITY_CONFIG.
+        key (str): XML file identifier.
+        elem_name (str): TEI element name to search for.
+
+    Returns:
+        str or None: Preferred name text, or None if not found.
+    """
+    
+    #get configuration for the entity type
+    config = ENTITY_CONFIG.get(entity_type)
+    if not config:
         return None
 
-    tree = etree.parse(path)
+    #build full path to the XML file for this entity
+    path = os.path.join(config["dir"], f"{key}.xml")
+
+    #ensure file exists before attempting to parse
+    if not os.path.exists(path):
+        return None
+    try:
+        tree = etree.parse(path)
+    except Exception:
+        return None
+    
     root = tree.getroot()
 
+    #find the first TEI element matching the name with @type="preferred"
     name_elem = root.find(
         f".//tei:{elem_name}[@type='preferred']",
         namespaces=NSMAP
     )
 
+    #return stripped text if found and non-empty
     if name_elem is not None and name_elem.text:
         return name_elem.text.strip()
 
@@ -248,9 +303,17 @@ def load_ent_name_by_key(entity_type, key, elem_name):
 
 def valid_date(s):
     """
-    Returns True if s is empty or matches:
-    - Year only: YYYY (positive AD)
-    - ISO date: YYYY-MM-DD
+    Returns True if the input is empty or matches a valid date format.
+
+    Supported formats:
+        - Year only: YYYY (e.g. 1666)
+        - Full ISO date: YYYY-MM-DD (e.g. 1666-10-14)
+
+    Args:
+        s (str): Date string to validate.
+
+    Returns:
+        bool: True if valid or empty, otherwise False.
     """
     if not s:
         return True
@@ -260,6 +323,15 @@ def valid_date(s):
 def valid_identifier(value, id_type):
     """
     Validate an identifier value according to its identifier type.
+
+    Supports:
+        - VIAF: numeric string (up to 22 digits)
+        - Wikidata: Q followed by digits (e.g. Q123)
+        - LCNAF: starts with 'n', optional letter, then digits
+        - TGN: numeric string (up to 9 digits)
+
+    Returns:
+        bool: True if valid, otherwise False
     """
     if not value:
         return False
@@ -280,93 +352,129 @@ def valid_identifier(value, id_type):
 
 def valid_coordinates(coord_text):
     """
-    Validate a coordinate string in the format 'lat, lon' using regex.
+    Validate a coordinate string in the format 'lat, lon'.
+
+    Accepts decimal latitude/longitude pairs.
 
     Args:
-        coord_text (str): The coordinate string, e.g. "52.200660245312285, 0.1525227968873202"
+        coord_text (str): Coordinate string.
 
     Returns:
-        bool: True if matches the 'lat, lon' decimal format, False otherwise
+        bool: True if format is valid, otherwise False.
     """
     if not coord_text:
         return False
 
+    #match "number, number" with optional decimals and whitespace
     pattern = r"^\s*-?\d+(\.\d+)?,\s*-?\d+(\.\d+)?\s*$"
-    return bool(re.match(pattern, coord_text))
+    return bool(re.fullmatch(pattern, coord_text))
 
 
 def load_entity(file_path, entity_tag, mapping, nsmap):
     """
-    Load a TEI entity from an XML file according to a specified mapping.
+    Load structured data for a TEI entity from an XML file using a mapping specification.
+
+    This function extracts data from a target TEI element (e.g. person, place, msDesc)
+    according to a declarative mapping. Each mapping entry defines how a value should
+    be retrieved (attribute, element text, or nested parent structure).
 
     Args:
         file_path (str): Path to the TEI XML file.
-        entity_tag (str): The TEI element tag of the entity to load (e.g., 'person', 'msDesc', 'place').
-        mapping (dict): A dictionary defining how to extract data from the entity.
-            Each key maps to a specification dict with one of:
-                - "attr": extract the entity's attribute value.
-                - "element": extract text content from a child element.
-                - "element_attr": extract an attribute from a child element.
-                - "parent_tag": extract data from nested child elements under a specific parent.
-            Additional options in the spec:
-                - "filter_attr" / "filter_value": filter elements by attribute/value.
-                - "all_results": whether to return all matches as a list.
-                - "attributes", "child_elements", "child_attributes": passed to extract_from_parent.
-        nsmap (dict): Namespace mapping for XPath queries.
+        entity_tag (str): Key used in ENTITY_CONFIG to identify the entity type.
+        mapping (dict): Extraction specification. Each key maps to a dict defining
+            how to retrieve the value. Exactly one of the following must be provided:
+            
+            - "attr": Extract an attribute from the current element.
+            - "element": Extract text content from a descendant element.
+                - "element_attr" (optional): If provided, extract this attribute
+                  instead of element text.
+            - "parent_tag": Extract structured data from descendant elements
+              using extract_from_parent().
+            
+            Optional keys:
+            - "from_root" (bool): If True, search from the document root instead
+              of the entity element.
+            - "filter_attr" / "filter_value": Filter elements by attribute/value.
+            - "all_results" (bool): Return all matches as a list instead of a single value.
+            - "attributes", "child_elements", "child_attributes",
+              "extract_parent_text": Passed to extract_from_parent().
+
+        nsmap (dict): Namespace mapping used for XPath queries.
 
     Returns:
-        dict or None: A dictionary of extracted data according to the mapping.
-            Keys correspond to mapping keys. Values are:
-                - str for single attribute/text values
-                - list[str] for multiple matches if "all_results" is True
-                - list[dict] for parent_tag extractions (nested elements/attributes)
-            Returns None if the entity_tag element is not found in the XML.
+        dict or None:
+            Dictionary of extracted values keyed by mapping keys. Values may be:
+            - str: single extracted value
+            - list[str]: multiple values when "all_results" is True
+            - list[dict]: structured results from "parent_tag"
+
+            Returns None if the target entity element is not found.
     """
 
-    config = ENTITY_CONFIG[entity_tag]
-    container_tag = config["container_tag"]
+    #get configuration for the entity type
+    config = ENTITY_CONFIG.get(entity_tag)
+    if not config:
+        return None
+
+    #determine the TEI element for this entity
     element_tag = config["element_tag"]
 
     tree = etree.parse(file_path)
     root = tree.getroot()
+    
+    #locate the first matching entity element in the document
     entity = tree.find(f".//tei:{element_tag}", namespaces=nsmap)
     if entity is None:
         return None
 
     data = {}
+
+    #iterate over mapping definitions to extract fields
     for key, spec in mapping.items():
 
+        #decide whether to search from root or from the entity element
         search_base = root if spec.get("from_root") else entity
 
+        #initialise output structure based on expected result type
+        #lists for multi-value or structured results, otherwise single value
         if spec.get("all_results") or "parent_tag" in spec:
             data[key] = []
         else:
             data[key] = None
 
+        #attribute extraction from the current search base
         if "attr" in spec:
             data[key] = search_base.get(spec["attr"])
+        
+        #element-based extraction
         elif "element" in spec:
+            
+            #extract attribute(s) from matching elements
             if "element_attr" in spec:
                 data[key] = extract_attribute_values(
                     search_base,
-                    NSMAP,
+                    nsmap,
                     element=spec["element"],
                     filter_attr=spec["element_attr"],
                     all_results=spec.get("all_results", False)
                 )
+            
+            #extract text content from matching elements
             else:
                 data[key] = extract_element_text(
                     search_base,
-                    NSMAP,
+                    nsmap,
                     element=spec["element"],
                     filter_attr=spec.get("filter_attr"),
                     filter_value=spec.get("filter_value"),
                     all_results=spec.get("all_results", False)
                 )
+        
+        #structured extraction from nested parent elements
         elif "parent_tag" in spec:
             data[key] = extract_from_parent(
                 search_base,
-                NSMAP,
+                nsmap,
                 parent_tag=spec["parent_tag"],
                 attributes=spec.get("attributes"),
                 filter_attr=spec.get("filter_attr"),
@@ -375,42 +483,75 @@ def load_entity(file_path, entity_tag, mapping, nsmap):
                 child_attributes=spec.get("child_attributes"),
                 extract_parent_text=spec.get("extract_parent_text")
             )
+    
     return data
 
 
 def insert_in_order(parent, tag, new_elem, child_order, nsmap,
                     sort_attr=None, attr_priority=None):
     """
-    Insert a new element into a parent element, then sort all children
-    by child_order and optionally by an attribute within the specified tag.
+    Insert an element into a parent and reorder all children based on
+    a predefined tag order and optional attribute priority.
+
+    Children are sorted primarily by their tag name according to
+    `child_order`. Elements whose tag is not in `child_order` are placed
+    at the end.
+
+    Optionally, elements of a specific tag can be secondarily sorted
+    using an attribute and a priority mapping.
 
     Args:
-        parent (lxml.etree._Element): Parent element.
-        new_elem (lxml.etree._Element): Element to insert.
-        child_order (list[str]): List of tag names defining order.
+        parent (lxml.etree._Element): The parent element whose children will be reordered.
+        tag (str): Tag name to which attribute-based sorting should apply
+                   (only used when sort_attr and attr_priority are provided).
+        new_elem (lxml.etree._Element): Element to insert into the parent.
+        child_order (list[str]): Ordered list of tag names defining the primary sort order.
         nsmap (dict): Namespace mapping.
-        tag (str, optional): Only apply attribute-based sorting for this tag.
-        sort_attr (str, optional): Attribute to sort by.
-        attr_priority (dict, optional): Mapping of attribute value to priority.
+        sort_attr (str, optional): Attribute name used for secondary sorting.
+        attr_priority (dict, optional): Mapping of attribute values to priority.
+
+    Returns:
+        None: The parent element is modified in place.
     """
+
+    #get current children as a list
     children = list(parent)
+    #add new element if it is not already present
     if new_elem not in children:
         children.append(new_elem)
 
     sorted_children = []
+    
+    #build sortable tuples for each child
     for el in children:
         if not isinstance(el.tag, str):
             continue
+
+        #extract local tag name 
         tag_name = el.tag.split("}")[-1]
+
+        #primary sort: position in child_order
+        #unknown tags are placed at the end
         tag_index = child_order.index(tag_name) if tag_name in child_order else len(child_order)
-        attr_index = attr_priority.get(el.get(sort_attr, ""), 99) if tag and tag_name == tag and sort_attr and attr_priority else 0
+
+        #secondary sort: attribute-based priority (only for matching tag)
+        if tag and tag_name == tag and sort_attr and attr_priority:
+            attr_value = el.get(sort_attr, "")
+            attr_index = attr_priority.get(attr_value, 99)
+        else:
+            attr_index = 0
+        
+        #store sorting tuple
         sorted_children.append((tag_index, attr_index, el))
 
+    #sort tuples first by tag order, then attribute priority
     sorted_children.sort(key=lambda x: (x[0], x[1]))
 
+    #clear existing children from parent
     for el in list(parent):
         parent.remove(el)
 
+    #re-append children in sorted order
     for _, _, el in sorted_children:
         parent.append(el)
 
@@ -428,23 +569,23 @@ def next_entity_file(prefix, directory, extension="xml"):
         extension (str, optional): File extension (default is "xml").
 
     Returns:
-        str: The next available filename with the given prefix and extension, 
-             using the next number in sequence.
+        str: The next available filename using the next number in sequence.
     """
 
     existing_numbers = []
 
+    #match filenames like "prefix_123.extension"
     pattern = re.compile(rf"^{re.escape(prefix)}_(\d+)\.{re.escape(extension)}$")
 
+    #collect numeric suffixes from matching filenames
     for f in os.listdir(directory):
         match = pattern.match(f)
         if match:
-            try:
-                existing_numbers.append(int(match.group(1)))
-            except ValueError:
-                pass
+            existing_numbers.append(int(match.group(1)))
 
+    #determine next number in sequence
     next_num = max(existing_numbers, default=0) + 1
+    
     return f"{prefix}_{next_num}.{extension}"
 
 

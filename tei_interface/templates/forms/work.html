@@ -364,13 +364,16 @@
         <div class="mb-3">
           {{ ui.select_field("editor_role",
                 [
-                  ("", "-- Select MARC role --"),
+                  ("", "-- Select role (MARC where available)  --"),
                   ("aut", "Author (aut)"),
                   ("csl", "Advisor/Minister (csl)"),
-                  ("att", "Attributed Author (aut)"),
+                  ("att", "Attributed Author (att)"),
+                  ("co-author", "Co-Author"),
                   ("com", "Compiler (com)"),
                   ("ctb", "Contributor (ctb)"),
                   ("edt", "Editor (edt)"),
+                  ("hnr", "Honoree (hnr)"),
+                  ("mentor", "Mentor (mentor)"),
                   ("oth", "Other (oth)"),
                   ("pat", "Patron (pat)"),
                   ("trl", "Translator (trl)"),
