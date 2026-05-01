@@ -19,11 +19,11 @@
         <bibl xml:id="w_40">
           <title type="preferred">Jīvanmuktikalyāṇa</title>
           <editor key="p_19" role="aut">Nallādhvarin</editor>
-          <pubPlace key="l_6" role="performance">
+          <pubPlace key="l_6" role="Performance">
             <placeName>Thiruvidaimarudur</placeName>
           </pubPlace>
-          <note type="genre">play</note>
-          <note type="subject">vedānta</note>
+          <note type="genre">Play</note>
+          <note type="subject">Vedānta</note>
           <note type="bibliographical">NCC, vol. 7, p. 291b</note>
           <note type="general">Allegorical play on Advaita Vedānta</note>
         </bibl>

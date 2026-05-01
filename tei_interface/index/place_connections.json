@@ -76,6 +76,11 @@
       "Thiruvidaimarudur"
     ],
     [
+      "p_8",
+      "person",
+      "Thiruvidaimarudur"
+    ],
+    [
       "w_40",
       "work",
       "Thiruvidaimarudur"
@@ -89,11 +94,6 @@
       "w_5",
       "work",
       "Thiruvidaimarudur"
-    ],
-    [
-      "p_8",
-      "person",
-      "Thiruvidaimarudur"
     ]
   ],
   "l_15": [
@@ -106,13 +106,6 @@
       "p_5",
       "person",
       "Svamimalai"
-    ]
-  ],
-  "l_8": [
-    [
-      "w_45",
-      "work",
-      "Thiruvaiyaru"
     ]
   ],
   "l_10": [
@@ -160,6 +153,13 @@
       "p_10",
       "person",
       "Sakkottai"
+    ]
+  ],
+  "l_8": [
+    [
+      "w_45",
+      "work",
+      "Thiruvaiyaru"
     ]
   ]
 }
