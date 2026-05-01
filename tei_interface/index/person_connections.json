@@ -347,6 +347,11 @@
       "p_18",
       "person",
       "Śāhaji I (of Thanjavur)"
+    ],
+    [
+      "w_36",
+      "work",
+      "Śāhaji I (of Thanjavur)"
     ]
   ],
   "p_5": [
@@ -577,6 +582,11 @@
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
     ],
     [
+      "p_24",
+      "person",
+      "Śrīdhara Veṅkaṭeśa Ayyāvāl"
+    ],
+    [
       "w_42",
       "work",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
@@ -584,11 +594,6 @@
     [
       "w_43",
       "work",
-      "Śrīdhara Veṅkaṭeśa Ayyāvāl"
-    ],
-    [
-      "p_24",
-      "person",
       "Śrīdhara Veṅkaṭeśa Ayyāvāl"
     ]
   ],
@@ -646,11 +651,6 @@
       "Nallādhvarin"
     ],
     [
-      "w_42",
-      "work",
-      "Nallādhvarin"
-    ],
-    [
       "w_47",
       "work",
       "Nallādhvarin"
@@ -679,6 +679,11 @@
       "p_11",
       "person",
       "Nallādhvarin"
+    ],
+    [
+      "w_42",
+      "work",
+      "Nallādhvarin"
     ]
   ],
   "p_20": [
@@ -705,13 +710,13 @@
       "Sadāśivendra Sarasvatī"
     ],
     [
-      "w_48",
-      "work",
+      "p_11",
+      "person",
       "Sadāśivendra Sarasvatī"
     ],
     [
-      "p_11",
-      "person",
+      "w_48",
+      "work",
       "Sadāśivendra Sarasvatī"
     ]
   ],
@@ -729,6 +734,16 @@
     [
       "p_4",
       "person",
+      "Vaidyanātha Dīkṣita"
+    ],
+    [
+      "w_47",
+      "work",
+      "Vaidyanātha Dīkṣita"
+    ],
+    [
+      "w_5",
+      "work",
       "Vaidyanātha Dīkṣita"
     ]
   ],
@@ -767,13 +782,13 @@
       "Periyappā Kavi"
     ],
     [
-      "w_42",
-      "work",
+      "p_17",
+      "person",
       "Periyappā Kavi"
     ],
     [
-      "p_17",
-      "person",
+      "w_42",
+      "work",
       "Periyappā Kavi"
     ]
   ],
