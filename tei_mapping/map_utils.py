@@ -82,6 +82,7 @@ def get_svg_legend(shape_type, color):
     - no dynamic sizing or data attributes needed
     - used only in the map legend
     """
+    shape_type = shape_type.lower()
     if shape_type in ["city/town", "settlement", "other"]:
         # Circle
         return f"""
