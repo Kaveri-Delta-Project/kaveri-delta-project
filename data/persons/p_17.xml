@@ -28,10 +28,10 @@
           <trait type="contemporary of" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
-          <affiliation key="l_1" role="resided">
+          <affiliation key="l_1" role="Resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
-          <affiliation key="l_1" role="recipient (land donation)" from="1693" to="1693">
+          <affiliation key="l_1" role="Recipient (Land Donation)" from="1693" to="1693">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
           <bibl>Raghavan, intro to Śāhendravilāsa</bibl>

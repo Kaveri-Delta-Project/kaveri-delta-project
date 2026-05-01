@@ -22,10 +22,10 @@
           <trait type="student" key="p_7">
             <label>Gaṅgādharavājapeyin</label>
           </trait>
-          <affiliation key="l_11" role="resided">
+          <affiliation key="l_11" role="Resided">
             <placeName>Bhāskararāyapuram</placeName>
           </affiliation>
-          <affiliation key="l_6" role="died">
+          <affiliation key="l_6" role="Died">
             <placeName>Thiruvidaimarudur</placeName>
           </affiliation>
         </person>

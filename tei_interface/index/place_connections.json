@@ -1,7 +1,17 @@
 {
   "l_1": [
     [
+      "p_18",
+      "person",
+      "Thiruvisanallur"
+    ],
+    [
       "p_1",
+      "person",
+      "Thiruvisanallur"
+    ],
+    [
+      "p_24",
       "person",
       "Thiruvisanallur"
     ],
@@ -11,7 +21,7 @@
       "Thiruvisanallur"
     ],
     [
-      "p_18",
+      "p_4",
       "person",
       "Thiruvisanallur"
     ],
@@ -21,22 +31,12 @@
       "Thiruvisanallur"
     ],
     [
-      "p_4",
-      "person",
-      "Thiruvisanallur"
-    ],
-    [
       "p_17",
       "person",
       "Thiruvisanallur"
     ],
     [
       "p_17",
-      "person",
-      "Thiruvisanallur"
-    ],
-    [
-      "p_26",
       "person",
       "Thiruvisanallur"
     ],
@@ -46,7 +46,7 @@
       "Thiruvisanallur"
     ],
     [
-      "p_24",
+      "p_26",
       "person",
       "Thiruvisanallur"
     ]
@@ -58,44 +58,18 @@
       "Kandaramanikkam"
     ],
     [
-      "p_4",
-      "person",
-      "Kandaramanikkam"
-    ],
-    [
       "p_19",
       "person",
       "Kandaramanikkam"
-    ]
-  ],
-  "l_2": [
+    ],
     [
-      "p_6",
+      "p_4",
       "person",
-      "Thanjavur"
+      "Kandaramanikkam"
     ]
   ],
   "l_12": [],
-  "l_13": [
-    [
-      "p_2",
-      "person",
-      "Adaiyapulam"
-    ]
-  ],
-  "l_11": [
-    [
-      "p_8",
-      "person",
-      "Bhāskararāyapuram"
-    ]
-  ],
   "l_6": [
-    [
-      "p_8",
-      "person",
-      "Thiruvidaimarudur"
-    ],
     [
       "w_38",
       "work",
@@ -115,13 +89,11 @@
       "w_5",
       "work",
       "Thiruvidaimarudur"
-    ]
-  ],
-  "l_14": [
+    ],
     [
-      "p_10",
+      "p_8",
       "person",
-      "Sakkottai"
+      "Thiruvidaimarudur"
     ]
   ],
   "l_15": [
@@ -136,13 +108,6 @@
       "Svamimalai"
     ]
   ],
-  "l_17": [
-    [
-      "p_7",
-      "person",
-      "Thiruvalangadu"
-    ]
-  ],
   "l_8": [
     [
       "w_45",
@@ -152,14 +117,49 @@
   ],
   "l_10": [
     [
-      "p_4",
-      "person",
-      "Madurai"
-    ],
-    [
       "w_31",
       "work",
       "Madurai"
+    ],
+    [
+      "p_4",
+      "person",
+      "Madurai"
+    ]
+  ],
+  "l_13": [
+    [
+      "p_2",
+      "person",
+      "Adaiyapulam"
+    ]
+  ],
+  "l_11": [
+    [
+      "p_8",
+      "person",
+      "Bhāskararāyapuram"
+    ]
+  ],
+  "l_17": [
+    [
+      "p_7",
+      "person",
+      "Thiruvalangadu"
+    ]
+  ],
+  "l_2": [
+    [
+      "p_6",
+      "person",
+      "Thanjavur"
+    ]
+  ],
+  "l_14": [
+    [
+      "p_10",
+      "person",
+      "Sakkottai"
     ]
   ]
 }
