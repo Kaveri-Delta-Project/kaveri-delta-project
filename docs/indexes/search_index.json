@@ -190,6 +190,14 @@
   },
   {
     "type": "person",
+    "id": "p_28",
+    "name": "a test",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_28",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_3",
     "name": "Cokkanāthamakhin",
     "alt_names": [],
