@@ -506,8 +506,8 @@ def handle_associated_place(person, context, form_data):
         flash(f"Invalid 'To' date: {date_to}", "associated-place-error")
         return {"ok": False}
 
-    if association == "other" and association_other:
-        element_attrs = {"key": place_key, "role": association_other.lower()}
+    if association == "Other" and association_other:
+        element_attrs = {"key": place_key, "role": association_other}
     else:
         element_attrs = {"key": place_key, "role": association}
 

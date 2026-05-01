@@ -227,8 +227,8 @@ def handle_dates(work, context, form_data):
         flash(f"Invalid 'To' date: {dates_to}", "dates-error")
         return {"ok": False}
 
-    if activity == "other" and activity_other:
-        activity = activity_other.lower()
+    if activity == "Other" and activity_other:
+        activity = activity_other
         attrs = {"type": activity, "source": "other"}
     else:
         attrs = {"type": activity}
@@ -364,8 +364,8 @@ def handle_pub_place(work, context, form_data):
         return {"ok": False} 
 
     # Determine element attributes
-    if connection == "other" and connection_other:
-        element_attrs = {"key": pub_place_key, "role": connection_other.lower()}
+    if connection == "Other" and connection_other:
+        element_attrs = {"key": pub_place_key, "role": connection_other}
     else:
         element_attrs = {"key": pub_place_key, "role": connection}
 
@@ -433,16 +433,16 @@ def handle_genre(work, context, form_data):
         flash("No genre entered.", "genre-error")
         return {"ok": False}
 
-    if genre == "other" and genre_other:
-        text_value = genre_other.lower()
+    if genre == "Other" and genre_other:
+        text_value = genre_other
         attrs = {"type": "genre", "source": "other"}
 
-    elif genre == "commentary" and genre_commentary_key:
+    elif genre == "Commentary" and genre_commentary_key:
         text_value = genre_commentary_text
         attrs = {"type": "genre", "source": "commentary", "key": genre_commentary_key}
 
     else:
-        text_value = genre.lower()
+        text_value = genre
         attrs = {"type": "genre"}
 
 
@@ -495,7 +495,7 @@ def handle_genre(work, context, form_data):
             attr_priority=ATTR_PRIORITY
         )
 
-    if genre == "commentary" and genre_commentary_key:
+    if genre == "Commentary" and genre_commentary_key:
         update_connection_index("work", genre_commentary_key, context['xml_id'], "work", genre_commentary_text)
 
     return {
@@ -514,8 +514,8 @@ def handle_subject(work, context, form_data):
         flash("No subject entered.", "subject-error")
         return {"ok": False}
 
-    if subject == "other" and subject_other:
-        text_value = subject_other.lower()
+    if subject == "Other" and subject_other:
+        text_value = subject_other
         attrs = {"type": "subject", "source": "other"}
     else:
         text_value = subject

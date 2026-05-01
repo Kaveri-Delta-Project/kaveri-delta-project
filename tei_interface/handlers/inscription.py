@@ -150,8 +150,8 @@ def handle_recipient(inscription, context, form_data):
         flash("No recipient selected.", "recipient-error")
         return {"ok": False}
 
-    if recipient == "other" and recipient_other:
-        text_value = recipient_other.lower()
+    if recipient == "Other" and recipient_other:
+        text_value = recipient_other
         attrs = {"type": "recipient", "source": "other"}
     else:
         text_value = recipient
@@ -212,8 +212,8 @@ def handle_material(inscription, context, form_data):
         flash("No material selected.", "material-error")
         return {"ok": False}
 
-    if material == "other" and material_other:
-        text_value = material_other.lower()
+    if material == "Other" and material_other:
+        text_value = material_other
         attrs = {"source": "other"}
     else:
         text_value = material

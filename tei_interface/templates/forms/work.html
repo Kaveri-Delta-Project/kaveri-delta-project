@@ -253,10 +253,10 @@
           {{ ui.select_field("activity",
               [
               ("", "-- Select activity --"),
-              ("composition", "Composition"),
-              ("performance", "Performance"),
-              ("published", "Published"),
-              ("other", "Other")
+              ("Composition", "Composition"),
+              ("Performance", "Performance"),
+              ("Published", "Published"),
+              ("Other", "Other")
               ],
               required=True,
               allow_other=True
@@ -469,13 +469,13 @@
           {{ ui.select_field("connection",
               [
               ("", "-- Select connection --"),
-              ("composition", "Composition"),
-              ("dedication", "Dedication"),
-              ("performance", "Performance"),
-              ("published", "Published"),
-              ("reference", "Reference"),
-              ("teaching", "Teaching"),
-              ("other", "Other")
+              ("Composition", "Composition"),
+              ("Dedication", "Dedication"),
+              ("Performance", "Performance"),
+              ("Published", "Published"),
+              ("Reference", "Reference"),
+              ("Teaching", "Teaching"),
+              ("Other", "Other")
               ],
               required=True,
               allow_other=True
@@ -522,7 +522,7 @@
   <div class="border rounded p-2 mb-2">
 
     {% if val.key %}
-      <span class="fw-semibold">commentary</span>
+      <span class="fw-semibold">Commentary</span>
       <span class="text-muted ms-1"> (on {{ val.parent_text }} [{{ val.key }}])</span>
 
       {{ ui.delete_button(
@@ -583,21 +583,21 @@
           {{ ui.select_field("genre",
               [
               ("", "-- Select genre --"),
-              ("anthology", "Anthology"),
-              ("commentary", "Commentary"),
-              ("debate/argumentative", "Debate/Argumentative"),
-              ("didactic", "Didactic"),
-              ("doxography", "Doxography"),
-              ("hymn", "Hymn"),
-              ("lexicon", "Lexicon"),
-              ("musical", "Musical Composition"),
-              ("narrative (historical, fiction, biographical, etc.)", "Narrative (Historical, Fiction, Biographical, etc.)"),
-              ("play", "Play"),
-              ("poetry", "Poetry"),
-              ("ritual manual", "Ritual Manual"),
-              ("treatise/exposition (philosophical, theological, etc.)", "Treatise/Exposition (Philosophical, Theological, etc.)"),
-              ("verse and prose (campū)", "Verse and Prose (Campū)"),
-              ("other", "Other")
+              ("Anthology", "Anthology"),
+              ("Commentary", "Commentary"),
+              ("Debate/Argumentative", "Debate/Argumentative"),
+              ("Didactic", "Didactic"),
+              ("Doxography", "Doxography"),
+              ("Hymn", "Hymn"),
+              ("Lexicon", "Lexicon"),
+              ("Musical", "Musical Composition"),
+              ("Narrative (Historical, Fiction, Biographical, etc.)", "Narrative (Historical, Fiction, Biographical, etc.)"),
+              ("Play", "Play"),
+              ("Poetry", "Poetry"),
+              ("Ritual Manual", "Ritual Manual"),
+              ("Treatise/Exposition (Philosophical, Theological, etc.)", "Treatise/Exposition (Philosophical, Theological, etc.)"),
+              ("Verse and Prose (Campū)", "Verse and Prose (Campū)"),
+              ("Other", "Other")
               ],
               required=True,
               allow_other=True
@@ -678,19 +678,19 @@
           {{ ui.select_field("subject",
               [
               ("", "-- Select subject --"),
-              ("alaṃkāraśāstra", "Alaṃkāraśāstra"),
-              ("arthaśāstra", "Arthaśāstra"),
-              ("dharmaśāstra", "Dharmaśāstra"),
-              ("epic", "Epic"),
-              ("grammar", "Grammar"),
-              ("mīmāṃsā", "Mīmāṃsā"),
-              ("nāmasiddhānta", "Nāmasiddhānta"),
-              ("nyāya", "Nyāya"),
-              ("saiva", "Śaiva"),
-              ("vaiśeṣika", "Vaiśeṣika"),
-              ("vaiṣṇava", "Vaiṣṇava"),
-              ("vedānta", "Vedānta"),
-              ("other", "Other")
+              ("Alaṃkāraśāstra", "Alaṃkāraśāstra"),
+              ("Arthaśāstra", "Arthaśāstra"),
+              ("Dharmaśāstra", "Dharmaśāstra"),
+              ("Epic", "Epic"),
+              ("Grammar", "Grammar"),
+              ("Mīmāṃsā", "Mīmāṃsā"),
+              ("Nāmasiddhānta", "Nāmasiddhānta"),
+              ("Nyāya", "Nyāya"),
+              ("Saiva", "Śaiva"),
+              ("Vaiśeṣika", "Vaiśeṣika"),
+              ("Vaiṣṇava", "Vaiṣṇava"),
+              ("Vedānta", "Vedānta"),
+              ("Other", "Other")
               ],
               required=True,
               allow_other=True

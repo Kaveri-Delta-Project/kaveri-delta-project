@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!otherInput) return;
 
     function toggleOther() {
-      if (select.value === "other") {
+      if (select.value === "Other") {
         otherInput.classList.remove("d-none");
         otherInput.required = true;
       } else {
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!genreSelect || !commentaryWrapper || !commentaryInput || !commentaryHidden) return;
 
   function toggleCommentary() {
-    if (genreSelect.value === "commentary") {
+    if (genreSelect.value === "Commentary") {
       commentaryWrapper.classList.remove("d-none");
       commentaryInput.required = true;
     } else {

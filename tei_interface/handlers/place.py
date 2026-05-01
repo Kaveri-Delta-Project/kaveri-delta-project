@@ -152,8 +152,8 @@ def handle_place_type(place, context, form_data):
         flash("No place type entered.", "place-type-error")
         return {"ok": False}
 
-    if place_type == "other" and place_type_other:
-        text_value = place_type_other.lower()
+    if place_type == "Other" and place_type_other:
+        text_value = place_type_other
         attrs = {"type": "function", "source": "other"}
     else:
         text_value = place_type
