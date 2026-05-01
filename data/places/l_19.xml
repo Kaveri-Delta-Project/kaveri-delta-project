@@ -18,7 +18,7 @@
       <listPlace>
         <place xml:id="l_19">
           <placeName type="preferred">Sri Bodhendra Mutt </placeName>
-          <desc type="function">matha</desc>
+          <desc type="function" source="other">Matha</desc>
           <note type="coordinates">11.011389616557265, 79.46445934095365</note>
         </place>
       </listPlace>

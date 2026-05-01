@@ -18,7 +18,7 @@
       <listPlace>
         <place xml:id="l_9">
           <placeName type="preferred">Thiruvavaduthurai Adhinam</placeName>
-          <desc type="function">matha</desc>
+          <desc type="function" source="other">Matha</desc>
           <note type="coordinates">11.041455651911388, 79.52066367565887</note>
         </place>
       </listPlace>
