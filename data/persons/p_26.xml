@@ -22,6 +22,9 @@
           <trait type="brother" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
+          <affiliation key="l_1" role="recipient (land donation)">
+            <placeName>Thiruvisanallur</placeName>
+          </affiliation>
         </person>
       </listPerson>
     </body>
