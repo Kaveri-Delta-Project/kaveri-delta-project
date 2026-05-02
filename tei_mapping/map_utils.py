@@ -38,6 +38,7 @@ def get_svg(shape_type, color, size, works, people, inscriptions):
     - includes data attributes for JS (zoom/scale interactivity)
     - used only for actual map markers
     """
+    shape_type = shape_type.lower()
     if shape_type in ["city/town", "settlement", "other"]:
         # Circle
         return f"""
@@ -279,6 +280,7 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
     for idx, row in nodes_df.iterrows():
         # Determine main type for marker
         row_type = row["type_filled"]
+        row_type = row_type.lower()
         if isinstance(row_type, list):
             # pick first valid type that exists in placetype_fgs
             row_type = next((t for t in row_type if t in placetype_fgs), None) 
