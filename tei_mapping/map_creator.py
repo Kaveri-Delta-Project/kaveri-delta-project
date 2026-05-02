@@ -60,6 +60,9 @@ affiliations_df = (
 
 
 def aggregate_with_metadata(df, group_key, id_col, metadata_df):
+    
+    df = df.drop_duplicates(subset=[group_key, id_col])
+
     grouped = df.groupby(group_key).agg(
         ids=(id_col, list)
     )
