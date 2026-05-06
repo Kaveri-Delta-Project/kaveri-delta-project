@@ -186,7 +186,10 @@
     "type": "person",
     "id": "p_27",
     "name": "Kṛṣṇānanda Sarasvatī",
-    "alt_names": [],
+    "alt_names": [
+      "Bālakṛṣna Guru",
+      "Bhagavatpāda"
+    ],
     "url": "indexes/person_index.html#p_27",
     "places": []
   },
@@ -775,7 +778,9 @@
     "type": "work",
     "id": "w_65",
     "name": "Vidyāpariṇayanāṭaka",
-    "alt_names": [],
+    "alt_names": [
+      "Vidyāpariṇāma (NCC vol. 29, 132)"
+    ],
     "url": "indexes/work_index.html#w_65",
     "places": []
   },
