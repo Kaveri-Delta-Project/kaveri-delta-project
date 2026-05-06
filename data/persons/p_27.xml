@@ -18,9 +18,12 @@
       <listPerson>
         <person xml:id="p_27">
           <persName type="preferred">Kṛṣṇānanda Sarasvatī</persName>
+          <persName type="variant">Bālakṛṣna Guru</persName>
+          <persName type="variant">Bhagavatpāda</persName>
           <trait type="teacher" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
+          <bibl>Raghavan, intro to Śāhendravilāsa pg. 30–31</bibl>
         </person>
       </listPerson>
     </body>
