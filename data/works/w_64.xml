@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_64">
+          <title type="preferred">Jīvānandananāṭaka</title>
+          <title type="variant">Jīvānanda</title>
+          <title type="variant">Jīvānandana</title>
+          <editor key="p_25" role="aut">Vedakavīśvara</editor>
+          <editor key="p_15" role="att">Ānandarāyamakhin</editor>
+          <note type="genre">Play</note>
+          <note type="subject" source="other">Medical allegorial play (see Raghavan, intro to Śāhendravilāsa pg. 29)</note>
+          <note type="bibliographical">Sastri pg. 181</note>
+          <note type="bibliographical">NCC vol. 31, 147</note>
+          <note type="bibliographical">NCC vol. 7, 297b–298a</note>
+          <note type="bibliographical">GOML 29</note>
+          <note type="bibliographical">Printed in Kāyvamālā 27</note>
+          <note type="bibliographical">Raghavan, intro to Śāhendravilāsa pg. 29</note>
+          <note type="general">Written during the time of Śāhaji I (Raghavan, intro to Śāhendravilāsa pg. 29)</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

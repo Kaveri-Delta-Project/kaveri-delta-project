@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_60">
+          <title type="preferred">Anunāsikanirdeśavicāra </title>
+          <editor key="p_4" role="att">Rāmabhadra Dīkṣita</editor>
+          <note type="genre">Treatise/Exposition (Philosophical, Theological, etc.)</note>
+          <note type="subject">Grammar</note>
+          <note type="bibliographical">NCC entry: (Kroḍapatra). gr. Pub. by V. R. Krishnamacharya, Vyākaraṇa Kroḍapatras, Vol. II. pp. 104-09. 1909-10.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

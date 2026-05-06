@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_61">
+          <title type="preferred">Śukasandeśa</title>
+          <editor key="p_4" role="csl">Rāmabhadra Dīkṣita</editor>
+          <note type="bibliographical">NCC vol. 24, 188</note>
+          <note type="general">This work is suggested as possibly by Rāmabhadra Dīkṣita by K. Kunjunni Raja in Uṇādimaṇidīpikā, pg. 42. Thiruvengadathan (pg. 17) says that the work is yet to be traced.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

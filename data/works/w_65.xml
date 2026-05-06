@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_65">
+          <title type="preferred">Vidyāpariṇayanāṭaka</title>
+          <editor key="p_25" role="aut">Vedakavīśvara</editor>
+          <editor key="p_15" role="att">Ānandarāyamakhin</editor>
+          <note type="genre">Play</note>
+          <note type="subject" source="other">Philosophical allegorial play (see Raghavan, intro to Śāhendravilāsa pg. 29)</note>
+          <note type="bibliographical">Sastri pg. 181</note>
+          <note type="bibliographical">NCC vol. 31, 147</note>
+          <note type="general">Written during the reign of Serfoji (Raghavan, intro to Śāhendravilāsa pg. 29)</note>
+          <note type="general">Has a commentary by the author Vedakavīśvara</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

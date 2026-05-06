@@ -18,12 +18,17 @@
       <listPerson>
         <person xml:id="p_25">
           <persName type="preferred">Vedakavīśvara</persName>
+          <persName type="variant">Vedakavi Svāmin (NCC vol. 31, 147)</persName>
           <trait type="contemporary of" key="p_24">
             <label>Periyappā Kavi</label>
+          </trait>
+          <trait type="beneficiary" key="p_15">
+            <label>Ānandarāyamakhin</label>
           </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <note>Received 3 shares of Thiruvisannalur, for he had mastered 3 śāstras (see Raghavan, intro to Śāhendravilāsa pg. 38–39)</note>
         </person>
       </listPerson>
     </body>

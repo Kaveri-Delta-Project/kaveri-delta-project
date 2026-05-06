@@ -4,6 +4,10 @@
     "name": "Advaitarasamañjarī"
   },
   {
+    "xml_id": "w_60",
+    "name": "Anunāsikanirdeśavicāra"
+  },
+  {
     "xml_id": "w_13",
     "name": "Avaidikadarśanasaṃgraha"
   },
@@ -42,6 +46,10 @@
   {
     "xml_id": "w_40",
     "name": "Jīvanmuktikalyāṇa"
+  },
+  {
+    "xml_id": "w_64",
+    "name": "Jīvānandananāṭaka"
   },
   {
     "xml_id": "w_6",
@@ -124,8 +132,16 @@
     "name": "Rāmaprasādastava"
   },
   {
+    "xml_id": "w_63",
+    "name": "Rāmatūnīrastava"
+  },
+  {
     "xml_id": "w_59",
     "name": "Rāmāṣṭaprāsastava"
+  },
+  {
+    "xml_id": "w_62",
+    "name": "Siddhāntasāra"
   },
   {
     "xml_id": "w_5",
@@ -146,6 +162,10 @@
   {
     "xml_id": "w_58",
     "name": "Varṇamālāstava"
+  },
+  {
+    "xml_id": "w_65",
+    "name": "Vidyāpariṇayanāṭaka"
   },
   {
     "xml_id": "w_55",
@@ -174,6 +194,10 @@
   {
     "xml_id": "w_32",
     "name": "Śivalīlārṇava"
+  },
+  {
+    "xml_id": "w_61",
+    "name": "Śukasandeśa"
   },
   {
     "xml_id": "w_15",
