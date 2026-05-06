@@ -162,7 +162,9 @@
     "type": "person",
     "id": "p_25",
     "name": "Vedakavīśvara",
-    "alt_names": [],
+    "alt_names": [
+      "Vedakavi Svāmin (NCC vol. 31, 147)"
+    ],
     "url": "indexes/person_index.html#p_25",
     "places": [
       "Thiruvisanallur [l_1]"
@@ -186,6 +188,14 @@
     "name": "Kṛṣṇānanda Sarasvatī",
     "alt_names": [],
     "url": "indexes/person_index.html#p_27",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_28",
+    "name": "Raṅganātha Sūri",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_28",
     "places": []
   },
   {
@@ -714,6 +724,59 @@
     "name": "Kaliviḍambana",
     "alt_names": [],
     "url": "indexes/work_index.html#w_6",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_60",
+    "name": "Anunāsikanirdeśavicāra",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_60",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_61",
+    "name": "Śukasandeśa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_61",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_62",
+    "name": "Siddhāntasāra",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_62",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_63",
+    "name": "Rāmatūnīrastava",
+    "alt_names": [
+      "Tūṇīrastava"
+    ],
+    "url": "indexes/work_index.html#w_63",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_64",
+    "name": "Jīvānandananāṭaka",
+    "alt_names": [
+      "Jīvānanda",
+      "Jīvānandana"
+    ],
+    "url": "indexes/work_index.html#w_64",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_65",
+    "name": "Vidyāpariṇayanāṭaka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_65",
     "places": []
   },
   {
