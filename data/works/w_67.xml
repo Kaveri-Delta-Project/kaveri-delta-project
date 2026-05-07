@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_67">
+          <title type="preferred">Puruṣārtharatnākara</title>
+          <editor key="p_28" role="aut">Raṅganātha Sūri</editor>
+          <editor key="p_27" role="att">Kṛṣṇānanda Sarasvatī</editor>
+          <note type="genre">Treatise/Exposition (Philosophical, Theological, etc.)</note>
+          <note type="subject">Vedānta</note>
+          <note type="bibliographical">NCC vol. 12, pg. 136a</note>
+          <note type="bibliographical">Adyar vol. 2, pg. 161b</note>
+          <note type="bibliographical">Adyar vol. 9, ms. 933</note>
+          <note type="general">In 15 taraṅgas (NCC vol. 12, pg. 136a). The work deals with 15 subjects which either directly or indirectly relate to Advaita Vedānta: 1) purāṇaprāmāṇyavivekaḥ, 2) trivargatattvavivekaḥ, 3) mokṣatattvavivekaḥ, 4) caturvargasādhanavivekaḥ, 5) varṇāśramadharmāṇāṃ bhagavadārādhanarūpatvavivekaḥ, 6) varṇādidharmavivekaḥ, 7) bhagavadārādhanaviśeṣavivekaḥ, 8) nāmakīrtanādivivekaḥ, 9) bhagavadārādhanopapattivivekaḥ, 10) adhikārivivekaḥ, 11) tattvapadārthavivekaḥ, 12) vivekajñānaviṣayaikātmyavivekaḥ, 13) yogabahiraṅgavivekaḥ, 14) sayamaviṣayaphalavivekaḥ, 15) muktagativivekaḥ (Adyar vol. 9, ms. 933)</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

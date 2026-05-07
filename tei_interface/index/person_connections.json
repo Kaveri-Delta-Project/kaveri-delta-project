@@ -602,6 +602,11 @@
       "w_65",
       "work",
       "Ānandarāyamakhin"
+    ],
+    [
+      "w_66",
+      "work",
+      "Ānandarāyamakhin"
     ]
   ],
   "p_16": [],
@@ -803,6 +808,11 @@
       "w_65",
       "work",
       "Vedakavīśvara"
+    ],
+    [
+      "w_66",
+      "work",
+      "Vedakavīśvara"
     ]
   ],
   "p_24": [
@@ -859,6 +869,28 @@
       "w_54",
       "work",
       "Kṛṣṇānanda Sarasvatī"
+    ],
+    [
+      "p_28",
+      "person",
+      "Kṛṣṇānanda Sarasvatī"
+    ],
+    [
+      "w_67",
+      "work",
+      "Kṛṣṇānanda Sarasvatī"
+    ]
+  ],
+  "p_28": [
+    [
+      "p_27",
+      "person",
+      "Raṅganātha Sūri"
+    ],
+    [
+      "w_67",
+      "work",
+      "Raṅganātha Sūri"
     ]
   ]
 }

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_66">
+          <title type="preferred">Vidyāpariṇayavyākhyā</title>
+          <editor key="p_25" role="aut">Vedakavīśvara</editor>
+          <editor key="p_15" role="att">Ānandarāyamakhin</editor>
+          <note type="genre" source="commentary" key="w_65">Vidyāpariṇayanāṭaka</note>
+          <note type="bibliographical">Adyar vol. 5, mss. 1555–1556</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

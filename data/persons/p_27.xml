@@ -18,10 +18,15 @@
       <listPerson>
         <person xml:id="p_27">
           <persName type="preferred">Kṛṣṇānanda Sarasvatī</persName>
-          <persName type="variant">Bālakṛṣna Guru</persName>
+          <persName type="variant">Bālakṛṣṇa Guru</persName>
           <persName type="variant">Bhagavatpāda</persName>
+          <persName type="variant">Bālakṛṣṇānandasarasvatī</persName>
+          <persName type="variant">Kṛṣṇāndayati (Adyar vol. 9, pg. 349)</persName>
           <trait type="teacher" key="p_24">
             <label>Periyappā Kavi</label>
+          </trait>
+          <trait type="teacher" key="p_28">
+            <label>Raṅganātha Sūri</label>
           </trait>
           <bibl>Raghavan, intro to Śāhendravilāsa pg. 30–31</bibl>
         </person>

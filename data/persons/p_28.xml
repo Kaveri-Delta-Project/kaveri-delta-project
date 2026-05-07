@@ -18,6 +18,10 @@
       <listPerson>
         <person xml:id="p_28">
           <persName type="preferred">Raṅganātha Sūri</persName>
+          <trait type="student" key="p_27">
+            <label>Kṛṣṇānanda Sarasvatī</label>
+          </trait>
+          <note>He was of Ātreyagota and belonged to a family called Kuraviśeri (Raghavan, Introduction to Śāhendravilāsa pg. 32)</note>
         </person>
       </listPerson>
     </body>
