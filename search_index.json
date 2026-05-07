@@ -187,8 +187,10 @@
     "id": "p_27",
     "name": "Kṛṣṇānanda Sarasvatī",
     "alt_names": [
-      "Bālakṛṣna Guru",
-      "Bhagavatpāda"
+      "Bālakṛṣṇa Guru",
+      "Bhagavatpāda",
+      "Bālakṛṣṇānandasarasvatī",
+      "Kṛṣṇāndayati (Adyar vol. 9, pg. 349)"
     ],
     "url": "indexes/person_index.html#p_27",
     "places": []
@@ -782,6 +784,22 @@
       "Vidyāpariṇāma (NCC vol. 29, 132)"
     ],
     "url": "indexes/work_index.html#w_65",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_66",
+    "name": "Vidyāpariṇayavyākhyā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_66",
+    "places": []
+  },
+  {
+    "type": "work",
+    "id": "w_67",
+    "name": "Puruṣārtharatnākara",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_67",
     "places": []
   },
   {
