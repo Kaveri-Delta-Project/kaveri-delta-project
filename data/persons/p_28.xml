@@ -22,7 +22,10 @@
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
           </trait>
-          <note>He was of Ātreyagota and belonged to a family called Kuraviśeri (Raghavan, Introduction to Śāhendravilāsa pg. 32)</note>
+          <affiliation key="l_1" role="Recipient (Land Donation)">
+            <placeName>Thiruvisanallur</placeName>
+          </affiliation>
+          <note>He was of Ātreyagotra and belonged to a family called Kuraviśeri (Raghavan, Introduction to Śāhendravilāsa pg. 32)</note>
           <note>He was a donee of the land grant in Thiruvisannalur by Śāhaji I</note>
         </person>
       </listPerson>
