@@ -129,6 +129,275 @@
 </section>
 
 <section class="panel">
+
+  {{ ui.section_header("Associated Dates", 
+    "+ add associated dates", 
+    "resetEditForm('dates'); toggleEntryForm('dates-form')") }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('dates-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['dates-error'] }}
+    </div>
+  {% endif %}
+
+  <!-- Existing dates entries -->
+  {% for text, from, to in zip(data.dates_text, data.dates_from, data.dates_to) %}
+    <div class="border rounded p-2 mb-2">
+
+      <span class="fw-semibold">{{ text }}</span>
+      <span class="text-muted">({{ from }} to {{ to }})</span>
+
+      {{ ui.delete_button("origDate", loop.index0) }}
+
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem(
+            "dates",
+            {{ loop.index0 }},
+            {{ {
+                "dates_text": text,
+                "dates_from": from,
+                "dates_to": to
+            }|tojson }}
+        ); showEntryForm("dates-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="dates-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="dates">
+      <input type="hidden" name="edit_index" id="dates-edit-index" value="">
+
+      <div id="dates-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+        {{ ui.input_field(
+            id="dates_text",
+            name="dates_text",
+            label="Period",
+            label_option="(required)",
+            placeholder="e.g. c. 1620–1625",
+            extra_attrs="required",
+            help_text="Enter dates associated with inscription."
+        ) }}
+        </div>
+
+        <div class="row">
+          <div class="col">
+            {{ ui.input_field(
+                id="dates_from",
+                name="dates_from",
+                label="From",
+                label_option="(required)",
+                placeholder="e.g. 1620 or 1620-05-12",
+                extra_attrs="required",
+                help_text="Start year or full ISO date"
+            ) }}
+          </div>
+
+          <div class="col">
+            {{ ui.input_field(
+                id="dates_to",
+                name="dates_to",
+                label="To",
+                label_option="(required)",
+                placeholder="e.g. 1625 or 1625-05-12",
+                extra_attrs="required",
+                help_text="End year or full ISO date"
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('dates'); toggleEntryForm('dates-form');") }}    
+
+    </form>
+  </div>
+
+</section>
+
+
+<section class="panel">
+  {{ ui.section_header(
+        "Donor", 
+        "+ add donor",
+        "resetEditForm('donor'); toggleEntryForm('donor-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('donor-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['donor-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.donor %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val.persName }}</span>
+      <span class="text-muted">[{{ val.persName_key }}]</span>
+      {{ ui.delete_button("person", loop.index0, 
+            extra_fields={"connection": "cascade",
+                          "name_type": "person", 
+                          "key": val.persName_key, 
+                          "name": val.persName,
+                          "from_root": "1",
+                          "element_attr_name": "ana", 
+                          "element_attr_value": "donor"}) 
+                        }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem(
+              "donor", 
+              {{ loop.index0 }}, 
+              {{ {
+                  "donor_search": val.persName,
+                  "donor_key": val.persName_key,
+              }|tojson }}
+          ); showEntryForm("donor-form");'>
+          ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="donor-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="donor">
+      <input type="hidden" name="edit_index" id="donor-edit-index" value="">
+
+      <div id="donor-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="donor_search",
+              name="donor_key",
+              label="Donor",
+              label_option="(required)",
+              placeholder="Type to search persons...",
+              entity_lookup="person",
+              results_id="donor_results",
+              hidden_id="donor_key",
+              extra_attrs="required",
+              help_text="Search for an existing person and select them from the list."
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('donor'); toggleEntryForm('donor-form')" ) }}
+
+    </form>
+  </div>  
+</section>
+
+
+<section class="panel">
+  
+  {{ ui.section_header(
+        "Associated Persons", 
+        "+ add associated person",
+        "resetEditForm('assoc_person'); toggleEntryForm('assoc-person-form')") 
+  }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('assoc-person-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['assoc-person-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.assoc_person %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val.persName }}</span>
+      <span class="text-muted">(role: {{ val.persName_role }}) [{{ val.persName_key }}]</span>
+      {{ ui.delete_button("person", loop.index0, 
+            extra_fields={"connection": "cascade",
+                          "name_type": "person", 
+                          "key": val.persName_key, 
+                          "name": val.persName,
+                          "from_root": "1",
+                          "element_attr_name": "ana",
+                          "element_attr_value": "associated"}) 
+                        }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem(
+              "assoc_person", 
+              {{ loop.index0 }}, 
+              {{ {
+                  "assoc_person_search": val.persName,
+                  "assoc_person_key": val.persName_key,
+                  "assoc_person_role": val.persName_role
+              }|tojson }}
+          ); showEntryForm("assoc-person-form");'>
+          ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="assoc-person-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="assoc_person">
+      <input type="hidden" name="edit_index" id="assoc-person-edit-index" value="">
+
+      <div id="assoc-person-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("assoc_person_role",
+                [
+                  ("", "-- Select role (MARC where available)  --"),
+                  ("aut", "Author (aut)"),
+                  ("ctb", "Contributor (ctb)"),
+                  ("egr", "Engraver (scr)"),
+                  ("hnr", "Honoree (hnr)"),
+                  ("ill", "Illustrator (ill)"),
+                  ("mentor", "Mentor (mentor)"),
+                  ("oth", "Other (oth)"),
+                  ("pat", "Patron (pat)")              
+                ],
+              required=True
+          ) }}
+        </div>
+
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="assoc_person_search",
+              name="assoc_person_key",
+              label="Associated Person",
+              label_option="(required)",
+              placeholder="Type to search persons...",
+              entity_lookup="person",
+              results_id="assoc_person_results",
+              hidden_id="assoc_person_key",
+              extra_attrs="required",
+              help_text="Search for an existing person and select them from the list."
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('assoc_person'); toggleEntryForm('assoc-person-form')" ) }}
+
+    </form>
+  </div>  
+</section>
+
+
+<section class="panel">
     
   {{ ui.section_header("Recipient", 
       "+ add recipient", 
@@ -184,6 +453,127 @@
       </div>
 
       {{ ui.form_actions("resetEditForm('recipient'); toggleEntryForm('recipient-form');") }}    
+
+    </form>
+  </div>  
+</section>
+
+<section class="panel">
+
+  {{ ui.section_header(
+      "Language", 
+      "+ add language", 
+      "resetEditForm('language'); toggleEntryForm('language-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('language-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['language-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.language %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="lang",
+        index=loop.index0,
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("language", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("language-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="language-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="language">
+      <input type="hidden" name="edit_index" id="language-edit-index" value="">
+
+      <div id="language-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>      
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("language",
+              [
+              ("", "-- Select language --"),
+              ("Sanskrit", "Sanskrit"),            
+              ("Tamil", "Tamil"),
+              ("Telugu", "Telugu")
+              ],
+              required=True          
+              ) }}
+        </div>
+      </div> 
+
+      {{ ui.form_actions("resetEditForm('language'); toggleEntryForm('language-form');") }}  
+
+    </form>
+  </div>  
+</section>
+
+
+<section class="panel">
+
+  {{ ui.section_header(
+      "Donation Type", 
+      "+ add donation type", 
+      "resetEditForm('donation_type'); toggleEntryForm('donation-type-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('donation-type-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['donation-type-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.donation_type %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="provenance",
+        index=loop.index0,
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("donation_type", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("donation-type-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="donation-type-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="donation_type">
+      <input type="hidden" name="edit_index" id="donation-type-edit-index" value="">
+
+      <div id="donation-type-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>      
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="donation_type",
+              name="donation_type",
+              label="Donation Type",
+              extra_attrs="required",
+              help_text="Enter any donation type information here"
+          ) }}
+        </div>
+      </div>  
+
+      {{ ui.form_actions("resetEditForm('donation_type'); toggleEntryForm('donation-type-form');") }}  
 
     </form>
   </div>  

@@ -3,7 +3,7 @@ import json
 import re
 import string
 from flask import Flask, request, render_template, redirect, url_for, flash, jsonify
-from config import ENTITY_CONFIG, NSMAP, KEYS_TO_LOWERCASE
+from config import ENTITY_CONFIG, NSMAP, NS_XML, KEYS_TO_LOWERCASE
 from utils import (load_entity, 
             load_or_create_entity, 
             handle_deletions, 
@@ -228,11 +228,11 @@ def edit_entity(entity, xml_id):
     if not os.path.exists(file_path):
         return f"{entity} not found", 404
 
-    if request.method == "POST": 
+    if request.method == "POST":
         return update_entity(entity, config, xml_id=xml_id)
 
     #load entity data for pre-populating the form
-    data = load_entity(file_path, entity, config["mapping"], NSMAP)
+    data = load_entity(file_path, entity, config, NSMAP)
 
     return render_template(f"forms/{entity}.html", xml_id=xml_id, data=data, entity=entity)
 
@@ -313,10 +313,10 @@ def update_entity(entity, config, xml_id=None):
     #add to context along with identifier, file path, tree, root, entity element
     context = load_or_create_entity(
         entity_name=entity,
-        entity_dir=config["dir"],
-        template_path=config["template"],
+        config=config,
         xml_id=xml_id,
-        nsmap=NSMAP
+        nsmap=NSMAP,
+        ns_xml=NS_XML
     )
     
     if context is None:
@@ -326,8 +326,8 @@ def update_entity(entity, config, xml_id=None):
 
     #handle deletion requests before updates to file
     #using context, entity element and form data to specify deletion
-    if handle_deletions(entity_elem, form_data, context):
-        
+    if handle_deletions(entity_elem, form_data, context, NSMAP):
+
         #persist deletion changes to xml file
         write_entity_to_file(context)
 

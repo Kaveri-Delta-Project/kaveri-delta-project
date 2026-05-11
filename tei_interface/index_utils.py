@@ -4,7 +4,7 @@ from lxml import etree
 
 from utils import load_ent_name_by_key, load_or_create_entity, write_entity_to_file, build_section, insert_in_order
 
-from config import ENTITY_CONFIG, NSMAP, BASE_DIR, DATA_DIR, INDEX_DIR, RELATIONSHIP_INVERSES, TEXT_ELEMS
+from config import ENTITY_CONFIG, NSMAP, NS_TEI, NS_XML, BASE_DIR, DATA_DIR, INDEX_DIR, RELATIONSHIP_INVERSES, TEXT_ELEMS
 
 
 os.makedirs(INDEX_DIR, exist_ok=True)
@@ -30,7 +30,7 @@ def rebuild_entity_index(entity):
         xml_id = filename[:-4]
         file_path = os.path.join(entity_dir, filename)
 
-        name = load_ent_name_by_key(entity, xml_id, name_tag)
+        name = load_ent_name_by_key(entity, config, xml_id, name_tag, NSMAP)
 
         if not name:
             name = xml_id
@@ -73,7 +73,7 @@ def update_index_entry(entity, xml_id):
         # Remove any existing entry for this XML ID
         index_data = [entry for entry in index_data if entry["xml_id"] != xml_id]
 
-    name = load_ent_name_by_key(entity, xml_id, name_tag)
+    name = load_ent_name_by_key(entity, config, xml_id, name_tag, NSMAP)
 
     if not name:
         name = xml_id
@@ -158,10 +158,10 @@ def update_connection_files(entity, key):
 
         context = load_or_create_entity(
             entity_name=linked_ent,
-            entity_dir=config["dir"],
-            template_path=config["template"],
-            xml_id=linked_id,
-            nsmap=NSMAP
+            config=config,
+            nsmap=NSMAP,
+            ns_xml=NS_XML,
+            xml_id=linked_id
         )
 
         if not context:
@@ -200,7 +200,6 @@ def update_connection_files(entity, key):
 
 def delete_connection_entry(xml_id, form_data):
 
-
     key = form_data.get("key")
     entity = form_data.get("name_type")
     entity_name = form_data.get("name")
@@ -229,11 +228,12 @@ def related_add(relationship, key, person_a_key, person_a_text, reverse_type, co
 
     context = load_or_create_entity(
         entity_name="person",
-        entity_dir=config["dir"],
-        template_path=config["template"],
+        config=config,
+        nsmap=NSMAP,
+        ns_xml=NS_XML,
         xml_id=key,
-        nsmap=NSMAP
     )
+
     if context:
         person_b = context["entity_elem"]
 
@@ -255,6 +255,8 @@ def related_add(relationship, key, person_a_key, person_a_text, reverse_type, co
         el = build_section(
             parent=person_b,
             item_tag="trait",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             attrs=element_attrs,
             child_tag="label",
             child_text=person_a_text,
@@ -275,13 +277,12 @@ def related_delete(entity_a_key, entity, form_data, config):
     key = form_data.get("key")
     type = form_data.get("name_type")
 
-    context = load_or_create_entity(
-        
+    context = load_or_create_entity(        
         entity_name=entity,
-        entity_dir=config["dir"],
-        template_path=config["template"],
+        config=config,
+        nsmap=NSMAP,
+        ns_xml=NS_XML,
         xml_id=key,
-        nsmap=NSMAP
     )
 
     if context:

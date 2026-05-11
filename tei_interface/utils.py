@@ -2,9 +2,11 @@ from lxml import etree
 from unidecode import unidecode
 import string
 import os, re
-from config import ENTITY_CONFIG, NS_TEI, NS_XML, NSMAP, DEFAULT_NSMAP
 from flask import request, redirect, url_for, flash
 from collections import defaultdict
+
+
+#1. Text and grouping utilities
 
 
 def normalize_for_sort(text):
@@ -54,6 +56,84 @@ def group_items_alphabetically(items):
         items_in_group.sort(key=lambda x: normalize_for_sort(x.get("name") or x["xml_id"]))
 
     return grouped
+
+
+
+#2. Validation utilities
+
+
+def valid_date(s):
+    """
+    Returns True if the input is empty or matches a valid date format.
+
+    Supported formats:
+        - Year only: YYYY (e.g. 1666)
+        - Full ISO date: YYYY-MM-DD (e.g. 1666-10-14)
+
+    Args:
+        s (str): Date string to validate.
+
+    Returns:
+        bool: True if valid or empty, otherwise False.
+    """
+    if not s:
+        return True
+    return re.match(r"^\d{4}(-\d{2}-\d{2})?$", s) is not None
+
+
+def valid_identifier(value, id_type):
+    """
+    Validate an identifier value according to its identifier type.
+
+    Supports:
+        - VIAF: numeric string (up to 22 digits)
+        - Wikidata: Q followed by digits (e.g. Q123)
+        - LCNAF: starts with 'n', optional letter, then digits
+        - TGN: numeric string (up to 9 digits)
+
+    Returns:
+        bool: True if valid, otherwise False
+    """
+    if not value:
+        return False
+
+    if id_type == "VIAF":
+        return re.fullmatch(r"^\d{1,22}$", value) is not None
+
+    if id_type == "Wikidata":
+        return re.fullmatch(r"^Q\d+$", value) is not None
+
+    if id_type == "LCNAF":
+        return re.fullmatch(r"n[a-z]?\d+", value) is not None
+
+    if id_type == "TGN":
+        return re.fullmatch(r"^\d{1,9}$", value) is not None
+
+    return False
+
+
+def valid_coordinates(coord_text):
+    """
+    Validate a coordinate string in the format 'lat, lon'.
+
+    Accepts decimal latitude/longitude pairs.
+
+    Args:
+        coord_text (str): Coordinate string.
+
+    Returns:
+        bool: True if format is valid, otherwise False.
+    """
+    if not coord_text:
+        return False
+
+    #match "number, number" with optional decimals and whitespace
+    pattern = r"^\s*-?\d+(\.\d+)?,\s*-?\d+(\.\d+)?\s*$"
+    return bool(re.fullmatch(pattern, coord_text))
+
+
+
+#3.  Lower level XML extraction utilities
 
 
 def extract_element_text(parent, ns, element, filter_attr=None, filter_value=None, all_results=False):
@@ -219,19 +299,24 @@ def extract_from_parent(
     return results
 
 
-def get_element_attr_by_index(parent, tag, index, attr, match_attrs=None):
+def get_element_attr_by_index(parent, tag, index, attr, ns, match_attrs=None, from_child=False):
     """
     Retrieve an attribute value from a child element by index.
 
     Elements are first filtered by tag name and optional attribute criteria,
     then the element at the given index is selected.
 
+    Optionally retrieves the attribute from the first child element instead
+    of the matched element itself.
+
     Args:
         parent (lxml.etree._Element): Parent element to search within.
         tag (str): Tag name of child elements.
         index (int): Index within the filtered list of elements.
         attr (str): Attribute name to retrieve
+        ns (str): Namespace URI used when matching elements.
         match_attrs (dict, optional): Attribute-value pairs used to filter elements.
+        from_child (bool, optional): If True, retrieve attribute from the first child element.
 
     Returns:
         str or None: The attribute value, or None if not found or index is out of range.
@@ -239,7 +324,7 @@ def get_element_attr_by_index(parent, tag, index, attr, match_attrs=None):
     match_attrs = match_attrs or {}
 
     #find direct child elements matching the tag
-    elements = parent.findall(f"{{{NS_TEI}}}{tag}")
+    elements = parent.findall(f"{{{ns}}}{tag}")
 
     #apply attribute filtering
     elements = [
@@ -251,126 +336,26 @@ def get_element_attr_by_index(parent, tag, index, attr, match_attrs=None):
     if index < 0 or index >= len(elements):
         return None
 
+    el = elements[index]
+
+    #optionally switch to first child for attribute retrieval
+    if from_child:
+        # filter children to include only real element nodes
+        children = [c for c in el if isinstance(c.tag, str)]
+        if children:
+            el = children[0]
+        else:
+            return None
+
     #return the requested attribute
-    val = elements[index].get(attr)
+    val = el.get(attr)
     return val.strip() if val else None
 
-def load_ent_name_by_key(entity_type, key, elem_name):
-    """
-    Load a TEI XML file and return the preferred name for a given element.
 
-    Searches for the first matching element with @type="preferred"
-    (e.g. persName, placeName, title) and returns its text content.
-
-    Args:
-        entity_type (str): Entity type key used in ENTITY_CONFIG.
-        key (str): XML file identifier.
-        elem_name (str): TEI element name to search for.
-
-    Returns:
-        str or None: Preferred name text, or None if not found.
-    """
-    
-    #get configuration for the entity type
-    config = ENTITY_CONFIG.get(entity_type)
-    if not config:
-        return None
-
-    #build full path to the XML file for this entity
-    path = os.path.join(config["dir"], f"{key}.xml")
-
-    #ensure file exists before attempting to parse
-    if not os.path.exists(path):
-        return None
-    try:
-        tree = etree.parse(path)
-    except Exception:
-        return None
-    
-    root = tree.getroot()
-
-    #find the first TEI element matching the name with @type="preferred"
-    name_elem = root.find(
-        f".//tei:{elem_name}[@type='preferred']",
-        namespaces=NSMAP
-    )
-
-    #return stripped text if found and non-empty
-    if name_elem is not None and name_elem.text:
-        return name_elem.text.strip()
-
-    return None
-
-def valid_date(s):
-    """
-    Returns True if the input is empty or matches a valid date format.
-
-    Supported formats:
-        - Year only: YYYY (e.g. 1666)
-        - Full ISO date: YYYY-MM-DD (e.g. 1666-10-14)
-
-    Args:
-        s (str): Date string to validate.
-
-    Returns:
-        bool: True if valid or empty, otherwise False.
-    """
-    if not s:
-        return True
-    return re.match(r"^\d{4}(-\d{2}-\d{2})?$", s) is not None
+#4. Entity Loading / High-level Extraction
 
 
-def valid_identifier(value, id_type):
-    """
-    Validate an identifier value according to its identifier type.
-
-    Supports:
-        - VIAF: numeric string (up to 22 digits)
-        - Wikidata: Q followed by digits (e.g. Q123)
-        - LCNAF: starts with 'n', optional letter, then digits
-        - TGN: numeric string (up to 9 digits)
-
-    Returns:
-        bool: True if valid, otherwise False
-    """
-    if not value:
-        return False
-
-    if id_type == "VIAF":
-        return re.fullmatch(r"^\d{1,22}$", value) is not None
-
-    if id_type == "Wikidata":
-        return re.fullmatch(r"^Q\d+$", value) is not None
-
-    if id_type == "LCNAF":
-        return re.fullmatch(r"n[a-z]?\d+", value) is not None
-
-    if id_type == "TGN":
-        return re.fullmatch(r"^\d{1,9}$", value) is not None
-
-    return False
-
-def valid_coordinates(coord_text):
-    """
-    Validate a coordinate string in the format 'lat, lon'.
-
-    Accepts decimal latitude/longitude pairs.
-
-    Args:
-        coord_text (str): Coordinate string.
-
-    Returns:
-        bool: True if format is valid, otherwise False.
-    """
-    if not coord_text:
-        return False
-
-    #match "number, number" with optional decimals and whitespace
-    pattern = r"^\s*-?\d+(\.\d+)?,\s*-?\d+(\.\d+)?\s*$"
-    return bool(re.fullmatch(pattern, coord_text))
-
-
-def load_entity(file_path, entity_tag, mapping, nsmap):
+def load_entity(file_path, entity_tag, config, nsmap):
     """
     Load structured data for a TEI entity from an XML file using a mapping specification.
 
@@ -380,8 +365,12 @@ def load_entity(file_path, entity_tag, mapping, nsmap):
 
     Args:
         file_path (str): Path to the TEI XML file.
-        entity_tag (str): Key used in ENTITY_CONFIG to identify the entity type.
-        mapping (dict): Extraction specification. Each key maps to a dict defining
+        entity_tag (str): Configuration key ("place", "work", etc)
+        config (dict): Configuration dictionary for the entity type.
+        nsmap (dict): Namespace mapping used for XPath queries.
+
+    Mapping (dict):
+        Extraction specification. Each key maps to a dict defining
             how to retrieve the value. Exactly one of the following must be provided:
             
             - "attr": Extract an attribute from the current element.
@@ -399,8 +388,6 @@ def load_entity(file_path, entity_tag, mapping, nsmap):
             - "attributes", "child_elements", "child_attributes",
               "extract_parent_text": Passed to extract_from_parent().
 
-        nsmap (dict): Namespace mapping used for XPath queries.
-
     Returns:
         dict or None:
             Dictionary of extracted values keyed by mapping keys. Values may be:
@@ -411,10 +398,9 @@ def load_entity(file_path, entity_tag, mapping, nsmap):
             Returns None if the target entity element is not found.
     """
 
-    #get configuration for the entity type
-    config = ENTITY_CONFIG.get(entity_tag)
-    if not config:
-        return None
+    #load extraction mapping for this entity type
+    #this defines how each field should be retrieved from the XML
+    mapping = config["mapping"]
 
     #determine the TEI element for this entity
     element_tag = config["element_tag"]
@@ -487,6 +473,764 @@ def load_entity(file_path, entity_tag, mapping, nsmap):
     return data
 
 
+def load_ent_name_by_key(entity_type, config, key, elem_name, nsmap):
+    """
+    Load a TEI XML file and return the preferred name for a given element.
+
+    Searches for the first matching element with @type="preferred"
+    (e.g. persName, placeName, title) and returns its text content.
+
+    Args:
+        entity_type (str): Configuration key ("place", "work", etc)
+        config (dict): Configuration dictionary for the entity type.
+            Must include:
+                - "dir" (str): Directory where entity XML files are stored.
+        key (str): Identifier of the XML file (without ".xml").
+        elem_name (str): Local name of the TEI element to search for.
+        nsmap (dict): Namespace mapping for XPath queries.
+
+    Returns:
+        str | None: The stripped text content of the preferred name element,
+            or None if the file does not exist, parsing fails, or no matching
+            element with text is found.
+    """
+
+    #build full path to the XML file for this entity
+    path = os.path.join(config["dir"], f"{key}.xml")
+
+    #ensure file exists before attempting to parse
+    if not os.path.exists(path):
+        return None
+    try:
+        tree = etree.parse(path)
+    except Exception:
+        return None
+    
+    root = tree.getroot()
+
+    #find the first TEI element matching the name with @type="preferred"
+    name_elem = root.find(
+        f".//tei:{elem_name}[@type='preferred']",
+        namespaces=nsmap
+    )
+
+    #return stripped text if found and non-empty
+    if name_elem is not None and name_elem.text:
+        return name_elem.text.strip()
+
+    return None
+
+
+def load_or_create_entity(entity_name, config, nsmap, ns_xml, xml_id=None):
+    """
+    Initialise and return a working context for a TEI entity.
+
+    The function either loads an existing entity XML file (when `xml_id` is provided)
+    or creates a new one from a template. In both cases, it prepares a consistent
+    context dictionary containing the parsed XML tree, root element, target entity
+    element, and file metadata.
+
+    This context is intended to be passed to downstream functions for reading,
+    editing, or writing entity data.
+
+    Args:
+        entity_name (str): Configuration key ("place", "work", etc)
+        config (dict): Configuration dictionary for the entity type. Must include:
+            - "dir": Directory containing entity files
+            - "template": Path to the TEI template file
+            - "container_tag": XPath to the container element
+            - "element_tag": Tag name of the entity element
+            - "prefix": Filename prefix for new entities
+        nsmap (dict): Namespace mapping for XPath queries.
+        ns_xml (str): Namespace URI for XML attributes (e.g. xml:id).
+        xml_id (str, optional): Identifier of an existing entity (without ".xml").
+
+    Returns: dict | None:
+        Context dictionary containing:
+            - "xml_id": Entity identifier
+            - "file_path": Path to the XML file
+            - "tree": Parsed ElementTree
+            - "root": Root element
+            - "entity_elem": Target entity element
+
+        Returns None if loading an existing file fails.
+    """
+    
+    #extract entity-specific configuration from config dict 
+    entity_dir = config["dir"]
+    template_path = config["template"]
+    container_tag = config["container_tag"]
+    element_tag = config["element_tag"]
+    file_prefix = config["prefix"]
+
+    #initialise shared context used for both loading and creating entities
+    context = {"entity_name": entity_name, "nsmap": nsmap}
+
+    if xml_id:
+        
+        #load existing entity XML file
+        file_path = os.path.join(entity_dir, f"{xml_id}.xml")        
+        if not os.path.exists(file_path):
+            return None
+        
+        tree = etree.parse(file_path)
+        root = tree.getroot()
+        
+        #locate the entity element by xml:id within the document
+        entity_elem = root.find(f".//tei:{element_tag}[@xml:id='{xml_id}']",namespaces=nsmap)
+
+        if entity_elem is None:
+            raise RuntimeError(f"{element_tag} with xml:id='{xml_id}' not found in {file_path}")
+    
+    else:
+
+        #create new entity from template file 
+        file_name = next_entity_file(file_prefix, entity_dir)
+        xml_id = file_name[:-4]
+        file_path = os.path.join(entity_dir, file_name)
+        
+        tree = etree.parse(template_path)
+        root = tree.getroot()
+        
+        #locate entity container in template and extract base entity element
+        container = root.find(container_tag, namespaces=nsmap)
+        entity_elem = container.find(f"tei:{element_tag}", namespaces=nsmap)
+
+        #assign xml:id if not already present
+        if f"{{{ns_xml}}}id" not in entity_elem.attrib:
+            entity_elem.set(f"{{{ns_xml}}}id", xml_id)
+
+    #populate and return full entity context
+    context.update({
+        "xml_id": xml_id,
+        "file_path": file_path,
+        "tree": tree,
+        "root": root,
+        "entity_elem": entity_elem,
+    })
+    
+    return context
+
+
+
+#5. XML Mutation (write helpers)
+
+
+def add_simple_element_attr(
+    *,
+    parent,
+    tag,
+    nsmap,
+    ns,
+    text=None,
+    rem_attrs=None,
+    attrs=None,
+    allow_multiple=True
+):
+    """
+    Create and insert a TEI-namespaced child element under a parent element.
+
+    Optionally removes existing elements of the same tag (and optionally matching
+    attribute filters), sets text content, and assigns attributes.
+
+    Args:
+        parent (lxml.etree._Element): Parent TEI element to insert into.
+        tag (str): Local name of the TEI element to create.
+        nsmap (dict): Namespace mapping used for XPath queries and element searches.
+        ns (str): Namespace URI used when constructing new elements.
+        text (str, optional): Text content for the new element.
+        rem_attrs (dict[str, str], optional): If provided and allow_multiple is False, only existing elements whose
+            attributes match all key-value pairs are removed before insertion.
+        attrs (dict[str, str], optional): Attribute names and values to set on the element.
+        allow_multiple (bool, optional): If False, existing matching elements are removed before creating the new element.
+
+    Returns:
+        lxml.etree._Element: The newly created element.
+    """
+    
+    #if duplicates are not allowed, remove existing matching elements first
+    if not allow_multiple:
+        for el in parent.findall(f"tei:{tag}", namespaces=nsmap):
+            
+            #if attribute filters are provided, only remove elements that fully match
+            if rem_attrs:
+                if all(el.get(k) == v for k, v in rem_attrs.items()):
+                    parent.remove(el)
+            else:
+                #if no attribute filters then remove all elements with this tag
+                parent.remove(el)
+
+    #create new element using full namespace URI
+    el = etree.SubElement(parent, f"{{{ns}}}{tag}")
+    
+    #add attributes if provided
+    if attrs:
+        for k, v in attrs.items():
+            el.set(k, v)
+    
+    #set text content if provided
+    if text:
+        el.text = text
+
+    return el
+
+
+def update_simple_element_attr(parent, tag, text, ns, update_attrs=None, match_attrs=None, index=0, error_category=None):
+    """
+    Update the text and attributes of a matching TEI child element.
+
+    Elements are selected by tag name and optionally filtered by attribute
+    values. If multiple matches exist, a specific element is selected using
+    the provided index.
+
+    Args:
+        parent (lxml.etree._Element): Parent TEI element containing children.
+        tag (str): Local tag name of child elements to search for.
+        text (str): New text content to assign to the element.
+            If None, existing text is left unchanged.
+        ns (str): Namespace URI used when matching elements.
+        update_attrs (dict): Attributes to set on the selected element. 
+            Existing attributes not included here may be removed.
+        match_attrs (dict): Attribute filter used to restrict which elements are eligible for updating.
+        index (int): Index of the matching element to update (default is 0).
+        error_category (str): Flask flash category used if the index is out of range.
+
+    Returns:
+        lxml.etree._Element | None: The updated element if successful, otherwise None.
+    """
+    
+    match_attrs = match_attrs or {}
+    update_attrs = update_attrs or {}
+
+    #find all elements matching tag and namespace
+    #then apply optional attribute-based filtering
+    elements = [
+        el for el in parent.findall(f"{{{ns}}}{tag}")
+        if all(el.get(k) == v for k, v in match_attrs.items())
+    ]
+
+    #validate index before attempting update
+    if index < 0 or index >= len(elements):
+        if error_category:
+            flash("Edit index out of range.", error_category)
+        return None
+
+    #select target element
+    el = elements[index]
+
+    #update text content only if explicitly provided
+    if text is not None:
+        el.text = text
+
+    #apply attribute updates (overwrite / add)
+    for k, v in update_attrs.items():
+        el.set(k, v)
+
+    #remove stale attributes:
+    # - not in update_attrs
+    # - not part of selection filter (match_attrs)
+    for k in list(el.attrib.keys()):
+        if k not in update_attrs and k not in match_attrs:
+            del el.attrib[k]
+
+    return el
+
+
+def build_section(
+    *,
+    parent,
+    item_tag,
+    nsmap,
+    ns,
+    text=None,
+    attrs=None,
+    rem_attrs=None,
+    allow_multiple=True,
+    child_tag=None,
+    child_text=None,
+    child_attrs=None
+):
+    """
+    Add or replace a TEI element under a parent, optionally with a nested child.
+
+    If `allow_multiple` is False, existing elements with the same tag are removed
+    before inserting the new element. Removal can be restricted to elements
+    matching specific attributes.
+
+    If `child_tag` is provided, a single child element is created
+    under the new element. Child attributes and text are applied if provided.
+
+    Args:
+        parent (lxml.etree._Element): Parent TEI element to insert into.
+        item_tag (str): Local name of the TEI element to create.
+        nsmap (dict):  Namespace mapping used for element lookup.
+        ns (str): Namespace URI used when constructing new elements.
+        text (str, optional): Text content for the new element.
+        attrs (dict[str, str], optional): Attribute names and values to set on the element.
+        rem_attrs (dict[str, str], optional): If provided and allow_multiple is False, only existing elements whose
+            attributes match all key-value pairs are removed before insertion.
+        allow_multiple (bool, optional): If False, existing matching elements are removed before creating the new element.
+        child_tag (str, optional): Local name of a nested child element to create.
+        child_text (str, optional): Text content for the child element.
+        child_attrs (dict, optional): Attributes for the child element.
+
+    Returns:
+        lxml.etree._Element: The newly created parent element. If `child_tag` is provided,
+            the returned element will contain the created child element.
+    """
+    
+    #if duplicates are not allowed, remove existing elements first
+    if not allow_multiple:
+        for el in parent.findall(f"tei:{item_tag}", namespaces=nsmap):
+            
+            #if attribute filters are provided, only remove elements that fully match
+            if rem_attrs:
+                if all(el.get(k) == v for k, v in rem_attrs.items()):
+                    parent.remove(el)
+            else:
+                #if no attribute filter then remove all elements with this tag
+                parent.remove(el)
+
+    #create new element using full namespace URI
+    el = etree.SubElement(parent, f"{{{ns}}}{item_tag}")
+
+    #add attributes if provided
+    if attrs:
+        for k, v in attrs.items():
+            el.set(k, v)
+
+    #set text content if provided
+    if text:
+        el.text = text
+
+    #optionally create a nested child element 
+    if child_tag:
+        child = etree.SubElement(el, f"{{{ns}}}{child_tag}")
+        
+        #apply attributes to child element if provided
+        if child_attrs:
+            for k, v in child_attrs.items():
+                child.set(k, v)
+        
+        #set child text content if provided
+        if child_text:
+            child.text = child_text
+
+    return el
+
+
+def update_build_section(
+    *,
+    parent,
+    item_tag,
+    ns,
+    index=0,
+    match_attrs=None,
+    text=None,
+    element_attrs=None,
+    child_tag=None,
+    child_text=None,
+    child_attrs=None,
+    error_category=None
+):
+    """
+    Update the text and attributes of a matching TEI element,
+    and update or create child elements, text and attributes if provided. 
+
+    Elements are first filtered by `item_tag` and optional `match_attrs`. The element
+    at the specified index is then updated. This function mirrors `build_section`
+    behaviour by updating attributes, text content, and optionally a nested child element.
+
+    Args:
+        parent (lxml.etree._Element): Parent TEI element containing children.
+        item_tag (str): Local tag name of child elements to search for.
+        ns (str): Namespace URI used when matching elements.
+        index (int): Index of the matching element to update (default is 0).
+        match_attrs (dict): Attribute filter used to restrict which elements are eligible for updating.
+        text (str): New text content to assign to the element.
+            If None, existing text is left unchanged.
+        element_attrs (dict[str, str | None], optional): Attributes to set on the selected element. 
+            Existing attributes not included here may be removed.
+        child_tag (str, optional): Local name of a nested child element to update or create.
+        child_text (str, optional): Text content for the child element.
+        child_attrs (dict[str, str], optional): Attributes to set on the child element.
+        error_category (str, optional): Flask flash category used if the index is out of range.
+
+    Returns:
+        lxml.etree._Element | None: The updated element if successful, otherwise None.
+    """
+    
+    match_attrs = match_attrs or {}
+    element_attrs = element_attrs or {}
+
+    #find all elements matching tag and namespace
+    #then apply optional attribute-based filtering
+    elements = [
+        el for el in parent.findall(f"{{{ns}}}{item_tag}")
+        if all(el.get(k) == v for k, v in match_attrs.items())
+    ]
+
+    #validate index before attempting update
+    if index < 0 or index >= len(elements):
+        if error_category:
+            flash("Edit index out of range.", error_category)
+        return None
+
+    #select target element
+    el = elements[index]
+
+    #update text content only if explicitly provided
+    if text is not None:
+        el.text = text
+
+    #apply attribute updates (overwrite / add)
+    for k, v in element_attrs.items():
+        if v is None:
+            #remove attribute if explicitly set to None
+            if k in el.attrib:
+                del el.attrib[k]
+        else:
+            el.set(k, v)
+
+    #remove stale attributes:
+    # - not in element_attrs
+    # - not part of selection filter (match_attrs)
+    for k in list(el.attrib.keys()):
+        if k not in element_attrs and k not in match_attrs:
+            del el.attrib[k]
+
+    #optionally update or create a nested child element
+    if child_tag:
+        child = el.find(f"{{{ns}}}{child_tag}")
+        
+        #create child if it does not exist
+        if child is None:
+            child = etree.SubElement(el, f"{{{ns}}}{child_tag}")
+        
+        #apply attributes to child element if provided
+        if child_attrs:
+            for k, v in child_attrs.items():
+                child.set(k, v)
+        
+        #set child text if explicitly provided
+        if child_text is not None:
+            child.text = child_text
+
+    return el
+
+
+
+#6. Deletion Logic
+
+
+def delete_tei_attribute(
+    *,
+    tei_root,
+    parent,
+    file_path,
+    tag,
+    index,
+    nsmap,
+    attr_name,
+    attr_value=None,
+):
+    """
+    Delete an attribute from a TEI element selected by tag and index, then save the XML.
+
+    Elements are selected using an XPath query under the given parent,
+    filtered by the presence of an attribute and/or a specific attribute value.
+    The element at the specified index in the resulting list is targeted.
+
+    If the provided parent element already matches the target tag, the search is
+    performed from its parent (i.e. the grandparent) to avoid selecting the same
+    node and to allow correct indexing among sibling elements.
+
+    Args:
+        tei_root (lxml.etree._Element): Root element of the TEI document.
+        parent (lxml.etree._Element): Element under which to search.
+        file_path (str): Path to save the modified XML file
+        tag (str): Tag name of the target elements.
+        index (int): Index within the filtered list of matching elements.
+        nsmap (dict): Namespace mapping for XPath queries.
+        attr_name (str): Name of the attribute to delete.
+        attr_value (str, optional): If provided, only elements with this attribute
+            value are considered.
+
+    Returns:
+        bool: True if a matching element was found (the file is updated if the attribute exists)
+        False otherwise.
+    """
+
+    #if parent is already the target tag, move up one level
+    #to avoid selecting the same node and to allow correct indexing
+    if etree.QName(parent).localname == tag:
+        grandparent = parent.getparent()
+        if grandparent is not None:
+            parent = grandparent
+
+    #build XPath to select target elements
+    xpath = f".//tei:{tag}"
+    
+    #apply attribute filtering:
+    #- if attr_value is provided match specific value
+    #- otherwise match elements that simply have the attribute
+    if attr_name and attr_value:
+        xpath += f"[@{attr_name}='{attr_value}']"
+    elif attr_name:
+        xpath += f"[@{attr_name}]"
+
+    #execute XPath query
+    elements = parent.xpath(xpath, namespaces=nsmap)
+
+    #check that index is valid within the filtered results
+    if index is not None and 0 <= index < len(elements):
+        element = elements[index]
+        
+        #delete attribute if it exists on the selected element
+        if attr_name in element.attrib:
+            del element.attrib[attr_name]
+
+        #write updated XML back to file
+        etree.ElementTree(tei_root).write(
+            file_path,
+            encoding="UTF-8",
+            xml_declaration=True,
+            pretty_print=True
+        )
+
+        return True
+
+    #no matching element/attribute found or index out of range
+    return False
+
+
+def delete_tei_element(
+    *,
+    tei_root,
+    parent,
+    file_path,
+    tag,
+    index,
+    nsmap,
+    attr_name=None,
+    attr_value=None,
+    delete_parent=False
+    ):
+
+    """
+    Delete a TEI element selected by tag and index, then save the XML.
+
+    Elements are selected using an XPath query under the given parent,
+    optionally filtered by attribute presence and/or value. The element
+    at the specified index in the resulting list is removed.
+
+    If `delete_parent` is True, the immediate parent of the matched element
+    is deleted instead of the element itself.
+
+    Args:
+        tei_root (lxml.etree._Element): Root element of the TEI document.
+        parent (lxml.etree._Element): Element under which to search.
+        file_path (str): Path to save the modified XML file.
+        tag (str): Tag name of the target elements.
+        index (int): Index within the filtered list of matching elements.
+        nsmap (dict): Namespace mapping for XPath queries.
+        attr_name (str, optional): Only consider elements with this attribute.
+        attr_value (str, optional): If provided, only elements with this attribute
+            value are considered.
+        delete_parent (bool, optional): If True, deletes the immediate parent of the
+            matched element instead of the element itself.
+
+    Returns:
+        bool: True if a matching element was found and deleted, False otherwise.
+    """
+
+    #build XPath to select target elements
+    xpath = f".//tei:{tag}"
+    
+    #apply attribute filtering:
+    #- if attr_value is provided match specific value
+    #- otherwise match elements that simply have the attribute
+    if attr_name and attr_value:
+        xpath += f"[@{attr_name}='{attr_value}']"
+    elif attr_name:
+        xpath += f"[@{attr_name}]"
+
+    #execute XPath query
+    elements = parent.xpath(xpath, namespaces=nsmap)
+
+    #check that index is valid within the filtered results
+    if index is not None and 0 <= index < len(elements):
+        element_to_delete = elements[index]
+
+        #decide target (self vs parent)
+        if delete_parent:
+            element_to_delete = element_to_delete.getparent()
+        
+        #remove the selected element from its parent node
+        element_parent = element_to_delete.getparent()
+        element_parent.remove(element_to_delete)
+
+        #write updated XML back to file
+        etree.ElementTree(tei_root).write(
+            file_path,
+            encoding="UTF-8",
+            xml_declaration=True,
+            pretty_print=True
+        )
+
+        return True
+    
+    #no matching element/attribute found or index out of range
+    return False
+
+
+def handle_deletions(entity_elem, form_data, context, nsmap):
+    """
+    Handles deletion of TEI elements or attributes based on submitted form data.
+
+    Supports two operations:
+    - Deleting a TEI element selected by tag, optional attribute filters, and index
+    - Deleting a TEI attribute from a selected element
+
+    The target search scope can be switched between the entity element and the
+    full TEI document root using the `from_root` form flag.
+
+    If `delete_index` is missing or invalid, index defaults to 0.
+
+    Args:
+        entity_elem (lxml.etree._Element): Current entity element.
+        form_data (dict): Submitted form data containing deletion instructions.
+        context (dict): Runtime TEI context containing:
+            - "root": TEI document root element
+            - "file_path": Path to XML file
+        nsmap (dict): Namespace mapping for XPath queries.
+        
+    Returns:
+        bool: True if a deletion (element or attribute) was performed, False otherwise.    
+    """
+    
+    #extract deletion index
+    delete_index = form_data.get("delete_index")
+    #safe index fallback (0 if missing)
+    index = int(delete_index or 0)
+    
+    #access TEI document root and file path from runtime context
+    tei_root = context["root"]
+    file_path = context["file_path"]
+
+    #determine search scope (entity vs full document)
+    search_from_root = form_data.get("from_root") == "1"
+    parent = context["root"] if search_from_root else entity_elem
+
+    #optional flag: delete parent of matched element instead of element itself
+    delete_parent = form_data.get("delete_parent") == "1"
+
+    #delete TEI element
+    
+    #element deletion parameters from form
+    delete_tag = form_data.get("delete")
+    element_attr_name = form_data.get("element_attr_name")
+    element_attr_value = form_data.get("element_attr_value")
+
+    if delete_tag:
+
+        #attempt deletion of selected element
+        deleted_elem = delete_tei_element(
+            tei_root=tei_root,
+            parent=parent,
+            file_path=file_path,
+            tag=delete_tag,
+            index=index,
+            nsmap=nsmap,
+            attr_name=element_attr_name,
+            attr_value=element_attr_value,
+            delete_parent=delete_parent
+        )
+        
+        #early exit if deletion succeeded
+        if deleted_elem:
+            return True
+
+    #delete TEI attribute
+
+    #attribute deletion parameters from form
+    delete_attribute_tag = form_data.get("delete_attribute_tag")
+    delete_attribute = form_data.get("delete_attribute")
+    delete_attribute_value = form_data.get("delete_attribute_value")
+
+    if delete_attribute_tag:
+
+        #attempt deletion of attribute on selected element
+        deleted_attr = delete_tei_attribute(
+            tei_root=tei_root,
+            parent=parent,
+            file_path=file_path,
+            tag=delete_attribute_tag,
+            index=index,
+            nsmap=nsmap,
+            attr_name=delete_attribute,
+            attr_value=delete_attribute_value
+        )
+        
+        #early exit if deletion succeeded
+        if deleted_attr:
+            return True
+
+    #no deletion performed
+    return False
+
+
+
+#7. File / Persistence
+
+
+def write_entity_to_file(context):
+    """Save entity XML to disk."""
+    etree.indent(context["root"], space="  ")
+    etree.ElementTree(context["root"]).write(
+        context["file_path"],
+        encoding="UTF-8",
+        xml_declaration=True,
+        pretty_print=True
+    )
+
+def next_entity_file(prefix, directory, extension="xml"):
+    """
+    Generate the next available filename for an entity based on a numeric sequence.
+
+    Filenames are expected to follow the pattern: <prefix>_<number>.<extension>
+    e.g., "p_1.xml", "ms_2.xml", "w_10.xml".
+
+    Args:
+        prefix (str): The prefix for the entity type (e.g., "p", "ms", "w").
+        directory (str): Path to the directory containing existing files.
+        extension (str, optional): File extension (default is "xml").
+
+    Returns:
+        str: The next available filename using the next number in sequence.
+    """
+
+    existing_numbers = []
+
+    #match filenames like "prefix_123.extension"
+    pattern = re.compile(rf"^{re.escape(prefix)}_(\d+)\.{re.escape(extension)}$")
+
+    #collect numeric suffixes from matching filenames
+    for f in os.listdir(directory):
+        match = pattern.match(f)
+        if match:
+            existing_numbers.append(int(match.group(1)))
+
+    #determine next number in sequence
+    next_num = max(existing_numbers, default=0) + 1
+    
+    return f"{prefix}_{next_num}.{extension}"
+
+
+
+#8. Ordering / Structure Control
+
+
 def insert_in_order(parent, tag, new_elem, child_order, nsmap,
                     sort_attr=None, attr_priority=None):
     """
@@ -506,7 +1250,7 @@ def insert_in_order(parent, tag, new_elem, child_order, nsmap,
                    (only used when sort_attr and attr_priority are provided).
         new_elem (lxml.etree._Element): Element to insert into the parent.
         child_order (list[str]): Ordered list of tag names defining the primary sort order.
-        nsmap (dict): Namespace mapping.
+        nsmap (dict): Namespace mapping for XPath queries.
         sort_attr (str, optional): Attribute name used for secondary sorting.
         attr_priority (dict, optional): Mapping of attribute values to priority.
 
@@ -554,519 +1298,4 @@ def insert_in_order(parent, tag, new_elem, child_order, nsmap,
     #re-append children in sorted order
     for _, _, el in sorted_children:
         parent.append(el)
-
-
-def next_entity_file(prefix, directory, extension="xml"):
-    """
-    Generate the next available filename for an entity based on a numeric sequence.
-
-    Filenames are expected to follow the pattern: <prefix>_<number>.<extension>
-    e.g., "p_1.xml", "ms_2.xml", "w_10.xml".
-
-    Args:
-        prefix (str): The prefix for the entity type (e.g., "p", "ms", "w").
-        directory (str): Path to the directory containing existing files.
-        extension (str, optional): File extension (default is "xml").
-
-    Returns:
-        str: The next available filename using the next number in sequence.
-    """
-
-    existing_numbers = []
-
-    #match filenames like "prefix_123.extension"
-    pattern = re.compile(rf"^{re.escape(prefix)}_(\d+)\.{re.escape(extension)}$")
-
-    #collect numeric suffixes from matching filenames
-    for f in os.listdir(directory):
-        match = pattern.match(f)
-        if match:
-            existing_numbers.append(int(match.group(1)))
-
-    #determine next number in sequence
-    next_num = max(existing_numbers, default=0) + 1
-    
-    return f"{prefix}_{next_num}.{extension}"
-
-
-def delete_tei_attribute(
-    *,
-    tei_root,
-    parent,
-    file_path,
-    tag,
-    index,
-    nsmap,
-    attr_name,
-    attr_value=None,
-):
-    """
-    Delete a specified attribute from a TEI element within a parent element and save the XML.
-
-    If the parent element itself matches the target tag, the function searches in the grandparent,
-    in order to correctly parse and find the element.
-
-    Args:
-        tei_root (lxml.etree._Element): The root element of the TEI tree.
-        parent (lxml.etree._Element): The parent element under which to search.
-        file_path (str): Path to save the modified XML file.
-        tag (str): Tag name of the element(s) whose attribute should be deleted.
-        index (int): Index of the target element among all matching elements.
-        nsmap (dict): Namespace mapping for XPath searches.
-        attr_name (str): Name of the attribute to delete. Required.
-        attr_value (str, optional): Only delete attribute if it matches this value.
-
-    Returns:
-        bool: True if the attribute was found and deleted; False otherwise.
-    """
-
-    parent_tag = etree.QName(parent).localname
-
-    # If parent itself is the tag, adjust to search in grandparent
-    if etree.QName(parent).localname == tag:
-        grandparent = parent.getparent()
-        if grandparent is not None:
-            parent = grandparent
-
-    # Build XPath
-    xpath = f".//tei:{tag}"
-    if attr_name and attr_value:
-        xpath += f"[@{attr_name}='{attr_value}']"
-    elif attr_name:
-        xpath += f"[@{attr_name}]"
-
-    elements = parent.xpath(xpath, namespaces=nsmap)
-
-    if index is not None and 0 <= index < len(elements):
-        element = elements[index]
-        if attr_name in element.attrib:
-            del element.attrib[attr_name]
-
-
-        etree.ElementTree(tei_root).write(
-            file_path,
-            encoding="UTF-8",
-            xml_declaration=True,
-            pretty_print=True
-        )
-
-        return True
-
-    return False
-
-def delete_tei_element(
-    *,
-    tei_root,
-    parent,
-    file_path,
-    tag,
-    index,
-    nsmap,
-    attr_name=None,
-    attr_value=None, 
-    ):
-
-    """
-    Delete a specified TEI element under a given parent element and save the XML.
-
-    If the parent element itself matches the target tag, the function searches in the grandparent
-    to correctly find the element.
-
-    Args:
-        tei_root (lxml.etree._Element): Root element of the TEI tree.
-        parent (lxml.etree._Element): Parent element under which to search.
-        file_path (str): Path to save the modified XML file.
-        tag (str): Tag name of the element(s) to delete.
-        index (int): Index of the target element among all matching elements.
-        nsmap (dict): Namespace mapping for XPath searches.
-        attr_name (str, optional): Only consider elements with this attribute.
-        attr_value (str, optional): Only delete element if the attribute matches this value.
-
-    Returns:
-        bool: True if the element was found and deleted; False otherwise.
-    """
-
-    # Build XPath
-    xpath = f".//tei:{tag}"
-    if attr_name and attr_value:
-        xpath += f"[@{attr_name}='{attr_value}']"
-    elif attr_name:
-        xpath += f"[@{attr_name}]"
-
-    # Find matching elements
-    elements = parent.xpath(xpath, namespaces=nsmap)
-
-    if index is not None and 0 <= index < len(elements):
-        element_to_delete = elements[index]
-        element_parent = element_to_delete.getparent()
-        element_parent.remove(element_to_delete)
-
-        etree.ElementTree(tei_root).write(
-            file_path,
-            encoding="UTF-8",
-            xml_declaration=True,
-            pretty_print=True
-        )
-
-        return True
-
-    return False
-
-
-def add_simple_element_attr(
-    *,
-    parent,
-    tag,
-    text=None,
-    rem_attrs=None,
-    attrs=None,
-    allow_multiple=True
-):
-    """
-    Create and insert a TEI-namespaced child element under a parent element.
-
-    Optionally removes existing elements of the same tag, sets text content,
-    and assigns attributes.
-
-    Args:
-        parent (lxml.etree._Element):
-            Parent TEI element to insert into.
-        tag (str):
-            Local name of the TEI element to create (e.g. "birth", "idno").
-        text (str, optional):
-            Text content for the new element.
-        attrs (dict[str, str], optional):
-            Attribute names and values to set on the element.
-        allow_multiple (bool, optional):
-            If False, existing child elements with the same tag are removed
-            before creating the new element.
-
-    Returns:
-        lxml.etree._Element:
-            The newly created TEI element.
-    """
-    if not allow_multiple:
-        for el in parent.findall(f"tei:{tag}", namespaces=NSMAP):
-            if rem_attrs:
-                # only remove if all attributes match
-                if all(el.get(k) == v for k, v in rem_attrs.items()):
-                    parent.remove(el)
-            else:
-                # no attribute filter → remove all
-                parent.remove(el)
-
-    el = etree.SubElement(parent, f"{{{NS_TEI}}}{tag}")
-    if attrs:
-        for k, v in attrs.items():
-            el.set(k, v)
-    if text:
-        el.text = text
-
-    return el
-
-def update_simple_element_attr(parent, tag, text, update_attrs=None, match_attrs=None, index=0, error_category=None):
-    """
-    Update the text of an existing child element matching tag + attrs at a given index.
-
-    Args:
-        parent: XML/TEI element to update.
-        tag (str): The child tag name.
-        text (str): New text content.
-        update_attrs (dict): Attributes to set on the element.
-        match_attrs (dict): Optional attributes to filter which elements to consider.
-        index (int): Which matching element to update.
-        error_category (str): Optional flash category for errors.
-
-    Returns:
-        bool: True if update succeeded, False otherwise.
-    """
-    
-    match_attrs = match_attrs or {}
-    update_attrs = update_attrs or {}
-
-
-    # Find all matching elements
-    elements = [
-        el for el in parent.findall(f"{{{NS_TEI}}}{tag}")
-        if all(el.get(k) == v for k, v in match_attrs.items())
-    ]
-
-    if index < 0 or index >= len(elements):
-        if error_category:
-            flash("Edit index out of range.", error_category)
-        return None
-
-    el = elements[index]
-
-    if text is not None:
-        el.text = text
-
-    for k, v in update_attrs.items():
-        el.set(k, v)
-
-    # Remove old attributes not present in the new attrs
-    for k in list(el.attrib.keys()):
-        if k not in update_attrs and k not in match_attrs:
-            del el.attrib[k]
-
-    return el
-
-def build_section(
-    *,
-    parent,
-    item_tag,
-    text=None,
-    attrs=None,
-    rem_attrs=None,
-    allow_multiple=True,
-    child_tag=None,
-    child_text=None,
-    child_attrs=None
-):
-    """
-    Add or replace a TEI element under a parent, optionally with a nested child.
-
-    Args:
-        parent (Element): Parent element
-        item_tag (str): Tag of the element to create
-        text (str, optional): Text content for the element
-        attrs (dict, optional): Attributes for the element
-        multiple (bool, optional): If False, replaces existing elements
-        child_tag (str, optional): Nested child element tag
-        child_text (str, optional): Text for the child element
-        child_attrs (dict, optional): Attributes for the child element
-
-    Returns:
-        lxml.etree._Element: The newly created element
-    """
-    if not allow_multiple:
-        for el in parent.findall(f"tei:{tag}", namespaces=NSMAP):
-            if rem_attrs:
-                # only remove if all attributes match
-                if all(el.get(k) == v for k, v in rem_attrs.items()):
-                    parent.remove(el)
-            else:
-                # no attribute filter → remove all
-                parent.remove(el)
-
-    el = etree.SubElement(parent, f"{{{NS_TEI}}}{item_tag}")
-
-    if attrs:
-        for k, v in attrs.items():
-            el.set(k, v)
-
-    if text:
-        el.text = text
-
-    if child_tag:
-        child = etree.SubElement(el, f"{{{NS_TEI}}}{child_tag}")
-        if child_attrs:
-            for k, v in child_attrs.items():
-                child.set(k, v)
-        if child_text:
-            child.text = child_text
-
-    return el
-
-
-
-def update_build_section(
-    *,
-    parent,
-    item_tag,
-    index=0,
-    match_attrs=None,
-    text=None,
-    element_attrs=None,
-    child_tag=None,
-    child_text=None,
-    child_attrs=None,
-    error_category=None
-):
-    """
-    Update an existing TEI element by index from a filtered list, or create it if needed.
-    Mirrors build_section logic for attributes and children.
-
-    Args:
-        parent: Parent XML element
-        item_tag: Tag of element to update
-        index: Which matching element to update
-        match_attrs: Attributes to filter elements
-        text: Text to set on the element
-        element_attrs: Attributes to update/set on the element itself
-        child_tag: Optional child element tag
-        child_text: Optional child element text
-        child_attrs: Optional child element attributes
-        error_category: Optional flash category
-
-    Returns:
-        lxml.etree._Element: The updated element
-    """
-    match_attrs = match_attrs or {}
-    element_attrs = element_attrs or {}
-
-    # Filter elements by match_attrs
-    elements = [
-        el for el in parent.findall(f"{{{NS_TEI}}}{item_tag}")
-        if all(el.get(k) == v for k, v in match_attrs.items())
-    ]
-
-    # Check index
-    if index < 0 or index >= len(elements):
-        if error_category:
-            flash("Edit index out of range.", error_category)
-        return None
-
-    # Pick the element
-    el = elements[index]
-
-    # Update element attributes
-    for k, v in element_attrs.items():
-        if v is None:
-            if k in el.attrib:
-                del el.attrib[k]
-        else:
-            el.set(k, v)
-
-    # Remove old attributes not present in the new attrs
-    for k in list(el.attrib.keys()):
-        if k not in element_attrs and k not in match_attrs:
-            del el.attrib[k]
-
-    # Update text
-    if text is not None:
-        el.text = text
-
-    # Update or create child element
-    if child_tag:
-        child = el.find(f"{{{NS_TEI}}}{child_tag}")
-        if child is None:
-            child = etree.SubElement(el, f"{{{NS_TEI}}}{child_tag}")
-        if child_attrs:
-            for k, v in child_attrs.items():
-                child.set(k, v)
-        if child_text is not None:
-            child.text = child_text
-
-    return el
-
-
-def load_or_create_entity(entity_name, entity_dir, template_path, nsmap, xml_id=None):
-    """Load existing TEI entity XML or create a new one from template."""
-    
-    config = ENTITY_CONFIG[entity_name]
-    container_tag = config["container_tag"]
-    element_tag = config["element_tag"]
-    file_prefix = config["prefix"]
-
-    context = {"entity_name": entity_name, "nsmap": nsmap}
-
-    if xml_id:  # Load existing
-        file_path = os.path.join(entity_dir, f"{xml_id}.xml")
-        if not os.path.exists(file_path):
-            return None
-        tree = etree.parse(file_path)
-        root = tree.getroot()
-        entity_elem = root.find(f".//tei:{element_tag}[@xml:id='{xml_id}']",namespaces=nsmap)
-
-        if entity_elem is None:
-            raise RuntimeError(f"{element_tag} with xml:id='{xml_id}' not found in {file_path}")
-    
-    else:  # Create new
-        file_name = next_entity_file(file_prefix, entity_dir)
-        xml_id = file_name[:-4]
-        file_path = os.path.join(entity_dir, file_name)
-        
-        tree = etree.parse(template_path)
-        root = tree.getroot()
-        
-        container = root.find(container_tag, namespaces=nsmap)
-        entity_elem = container.find(f"tei:{element_tag}", namespaces=nsmap)
-
-        if f"{{{NS_XML}}}id" not in entity_elem.attrib:
-            entity_elem.set(f"{{{NS_XML}}}id", xml_id)
-
-    context.update({
-        "xml_id": xml_id,
-        "file_path": file_path,
-        "tree": tree,
-        "root": root,
-        "entity_elem": entity_elem,
-    })
-    return context
-
-def write_entity_to_file(context):
-    """Save entity XML to disk."""
-    etree.indent(context["root"], space="  ")
-    etree.ElementTree(context["root"]).write(
-        context["file_path"],
-        encoding="UTF-8",
-        xml_declaration=True,
-        pretty_print=True
-    )
-
-
-def handle_deletions(entity_elem, form_data, context):
-    """
-    Handles deletion of TEI elements or attributes based on form data.
-
-    Returns True if a deletion occurred, False otherwise.
-    """
-    delete_index = form_data.get("delete_index")
-    tei_root = context["root"]
-    file_path = context["file_path"]
-
-    search_from_root = form_data.get("from_root") == "1"
-    parent = context["root"] if search_from_root else entity_elem
-
-    # ----- Delete element -----
-    delete_tag = form_data.get("delete")
-    element_attr_name = form_data.get("element_attr_name")
-    element_attr_value = form_data.get("element_attr_value")
-    
-
-    if delete_tag:
-        try:
-            index = int(delete_index)
-        except (ValueError, TypeError):
-            index = 0
-
-        deleted_elem = delete_tei_element(
-            tei_root=tei_root,
-            parent=parent,
-            file_path=file_path,
-            tag=delete_tag,
-            index=index,
-            nsmap=NSMAP,
-            attr_name=element_attr_name,
-            attr_value=element_attr_value
-        )
-        if deleted_elem:
-            return True
-
-    # ----- Delete attribute -----
-    delete_attribute_tag = form_data.get("delete_attribute_tag")
-    delete_attribute = form_data.get("delete_attribute")
-    delete_attribute_value = form_data.get("delete_attribute_value")
-
-    if delete_attribute_tag:
-        try:
-            index = int(delete_index)
-        except (ValueError, TypeError):
-            index = 0
-
-        deleted_attr = delete_tei_attribute(
-            tei_root=tei_root,
-            parent=parent,
-            file_path=file_path,
-            tag=delete_attribute_tag,
-            index=index,
-            nsmap=NSMAP,
-            attr_name=delete_attribute,
-            attr_value=delete_attribute_value
-        )
-        if deleted_attr:
-            return True
-
-    return False
 

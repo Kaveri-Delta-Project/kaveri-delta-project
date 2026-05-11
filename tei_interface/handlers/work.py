@@ -18,10 +18,12 @@ from index_utils import (
     remove_connection_index
     )
 
-from config import NSMAP, ENTITY_CONFIG
+from config import NS_TEI, NSMAP, ENTITY_CONFIG
 
 from flask import flash
 
+PERSON_CONFIG = ENTITY_CONFIG["person"]
+PLACE_CONFIG = ENTITY_CONFIG["place"]
 WORK_CONFIG = ENTITY_CONFIG["work"]
 CHILD_ORDER = WORK_CONFIG["child_order"]
 ATTR_PRIORITY = WORK_CONFIG["attribute_priority"]
@@ -56,6 +58,7 @@ def handle_preferred_title(work, context, form_data):
             parent=work,
             tag="title",
             text=title,
+            ns=NS_TEI,
             match_attrs={"type": "preferred"},
             index=index
         )
@@ -69,6 +72,8 @@ def handle_preferred_title(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="title",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=title,
             attrs={"type": "preferred"},
             rem_attrs={"type": "preferred"},
@@ -110,6 +115,7 @@ def handle_variant_title(work, context, form_data):
             parent=work,
             tag="title",
             text=alt_title,
+            ns=NS_TEI,
             match_attrs={"type": "variant"},
             index=index
         )
@@ -123,6 +129,8 @@ def handle_variant_title(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="title",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=alt_title,
             attrs={"type": "variant"},
             allow_multiple=True
@@ -172,6 +180,7 @@ def handle_idno(work, context, form_data):
             parent=work,
             tag="idno",
             text=idno,
+            ns=NS_TEI,
             update_attrs={"type": idno_type},
             index=index
         )
@@ -185,6 +194,8 @@ def handle_idno(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="idno",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=idno,
             attrs={"type": idno_type},
             allow_multiple=False
@@ -250,6 +261,7 @@ def handle_dates(work, context, form_data):
             parent=work,
             tag="date",
             text=dates_text,
+            ns=NS_TEI,
             update_attrs=attrs,
             index=index
         )
@@ -262,6 +274,8 @@ def handle_dates(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="date",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=dates_text,
             attrs=attrs,
             allow_multiple=True
@@ -285,7 +299,7 @@ def handle_editor(work, context, form_data):
         flash("No person key selected.", "editor-error")
         return {"ok": False}
 
-    editor_text = load_ent_name_by_key("person", editor_key, "persName")
+    editor_text = load_ent_name_by_key("person", PERSON_CONFIG, editor_key, "persName", NSMAP)
     if not editor_text:
         flash("Selected person could not be resolved.", "editor-error")
         return {"ok": False}
@@ -306,13 +320,15 @@ def handle_editor(work, context, form_data):
             parent=work,
             tag="editor",
             index=index,
-            attr="key"
+            attr="key",
+            ns=NS_TEI
         )
 
         updated_el = update_simple_element_attr(
             parent=work,
             tag="editor",
             text=editor_text,
+            ns=NS_TEI,
             update_attrs={"key": editor_key, "role": editor_role},
             index=index
         )
@@ -329,6 +345,8 @@ def handle_editor(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="editor",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=editor_text,
             attrs={"key": editor_key, "role": editor_role},
             allow_multiple=True
@@ -354,7 +372,7 @@ def handle_pub_place(work, context, form_data):
         flash("No place key selected.", "pub-place-error")
         return {"ok": False}
 
-    pub_place_text = load_ent_name_by_key("place", pub_place_key, "placeName")
+    pub_place_text = load_ent_name_by_key("place", PLACE_CONFIG, pub_place_key, "placeName", NSMAP)
     if not pub_place_text:
         flash("Selected place could not be resolved.", "pub-place-error")
         return {"ok": False}
@@ -381,12 +399,14 @@ def handle_pub_place(work, context, form_data):
             parent=work,
             tag="pubPlace",
             index=index,
-            attr="key"
+            attr="key",
+            ns=NS_TEI
         )
 
         updated_el = update_build_section(
             parent=work,
             item_tag="pubPlace",
+            ns=NS_TEI,
             index=index,
             element_attrs=element_attrs,
             child_tag="placeName",
@@ -404,6 +424,8 @@ def handle_pub_place(work, context, form_data):
         el = build_section(
             parent=work,
             item_tag="pubPlace",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             attrs=element_attrs,
             child_tag="placeName",
             child_text=pub_place_text
@@ -426,7 +448,7 @@ def handle_genre(work, context, form_data):
 
     genre_commentary_text = None
     if genre_commentary_key:
-        genre_commentary_text = load_ent_name_by_key("work", genre_commentary_key, "title")
+        genre_commentary_text = load_ent_name_by_key("work", WORK_CONFIG, genre_commentary_key, "title", NSMAP)
 
 
     if not genre:
@@ -457,13 +479,16 @@ def handle_genre(work, context, form_data):
             parent=work,
             tag="note",
             index=index,
-            attr="key"
+            attr="key",
+            ns=NS_TEI
+
         )
 
         updated_el = update_build_section(
             parent=work,
             item_tag="note",
-            text=text_value,
+            ns=NS_TEI,
+            text=text_value,            
             match_attrs={"type": "genre"},
             element_attrs=attrs,
             index=index
@@ -480,6 +505,8 @@ def handle_genre(work, context, form_data):
         el = build_section(
             parent=work,
             item_tag="note",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             text=text_value,
             attrs=attrs,
             allow_multiple=True
@@ -533,6 +560,7 @@ def handle_subject(work, context, form_data):
             parent=work,
             tag="note",
             text=text_value,
+            ns=NS_TEI,
             match_attrs={"type": "subject"},
             update_attrs=attrs,
             index=index
@@ -547,6 +575,8 @@ def handle_subject(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="note",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=text_value,
             attrs=attrs,
             allow_multiple=True
@@ -587,6 +617,7 @@ def handle_reference(work, context, form_data):
             parent=work,
             tag="note",
             text=reference,
+            ns=NS_TEI,
             match_attrs={"type": "bibliographical"},
             index=index
         )
@@ -599,6 +630,8 @@ def handle_reference(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="note",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=reference,
             attrs={"type": "bibliographical"},
             allow_multiple=True
@@ -639,6 +672,7 @@ def handle_notes(work, context, form_data):
             parent=work,
             tag="note",
             text=notes,
+            ns=NS_TEI,
             match_attrs={"type": "general"},
             index=index
         )
@@ -652,6 +686,8 @@ def handle_notes(work, context, form_data):
         el = add_simple_element_attr(
             parent=work,
             tag="note",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=notes,
             attrs={"type": "general"},
             allow_multiple=True

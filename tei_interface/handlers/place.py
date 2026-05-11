@@ -14,7 +14,7 @@ from utils import (
     )
 
 from index_utils import update_connection_index, related_add, remove_connection_index
-from config import NSMAP, ENTITY_CONFIG
+from config import NS_TEI, NSMAP, ENTITY_CONFIG
 
 from flask import flash
 
@@ -30,7 +30,6 @@ def section_handler(name):
         SECTION_HANDLERS[name] = func
         return func
     return wrapper
-
 
 
 @section_handler("main_place_name")
@@ -53,6 +52,7 @@ def handle_preferred_name(place, context, form_data):
             parent=place,
             tag="placeName",
             text=name,
+            ns=NS_TEI,
             match_attrs={"type": "preferred"},
             index=index
         )
@@ -66,6 +66,8 @@ def handle_preferred_name(place, context, form_data):
         el = add_simple_element_attr(
             parent=place,
             tag="placeName",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             text=name,
             attrs={"type": "preferred"},
             rem_attrs={"type": "preferred"},
@@ -108,6 +110,7 @@ def handle_variant_name(place, context, form_data):
             parent=place,
             tag="placeName",
             text=alt_place_name,
+            ns=NS_TEI,
             match_attrs={"type": "variant"},
             index=index
         )
@@ -121,6 +124,8 @@ def handle_variant_name(place, context, form_data):
         el = add_simple_element_attr(
             parent=place,
             tag="placeName",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             text=alt_place_name,
             attrs={"type": "variant"},
             allow_multiple=True
@@ -171,6 +176,7 @@ def handle_place_type(place, context, form_data):
             parent=place,
             tag="desc",
             text=text_value,
+            ns=NS_TEI,
             match_attrs={"type": "function"},
             update_attrs=attrs,
             index=index
@@ -185,6 +191,8 @@ def handle_place_type(place, context, form_data):
         el = add_simple_element_attr(
             parent=place,
             tag="desc",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=text_value,
             attrs=attrs,
             allow_multiple=True
@@ -227,6 +235,7 @@ def handle_idno(place, context, form_data):
             parent=place,
             tag="idno",
             text=idno,
+            ns=NS_TEI,
             update_attrs={"type": idno_type},
             index=index
         )
@@ -240,6 +249,8 @@ def handle_idno(place, context, form_data):
         el = add_simple_element_attr(
             parent=place,
             tag="idno",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=idno,
             attrs={"type": idno_type},
             allow_multiple=False
@@ -276,6 +287,7 @@ def handle_coordinates(place, context, form_data):
             parent=place,
             tag="note",
             text=coordinates,
+            ns=NS_TEI,
             match_attrs={"type": "coordinates"},
             index=index
         )
@@ -289,6 +301,8 @@ def handle_coordinates(place, context, form_data):
         el = add_simple_element_attr(
             parent=place,
             tag="note",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=coordinates,
             attrs={"type": "coordinates"},
             rem_attrs={"type": "coordinates"},
@@ -329,6 +343,7 @@ def handle_reference(place, context, form_data):
             parent=place,
             tag="bibl",
             text=reference,
+            ns=NS_TEI,
             index=index
         )
 
@@ -341,6 +356,8 @@ def handle_reference(place, context, form_data):
         el = add_simple_element_attr(
             parent=place,
             tag="bibl",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             text=reference,
             allow_multiple=True
         )
@@ -373,6 +390,7 @@ def handle_notes(place, context, form_data):
             parent=place,
             tag="note",
             text=notes,
+            ns=NS_TEI,
             match_attrs={"type": "general"},
             index=index
         )
@@ -386,6 +404,8 @@ def handle_notes(place, context, form_data):
         el = add_simple_element_attr(
             parent=place,
             tag="note",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=notes,
             attrs={"type": "general"},
             allow_multiple=True

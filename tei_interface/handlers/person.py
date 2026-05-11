@@ -13,15 +13,15 @@ from utils import (
     )
 
 from index_utils import update_connection_index, related_add, remove_connection_index
-from config import NSMAP, ENTITY_CONFIG, RELATIONSHIP_INVERSES
+from config import NS_TEI, NSMAP, ENTITY_CONFIG, RELATIONSHIP_INVERSES
 
 from flask import flash
 
 
+PLACE_CONFIG = ENTITY_CONFIG["place"]
 PERSON_CONFIG = ENTITY_CONFIG["person"]
 CHILD_ORDER = PERSON_CONFIG["child_order"]
 ATTR_PRIORITY = PERSON_CONFIG["attribute_priority"]
-
 
 SECTION_HANDLERS = {}
 
@@ -53,6 +53,7 @@ def handle_preferred_name(person, context, form_data):
             parent=person,
             tag="persName",
             text=name,
+            ns=NS_TEI,
             match_attrs={"type": "preferred"},
             index=index
         )
@@ -66,6 +67,8 @@ def handle_preferred_name(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="persName",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             text=name,
             attrs={"type": "preferred"},
             rem_attrs={"type": "preferred"},
@@ -108,6 +111,7 @@ def handle_variant_name(person, context, form_data):
             parent=person,
             tag="persName",
             text=alt_name,
+            ns=NS_TEI,
             match_attrs={"type": "variant"},
             index=index
         )
@@ -121,6 +125,8 @@ def handle_variant_name(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="persName",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=alt_name,
             attrs={"type": "variant"},
             allow_multiple=True
@@ -153,7 +159,7 @@ def handle_editor(person, context, form_data):
         flash("No person key selected.", "rel-persons-error")
         return {"ok": False}
 
-    rel_persons_text = load_ent_name_by_key("person", rel_persons_key, "persName")
+    rel_persons_text = load_ent_name_by_key("person", PERSON_CONFIG, rel_persons_key, "persName", NSMAP)
 
     if not rel_persons_text:
         flash("Selected person could not be resolved.", "rel-persons-error")
@@ -190,6 +196,8 @@ def handle_editor(person, context, form_data):
     el = build_section(
         parent=person,
         item_tag="trait",
+        nsmap=NSMAP,
+        ns=NS_TEI,
         attrs=element_attrs,
         child_tag="label",
         child_text=rel_persons_text,
@@ -202,7 +210,7 @@ def handle_editor(person, context, form_data):
     reverse_type = RELATIONSHIP_INVERSES.get(relationships)
     if reverse_type:
         person_a_key = context["xml_id"]
-        person_a_text = load_ent_name_by_key("person", person_a_key, "persName")
+        person_a_text = load_ent_name_by_key("person", PERSON_CONFIG, person_a_key, "persName", NSMAP)
 
         if not person_a_key or not person_a_text:
             flash("Record needs to be saved with name to create relationship.", "rel-persons-error")
@@ -260,6 +268,7 @@ def handle_idno(person, context, form_data):
             parent=person,
             tag="idno",
             text=idno,
+            ns=NS_TEI,
             update_attrs={"type": idno_type},
             index=index
         )
@@ -273,6 +282,8 @@ def handle_idno(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="idno",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=idno,
             attrs={"type": idno_type},
             allow_multiple=False
@@ -327,6 +338,7 @@ def handle_birth(person, context, form_data):
             parent=person,
             tag="birth",
             text=birth_text,
+            ns=NS_TEI,
             update_attrs={"when": birth_when},
             index=index
         )
@@ -340,6 +352,8 @@ def handle_birth(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="birth",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=birth_text,
             attrs={"when": birth_when},
             allow_multiple=False
@@ -384,6 +398,7 @@ def handle_death(person, context, form_data):
             parent=person,
             tag="death",
             text=death_text,
+            ns=NS_TEI,
             update_attrs={"when": death_when},
             index=index
         )
@@ -397,6 +412,8 @@ def handle_death(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="death",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=death_text,
             attrs={"when": death_when},
             allow_multiple=False
@@ -446,6 +463,7 @@ def handle_floruit(person, context, form_data):
             parent=person,
             tag="floruit",
             text=floruit_text,
+            ns=NS_TEI,
             update_attrs={"from": floruit_from, "to": floruit_to},
             index=index
         )
@@ -459,6 +477,8 @@ def handle_floruit(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="floruit",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=floruit_text,
             attrs={"from": floruit_from, "to": floruit_to},
             allow_multiple=False
@@ -485,7 +505,7 @@ def handle_associated_place(person, context, form_data):
         flash("No associated place key selected.", "associated-place-error")
         return {"ok": False}
 
-    place_text = load_ent_name_by_key("place", place_key, "placeName")
+    place_text = load_ent_name_by_key("place", PLACE_CONFIG, place_key, "placeName", NSMAP)
     if not place_text:
         flash("Selected associated place could not be resolved.", "associated-place-error")
         return {"ok": False}
@@ -529,12 +549,14 @@ def handle_associated_place(person, context, form_data):
             parent=person,
             tag="affiliation",
             index=index,
-            attr="key"
+            attr="key",
+            ns=NS_TEI
         )
 
         updated_el = update_build_section(
             parent=person,
             item_tag="affiliation",
+            ns=NS_TEI,
             index=index,
             element_attrs=element_attrs,
             child_tag="placeName",
@@ -553,6 +575,8 @@ def handle_associated_place(person, context, form_data):
         el = build_section(
             parent=person,
             item_tag="affiliation",
+            nsmap=NSMAP,
+            ns=NS_TEI,
             attrs=element_attrs,
             child_tag="placeName",
             child_text=place_text,
@@ -587,6 +611,7 @@ def handle_reference(person, context, form_data):
             parent=person,
             tag="bibl",
             text=reference,
+            ns=NS_TEI,
             index=index
         )
 
@@ -599,6 +624,8 @@ def handle_reference(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="bibl",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=reference,
             allow_multiple=True
         )
@@ -631,6 +658,7 @@ def handle_notes(person, context, form_data):
             parent=person,
             tag="note",
             text=notes,
+            ns=NS_TEI,
             index=index
         )
 
@@ -643,6 +671,8 @@ def handle_notes(person, context, form_data):
         el = add_simple_element_attr(
             parent=person,
             tag="note",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
             text=notes,
             allow_multiple=True
         )
