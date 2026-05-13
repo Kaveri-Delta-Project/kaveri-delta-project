@@ -298,7 +298,7 @@
   {
     "type": "work",
     "id": "w_1",
-    "name": "Nīlakaṇṭhavijayacampū",
+    "name": "w_1",
     "alt_names": [],
     "url": "indexes/work_index.html#w_1",
     "places": []
@@ -306,7 +306,7 @@
   {
     "type": "work",
     "id": "w_11",
-    "name": "Kuvalayānanda",
+    "name": "w_11",
     "alt_names": [],
     "url": "indexes/work_index.html#w_11",
     "places": []
@@ -314,7 +314,7 @@
   {
     "type": "work",
     "id": "w_12",
-    "name": "Rasikarañjanī",
+    "name": "w_12",
     "alt_names": [],
     "url": "indexes/work_index.html#w_12",
     "places": []
@@ -322,7 +322,7 @@
   {
     "type": "work",
     "id": "w_13",
-    "name": "Avaidikadarśanasaṃgraha",
+    "name": "w_13",
     "alt_names": [],
     "url": "indexes/work_index.html#w_13",
     "places": []
@@ -330,7 +330,7 @@
   {
     "type": "work",
     "id": "w_14",
-    "name": "Śabdakaumudī",
+    "name": "w_14",
     "alt_names": [],
     "url": "indexes/work_index.html#w_14",
     "places": []
@@ -338,7 +338,7 @@
   {
     "type": "work",
     "id": "w_15",
-    "name": "Śābdikarakṣā",
+    "name": "w_15",
     "alt_names": [],
     "url": "indexes/work_index.html#w_15",
     "places": []
@@ -346,7 +346,7 @@
   {
     "type": "work",
     "id": "w_16",
-    "name": "Mudrārākṣasavyākhyāna",
+    "name": "w_16",
     "alt_names": [],
     "url": "indexes/work_index.html#w_16",
     "places": []
@@ -354,7 +354,7 @@
   {
     "type": "work",
     "id": "w_17",
-    "name": "Śāhajivilāsagītā",
+    "name": "w_17",
     "alt_names": [],
     "url": "indexes/work_index.html#w_17",
     "places": []
@@ -362,17 +362,15 @@
   {
     "type": "work",
     "id": "w_18",
-    "name": "Rājavyavahārakośa",
-    "alt_names": [
-      "Rājakośanighaṇṭu"
-    ],
+    "name": "w_18",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_18",
     "places": []
   },
   {
     "type": "work",
     "id": "w_19",
-    "name": "Daharavidyāprakāśikā",
+    "name": "w_19",
     "alt_names": [],
     "url": "indexes/work_index.html#w_19",
     "places": []
@@ -380,7 +378,7 @@
   {
     "type": "work",
     "id": "w_2",
-    "name": "Mahābhāṣyaratnāvali",
+    "name": "w_2",
     "alt_names": [],
     "url": "indexes/work_index.html#w_2",
     "places": []
@@ -388,7 +386,7 @@
   {
     "type": "work",
     "id": "w_20",
-    "name": "Kāṇādasiddhāntacandrikā",
+    "name": "w_20",
     "alt_names": [],
     "url": "indexes/work_index.html#w_20",
     "places": []
@@ -396,7 +394,7 @@
   {
     "type": "work",
     "id": "w_21",
-    "name": "Prasāda (on Kāṇādasiddhāntacandrikā)",
+    "name": "w_21",
     "alt_names": [],
     "url": "indexes/work_index.html#w_21",
     "places": []
@@ -404,7 +402,7 @@
   {
     "type": "work",
     "id": "w_22",
-    "name": "Candraśekharavilāsa",
+    "name": "w_22",
     "alt_names": [],
     "url": "indexes/work_index.html#w_22",
     "places": []
@@ -412,7 +410,7 @@
   {
     "type": "work",
     "id": "w_23",
-    "name": "Śabdaratnasamanvayakośa",
+    "name": "w_23",
     "alt_names": [],
     "url": "indexes/work_index.html#w_23",
     "places": []
@@ -420,7 +418,7 @@
   {
     "type": "work",
     "id": "w_24",
-    "name": "Śabdārthasaṃgraha",
+    "name": "w_24",
     "alt_names": [],
     "url": "indexes/work_index.html#w_24",
     "places": []
@@ -428,7 +426,7 @@
   {
     "type": "work",
     "id": "w_25",
-    "name": "Mukundavilāsa",
+    "name": "w_25",
     "alt_names": [],
     "url": "indexes/work_index.html#w_25",
     "places": []
@@ -436,18 +434,15 @@
   {
     "type": "work",
     "id": "w_26",
-    "name": "Uttaracampū",
-    "alt_names": [
-      "Rāmāyaṇacampū",
-      "Uttararāmāyaṇacampū"
-    ],
+    "name": "w_26",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_26",
     "places": []
   },
   {
     "type": "work",
     "id": "w_27",
-    "name": "Rāghavābhyudaya",
+    "name": "w_27",
     "alt_names": [],
     "url": "indexes/work_index.html#w_27",
     "places": []
@@ -455,7 +450,7 @@
   {
     "type": "work",
     "id": "w_28",
-    "name": "Tripuravijayacampū",
+    "name": "w_28",
     "alt_names": [],
     "url": "indexes/work_index.html#w_28",
     "places": []
@@ -463,7 +458,7 @@
   {
     "type": "work",
     "id": "w_29",
-    "name": "Śāhendravilāsa",
+    "name": "w_29",
     "alt_names": [],
     "url": "indexes/work_index.html#w_29",
     "places": []
@@ -471,17 +466,15 @@
   {
     "type": "work",
     "id": "w_3",
-    "name": "Dhāturatnāvali",
-    "alt_names": [
-      "Dhāturūpāvalī"
-    ],
+    "name": "w_3",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_3",
     "places": []
   },
   {
     "type": "work",
     "id": "w_30",
-    "name": "Patañjalicarita",
+    "name": "w_30",
     "alt_names": [],
     "url": "indexes/work_index.html#w_30",
     "places": []
@@ -489,7 +482,7 @@
   {
     "type": "work",
     "id": "w_31",
-    "name": "Śṛṅgāratilakabhāṇa",
+    "name": "w_31",
     "alt_names": [],
     "url": "indexes/work_index.html#w_31",
     "places": [
@@ -499,7 +492,7 @@
   {
     "type": "work",
     "id": "w_32",
-    "name": "Śivalīlārṇava",
+    "name": "w_32",
     "alt_names": [],
     "url": "indexes/work_index.html#w_32",
     "places": []
@@ -507,7 +500,7 @@
   {
     "type": "work",
     "id": "w_35",
-    "name": "Gaṅgāvataraṇa",
+    "name": "w_35",
     "alt_names": [],
     "url": "indexes/work_index.html#w_35",
     "places": []
@@ -515,7 +508,7 @@
   {
     "type": "work",
     "id": "w_36",
-    "name": "Dharmavijayacampū",
+    "name": "w_36",
     "alt_names": [],
     "url": "indexes/work_index.html#w_36",
     "places": []
@@ -523,17 +516,15 @@
   {
     "type": "work",
     "id": "w_37",
-    "name": "Jānakīpariṇaya",
-    "alt_names": [
-      "Jānakīpariṇayanāṭaka"
-    ],
+    "name": "w_37",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_37",
     "places": []
   },
   {
     "type": "work",
     "id": "w_39",
-    "name": "Śabdabhedanirūpaṇa",
+    "name": "w_39",
     "alt_names": [],
     "url": "indexes/work_index.html#w_39",
     "places": []
@@ -541,7 +532,7 @@
   {
     "type": "work",
     "id": "w_40",
-    "name": "Jīvanmuktikalyāṇa",
+    "name": "w_40",
     "alt_names": [],
     "url": "indexes/work_index.html#w_40",
     "places": [
@@ -551,18 +542,15 @@
   {
     "type": "work",
     "id": "w_42",
-    "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ",
-    "alt_names": [
-      "Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)",
-      "Ṣaḍdarśanīsiddhāntasaṁgraha"
-    ],
+    "name": "w_42",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_42",
     "places": []
   },
   {
     "type": "work",
     "id": "w_43",
-    "name": "Padamaṇimañjarī",
+    "name": "w_43",
     "alt_names": [],
     "url": "indexes/work_index.html#w_43",
     "places": []
@@ -570,17 +558,15 @@
   {
     "type": "work",
     "id": "w_44",
-    "name": "Paribhāṣārthasaṃgraha",
-    "alt_names": [
-      "Paribhāṣāsaṃgraha"
-    ],
+    "name": "w_44",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_44",
     "places": []
   },
   {
     "type": "work",
     "id": "w_45",
-    "name": "Śṛṅgāramañjarīśāhajīya",
+    "name": "w_45",
     "alt_names": [],
     "url": "indexes/work_index.html#w_45",
     "places": [
@@ -590,7 +576,7 @@
   {
     "type": "work",
     "id": "w_46",
-    "name": "Cittavṛttikalyāṇa",
+    "name": "w_46",
     "alt_names": [],
     "url": "indexes/work_index.html#w_46",
     "places": []
@@ -598,7 +584,7 @@
   {
     "type": "work",
     "id": "w_47",
-    "name": "Śṛṅgārasarvasvabhāṇa",
+    "name": "w_47",
     "alt_names": [],
     "url": "indexes/work_index.html#w_47",
     "places": [
@@ -608,7 +594,7 @@
   {
     "type": "work",
     "id": "w_48",
-    "name": "Advaitarasamañjarī",
+    "name": "w_48",
     "alt_names": [],
     "url": "indexes/work_index.html#w_48",
     "places": []
@@ -616,7 +602,7 @@
   {
     "type": "work",
     "id": "w_49",
-    "name": "Paribhāṣāvṛttivyākhyāna",
+    "name": "w_49",
     "alt_names": [],
     "url": "indexes/work_index.html#w_49",
     "places": []
@@ -624,7 +610,7 @@
   {
     "type": "work",
     "id": "w_5",
-    "name": "Subhadrāpariṇaya",
+    "name": "w_5",
     "alt_names": [],
     "url": "indexes/work_index.html#w_5",
     "places": [
@@ -634,7 +620,7 @@
   {
     "type": "work",
     "id": "w_50",
-    "name": "Uṇādimaṇidīpikā",
+    "name": "w_50",
     "alt_names": [],
     "url": "indexes/work_index.html#w_50",
     "places": []
@@ -642,37 +628,31 @@
   {
     "type": "work",
     "id": "w_51",
-    "name": "Rāmacitrastava",
-    "alt_names": [
-      "Rāmavicitrastava"
-    ],
+    "name": "w_51",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_51",
     "places": []
   },
   {
     "type": "work",
     "id": "w_52",
-    "name": "Rāmacāpastava",
-    "alt_names": [
-      "Cāpastava"
-    ],
+    "name": "w_52",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_52",
     "places": []
   },
   {
     "type": "work",
     "id": "w_53",
-    "name": "Rāmabāṇastava",
-    "alt_names": [
-      "Bāṇastava"
-    ],
+    "name": "w_53",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_53",
     "places": []
   },
   {
     "type": "work",
     "id": "w_54",
-    "name": "Ācāryastavarājabhūṣaṇa",
+    "name": "w_54",
     "alt_names": [],
     "url": "indexes/work_index.html#w_54",
     "places": []
@@ -680,38 +660,31 @@
   {
     "type": "work",
     "id": "w_55",
-    "name": "Viśvagarbhastava",
-    "alt_names": [
-      "Jānakījānistotra"
-    ],
+    "name": "w_55",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_55",
     "places": []
   },
   {
     "type": "work",
     "id": "w_56",
-    "name": "Rāmakarṇarasāyaṇastava",
-    "alt_names": [
-      "Rāmastavakarṇarasāyana",
-      "Rāmakarṇāmṛta"
-    ],
+    "name": "w_56",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_56",
     "places": []
   },
   {
     "type": "work",
     "id": "w_57",
-    "name": "Rāmaprasādastava",
-    "alt_names": [
-      "Prasādastava"
-    ],
+    "name": "w_57",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_57",
     "places": []
   },
   {
     "type": "work",
     "id": "w_58",
-    "name": "Varṇamālāstava",
+    "name": "w_58",
     "alt_names": [],
     "url": "indexes/work_index.html#w_58",
     "places": []
@@ -719,18 +692,15 @@
   {
     "type": "work",
     "id": "w_59",
-    "name": "Rāmāṣṭaprāsastava",
-    "alt_names": [
-      "Aṣṭaprāsarāmaśataka",
-      "Aṣṭaprāsa"
-    ],
+    "name": "w_59",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_59",
     "places": []
   },
   {
     "type": "work",
     "id": "w_6",
-    "name": "Kaliviḍambana",
+    "name": "w_6",
     "alt_names": [],
     "url": "indexes/work_index.html#w_6",
     "places": []
@@ -738,7 +708,7 @@
   {
     "type": "work",
     "id": "w_60",
-    "name": "Anunāsikanirdeśavicāra",
+    "name": "w_60",
     "alt_names": [],
     "url": "indexes/work_index.html#w_60",
     "places": []
@@ -746,7 +716,7 @@
   {
     "type": "work",
     "id": "w_61",
-    "name": "Śukasandeśa",
+    "name": "w_61",
     "alt_names": [],
     "url": "indexes/work_index.html#w_61",
     "places": []
@@ -754,7 +724,7 @@
   {
     "type": "work",
     "id": "w_62",
-    "name": "Siddhāntasāra",
+    "name": "w_62",
     "alt_names": [],
     "url": "indexes/work_index.html#w_62",
     "places": []
@@ -762,38 +732,31 @@
   {
     "type": "work",
     "id": "w_63",
-    "name": "Rāmatūnīrastava",
-    "alt_names": [
-      "Tūṇīrastava"
-    ],
+    "name": "w_63",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_63",
     "places": []
   },
   {
     "type": "work",
     "id": "w_64",
-    "name": "Jīvānandananāṭaka",
-    "alt_names": [
-      "Jīvānanda",
-      "Jīvānandana"
-    ],
+    "name": "w_64",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_64",
     "places": []
   },
   {
     "type": "work",
     "id": "w_65",
-    "name": "Vidyāpariṇayanāṭaka",
-    "alt_names": [
-      "Vidyāpariṇāma (NCC vol. 29, 132)"
-    ],
+    "name": "w_65",
+    "alt_names": [],
     "url": "indexes/work_index.html#w_65",
     "places": []
   },
   {
     "type": "work",
     "id": "w_66",
-    "name": "Vidyāpariṇayavyākhyā",
+    "name": "w_66",
     "alt_names": [],
     "url": "indexes/work_index.html#w_66",
     "places": []
@@ -801,7 +764,7 @@
   {
     "type": "work",
     "id": "w_67",
-    "name": "Puruṣārtharatnākara",
+    "name": "w_67",
     "alt_names": [],
     "url": "indexes/work_index.html#w_67",
     "places": []
@@ -809,7 +772,7 @@
   {
     "type": "work",
     "id": "w_8",
-    "name": "Dharmākūtam",
+    "name": "w_8",
     "alt_names": [],
     "url": "indexes/work_index.html#w_8",
     "places": []
