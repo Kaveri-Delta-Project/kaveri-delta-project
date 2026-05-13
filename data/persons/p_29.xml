@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_29">
+          <persName type="preferred">Rāmānanda Yati</persName>
+          <persName type="variant">Rāmānanda Sarasvatī</persName>
+          <persName type="variant">Rāmabhadrānanda Sarasvatī</persName>
+          <trait type="student" key="p_27">
+            <label>Kṛṣṇānanda Sarasvatī</label>
+          </trait>
+          <note>He copied Kṛṣṇānanda Sarasvatī's Siddhāntasiddhāñjana in 1670</note>
+          <note>He is different from another Rāmānanda Sarasvatī, the author of a subcommentary on Śaṅkara's Brahmasūtrabhāṣya called Ratnaprabhā and a treatise aligned with the Vivaraṇa interpretation of the Brahmasūtras titled Vivaraṇopanyāsa (see Duquette, forthcoming)</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

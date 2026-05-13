@@ -879,6 +879,11 @@
       "w_67",
       "work",
       "Kṛṣṇānanda Sarasvatī"
+    ],
+    [
+      "p_29",
+      "person",
+      "Kṛṣṇānanda Sarasvatī"
     ]
   ],
   "p_28": [
@@ -891,6 +896,18 @@
       "w_67",
       "work",
       "Raṅganātha Sūri"
+    ]
+  ],
+  "p_29": [
+    [
+      "p_27",
+      "person",
+      "Rāmānanda Yati"
+    ],
+    [
+      "w_68",
+      "work",
+      "Rāmānanda Yati"
     ]
   ]
 }
