@@ -34,7 +34,8 @@ PERSON_MAPPING = {
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
     "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
     "reference": {"element": "bibl", "all_results": True},
-    "notes": {"element": "note", "all_results": True}
+    "notes": {"element": "note", "all_results": True},
+    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 PLACE_MAPPING = {
@@ -51,8 +52,8 @@ PLACE_MAPPING = {
 
 WORK_MAPPING = {
     "xml_id": {"attr": f"{{{NS_XML}}}id"},
-    "name": {"element": "title", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
-    "alt_names": {"element": "title", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "title": {"element": "title", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
+    "alt_title": {"element": "title", "filter_attr": "type", "filter_value": "variant", "all_results": True},
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
     "dates_text": {"element": "date", "all_results": True},
@@ -70,22 +71,45 @@ WORK_MAPPING = {
         "attributes": ["type", "source", "key"],
         "extract_parent_text": True, 
         "all_results": True
-        },    
+        }, 
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
     "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
-    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
+    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 ISC_MAPPING = {
     "xml_id": {"attr": f"{{{NS_XML}}}id"},
     "name":   {"element": "msName", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
-    "alt_names": {"element": "msName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "alt_name": {"element": "msName", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "dates_text": {"element": "origDate", "all_results": True},
+    "dates_from": {"element": "origDate", "element_attr": "from", "all_results": True},
+    "dates_to": {"element": "origDate", "element_attr": "to", "all_results": True},
+    "donor": {
+        "parent_tag": "person",
+        "filter_attr": "ana", 
+        "filter_value": "donor",
+        "child_elements": ["persName"], 
+        "child_attributes": {"persName": ["key", "role"]}, 
+        "from_root": True
+        },
+    "assoc_person": {
+        "parent_tag": "person",
+        "filter_attr": "ana", 
+        "filter_value": "associated",
+        "child_elements": ["persName"], 
+        "child_attributes": {"persName": ["key", "role"]}, 
+        "from_root": True
+        },
     "recipient": {"element": "orgName", "filter_attr": "type", "filter_value": "recipient", "all_results": True},
+    "language": {"element": "lang", "all_results": True},    
+    "donation_type": {"element": "provenance", "all_results": True},
     "material": {"element": "material", "all_results": True},
     "location": {"element": "origPlace", "all_results": True},
     "location_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
     "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
-    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
+    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 ROLES = {
@@ -120,7 +144,7 @@ ENTITY_CONFIG = {
     "person": {
         "dir": os.path.join(DATA_DIR, "persons"),
         "mapping": PERSON_MAPPING,
-        "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "bibl", "note"],
+        "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "bibl", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1},
         "element_tag": "person",
         "name_tag": "persName",
@@ -130,7 +154,7 @@ ENTITY_CONFIG = {
     "place": {
         "dir": os.path.join(DATA_DIR, "places"),
         "mapping": PLACE_MAPPING,
-        "child_order": ["place", "placeName", "desc", "idno", "bibl", "note"],
+        "child_order": ["place", "placeName", "desc", "idno", "bibl", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "coordinates": 0, "general": 1},
         "element_tag": "place",
         "name_tag": "placeName",
@@ -141,7 +165,7 @@ ENTITY_CONFIG = {
     "work": {
         "dir": os.path.join(DATA_DIR, "works"),
         "mapping": WORK_MAPPING,
-        "child_order": ["title", "idno", "date", "editor", "pubPlace", "note"],
+        "child_order": ["title", "idno", "date", "editor", "pubPlace", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "bibliographical": 2, "general": 3},
         "element_tag": "bibl",
         "name_tag": "title",
@@ -152,8 +176,8 @@ ENTITY_CONFIG = {
         "inscription": {
         "dir": os.path.join(DATA_DIR, "inscriptions"),
         "mapping": ISC_MAPPING,
-        "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note"],
-        "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1},
+        "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note", "lang", "origin", "provenance", "person", "name", "resp"],
+        "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1, "donor": 0, "associated": 1},
         "element_tag": "msDesc",
         "name_tag": "msName",
         "container_tag": ".//tei:sourceDesc",

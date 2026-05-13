@@ -79,7 +79,6 @@ PLACE_MAPPING = {
     "coordinates": {"element": "note", "filter_attr": "type", "filter_value": "coordinates", "all_results": True},
     "reference": {"element": "bibl", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
-    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 WORK_MAPPING = {
