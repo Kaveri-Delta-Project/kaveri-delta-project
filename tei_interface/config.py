@@ -43,7 +43,8 @@ PERSON_MAPPING = {
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
     "associated_place": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
     "reference": {"element": "bibl", "all_results": True},
-    "notes": {"element": "note", "all_results": True}
+    "notes": {"element": "note", "all_results": True},
+    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 RELATIONSHIP_INVERSES = {
@@ -77,7 +78,8 @@ PLACE_MAPPING = {
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
     "coordinates": {"element": "note", "filter_attr": "type", "filter_value": "coordinates", "all_results": True},
     "reference": {"element": "bibl", "all_results": True},
-    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
+    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 WORK_MAPPING = {
@@ -104,7 +106,8 @@ WORK_MAPPING = {
         }, 
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
     "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
-    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
+    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 ISC_MAPPING = {
@@ -137,7 +140,8 @@ ISC_MAPPING = {
     "location": {"element": "origPlace", "all_results": True},
     "location_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
     "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
-    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
+    "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
+    "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
 #entity configs
@@ -147,7 +151,7 @@ ENTITY_CONFIG = {
         "dir": os.path.join(DATA_DIR, "persons"),
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_person.xml"),
         "mapping": PERSON_MAPPING,
-        "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "bibl", "note"],
+        "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "bibl", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1},
         "element_tag": "person",
         "name_tag": "persName",
@@ -158,7 +162,7 @@ ENTITY_CONFIG = {
         "dir": os.path.join(DATA_DIR, "places"),
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_place.xml"),
         "mapping": PLACE_MAPPING,
-        "child_order": ["place", "placeName", "desc", "idno", "bibl", "note"],
+        "child_order": ["place", "placeName", "desc", "idno", "bibl", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "coordinates": 0, "general": 1},
         "element_tag": "place",
         "name_tag": "placeName",
@@ -170,7 +174,7 @@ ENTITY_CONFIG = {
         "dir": os.path.join(DATA_DIR, "works"),
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_work.xml"),
         "mapping": WORK_MAPPING,
-        "child_order": ["title", "idno", "date", "editor", "pubPlace", "note"],
+        "child_order": ["title", "idno", "date", "editor", "pubPlace", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "bibliographical": 2, "general": 3},
         "element_tag": "bibl",
         "name_tag": "title",
@@ -181,7 +185,7 @@ ENTITY_CONFIG = {
         "dir": os.path.join(DATA_DIR, "inscriptions"),
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_inscription.xml"),
         "mapping": ISC_MAPPING,
-        "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note", "lang", "origin", "provenance", "person"],
+        "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note", "lang", "origin", "provenance", "person", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1, "donor": 0, "associated": 1},
         "element_tag": "msDesc",
         "name_tag": "msName",

@@ -683,3 +683,78 @@ def handle_notes(person, context, form_data):
         "ok": True,
         "error": None
     }
+
+
+@section_handler("record_contributor")
+def handle_record_contributor(person, context, form_data):
+    record_contributor = form_data.get("record_contributor")
+    edit_index = form_data.get("edit_index")
+
+    if not record_contributor:
+        flash("Record contributor cannot be empty.", "record-contributor-error")
+        return {"ok": False}
+
+    perstitlestmt_el = context["root"].find(".//tei:titleStmt", namespaces=NSMAP)
+
+    if edit_index not in (None, "", "None"):
+        try:
+            index = int(edit_index)
+        except ValueError:
+            flash("Invalid record contributor index.", "record-contributor-error")
+            return {"ok": False}
+
+        updated_el = update_build_section(
+            parent=perstitlestmt_el,
+            item_tag="respStmt",
+            ns=NS_TEI,
+            index=index,           
+            child_tag="name",
+            child_text=record_contributor,
+        )
+
+        if updated_el is None:
+            flash("Failed to update the selected record contributor.", "record-contributor-error")
+            return {"ok": False}
+
+    else:
+
+        el = build_section(
+            parent=perstitlestmt_el,
+            item_tag="respStmt",
+            nsmap=NSMAP,
+            ns=NS_TEI,
+            child_tag="name",
+            child_text=record_contributor,
+        )
+
+        insert_in_order(
+            parent=perstitlestmt_el,
+            tag="respStmt",
+            new_elem=el,
+            child_order=CHILD_ORDER,
+            nsmap=NSMAP
+        )
+ 
+
+        all_contributors = context["root"].findall(".//tei:respStmt", namespaces=NSMAP)
+        persresptmt_el = all_contributors[-1] if all_contributors else None
+
+        el = add_simple_element_attr(
+            parent=persresptmt_el,
+            tag="resp",
+            nsmap=NSMAP,
+            ns=NS_TEI,            
+            text="Contributor"
+        )
+
+        insert_in_order(
+            parent=persresptmt_el, 
+            tag="resp", 
+            new_elem=el, 
+            child_order=CHILD_ORDER, 
+            nsmap=NSMAP)
+
+    return {
+        "ok": True,
+        "error": None
+    }
