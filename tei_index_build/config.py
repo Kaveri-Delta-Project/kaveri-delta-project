@@ -52,8 +52,8 @@ PLACE_MAPPING = {
 
 WORK_MAPPING = {
     "xml_id": {"attr": f"{{{NS_XML}}}id"},
-    "title": {"element": "title", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
-    "alt_title": {"element": "title", "filter_attr": "type", "filter_value": "variant", "all_results": True},
+    "name": {"element": "title", "filter_attr": "type", "filter_value": "preferred", "all_results": True},
+    "alt_names": {"element": "title", "filter_attr": "type", "filter_value": "variant", "all_results": True},
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
     "dates_text": {"element": "date", "all_results": True},
@@ -71,7 +71,7 @@ WORK_MAPPING = {
         "attributes": ["type", "source", "key"],
         "extract_parent_text": True, 
         "all_results": True
-        }, 
+        },    
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
     "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
