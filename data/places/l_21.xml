@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_21">
+          <placeName type="preferred">Marudanallur</placeName>
+          <desc type="function">Settlement</desc>
+          <idno type="Wikidata">Q6777896</idno>
+          <note type="coordinates">10.924958810266528, 79.4026431658737</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>
