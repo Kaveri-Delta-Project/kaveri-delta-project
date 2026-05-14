@@ -1,6 +1,7 @@
 import string
 import html
 from config import ROLES
+from tei_helpers import normalize_for_sort
 
 #HTML rendering helpers
 
@@ -47,7 +48,7 @@ def esc(value):
 
 def render_list(items, css_class=None):
     """
-    Render a list of items as a vertical block using <div> for each item.
+    Sort and render a list of items as a vertical block using <div> for each item.
 
     Args:
         items (list[str]): The items to render.
@@ -58,6 +59,8 @@ def render_list(items, css_class=None):
     """
     if not items:
         return ''
+
+    items = sorted(items, key=normalize_for_sort)
 
     cls_attr = f' class="{esc(css_class)}"' if css_class else ''
     html = []
@@ -131,6 +134,8 @@ def render_place(place):
         html.append("</div>")
 
     linked_data = place.get("linked_data")
+    linked_data = sorted(linked_data, key=lambda x: normalize_for_sort(x.get("name")))
+
     if linked_data:
         html.append("<div class='entry-block entry-place-pers'>")
         html.append("<span class='subheading'>Associated Persons</span>")
@@ -226,6 +231,8 @@ def render_person(person):
         html.append("</div>")
 
     relationships = person.get("relationship")
+    relationships = sorted(relationships, key=lambda x: normalize_for_sort(x.get("label")))
+
     if relationships:
         html.append("<div class='entry-block entry-relationships'>")
         html.append("<span class='subheading'>Associated Persons</span>")
@@ -302,6 +309,8 @@ def render_person(person):
         html.append("</div>")
 
     affiliations = person.get("affiliations")
+    affiliations = sorted(affiliations, key=lambda x: normalize_for_sort(x.get("placeName")))
+
     if affiliations:
         html.append("<div class='entry-block entry-affils'>")
         html.append("<span class='subheading'>Associated Places</span>")
@@ -337,6 +346,8 @@ def render_person(person):
         html.append("</div>")
 
     linked_data = person.get("linked_data")
+    linked_data = sorted(linked_data, key=lambda x: normalize_for_sort(x.get("title")))
+
     if linked_data:
         html.append("<div class='entry-block entry-person-works'>")
         html.append("<span class='subheading'>Associated Works</span>")
@@ -427,15 +438,23 @@ def render_work(work):
     editor_keys = work.get("editor_key")
     editor_roles = work.get("editor_role")
     if editor_names and editor_keys and editor_roles:
+
+        editors = sorted(
+            zip(editor_names, editor_keys, editor_roles),
+            key=lambda x: normalize_for_sort(x[0])
+        )
+
         html.append("<div class='entry-block entry-editors'>")
         html.append("<span class='subheading'>Associated Persons</span>")
-        for name, key, role in zip(editor_names, editor_keys, editor_roles):
+        for name, key, role in editors:
             role = ROLES.get(role)
             url = make_entity_url("person", key, single_page=False)
             html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(name)} ({esc(key)}) (role: {esc(role)})</a>")
         html.append("</div>")
 
     places = work.get("pub_place")
+    places = sorted(places, key=lambda x: normalize_for_sort(x.get("placeName")))
+
     if places:
         html.append("<div class='entry-block entry-places'>")
         html.append("<span class='subheading'>Associated Places</span>")
@@ -451,6 +470,8 @@ def render_work(work):
         html.append("</div>")
 
     genres = work.get("genre")
+    genres = sorted(genres, key=lambda x: normalize_for_sort(x.get("parent_text")))
+
     if genres:
         html.append("<div class='entry-block entry-genre'>")
         html.append("<span class='subheading'>Genre</span>")
@@ -541,10 +562,16 @@ def render_inscription(inscription):
     location_names = inscription.get("location")
     location_keys = inscription.get("location_key")
     if location_names and location_keys:
+
+        locations = sorted(
+            zip(location_names, location_keys),
+            key=lambda x: normalize_for_sort(x[0])
+        )
+
         html.append("<div class='entry-block entry-locations'>")
         html.append("<span class='subheading'>Locations</span>")
 
-        for place_name, key in zip(location_names, location_keys):
+        for place_name, key in locations:
             url = make_entity_url("place", key, single_page=False)
 
             html.append(
