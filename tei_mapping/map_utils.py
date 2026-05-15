@@ -308,7 +308,7 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
         else:
             popup_height=205
 
-        size_class = "label-large" if item in large_list else "label-small"
+        size_class = "label-large" if item in large_list or row_type == "city/town" else "label-small"
 
         folium.Marker(
             location=[row["lat"], row["lon"]],
