@@ -107,6 +107,7 @@ def render_place(place):
         html.append(alt_names_html)
         html.append("</div>")
 
+
     idno_value = first(place.get("idno_value"))
     idno_type = first(place.get("idno_type"))
     if idno_value and idno_type:
@@ -114,6 +115,7 @@ def render_place(place):
         html.append("<span class='subheading'>Authority Identifier</span>")
         html.append(f"<span class='item-name'>{esc(idno_value)} ({esc(idno_type)})</span>")
         html.append("</div>")
+
 
     coordinates = first(place.get("coords"))
     if coordinates:
@@ -133,13 +135,14 @@ def render_place(place):
         html.append(place_types_html)
         html.append("</div>")
 
-    linked_data = place.get("linked_data")
-    linked_data = sorted(linked_data, key=lambda x: normalize_for_sort(x.get("name")))
 
-    if linked_data:
+    linked_person = place.get("place_person")
+    linked_person = sorted(linked_person, key=lambda x: normalize_for_sort(x.get("name")))
+
+    if linked_person:
         html.append("<div class='entry-block entry-place-pers'>")
         html.append("<span class='subheading'>Associated Persons</span>")
-        for affil in linked_data:
+        for affil in linked_person:
             key = affil.get("xml_id")
             person_name = affil.get("name")
             affil_from = affil.get("from")
@@ -175,6 +178,27 @@ def render_place(place):
                 html.append(
                     f"<a href='{url}' target='person-index' class='item-name'>{esc(person_name)} ({esc(key)})</a>"
                 )
+        html.append("</div>")
+
+
+    linked_inscriptions = place.get("place_inscription")
+    linked_inscriptions = sorted(linked_inscriptions, key=lambda x: normalize_for_sort(x.get("name")))
+
+    if linked_inscriptions:
+        html.append("<div class='entry-block entry-place-insc'>")
+        html.append("<span class='subheading'>Associated Inscriptions</span>")
+        for inscription in linked_inscriptions:
+            key = inscription.get("xml_id")
+            inscription_name = inscription.get("name")
+
+            if not key or not inscription_name:
+                continue
+            
+            url = make_entity_url("inscription", key, single_page=False)
+
+            html.append(f"<a href='{url}' target='person-index' class='item-name'>{esc(inscription_name)} ({esc(key)})</a>")
+        html.append("</div>")
+
 
     reference_html = render_list(place.get("reference"), "item-name")
     if reference_html:
@@ -183,12 +207,14 @@ def render_place(place):
         html.append(reference_html)
         html.append("</div>")
 
+
     notes_html = render_list(place.get("notes"), "item-name")
     if notes_html:
         html.append("<div class='entry-block entry-notes'>")
         html.append("<span class='subheading'>Notes</span>")
         html.append(notes_html)
         html.append("</div>")
+
 
     html.append("</div>")
     return "\n".join(html)
@@ -215,6 +241,7 @@ def render_person(person):
 
     html.append("<div class='item-details'>")
 
+
     alt_names_html = render_list(person.get("alt_names"), "item-name")
     if alt_names_html:
         html.append("<div class='entry-block entry-alt-names'>")
@@ -229,6 +256,7 @@ def render_person(person):
         html.append("<span class='subheading'>Gender</span>")
         html.append(f"<span class='item-name'>{esc(gender)}</span>")
         html.append("</div>")
+
 
     relationships = person.get("relationship")
     relationships = sorted(relationships, key=lambda x: normalize_for_sort(x.get("label")))
@@ -291,6 +319,7 @@ def render_person(person):
         html.append(f"<span data-when='{esc(birth_num)}' class='item-name'>{esc(birth_text)}</span>")
         html.append("</div>")
 
+
     death_text = first(person.get("death_text"))
     death_num = first(person.get("death_when"))
     if death_text and death_num:
@@ -298,6 +327,7 @@ def render_person(person):
         html.append("<span class='subheading'>Death Date</span>")
         html.append(f"<span data-when='{esc(death_num)}' class='item-name'>{esc(death_text)}</span>")
         html.append("</div>")
+
 
     floruit_text = first(person.get("floruit_text"))
     floruit_from = first(person.get("floruit_from"))  
@@ -307,6 +337,7 @@ def render_person(person):
         html.append("<span class='subheading'>Floruit (Period of Activity)</span>")
         html.append(f"<span data-from='{esc(floruit_from)}' data-to='{esc(floruit_to)}' class='item-name'>{esc(floruit_text)}</span>")
         html.append("</div>")
+
 
     affiliations = person.get("affiliations")
     affiliations = sorted(affiliations, key=lambda x: normalize_for_sort(x.get("placeName")))
@@ -345,13 +376,14 @@ def render_person(person):
                 html.append(f"<a href='{esc(url)}' target='place-index' class='item-name'>{esc(place_name)} ({esc(key)})</a>")
         html.append("</div>")
 
-    linked_data = person.get("linked_data")
-    linked_data = sorted(linked_data, key=lambda x: normalize_for_sort(x.get("title")))
 
-    if linked_data:
+    linked_work = person.get("person_work")
+    linked_work = sorted(linked_work, key=lambda x: normalize_for_sort(x.get("title")))
+
+    if linked_work:
         html.append("<div class='entry-block entry-person-works'>")
         html.append("<span class='subheading'>Associated Works</span>")
-        for work in linked_data:
+        for work in linked_work:
             key = work.get("xml_id")
             title = work.get("title")
             role = ROLES.get(work.get("role"))
@@ -368,6 +400,7 @@ def render_person(person):
             )
         html.append("</div>")
 
+
     reference_html = render_list(person.get("reference"), "item-name")
     if reference_html:
         html.append("<div class='entry-block entry-reference'>")
@@ -375,12 +408,14 @@ def render_person(person):
         html.append(reference_html)
         html.append("</div>")
 
+
     notes_html = render_list(person.get("notes"), "item-name")
     if notes_html:
         html.append("<div class='entry-block entry-notes'>")
         html.append("<span class='subheading'>Notes</span>")
         html.append(notes_html)
         html.append("</div>")
+
 
     html.append("</div>")
     return "\n".join(html)    
@@ -406,12 +441,14 @@ def render_work(work):
 
     html.append("<div class='item-details'>")
 
+
     alt_names_html = render_list(work.get("alt_names"), "item-name")
     if alt_names_html:
         html.append("<div class='entry-block entry-alt-names'>")
         html.append("<span class='subheading'>Alternative Titles</span>")
         html.append(alt_names_html)
         html.append("</div>")
+
 
     idno_value = first(work.get("idno_value"))
     idno_type = first(work.get("idno_type"))
@@ -464,10 +501,11 @@ def render_work(work):
             role = place.get("role")
             url = make_entity_url("place", key, single_page=False)
             if role:
-                html.append(f"<a href='{esc(url)}' role='{esc(role)}' target='place_index' class='item-name'>{esc(place_name)} ({esc(key)}) (connection: {esc(role)})</a>")
+                html.append(f"<a href='{esc(url)}' role='{esc(role)}' target='place-index' class='item-name'>{esc(place_name)} ({esc(key)}) (connection: {esc(role)})</a>")
             else:
                 html.append(f"<a href='{esc(url)}' target='place-index' class='item-name'>{esc(place_name)} ({esc(key)})</a>")
         html.append("</div>")
+
 
     genres = work.get("genre")
     genres = sorted(genres, key=lambda x: normalize_for_sort(x.get("parent_text")))
@@ -499,6 +537,7 @@ def render_work(work):
         html.append(subject_html)
         html.append("</div>")
 
+
     reference_html = render_list(work.get("reference"), "item-name")
     if reference_html:
         html.append("<div class='entry-block entry-reference'>")
@@ -506,14 +545,13 @@ def render_work(work):
         html.append(reference_html)
         html.append("</div>")
 
+
     notes_html = render_list(work.get("notes"), "item-name")
     if notes_html:
         html.append("<div class='entry-block entry-notes'>")
         html.append("<span class='subheading'>Notes</span>")
         html.append(notes_html)
         html.append("</div>")
-
-    html.append("</div>")
 
     html.append("</div>")
     return "\n".join(html)
@@ -538,12 +576,66 @@ def render_inscription(inscription):
 
     html.append("<div class='item-details'>")
 
+
     alt_names_html = render_list(inscription.get("alt_names"), "item-name")
     if alt_names_html:
         html.append("<div class='entry-block entry-alt-names'>")
         html.append("<span class='subheading'>Alternative Titles</span>")
         html.append(alt_names_html)
         html.append("</div>")
+
+
+    dates_text = inscription.get("dates_text")
+    dates_from = inscription.get("dates_from")  
+    dates_to = inscription.get("dates_to")
+    if dates_text and dates_from and dates_to:
+        html.append("<div class='entry-block entry-dates'>")
+        html.append("<span class='subheading'>Associated Dates</span>")
+        for text, date_from, date_to in zip(dates_text, dates_from, dates_to):
+            html.append(f"<span data-from='{esc(date_from)}' data-to='{esc(date_to)}' class='item-name'>{esc(text)}</span>")
+        html.append("</div>")
+
+
+    donors = inscription.get("donor")
+    donors = sorted(donors, key=lambda x: normalize_for_sort(x.get("persName")))
+
+    if donors:
+        html.append("<div class='entry-block entry-donors'>")
+        html.append("<span class='subheading'>Donors</span>")
+        for donor in donors:
+            key = donor.get("persName_key")
+            donor_name = donor.get("persName")
+
+            if not key or not donor_name:
+                continue
+
+            url = make_entity_url("person", key, single_page=False)
+
+            html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(donor_name)} ({esc(key)})</a>")
+
+        html.append("</div>")
+
+
+    assoc_persons = inscription.get("assoc_person")
+    assoc_persons = sorted(assoc_persons, key=lambda x: normalize_for_sort(x.get("persName")))
+
+    if assoc_persons:
+        html.append("<div class='entry-block entry-assoc-persons'>")
+        html.append("<span class='subheading'>Associated Persons</span>")
+        for assoc_person in assoc_persons:
+            key = assoc_person.get("persName_key")
+            assoc_person_name = assoc_person.get("persName")
+            role = assoc_person.get("persName_role")
+
+            if not key or not assoc_person_name or not role:
+                continue
+
+            url = make_entity_url("person", key, single_page=False)
+
+            html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(assoc_person_name)} ({esc(key)}) (role: {esc(role)})</a>")
+
+        html.append("</div>")    
+
 
     recipient_html = render_list(inscription.get("recipient"), "item-name")
     if recipient_html:
@@ -552,12 +644,30 @@ def render_inscription(inscription):
         html.append(recipient_html)
         html.append("</div>")
 
+
+    language_html = render_list(inscription.get("language"), "item-name")
+    if language_html:
+        html.append("<div class='entry-block entry-language'>")
+        html.append("<span class='subheading'>Language</span>")
+        html.append(language_html)
+        html.append("</div>")
+
+
+    donation_type_html = render_list(inscription.get("donation_type"), "item-name")
+    if language_html:
+        html.append("<div class='entry-block entry-donation-type'>")
+        html.append("<span class='subheading'>Donation Type</span>")
+        html.append(donation_type_html)
+        html.append("</div>")
+
+
     material_html = render_list(inscription.get("material"), "item-name")
     if material_html:
         html.append("<div class='entry-block entry-material'>")
         html.append("<span class='subheading'>Material</span>")
         html.append(material_html)
         html.append("</div>")
+
 
     location_names = inscription.get("location")
     location_keys = inscription.get("location_key")
@@ -582,6 +692,7 @@ def render_inscription(inscription):
 
         html.append("</div>")
 
+
     reference_html = render_list(inscription.get("reference"), "item-name")
     if reference_html:
         html.append("<div class='entry-block entry-reference'>")
@@ -589,12 +700,14 @@ def render_inscription(inscription):
         html.append(reference_html)
         html.append("</div>")
 
+
     notes_html = render_list(inscription.get("notes"), "item-name")
     if notes_html:
         html.append("<div class='entry-block entry-notes'>")
         html.append("<span class='subheading'>Notes</span>")
         html.append(notes_html)
         html.append("</div>")
+
 
     html.append("</div>")
     return "\n".join(html)   

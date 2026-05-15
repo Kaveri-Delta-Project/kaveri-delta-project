@@ -10,6 +10,7 @@ from tei_helpers import (
     remove_broken_links, 
     build_search_index,
     link_persons_to_places,
+    link_inscriptions_to_places,
     link_works_to_persons
     )
 
@@ -35,8 +36,9 @@ all_entities = {}
 ref_cache = {}
 
 cross_refs = {
-    "person": ("place", link_persons_to_places),
-    "work": ("person", link_works_to_persons)
+    "person": [("place", link_persons_to_places)],
+    "inscription": [("place", link_inscriptions_to_places)],
+    "work": [("person", link_works_to_persons)]
 }
 
 for entity_tag, directory in file_directories.items():
@@ -47,16 +49,23 @@ for entity_tag, directory in file_directories.items():
     entities_cache.update(entity_cache)
 
     if entity_tag in cross_refs:
-        linked_ent, ref_function = cross_refs[entity_tag]
-        ref_data = ref_function(entity_data)
-        ref_cache[linked_ent] = ref_data
+        for linked_ent, ref_function in cross_refs[entity_tag]: 
+            ref_data = ref_function(entity_data)
+            ref_cache[(linked_ent, entity_tag)] = ref_data
 
 for entity_tag, entity_data in all_entities.items():
 
-    if entity_tag in ref_cache:
+    ref_matches = {
+        k: v for k, v in ref_cache.items()
+        if k[0] == entity_tag
+    }
+
+    for ref_ent, data in ref_matches.items():
+        ref_ent_str = "_".join(ref_ent)
+
         for ent in entity_data:
             key = ent["xml_id"]
-            ent["linked_data"] = ref_cache[entity_tag].get(key, [])
+            ent[ref_ent_str] = data.get(key, [])
 
     ent_data_alpha = group_items_alphabetically(entity_data)
 

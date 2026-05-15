@@ -199,6 +199,38 @@ def link_persons_to_places(entity_data):
     return place_dict
 
 
+def link_inscriptions_to_places(entity_data):
+    """
+    Build a dictionary mapping place XML IDs to lists of inscriptions.
+    """
+    place_dict = {}
+
+    for inscription in entity_data:
+        xml_id = inscription.get("xml_id")
+        inscription_list = inscription.get("name")
+        name = inscription_list[0] if inscription_list else inscription.get("xml_id")
+        
+        places = inscription.get("location") or []
+        place_keys = inscription.get("location_key") or []
+
+        for place, place_key in zip(places, place_keys):
+
+            if not place_key:
+                continue
+
+            # initialize list if key not already present
+            if place_key not in place_dict:
+                place_dict[place_key] = []
+
+            # append inscription info
+            place_dict[place_key].append({
+                "xml_id": xml_id,
+                "name": name,
+            })
+
+    return place_dict
+
+
 def link_works_to_persons(work_data):
     """
     Build a mapping of person XML IDs to works they are associated with.
