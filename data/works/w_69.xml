@@ -20,13 +20,12 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_49">
-          <title type="preferred">Paribhāṣāvṛttivyākhyāna</title>
-          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
-          <note type="genre">commentary</note>
-          <note type="subject">Grammar</note>
-          <note type="bibliographical">Tanjore 5720, 5721</note>
-          <note type="general">Commentary on the Paribhāṣavṛtti by the twelfth century grammarian Sīradeva</note>
+        <bibl xml:id="w_69">
+          <title type="preferred">Siddhāntasiddhāñjana</title>
+          <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
+          <note type="genre">Treatise/Exposition (Philosophical, Theological, etc.)</note>
+          <note type="subject">Vedānta</note>
+          <note type="general">Although it is styled as a subcommentary on Śaṇkara's Brahmasūtrabhāṣya, it challenges several key theses upheld by proponents of Viśiṣṭādvaita Vedānta (see Duquette, forthcoming)</note>
         </bibl>
       </listBibl>
     </body>

@@ -20,13 +20,11 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_49">
-          <title type="preferred">Paribhāṣāvṛttivyākhyāna</title>
-          <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
-          <note type="genre">commentary</note>
-          <note type="subject">Grammar</note>
-          <note type="bibliographical">Tanjore 5720, 5721</note>
-          <note type="general">Commentary on the Paribhāṣavṛtti by the twelfth century grammarian Sīradeva</note>
+        <bibl xml:id="w_71">
+          <title type="preferred">Brahmasūtrakutūhala</title>
+          <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
+          <note type="genre" source="other">Short metrical work on the Brahmasūtra</note>
+          <note type="subject">Vedānta</note>
         </bibl>
       </listBibl>
     </body>
