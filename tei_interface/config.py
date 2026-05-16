@@ -24,6 +24,10 @@ TEXT_ELEMS = ["title", "persName", "placeName", "label", "editor"]
 
 KEYS_TO_LOWERCASE = ["rel_persons_key", "affiliation_key", "editor_key", "pub_place_key", "work_key", "orig_place_key", "person_key"]
 
+#filename api
+
+API_URL = "https://filename-service.onrender.com"
+
 #xml structure mappings
 
 PERSON_MAPPING = {

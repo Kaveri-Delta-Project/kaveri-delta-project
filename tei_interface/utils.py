@@ -1,9 +1,13 @@
 from lxml import etree
 from unidecode import unidecode
 import string
+import requests
 import os, re
 from flask import request, redirect, url_for, flash
 from collections import defaultdict
+
+from config import API_URL
+API_KEY = os.environ.get("FILE_GENERATOR_API_KEY")
 
 
 #1. Text and grouping utilities
@@ -585,9 +589,16 @@ def load_or_create_entity(entity_name, config, nsmap, ns_xml, xml_id=None):
     else:
 
         #create new entity from template file 
-        file_name = next_entity_file(file_prefix, entity_dir)
+        file_name = next_entity_file(file_prefix)
         xml_id = file_name[:-4]
         file_path = os.path.join(entity_dir, file_name)
+
+        #prevent accidental file overwrite
+        if os.path.exists(file_path):
+            raise FileExistsError(
+                f"Entity file already exists: {file_path}. "
+                f"Check counter sync or existing corpus state."
+            )
         
         tree = etree.parse(template_path)
         root = tree.getroot()
@@ -1194,38 +1205,52 @@ def write_entity_to_file(context):
         pretty_print=True
     )
 
-def next_entity_file(prefix, directory, extension="xml"):
-    """
-    Generate the next available filename for an entity based on a numeric sequence.
 
-    Filenames are expected to follow the pattern: <prefix>_<number>.<extension>
-    e.g., "p_1.xml", "ms_2.xml", "w_10.xml".
+def next_entity_file(prefix, extension="xml"):
+    """
+    Get next filename from central counter service.
 
     Args:
-        prefix (str): The prefix for the entity type (e.g., "p", "ms", "w").
-        directory (str): Path to the directory containing existing files.
-        extension (str, optional): File extension (default is "xml").
+        prefix (str): entity prefix (e.g. "w", "isc", "p")
+        extension (str): file extension (default "xml")
 
     Returns:
-        str: The next available filename using the next number in sequence.
+        str: next filename in format "<prefix>_<number>.<extension>"
     """
+    try:
+        #call central counter API (single source of truth for numbering)
+        r = requests.get(
+            f"{API_URL}/next-id",
+            params={
+                "prefix": prefix,
+                "key": API_KEY
+            }
+        )
 
-    existing_numbers = []
+        #raise error for HTTP failures (4xx / 5xx)
+        r.raise_for_status()
+        
+        #parse JSON response from API
+        data = r.json()
 
-    #match filenames like "prefix_123.extension"
-    pattern = re.compile(rf"^{re.escape(prefix)}_(\d+)\.{re.escape(extension)}$")
+        filename = data["filename"]
 
-    #collect numeric suffixes from matching filenames
-    for f in os.listdir(directory):
-        match = pattern.match(f)
-        if match:
-            existing_numbers.append(int(match.group(1)))
+        if not filename:
+            raise ValueError("Empty filename returned from API")
 
-    #determine next number in sequence
-    next_num = max(existing_numbers, default=0) + 1
-    
-    return f"{prefix}_{next_num}.{extension}"
+        #allow optional extension override (e.g. xml to txt)
+        if extension != "xml":
+            filename = filename.replace(".xml", f".{extension}")
 
+        return filename
+
+    except requests.exceptions.RequestException as e:
+        #covers network errors, DNS issues, connection failures, etc.
+        raise RuntimeError(f"Filename service unavailable: {e}")
+
+    except (KeyError, ValueError) as e:
+        #covers malformed or unexpected API responses
+        raise RuntimeError(f"Invalid response from filename service: {e}")
 
 
 #8. Ordering / Structure Control

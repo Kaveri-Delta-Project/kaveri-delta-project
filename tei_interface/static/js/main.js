@@ -25,10 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
     sessionStorage.removeItem("scrollY");
   }
 
+  // safety: clear loading state on page load
+  document.body.classList.remove("loading");
+
   // Before submitting any form, save scroll position
   document.querySelectorAll("form").forEach(form => {
     form.addEventListener("submit", () => {
       sessionStorage.setItem("scrollY", window.scrollY);
+
+      setTimeout(() => {
+      document.body.classList.add("loading");
+    }, 300);
+    
     });
   });
 });

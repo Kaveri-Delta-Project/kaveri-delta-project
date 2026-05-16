@@ -27,6 +27,20 @@ input:-webkit-autofill {
   box-shadow: 0 0 0 1000px white inset !important;
 }
 
+body.loading::before {
+  content: "Saving… This may take a moment (processing request)";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(13, 110, 253, 0.8);
+  color: white;
+  text-align: center;
+  z-index: 9999;
+  font-weight: bold;
+}
+
 /* ----------------------------
    Toolbar & Search Inputs
 ---------------------------- */
