@@ -222,7 +222,9 @@
     "type": "person",
     "id": "p_3",
     "name": "Cokkanāthamakhin",
-    "alt_names": [],
+    "alt_names": [
+      "Cokkanāthakavi"
+    ],
     "url": "indexes/person_index.html#p_3",
     "places": [
       "Kandaramanikkam [l_4]"
@@ -829,7 +831,9 @@
     "type": "work",
     "id": "w_69",
     "name": "Siddhāntasiddhāñjana",
-    "alt_names": [],
+    "alt_names": [
+      "Śrutaprakāśikākhaṇḍana (Oppert 1880: 430)"
+    ],
     "url": "indexes/work_index.html#w_69",
     "places": []
   },
