@@ -18,6 +18,7 @@
       <listPerson>
         <person xml:id="p_3">
           <persName type="preferred">Cokkanāthamakhin</persName>
+          <persName type="variant">Cokkanāthakavi</persName>
           <trait type="student" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>

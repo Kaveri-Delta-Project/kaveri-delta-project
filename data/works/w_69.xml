@@ -22,10 +22,12 @@
       <listBibl>
         <bibl xml:id="w_69">
           <title type="preferred">Siddhāntasiddhāñjana</title>
+          <title type="variant">Śrutaprakāśikākhaṇḍana (Oppert 1880: 430)</title>
           <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
           <note type="genre">Treatise/Exposition (Philosophical, Theological, etc.)</note>
           <note type="subject">Vedānta</note>
           <note type="general">Although it is styled as a subcommentary on Śaṇkara's Brahmasūtrabhāṣya, it challenges several key theses upheld by proponents of Viśiṣṭādvaita Vedānta (see Duquette, forthcoming)</note>
+          <note type="general">Kṛṣṇānanda Sarasvatī directs most of his criticism at Sudarśanasūri's Śrutaprakāśikā (see Duquette, forthcoming)</note>
         </bibl>
       </listBibl>
     </body>
