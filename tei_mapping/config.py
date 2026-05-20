@@ -36,13 +36,14 @@ PERSON_SCHEMA = {
     "floruit": dict(element="floruit", flatten=True),
     "related": dict(element="trait", subelement="label"),
     "place_id": dict(element="affiliation", attribute="key"),
+    "place_role": dict(element="affiliation", attribute="role"),
 }
 
 WORK_SCHEMA = {
     "work_id": dict(element="bibl", attribute="xml:id", flatten=True),
     "work_name": dict(element="title", attributes=["type"], attribute_vals=["preferred"], flatten=True),
     "alt_name": dict(element="title", attributes=["type"], attribute_vals=["variant"]),
-    "work_person": dict(element="editor"),
+    "person_id": dict(element="editor", attribute="key"),
     "genre": dict(element="note", attributes=["type"], attribute_vals=["genre"]),
     "subject": dict(element="note", attributes=["type"], attribute_vals=["subject"]),
     "place_id": dict(element="pubPlace", attribute="key"),

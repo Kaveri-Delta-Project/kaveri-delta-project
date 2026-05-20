@@ -16,6 +16,10 @@ def build_search_index(all_entities, build_dir):
 
     records = []
 
+    resided_person_places = {}
+
+
+
     for entity_type, items in all_entities.items():
 
         for item in items:
@@ -39,13 +43,26 @@ def build_search_index(all_entities, build_dir):
 
             if entity_type == "person":
                 assoc_places = item.get("affiliations")
-                places = [f"{assoc.get('placeName')} [{assoc.get('key')}]" for assoc in assoc_places if assoc.get("placeName")]
+                places = []
+                resided_places = []
+                for assoc in assoc_places:
+                    if assoc.get("placeName"):
+                        place = f"{assoc.get('placeName')} [{assoc.get('key')}]"
+                        places.append(place)
+                        if assoc.get("role") == "Resided":
+                            resided_places.append(place)
+                if resided_places:
+                    resided_person_places[f"{name} [{xml_id}]"] = resided_places
                 record["places"] = places
 
             if entity_type == "work":
                 assoc_places = item.get("pub_place")
                 places = [f"{assoc.get('placeName')} [{assoc.get('key')}]" for assoc in assoc_places if assoc.get("placeName")]
+                person_names =  item.get("editor_text")
+                person_keys = item.get("editor_key")
+                persons = [f"{name} [{key}]" for name, key in zip(person_names, person_keys)]
                 record["places"] = places
+                record["persons"] = persons
 
             if entity_type == "inscription":
                 assoc_places = item.get("location", [])
@@ -55,6 +72,13 @@ def build_search_index(all_entities, build_dir):
 
             records.append(record)
 
+    for record in records:
+        if record["type"] == "work":
+            resided_places = set()
+            for person in record.get("persons", []):
+                resided_places.update(resided_person_places.get(person, []))
+
+            record["resided_places"] = sorted(resided_places)
 
     output_path = os.path.join(build_dir, "search_index.json")
 

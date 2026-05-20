@@ -34,6 +34,42 @@ works_df = build_df(work_objects, WORK_SCHEMA)
 inscriptions_df = build_df(inscription_objects, ISC_SCHEMA)
 
 
+affiliations_df = (
+    persons_df[["person_id", "place_id", "place_role"]]
+    .explode(["place_id", "place_role"])
+    .dropna(subset=["place_id"])
+)
+
+
+#enrich works_df.place_id with residence places from affiliations (person-level → work-level)
+
+#keep only "resided" relationships between people and places
+resided_df = affiliations_df[
+    affiliations_df["place_role"].str.lower() == "resided"
+]
+
+#build lookup: person_id to [place_id]
+resided_map = (
+    resided_df.groupby("person_id")["place_id"]
+    .apply(list)
+)
+
+#expand works so each person_id can be mapped independently
+works_exploded = works_df.explode("person_id")
+
+#attach residence places per person_id
+works_exploded["resided_places"] = works_exploded["person_id"].map(resided_map)
+
+#aggregate back to work level and flatten lists across all linked persons
+resided_agg = (
+    works_exploded.groupby(level=0)["resided_places"]
+    .apply(lambda s: sum([x for x in s if isinstance(x, list)], []))
+)
+
+#append derived residence places to existing work place_ids
+works_df["place_id"] = works_df["place_id"] + resided_agg.reindex(works_df.index, fill_value=[])
+
+
 places_df = (
     places_df
     .explode("type")
@@ -51,13 +87,6 @@ inscriptions_place_df = (
     .explode("place_id")
     .dropna(subset="place_id")
 )
-
-affiliations_df = (
-    persons_df[["person_id", "place_id"]]
-    .explode("place_id")
-    .dropna(subset=["place_id"])
-)
-
 
 def aggregate_with_metadata(df, group_key, id_col, metadata_df):
     
@@ -126,7 +155,6 @@ nodes_df = (
     .merge(people_agg, on="place_id", how="left")
     .merge(inscriptions_agg, on="place_id", how="left")
 )
-
 
 nodes_df["num_works"] = nodes_df["num_works"].fillna(0).astype(int)
 nodes_df["num_people"] = nodes_df["num_people"].fillna(0).astype(int)
