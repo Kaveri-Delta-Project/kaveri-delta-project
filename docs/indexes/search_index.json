@@ -314,7 +314,11 @@
     "name": "Nīlakaṇṭhavijayacampū",
     "alt_names": [],
     "url": "indexes/work_index.html#w_1",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -322,7 +326,11 @@
     "name": "Kuvalayānanda",
     "alt_names": [],
     "url": "indexes/work_index.html#w_11",
-    "places": []
+    "places": [],
+    "persons": [
+      "Appayya Dīkṣita [p_2]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -330,7 +338,14 @@
     "name": "Rasikarañjanī",
     "alt_names": [],
     "url": "indexes/work_index.html#w_12",
-    "places": []
+    "places": [],
+    "persons": [
+      "Gaṅgādharavājapeyin [p_7]",
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]"
+    ]
   },
   {
     "type": "work",
@@ -338,7 +353,14 @@
     "name": "Avaidikadarśanasaṃgraha",
     "alt_names": [],
     "url": "indexes/work_index.html#w_13",
-    "places": []
+    "places": [],
+    "persons": [
+      "Gaṅgādharavājapeyin [p_7]",
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]"
+    ]
   },
   {
     "type": "work",
@@ -346,7 +368,12 @@
     "name": "Śabdakaumudī",
     "alt_names": [],
     "url": "indexes/work_index.html#w_14",
-    "places": []
+    "places": [],
+    "persons": [
+      "Cokkanāthamakhin [p_3]",
+      "Vaidyanātha Dīkṣita [p_22]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -354,7 +381,11 @@
     "name": "Śābdikarakṣā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_15",
-    "places": []
+    "places": [],
+    "persons": [
+      "Cokkanāthamakhin [p_3]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -362,7 +393,15 @@
     "name": "Mudrārākṣasavyākhyāna",
     "alt_names": [],
     "url": "indexes/work_index.html#w_16",
-    "places": []
+    "places": [],
+    "persons": [
+      "Ḍhuṇḍirāja Vyāsa [p_9]",
+      "Serfoji Bhonsle [p_10]"
+    ],
+    "resided_places": [
+      "Sakkottai [l_14]",
+      "Svamimalai [l_15]"
+    ]
   },
   {
     "type": "work",
@@ -370,7 +409,15 @@
     "name": "Śāhajivilāsagītā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_17",
-    "places": []
+    "places": [],
+    "persons": [
+      "Ḍhuṇḍirāja Vyāsa [p_9]",
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Svamimalai [l_15]",
+      "Thanjavur [l_2]"
+    ]
   },
   {
     "type": "work",
@@ -380,7 +427,13 @@
       "Rājakośanighaṇṭu"
     ],
     "url": "indexes/work_index.html#w_18",
-    "places": []
+    "places": [],
+    "persons": [
+      "Ḍhuṇḍirāja Vyāsa [p_9]"
+    ],
+    "resided_places": [
+      "Svamimalai [l_15]"
+    ]
   },
   {
     "type": "work",
@@ -388,7 +441,12 @@
     "name": "Daharavidyāprakāśikā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_19",
-    "places": []
+    "places": [],
+    "persons": [
+      "Paramaśivendra Sarasvatī [p_11]",
+      "Tryambakarāyamakhin [p_5]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -396,7 +454,11 @@
     "name": "Mahābhāṣyaratnāvali",
     "alt_names": [],
     "url": "indexes/work_index.html#w_2",
-    "places": []
+    "places": [],
+    "persons": [
+      "Cokkanāthamakhin [p_3]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -404,7 +466,11 @@
     "name": "Kāṇādasiddhāntacandrikā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_20",
-    "places": []
+    "places": [],
+    "persons": [
+      "Gaṅgādharavājapeyin [p_7]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -412,7 +478,11 @@
     "name": "Prasāda (on Kāṇādasiddhāntacandrikā)",
     "alt_names": [],
     "url": "indexes/work_index.html#w_21",
-    "places": []
+    "places": [],
+    "persons": [
+      "Gaṅgādharavājapeyin [p_7]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -420,7 +490,13 @@
     "name": "Candraśekharavilāsa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_22",
-    "places": []
+    "places": [],
+    "persons": [
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]"
+    ]
   },
   {
     "type": "work",
@@ -428,7 +504,13 @@
     "name": "Śabdaratnasamanvayakośa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_23",
-    "places": []
+    "places": [],
+    "persons": [
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]"
+    ]
   },
   {
     "type": "work",
@@ -436,7 +518,13 @@
     "name": "Śabdārthasaṃgraha",
     "alt_names": [],
     "url": "indexes/work_index.html#w_24",
-    "places": []
+    "places": [],
+    "persons": [
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]"
+    ]
   },
   {
     "type": "work",
@@ -444,7 +532,11 @@
     "name": "Mukundavilāsa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_25",
-    "places": []
+    "places": [],
+    "persons": [
+      "Bhagavantarāyamakhin [p_12]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -455,7 +547,11 @@
       "Uttararāmāyaṇacampū"
     ],
     "url": "indexes/work_index.html#w_26",
-    "places": []
+    "places": [],
+    "persons": [
+      "Bhagavantarāyamakhin [p_12]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -463,7 +559,11 @@
     "name": "Rāghavābhyudaya",
     "alt_names": [],
     "url": "indexes/work_index.html#w_27",
-    "places": []
+    "places": [],
+    "persons": [
+      "Bhagavantarāyamakhin [p_12]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -471,7 +571,11 @@
     "name": "Tripuravijayacampū",
     "alt_names": [],
     "url": "indexes/work_index.html#w_28",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nṛsiṃharāya II [p_14]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -479,7 +583,15 @@
     "name": "Śāhendravilāsa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_29",
-    "places": []
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]",
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]",
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -489,7 +601,11 @@
       "Dhāturūpāvalī"
     ],
     "url": "indexes/work_index.html#w_3",
-    "places": []
+    "places": [],
+    "persons": [
+      "Cokkanāthamakhin [p_3]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -497,7 +613,13 @@
     "name": "Patañjalicarita",
     "alt_names": [],
     "url": "indexes/work_index.html#w_30",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -507,6 +629,12 @@
     "url": "indexes/work_index.html#w_31",
     "places": [
       "Madurai [l_10]"
+    ],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
     ]
   },
   {
@@ -515,7 +643,11 @@
     "name": "Śivalīlārṇava",
     "alt_names": [],
     "url": "indexes/work_index.html#w_32",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -523,7 +655,11 @@
     "name": "Gaṅgāvataraṇa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_35",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -531,7 +667,15 @@
     "name": "Dharmavijayacampū",
     "alt_names": [],
     "url": "indexes/work_index.html#w_36",
-    "places": []
+    "places": [],
+    "persons": [
+      "Bhūminātha Kavi [p_18]",
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]",
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -541,7 +685,13 @@
       "Jānakīpariṇayanāṭaka"
     ],
     "url": "indexes/work_index.html#w_37",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -549,7 +699,15 @@
     "name": "Śabdabhedanirūpaṇa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_39",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]",
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]",
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -559,6 +717,12 @@
     "url": "indexes/work_index.html#w_40",
     "places": [
       "Thiruvidaimarudur [l_6]"
+    ],
+    "persons": [
+      "Nallādhvarin [p_19]"
+    ],
+    "resided_places": [
+      "Kandaramanikkam [l_4]"
     ]
   },
   {
@@ -570,7 +734,18 @@
       "Ṣaḍdarśanīsiddhāntasaṁgraha"
     ],
     "url": "indexes/work_index.html#w_42",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nallādhvarin [p_19]",
+      "Rāmanāthamakhin [p_20]",
+      "Rāmabhadra Dīkṣita [p_4]",
+      "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]",
+      "Periyappā Kavi [p_24]"
+    ],
+    "resided_places": [
+      "Kandaramanikkam [l_4]",
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -578,7 +753,13 @@
     "name": "Padamaṇimañjarī",
     "alt_names": [],
     "url": "indexes/work_index.html#w_43",
-    "places": []
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -588,7 +769,11 @@
       "Paribhāṣāsaṃgraha"
     ],
     "url": "indexes/work_index.html#w_44",
-    "places": []
+    "places": [],
+    "persons": [
+      "Vaidyanātha Dīkṣita [p_22]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -598,7 +783,11 @@
     "url": "indexes/work_index.html#w_45",
     "places": [
       "Thiruvaiyaru [l_8]"
-    ]
+    ],
+    "persons": [
+      "Periyappā Kavi [p_24]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -606,7 +795,13 @@
     "name": "Cittavṛttikalyāṇa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_46",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nallādhvarin [p_19]"
+    ],
+    "resided_places": [
+      "Kandaramanikkam [l_4]"
+    ]
   },
   {
     "type": "work",
@@ -616,6 +811,13 @@
     "url": "indexes/work_index.html#w_47",
     "places": [
       "Thiruvidaimarudur [l_6]"
+    ],
+    "persons": [
+      "Nallādhvarin [p_19]",
+      "Vaidyanātha Dīkṣita [p_22]"
+    ],
+    "resided_places": [
+      "Kandaramanikkam [l_4]"
     ]
   },
   {
@@ -624,7 +826,14 @@
     "name": "Advaitarasamañjarī",
     "alt_names": [],
     "url": "indexes/work_index.html#w_48",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nallādhvarin [p_19]",
+      "Sadāśivendra Sarasvatī [p_21]"
+    ],
+    "resided_places": [
+      "Kandaramanikkam [l_4]"
+    ]
   },
   {
     "type": "work",
@@ -632,7 +841,13 @@
     "name": "Paribhāṣāvṛttivyākhyāna",
     "alt_names": [],
     "url": "indexes/work_index.html#w_49",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -642,6 +857,13 @@
     "url": "indexes/work_index.html#w_5",
     "places": [
       "Thiruvidaimarudur [l_6]"
+    ],
+    "persons": [
+      "Nallādhvarin [p_19]",
+      "Vaidyanātha Dīkṣita [p_22]"
+    ],
+    "resided_places": [
+      "Kandaramanikkam [l_4]"
     ]
   },
   {
@@ -650,7 +872,15 @@
     "name": "Uṇādimaṇidīpikā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_50",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]",
+      "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": [
+      "Thanjavur [l_2]",
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -660,7 +890,13 @@
       "Rāmavicitrastava"
     ],
     "url": "indexes/work_index.html#w_51",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -670,7 +906,13 @@
       "Cāpastava"
     ],
     "url": "indexes/work_index.html#w_52",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -680,7 +922,14 @@
       "Bāṇastava"
     ],
     "url": "indexes/work_index.html#w_53",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]",
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -688,7 +937,14 @@
     "name": "Ācāryastavarājabhūṣaṇa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_54",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]",
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -698,7 +954,13 @@
       "Jānakījānistotra"
     ],
     "url": "indexes/work_index.html#w_55",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -709,7 +971,13 @@
       "Rāmakarṇāmṛta"
     ],
     "url": "indexes/work_index.html#w_56",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -719,7 +987,13 @@
       "Prasādastava"
     ],
     "url": "indexes/work_index.html#w_57",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -727,7 +1001,13 @@
     "name": "Varṇamālāstava",
     "alt_names": [],
     "url": "indexes/work_index.html#w_58",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -738,7 +1018,13 @@
       "Aṣṭaprāsa"
     ],
     "url": "indexes/work_index.html#w_59",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -746,7 +1032,11 @@
     "name": "Kaliviḍambana",
     "alt_names": [],
     "url": "indexes/work_index.html#w_6",
-    "places": []
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -754,7 +1044,13 @@
     "name": "Anunāsikanirdeśavicāra",
     "alt_names": [],
     "url": "indexes/work_index.html#w_60",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -762,7 +1058,13 @@
     "name": "Śukasandeśa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_61",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -770,7 +1072,13 @@
     "name": "Siddhāntasāra",
     "alt_names": [],
     "url": "indexes/work_index.html#w_62",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -780,7 +1088,13 @@
       "Tūṇīrastava"
     ],
     "url": "indexes/work_index.html#w_63",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmabhadra Dīkṣita [p_4]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
@@ -791,7 +1105,12 @@
       "Jīvānandana"
     ],
     "url": "indexes/work_index.html#w_64",
-    "places": []
+    "places": [],
+    "persons": [
+      "Vedakavīśvara [p_25]",
+      "Ānandarāyamakhin [p_15]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -801,7 +1120,12 @@
       "Vidyāpariṇāma (NCC vol. 29, 132)"
     ],
     "url": "indexes/work_index.html#w_65",
-    "places": []
+    "places": [],
+    "persons": [
+      "Vedakavīśvara [p_25]",
+      "Ānandarāyamakhin [p_15]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -809,7 +1133,12 @@
     "name": "Vidyāpariṇayavyākhyā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_66",
-    "places": []
+    "places": [],
+    "persons": [
+      "Vedakavīśvara [p_25]",
+      "Ānandarāyamakhin [p_15]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -817,7 +1146,12 @@
     "name": "Puruṣārtharatnākara",
     "alt_names": [],
     "url": "indexes/work_index.html#w_67",
-    "places": []
+    "places": [],
+    "persons": [
+      "Raṅganātha Sūri [p_28]",
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -825,7 +1159,11 @@
     "name": "Siddhāntacandrikā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_68",
-    "places": []
+    "places": [],
+    "persons": [
+      "Rāmānanda Yati [p_29]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -835,7 +1173,11 @@
       "Śrutaprakāśikākhaṇḍana (Oppert 1880: 430)"
     ],
     "url": "indexes/work_index.html#w_69",
-    "places": []
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -843,7 +1185,11 @@
     "name": "Śivatattvaratnakalikā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_70",
-    "places": []
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -851,7 +1197,11 @@
     "name": "Brahmasūtrakutūhala",
     "alt_names": [],
     "url": "indexes/work_index.html#w_71",
-    "places": []
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -859,7 +1209,11 @@
     "name": "Anuṣṭhānapaddhati",
     "alt_names": [],
     "url": "indexes/work_index.html#w_72",
-    "places": []
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
@@ -867,7 +1221,16 @@
     "name": "Dharmākūtam",
     "alt_names": [],
     "url": "indexes/work_index.html#w_8",
-    "places": []
+    "places": [],
+    "persons": [
+      "Tryambakarāyamakhin [p_5]",
+      "Ḍhuṇḍirāja Vyāsa [p_9]",
+      "Serfoji Bhonsle [p_10]"
+    ],
+    "resided_places": [
+      "Sakkottai [l_14]",
+      "Svamimalai [l_15]"
+    ]
   },
   {
     "type": "place",
