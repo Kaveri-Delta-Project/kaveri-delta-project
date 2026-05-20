@@ -1,0 +1,6 @@
+#!/Users/aneir1/Documents/git_projects/sanskrit-project/tei_interface/venv/bin/python
+import sys
+from macholib.macho_dump import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())

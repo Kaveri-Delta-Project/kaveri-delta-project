@@ -174,7 +174,15 @@ document.addEventListener('DOMContentLoaded', async function() {
       const id = normalize(item.id)
       const altNames = (item.alt_names || []).map(a => normalize(a));
       const places = (item.places || []).map(p => normalize(p));
-      const searchable = [name, id, ...altNames, ...places].join(" ");
+      const residedPlaces = (item.resided_places || []).map(p => normalize(p));
+
+      const searchable = [
+        name,
+        id,
+        ...altNames,
+        ...places,
+        ...residedPlaces
+      ].join(" ");
 
       // Start-of-word match for every search
       const matchesQuery = words.every(word => {
@@ -226,6 +234,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         ${item.places && item.places.length ? `
           <div class="result-places text-muted small">
             Associated Places: ${item.places.join(', ')}
+          </div>
+        ` : ''}
+        ${item.type.toLowerCase() === 'work' && item.resided_places && item.resided_places.length ? `
+          <div class="result-resided-places text-muted small">
+            Associated Places via Author Residence: ${item.resided_places.join(', ')}
           </div>
         ` : ''}
         <div class="result-link mt-1">
