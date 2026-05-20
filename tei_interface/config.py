@@ -22,7 +22,8 @@ DEFAULT_NSMAP = {None: NS_TEI}
 
 TEXT_ELEMS = ["title", "persName", "placeName", "label", "editor"]
 
-KEYS_TO_LOWERCASE = ["rel_persons_key", "affiliation_key", "editor_key", "pub_place_key", "work_key", "orig_place_key", "person_key"]
+KEYS_TO_LOWERCASE = ["rel_persons_key", "affiliation_key", "editor_key", 
+                    "pub_place_key", "work_key", "orig_place_key", "person_key", "person_ref_key", "work_ref_key"]
 
 #filename api
 
@@ -98,6 +99,10 @@ WORK_MAPPING = {
     "editor_text": {"element": "editor", "all_results": True},
     "editor_key": {"element": "editor", "element_attr": "key", "all_results": True},
     "editor_role": {"element": "editor", "element_attr": "role", "all_results": True},
+    "person_ref_text": {"element": "persName", "all_results": True},
+    "person_ref_key": {"element": "persName", "element_attr": "key", "all_results": True},
+    "work_ref_text": {"element": "rs", "all_results": True},
+    "work_ref_key": {"element": "rs", "element_attr": "key", "all_results": True},
     "pub_place": {"parent_tag": "pubPlace", "attributes": ["key", "role"], "child_elements": ["placeName"]},
     "genre" : {
         "parent_tag": "note", 
@@ -177,7 +182,7 @@ ENTITY_CONFIG = {
         "dir": os.path.join(DATA_DIR, "works"),
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_work.xml"),
         "mapping": WORK_MAPPING,
-        "child_order": ["title", "idno", "date", "editor", "pubPlace", "note", "name", "resp"],
+        "child_order": ["title", "idno", "date", "editor", "persName", "rs", "pubPlace", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "bibliographical": 2, "general": 3},
         "element_tag": "bibl",
         "name_tag": "title",

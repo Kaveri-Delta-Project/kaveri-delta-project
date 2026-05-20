@@ -489,6 +489,41 @@ def render_work(work):
             html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(name)} ({esc(key)}) (role: {esc(role)})</a>")
         html.append("</div>")
 
+    
+    person_ref_names = work.get("person_ref_text")
+    person_ref_keys = work.get("person_ref_key")
+    if person_ref_names and person_ref_keys:
+
+        person_refs = sorted(
+            zip(person_ref_names, person_ref_keys),
+            key=lambda x: normalize_for_sort(x[0])
+        )
+
+        html.append("<div class='entry-block entry-person-refs'>")
+        html.append("<span class='subheading'>Persons Referenced in Work</span>")
+        for name, key in person_refs:
+            url = make_entity_url("person", key, single_page=False)
+            html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(name)} ({esc(key)})</a>")
+        html.append("</div>")
+
+    
+    work_ref_names = work.get("work_ref_text")
+    work_ref_keys = work.get("work_ref_key")
+    if work_ref_names and work_ref_keys:
+
+        work_refs = sorted(
+            zip(work_ref_names, work_ref_keys),
+            key=lambda x: normalize_for_sort(x[0])
+        )
+
+        html.append("<div class='entry-block entry-work-refs'>")
+        html.append("<span class='subheading'>Other Works Referenced in Work</span>")
+        for name, key in work_refs:
+            url = make_entity_url("work", key, single_page=False)
+            html.append(f"<a href='{esc(url)}' target='work-index' class='item-name'>{esc(name)} ({esc(key)})</a>")
+        html.append("</div>")    
+
+
     places = work.get("pub_place")
     places = sorted(places, key=lambda x: normalize_for_sort(x.get("placeName")))
 

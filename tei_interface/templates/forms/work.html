@@ -406,7 +406,152 @@
 
     </form>
   </div>  
-</section>  
+</section>
+
+
+<section class="panel">
+
+  {{ ui.section_header(
+      "Referenced Persons",
+      "+ add referenced person",
+      "resetEditForm('person_ref'); toggleEntryForm('person-ref-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('person-ref-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['person-ref-error'] }}
+    </div>
+  {% endif %}
+
+  {% for text, key in zip(data.person_ref_text, data.person_ref_key) %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ text }}</span>
+      <span class="text-muted">[{{ key }}]</span>
+      {{ ui.delete_button("persName", 
+            loop.index0,
+            extra_fields={"connection": "cascade", "name_type": "person", "key": key, "name": text}
+      ) }}
+
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem(
+            "person_ref",
+            {{ loop.index0 }},
+            {{ {
+                "person_ref_search": text,
+                "person_ref_key": key,
+            }|tojson }}
+        ); showEntryForm("person-ref-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="person-ref-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="person_ref">
+      <input type="hidden" name="edit_index" id="person-ref-edit-index" value="">
+
+      <div id="person-ref-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="person_ref_search",
+              name="person_ref_key",
+              label="Referenced Person",
+              label_option="(required)",
+              placeholder="Type to search persons...",
+              entity_lookup="person",
+              results_id="person_ref_results",
+              hidden_id="person_ref_key",
+              extra_attrs="required",
+              help_text="Search for an existing person and select them from the list."
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('person_ref'); toggleEntryForm('person-ref-form')" ) }}
+
+    </form>
+  </div>  
+</section>
+
+<section class="panel">
+
+  {{ ui.section_header(
+      "Referenced Works",
+      "+ add referenced work",
+      "resetEditForm('work_ref'); toggleEntryForm('work-ref-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('work-ref-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['work-ref-error'] }}
+    </div>
+  {% endif %}
+
+  {% for text, key in zip(data.work_ref_text, data.work_ref_key) %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ text }}</span>
+      <span class="text-muted">[{{ key }}]</span>
+      {{ ui.delete_button("rs", 
+            loop.index0,
+            extra_fields={"connection": "cascade", "name_type": "work", "key": key, "name": text}
+      ) }}
+
+      <button type="button"
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem(
+            "work_ref",
+            {{ loop.index0 }},
+            {{ {
+                "work_ref_search": text,
+                "work_ref_key": key,
+            }|tojson }}
+        ); showEntryForm("work-ref-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="work-ref-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="work_ref">
+      <input type="hidden" name="edit_index" id="work-ref-edit-index" value="">
+
+      <div id="work-ref-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="work_ref_search",
+              name="work_ref_key",
+              label="Referenced Work",
+              label_option="(required)",
+              placeholder="Type to search works...",
+              entity_lookup="work",
+              results_id="work_ref_results",
+              hidden_id="work_ref_key",
+              extra_attrs="required",
+              help_text="Search for an existing work and select from the list."
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('work_ref'); toggleEntryForm('work-ref-form')" ) }}
+
+    </form>
+  </div>  
+</section>
 
 
 <section class="panel">
