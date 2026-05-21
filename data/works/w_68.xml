@@ -22,7 +22,9 @@
       <listBibl>
         <bibl xml:id="w_68">
           <title type="preferred">Siddhāntacandrikā</title>
+          <title type="variant">Vedāntasiddhāntacandrikā</title>
           <editor key="p_29" role="aut">Rāmānanda Yati</editor>
+          <note type="subject">Vedānta</note>
         </bibl>
       </listBibl>
     </body>

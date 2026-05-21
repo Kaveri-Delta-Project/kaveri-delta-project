@@ -21,10 +21,11 @@
     <body>
       <listBibl>
         <bibl xml:id="w_70">
-          <title type="preferred">Śivatattvaratnakalikā</title>
+          <title type="preferred">Śivatattvaratnakālikā</title>
           <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
           <note type="genre">Hymn</note>
           <note type="subject">Saiva</note>
+          <note type="general">It is a hymn with auto-commentary</note>
         </bibl>
       </listBibl>
     </body>
