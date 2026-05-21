@@ -232,6 +232,34 @@
   },
   {
     "type": "person",
+    "id": "p_32",
+    "name": "Cokkanāthamakhin (younger)",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_32",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_33",
+    "name": "Bhāskara Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_33",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_34",
+    "name": "Vātsya Subrahmanya",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_34",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_4",
     "name": "Rāmabhadra Dīkṣita",
     "alt_names": [
@@ -1184,7 +1212,7 @@
   {
     "type": "work",
     "id": "w_70",
-    "name": "Śivatattvaratnakālikā",
+    "name": "Śivatattvaratnakalikā",
     "alt_names": [],
     "url": "indexes/work_index.html#w_70",
     "places": [],
@@ -1216,6 +1244,24 @@
       "Kṛṣṇānanda Sarasvatī [p_27]"
     ],
     "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_74",
+    "name": "Kāntimatīpariṇaya",
+    "alt_names": [
+      "Kāntimatī-Śāharājīya (Tanjore ms. 4339)"
+    ],
+    "url": "indexes/work_index.html#w_74",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ],
+    "persons": [
+      "Cokkanāthamakhin (younger) [p_32]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
   },
   {
     "type": "work",
