@@ -7,7 +7,7 @@ from flask import request, redirect, url_for, flash
 from collections import defaultdict
 
 from config import API_URL
-API_KEY = os.environ.get("FILE_GENERATOR_API_KEY")
+API_KEY = "MivIraDr46"
 
 
 #1. Text and grouping utilities
@@ -1217,6 +1217,15 @@ def next_entity_file(prefix, extension="xml"):
     Returns:
         str: next filename in format "<prefix>_<number>.<extension>"
     """
+    
+    #sanitize inputs (prevents hidden encoding issues)
+    prefix = (prefix or "").strip()
+    key = (API_KEY or "").strip()
+
+    #optional safety check: detect pre-encoded keys
+    if "%" in key:
+        raise ValueError("API_KEY looks URL-encoded (invalid state)")
+
     try:
         #call central counter API (single source of truth for numbering)
         r = requests.get(
@@ -1226,6 +1235,11 @@ def next_entity_file(prefix, extension="xml"):
                 "key": API_KEY
             }
         )
+
+        if not r.ok:
+            print("STATUS:", r.status_code)
+            print("RESPONSE:", r.text)
+            print("REQUEST URL:", r.url)
 
         #raise error for HTTP failures (4xx / 5xx)
         r.raise_for_status()
