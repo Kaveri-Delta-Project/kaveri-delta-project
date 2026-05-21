@@ -56,6 +56,11 @@
       "w_53",
       "work",
       "Nīlakaṇṭha Dīkṣita"
+    ],
+    [
+      "p_32",
+      "person",
+      "Nīlakaṇṭha Dīkṣita"
     ]
   ],
   "p_3": [
@@ -857,6 +862,11 @@
       "p_24",
       "person",
       "Viśvanātha Dīkṣita"
+    ],
+    [
+      "p_27",
+      "person",
+      "Viśvanātha Dīkṣita"
     ]
   ],
   "p_27": [
@@ -904,6 +914,16 @@
       "w_72",
       "work",
       "Kṛṣṇānanda Sarasvatī"
+    ],
+    [
+      "p_33",
+      "person",
+      "Kṛṣṇānanda Sarasvatī"
+    ],
+    [
+      "p_26",
+      "person",
+      "Kṛṣṇānanda Sarasvatī"
     ]
   ],
   "p_28": [
@@ -928,6 +948,25 @@
       "w_68",
       "work",
       "Rāmānanda Yati"
+    ]
+  ],
+  "p_32": [
+    [
+      "w_74",
+      "work",
+      "Cokkanāthamakhin (younger)"
+    ],
+    [
+      "p_1",
+      "person",
+      "Cokkanāthamakhin (younger)"
+    ]
+  ],
+  "p_33": [
+    [
+      "p_27",
+      "person",
+      "Bhāskara Dīkṣita"
     ]
   ]
 }

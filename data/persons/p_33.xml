@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -16,19 +20,14 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_26">
-          <persName type="preferred">Viśvanātha Dīkṣita</persName>
-          <persName type="variant">Viśvanātha Śāstrī</persName>
-          <trait type="brother" key="p_24">
-            <label>Periyappā Kavi</label>
-          </trait>
+        <person xml:id="p_33">
+          <persName type="preferred">Bhāskara Dīkṣita</persName>
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
           </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
-          <note>He specialised in the exposition of Kṛṣṇānanda Sarasvatī's works (see Raghavan, intro to Śāhendravilāsa pg. 31)</note>
         </person>
       </listPerson>
     </body>

@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -16,19 +20,12 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_1">
-          <persName type="preferred">Nīlakaṇṭha Dīkṣita</persName>
-          <trait type="member of family" key="p_2">
-            <label>Appayya Dīkṣita</label>
+        <person xml:id="p_32">
+          <persName type="preferred">Cokkanāthamakhin (younger)</persName>
+          <trait type="student" key="p_1">
+            <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
-          <trait type="teacher" key="p_3">
-            <label>Cokkanāthamakhin</label>
-          </trait>
-          <trait type="teacher" key="p_32">
-            <label>Cokkanāthamakhin (younger)</label>
-          </trait>
-          <floruit from="1638" to="1638">Active around 1638</floruit>
-          <affiliation key="l_1" role="Affiliation to this place">
+          <affiliation key="l_1" role="Resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
         </person>

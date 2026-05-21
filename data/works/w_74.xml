@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_74">
+          <title type="preferred">Kāntimatīpariṇaya</title>
+          <title type="variant">Kāntimatī-Śāharājīya (Tanjore ms. 4339)</title>
+          <editor key="p_32" role="aut">Cokkanāthamakhin (younger)</editor>
+          <pubPlace key="l_1" role="Composition">
+            <placeName>Thiruvisanallur</placeName>
+          </pubPlace>
+          <note type="genre">Play</note>
+          <note type="subject" source="other">The marriage of King Śāhaji and Kāntimatī</note>
+          <note type="bibliographical">Tanjore mss. 4339–4341</note>
+          <note type="bibliographical">NCC vol. 7, pg 85a</note>
+          <note type="bibliographical">NCC vol. 3, pg. 341b</note>
+          <note type="general">Since the work deals with the marriage of King Śāhaji, it was of local interest (Tanjore descriptive catalogue vol. 8, ms. 4339, pg. 3371)</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
