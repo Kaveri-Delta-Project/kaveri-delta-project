@@ -424,10 +424,10 @@
     </div>
   {% endif %}
 
-  {% for text, key in zip(data.person_ref_text, data.person_ref_key) %}
+  {% for text, key, type in zip(data.person_ref_text, data.person_ref_key, data.person_ref_type) %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ text }}</span>
-      <span class="text-muted">[{{ key }}]</span>
+      <span class="text-muted">(reference type: {{ type }}) [{{ key }}]</span>
       {{ ui.delete_button("persName", 
             loop.index0,
             extra_fields={"connection": "cascade", "name_type": "person", "key": key, "name": text}
@@ -441,6 +441,7 @@
             {{ {
                 "person_ref_search": text,
                 "person_ref_key": key,
+                "person_ref_type": type
             }|tojson }}
         ); showEntryForm("person-ref-form");'>
         ✎ Edit
@@ -459,6 +460,23 @@
       </div>
 
       <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.select_field("person_ref_type",
+              [
+              ("", "-- Select reference type --"),
+              ("Citation", "Citation"),
+              ("Influence", "Influence"),
+              ("Mentions", "Mentions"),
+              ("Quotation", "Quotation"),
+              ("Relates to", "Relates to"),
+              ("Response", "Response"),
+              ("Other", "Other")
+              ],
+              required=True,
+              allow_other=True
+          ) }}
+        </div>
+
         <div class="mb-3">
           {{ ui.input_field(
               id="person_ref_search",
@@ -496,10 +514,10 @@
     </div>
   {% endif %}
 
-  {% for text, key in zip(data.work_ref_text, data.work_ref_key) %}
+  {% for text, key, type in zip(data.work_ref_text, data.work_ref_key, data.work_ref_type) %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ text }}</span>
-      <span class="text-muted">[{{ key }}]</span>
+      <span class="text-muted">(reference type: {{ type }}) [{{ key }}]</span>
       {{ ui.delete_button("rs", 
             loop.index0,
             extra_fields={"connection": "cascade", "name_type": "work", "key": key, "name": text}
@@ -513,6 +531,7 @@
             {{ {
                 "work_ref_search": text,
                 "work_ref_key": key,
+                "work_ref_type": type
             }|tojson }}
         ); showEntryForm("work-ref-form");'>
         ✎ Edit
@@ -531,6 +550,25 @@
       </div>
 
       <div class="editable-fields">
+
+        <div class="mb-3">
+          {{ ui.select_field(
+              "work_ref_type",
+              [
+                  ("", "-- Select reference type --"),
+                  ("Citation", "Citation"),
+                  ("Influence", "Influence"),
+                  ("Mentions", "Mentions"),
+                  ("Quotation", "Quotation"),
+                  ("Relates to", "Relates to"),
+                  ("Response", "Response"),
+                  ("Other", "Other")
+              ],
+              required=True,
+              allow_other=True
+          ) }}
+        </div>
+
         <div class="mb-3">
           {{ ui.input_field(
               id="work_ref_search",

@@ -101,8 +101,10 @@ WORK_MAPPING = {
     "editor_role": {"element": "editor", "element_attr": "role", "all_results": True},
     "person_ref_text": {"element": "persName", "all_results": True},
     "person_ref_key": {"element": "persName", "element_attr": "key", "all_results": True},
+    "person_ref_type": {"element": "persName", "element_attr": "role", "all_results": True},
     "work_ref_text": {"element": "rs", "all_results": True},
     "work_ref_key": {"element": "rs", "element_attr": "key", "all_results": True},
+    "work_ref_type": {"element": "rs", "element_attr": "role", "all_results": True},
     "pub_place": {"parent_tag": "pubPlace", "attributes": ["key", "role"], "child_elements": ["placeName"]},
     "genre" : {
         "parent_tag": "note", 

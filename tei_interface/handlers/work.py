@@ -364,6 +364,8 @@ def handle_editor(work, context, form_data):
 @section_handler("person_ref")
 def handle_person_ref(work, context, form_data):
     person_ref_key = form_data.get("person_ref_key")
+    person_ref_type = form_data.get("person_ref_type")
+    person_ref_type_other = form_data.get("person_ref_type_other")
     edit_index = form_data.get("edit_index")
 
     if not person_ref_key:
@@ -374,6 +376,25 @@ def handle_person_ref(work, context, form_data):
     if not person_ref_text:
         flash("Selected person could not be resolved.", "person-ref-error")
         return {"ok": False}
+
+    if not person_ref_type:
+        flash("Reference type cannot be empty.", "person-ref-error")
+        return {"ok": False}
+
+    if person_ref_type == "Other" and person_ref_type_other:
+        element_attrs = {
+            "key": person_ref_key,
+            "role": person_ref_type_other,
+            "type": 'referenced'
+        }
+
+    else:
+        element_attrs = {
+            "key": person_ref_key,
+            "role": person_ref_type,
+            "type": 'referenced'
+        }
+
 
     if edit_index not in (None, "", "None"):
         try:
@@ -395,7 +416,7 @@ def handle_person_ref(work, context, form_data):
             tag="persName",
             text=person_ref_text,
             ns=NS_TEI,
-            update_attrs={"key": person_ref_key},
+            update_attrs=element_attrs,
             index=index
         )
 
@@ -414,7 +435,7 @@ def handle_person_ref(work, context, form_data):
             nsmap=NSMAP,
             ns=NS_TEI,            
             text=person_ref_text,
-            attrs={"key": person_ref_key, "ana": "referenced"},
+            attrs=element_attrs,
             allow_multiple=True
         )
 
@@ -431,6 +452,8 @@ def handle_person_ref(work, context, form_data):
 @section_handler("work_ref")
 def handle_work_ref(work, context, form_data):
     work_ref_key = form_data.get("work_ref_key")
+    work_ref_type = form_data.get("work_ref_type")
+    work_ref_type_other = form_data.get("work_ref_type_other")
     edit_index = form_data.get("edit_index")
 
     if not work_ref_key:
@@ -441,6 +464,22 @@ def handle_work_ref(work, context, form_data):
     if not work_ref_text:
         flash("Selected work could not be resolved.", "work-ref-error")
         return {"ok": False}
+
+    if not work_ref_type:
+        flash("Reference type cannot be empty.", "work-ref-error")
+        return {"ok": False}
+
+    if work_ref_type == "Other" and work_ref_type_other:
+        element_attrs = {
+            "key": work_ref_key,
+            "role": work_ref_type_other,
+        }
+    else:
+        element_attrs = {
+            "key": work_ref_key,
+            "role": work_ref_type,
+        }
+
 
     if edit_index not in (None, "", "None"):
         try:
@@ -462,7 +501,7 @@ def handle_work_ref(work, context, form_data):
             tag="rs",
             text=work_ref_text,
             ns=NS_TEI,
-            update_attrs={"key": work_ref_key},
+            update_attrs=element_attrs,
             index=index
         )
 
@@ -481,7 +520,7 @@ def handle_work_ref(work, context, form_data):
             nsmap=NSMAP,
             ns=NS_TEI,            
             text=work_ref_text,
-            attrs={"key": work_ref_key, "type": "work"},
+            attrs=element_attrs,
             allow_multiple=True
         )
 
