@@ -427,7 +427,7 @@
   {% for val in data.person_ref %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ val.parent_text }}</span>
-      <span class="text-muted">(reference type: {{ val.role }}) [{{ val.key }}]</span>
+      <span class="text-muted">[{{ val.key }}] (reference type: {{ val.role }})</span>
 
       {% if val.note %}
       <span class="text-muted">(notes: {{ val.note }})</span>
