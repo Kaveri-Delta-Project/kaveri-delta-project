@@ -489,40 +489,41 @@ def render_work(work):
             html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(name)} ({esc(key)}) (role: {esc(role)})</a>")
         html.append("</div>")
 
-    
-    person_ref_names = work.get("person_ref_text")
-    person_ref_keys = work.get("person_ref_key")
-    person_ref_types = work.get("person_ref_type")
-    if person_ref_names and person_ref_keys and person_ref_types:
 
-        person_refs = sorted(
-            zip(person_ref_names, person_ref_keys, person_ref_types),
-            key=lambda x: normalize_for_sort(x[0])
-        )
+    person_refs = work.get("person_ref")
+    person_refs = sorted(person_refs, key=lambda x: normalize_for_sort(x.get("parent_text")))
 
+    if person_refs:
         html.append("<div class='entry-block entry-person-refs'>")
         html.append("<span class='subheading'>Persons Referenced in Work</span>")
-        for name, key, type in person_refs:
+        for person_ref in person_refs:
+            key = person_ref.get("key")
+            person_name = person_ref.get("parent_text")
+            person_type = person_ref.get("role")
+            note = person_ref.get("note")
             url = make_entity_url("person", key, single_page=False)
-            html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(name)} ({esc(key)}) (reference type: {esc(type)})</a>")
-        html.append("</div>")
+            if note:
+                html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(person_name)} ({esc(key)}) (reference type: {esc(person_type)}) (notes: {esc(note)})</a>")
+            else:
+                html.append(f"<a href='{esc(url)}' target='person-index' class='item-name'>{esc(person_name)} ({esc(key)}) (reference type: {esc(person_type)})</a>")
+        html.append("</div>")  
 
-    
-    work_ref_names = work.get("work_ref_text")
-    work_ref_keys = work.get("work_ref_key")
-    work_ref_types = work.get("work_ref_type")
-    if work_ref_names and work_ref_keys and work_ref_types:
+    work_refs = work.get("work_ref")
+    work_refs = sorted(work_refs, key=lambda x: normalize_for_sort(x.get("parent_text")))
 
-        work_refs = sorted(
-            zip(work_ref_names, work_ref_keys, work_ref_types),
-            key=lambda x: normalize_for_sort(x[0])
-        )
-
+    if work_refs:
         html.append("<div class='entry-block entry-work-refs'>")
         html.append("<span class='subheading'>Other Works Referenced in Work</span>")
-        for name, key, type in work_refs:
+        for work_ref in work_refs:
+            key = work_ref.get("key")
+            work_name = work_ref.get("parent_text")
+            work_type = work_ref.get("role")
+            note = work_ref.get("note")
             url = make_entity_url("work", key, single_page=False)
-            html.append(f"<a href='{esc(url)}' target='work-index' class='item-name'>{esc(name)} ({esc(key)}) (reference type: {esc(type)})</a>")
+            if note:
+                html.append(f"<a href='{esc(url)}' target='work-index' class='item-name'>{esc(work_name)} ({esc(key)}) (reference type: {esc(work_type)}) (notes: {esc(note)})</a>")
+            else:
+                html.append(f"<a href='{esc(url)}' target='work-index' class='item-name'>{esc(work_name)} ({esc(key)}) (reference type: {esc(work_type)})</a>")
         html.append("</div>")    
 
 

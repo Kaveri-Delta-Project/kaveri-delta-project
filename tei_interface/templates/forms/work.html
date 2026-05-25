@@ -424,13 +424,18 @@
     </div>
   {% endif %}
 
-  {% for text, key, type in zip(data.person_ref_text, data.person_ref_key, data.person_ref_type) %}
+  {% for val in data.person_ref %}
     <div class="border rounded p-2 mb-2">
-      <span class="fw-semibold">{{ text }}</span>
-      <span class="text-muted">(reference type: {{ type }}) [{{ key }}]</span>
+      <span class="fw-semibold">{{ val.parent_text }}</span>
+      <span class="text-muted">(reference type: {{ val.role }}) [{{ val.key }}]</span>
+
+      {% if val.note %}
+      <span class="text-muted">(notes: {{ val.note }})</span>
+      {% endif %}
+
       {{ ui.delete_button("persName", 
             loop.index0,
-            extra_fields={"connection": "cascade", "name_type": "person", "key": key, "name": text}
+            extra_fields={"connection": "cascade", "name_type": "person", "key": val.key, "name": val.parent_text}
       ) }}
 
       <button type="button"
@@ -439,9 +444,9 @@
             "person_ref",
             {{ loop.index0 }},
             {{ {
-                "person_ref_search": text,
-                "person_ref_key": key,
-                "person_ref_type": type
+                "person_ref_search": val.parent_text,
+                "person_ref_key": val.key,
+                "person_ref_note": val.note or ""
             }|tojson }}
         ); showEntryForm("person-ref-form");'>
         ✎ Edit
@@ -460,22 +465,6 @@
       </div>
 
       <div class="editable-fields">
-        <div class="mb-3">
-          {{ ui.select_field("person_ref_type",
-              [
-              ("", "-- Select reference type --"),
-              ("Citation", "Citation"),
-              ("Influence", "Influence"),
-              ("Mentions", "Mentions"),
-              ("Quotation", "Quotation"),
-              ("Relates to", "Relates to"),
-              ("Response", "Response"),
-              ("Other", "Other")
-              ],
-              required=True,
-              allow_other=True
-          ) }}
-        </div>
 
         <div class="mb-3">
           {{ ui.input_field(
@@ -491,6 +480,17 @@
               help_text="Search for an existing person and select them from the list."
           ) }}
         </div>
+
+        <div class="mb-3">
+          {{ ui.input_field(
+            id="person_ref_note",
+            name="person_ref_note",
+            label="Notes",
+            label_option="(optional)",
+            help_text="Enter any extra notes on reference here"
+          ) }}
+        </div>
+
       </div>
 
       {{ ui.form_actions("resetEditForm('person_ref'); toggleEntryForm('person-ref-form')" ) }}
@@ -514,13 +514,18 @@
     </div>
   {% endif %}
 
-  {% for text, key, type in zip(data.work_ref_text, data.work_ref_key, data.work_ref_type) %}
+  {% for val in data.work_ref %}
     <div class="border rounded p-2 mb-2">
-      <span class="fw-semibold">{{ text }}</span>
-      <span class="text-muted">(reference type: {{ type }}) [{{ key }}]</span>
+      <span class="fw-semibold">{{ val.parent_text }}</span>
+      <span class="text-muted">[{{ val.key }}] (reference type: {{ val.role }})</span>
+
+      {% if val.note %}
+      <span class="text-muted">(notes: {{ val.note }})</span>
+      {% endif %}
+
       {{ ui.delete_button("rs", 
             loop.index0,
-            extra_fields={"connection": "cascade", "name_type": "work", "key": key, "name": text}
+            extra_fields={"connection": "cascade", "name_type": "work", "key": val.key, "name": val.parent_text}
       ) }}
 
       <button type="button"
@@ -529,9 +534,10 @@
             "work_ref",
             {{ loop.index0 }},
             {{ {
-                "work_ref_search": text,
-                "work_ref_key": key,
-                "work_ref_type": type
+                "work_ref_search": val.parent_text,
+                "work_ref_key": val.key,
+                "work_ref_type": val.role,                
+                "work_ref_note": val.note or ""
             }|tojson }}
         ); showEntryForm("work-ref-form");'>
         ✎ Edit
@@ -583,6 +589,17 @@
               help_text="Search for an existing work and select from the list."
           ) }}
         </div>
+
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="work_ref_note",
+              name="work_ref_note",
+              label="Notes",
+              label_option="(optional)",
+              help_text="Enter any extra notes on reference here"
+          ) }}
+        </div>
+
       </div>
 
       {{ ui.form_actions("resetEditForm('work_ref'); toggleEntryForm('work-ref-form')" ) }}
