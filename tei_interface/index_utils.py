@@ -1,6 +1,7 @@
 import os
 import json
 from lxml import etree
+from flask import request, redirect, url_for, flash
 
 from utils import load_ent_name_by_key, load_or_create_entity, write_entity_to_file, build_section, insert_in_order
 
@@ -292,7 +293,7 @@ def related_delete(entity_a_key, entity, form_data, config):
 
 
     if not context:
-        flash("Related record could not be loaded.", "rel-persons-error")
+        flash("Related record could not be loaded, perhaps deleted in other location.", "rel-persons-error")
         return {"ok": False}
 
     removed = False
