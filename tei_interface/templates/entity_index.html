@@ -27,16 +27,6 @@
         + New {{ entity|capitalize }}
       </a>
 
-      <form method="POST"
-            action="{{ url_for('refresh_entity_index', entity=entity) }}"
-            onsubmit="return confirm('⚠ Manually refresh the index?');"
-            class="d-inline">
-        <button type="submit"
-                class="btn btn-outline-warning btn-sm">
-          ⟳ Refresh
-        </button>
-      </form>
-
     </div>
 
     <!-- RIGHT: Search -->
