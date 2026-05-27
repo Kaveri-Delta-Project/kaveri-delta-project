@@ -44,6 +44,7 @@ WORK_SCHEMA = {
     "work_name": dict(element="title", attributes=["type"], attribute_vals=["preferred"], flatten=True),
     "alt_name": dict(element="title", attributes=["type"], attribute_vals=["variant"]),
     "person_id": dict(element="editor", attribute="key"),
+    "person_role": dict(element="editor", attribute="role"),
     "genre": dict(element="note", attributes=["type"], attribute_vals=["genre"]),
     "subject": dict(element="note", attributes=["type"], attribute_vals=["subject"]),
     "place_id": dict(element="pubPlace", attribute="key"),

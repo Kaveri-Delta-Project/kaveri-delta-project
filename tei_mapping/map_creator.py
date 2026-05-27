@@ -55,7 +55,9 @@ resided_map = (
 )
 
 #expand works so each person_id can be mapped independently
-works_exploded = works_df.explode("person_id")
+works_exploded = works_df.explode(["person_id", "person_role"])
+
+works_exploded = works_exploded[works_exploded["person_role"] == "aut"]
 
 #attach residence places per person_id
 works_exploded["resided_places"] = works_exploded["person_id"].map(resided_map)
