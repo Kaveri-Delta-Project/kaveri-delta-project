@@ -60,9 +60,11 @@ def build_search_index(all_entities, build_dir):
                 places = [f"{assoc.get('placeName')} [{assoc.get('key')}]" for assoc in assoc_places if assoc.get("placeName")]
                 person_names =  item.get("editor_text")
                 person_keys = item.get("editor_key")
+                person_roles = item.get("editor_role")
                 persons = [f"{name} [{key}]" for name, key in zip(person_names, person_keys)]
                 record["places"] = places
                 record["persons"] = persons
+                record["person_roles"] = person_roles
 
             if entity_type == "inscription":
                 assoc_places = item.get("location", [])
@@ -75,10 +77,13 @@ def build_search_index(all_entities, build_dir):
     for record in records:
         if record["type"] == "work":
             resided_places = set()
-            for person in record.get("persons", []):
-                resided_places.update(resided_person_places.get(person, []))
-
+            persons = record.get("persons", [])
+            person_roles = record.get("person_roles", [])
+            for person, role in zip(persons, person_roles):
+                if role == "aut":
+                    resided_places.update(resided_person_places.get(person, []))
             record["resided_places"] = sorted(resided_places)
+            del record["person_roles"]
 
     output_path = os.path.join(build_dir, "search_index.json")
 
