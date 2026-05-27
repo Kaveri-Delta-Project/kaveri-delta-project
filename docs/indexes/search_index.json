@@ -371,9 +371,7 @@
       "Gaṅgādharavājapeyin [p_7]",
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
-    "resided_places": [
-      "Thanjavur [l_2]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -386,9 +384,7 @@
       "Gaṅgādharavājapeyin [p_7]",
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
-    "resided_places": [
-      "Thanjavur [l_2]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -427,7 +423,6 @@
       "Serfoji Bhonsle [p_10]"
     ],
     "resided_places": [
-      "Sakkottai [l_14]",
       "Svamimalai [l_15]"
     ]
   },
@@ -443,8 +438,7 @@
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
     "resided_places": [
-      "Svamimalai [l_15]",
-      "Thanjavur [l_2]"
+      "Svamimalai [l_15]"
     ]
   },
   {
@@ -522,9 +516,7 @@
     "persons": [
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
-    "resided_places": [
-      "Thanjavur [l_2]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -536,9 +528,7 @@
     "persons": [
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
-    "resided_places": [
-      "Thanjavur [l_2]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -550,9 +540,7 @@
     "persons": [
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
-    "resided_places": [
-      "Thanjavur [l_2]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -617,7 +605,6 @@
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
     "resided_places": [
-      "Thanjavur [l_2]",
       "Thiruvisanallur [l_1]"
     ]
   },
@@ -701,7 +688,6 @@
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
     "resided_places": [
-      "Thanjavur [l_2]",
       "Thiruvisanallur [l_1]"
     ]
   },
@@ -733,7 +719,6 @@
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
     "resided_places": [
-      "Thanjavur [l_2]",
       "Thiruvisanallur [l_1]"
     ]
   },
@@ -770,10 +755,7 @@
       "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]",
       "Periyappā Kavi [p_24]"
     ],
-    "resided_places": [
-      "Kandaramanikkam [l_4]",
-      "Thiruvisanallur [l_1]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -785,9 +767,7 @@
     "persons": [
       "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]"
     ],
-    "resided_places": [
-      "Thiruvisanallur [l_1]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -906,7 +886,6 @@
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
     "resided_places": [
-      "Thanjavur [l_2]",
       "Thiruvisanallur [l_1]"
     ]
   },
@@ -1076,9 +1055,7 @@
     "persons": [
       "Rāmabhadra Dīkṣita [p_4]"
     ],
-    "resided_places": [
-      "Thiruvisanallur [l_1]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -1090,9 +1067,7 @@
     "persons": [
       "Rāmabhadra Dīkṣita [p_4]"
     ],
-    "resided_places": [
-      "Thiruvisanallur [l_1]"
-    ]
+    "resided_places": []
   },
   {
     "type": "work",
@@ -1276,7 +1251,6 @@
       "Serfoji Bhonsle [p_10]"
     ],
     "resided_places": [
-      "Sakkottai [l_14]",
       "Svamimalai [l_15]"
     ]
   },
