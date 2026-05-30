@@ -24,10 +24,12 @@
           <persName type="preferred">Rāmānanda Yati</persName>
           <persName type="variant">Rāmānanda Sarasvatī</persName>
           <persName type="variant">Rāmabhadrānanda Sarasvatī</persName>
+          <persName type="variant">Rāmayati (possible, see NCC vol. 24, pg. 202b)</persName>
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
           </trait>
-          <birth when="1670">c. 1670</birth>
+          <floruit from="1670" to="1670">1670</floruit>
+          <bibl>NCC vol. 24, pg. 275b</bibl>
           <note>He copied Kṛṣṇānanda Sarasvatī's Siddhāntasiddhāñjana in 1670</note>
           <note>He is different from another Rāmānanda Sarasvatī, the author of a subcommentary on Śaṅkara's Brahmasūtrabhāṣya called Ratnaprabhā and a treatise aligned with the Vivaraṇa interpretation of the Brahmasūtras titled Vivaraṇopanyāsa (see Duquette, forthcoming)</note>
         </person>
