@@ -190,7 +190,8 @@
       "Bālakṛṣṇa Guru",
       "Bhagavatpāda",
       "Bālakṛṣṇānandasarasvatī",
-      "Kṛṣṇānandayati (Adyar vol. 9, pg. 349)"
+      "Kṛṣṇānandayati (Adyar vol. 9, pg. 349)",
+      "Bālakṛṣna Bhagavatpāda"
     ],
     "url": "indexes/person_index.html#p_27",
     "places": []
@@ -213,7 +214,8 @@
     "name": "Rāmānanda Yati",
     "alt_names": [
       "Rāmānanda Sarasvatī",
-      "Rāmabhadrānanda Sarasvatī"
+      "Rāmabhadrānanda Sarasvatī",
+      "Rāmayati (possible, see NCC vol. 24, pg. 202b)"
     ],
     "url": "indexes/person_index.html#p_29",
     "places": []
@@ -1149,7 +1151,9 @@
     "name": "Puruṣārtharatnākara",
     "alt_names": [],
     "url": "indexes/work_index.html#w_67",
-    "places": [],
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ],
     "persons": [
       "Raṅganātha Sūri [p_28]",
       "Kṛṣṇānanda Sarasvatī [p_27]"
