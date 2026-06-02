@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_75">
+          <title type="preferred">Śrutaprakāśikā</title>
+          <editor key="p_35" role="aut">Sudarśanasūri</editor>
+          <note type="genre" source="commentary" key="w_76">Śrībhāṣya</note>
+          <note type="subject">Vedānta</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
