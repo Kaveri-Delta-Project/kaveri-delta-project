@@ -262,6 +262,22 @@
   },
   {
     "type": "person",
+    "id": "p_35",
+    "name": "Sudarśanasūri",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_35",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_36",
+    "name": "Rāmānuja",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_36",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_4",
     "name": "Rāmabhadra Dīkṣita",
     "alt_names": [
@@ -1241,6 +1257,28 @@
     "resided_places": [
       "Thiruvisanallur [l_1]"
     ]
+  },
+  {
+    "type": "work",
+    "id": "w_75",
+    "name": "Śrutaprakāśikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_75",
+    "places": [],
+    "persons": [
+      "Sudarśanasūri [p_35]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_76",
+    "name": "Śrībhāṣya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_76",
+    "places": [],
+    "persons": [],
+    "resided_places": []
   },
   {
     "type": "work",
