@@ -4,10 +4,6 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
-        <respStmt>
-          <name>Hershini Soneji</name>
-          <resp>Contributor</resp>
-        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -20,8 +16,11 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_34">
-          <persName type="preferred">Vātsya Subrahmaṇya</persName>
+        <person xml:id="p_37">
+          <persName type="preferred">Śrīdhara Liṅgārya</persName>
+          <trait type="father" key="p_17">
+            <label>Śrīdhara Veṅkaṭeśa Ayyāvāḷ</label>
+          </trait>
         </person>
       </listPerson>
     </body>

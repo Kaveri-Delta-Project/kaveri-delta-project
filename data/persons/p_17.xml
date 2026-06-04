@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -17,26 +21,37 @@
     <body>
       <listPerson>
         <person xml:id="p_17">
-          <persName type="preferred">Śrīdhara Veṅkaṭeśa Ayyāvāl</persName>
-          <persName type="variant">Ayyāvāl of Thiruvisanallur</persName>
+          <persName type="preferred">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</persName>
           <persName type="variant">Veṅkaṭeśa</persName>
           <persName type="variant">Veṅkaṭeśa Śāstrin</persName>
-          <persName type="variant">Ayyāvāl</persName>
+          <persName type="variant">Ayyāvāḷ</persName>
+          <persName type="variant">Śrīdharaveṅkateśa Śāstri</persName>
+          <persName type="variant">Śrīdhara Veṅkaṭeśvaraparameśapāda</persName>
           <trait type="beneficiary" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
           <trait type="contemporary of" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
+          <trait type="son" key="p_37">
+            <label>Śrīdhara Liṅgārya</label>
+          </trait>
+          <idno type="Wikidata">Q7586366</idno>
+          <floruit from="1635" to="1720">c. 1635 - 1720</floruit>
           <affiliation key="l_1" role="Resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
           <affiliation key="l_1" role="Recipient (Land Donation)" from="1693" to="1693">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <affiliation key="l_7" role="Visited">
+            <placeName>Mahalingeswarar Temple</placeName>
+          </affiliation>
           <bibl>Raghavan, intro to Śāhendravilāsa</bibl>
+          <bibl>NCC, Vol. 36, pp.17ff.</bibl>
           <note>Biographer of King Śāhaji</note>
-          <note>That he was as a resident of Thiruvissannalur is borne out by the existence in that village of his house and the annual festival (Ayyāvāl utsava) that takes place there in his honour (see Raghavan, intro to Śāhendravilāsa pg. 60–64)</note>
+          <note>That he was as a resident of Thiruvisanallur is borne out by the existence in that village of his house and the annual festival (Ayyāvāl utsava) that takes place there in his honour (see Raghavan, intro to Śāhendravilāsa pg. 60–64)</note>
+          <note>The above date is provided by Soneji, 'The Powers of Polyglossia' (2014: 340).</note>
         </person>
       </listPerson>
     </body>

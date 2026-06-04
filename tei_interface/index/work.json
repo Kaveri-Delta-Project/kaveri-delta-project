@@ -1,5 +1,9 @@
 [
   {
+    "xml_id": "w_77",
+    "name": "Acyutāṣṭaka"
+  },
+  {
     "xml_id": "w_48",
     "name": "Advaitarasamañjarī"
   },
@@ -14,6 +18,18 @@
   {
     "xml_id": "w_13",
     "name": "Avaidikadarśanasaṃgraha"
+  },
+  {
+    "xml_id": "w_86",
+    "name": "Bhaktaikalpalatikā"
+  },
+  {
+    "xml_id": "w_85",
+    "name": "Bhaktalakṣaṇa"
+  },
+  {
+    "xml_id": "w_87",
+    "name": "Bhaktitilaka"
   },
   {
     "xml_id": "w_71",
@@ -32,6 +48,10 @@
     "name": "Daharavidyāprakāśikā"
   },
   {
+    "xml_id": "w_82",
+    "name": "Dayāśataka"
+  },
+  {
     "xml_id": "w_36",
     "name": "Dharmavijayacampū"
   },
@@ -44,8 +64,16 @@
     "name": "Dhāturatnāvali"
   },
   {
+    "xml_id": "w_84",
+    "name": "Doṣaparihārāṣṭaka"
+  },
+  {
     "xml_id": "w_35",
     "name": "Gaṅgāvataraṇa"
+  },
+  {
+    "xml_id": "w_80",
+    "name": "Jambūnāthāṣṭaka"
   },
   {
     "xml_id": "w_37",
@@ -76,6 +104,10 @@
     "name": "Kāṇādasiddhāntacandrikā"
   },
   {
+    "xml_id": "w_79",
+    "name": "Kṛṣṇadvādaśamañjarī"
+  },
+  {
     "xml_id": "w_2",
     "name": "Mahābhāṣyaratnāvali"
   },
@@ -86,6 +118,14 @@
   {
     "xml_id": "w_25",
     "name": "Mukundavilāsa"
+  },
+  {
+    "xml_id": "w_89",
+    "name": "Mātṛbhūtaśataka"
+  },
+  {
+    "xml_id": "w_88",
+    "name": "Mātṛkācakraviveka"
   },
   {
     "xml_id": "w_1",
@@ -176,6 +216,10 @@
     "name": "Tripuravijayacampū"
   },
   {
+    "xml_id": "w_81",
+    "name": "Tārāvalīstotra"
+  },
+  {
     "xml_id": "w_26",
     "name": "Uttaracampū"
   },
@@ -202,6 +246,10 @@
   {
     "xml_id": "w_54",
     "name": "Ācāryastavarājabhūṣaṇa"
+  },
+  {
+    "xml_id": "w_78",
+    "name": "Ākhyāṣaṣṭi"
   },
   {
     "xml_id": "w_39",
@@ -262,6 +310,10 @@
   {
     "xml_id": "w_31",
     "name": "Śṛṅgāratilakabhāṇa"
+  },
+  {
+    "xml_id": "w_83",
+    "name": "Ḍolānavaratnamālā"
   },
   {
     "xml_id": "w_42",

@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -16,12 +20,15 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_29">
-          <title type="preferred">Śāhendravilāsa</title>
+        <bibl xml:id="w_89">
+          <title type="preferred">Mātṛbhūtaśataka</title>
           <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
-          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
-          <note type="genre">Poetry</note>
-          <note type="bibliographical">Raghavan - intro to Śāhendravilāsa</note>
+          <pubPlace key="l_23" role="Dedication">
+            <placeName>Thayumanaswami Temple</placeName>
+          </pubPlace>
+          <note type="genre">Hymn</note>
+          <note type="subject">Saiva</note>
+          <note type="general">Hymn to Śiva in the form of Tāyumānavar at Trichy</note>
         </bibl>
       </listBibl>
     </body>

@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -16,12 +20,11 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_29">
-          <title type="preferred">Śāhendravilāsa</title>
+        <bibl xml:id="w_81">
+          <title type="preferred">Tārāvalīstotra</title>
           <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
-          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
-          <note type="genre">Poetry</note>
-          <note type="bibliographical">Raghavan - intro to Śāhendravilāsa</note>
+          <note type="genre">Hymn</note>
+          <note type="general">The legend has it that it was composed in relation to his bringing back to life a brahmin who had died of a cobra bite (see V. Raghavan's introduction to Śāhendravilāsa, p. 63).</note>
         </bibl>
       </listBibl>
     </body>

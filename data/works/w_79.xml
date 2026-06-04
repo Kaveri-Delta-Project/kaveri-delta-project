@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -16,12 +20,10 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_29">
-          <title type="preferred">Śāhendravilāsa</title>
+        <bibl xml:id="w_79">
+          <title type="preferred">Kṛṣṇadvādaśamañjarī</title>
           <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
-          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
-          <note type="genre">Poetry</note>
-          <note type="bibliographical">Raghavan - intro to Śāhendravilāsa</note>
+          <note type="genre">Hymn</note>
         </bibl>
       </listBibl>
     </body>

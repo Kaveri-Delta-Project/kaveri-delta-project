@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_78">
+          <title type="preferred">Ākhyāṣaṣṭi</title>
+          <title type="variant">Ākhyāṣaṣṭiśataka</title>
+          <title type="variant">Śivākhyāstava</title>
+          <title type="variant">Śivāvyākhyāśataka</title>
+          <title type="variant">Ākhyāstava</title>
+          <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
+          <note type="genre">Hymn</note>
+          <note type="subject">Saiva</note>
+          <note type="bibliographical">Descriptive Catalogue of Sanskrit Manuscripts, Vol.4. Stotras (part 2), entries 719-723</note>
+          <note type="general">On the efficacy of singing Śiva's name</note>
+          <note type="general">Śrīdhara Veṅkaṭeśa wrote a commentary (vyākhyā) on it, called Mādhuryajharī.</note>
+          <note type="general">V. Raghavan mentions a commentary on it by a certain Vīrarāghava (see Raghavan's introduction to Śāhendravilāsa, p. 63).</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

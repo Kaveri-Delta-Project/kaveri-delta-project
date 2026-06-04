@@ -16,11 +16,12 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_7">
-          <placeName type="preferred">Mahalingeswarar Temple</placeName>
+        <place xml:id="l_23">
+          <placeName type="preferred">Thayumanaswami Temple</placeName>
+          <placeName type="variant">Thayumanavar Temple</placeName>
           <desc type="function">Temple</desc>
-          <idno type="Wikidata">Q6732944</idno>
-          <note type="coordinates">10.995438731169399, 79.45263665463665</note>
+          <idno type="Wikidata">Q7711575</idno>
+          <note type="coordinates">10.827492491857829, 78.69707955582447</note>
         </place>
       </listPlace>
     </body>

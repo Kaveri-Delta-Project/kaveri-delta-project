@@ -3,7 +3,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Sanskrit Project – Place</title>
+        <title>Sanskrit Project – Work</title>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -15,14 +15,12 @@
   </teiHeader>
   <text>
     <body>
-      <listPlace>
-        <place xml:id="l_7">
-          <placeName type="preferred">Mahalingeswarar Temple</placeName>
-          <desc type="function">Temple</desc>
-          <idno type="Wikidata">Q6732944</idno>
-          <note type="coordinates">10.995438731169399, 79.45263665463665</note>
-        </place>
-      </listPlace>
+      <listBibl>
+        <bibl xml:id="w_88">
+          <title type="preferred">Mātṛkācakraviveka</title>
+          <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
+        </bibl>
+      </listBibl>
     </body>
   </text>
 </TEI>
