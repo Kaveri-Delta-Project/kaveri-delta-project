@@ -67,17 +67,19 @@
   {
     "type": "person",
     "id": "p_17",
-    "name": "Śrīdhara Veṅkaṭeśa Ayyāvāl",
+    "name": "Śrīdhara Veṅkaṭeśa Ayyāvāḷ",
     "alt_names": [
-      "Ayyāvāl of Thiruvisanallur",
       "Veṅkaṭeśa",
       "Veṅkaṭeśa Śāstrin",
-      "Ayyāvāl"
+      "Ayyāvāḷ",
+      "Śrīdharaveṅkateśa Śāstri",
+      "Śrīdhara Veṅkaṭeśvaraparameśapāda"
     ],
     "url": "indexes/person_index.html#p_17",
     "places": [
       "Thiruvisanallur [l_1]",
-      "Thiruvisanallur [l_1]"
+      "Thiruvisanallur [l_1]",
+      "Mahalingeswarar Temple [l_7]"
     ]
   },
   {
@@ -255,7 +257,7 @@
   {
     "type": "person",
     "id": "p_34",
-    "name": "Vātsya Subrahmanya",
+    "name": "Vātsya Subrahmaṇya",
     "alt_names": [],
     "url": "indexes/person_index.html#p_34",
     "places": []
@@ -274,6 +276,14 @@
     "name": "Rāmānuja",
     "alt_names": [],
     "url": "indexes/person_index.html#p_36",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_37",
+    "name": "Śrīdhara Liṅgārya",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_37",
     "places": []
   },
   {
@@ -619,7 +629,7 @@
     "url": "indexes/work_index.html#w_29",
     "places": [],
     "persons": [
-      "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]",
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]",
       "Śāhaji I (of Thanjavur) [p_6]"
     ],
     "resided_places": [
@@ -770,7 +780,7 @@
       "Nallādhvarin [p_19]",
       "Rāmanāthamakhin [p_20]",
       "Rāmabhadra Dīkṣita [p_4]",
-      "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]",
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]",
       "Periyappā Kavi [p_24]"
     ],
     "resided_places": []
@@ -783,7 +793,7 @@
     "url": "indexes/work_index.html#w_43",
     "places": [],
     "persons": [
-      "Śrīdhara Veṅkaṭeśa Ayyāvāl [p_17]"
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
     ],
     "resided_places": []
   },
@@ -1282,6 +1292,56 @@
   },
   {
     "type": "work",
+    "id": "w_77",
+    "name": "Acyutāṣṭaka",
+    "alt_names": [
+      "Acyutākhyāṣṭaka",
+      "Acyutarāmakṛṣṇākhyāstotra"
+    ],
+    "url": "indexes/work_index.html#w_77",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_78",
+    "name": "Ākhyāṣaṣṭi",
+    "alt_names": [
+      "Ākhyāṣaṣṭiśataka",
+      "Śivākhyāstava",
+      "Śivāvyākhyāśataka",
+      "Ākhyāstava"
+    ],
+    "url": "indexes/work_index.html#w_78",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_79",
+    "name": "Kṛṣṇadvādaśamañjarī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_79",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
     "id": "w_8",
     "name": "Dharmākūtam",
     "alt_names": [],
@@ -1294,6 +1354,152 @@
     ],
     "resided_places": [
       "Svamimalai [l_15]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_80",
+    "name": "Jambūnāthāṣṭaka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_80",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_81",
+    "name": "Tārāvalīstotra",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_81",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_82",
+    "name": "Dayāśataka",
+    "alt_names": [
+      "Śivadayāśataka"
+    ],
+    "url": "indexes/work_index.html#w_82",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_83",
+    "name": "Ḍolānavaratnamālā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_83",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_84",
+    "name": "Doṣaparihārāṣṭaka",
+    "alt_names": [
+      "Doṣaparihārastava"
+    ],
+    "url": "indexes/work_index.html#w_84",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_85",
+    "name": "Bhaktalakṣaṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_85",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_86",
+    "name": "Bhaktaikalpalatikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_86",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_87",
+    "name": "Bhaktitilaka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_87",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_88",
+    "name": "Mātṛkācakraviveka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_88",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_89",
+    "name": "Mātṛbhūtaśataka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_89",
+    "places": [
+      "Thayumanaswami Temple [l_23]"
+    ],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
     ]
   },
   {
@@ -1389,6 +1595,15 @@
     "name": "Marudanallur",
     "alt_names": [],
     "url": "indexes/place_index.html#l_21"
+  },
+  {
+    "type": "place",
+    "id": "l_23",
+    "name": "Thayumanaswami Temple",
+    "alt_names": [
+      "Thayumanavar Temple"
+    ],
+    "url": "indexes/place_index.html#l_23"
   },
   {
     "type": "place",
