@@ -1,5 +1,5 @@
 import os
-import json
+import hjson
 from lxml import etree
 from flask import request, redirect, url_for, flash
 
@@ -13,50 +13,47 @@ os.makedirs(INDEX_DIR, exist_ok=True)
 
 def get_index_file(entity):
     """Return path to the JSON index file for a given entity."""
-    return os.path.join(INDEX_DIR, f"{entity}.json")
+    return os.path.join(INDEX_DIR, f"{entity}.hjson")
 
+def write_hjson(data, path):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(hjson.dumps(data, indent=2))
 
 def rebuild_entity_index(entity):
     config = ENTITY_CONFIG[entity]
     entity_dir = config["dir"]
-    element_tag = config["element_tag"]
     name_tag = config.get("name_tag")
-    
-    index_data = []
+
+    data = []
 
     for filename in sorted(os.listdir(entity_dir)):
         if not filename.endswith(".xml"):
             continue
 
         xml_id = filename[:-4]
-        file_path = os.path.join(entity_dir, filename)
 
-        name = load_ent_name_by_key(entity, config, xml_id, name_tag, NSMAP)
+        name = load_ent_name_by_key(
+            entity, config, xml_id, name_tag, NSMAP
+        ) or xml_id
 
-        if not name:
-            name = xml_id
-
-        index_data.append({
+        data.append({
             "xml_id": xml_id,
             "name": name
         })
 
-    # Sort alphabetically by name
-    index_data.sort(key=lambda x: x["name"].lower())
-
-    # Save index
-    with open(get_index_file(entity), "w", encoding="utf-8") as f:
-        json.dump(index_data, f, ensure_ascii=False, indent=2)
+    data.sort(key=lambda x: x["name"].lower())
+    
+    write_hjson(data, get_index_file(entity))
 
 
 def load_index(entity):
-    """Load JSON index for entity type; rebuild if missing."""
+    """Load HJSON index for entity type; rebuild if missing."""
     path = get_index_file(entity)
     if not os.path.exists(path):
         rebuild_entity_index(entity)
     
     with open(path, encoding="utf-8") as f:
-        return json.load(f)
+        return hjson.load(f)
 
 
 def update_index_entry(entity, xml_id):
@@ -64,15 +61,16 @@ def update_index_entry(entity, xml_id):
     
     config = ENTITY_CONFIG[entity]
     name_tag = config.get("name_tag")
-    path = get_index_file(entity)
-    index_data = []
+    index_path = get_index_file(entity)
+    
+    data = []
 
-    if os.path.exists(path):
-        with open(path, encoding="utf-8") as f:
-            index_data = json.load(f)
+    if os.path.exists(index_path):
+        with open(index_path, encoding="utf-8") as f:
+            index_data = hjson.load(f)
 
         # Remove any existing entry for this XML ID
-        index_data = [entry for entry in index_data if entry["xml_id"] != xml_id]
+        new_index_data = [entry for entry in index_data if entry["xml_id"] != xml_id]
 
     name = load_ent_name_by_key(entity, config, xml_id, name_tag, NSMAP)
 
@@ -80,47 +78,46 @@ def update_index_entry(entity, xml_id):
         name = xml_id
 
     # Append updated entry
-    index_data.append({"xml_id": xml_id, "name": name})
+    new_index_data.append({"xml_id": xml_id, "name": name})
 
     # Sort by name
-    index_data.sort(key=lambda x: x["name"].lower())
+    new_index_data.sort(key=lambda x: x["name"].lower())
 
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, ensure_ascii=False, indent=2)
+    write_hjson(new_index_data, index_path)
 
 
 def delete_index_entry(entity, xml_id):
     """Remove an entry from the JSON index for a single entity."""
-    path = get_index_file(entity)
-    if not os.path.exists(path):
+    index_path = get_index_file(entity)
+    if not os.path.exists(index_path):
         return
 
-    with open(path, encoding="utf-8") as f:
-        index_data = json.load(f)
+    with open(index_path, encoding="utf-8") as f:
+        index_data = hjson.load(f)
 
     # Remove the entry with matching xml_id
-    index_data = [entry for entry in index_data if entry["xml_id"] != xml_id]
+    new_index_data = [entry for entry in index_data if entry["xml_id"] != xml_id]
 
-    # Save back to JSON
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, ensure_ascii=False, indent=2)
+    if len(new_index_data) == len(index_data):
+        return
+
+    write_hjson(new_index_data, index_path)
 
 
 def update_connection_index(entity, linked_id, xml_id, entity_type, entity_text):
 
     entity_ind_name = f"{entity}_connections"
 
-    path = get_index_file(entity_ind_name)
+    index_path = get_index_file(entity_ind_name)
 
     index_data = {}
-    if os.path.exists(path):
-        with open(path, encoding="utf-8") as f:
-            index_data = json.load(f)
+    if os.path.exists(index_path):
+        with open(index_path, encoding="utf-8") as f:
+            index_data = hjson.load(f)
 
     index_data.setdefault(linked_id, []).append([xml_id, entity_type, entity_text])
 
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, ensure_ascii=False, indent=2)
+    write_hjson(index_data, index_path)
 
 
 def update_connection_files(entity, key):
@@ -134,10 +131,10 @@ def update_connection_files(entity, key):
         return
 
     with open(index_path, encoding="utf-8") as f:
-        index_data = json.load(f)
+        index_data = hjson.load(f)
 
     with open(connections_path, encoding="utf-8") as f:
-        connections_data = json.load(f)
+        connections_data = hjson.load(f)
 
     index_name = next((item["name"] for item in index_data if item["xml_id"] == key), None)
 
@@ -195,8 +192,7 @@ def update_connection_files(entity, key):
 
     connections_data[key] = updated_connections
 
-    with open(connections_path, "w", encoding="utf-8") as f:
-        json.dump(connections_data, f, indent=2, ensure_ascii=False)
+    write_hjson(connections_data, connections_path)
 
 
 def delete_connection_entry(xml_id, form_data):
@@ -213,7 +209,7 @@ def delete_connection_entry(xml_id, form_data):
         return
 
     with open(path, encoding="utf-8") as f:
-        index_data = json.load(f)
+        index_data = hjson.load(f)
 
     if key in index_data and isinstance(index_data[key], list):
         for i, item in enumerate(index_data[key]):
@@ -221,8 +217,7 @@ def delete_connection_entry(xml_id, form_data):
                 del index_data[key][i]
                 break
 
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, ensure_ascii=False, indent=2)
+    write_hjson(index_data, path)
 
 
 def related_add(relationship, key, person_a_key, person_a_text, reverse_type, config, person_a_from=None, person_a_to=None):    
@@ -302,6 +297,7 @@ def related_delete(entity_a_key, entity, form_data, config):
         if trait.get("type") == reverse_type and trait.get("key") == entity_a_key:
             entity.remove(trait)
             removed = True
+            break
 
     if removed:
         write_entity_to_file(context)
@@ -310,7 +306,7 @@ def related_delete(entity_a_key, entity, form_data, config):
         if not os.path.exists(path):
             return
         with open(path, encoding="utf-8") as f:
-            index_data = json.load(f)
+            index_data = hjson.load(f)
 
         for i, item in enumerate(index_data.get(key, [])):
             if item[0] == entity_a_key:
@@ -322,23 +318,12 @@ def related_delete(entity_a_key, entity, form_data, config):
                 del index_data[entity_a_key][i]
                 break
 
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(index_data, f, ensure_ascii=False, indent=2)
+        write_hjson(index_data, path)
 
     return {"ok": removed}
 
 
 def remove_connection_index(entity, key, xml_id, target_type):
-    """
-    Remove a connection entry from the index for a given key + xml_id.
-
-    Args:
-        entity (str): e.g. "place"
-        key (str): entity key
-        xml_id (str): current record id
-        target_type (str): e.g. "work"
-    """
-
     entity_ind_name = f"{entity}_connections"
     path = get_index_file(entity_ind_name)
 
@@ -346,20 +331,7 @@ def remove_connection_index(entity, key, xml_id, target_type):
         return
 
     with open(path, encoding="utf-8") as f:
-        index_data = json.load(f)
-
-    if key not in index_data:
-        return
-
-def remove_connection_index(entity, key, xml_id, target_type):
-    entity_ind_name = f"{entity}_connections"
-    path = get_index_file(entity_ind_name)
-
-    if not os.path.exists(path):
-        return
-
-    with open(path, encoding="utf-8") as f:
-        index_data = json.load(f)
+        index_data = hjson.load(f)
 
     if key not in index_data:
         return
@@ -374,8 +346,8 @@ def remove_connection_index(entity, key, xml_id, target_type):
     if not index_data[key]:
         del index_data[key]
 
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, ensure_ascii=False, indent=2)
+    write_hjson(index_data, path)
+
 
 def remove_all_connections_from_index(entity, xml_id):
     """
@@ -393,7 +365,7 @@ def remove_all_connections_from_index(entity, xml_id):
         return
 
     with open(path, encoding="utf-8") as f:
-        index_data = json.load(f)
+        index_data = hjson.load(f)
 
 
     changed = False
@@ -408,7 +380,7 @@ def remove_all_connections_from_index(entity, xml_id):
                 del index_data[key]
 
     if changed:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(index_data, f, ensure_ascii=False, indent=2)
+        write_hjson(index_data, path)
+
 
 
