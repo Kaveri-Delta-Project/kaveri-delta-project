@@ -802,7 +802,7 @@ def render_page(title, body_html):
         "</head>",
         "<body>",
         "<div class='sticky-top bg-white border-bottom'>",
-        "<div class='index-header d-flex justify-content-between align-items-center'>",
+        "<div class='index-header d-flex flex-column flex-md-row justify-content-between align-items-md-center'>",
         f"  <h1>{title}</h1>",
         *render_search(),
         "</div>",
