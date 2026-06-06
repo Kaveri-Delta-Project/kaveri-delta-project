@@ -151,6 +151,13 @@ button[type="submit"] {
   margin-left: 0.5rem! important;
 }
 
+@media (max-width: 395px) {
+    .search-clear-btn {
+        margin-top: 6px;
+        margin-left: 0px !important;
+    }
+}
+
 /* ----------------------------
    Index Entries
 ---------------------------- */
