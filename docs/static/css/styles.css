@@ -1,17 +1,11 @@
 /* -----------------------------
    Body & Fonts
 ----------------------------- */
-/* Ensure full-height layout */
-html, body {
-    height: 100%;
-}
 
 body {
     font-family: "Georgia", serif;
     background-color: #f0f0f0;
-    color: #222222;
-    min-height: 100vh;
-    min-height: 100dvh;              
+    color: #222222;        
 }
 
 /* Ensure sticky footer works */
