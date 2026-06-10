@@ -1,4 +1,5 @@
 import os
+import hjson
 import json
 import re
 import string
@@ -55,7 +56,7 @@ def index():
     Render the homepage overview of all entity types.
 
     For each entity defined in ENTITY_CONFIG, load its index data
-    (a list of records from JSON) and pass the aggregated results
+    (a list of records from HJSON) and pass the aggregated results
     to the template for display.
 
     Returns:
@@ -73,7 +74,7 @@ def entity_index(entity):
     """
     Render the index page for a specific entity type.
 
-    Loads the entity's index data from JSON, optionally filters results
+    Loads the entity's index data from HJSON, optionally filters results
     using a normalized search query, and groups items alphabetically
     for display.
 
@@ -90,14 +91,14 @@ def entity_index(entity):
     query = request.args.get("q", "").strip().lower()
     norm_query = normalize_for_sort(query)
 
-    #resolve path to JSON index file for entity
+    #resolve path to HJSON index file for entity
     path = get_index_file(entity)
     
     #load index items into list 
     items = []
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
-            items = json.load(f)
+            items = hjson.load(f)
 
 
     #apply filtering only if a query exists
@@ -125,14 +126,14 @@ def api_entity_search(entity):
     """
     API endpoint for searching entities of a given type.
 
-    This endpoint loads a prebuilt JSON index file for the specified entity
+    This endpoint loads a prebuilt HJSON index file for the specified entity
     and returns a filtered list of items matching the query string.
 
     Query Parameters:
         q (str): Search term used for prefix matching against entity names
 
     Returns:
-        JSON list of matching items, each typically containing:
+        HJSON list of matching items, each typically containing:
             - name (str)
             - xml_id (str or int)
     """    
@@ -143,14 +144,14 @@ def api_entity_search(entity):
     query = request.args.get("q", "").strip().lower()
     norm_query = normalize_for_sort(query)
     
-    #resolve path to JSON index file for entity
+    #resolve path to HJSON index file for entity
     path = get_index_file(entity)    
     
     #load index items into list 
     items = []
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
-            items = json.load(f)
+            items = hjson.load(f)
 
     #if search query exists, filter items using prefix matching
     #only items whose normalized name starts with the normalized query are kept

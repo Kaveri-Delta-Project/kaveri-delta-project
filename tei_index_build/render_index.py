@@ -31,7 +31,7 @@ def render_search():
         "  <form id='index-search-form' class='d-flex mt-3 mt-md-0 index-search-form' onsubmit='return false;'>",
         "    <div class='input-group input-group-sm search-group'>",
         "      <input type='text' id='index-search' class='search-input form-control' placeholder='Search by name, diacritics ignored..' autocomplete='off'>",
-        "      <button type='button' id='search-clear' class='btn btn-secondary search-button'>Clear</button>",
+        "      <button type='button' id='search-clear' class='btn btn-secondary search-button search-clear-btn'>Clear</button>",
         "    </div>",
         "  </form>"
     ]
@@ -795,13 +795,14 @@ def render_page(title, body_html):
         "<html>",
         "<head>",
         "  <meta charset='UTF-8'>",
+        "  <meta name='viewport' content='width=device-width, initial-scale=1'>"
         f"  <title>{title}</title>",
         "  <link rel='stylesheet' href='../static/css/index.css'>",
         "   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65' crossorigin='anonymous'>",
         "</head>",
         "<body>",
         "<div class='sticky-top bg-white border-bottom'>",
-        "<div class='index-header d-flex justify-content-between align-items-center'>",
+        "<div class='index-header d-flex flex-column flex-md-row justify-content-between align-items-md-center'>",
         f"  <h1>{title}</h1>",
         *render_search(),
         "</div>",

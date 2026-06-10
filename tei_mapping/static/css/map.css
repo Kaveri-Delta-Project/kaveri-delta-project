@@ -101,3 +101,9 @@
 .legend-item-text {
     margin-left: 7px;
 }
+
+@media (max-width: 768px) {
+    .leaflet-popup-content {
+        max-width: 80vw;   /* responsive width */
+    }
+}
