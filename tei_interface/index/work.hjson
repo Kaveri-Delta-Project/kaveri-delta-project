@@ -20,6 +20,10 @@
     name: Avaidikadarśanasaṃgraha
   }
   {
+    xml_id: w_95
+    name: Bhagavannāmabhūṣaṇa
+  }
+  {
     xml_id: w_86
     name: Bhaktaikalpalatikā
   }
@@ -90,6 +94,10 @@
   {
     xml_id: w_6
     name: Kaliviḍambana
+  }
+  {
+    xml_id: w_98
+    name: Kulīrāṣṭaka
   }
   {
     xml_id: w_11
@@ -208,6 +216,10 @@
     name: Siddhāntasāra
   }
   {
+    xml_id: w_96
+    name: Stutipaddhati
+  }
+  {
     xml_id: w_5
     name: Subhadrāpariṇaya
   }
@@ -244,12 +256,20 @@
     name: Viśvagarbhastava
   }
   {
+    xml_id: w_99
+    name: Vyāsatātparyanirṇaya
+  }
+  {
     xml_id: w_54
     name: Ācāryastavarājabhūṣaṇa
   }
   {
     xml_id: w_78
     name: Ākhyāṣaṣṭi
+  }
+  {
+    xml_id: w_97
+    name: Ārtiharastuti
   }
   {
     xml_id: w_39
@@ -268,12 +288,24 @@
     name: Śabdārthasaṃgraha
   }
   {
+    xml_id: w_91
+    name: Śivabhaktalakṣaṇa
+  }
+  {
+    xml_id: w_92
+    name: Śivabhaktikalpalatikā
+  }
+  {
     xml_id: w_32
     name: Śivalīlārṇava
   }
   {
     xml_id: w_70
     name: Śivatattvaratnakalikā
+  }
+  {
+    xml_id: w_94
+    name: Śivākhyāśataka
   }
   {
     xml_id: w_75

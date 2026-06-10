@@ -349,11 +349,6 @@
       Śāhaji I (of Thanjavur)
     ]
     [
-      w_29
-      work
-      Śāhaji I (of Thanjavur)
-    ]
-    [
       p_10
       person
       Śāhaji I (of Thanjavur)
@@ -380,6 +375,16 @@
     ]
     [
       w_36
+      work
+      Śāhaji I (of Thanjavur)
+    ]
+    [
+      w_43
+      work
+      Śāhaji I (of Thanjavur)
+    ]
+    [
+      w_29
       work
       Śāhaji I (of Thanjavur)
     ]
@@ -732,6 +737,51 @@
       work
       Śrīdhara Veṅkaṭeśa Ayyāvāḷ
     ]
+    [
+      w_99
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      w_98
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      w_97
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      w_96
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      w_95
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      w_94
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      w_92
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      w_91
+      work
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
+    [
+      p_38
+      person
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
   ]
   p_18:
   [
@@ -820,6 +870,11 @@
     ]
     [
       w_42
+      work
+      Nallādhvarin
+    ]
+    [
+      w_43
       work
       Nallādhvarin
     ]
@@ -1087,6 +1142,19 @@
       p_17
       person
       Śrīdhara Liṅgārya
+    ]
+  ]
+  p_38:
+  [
+    [
+      w_99
+      work
+      Ayyaṇṇa Dīkṣita
+    ]
+    [
+      p_17
+      person
+      Ayyaṇṇa Dīkṣita
     ]
   ]
 }
