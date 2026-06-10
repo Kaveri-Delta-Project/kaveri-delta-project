@@ -16,14 +16,9 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_82">
-          <title type="preferred">Dayāśataka</title>
-          <title type="variant">Śivadayāśataka</title>
+        <bibl xml:id="w_96">
+          <title type="preferred">Stutipaddhati</title>
           <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
-          <rs key="w_92" role="Mention">Śivabhaktikalpalatikā<note/>
-          </rs>
-          <note type="genre">Hymn</note>
-          <note type="general">A hymn to Śiva's Compassion. A translation of it can be found in V. Raghavan’s 'Prayers, Praises and Psalms' (pp. 304-305)</note>
         </bibl>
       </listBibl>
     </body>

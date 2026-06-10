@@ -16,14 +16,10 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_82">
-          <title type="preferred">Dayāśataka</title>
-          <title type="variant">Śivadayāśataka</title>
+        <bibl xml:id="w_98">
+          <title type="preferred">Kulīrāṣṭaka</title>
           <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
-          <rs key="w_92" role="Mention">Śivabhaktikalpalatikā<note/>
-          </rs>
-          <note type="genre">Hymn</note>
-          <note type="general">A hymn to Śiva's Compassion. A translation of it can be found in V. Raghavan’s 'Prayers, Praises and Psalms' (pp. 304-305)</note>
+          <note type="general">The tradition has it that with this hymn he 'brought rains at a time when they had failed, and the last verse of the hymn itself has a bearing on this incident' (intro to Raghavan's edition of the Śāhendravilāsa, p. 63).</note>
         </bibl>
       </listBibl>
     </body>

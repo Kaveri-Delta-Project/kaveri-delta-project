@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_38">
+          <persName type="preferred">Ayyaṇṇa Dīkṣita</persName>
+          <trait type="student" key="p_17">
+            <label>Śrīdhara Veṅkaṭeśa Ayyāvāḷ</label>
+          </trait>
+          <affiliation key="l_1" role="Resided">
+            <placeName>Thiruvisanallur</placeName>
+          </affiliation>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

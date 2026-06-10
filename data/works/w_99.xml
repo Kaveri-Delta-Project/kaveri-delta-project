@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_99">
+          <title type="preferred">Vyāsatātparyanirṇaya</title>
+          <editor key="p_38" role="aut">Ayyaṇṇa Dīkṣita</editor>
+          <persName key="p_17" role="mention" type="referenced">Śrīdhara Veṅkaṭeśa Ayyāvāḷ<note>He pays homage to Śrīdhara Veṅkaṭeśa in the second verse of that work.</note>
+          </persName>
+          <note type="genre">Treatise/Exposition (Philosophical, Theological, etc.)</note>
+          <note type="subject">Vedānta</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

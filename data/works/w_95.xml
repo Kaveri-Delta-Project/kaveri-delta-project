@@ -20,15 +20,11 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_29">
-          <title type="preferred">Śāhendravilāsa</title>
+        <bibl xml:id="w_95">
+          <title type="preferred">Bhagavannāmabhūṣaṇa</title>
           <editor key="p_17" role="aut">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</editor>
-          <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
-          <persName key="p_6" role="mention" type="referenced">Śāhaji I (of Thanjavur)<note/>
-          </persName>
-          <note type="genre">Hymn</note>
-          <note type="bibliographical">Raghavan - intro to Śāhendravilāsa</note>
-          <note type="general">Hymn of praise to Śāhaji I in eight sargas</note>
+          <note type="genre">Treatise/Exposition (Philosophical, Theological, etc.)</note>
+          <note type="subject">Nāmasiddhānta</note>
         </bibl>
       </listBibl>
     </body>
