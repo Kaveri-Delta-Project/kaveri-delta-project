@@ -1,5 +1,6 @@
 import string
 import html
+import re
 from config import ROLES
 from tei_helpers import normalize_for_sort
 
@@ -291,7 +292,8 @@ def render_person(person):
                     data_attrs_contents += f" ({esc(rel_from)}-{esc(rel_to)})"
 
                     
-            html.append(f"  <span>relationship: {esc(connection)} of</span>")
+            clean_connection = re.sub(r'\bof\b', '', connection).strip()
+            html.append(f"  <span>relationship: {esc(clean_connection)} of</span>")
             html.append(
                 f"  <a href='{esc(url)}' {data_attrs}>"
                 f"{esc(rel_name)} ({esc(key)}) {data_attrs_contents}</a>"
