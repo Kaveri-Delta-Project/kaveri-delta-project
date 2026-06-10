@@ -288,6 +288,16 @@
   },
   {
     "type": "person",
+    "id": "p_38",
+    "name": "Ayyaṇṇa Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_38",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
     "id": "p_4",
     "name": "Rāmabhadra Dīkṣita",
     "alt_names": [
@@ -346,7 +356,8 @@
     "id": "p_8",
     "name": "Bhāskararāyamakhin",
     "alt_names": [
-      "Bhāskararāya"
+      "Bhāskararāya",
+      "Bhāsurānandanātha"
     ],
     "url": "indexes/person_index.html#p_8",
     "places": [
@@ -793,7 +804,9 @@
     "url": "indexes/work_index.html#w_43",
     "places": [],
     "persons": [
-      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]",
+      "Nallādhvarin [p_19]",
+      "Śāhaji I (of Thanjavur) [p_6]"
     ],
     "resided_places": []
   },
@@ -1315,7 +1328,8 @@
       "Ākhyāṣaṣṭiśataka",
       "Śivākhyāstava",
       "Śivāvyākhyāśataka",
-      "Ākhyāstava"
+      "Ākhyāstava",
+      "Śivākhyāṣaṣṭi"
     ],
     "url": "indexes/work_index.html#w_78",
     "places": [],
@@ -1497,6 +1511,121 @@
     ],
     "persons": [
       "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_91",
+    "name": "Śivabhaktalakṣaṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_91",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_92",
+    "name": "Śivabhaktikalpalatikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_92",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_94",
+    "name": "Śivākhyāśataka",
+    "alt_names": [
+      "Śivākhyāsaptati",
+      "Śivākhyāstava"
+    ],
+    "url": "indexes/work_index.html#w_94",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_95",
+    "name": "Bhagavannāmabhūṣaṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_95",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_96",
+    "name": "Stutipaddhati",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_96",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_97",
+    "name": "Ārtiharastuti",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_97",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_98",
+    "name": "Kulīrāṣṭaka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_98",
+    "places": [],
+    "persons": [
+      "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_99",
+    "name": "Vyāsatātparyanirṇaya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_99",
+    "places": [],
+    "persons": [
+      "Ayyaṇṇa Dīkṣita [p_38]"
     ],
     "resided_places": [
       "Thiruvisanallur [l_1]"
