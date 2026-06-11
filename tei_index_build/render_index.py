@@ -809,6 +809,7 @@ def render_page(title, body_html):
         *render_search(),
         "</div>",
         *render_alphabet_nav(),
+        "  <div id='entry-count' class='px-2 py-2 results-num'></div>",
         "</div>",
         "  <main>",
         body_html,
