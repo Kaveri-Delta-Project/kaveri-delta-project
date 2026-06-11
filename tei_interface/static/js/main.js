@@ -41,6 +41,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const countEntityEntries = () => {
+  const rows = document.querySelectorAll(".entity-row");
+
+  let visible = 0;
+  const total = rows.length;
+
+  rows.forEach(row => {
+    const isVisible =
+      row.offsetParent !== null && // real visibility check
+      !row.classList.contains("d-none");
+
+    if (isVisible) visible++;
+  });
+
+  return { visible, total };
+};
+
+const updateEntityCount = () => {
+  const el = document.getElementById("entry-count");
+  if (!el) return;
+
+  const { visible, total } = countEntityEntries();
+
+  el.innerHTML = `<strong>${visible}</strong> of <strong>${total}</strong> entries`;
+};
 
 function toggleEntryForm(formId) {
   const el = document.getElementById(formId);
@@ -64,6 +89,7 @@ buttons.forEach(button => {
 
     if (activeLetter === 'all') {
       groups.forEach(group => group.style.display = '');
+      updateEntityCount();
       return;
     }
 
@@ -73,6 +99,7 @@ buttons.forEach(button => {
     if (target) {
       target.style.display = '';
     }
+    updateEntityCount();
   });
 });
 
@@ -134,6 +161,10 @@ function setupEntityLookup(entity, searchInputId, resultsId, hiddenInputId) {
   });
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateEntityCount();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const lookupInputs = document.querySelectorAll("[data-entity-lookup]");
@@ -281,8 +312,10 @@ document.addEventListener("DOMContentLoaded", () => {
           btn.click();
         }
       });
-
     }
+
+    updateEntityCount();
+
   });
 });
 
