@@ -1,3 +1,40 @@
+const countIndexEntries = () => {
+  const entries = document.querySelectorAll('.index-entry');
+
+  let count = 0;
+  let countTotal = 0;
+
+  entries.forEach(entry => {
+    countTotal++;
+
+    const letterEntry = entry.closest('.letter-entry');
+    if (!letterEntry) return;
+
+    const letterStyle = window.getComputedStyle(letterEntry);
+    const entryStyle = window.getComputedStyle(entry);
+
+    const letterVisible = letterStyle.display !== "none";
+    const entryVisible = entryStyle.display !== "none";
+
+    if (letterVisible && entryVisible) {
+      count++;
+    }
+  });
+
+  return { count, countTotal };
+};
+
+
+// Update the UI
+const updateIndexCount = () => {
+  const countEl = document.getElementById('entry-count');
+  if (!countEl) return;
+
+  const { count, countTotal } = countIndexEntries();
+
+  countEl.innerHTML = `<strong>${count}</strong> of <strong>${countTotal}</strong> entries`;
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.alphabet button');
   const entries = document.querySelectorAll('.letter-entry');
@@ -27,10 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset active groups
     const groups = document.querySelectorAll('.letter-group');
     groups.forEach(group => group.classList.remove('active'));
+
+    // Update the index count
+    updateIndexCount();
+
   };
 
   // Show all entries first
   showAllEntries();
+  // Update the index count
+  updateIndexCount();
 
   // --- Alphabet button clicks ---
   buttons.forEach(button => {
@@ -68,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
       entry.style.display = 'block';
       entry.classList.remove('open');
     });
+
+    // Update the index count
+    updateIndexCount();
 
     });
   });
@@ -107,6 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => target.classList.remove('hash-highlight'), 2500);
 
         history.replaceState(null, null, window.location.pathname + window.location.search);
+
+        // Update the index count
+        updateIndexCount();
 
       }, 50);
     }
@@ -174,6 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (rawQuery === "") {
       entries.forEach(entry => entry.style.display = "");
+    // Update the index count
+    updateIndexCount();
       return;
     }
 
@@ -187,6 +238,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const text = normalizeText(title.textContent);
       entry.style.display = regex.test(text) ? "" : "none";
     });
+
+    // Update the index count
+    updateIndexCount();
+
   };
 
   // Live filtering as the user types
@@ -212,7 +267,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Reset groups
       document.querySelectorAll('.letter-group').forEach(group => group.classList.remove('active'));
+
+      // Update the index count
+      updateIndexCount();
+
     });
   }
 });
+
 
