@@ -10,12 +10,12 @@
 
 {% block content %}
 <ul class="home-list">
-  {% for entity, items in all_entities.items() %}
+  {% for entity, info in all_entities.items() %}
     <li>
       <a href="{{ url_for('entity_index', entity=entity) }}" class="entity-link fw-semibold">
-        {{ entity|capitalize }}
+        {{ info.title | capitalize  }}
       </a>
-      <span class="entity-count">({{ items|length }})</span>
+      <span class="entity-count">({{ info.data | length }})</span>
     </li>
   {% endfor %}
 </ul>

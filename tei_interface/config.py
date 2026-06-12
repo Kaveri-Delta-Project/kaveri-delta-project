@@ -155,6 +155,7 @@ ISC_MAPPING = {
 ENTITY_CONFIG = {
     "person": {
         "dir": os.path.join(DATA_DIR, "persons"),
+        "title_ent": "people",
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_person.xml"),
         "mapping": PERSON_MAPPING,
         "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "bibl", "note", "name", "resp"],
@@ -166,6 +167,7 @@ ENTITY_CONFIG = {
     },
     "place": {
         "dir": os.path.join(DATA_DIR, "places"),
+        "title_ent": "place",
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_place.xml"),
         "mapping": PLACE_MAPPING,
         "child_order": ["place", "placeName", "desc", "idno", "bibl", "note", "name", "resp"],
@@ -178,6 +180,7 @@ ENTITY_CONFIG = {
     },
     "work": {
         "dir": os.path.join(DATA_DIR, "works"),
+        "title_ent": "work",
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_work.xml"),
         "mapping": WORK_MAPPING,
         "child_order": ["title", "idno", "date", "editor", "persName", "rs", "pubPlace", "note", "name", "resp"],
@@ -189,6 +192,7 @@ ENTITY_CONFIG = {
     },
     "inscription": {
         "dir": os.path.join(DATA_DIR, "inscriptions"),
+        "title_ent": "inscription",
         "template": os.path.join(TEI_TEMPLATES_DIR, "tei_inscription.xml"),
         "mapping": ISC_MAPPING,
         "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note", "lang", "origin", "provenance", "person", "name", "resp"],

@@ -33,6 +33,11 @@ SECTION_HANDLERS = {
     "inscription": inscription.SECTION_HANDLERS
 }
 
+title_ents = {
+    key: config["title_ent"]
+        for key, config in ENTITY_CONFIG.items()
+}
+
 app = Flask(__name__)
 
 #secret key for session + flash messages
@@ -65,7 +70,10 @@ def index():
     all_entities = {}
 
     for entity in ENTITY_CONFIG:
-        all_entities[entity] = load_index(entity)
+        all_entities[entity] = {
+            "data": load_index(entity),
+            "title": title_ents[entity]
+        }
 
     return render_template("index_overview.html", all_entities=all_entities)
 
@@ -118,8 +126,8 @@ def entity_index(entity):
     #group items alphabetically in dictionary format
     grouped = group_items_alphabetically(items)
 
-    #render template with entity, grouped results, and original query
-    return render_template("entity_index.html", entity=entity, grouped_items=grouped, query=query)
+    #render template with entity, title, grouped results, and original query
+    return render_template("entity_index.html", entity=entity, title=title_ents[entity], grouped_items=grouped, query=query)
 
 @app.route("/api/<entity>/search")
 def api_entity_search(entity):
