@@ -376,6 +376,160 @@
     ]
   },
   {
+    "type": "place",
+    "id": "l_1",
+    "name": "Thiruvisanallur",
+    "alt_names": [
+      "Tiruvicanallūr",
+      "Thiruvishaloor",
+      "Thiruvisanalluru",
+      "Tiruvisalur",
+      "Śāhajipuram",
+      "Śāhajimahārājapuram",
+      "Śāhajirājapuram"
+    ],
+    "url": "indexes/place_index.html#l_1"
+  },
+  {
+    "type": "place",
+    "id": "l_10",
+    "name": "Madurai",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_10"
+  },
+  {
+    "type": "place",
+    "id": "l_11",
+    "name": "Bhāskararāyapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_11"
+  },
+  {
+    "type": "place",
+    "id": "l_13",
+    "name": "Adaiyapulam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_13"
+  },
+  {
+    "type": "place",
+    "id": "l_14",
+    "name": "Sakkottai",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_14"
+  },
+  {
+    "type": "place",
+    "id": "l_15",
+    "name": "Svamimalai",
+    "alt_names": [
+      "Svamigiri"
+    ],
+    "url": "indexes/place_index.html#l_15"
+  },
+  {
+    "type": "place",
+    "id": "l_17",
+    "name": "Thiruvalangadu",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_17"
+  },
+  {
+    "type": "place",
+    "id": "l_18",
+    "name": "Govindapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_18"
+  },
+  {
+    "type": "place",
+    "id": "l_19",
+    "name": "Sri Bodhendra Mutt",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_19"
+  },
+  {
+    "type": "place",
+    "id": "l_2",
+    "name": "Thanjavur",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_2"
+  },
+  {
+    "type": "place",
+    "id": "l_20",
+    "name": "Srirangam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_20"
+  },
+  {
+    "type": "place",
+    "id": "l_21",
+    "name": "Marudanallur",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_21"
+  },
+  {
+    "type": "place",
+    "id": "l_23",
+    "name": "Thayumanaswami Temple",
+    "alt_names": [
+      "Thayumanavar Temple"
+    ],
+    "url": "indexes/place_index.html#l_23"
+  },
+  {
+    "type": "place",
+    "id": "l_3",
+    "name": "Kumbakonam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_3"
+  },
+  {
+    "type": "place",
+    "id": "l_4",
+    "name": "Kandaramanikkam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_4"
+  },
+  {
+    "type": "place",
+    "id": "l_5",
+    "name": "Mannargudi",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_5"
+  },
+  {
+    "type": "place",
+    "id": "l_6",
+    "name": "Thiruvidaimarudur",
+    "alt_names": [
+      "Madhyarjuna"
+    ],
+    "url": "indexes/place_index.html#l_6"
+  },
+  {
+    "type": "place",
+    "id": "l_7",
+    "name": "Mahalingeswarar Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_7"
+  },
+  {
+    "type": "place",
+    "id": "l_8",
+    "name": "Thiruvaiyaru",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_8"
+  },
+  {
+    "type": "place",
+    "id": "l_9",
+    "name": "Thiruvavaduthurai Adhinam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_9"
+  },
+  {
     "type": "work",
     "id": "w_1",
     "name": "Nīlakaṇṭhavijayacampū",
@@ -1630,159 +1784,5 @@
     "resided_places": [
       "Thiruvisanallur [l_1]"
     ]
-  },
-  {
-    "type": "place",
-    "id": "l_1",
-    "name": "Thiruvisanallur",
-    "alt_names": [
-      "Tiruvicanallūr",
-      "Thiruvishaloor",
-      "Thiruvisanalluru",
-      "Tiruvisalur",
-      "Śāhajipuram",
-      "Śāhajimahārājapuram",
-      "Śāhajirājapuram"
-    ],
-    "url": "indexes/place_index.html#l_1"
-  },
-  {
-    "type": "place",
-    "id": "l_10",
-    "name": "Madurai",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_10"
-  },
-  {
-    "type": "place",
-    "id": "l_11",
-    "name": "Bhāskararāyapuram",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_11"
-  },
-  {
-    "type": "place",
-    "id": "l_13",
-    "name": "Adaiyapulam",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_13"
-  },
-  {
-    "type": "place",
-    "id": "l_14",
-    "name": "Sakkottai",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_14"
-  },
-  {
-    "type": "place",
-    "id": "l_15",
-    "name": "Svamimalai",
-    "alt_names": [
-      "Svamigiri"
-    ],
-    "url": "indexes/place_index.html#l_15"
-  },
-  {
-    "type": "place",
-    "id": "l_17",
-    "name": "Thiruvalangadu",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_17"
-  },
-  {
-    "type": "place",
-    "id": "l_18",
-    "name": "Govindapuram",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_18"
-  },
-  {
-    "type": "place",
-    "id": "l_19",
-    "name": "Sri Bodhendra Mutt",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_19"
-  },
-  {
-    "type": "place",
-    "id": "l_2",
-    "name": "Thanjavur",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_2"
-  },
-  {
-    "type": "place",
-    "id": "l_20",
-    "name": "Srirangam",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_20"
-  },
-  {
-    "type": "place",
-    "id": "l_21",
-    "name": "Marudanallur",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_21"
-  },
-  {
-    "type": "place",
-    "id": "l_23",
-    "name": "Thayumanaswami Temple",
-    "alt_names": [
-      "Thayumanavar Temple"
-    ],
-    "url": "indexes/place_index.html#l_23"
-  },
-  {
-    "type": "place",
-    "id": "l_3",
-    "name": "Kumbakonam",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_3"
-  },
-  {
-    "type": "place",
-    "id": "l_4",
-    "name": "Kandaramanikkam",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_4"
-  },
-  {
-    "type": "place",
-    "id": "l_5",
-    "name": "Mannargudi",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_5"
-  },
-  {
-    "type": "place",
-    "id": "l_6",
-    "name": "Thiruvidaimarudur",
-    "alt_names": [
-      "Madhyarjuna"
-    ],
-    "url": "indexes/place_index.html#l_6"
-  },
-  {
-    "type": "place",
-    "id": "l_7",
-    "name": "Mahalingeswarar Temple",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_7"
-  },
-  {
-    "type": "place",
-    "id": "l_8",
-    "name": "Thiruvaiyaru",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_8"
-  },
-  {
-    "type": "place",
-    "id": "l_9",
-    "name": "Thiruvavaduthurai Adhinam",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_9"
   }
 ]
