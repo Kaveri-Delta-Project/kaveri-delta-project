@@ -16,20 +16,20 @@ from tei_helpers import (
 
 from config import (
     BASE_DIR,
-    ISC_DIR,
-    PERSONS_DIR,
-    WORKS_DIR,
-    PLACES_DIR,
-    BUILD_DIR
+    BUILD_DIR,
+    ENTITY_CONFIG
     )
 
 
 file_directories = {
-    "inscription": ISC_DIR,
-    "person": PERSONS_DIR,
-    "work": WORKS_DIR,
-    "place": PLACES_DIR    
-    }
+    key: config["dir"]
+    for key, config in ENTITY_CONFIG.items()
+}
+
+title_ents = {
+    key: config["title_ent"]
+        for key, config in ENTITY_CONFIG.items()
+}
 
 entities_cache = {}
 all_entities = {}
@@ -71,7 +71,7 @@ for entity_tag, entity_data in all_entities.items():
 
     body_html = render_index_sections(ent_data_alpha, entity_tag)
 
-    index_title = (f"{entity_tag} Index").title()
+    index_title = (f"{title_ents[entity_tag]} Index").title()
     index_html = render_page(index_title, body_html)
 
     output_path = os.path.join(BUILD_DIR, f"{entity_tag}_index.html")

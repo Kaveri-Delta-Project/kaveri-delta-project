@@ -2,10 +2,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "data"))
-ISC_DIR = os.path.join(DATA_DIR, "inscriptions")
-PERSONS_DIR = os.path.join(DATA_DIR, "persons")
-WORKS_DIR = os.path.join(DATA_DIR, "works")
-PLACES_DIR = os.path.join(DATA_DIR, "places")
 BUILD_DIR = os.path.join(BASE_DIR, "build")
 
 NS_TEI = "http://www.tei-c.org/ns/1.0"
@@ -145,6 +141,7 @@ ROLES = {
 ENTITY_CONFIG = {
     "person": {
         "dir": os.path.join(DATA_DIR, "persons"),
+        "title_ent": "people",
         "mapping": PERSON_MAPPING,
         "child_order": ["person", "persName", "trait", "idno", "birth", "death", "floruit", "affiliation", "bibl", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1},
@@ -155,6 +152,7 @@ ENTITY_CONFIG = {
     },
     "place": {
         "dir": os.path.join(DATA_DIR, "places"),
+        "title_ent": "place",
         "mapping": PLACE_MAPPING,
         "child_order": ["place", "placeName", "desc", "idno", "bibl", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "coordinates": 0, "general": 1},
@@ -166,6 +164,7 @@ ENTITY_CONFIG = {
     },
     "work": {
         "dir": os.path.join(DATA_DIR, "works"),
+        "title_ent": "work",
         "mapping": WORK_MAPPING,
         "child_order": ["title", "idno", "date", "editor", "pubPlace", "note", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "genre": 0, "subject": 1, "bibliographical": 2, "general": 3},
@@ -177,6 +176,7 @@ ENTITY_CONFIG = {
     },
         "inscription": {
         "dir": os.path.join(DATA_DIR, "inscriptions"),
+        "title_ent": "inscription",
         "mapping": ISC_MAPPING,
         "child_order": ["msName", "orgName", "material", "origDate", "origPlace", "note", "lang", "origin", "provenance", "person", "name", "resp"],
         "attribute_priority": {"preferred": 0, "variant": 1, "bibliographical": 0, "general": 1, "donor": 0, "associated": 1},
