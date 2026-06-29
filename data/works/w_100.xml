@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_100">
+          <title type="preferred">Siddhāntacandrikāvyākhyā Udgāraḥ</title>
+          <editor key="p_39" role="aut">Gaṅgādhara Sarasvatī</editor>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
