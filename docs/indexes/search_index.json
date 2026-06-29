@@ -298,6 +298,16 @@
   },
   {
     "type": "person",
+    "id": "p_39",
+    "name": "Gaṅgādhara Sarasvatī",
+    "alt_names": [
+      "Gaṅgādharendra Sarasvatī"
+    ],
+    "url": "indexes/person_index.html#p_39",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_4",
     "name": "Rāmabhadra Dīkṣita",
     "alt_names": [
@@ -538,6 +548,18 @@
     "places": [],
     "persons": [
       "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_100",
+    "name": "Siddhāntacandrikāvyākhyā Udgāraḥ",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_100",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
     ],
     "resided_places": []
   },
