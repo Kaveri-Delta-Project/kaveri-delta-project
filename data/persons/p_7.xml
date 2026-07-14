@@ -4,6 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -19,6 +27,7 @@
         <person xml:id="p_7">
           <persName type="preferred">Gaṅgādharavājapeyin</persName>
           <persName type="variant">Gaṅgādharamakhin</persName>
+          <persName type="variant">Gaṅgādhara Vājabeyi</persName>
           <trait type="associate" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
@@ -29,6 +38,8 @@
           <affiliation key="l_17" role="Born">
             <placeName>Thiruvalangadu</placeName>
           </affiliation>
+          <note>He acquired the title vājapeyi due to the performance of the vājapeya yajña. (See Krishnamurthy, R. The Saints of the Cauvery Delta, pg. 30)</note>
+          <note>He was a native of Thiruvalangadu near Madras, and was brought over to Tiruvalangadu in the Thanjavur district by Tikambararāya, minister of King Śāhaji, at the instance of the king. (See Krishnamurthy, R. The Saints of the Cauvery Delta, pg. 30)</note>
         </person>
       </listPerson>
     </body>
