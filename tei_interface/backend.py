@@ -4,7 +4,7 @@ import json
 import re
 import string
 from flask import Flask, request, render_template, redirect, url_for, flash, jsonify
-from config import ENTITY_CONFIG, NSMAP, NS_XML, KEYS_TO_LOWERCASE
+from config import ENTITY_CONFIG, TEMPLATE_CONFIG, NSMAP, NS_XML, KEYS_TO_LOWERCASE
 from utils import (load_entity, 
             load_or_create_entity, 
             handle_deletions, 
@@ -45,6 +45,12 @@ app.config["SECRET_KEY"] = "b7f8e1c9d3a142f59e6a8b2c4d1f7a6e"
 #make Python's zip() available in Jinja templates
 app.jinja_env.globals.update(zip=zip)
 
+
+@app.context_processor
+def inject_template_config():
+    return {
+        "template_config": TEMPLATE_CONFIG
+    }
 
 @app.route("/<entity>/refresh", methods=["POST"])
 def refresh_entity_index(entity):

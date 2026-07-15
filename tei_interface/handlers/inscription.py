@@ -709,6 +709,8 @@ def handle_location(inscription, context, form_data):
 @section_handler("reference")
 def handle_reference(inscription, context, form_data): 
     reference = form_data.get("reference")
+    ref_vol = form_data.get("volume")
+    ref_page = form_data.get("page")
     edit_index = form_data.get("edit_index")
 
     if not reference:
@@ -716,6 +718,14 @@ def handle_reference(inscription, context, form_data):
         return {"ok": False}
 
     msorigin_el = context["root"].find(".//tei:origin", namespaces=NSMAP)
+
+    element_attrs = {"type": "bibliographical"}
+
+    if ref_vol:
+        element_attrs.update({"subtype": ref_vol})
+
+    if ref_page:
+        element_attrs.update({"n": ref_page})
 
     if edit_index not in (None, "", "None"):
         try:
@@ -730,6 +740,7 @@ def handle_reference(inscription, context, form_data):
             text=reference,
             ns=NS_TEI,
             match_attrs={"type": "bibliographical"},
+            update_attrs=element_attrs,
             index=index
         )
 
@@ -745,7 +756,7 @@ def handle_reference(inscription, context, form_data):
             nsmap=NSMAP,
             ns=NS_TEI,
             text=reference,
-            attrs={"type": "bibliographical"},
+            attrs=element_attrs,
             allow_multiple=True
         )
 

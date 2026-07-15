@@ -326,11 +326,21 @@ def handle_coordinates(place, context, form_data):
 @section_handler("reference")
 def handle_reference(place, context, form_data):
     reference = form_data.get("reference")
+    ref_vol = form_data.get("volume")
+    ref_page = form_data.get("page")
     edit_index = form_data.get("edit_index")
 
     if not reference:
         flash("Reference cannot be empty.", "reference-error")
         return {"ok": False}
+
+    element_attrs = {}
+
+    if ref_vol:
+        element_attrs.update({"subtype": ref_vol})
+
+    if ref_page:
+        element_attrs.update({"n": ref_page})
 
     if edit_index not in (None, "", "None"):
         try:
@@ -344,6 +354,7 @@ def handle_reference(place, context, form_data):
             tag="bibl",
             text=reference,
             ns=NS_TEI,
+            update_attrs=element_attrs,
             index=index
         )
 
@@ -359,6 +370,7 @@ def handle_reference(place, context, form_data):
             nsmap=NSMAP,
             ns=NS_TEI,
             text=reference,
+            attrs=element_attrs,
             allow_multiple=True
         )
 

@@ -727,7 +727,23 @@
 
   {% for val in data.reference %}
     <div class="border rounded p-2 mb-2">
-      <span class="fw-semibold">{{ val }}</span>
+
+      <span class="fw-semibold">{{ val.parent_text|safe}}</span>
+
+      {% if val.subtype and val.n %}
+
+        <span class="text-muted">(Volume {{ val.subtype }}, Page(s) {{ val.n }})</span>
+
+      {% elif val.subtype %}
+
+        <span class="text-muted">(Volume {{ val.subtype }})</span>
+
+      {% elif val.n %}
+
+        <span class="text-muted">(Page(s) {{ val.n }})</span>
+      
+      {% endif %}
+
         {{  ui.delete_button(
         section="note",
         index=loop.index0,
@@ -735,8 +751,16 @@
       ) }}
 
       <button type="button"
-              class="btn btn-sm btn-outline-secondary ms-2"
-              onclick='editItem("reference", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("reference-form");'>
+        class="btn btn-sm btn-outline-secondary ms-2"
+        onclick='editItem(
+            "reference",
+            {{ loop.index0 }},
+            {{ {
+                "reference": val.parent_text,                
+                "volume": val.subtype or "",
+                "page": val.n or "",
+            }|tojson }}
+        ); showEntryForm("reference-form");'>
         ✎ Edit
       </button>
 
@@ -754,14 +778,34 @@
 
       <div class="editable-fields">
         <div class="mb-3">
-          {{ ui.input_field(
-              id="reference",
-              name="reference",
-              label="Bibliographical Reference",
-              extra_attrs="required",
-              help_text="Enter any bibliographical reference here"
+          {{ ui.select_field("reference",
+              template_config.bibliographical_references,
+              required=True
           ) }}
         </div>
+
+        <div class="row">
+          <div class="col">
+            {{ ui.input_field(
+                id="volume",
+                name="volume",
+                label="Volume",
+                label_option="(optional)",
+                help_text="Enter reference volume number here"
+            ) }}
+          </div>
+
+          <div class="col">
+            {{ ui.input_field(
+                id="page",
+                name="page",
+                label="Page Number",
+                label_option="(optional)",
+                help_text="Enter reference page number here"
+            ) }}
+          </div>
+        </div>
+      
       </div>  
 
       {{ ui.form_actions("resetEditForm('reference'); toggleEntryForm('reference-form');") }}   
