@@ -29,7 +29,12 @@ PERSON_MAPPING = {
     "floruit_from": {"element": "floruit", "element_attr": "from", "all_results": True},
     "floruit_to": {"element": "floruit", "element_attr": "to", "all_results": True},
     "affiliations": {"parent_tag": "affiliation", "attributes": ["from", "to", "key", "role"], "child_elements": ["placeName"]},
-    "reference": {"element": "bibl", "all_results": True},
+    "reference" : {
+        "parent_tag": "bibl",  
+        "attributes": ["subtype", "n"],
+        "extract_parent_text": True, 
+        "all_results": True
+        }, 
     "notes": {"element": "note", "all_results": True},
     "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
@@ -42,7 +47,12 @@ PLACE_MAPPING = {
     "idno_value": {"element": "idno", "all_results": True},
     "idno_type": {"element": "idno", "element_attr": "type", "all_results": True},
     "coords": {"element": "note", "filter_attr": "type", "filter_value": "coordinates", "all_results": True},
-    "reference": {"element": "bibl", "all_results": True},
+    "reference" : {
+        "parent_tag": "bibl",  
+        "attributes": ["subtype", "n"],
+        "extract_parent_text": True, 
+        "all_results": True
+        },
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True}
 }
 
@@ -71,7 +81,14 @@ WORK_MAPPING = {
         "all_results": True
         },    
     "subject": {"element": "note", "filter_attr": "type", "filter_value": "subject", "all_results": True},
-    "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
+    "reference" : {
+        "parent_tag": "note", 
+        "filter_attr": "type", 
+        "filter_value": "bibliographical", 
+        "attributes": ["type", "subtype", "n"],
+        "extract_parent_text": True, 
+        "all_results": True
+        },
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
     "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
@@ -105,7 +122,14 @@ ISC_MAPPING = {
     "material": {"element": "material", "all_results": True},
     "location": {"element": "origPlace", "all_results": True},
     "location_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
-    "reference": {"element": "note", "filter_attr": "type", "filter_value": "bibliographical", "all_results": True},
+    "reference" : {
+        "parent_tag": "note", 
+        "filter_attr": "type", 
+        "filter_value": "bibliographical", 
+        "attributes": ["type", "subtype", "n"],
+        "extract_parent_text": True, 
+        "all_results": True
+        },
     "notes": {"element": "note", "filter_attr": "type", "filter_value": "general", "all_results": True},
     "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
@@ -186,3 +210,18 @@ ENTITY_CONFIG = {
         "prefix": "isc"
     }
 }
+
+TEMPLATE_CONFIG = {
+    "bibliographical_references": {
+        "Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.": "Duquette, Jonathan. <i>Debates in the Delta: An Intellectual History of Late Advaita</i>. Brill, forthcoming.",
+        "Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.": "Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.",
+        "Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.": "Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.",
+        "Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.": "Thiruvengadathan, A. <i>Rāmabhadra Dīkṣita and His Works: A Study</i>. Chennai: The Kuppuswami Sastri Research Institute, 2002.",
+        "New Catalogus Catalogurum (NCC). Vols 1-36.": "New Catalogus Catalogurum (NCC). Vols 1-36.",
+        "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.": "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.",
+        "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.": "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.",
+        "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2": "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2",
+        "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.": "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13."
+    },
+}
+

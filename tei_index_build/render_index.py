@@ -1,8 +1,11 @@
 import string
 import html
 import re
-from config import ROLES
+from config import ROLES, TEMPLATE_CONFIG
 from tei_helpers import normalize_for_sort
+
+#bibliographical reference lookup, used for correct formatting
+REFS = TEMPLATE_CONFIG.get("bibliographical_references", {})
 
 #HTML rendering helpers
 
@@ -64,9 +67,10 @@ def render_list(items, css_class=None):
     items = sorted(items, key=normalize_for_sort)
 
     cls_attr = f' class="{esc(css_class)}"' if css_class else ''
+    
     html = []
     for item in items:
-        html.append(f"<div{cls_attr}>{esc(item)}</div>")
+        html.append(f"<div{cls_attr}>{item}</div>")
 
     return '\n'.join(html)
 
@@ -201,11 +205,42 @@ def render_place(place):
         html.append("</div>")
 
 
-    reference_html = render_list(place.get("reference"), "item-name")
-    if reference_html:
+    references = place.get("reference")
+    references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
+
+    if references:
         html.append("<div class='entry-block entry-reference'>")
-        html.append("<span class='subheading'>Reference</span>")
-        html.append(reference_html)
+        html.append("<span class='subheading'>References</span>")
+        for reference in references:
+            ref_raw = reference.get("parent_text")
+            ref_text = REFS.get(ref_raw, ref_raw)
+            ref_vol = reference.get("subtype")
+            ref_page = reference.get("n")
+
+            data_attrs = ""
+            data_attrs_contents = ""
+
+            if ref_vol and ref_page:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)}, Page(s) {esc(ref_page)})"
+
+            elif ref_vol:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)})"
+
+            elif ref_page:
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Page(s) {esc(ref_page)})"
+
+            if ref_vol or ref_page:
+                html.append(
+                    f"<span class='item-name' {data_attrs}>"
+                    f"{ref_text} {data_attrs_contents}</span>"
+                )
+            else:
+                html.append(f"<span class='item-name'>{ref_text}</span>")
+        
         html.append("</div>")
 
 
@@ -403,11 +438,42 @@ def render_person(person):
         html.append("</div>")
 
 
-    reference_html = render_list(person.get("reference"), "item-name")
-    if reference_html:
+    references = person.get("reference")
+    references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
+
+    if references:
         html.append("<div class='entry-block entry-reference'>")
-        html.append("<span class='subheading'>Reference</span>")
-        html.append(reference_html)
+        html.append("<span class='subheading'>References</span>")
+        for reference in references:
+            ref_raw = reference.get("parent_text")
+            ref_text = REFS.get(ref_raw, ref_raw)
+            ref_vol = reference.get("subtype")
+            ref_page = reference.get("n")
+
+            data_attrs = ""
+            data_attrs_contents = ""
+
+            if ref_vol and ref_page:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)}, Page(s) {esc(ref_page)})"
+
+            elif ref_vol:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)})"
+
+            elif ref_page:
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Page(s) {esc(ref_page)})"
+
+            if ref_vol or ref_page:
+                html.append(
+                    f"<span class='item-name' {data_attrs}>"
+                    f"{ref_text} {data_attrs_contents}</span>"
+                )
+            else:
+                html.append(f"<span class='item-name'>{ref_text}</span>")
+        
         html.append("</div>")
 
 
@@ -578,11 +644,42 @@ def render_work(work):
         html.append("</div>")
 
 
-    reference_html = render_list(work.get("reference"), "item-name")
-    if reference_html:
+    references = work.get("reference")
+    references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
+
+    if references:
         html.append("<div class='entry-block entry-reference'>")
-        html.append("<span class='subheading'>Reference</span>")
-        html.append(reference_html)
+        html.append("<span class='subheading'>References</span>")
+        for reference in references:
+            ref_raw = reference.get("parent_text")
+            ref_text = REFS.get(ref_raw, ref_raw)
+            ref_vol = reference.get("subtype")
+            ref_page = reference.get("n")
+
+            data_attrs = ""
+            data_attrs_contents = ""
+
+            if ref_vol and ref_page:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)}, Page(s) {esc(ref_page)})"
+
+            elif ref_vol:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)})"
+
+            elif ref_page:
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Page(s) {esc(ref_page)})"
+
+            if ref_vol or ref_page:
+                html.append(
+                    f"<span class='item-name' {data_attrs}>"
+                    f"{ref_text} {data_attrs_contents}</span>"
+                )
+            else:
+                html.append(f"<span class='item-name'>{ref_text}</span>")
+        
         html.append("</div>")
 
 
@@ -732,14 +829,43 @@ def render_inscription(inscription):
 
         html.append("</div>")
 
+    references = inscription.get("reference")
+    references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
 
-    reference_html = render_list(inscription.get("reference"), "item-name")
-    if reference_html:
+    if references:
         html.append("<div class='entry-block entry-reference'>")
-        html.append("<span class='subheading'>Reference</span>")
-        html.append(reference_html)
-        html.append("</div>")
+        html.append("<span class='subheading'>References</span>")
+        for reference in references:
+            ref_raw = reference.get("parent_text")
+            ref_text = REFS.get(ref_raw, ref_raw)
+            ref_vol = reference.get("subtype")
+            ref_page = reference.get("n")
 
+            data_attrs = ""
+            data_attrs_contents = ""
+
+            if ref_vol and ref_page:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)}, Page(s) {esc(ref_page)})"
+
+            elif ref_vol:
+                data_attrs += f" data-vol='{esc(ref_vol)}'"
+                data_attrs_contents += f" (Volume {esc(ref_vol)})"
+
+            elif ref_page:
+                data_attrs += f" data-page='{esc(ref_page)}'"
+                data_attrs_contents += f" (Page(s) {esc(ref_page)})"
+
+            if ref_vol or ref_page:
+                html.append(
+                    f"<span class='item-name' {data_attrs}>"
+                    f"{ref_text} {data_attrs_contents}</span>"
+                )
+            else:
+                html.append(f"<span class='item-name'>{ref_text}</span>")
+        
+        html.append("</div>")
 
     notes_html = render_list(inscription.get("notes"), "item-name")
     if notes_html:
