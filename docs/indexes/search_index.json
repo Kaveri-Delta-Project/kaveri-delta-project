@@ -73,7 +73,8 @@
       "Veṅkaṭeśa Śāstrin",
       "Ayyāvāḷ",
       "Śrīdharaveṅkateśa Śāstri",
-      "Śrīdhara Veṅkaṭeśvaraparameśapāda"
+      "Śrīdhara Veṅkaṭeśvaraparameśapāda",
+      "Veṅkaṭeśvaraśāstri"
     ],
     "url": "indexes/person_index.html#p_17",
     "places": [
@@ -599,7 +600,9 @@
     "type": "work",
     "id": "w_12",
     "name": "Rasikarañjanī",
-    "alt_names": [],
+    "alt_names": [
+      "Kuvalayānandavyākhyā"
+    ],
     "url": "indexes/work_index.html#w_12",
     "places": [],
     "persons": [
@@ -612,7 +615,9 @@
     "type": "work",
     "id": "w_13",
     "name": "Avaidikadarśanasaṃgraha",
-    "alt_names": [],
+    "alt_names": [
+      "Advaidikadarśanamatasaṅgraha"
+    ],
     "url": "indexes/work_index.html#w_13",
     "places": [],
     "persons": [
@@ -978,7 +983,7 @@
     "id": "w_42",
     "name": "Ṣaḍdarśanīsiddhāntasaṃgrahaḥ",
     "alt_names": [
-      "Ṣaḍdarśanasiddhāntasaṅgraha (NCC vol. 24, 188)",
+      "Ṣaḍdarśanasiddhāntasaṅgraha",
       "Ṣaḍdarśanīsiddhāntasaṁgraha"
     ],
     "url": "indexes/work_index.html#w_42",
@@ -1465,7 +1470,7 @@
     "id": "w_74",
     "name": "Kāntimatīpariṇaya",
     "alt_names": [
-      "Kāntimatī-Śāharājīya (Tanjore ms. 4339)"
+      "Kāntimatī-Śāharājīya"
     ],
     "url": "indexes/work_index.html#w_74",
     "places": [
