@@ -328,6 +328,16 @@
   },
   {
     "type": "person",
+    "id": "p_42",
+    "name": "Sarabhoji",
+    "alt_names": [
+      "Serfoji I"
+    ],
+    "url": "indexes/person_index.html#p_42",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_5",
     "name": "Tryambakarāyamakhin",
     "alt_names": [
@@ -488,6 +498,15 @@
       "Thayumanavar Temple"
     ],
     "url": "indexes/place_index.html#l_23"
+  },
+  {
+    "type": "place",
+    "id": "l_24",
+    "name": "Bṛhadīśvara temple",
+    "alt_names": [
+      "Rājarājeśvaram temple"
+    ],
+    "url": "indexes/place_index.html#l_24"
   },
   {
     "type": "place",
@@ -1322,11 +1341,12 @@
     "id": "w_64",
     "name": "Jīvānandananāṭaka",
     "alt_names": [
-      "Jīvānanda",
       "Jīvānandana"
     ],
     "url": "indexes/work_index.html#w_64",
-    "places": [],
+    "places": [
+      "Bṛhadīśvara temple [l_24]"
+    ],
     "persons": [
       "Vedakavīśvara [p_25]",
       "Ānandarāyamakhin [p_15]"
