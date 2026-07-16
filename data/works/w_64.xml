@@ -30,13 +30,13 @@
           </pubPlace>
           <note type="genre">Play</note>
           <note type="subject" source="other">Medical allegorical play </note>
-          <note type="bibliographical">Sastri pg. 181</note>
-          <note type="bibliographical">NCC vol. 31, 147</note>
-          <note type="bibliographical">NCC vol. 7, 297b–298a</note>
-          <note type="bibliographical">Printed in Kāyvamālā 27</note>
-          <note type="bibliographical">Raghavan, intro to Śāhendravilāsa pg. 29</note>
-          <note type="general">Written during the time of Śāhaji I (Raghavan, intro to Śāhendravilāsa pg. 29)</note>
+          <note type="bibliographical">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
+          <note type="bibliographical" n="181">Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.</note>
+          <note type="bibliographical" subtype="31" n="147">New Catalogus Catalogurum (NCC). Vols 1-36.</note>
+          <note type="bibliographical" subtype="7" n="297b–298a">New Catalogus Catalogurum (NCC). Vols 1-36.</note>
+          <note type="general">Written during the time of Śāhaji I. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 29.</note>
           <note type="general">Some scholars claim that Ānandarāyamakhin was the author of this work. See: Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. Journal of Oriental Research Madras III (1929): 68-73; Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill.</note>
+          <note type="general">Printed in Kāvyamālā 27</note>
         </bibl>
       </listBibl>
     </body>

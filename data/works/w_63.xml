@@ -25,8 +25,8 @@
           <title type="variant">Tūṇīrastava</title>
           <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
           <note type="genre">Hymn</note>
-          <note type="bibliographical">NCC vol. 24, 188</note>
           <note type="bibliographical">Oppert II, ms. 9153</note>
+          <note type="bibliographical" subtype="24" n="188">New Catalogus Catalogurum (NCC). Vols 1-36.</note>
         </bibl>
       </listBibl>
     </body>

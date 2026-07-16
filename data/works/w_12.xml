@@ -4,6 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -18,11 +26,13 @@
       <listBibl>
         <bibl xml:id="w_12">
           <title type="preferred">Rasikarañjanī</title>
+          <title type="variant">Kuvalayānandavyākhyā</title>
           <editor key="p_7" role="aut">Gaṅgādharavājapeyin</editor>
           <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
           <note type="genre" source="commentary" key="w_11">Kuvalayānanda</note>
           <note type="subject">Alaṃkāraśāstra</note>
-          <note type="bibliographical">See 'A Descriptive of the Sanskrit Manuscripts in the Tanjore Serfoji's Sarasvatī Mahāl Library', Vol. 9, Entries 5205, 5206</note>
+          <note type="bibliographical" subtype="9" n="4024–4028, entries 5205–5206">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
+          <note type="bibliographical" subtype="14" n="6412">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
           <note type="general">Śāhaji I requested Gaṅgādharavājapeyin, through his minister Tryambakarāyamakhin, to write this work (Raghavan, Intro to Śāhendra, p. 36).</note>
         </bibl>
       </listBibl>

@@ -24,7 +24,7 @@
           </pubPlace>
           <note type="genre">Play</note>
           <note type="subject">Vedānta</note>
-          <note type="bibliographical">NCC, vol. 7, p. 291b</note>
+          <note type="bibliographical" subtype="7" n="291b">New Catalogus Catalogurum (NCC). Vols 1-36.</note>
           <note type="general">Allegorical play on Advaita Vedānta</note>
         </bibl>
       </listBibl>

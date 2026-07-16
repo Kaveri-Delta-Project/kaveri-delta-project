@@ -22,17 +22,17 @@
       <listBibl>
         <bibl xml:id="w_74">
           <title type="preferred">Kāntimatīpariṇaya</title>
-          <title type="variant">Kāntimatī-Śāharājīya (Tanjore ms. 4339)</title>
+          <title type="variant">Kāntimatī-Śāharājīya</title>
           <editor key="p_32" role="aut">Cokkanāthamakhin (younger)</editor>
           <pubPlace key="l_1" role="Composition">
             <placeName>Thiruvisanallur</placeName>
           </pubPlace>
           <note type="genre">Play</note>
           <note type="subject" source="other">The marriage of King Śāhaji and Kāntimatī</note>
-          <note type="bibliographical">Tanjore mss. 4339–4341</note>
-          <note type="bibliographical">NCC vol. 7, pg 85a</note>
-          <note type="bibliographical">NCC vol. 3, pg. 341b</note>
-          <note type="general">Since the work deals with the marriage of King Śāhaji, it was of local interest (Tanjore descriptive catalogue vol. 8, ms. 4339, pg. 3371)</note>
+          <note type="bibliographical" subtype="8" n="3371–3373, mss. 4339–4341">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
+          <note type="bibliographical" subtype="7" n="85a">New Catalogus Catalogurum (NCC). Vols 1-36.</note>
+          <note type="bibliographical" subtype="3" n="341b">New Catalogus Catalogurum (NCC). Vols 1-36.</note>
+          <note type="general">Since the work deals with the marriage of King Śāhaji, it was of local interest. See Tanjore descriptive catalogue A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19. vol. 8, ms. 4339</note>
         </bibl>
       </listBibl>
     </body>
