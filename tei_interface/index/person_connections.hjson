@@ -388,6 +388,11 @@
       work
       Śāhaji I (of Thanjavur)
     ]
+    [
+      p_15
+      person
+      Śāhaji I (of Thanjavur)
+    ]
   ]
   p_5:
   [
@@ -592,6 +597,11 @@
       person
       Gaṅgādharādhvarin (alias Kākoji)
     ]
+    [
+      p_15
+      person
+      Gaṅgādharādhvarin (alias Kākoji)
+    ]
   ]
   p_14:
   [
@@ -631,6 +641,21 @@
     [
       w_66
       work
+      Ānandarāyamakhin
+    ]
+    [
+      p_13
+      person
+      Ānandarāyamakhin
+    ]
+    [
+      p_6
+      person
+      Ānandarāyamakhin
+    ]
+    [
+      p_42
+      person
       Ānandarāyamakhin
     ]
   ]
@@ -1163,6 +1188,14 @@
       w_100
       work
       Gaṅgādhara Sarasvatī
+    ]
+  ]
+  p_42:
+  [
+    [
+      p_15
+      person
+      Sarabhoji
     ]
   ]
 }

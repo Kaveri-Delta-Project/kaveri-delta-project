@@ -22,18 +22,21 @@
       <listBibl>
         <bibl xml:id="w_64">
           <title type="preferred">Jīvānandananāṭaka</title>
-          <title type="variant">Jīvānanda</title>
           <title type="variant">Jīvānandana</title>
           <editor key="p_25" role="aut">Vedakavīśvara</editor>
           <editor key="p_15" role="att">Ānandarāyamakhin</editor>
+          <pubPlace key="l_24" role="Performance">
+            <placeName>Bṛhadīśvara temple</placeName>
+          </pubPlace>
           <note type="genre">Play</note>
-          <note type="subject" source="other">Medical allegorial play (see Raghavan, intro to Śāhendravilāsa pg. 29)</note>
+          <note type="subject" source="other">Medical allegorical play </note>
           <note type="bibliographical">Sastri pg. 181</note>
           <note type="bibliographical">NCC vol. 31, 147</note>
           <note type="bibliographical">NCC vol. 7, 297b–298a</note>
           <note type="bibliographical">Printed in Kāyvamālā 27</note>
           <note type="bibliographical">Raghavan, intro to Śāhendravilāsa pg. 29</note>
           <note type="general">Written during the time of Śāhaji I (Raghavan, intro to Śāhendravilāsa pg. 29)</note>
+          <note type="general">Some scholars claim that Ānandarāyamakhin was the author of this work. See: Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. Journal of Oriental Research Madras III (1929): 68-73; Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill.</note>
         </bibl>
       </listBibl>
     </body>

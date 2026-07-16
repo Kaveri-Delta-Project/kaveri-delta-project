@@ -16,18 +16,13 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_13">
-          <persName type="preferred">Gaṅgādharādhvarin (alias Kākoji)</persName>
-          <trait type="father" key="p_5">
-            <label>Tryambakarāyamakhin</label>
-          </trait>
-          <trait type="father" key="p_12">
-            <label>Bhagavantarāyamakhin</label>
-          </trait>
-          <trait type="grandfather" key="p_15">
+        <person xml:id="p_42">
+          <persName type="preferred">Sarabhoji</persName>
+          <persName type="variant">Serfoji I</persName>
+          <trait type="beneficiary" key="p_15">
             <label>Ānandarāyamakhin</label>
           </trait>
-          <note>Minister of Ekoji</note>
+          <floruit from="1711" to="1730">r. 1711-1730</floruit>
         </person>
       </listPerson>
     </body>

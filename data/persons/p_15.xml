@@ -24,6 +24,15 @@
           <trait type="patron" key="p_25">
             <label>Vedakavīśvara</label>
           </trait>
+          <trait type="grandson" key="p_13">
+            <label>Gaṅgādharādhvarin (alias Kākoji)</label>
+          </trait>
+          <trait type="patron" key="p_6" from="1683" to="1711">
+            <label>Śāhaji I (of Thanjavur)</label>
+          </trait>
+          <trait type="patron" key="p_42">
+            <label>Sarabhoji</label>
+          </trait>
           <floruit from="1700" to="1700">ca. 1700</floruit>
           <note>Since he was the son of Nṛsiṃharāya I, who was minister of Ekoji I, and that the latter ruled around 1676-83, I add roughly one generation (approx. 25 years) to get his date of activity.</note>
         </person>
