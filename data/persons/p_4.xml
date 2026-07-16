@@ -4,6 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -55,11 +63,14 @@
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
-          <note>Due to his profiency in vyākaraṇa, he was called Pratyagra-Patañjali, i.e. 'The Modern Patañjali', by his contemporaries (The Indian Antiquary vol. 43, pg. 129 T. S. Kuppuswami Sastri).</note>
-          <note>Raghavan in his intro to Śāhendravilāsa (pg. 41) suggests a sojourn at Madura for Rāmabhadra Dīkṣita on account of the mention of Madura as the venue of the enactment of of his Śṛṅgāratilakabhāṇa. See also Thiruvengadathan pg. 11</note>
-          <note>Ṛgvedin, Kauṇḍinyagotra (Raghavan intro to Śāhendravilāsa pg. 40)</note>
-          <note>Recipient of 4 shares of Thiruvisanallur, as he was a master in 4 śāstras: alaṁkāra, vyākaraṇa, mīmāṁsā, and vedānta (see Thiruvengadathan and Raghavan)</note>
-          <note>He was hailed as pratyagrapatañjali, dvitīyaprācetasa, dvitīyavālmīki, sāhiytaratnakośa, śabdabrahmasvarūpī, and rāmabhaktyabdhi by his contemporaries (see Thiruvengadathan pg. 13)</note>
+          <bibl>Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.</bibl>
+          <bibl>Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <bibl>Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.</bibl>
+          <note>Due to his profiency in vyākaraṇa, he was called Pratyagra-Patañjali, i.e. 'The Modern Patañjali', by his contemporaries. See Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004: p. 129. </note>
+          <note>Raghavan suggests a sojourn at Madura for Rāmabhadra Dīkṣita on account of the mention of Madura as the venue of the enactment of of his Śṛṅgāratilakabhāṇa. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 41. See also Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002: p. 11.</note>
+          <note>He was a Ṛgvedin, Kauṇḍinyagotra. See  Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 40.</note>
+          <note>He was a recipient of 4 shares of Thiruvisanallur, as he was a master in 4 śāstras: alaṁkāra, vyākaraṇa, mīmāṁsā, and vedānta. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952. See also Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.</note>
+          <note>He was hailed as pratyagrapatañjali, dvitīyaprācetasa, dvitīyavālmīki, sāhiytaratnakośa, śabdabrahmasvarūpī, and rāmabhaktyabdhi by his contemporaries. See Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002: p. 13.</note>
         </person>
       </listPerson>
     </body>

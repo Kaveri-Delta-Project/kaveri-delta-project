@@ -21,7 +21,7 @@
           <persName type="variant">Bālakṛṣṇa Guru</persName>
           <persName type="variant">Bhagavatpāda</persName>
           <persName type="variant">Bālakṛṣṇānandasarasvatī</persName>
-          <persName type="variant">Kṛṣṇānandayati (Adyar vol. 9, pg. 349)</persName>
+          <persName type="variant">Kṛṣṇānandayati</persName>
           <persName type="variant">Bālakṛṣna Bhagavatpāda</persName>
           <trait type="teacher" key="p_24">
             <label>Periyappā Kavi</label>
@@ -38,8 +38,10 @@
           <trait type="teacher" key="p_26">
             <label>Viśvanātha Dīkṣita</label>
           </trait>
-          <bibl>Raghavan, intro to Śāhendravilāsa pg. 30–31</bibl>
-          <bibl>NCC vol. 5, pg. 14a</bibl>
+          <bibl n="30–31">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <bibl subtype="5" n="14a">New Catalogus Catalogurum (NCC). Vols 1-36.</bibl>
+          <bibl subtype="9">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.</bibl>
+          <note>For the alternative name Kṛṣṇānandayati, see Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13: vol. 9, p. 349.</note>
         </person>
       </listPerson>
     </body>

@@ -24,14 +24,16 @@
           <persName type="preferred">Rāmānanda Yati</persName>
           <persName type="variant">Rāmānanda Sarasvatī</persName>
           <persName type="variant">Rāmabhadrānanda Sarasvatī</persName>
-          <persName type="variant">Rāmayati (possible, see NCC vol. 24, pg. 202b)</persName>
+          <persName type="variant">Rāmayati (possible)</persName>
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
           </trait>
           <floruit from="1670" to="1670">1670</floruit>
-          <bibl>NCC vol. 24, pg. 275b</bibl>
-          <note>He copied Kṛṣṇānanda Sarasvatī's Siddhāntasiddhāñjana in 1670</note>
-          <note>He is different from another Rāmānanda Sarasvatī, the author of a subcommentary on Śaṅkara's Brahmasūtrabhāṣya called Ratnaprabhā and a treatise aligned with the Vivaraṇa interpretation of the Brahmasūtras titled Vivaraṇopanyāsa (see Duquette, forthcoming)</note>
+          <bibl subtype="24" n="275b">New Catalogus Catalogurum (NCC). Vols 1-36.</bibl>
+          <bibl>Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.</bibl>
+          <note>He copied Kṛṣṇānanda Sarasvatī's Siddhāntasiddhāñjana in 1670.</note>
+          <note>He is different from another Rāmānanda Sarasvatī, the author of a subcommentary on Śaṅkara's Brahmasūtrabhāṣya called Ratnaprabhā and a treatise aligned with the Vivaraṇa interpretation of the Brahmasūtras titled Vivaraṇopanyāsa. See Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.</note>
+          <note>It is possible that he was called Rāmayati. See New Catalogus Catalogurum (NCC). Vols 1-36: vol. 24, p. 202b.</note>
         </person>
       </listPerson>
     </body>
