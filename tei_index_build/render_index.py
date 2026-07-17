@@ -205,6 +205,14 @@ def render_place(place):
         html.append("</div>")
 
 
+    notes_html = render_list(place.get("notes"), "item-name")
+    if notes_html:
+        html.append("<div class='entry-block entry-notes'>")
+        html.append("<span class='subheading'>Notes</span>")
+        html.append(notes_html)
+        html.append("</div>")
+
+
     references = place.get("reference")
     references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
 
@@ -241,14 +249,6 @@ def render_place(place):
             else:
                 html.append(f"<span class='item-name'>{ref_text}</span>")
         
-        html.append("</div>")
-
-
-    notes_html = render_list(place.get("notes"), "item-name")
-    if notes_html:
-        html.append("<div class='entry-block entry-notes'>")
-        html.append("<span class='subheading'>Notes</span>")
-        html.append(notes_html)
         html.append("</div>")
 
 
@@ -438,6 +438,14 @@ def render_person(person):
         html.append("</div>")
 
 
+    notes_html = render_list(person.get("notes"), "item-name")
+    if notes_html:
+        html.append("<div class='entry-block entry-notes'>")
+        html.append("<span class='subheading'>Notes</span>")
+        html.append(notes_html)
+        html.append("</div>")
+
+
     references = person.get("reference")
     references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
 
@@ -474,14 +482,6 @@ def render_person(person):
             else:
                 html.append(f"<span class='item-name'>{ref_text}</span>")
         
-        html.append("</div>")
-
-
-    notes_html = render_list(person.get("notes"), "item-name")
-    if notes_html:
-        html.append("<div class='entry-block entry-notes'>")
-        html.append("<span class='subheading'>Notes</span>")
-        html.append(notes_html)
         html.append("</div>")
 
 
@@ -643,6 +643,12 @@ def render_work(work):
         html.append(subject_html)
         html.append("</div>")
 
+    notes_html = render_list(work.get("notes"), "item-name")
+    if notes_html:
+        html.append("<div class='entry-block entry-notes'>")
+        html.append("<span class='subheading'>Notes</span>")
+        html.append(notes_html)
+        html.append("</div>")
 
     references = work.get("reference")
     references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
@@ -680,14 +686,6 @@ def render_work(work):
             else:
                 html.append(f"<span class='item-name'>{ref_text}</span>")
         
-        html.append("</div>")
-
-
-    notes_html = render_list(work.get("notes"), "item-name")
-    if notes_html:
-        html.append("<div class='entry-block entry-notes'>")
-        html.append("<span class='subheading'>Notes</span>")
-        html.append(notes_html)
         html.append("</div>")
 
     html.append("</div>")
@@ -829,6 +827,14 @@ def render_inscription(inscription):
 
         html.append("</div>")
 
+
+    notes_html = render_list(inscription.get("notes"), "item-name")
+    if notes_html:
+        html.append("<div class='entry-block entry-notes'>")
+        html.append("<span class='subheading'>Notes</span>")
+        html.append(notes_html)
+        html.append("</div>")
+
     references = inscription.get("reference")
     references = sorted(references, key=lambda x: normalize_for_sort(x.get("reference")))
 
@@ -865,13 +871,6 @@ def render_inscription(inscription):
             else:
                 html.append(f"<span class='item-name'>{ref_text}</span>")
         
-        html.append("</div>")
-
-    notes_html = render_list(inscription.get("notes"), "item-name")
-    if notes_html:
-        html.append("<div class='entry-block entry-notes'>")
-        html.append("<span class='subheading'>Notes</span>")
-        html.append(notes_html)
         html.append("</div>")
 
 
