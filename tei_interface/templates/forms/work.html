@@ -903,6 +903,66 @@
 </section>
 
 <section class="panel">
+  {{ ui.section_header(
+      "Notes", 
+      "+ add notes", 
+      "resetEditForm('notes'); toggleEntryForm('notes-form')"
+  ) }}
+
+  <!-- Section-level error -->
+  {% if section_messages.get('notes-error') %}
+    <div class="alert alert-danger">
+      {{ section_messages['notes-error'] }}
+    </div>
+  {% endif %}
+
+  {% for val in data.notes %}
+    <div class="border rounded p-2 mb-2">
+      <span class="fw-semibold">{{ val }}</span>
+        {{  ui.delete_button(
+        section="note",
+        index=loop.index0,
+        extra_fields={"element_attr_name": "type", "element_attr_value": "general"}
+      ) }}
+
+      <button type="button"
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick='editItem("notes", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("notes-form");'>
+        ✎ Edit
+      </button>
+
+    </div>
+  {% endfor %}
+
+  <div id="notes-form" class="border rounded p-3 mt-3 d-none">
+    <form method="POST" action="{{ form_action }}">
+      <input type="hidden" name="section" value="notes">
+      <input type="hidden" name="edit_index" id="notes-edit-index" value="">
+
+      <div id="notes-edit-label" class="mb-2 d-none">
+        <span class="badge bg-warning text-dark">Edit Mode</span>
+      </div>
+
+      <div class="editable-fields">
+        <div class="mb-3">
+          {{ ui.input_field(
+              id="notes",
+              name="notes",
+              label="Notes",
+              extra_attrs="required",
+              help_text="Enter any extra notes here"
+          ) }}
+        </div>
+      </div>
+
+      {{ ui.form_actions("resetEditForm('notes'); toggleEntryForm('notes-form');") }}   
+
+    </form>
+  </div>  
+</section>
+
+
+<section class="panel">
 
   {{ ui.section_header(
       "Bibliographical Reference", 
@@ -1002,66 +1062,6 @@
       </div>
 
       {{ ui.form_actions("resetEditForm('reference'); toggleEntryForm('reference-form');") }}   
-
-    </form>
-  </div>  
-</section>
-
-
-<section class="panel">
-  {{ ui.section_header(
-      "Notes", 
-      "+ add notes", 
-      "resetEditForm('notes'); toggleEntryForm('notes-form')"
-  ) }}
-
-  <!-- Section-level error -->
-  {% if section_messages.get('notes-error') %}
-    <div class="alert alert-danger">
-      {{ section_messages['notes-error'] }}
-    </div>
-  {% endif %}
-
-  {% for val in data.notes %}
-    <div class="border rounded p-2 mb-2">
-      <span class="fw-semibold">{{ val }}</span>
-        {{  ui.delete_button(
-        section="note",
-        index=loop.index0,
-        extra_fields={"element_attr_name": "type", "element_attr_value": "general"}
-      ) }}
-
-      <button type="button"
-              class="btn btn-sm btn-outline-secondary ms-2"
-              onclick='editItem("notes", {{ loop.index0 }}, {{ val|tojson }}); showEntryForm("notes-form");'>
-        ✎ Edit
-      </button>
-
-    </div>
-  {% endfor %}
-
-  <div id="notes-form" class="border rounded p-3 mt-3 d-none">
-    <form method="POST" action="{{ form_action }}">
-      <input type="hidden" name="section" value="notes">
-      <input type="hidden" name="edit_index" id="notes-edit-index" value="">
-
-      <div id="notes-edit-label" class="mb-2 d-none">
-        <span class="badge bg-warning text-dark">Edit Mode</span>
-      </div>
-
-      <div class="editable-fields">
-        <div class="mb-3">
-          {{ ui.input_field(
-              id="notes",
-              name="notes",
-              label="Notes",
-              extra_attrs="required",
-              help_text="Enter any extra notes here"
-          ) }}
-        </div>
-      </div>
-
-      {{ ui.form_actions("resetEditForm('notes'); toggleEntryForm('notes-form');") }}   
 
     </form>
   </div>  
