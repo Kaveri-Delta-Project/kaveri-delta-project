@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -18,17 +22,22 @@
       <listBibl>
         <bibl xml:id="w_31">
           <title type="preferred">Śṛṅgāratilakabhāṇa</title>
+          <title type="variant">Śṛṅgārataraṅgiṇī?</title>
           <editor key="p_4" role="aut">Rāmabhadra Dīkṣita</editor>
           <pubPlace key="l_10" role="performance">
             <placeName>Madurai</placeName>
           </pubPlace>
           <note type="genre">Play</note>
-          <note type="bibliographical">NCC vol. 24, 188</note>
-          <note type="bibliographical">Adyar D. XIII. 1343</note>
-          <note type="bibliographical">Oppert II. 3849–3850</note>
-          <note type="bibliographical">Kāvyamālā 44</note>
-          <note type="general">Madura is mentioned as the venue of enactment (Raghavan, intro to Śāhendravilāsa pg. 41)</note>
-          <note type="general">Written at the request of Raghunātha, his disciple (see Kuppuswami Sastri pg. 178, Raghavan pg. 42, and Thiruvengadathan pg. 16)</note>
+          <note type="bibliographical">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
+          <note type="bibliographical" subtype="24" n="188">New Catalogus Catalogurum (NCC). Vols 1-36.</note>
+          <note type="bibliographical" subtype="13" n="1343">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.</note>
+          <note type="bibliographical">Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.</note>
+          <note type="bibliographical">Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.</note>
+          <note type="bibliographical" subtype="2" n="251, ms. 3850">Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2</note>
+          <note type="general">Madura is mentioned as the venue of enactment. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 41.</note>
+          <note type="general">Written at the request of Raghunātha, his disciple. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 42; Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004: p. 178; and Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002: p. 16.</note>
+          <note type="general">Printed in Kāyvamālā 44.</note>
+          <note type="general">Oppert lists Śṛṅgārataraṅgiṇī as a bhāṇa in Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2: vol. 2, p. 251, ms. 3849. And New Catalogus Catalogurum (NCC). Vols 1-36: vol. 35, p. 91b lists 'cf. Śṛṅgāratilakabhāṇa' under Śṛṅgārataraṅgiṇī.</note>
         </bibl>
       </listBibl>
     </body>

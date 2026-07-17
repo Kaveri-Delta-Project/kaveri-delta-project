@@ -26,14 +26,20 @@
       <listBibl>
         <bibl xml:id="w_69">
           <title type="preferred">Siddhāntasiddhāñjana</title>
-          <title type="variant">Śrutaprakāśikākhaṇḍana (Oppert 1880: 430)</title>
+          <title type="variant">Śrutaprakāśikākhaṇḍana</title>
           <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
           <rs key="w_75" role="Rejoinder to">Śrutaprakāśikā<note/>
           </rs>
           <note type="genre">Treatise/Exposition (Philosophical, Theological, etc.)</note>
           <note type="subject">Vedānta</note>
-          <note type="general">Although it is styled as a subcommentary on Śaṇkara's Brahmasūtrabhāṣya, it challenges several key theses upheld by proponents of Viśiṣṭādvaita Vedānta (see Duquette, forthcoming)</note>
-          <note type="general">Kṛṣṇānanda Sarasvatī directs most of his criticism at Sudarśanasūri's Śrutaprakāśikā (see Duquette, forthcoming)</note>
+          <note type="bibliographical">Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.</note>
+          <note type="bibliographical">Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2</note>
+          <note type="bibliographical" subtype="13" n="334, ms. 1721">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.</note>
+          <note type="bibliographical" subtype="9" n="466–4678, ms. 1276">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.</note>
+          <note type="general">Although it is styled as a subcommentary on Śaṇkara's Brahmasūtrabhāṣya, it challenges several key theses upheld by proponents of Viśiṣṭādvaita Vedānta. See Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.</note>
+          <note type="general">Kṛṣṇānanda Sarasvatī directs most of his criticism at Sudarśanasūri's Śrutaprakāśikā. See Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.</note>
+          <note type="general">Oppert I, mss. 1064, 1639, 3551, 3887, 4263, 4515, 5322 (alternative name Śrutaprakāśikākhaṇḍana); Oppert II, mss. 1563, 1827, 3897, 4376, 7838, 7931, 8790, 9232, 9279, 9441, 9532.</note>
+          <note type="general">Mysore vol. 3, p. 188, mss. 793–795</note>
         </bibl>
       </listBibl>
     </body>
