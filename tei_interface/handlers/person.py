@@ -594,6 +594,7 @@ def handle_associated_place(person, context, form_data):
 @section_handler("reference")
 def handle_reference(person, context, form_data):
     reference = form_data.get("reference")
+    reference_other = form_data.get("reference_other")
     ref_vol = form_data.get("volume")
     ref_page = form_data.get("page")
     edit_index = form_data.get("edit_index")
@@ -602,7 +603,12 @@ def handle_reference(person, context, form_data):
         flash("Reference cannot be empty.", "reference-error")
         return {"ok": False}
 
-    element_attrs = {}
+    if reference == "Other" and reference_other:
+        text_value = reference_other
+        element_attrs = {"source": "other"}
+    else:
+        text_value = reference
+        element_attrs = {}
 
     if ref_vol:
         element_attrs.update({"subtype": ref_vol})
@@ -620,7 +626,7 @@ def handle_reference(person, context, form_data):
         updated_el = update_simple_element_attr(
             parent=person,
             tag="bibl",
-            text=reference,
+            text=text_value,
             ns=NS_TEI,
             update_attrs=element_attrs,
             index=index
@@ -637,7 +643,7 @@ def handle_reference(person, context, form_data):
             tag="bibl",
             nsmap=NSMAP,
             ns=NS_TEI,            
-            text=reference,
+            text=text_value,
             attrs=element_attrs,
             allow_multiple=True
         )
