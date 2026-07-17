@@ -880,7 +880,9 @@
     "type": "work",
     "id": "w_31",
     "name": "Śṛṅgāratilakabhāṇa",
-    "alt_names": [],
+    "alt_names": [
+      "Śṛṅgārataraṅgiṇī?"
+    ],
     "url": "indexes/work_index.html#w_31",
     "places": [
       "Madurai [l_10]"
@@ -1363,7 +1365,7 @@
     "id": "w_65",
     "name": "Vidyāpariṇayanāṭaka",
     "alt_names": [
-      "Vidyāpariṇāma (NCC vol. 29, 132)"
+      "Vidyāpariṇāma"
     ],
     "url": "indexes/work_index.html#w_65",
     "places": [],
@@ -1420,7 +1422,7 @@
     "id": "w_69",
     "name": "Siddhāntasiddhāñjana",
     "alt_names": [
-      "Śrutaprakāśikākhaṇḍana (Oppert 1880: 430)"
+      "Śrutaprakāśikākhaṇḍana"
     ],
     "url": "indexes/work_index.html#w_69",
     "places": [],
@@ -1502,7 +1504,9 @@
     "alt_names": [],
     "url": "indexes/work_index.html#w_76",
     "places": [],
-    "persons": [],
+    "persons": [
+      "Rāmānuja [p_36]"
+    ],
     "resided_places": []
   },
   {
