@@ -221,6 +221,11 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
     folium.map.CustomPane("places", z_index=600).add_to(m)
     folium.map.CustomPane("labels", z_index=650).add_to(m)
 
+    folium.TileLayer(
+        tiles="https://geo.nls.uk/mapdata3/india-combined/{z}/{x}/{y}.png",
+        attr="National Library of Scotland", name="Survey of India, 1912-1950", overlay=False, control=True,
+    ).add_to(m)
+
     # Satellite layer
     folium.TileLayer(
         tiles="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
