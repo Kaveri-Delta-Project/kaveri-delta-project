@@ -246,7 +246,7 @@ TEMPLATE_CONFIG = {
         "Stein, Burton. Peasant State and Society in Medieval South India. Oxford: Oxford University Press, 1980.": "Stein, Burton. <i>Peasant State and Society in Medieval South India</i>. Oxford: Oxford University Press, 1980.",
         "Subbarayalu, Y. Historical and Political Geography of the Cōḻa Country. Delhi: Primus Books, 2026.": "Subbarayalu, Y. <i>Historical and Political Geography of the Cōḻa Country</i>. Delhi: Primus Books, 2026.",
         "Veluthat, Kesavan. <i>Brahman Settlements in Kerala: Historical Studies</i>. Sandhya Publications, 1978.": "Veluthat, Kesavan. <i>Brahman Settlements in Kerala: Historical Studies</i>. Sandhya Publications, 1978.",
-        "New Catalogus Catalogurum (NCC). Vols 1-36.": "New Catalogus Catalogorum (NCC). Vols 1–36.",
+        "New Catalogus Catalogorum (NCC). Vols 1-36.": "New Catalogus Catalogorum (NCC). Vols 1–36.",
         "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.": "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.",
         "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.": "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.",
         "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2": "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2",
