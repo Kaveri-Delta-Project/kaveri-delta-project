@@ -370,7 +370,8 @@
     ],
     "url": "indexes/person_index.html#p_7",
     "places": [
-      "Thiruvalangadu [l_17]"
+      "Thiruvalangadu (Delta) [l_17]",
+      "Thiruvalangadu [l_25]"
     ]
   },
   {
@@ -452,7 +453,7 @@
   {
     "type": "place",
     "id": "l_17",
-    "name": "Thiruvalangadu",
+    "name": "Thiruvalangadu (Delta)",
     "alt_names": [],
     "url": "indexes/place_index.html#l_17"
   },
@@ -508,6 +509,13 @@
       "Rājarājeśvaram temple"
     ],
     "url": "indexes/place_index.html#l_24"
+  },
+  {
+    "type": "place",
+    "id": "l_25",
+    "name": "Thiruvalangadu",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_25"
   },
   {
     "type": "place",
