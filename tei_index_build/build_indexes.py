@@ -81,7 +81,8 @@ for entity_tag, entity_data in all_entities.items():
         f.write("\n".join(index_html))
         print(f"Index built in {output_path}")
 
-    remove_broken_links(output_path, entities_cache)
+
+    remove_broken_links(output_path, entities_cache, exclude_classes=["reference"])
     
 build_search_index(all_entities, BUILD_DIR)
 

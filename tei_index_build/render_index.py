@@ -84,6 +84,9 @@ def make_map_url(coordinates, filename="/map.html"):
     coordinates = coordinates.replace(' ', '')
     return f"{filename}#{coordinates}"
 
+def make_reference_url(identifier):
+    return f"../references.html#{esc(identifier)}"
+
 def render_place(place):
     
     html = []
@@ -221,7 +224,16 @@ def render_place(place):
         html.append("<span class='subheading'>References</span>")
         for reference in references:
             ref_raw = reference.get("parent_text")
-            ref_text = REFS.get(ref_raw, ref_raw)
+
+            ref = REFS.get(ref_raw, None)
+
+            if ref:
+                ref_text = ref.get("html", ref_raw)
+                ref_id = ref.get("identifier")
+            else:
+                ref_text = ref_raw
+                ref_id = None
+
             ref_vol = reference.get("subtype")
             ref_page = reference.get("n")
 
@@ -241,20 +253,23 @@ def render_place(place):
                 data_attrs += f" data-page='{esc(ref_page)}'"
                 data_attrs_contents += f" (Page(s) {esc(ref_page)})"
 
-            if ref_vol or ref_page:
-                html.append(
-                    f"<span class='item-name' {data_attrs}>"
-                    f"{ref_text} {data_attrs_contents}</span>"
-                )
-            else:
-                html.append(f"<span class='item-name'>{ref_text}</span>")
-        
-        html.append("</div>")
+            tag = "a" if ref_id else "span"
 
+            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+
+            attrs = f"{link_attr}{data_attrs}"
+
+            html.append(
+                f"<{tag} class='item-name reference'{attrs}>"
+                f"{ref_text}"
+                f"{data_attrs_contents if (ref_vol or ref_page) else ''}"
+                f"</{tag}>"
+            )
+                    
+        html.append("</div>")
 
     html.append("</div>")
     return "\n".join(html)
-
 
 
 def render_person(person):
@@ -454,7 +469,16 @@ def render_person(person):
         html.append("<span class='subheading'>References</span>")
         for reference in references:
             ref_raw = reference.get("parent_text")
-            ref_text = REFS.get(ref_raw, ref_raw)
+
+            ref = REFS.get(ref_raw, None)
+
+            if ref:
+                ref_text = ref.get("html", ref_raw)
+                ref_id = ref.get("identifier")
+            else:
+                ref_text = ref_raw
+                ref_id = None
+            
             ref_vol = reference.get("subtype")
             ref_page = reference.get("n")
 
@@ -474,13 +498,18 @@ def render_person(person):
                 data_attrs += f" data-page='{esc(ref_page)}'"
                 data_attrs_contents += f" (Page(s) {esc(ref_page)})"
 
-            if ref_vol or ref_page:
-                html.append(
-                    f"<span class='item-name' {data_attrs}>"
-                    f"{ref_text} {data_attrs_contents}</span>"
-                )
-            else:
-                html.append(f"<span class='item-name'>{ref_text}</span>")
+            tag = "a" if ref_id else "span"
+
+            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+
+            attrs = f"{link_attr}{data_attrs}"
+
+            html.append(
+                f"<{tag} class='item-name reference'{attrs}>"
+                f"{ref_text}"
+                f"{data_attrs_contents if (ref_vol or ref_page) else ''}"
+                f"</{tag}>"
+            )
         
         html.append("</div>")
 
@@ -658,7 +687,16 @@ def render_work(work):
         html.append("<span class='subheading'>References</span>")
         for reference in references:
             ref_raw = reference.get("parent_text")
-            ref_text = REFS.get(ref_raw, ref_raw)
+
+            ref = REFS.get(ref_raw, None)
+
+            if ref:
+                ref_text = ref.get("html", ref_raw)
+                ref_id = ref.get("identifier")
+            else:
+                ref_text = ref_raw
+                ref_id = None
+
             ref_vol = reference.get("subtype")
             ref_page = reference.get("n")
 
@@ -678,13 +716,18 @@ def render_work(work):
                 data_attrs += f" data-page='{esc(ref_page)}'"
                 data_attrs_contents += f" (Page(s) {esc(ref_page)})"
 
-            if ref_vol or ref_page:
-                html.append(
-                    f"<span class='item-name' {data_attrs}>"
-                    f"{ref_text} {data_attrs_contents}</span>"
-                )
-            else:
-                html.append(f"<span class='item-name'>{ref_text}</span>")
+            tag = "a" if ref_id else "span"
+
+            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+
+            attrs = f"{link_attr}{data_attrs}"
+
+            html.append(
+                f"<{tag} class='item-name reference'{attrs}>"
+                f"{ref_text}"
+                f"{data_attrs_contents if (ref_vol or ref_page) else ''}"
+                f"</{tag}>"
+            )
         
         html.append("</div>")
 
@@ -843,7 +886,16 @@ def render_inscription(inscription):
         html.append("<span class='subheading'>References</span>")
         for reference in references:
             ref_raw = reference.get("parent_text")
-            ref_text = REFS.get(ref_raw, ref_raw)
+
+            ref = REFS.get(ref_raw, None)
+
+            if ref:
+                ref_text = ref.get("html", ref_raw)
+                ref_id = ref.get("identifier")
+            else:
+                ref_text = ref_raw
+                ref_id = None
+
             ref_vol = reference.get("subtype")
             ref_page = reference.get("n")
 
@@ -863,16 +915,20 @@ def render_inscription(inscription):
                 data_attrs += f" data-page='{esc(ref_page)}'"
                 data_attrs_contents += f" (Page(s) {esc(ref_page)})"
 
-            if ref_vol or ref_page:
-                html.append(
-                    f"<span class='item-name' {data_attrs}>"
-                    f"{ref_text} {data_attrs_contents}</span>"
-                )
-            else:
-                html.append(f"<span class='item-name'>{ref_text}</span>")
+            tag = "a" if ref_id else "span"
+
+            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+
+            attrs = f"{link_attr}{data_attrs}"
+
+            html.append(
+                f"<{tag} class='item-name reference'{attrs}>"
+                f"{ref_text}"
+                f"{data_attrs_contents if (ref_vol or ref_page) else ''}"
+                f"</{tag}>"
+            )
         
         html.append("</div>")
-
 
     html.append("</div>")
     return "\n".join(html)   

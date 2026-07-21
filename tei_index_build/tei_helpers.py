@@ -153,18 +153,27 @@ def create_entity_cache(entity_data):
     return entity_cache
 
 
-def remove_broken_links(html_path, entities_cache):
+def remove_broken_links(html_path, entities_cache, exclude_classes=None):
     """
     Disable links whose ID is missing from cache or whose text
     does not match the cached preferred name.
+
+    Links with excluded CSS classes are ignored.
     """
     
+    if exclude_classes is None:
+        exclude_classes = []
+
     with open(html_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f, "html.parser")
 
     modified = False
 
     for tag in soup.find_all("a", href=True):
+
+        if any(item in tag.get("class", []) for item in exclude_classes):
+            continue
+
         href = tag["href"]
         text = tag.get_text(strip=True)
 
