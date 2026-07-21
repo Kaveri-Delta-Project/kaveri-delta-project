@@ -17,7 +17,7 @@
     <body>
       <listPlace>
         <place xml:id="l_17">
-          <placeName type="preferred">Thiruvalangadu</placeName>
+          <placeName type="preferred">Thiruvalangadu (Delta)</placeName>
           <desc type="function">Settlement</desc>
           <desc type="function">Land Donation</desc>
           <idno type="Wikidata">Q7785473</idno>

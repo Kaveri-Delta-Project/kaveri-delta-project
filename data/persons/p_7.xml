@@ -35,11 +35,16 @@
             <label>Bhāskararāyamakhin</label>
           </trait>
           <floruit from="1690" to="1690">ca. 1690</floruit>
-          <affiliation key="l_17" role="Born">
+          <affiliation key="l_17" role="Recipient (Land Donation)">
+            <placeName>Thiruvalangadu (Delta)</placeName>
+          </affiliation>
+          <affiliation key="l_25" role="Born">
             <placeName>Thiruvalangadu</placeName>
           </affiliation>
-          <note>He acquired the title vājapeyi due to the performance of the vājapeya yajña. (See Krishnamurthy, R. The Saints of the Cauvery Delta, pg. 30)</note>
-          <note>He was a native of Thiruvalangadu near Madras, and was brought over to Tiruvalangadu in the Thanjavur district by Tikambararāya, minister of King Śāhaji, at the instance of the king. (See Krishnamurthy, R. The Saints of the Cauvery Delta, pg. 30)</note>
+          <bibl source="other">Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979.</bibl>
+          <note>He acquired the title vājapeyi due to the performance of the vājapeya yajña. (See Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979: p. 30)</note>
+          <note>He was a native of Thiruvalangadu near Madras, and was brought over to Tiruvalangadu in the Thanjavur district by Tikambararāya, minister of King Śāhaji, at the instance of the king. (See Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979: p. 30)</note>
+          <note>He was brought over to Thiruvalangadu in mayavarum taluk of the Thanjavur district by by Tikambararaya, minister of Śāhaji. (See Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979: p. 30)</note>
         </person>
       </listPerson>
     </body>

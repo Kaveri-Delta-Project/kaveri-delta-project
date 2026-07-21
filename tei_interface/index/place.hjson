@@ -68,8 +68,12 @@
     name: Thiruvaiyaru
   }
   {
-    xml_id: l_17
+    xml_id: l_25
     name: Thiruvalangadu
+  }
+  {
+    xml_id: l_17
+    name: Thiruvalangadu (Delta)
   }
   {
     xml_id: l_9
