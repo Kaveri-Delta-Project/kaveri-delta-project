@@ -234,14 +234,14 @@ TEMPLATE_CONFIG = {
     "bibliographical_references": [
         ("", "-- Select Reference --"),
         ("Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.", "Debates in the Delta: An Intellectual History of Late Advaita"),
-        ("Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684–1710). Tiruchi: The Kalyan Press, 1952.", "Śāhendravilāsa of Śrīdhara Veṅkaṭeśa"),
-        ("Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126–142 and pp. 176–196, 2004.", "Ramabhadra-Dikshita and the Southern Poets of his Time"),
+        ("Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.", "Śāhendravilāsa of Śrīdhara Veṅkaṭeśa"),
+        ("Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.", "Ramabhadra-Dikshita and the Southern Poets of his Time"),
         ("Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.", "Rāmabhadra Dīkṣita and His Works: A Study"),
-        ("New Catalogus Catalogorum (NCC). Vols 1–36.", "New Catalogus Catalogorum (NCC)"),
-        ("A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.", "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library"),
-        ("Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.", "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML)"),
-        ("Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2", "Lists of Sanskrit Manuscripts in Private Libraries of Southern India"),
-        ("Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.", "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar)"),
+        ("New Catalogus Catalogorum (NCC). Vols 1-36.", "New Catalogus Catalogorum (NCC)"),
+        ("A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1-19.", "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library"),
+        ("Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1-25.", "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML)"),
+        ("Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1-2", "Lists of Sanskrit Manuscripts in Private Libraries of Southern India"),
+        ("Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1-13.", "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar)"),
         ("Other", "Other")
     ],
 }
