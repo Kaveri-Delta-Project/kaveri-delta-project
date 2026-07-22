@@ -255,7 +255,7 @@ def render_place(place):
 
             tag = "a" if ref_id else "span"
 
-            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+            link_attr = f" href='{make_reference_url(ref_id)}' target='reference-page'" if ref_id else ""
 
             attrs = f"{link_attr}{data_attrs}"
 
@@ -500,7 +500,7 @@ def render_person(person):
 
             tag = "a" if ref_id else "span"
 
-            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+            link_attr = f" href='{make_reference_url(ref_id)}' target='reference-page'" if ref_id else ""
 
             attrs = f"{link_attr}{data_attrs}"
 
@@ -718,7 +718,7 @@ def render_work(work):
 
             tag = "a" if ref_id else "span"
 
-            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+            link_attr = f" href='{make_reference_url(ref_id)}' target='reference-page'" if ref_id else ""
 
             attrs = f"{link_attr}{data_attrs}"
 
@@ -917,7 +917,7 @@ def render_inscription(inscription):
 
             tag = "a" if ref_id else "span"
 
-            link_attr = f" href='{make_reference_url(ref_id)}'" if ref_id else ""
+            link_attr = f" href='{make_reference_url(ref_id)}' target='reference-page'" if ref_id else ""
 
             attrs = f"{link_attr}{data_attrs}"
 

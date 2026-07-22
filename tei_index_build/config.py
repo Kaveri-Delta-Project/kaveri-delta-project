@@ -211,39 +211,60 @@ ENTITY_CONFIG = {
     }
 }
 
+
 TEMPLATE_CONFIG = {
     "bibliographical_references": {
-        "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill, 2021.": {
-        "html": "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In <i>Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk</i>, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill, 2021.",
-        "identifier": "cerulli2021"
+        "Ariav, Talia. ‘Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship.’ The Indian Economic and Social History Review 59, no. 3 (2022): 273-298.": {
+        "html": "Ariav, Talia. ‘Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship.’ <i>The Indian Economic and Social History Review</i> 59, no. 3 (2022): 273-298.",
+        "identifier": "ariav2022"
         },
         "Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.": {
-            "html": "Duquette, Jonathan. <i>Debates in the Delta: An Intellectual History of Late Advaita</i>. Brill, forthcoming.",
-            "identifier": "duquette-forthcoming"
-        },
-        "Dasgupta, Surendranath. A History of Indian Philosophy<. Vol. 2. Cambridge: Cambridge University Press, 1952.": {
-        "html": "Dasgupta, Surendranath. <i>A History of Indian Philosophy</i>. Vol. 2. Cambridge: Cambridge University Press, 1952.",
-        "identifier": "dasgupta1952"
+        "html": "Duquette, Jonathan. <i>Debates in the Delta: An Intellectual History of Late Advaita</i>. Brill, forthcoming.",
+        "identifier": "duquette-forthcoming"
         },
         "Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979.": {
         "html": "Krishnamurthy, R. <i>The Saints of the Cauvery Delta</i>. New Delhi: Concept Publishing Company, 1979.",
         "identifier": "krishnamurthy1979"
         },
+        "Krishnaswami Ayyangar, S. (1986). Sources of Vijayanagar History. Delhi: Gian Publishing House.": {
+        "html": "Krishnaswami Ayyangar, S. (1986). <i>Sources of Vijayanagar History</i>. Delhi: Gian Publishing House.",
+        "identifier": "krishnaswami1986"
+        },
         "Nair, Savithri Preetha. Raja Serfoji II: Science, Medicine, and Enlightenment in Tanjore. Delhi: Routledge India, 2012.": {
         "html": "Nair, Savithri Preetha. <i>Raja Serfoji II: Science, Medicine, and Enlightenment in Tanjore</i>. Delhi: Routledge India, 2012.",
         "identifier": "nair2012"
+        },
+        "Narayana Rao, V., Shulman, D., and S. Subrahmanyam. Symbols of Substance: Court and State in Nāyaka Period Tamilnadu. Delhi: Oxford University Press, 1992.": {
+        "html": "Narayana Rao, V., Shulman, D., and S. Subrahmanyam. <i>Symbols of Substance: Court and State in Nāyaka Period Tamilnadu</i>. Delhi: Oxford University Press, 1992.",
+        "identifier": "narayana1992"
         },
         "Peterson, Indira Viswanathan. ‘The Schools of Serfoji II of Tanjore: Education and Princely Modernity in Early 19th–Century India.’ In Transcolonial Modernities in South Asia, edited by Michael S. Dodson and Brian A. Hatcher, pp. 15-44. Routledge Studies in the Modern History of South Asia, 2012.": {
         "html": "Peterson, Indira Viswanathan. ‘The Schools of Serfoji II of Tanjore: Education and Princely Modernity in Early 19th–Century India.’ In <i>Transcolonial Modernities in South Asia</i>, edited by Michael S. Dodson and Brian A. Hatcher, pp. 15-44. Routledge Studies in the Modern History of South Asia, 2012.",
         "identifier": "peterson2012"
         },
+        "Subrahmanyam, Sanjay (2001). Penumbral Visions: Making Polities in Early Modern South India. Ann Arbor: The University of Michigan Press.": {
+        "html": "Subrahmanyam, Sanjay (2001). <i>Penumbral Visions: Making Polities in Early Modern South India</i>. Ann Arbor: The University of Michigan Press.",
+        "identifier": "subrahmanyam2001"
+        },
+        "Vriddhagirisan, V. The Nayaks of Tanjore. Annamalainagar, 1942; reprint, New Delhi, 2011.": {
+        "html": "Vriddhagirisan, V. <i>The Nayaks of Tanjore</i>. Annamalainagar, 1942; reprint, New Delhi, 2011.",
+        "identifier": "vriddhagirisan2011"
+        },
+        "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In Lieux de savoir, Tome 1 : Espaces et communautés, edited by Christian Jacob, pp. 616-36. Paris: Albin Michel, 2007.": {
+        "html": "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In <i>Lieux de savoir, Tome 1 : Espaces et communautés</i>, edited by Christian Jacob, pp. 616-36. Paris: Albin Michel, 2007.",
+        "identifier": "wujastyk2007"
+        },
+        "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill, 2021.": {
+        "html": "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In <i>Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk</i>, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill, 2021.",
+        "identifier": "cerulli2021"
+        },
+        "Duquette, Jonathan. ‘Debating God in the Delta: Trimūrti, Transcendence, and Hierarchy in Late Advaita Vedānta.’ In Science and Society in the Sanskrit World, edited by C. Fleming, T. L. Knudsen, A. Misra and V. Sharma, pp. 401-447. Leiden/Boston: Brill, 2023.": {
+        "html": "Duquette, Jonathan. ‘Debating God in the Delta: <i>Trimūrti</i>, Transcendence, and Hierarchy in Late Advaita Vedānta.’ In <i>Science and Society in the Sanskrit World</i>, edited by C. Fleming, T. L. Knudsen, A. Misra and V. Sharma, pp. 401-447. Leiden/Boston: Brill, 2023.",
+        "identifier": "duquette2023"
+        },
         "Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.": {
         "html": "Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.",
         "identifier": "raghavan1952"
-        },
-        "Raghavan, Venkataraman. Prayers, Praises, and Psalms. Madras: G. A. Natesan and Co, 1938.": {
-        "html": "Raghavan, Venkataraman. <i>Prayers, Praises, and Psalms</i>. Madras: G. A. Natesan and Co, 1938.",
-        "identifier": "raghavan1938"
         },
         "Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. Journal of Oriental Research Madras III (1929): 68-73.": {
         "html": "Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. <i>Journal of Oriental Research Madras</i> III (1929): 68-73.",
@@ -253,17 +274,9 @@ TEMPLATE_CONFIG = {
         "html": "Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.",
         "identifier": "kuppuswamisastri2004"
         },
-        "Thangaswami, R. A Bibliographical Survey of Advaita Vedānta Literature. Madras: Rathnam Press, 1980.": {
-        "html": "Thangaswami, R. <i>A Bibliographical Survey of Advaita Vedānta Literature</i>. Madras: Rathnam Press, 1980.",
-        "identifier": "thangaswami1980"
-        },
         "Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.": {
         "html": "Thiruvengadathan, A. <i>Rāmabhadra Dīkṣita and His Works: A Study</i>. Chennai: The Kuppuswami Sastri Research Institute, 2002.",
         "identifier": "thiruvengadathan2002"
-        },
-        "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In Lieux de savoir, Tome 1 : Espaces et communautés, edited by Christian Jacob, pp. 616-36. Paris: Albin Michel, 2007.": {
-        "html": "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In <i>Lieux de savoir, Tome 1 : Espaces et communautés</i>, edited by Christian Jacob, pp. 616-36. Paris: Albin Michel, 2007.",
-        "identifier": "wujastyk2007"
         },
         "Wujastyk, Dominik. ‘Rāmasubrahmaṇya’s Manuscripts: Intellectual Networks in the Kaveri Delta, 1693-1922.’ In Aspects of Manuscript Culture in South India, edited by Saraju Rath, pp. 235-252. Leiden: Brill, 2012.": {
         "html": "Wujastyk, Dominik. ‘Rāmasubrahmaṇya’s Manuscripts: Intellectual Networks in the Kaveri Delta, 1693-1922.’ In <i>Aspects of Manuscript Culture in South India</i>, edited by Saraju Rath, pp. 235-252. Leiden: Brill, 2012.",
@@ -277,6 +290,10 @@ TEMPLATE_CONFIG = {
         "html": "Jackson, William J. (ed.). <i>The Power of the Sacred Name: Indian Spirituality Inspired by Mantras</i>. Bloomington: World Wisdom, 2011.",
         "identifier": "jackson2011"
         },
+        "Raghavan, Venkataraman. Prayers, Praises, and Psalms. Madras: G. A. Natesan and Co, 1938.": {
+        "html": "Raghavan, Venkataraman. <i>Prayers, Praises, and Psalms</i>. Madras: G. A. Natesan and Co, 1938.",
+        "identifier": "raghavan1938"
+        },
         "Singer, Milton. When a Great Tradition Modernizes: An Anthropological Approach to Indian Civilization, specifically the chapter ‘The Rādhā-Krishna Bhajanas of Madras City’ (pp. 199-241). London: Pall Mall Press, 1972.": {
         "html": "Singer, Milton. <i>When a Great Tradition Modernizes: An Anthropological Approach to Indian Civilization</i>, specifically the chapter ‘The Rādhā-Krishna Bhajanas of Madras City’ (pp. 199-241). London: Pall Mall Press, 1972.",
         "identifier": "singer1972"
@@ -288,6 +305,10 @@ TEMPLATE_CONFIG = {
         "Venkateswaran, T. K. ‘Rādhā-Krishna Bhajanas of South India: A Phenomenological, Theological, and Philosophical Study.’ In Krishna: Myths, Rites, and Attitudes, edited by Milton Singer, pp. 139-72. Chicago: The University of Chicago Press/Vienna: University of Vienna, 1966.": {
         "html": "Venkateswaran, T. K. ‘Rādhā-Krishna Bhajanas of South India: A Phenomenological, Theological, and Philosophical Study.’ In <i>Krishna: Myths, Rites, and Attitudes</i>, edited by Milton Singer, pp. 139-72. Chicago: The University of Chicago Press/Vienna: University of Vienna, 1966.",
         "identifier": "venkateswaran1966"
+        },
+        "Venkatkrishnan, Anand. Love in the Time of Scholarship: The Bhāgavata Purāṇa in Indian Intellectual History. Oxford: Oxford University Press (Rocher Indology Series), 2024.": {
+        "html": "Venkatkrishnan, Anand. <i>Love in the Time of Scholarship: The</i> Bhāgavata Purāṇa <i>in Indian Intellectual History</i>. Oxford: Oxford University Press (Rocher Indology Series), 2024.",
+        "identifier": "venkatkrishnan2024"
         },
         "Aiyer, K. V. Subrahmanya. Historical Sketches of Ancient Dekhan. Madras: Modern Printing Works, 1917.": {
         "html": "Aiyer, K. V. Subrahmanya. <i>Historical Sketches of Ancient Dekhan</i>. Madras: Modern Printing Works, 1917.",
@@ -344,6 +365,30 @@ TEMPLATE_CONFIG = {
         "Veluthat, Kesavan. <i>Brahman Settlements in Kerala: Historical Studies</i>. Sandhya Publications, 1978.": {
         "html": "Veluthat, Kesavan. <i>Brahman Settlements in Kerala: Historical Studies</i>. Sandhya Publications, 1978.",
         "identifier": "veluthat1978"
+        },
+        "Clark, Matthew. The Daśanāmī-Saṃnyāsīs: The Integration of Ascetic Lineages into an Order. Leiden/Boston: Brill, 2006.": {
+        "html": "Clark, Matthew. <i>The Daśanāmī-Saṃnyāsīs: The Integration of Ascetic Lineages into an Order</i>. Leiden/Boston: Brill, 2006.",
+        "identifier": "clark2006"
+        },
+        "Nowicka, Olga. ‘Vedic Ritualism and Advaita Vedānta Monastic Institutions in Kerala.’ Studia Religiologica 50, no. 2 (2017): 163-171.": {
+        "html": "Nowicka, Olga. ‘Vedic Ritualism and Advaita Vedānta Monastic Institutions in Kerala.’ <i>Studia Religiologica</i> 50, no. 2 (2017): 163-171.",
+        "identifier": "nowicka2017"
+        },
+        "Simmons, Caleb. ‘Maṭhas: Towards Understanding the Public Religious, Educational, and Political Ascetic Institution in South Asian religions’. Religion Compass 17 (2023): 1-9.": {
+        "html": "Simmons, Caleb. ‘Maṭhas: Towards Understanding the Public Religious, Educational, and Political Ascetic Institution in South Asian religions’. <i>Religion Compass</i> 17 (2023): 1-9.",
+        "identifier": "simmons2023"
+        },
+        "Stoker, Valerie. 'Darbār, Maṭha, Devasthānam: The Politics of Intellectual Commitment and Religious Organization in Sixteenth-Century South India’. South Asian History and Culture 6(1) (2015): 130-146.": {
+        "html": "Stoker, Valerie. 'Darbār, Maṭha, Devasthānam: The Politics of Intellectual Commitment and Religious Organization in Sixteenth-Century South India’. <i>South Asian History and Culture</i> 6(1) (2015): 130-146.",
+        "identifier": "stoker2015"
+        },
+        "Trento, Margherita. ‘Early Modern Tamil Prose: A Note on Some Manuscripts of the Tiruvāvaṭutuṟai Ātīṉam. In For the Love of Tamil: Essays in Honor of E. Annamalai, edited by Margherita Trento et al., pp. 455-477. Napoli, 2025.": {
+        "html": "Trento, Margherita. ‘Early Modern Tamil Prose: A Note on Some Manuscripts of the Tiruvāvaṭutuṟai Ātīṉam. In <i>For the Love of Tamil: Essays in Honor of E. Annamalai</i>, edited by Margherita Trento et al., pp. 455-477. Napoli, 2025.",
+        "identifier": "trento2025"
+        },
+        "Ariav, Talia and Whitney Cox. ‘On Unresolved Tensions in Rāmabhadra Dīkṣita’s Śṛṅgāratilakabhāṇa.’ Journal of South Asian Intellectual History 4 (2021): 47-71.": {
+        "html": "Ariav, Talia and Whitney Cox. ‘On Unresolved Tensions in Rāmabhadra Dīkṣita’s <i>Śṛṅgāratilakabhāṇa</i>.’ <i>Journal of South Asian Intellectual History</i> 4 (2021): 47-71.",
+        "identifier": "ariav2021"
         },
         "New Catalogus Catalogorum (NCC). Vols 1-36.": {
         "html": "New Catalogus Catalogorum (NCC). Vols 1–36.",
