@@ -214,8 +214,8 @@ ENTITY_CONFIG = {
 
 TEMPLATE_CONFIG = {
     "bibliographical_references": {
-        "Ariav, Talia. ‘Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship.’ The Indian Economic and Social History Review 59, no. 3 (2022): 273-298.": {
-        "html": "Ariav, Talia. ‘Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship.’ <i>The Indian Economic and Social History Review</i> 59, no. 3 (2022): 273-298.",
+        "Ariav, Talia. ‘Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship.’ The Indian Economic and Social History Review 59, no. 3 (2022): 273–298.": {
+        "html": "Ariav, Talia. ‘Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship.’ <i>The Indian Economic and Social History Review</i> 59, no. 3 (2022): 273–298.",
         "identifier": "ariav2022"
         },
         "Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.": {
@@ -238,8 +238,8 @@ TEMPLATE_CONFIG = {
         "html": "Narayana Rao, V., Shulman, D., and S. Subrahmanyam. <i>Symbols of Substance: Court and State in Nāyaka Period Tamilnadu</i>. Delhi: Oxford University Press, 1992.",
         "identifier": "narayana1992"
         },
-        "Peterson, Indira Viswanathan. ‘The Schools of Serfoji II of Tanjore: Education and Princely Modernity in Early 19th–Century India.’ In Transcolonial Modernities in South Asia, edited by Michael S. Dodson and Brian A. Hatcher, pp. 15-44. Routledge Studies in the Modern History of South Asia, 2012.": {
-        "html": "Peterson, Indira Viswanathan. ‘The Schools of Serfoji II of Tanjore: Education and Princely Modernity in Early 19th–Century India.’ In <i>Transcolonial Modernities in South Asia</i>, edited by Michael S. Dodson and Brian A. Hatcher, pp. 15-44. Routledge Studies in the Modern History of South Asia, 2012.",
+        "Peterson, Indira Viswanathan. ‘The Schools of Serfoji II of Tanjore: Education and Princely Modernity in Early 19th–Century India.’ In Transcolonial Modernities in South Asia, edited by Michael S. Dodson and Brian A. Hatcher, pp. 15–44. Routledge Studies in the Modern History of South Asia, 2012.": {
+        "html": "Peterson, Indira Viswanathan. ‘The Schools of Serfoji II of Tanjore: Education and Princely Modernity in Early 19th–Century India.’ In <i>Transcolonial Modernities in South Asia</i>, edited by Michael S. Dodson and Brian A. Hatcher, pp. 15–44. Routledge Studies in the Modern History of South Asia, 2012.",
         "identifier": "peterson2012"
         },
         "Subrahmanyam, Sanjay (2001). Penumbral Visions: Making Polities in Early Modern South India. Ann Arbor: The University of Michigan Press.": {
@@ -250,40 +250,40 @@ TEMPLATE_CONFIG = {
         "html": "Vriddhagirisan, V. <i>The Nayaks of Tanjore</i>. Annamalainagar, 1942; reprint, New Delhi, 2011.",
         "identifier": "vriddhagirisan2011"
         },
-        "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In Lieux de savoir, Tome 1 : Espaces et communautés, edited by Christian Jacob, pp. 616-36. Paris: Albin Michel, 2007.": {
-        "html": "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In <i>Lieux de savoir, Tome 1 : Espaces et communautés</i>, edited by Christian Jacob, pp. 616-36. Paris: Albin Michel, 2007.",
+        "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In Lieux de savoir, Tome 1 : Espaces et communautés, edited by Christian Jacob, pp. 616–36. Paris: Albin Michel, 2007.": {
+        "html": "Wujastyk, Dominik. ‘La bibliothèque de Thanjavur.’ In <i>Lieux de savoir, Tome 1 : Espaces et communautés</i>, edited by Christian Jacob, pp. 616–36. Paris: Albin Michel, 2007.",
         "identifier": "wujastyk2007"
         },
-        "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill, 2021.": {
-        "html": "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In <i>Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk</i>, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209-232. Leiden: Brill, 2021.",
+        "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209–232. Leiden: Brill, 2021.": {
+        "html": "Cerulli, Anthony. ‘Allegory and History, Life and Embodiment’. In <i>Body and Cosmos: Studies in Early Indian Medical and Astral Sciences in Honor of Kenneth G. Zysk</i>, edited by T. Knudsen, J. Schmidt-Madsen, and S. Speyer, pp. 209–232. Leiden: Brill, 2021.",
         "identifier": "cerulli2021"
         },
-        "Duquette, Jonathan. ‘Debating God in the Delta: Trimūrti, Transcendence, and Hierarchy in Late Advaita Vedānta.’ In Science and Society in the Sanskrit World, edited by C. Fleming, T. L. Knudsen, A. Misra and V. Sharma, pp. 401-447. Leiden/Boston: Brill, 2023.": {
-        "html": "Duquette, Jonathan. ‘Debating God in the Delta: <i>Trimūrti</i>, Transcendence, and Hierarchy in Late Advaita Vedānta.’ In <i>Science and Society in the Sanskrit World</i>, edited by C. Fleming, T. L. Knudsen, A. Misra and V. Sharma, pp. 401-447. Leiden/Boston: Brill, 2023.",
+        "Duquette, Jonathan. ‘Debating God in the Delta: Trimūrti, Transcendence, and Hierarchy in Late Advaita Vedānta.’ In Science and Society in the Sanskrit World, edited by C. Fleming, T. L. Knudsen, A. Misra and V. Sharma, pp. 401–447. Leiden/Boston: Brill, 2023.": {
+        "html": "Duquette, Jonathan. ‘Debating God in the Delta: <i>Trimūrti</i>, Transcendence, and Hierarchy in Late Advaita Vedānta.’ In <i>Science and Society in the Sanskrit World</i>, edited by C. Fleming, T. L. Knudsen, A. Misra and V. Sharma, pp. 401–447. Leiden/Boston: Brill, 2023.",
         "identifier": "duquette2023"
         },
-        "Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.": {
-        "html": "Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.",
+        "Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684–1710). Tiruchi: The Kalyan Press, 1952.": {
+        "html": "Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684–1710)</i>. Tiruchi: The Kalyan Press, 1952.",
         "identifier": "raghavan1952"
         },
-        "Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. Journal of Oriental Research Madras III (1929): 68-73.": {
-        "html": "Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. <i>Journal of Oriental Research Madras</i> III (1929): 68-73.",
+        "Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. Journal of Oriental Research Madras III (1929): 68–73.": {
+        "html": "Ramaswami Sastri, V. A. ‘Ānandarāyamakhin versus Appādhvarin’. <i>Journal of Oriental Research Madras</i> III (1929): 68–73.",
         "identifier": "ramaswamisastri1929"
         },
-        "Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.": {
-        "html": "Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.",
+        "Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126–142 and pp. 176–196, 2004.": {
+        "html": "Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126–142 and pp. 176–196, 2004.",
         "identifier": "kuppuswamisastri2004"
         },
         "Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.": {
         "html": "Thiruvengadathan, A. <i>Rāmabhadra Dīkṣita and His Works: A Study</i>. Chennai: The Kuppuswami Sastri Research Institute, 2002.",
         "identifier": "thiruvengadathan2002"
         },
-        "Wujastyk, Dominik. ‘Rāmasubrahmaṇya’s Manuscripts: Intellectual Networks in the Kaveri Delta, 1693-1922.’ In Aspects of Manuscript Culture in South India, edited by Saraju Rath, pp. 235-252. Leiden: Brill, 2012.": {
-        "html": "Wujastyk, Dominik. ‘Rāmasubrahmaṇya’s Manuscripts: Intellectual Networks in the Kaveri Delta, 1693-1922.’ In <i>Aspects of Manuscript Culture in South India</i>, edited by Saraju Rath, pp. 235-252. Leiden: Brill, 2012.",
+        "Wujastyk, Dominik. ‘Rāmasubrahmaṇya’s Manuscripts: Intellectual Networks in the Kaveri Delta, 1693–1922.’ In Aspects of Manuscript Culture in South India, edited by Saraju Rath, pp. 235–252. Leiden: Brill, 2012.": {
+        "html": "Wujastyk, Dominik. ‘Rāmasubrahmaṇya’s Manuscripts: Intellectual Networks in the Kaveri Delta, 1693–1922.’ In <i>Aspects of Manuscript Culture in South India</i>, edited by Saraju Rath, pp. 235-252. Leiden: Brill, 2012.",
         "identifier": "wujastyk2012"
         },
-        "Jackson, William J. ‘Name-devotion in Indian Religions and Kaveri Delta Namasiddhanta.’ Journal for the Study of Religion 7(2) (1994): 33-55.": {
-        "html": "Jackson, William J. ‘Name-devotion in Indian Religions and Kaveri Delta Namasiddhanta.’ <i>Journal for the Study of Religion</i> 7(2) (1994): 33-55.",
+        "Jackson, William J. ‘Name-devotion in Indian Religions and Kaveri Delta Namasiddhanta.’ Journal for the Study of Religion 7(2) (1994): 33–55.": {
+        "html": "Jackson, William J. ‘Name-devotion in Indian Religions and Kaveri Delta Namasiddhanta.’ <i>Journal for the Study of Religion</i> 7(2) (1994): 33–55.",
         "identifier": "jackson1994"
         },
         "Jackson, William J. (ed.). The Power of the Sacred Name: Indian Spirituality Inspired by Mantras. Bloomington: World Wisdom, 2011.": {
@@ -294,16 +294,16 @@ TEMPLATE_CONFIG = {
         "html": "Raghavan, Venkataraman. <i>Prayers, Praises, and Psalms</i>. Madras: G. A. Natesan and Co, 1938.",
         "identifier": "raghavan1938"
         },
-        "Singer, Milton. When a Great Tradition Modernizes: An Anthropological Approach to Indian Civilization, specifically the chapter ‘The Rādhā-Krishna Bhajanas of Madras City’ (pp. 199-241). London: Pall Mall Press, 1972.": {
-        "html": "Singer, Milton. <i>When a Great Tradition Modernizes: An Anthropological Approach to Indian Civilization</i>, specifically the chapter ‘The Rādhā-Krishna Bhajanas of Madras City’ (pp. 199-241). London: Pall Mall Press, 1972.",
+        "Singer, Milton. When a Great Tradition Modernizes: An Anthropological Approach to Indian Civilization, specifically the chapter ‘The Rādhā-Krishna Bhajanas of Madras City’ (pp. 199–241). London: Pall Mall Press, 1972.": {
+        "html": "Singer, Milton. <i>When a Great Tradition Modernizes: An Anthropological Approach to Indian Civilization</i>, specifically the chapter ‘The Rādhā-Krishna Bhajanas of Madras City’ (pp. 199–241). London: Pall Mall Press, 1972.",
         "identifier": "singer1972"
         },
-        "Soneji, Davesh. ‘The Powers of Polyglossia: Marathi Kīrtan, Multilingualism, and the Making of a South Indian Devotional Tradition.’ International Journal of Hindu Studies 17 (3) (2014): 339-369": {
-        "html": "Soneji, Davesh. ‘The Powers of Polyglossia: Marathi Kīrtan, Multilingualism, and the Making of a South Indian Devotional Tradition.’ <i>International Journal of Hindu Studies</i> 17 (3) (2014): 339-369",
+        "Soneji, Davesh. ‘The Powers of Polyglossia: Marathi Kīrtan, Multilingualism, and the Making of a South Indian Devotional Tradition.’ International Journal of Hindu Studies 17 (3) (2014): 339–369": {
+        "html": "Soneji, Davesh. ‘The Powers of Polyglossia: Marathi Kīrtan, Multilingualism, and the Making of a South Indian Devotional Tradition.’ <i>International Journal of Hindu Studies</i> 17 (3) (2014): 339–369",
         "identifier": "soneji2014"
         },
-        "Venkateswaran, T. K. ‘Rādhā-Krishna Bhajanas of South India: A Phenomenological, Theological, and Philosophical Study.’ In Krishna: Myths, Rites, and Attitudes, edited by Milton Singer, pp. 139-72. Chicago: The University of Chicago Press/Vienna: University of Vienna, 1966.": {
-        "html": "Venkateswaran, T. K. ‘Rādhā-Krishna Bhajanas of South India: A Phenomenological, Theological, and Philosophical Study.’ In <i>Krishna: Myths, Rites, and Attitudes</i>, edited by Milton Singer, pp. 139-72. Chicago: The University of Chicago Press/Vienna: University of Vienna, 1966.",
+        "Venkateswaran, T. K. ‘Rādhā-Krishna Bhajanas of South India: A Phenomenological, Theological, and Philosophical Study.’ In Krishna: Myths, Rites, and Attitudes, edited by Milton Singer, pp. 139–72. Chicago: The University of Chicago Press/Vienna: University of Vienna, 1966.": {
+        "html": "Venkateswaran, T. K. ‘Rādhā-Krishna Bhajanas of South India: A Phenomenological, Theological, and Philosophical Study.’ In <i>Krishna: Myths, Rites, and Attitudes</i>, edited by Milton Singer, pp. 139–72. Chicago: The University of Chicago Press/Vienna: University of Vienna, 1966.",
         "identifier": "venkateswaran1966"
         },
         "Venkatkrishnan, Anand. Love in the Time of Scholarship: The Bhāgavata Purāṇa in Indian Intellectual History. Oxford: Oxford University Press (Rocher Indology Series), 2024.": {
@@ -314,24 +314,24 @@ TEMPLATE_CONFIG = {
         "html": "Aiyer, K. V. Subrahmanya. <i>Historical Sketches of Ancient Dekhan</i>. Madras: Modern Printing Works, 1917.",
         "identifier": "aiyer1917"
         },
-        "Béteille, André. ‘Sripuram: A Village in Tanjore District.’ The Economic Weekly, Annual number, February 1962, pp. 141-46.": {
-        "html": "Béteille, André. ‘Sripuram: A Village in Tanjore District.’ <i>The Economic Weekly</i>, Annual number, February 1962, pp. 141-46.",
+        "Béteille, André. ‘Sripuram: A Village in Tanjore District.’ The Economic Weekly, Annual number, February 1962, pp. 141–46.": {
+        "html": "Béteille, André. ‘Sripuram: A Village in Tanjore District.’ <i>The Economic Weekly</i>, Annual number, February 1962, pp. 141–46.",
         "identifier": "beteille1962"
         },
         "Béteille, André. Caste, Class, and Power: Changing Patterns of Stratification in a Tanjore Village. Delhi: Oxford University Press (3rd ed.), 2012. First edition published in 1996.": {
         "html": "Béteille, André. <i>Caste, Class, and Power: Changing Patterns of Stratification in a Tanjore Village</i>. Delhi: Oxford University Press (3rd ed.), 2012. First edition published in 1996.",
         "identifier": "beteille2012"
         },
-        "Bronkhorst, Johannes. ‘Āśramas, Agrahāras, and Monasteries.’ In On the Growth and Composition of the Sanskrit Epics and Purāṇas: Relationship to Kāvya, Social and Economic Context, edited by Ivan Andrijanić and Sven Sellmer (Proceedings of the Fifth Dubrovnik International Conference on the Sanskrit Epics and Purāṇas, 2008), 137-60. Zagreb: Croatian Academy of Sciences and Arts, XXXVI, 2016.": {
-        "html": "Bronkhorst, Johannes. ‘Āśramas, Agrahāras, and Monasteries.’ In <i>On the Growth and Composition of the Sanskrit Epics and Purāṇas: Relationship to Kāvya, Social and Economic Context</i>, edited by Ivan Andrijanić and Sven Sellmer (Proceedings of the Fifth Dubrovnik International Conference on the Sanskrit Epics and Purāṇas, 2008), 137-60. Zagreb: Croatian Academy of Sciences and Arts, XXXVI, 2016.",
+        "Bronkhorst, Johannes. ‘Āśramas, Agrahāras, and Monasteries.’ In On the Growth and Composition of the Sanskrit Epics and Purāṇas: Relationship to Kāvya, Social and Economic Context, edited by Ivan Andrijanić and Sven Sellmer (Proceedings of the Fifth Dubrovnik International Conference on the Sanskrit Epics and Purāṇas, 2008), 137–60. Zagreb: Croatian Academy of Sciences and Arts, XXXVI, 2016.": {
+        "html": "Bronkhorst, Johannes. ‘Āśramas, Agrahāras, and Monasteries.’ In <i>On the Growth and Composition of the Sanskrit Epics and Purāṇas: Relationship to Kāvya, Social and Economic Context</i>, edited by Ivan Andrijanić and Sven Sellmer (Proceedings of the Fifth Dubrovnik International Conference on the Sanskrit Epics and Purāṇas, 2008), 137–60. Zagreb: Croatian Academy of Sciences and Arts, XXXVI, 2016.",
         "identifier": "bronkhorst2016"
         },
         "Champakalakshmi, R. ‘Reappraisal of a Brahmanical Institution: The Brahmadeya and its Ramifications in Early South India.’ In Structure and Society in Early South India, edited by Kenneth R. Hall, 59-84. Delhi: Oxford University Press, 2001.": {
-        "html": "Champakalakshmi, R. ‘Reappraisal of a Brahmanical Institution: The Brahmadeya and its Ramifications in Early South India.’ In <i>Structure and Society in Early South India</i>, edited by Kenneth R. Hall, 59-84. Delhi: Oxford University Press, 2001.",
+        "html": "Champakalakshmi, R. ‘Reappraisal of a Brahmanical Institution: The Brahmadeya and its Ramifications in Early South India.’ In <i>Structure and Society in Early South India</i>, edited by Kenneth R. Hall, 59–84. Delhi: Oxford University Press, 2001.",
         "identifier": "champakalakshmi2001"
         },
-        "Fuller, C. J. and Narasimhan, Haripriya. ‘The agraharam: The Transformation of Social Space and Brahman Status in Tamilnadu during the Colonial and Postcolonial periods.’ In Ritual, Caste, and Religion in Colonial South India, edited by Michael Bergunder, Heiko Freise and Ulrike Schröder, pp. 219-37. Halle: Neue Hallesche Berichte, 2010.": {
-        "html": "Fuller, C. J. and Narasimhan, Haripriya. ‘The <i>agraharam</i>: The Transformation of Social Space and Brahman Status in Tamilnadu during the Colonial and Postcolonial periods.’ In <i>Ritual, Caste, and Religion in Colonial South India</i>, edited by Michael Bergunder, Heiko Freise and Ulrike Schröder, pp. 219-37. Halle: Neue Hallesche Berichte, 2010.",
+        "Fuller, C. J. and Narasimhan, Haripriya. ‘The agraharam: The Transformation of Social Space and Brahman Status in Tamilnadu during the Colonial and Postcolonial periods.’ In Ritual, Caste, and Religion in Colonial South India, edited by Michael Bergunder, Heiko Freise and Ulrike Schröder, pp. 219–37. Halle: Neue Hallesche Berichte, 2010.": {
+        "html": "Fuller, C. J. and Narasimhan, Haripriya. ‘The <i>agraharam</i>: The Transformation of Social Space and Brahman Status in Tamilnadu during the Colonial and Postcolonial periods.’ In <i>Ritual, Caste, and Religion in Colonial South India</i>, edited by Michael Bergunder, Heiko Freise and Ulrike Schröder, pp. 219–37. Halle: Neue Hallesche Berichte, 2010.",
         "identifier": "fuller-narasimhan2010"
         },
         "Gough, Kathleen. Rural Society in Southeast India. Cambridge: Cambridge University Press, 1981.": {
@@ -350,8 +350,8 @@ TEMPLATE_CONFIG = {
         "html": "Ludden, David. <i>Peasant History in South India</i>. Princeton: Princeton University Press, 1985",
         "identifier": "ludden1985"
         },
-        "Shantakumari, S. Leela. History of the Agraharas, Karnataka, 400-1300. Madras: New Era Publications, 1986.": {
-        "html": "Shantakumari, S. Leela. <i>History of the Agraharas, Karnataka, 400-1300</i>. Madras: New Era Publications, 1986.",
+        "Shantakumari, S. Leela. History of the Agraharas, Karnataka, 400–1300. Madras: New Era Publications, 1986.": {
+        "html": "Shantakumari, S. Leela. <i>History of the Agraharas, Karnataka, 400–1300</i>. Madras: New Era Publications, 1986.",
         "identifier": "shantakumari1986"
         },
         "Stein, Burton. Peasant State and Society in Medieval South India. Oxford: Oxford University Press, 1980.": {
@@ -370,27 +370,27 @@ TEMPLATE_CONFIG = {
         "html": "Clark, Matthew. <i>The Daśanāmī-Saṃnyāsīs: The Integration of Ascetic Lineages into an Order</i>. Leiden/Boston: Brill, 2006.",
         "identifier": "clark2006"
         },
-        "Nowicka, Olga. ‘Vedic Ritualism and Advaita Vedānta Monastic Institutions in Kerala.’ Studia Religiologica 50, no. 2 (2017): 163-171.": {
-        "html": "Nowicka, Olga. ‘Vedic Ritualism and Advaita Vedānta Monastic Institutions in Kerala.’ <i>Studia Religiologica</i> 50, no. 2 (2017): 163-171.",
+        "Nowicka, Olga. ‘Vedic Ritualism and Advaita Vedānta Monastic Institutions in Kerala.’ Studia Religiologica 50, no. 2 (2017): 163–171.": {
+        "html": "Nowicka, Olga. ‘Vedic Ritualism and Advaita Vedānta Monastic Institutions in Kerala.’ <i>Studia Religiologica</i> 50, no. 2 (2017): 163–171.",
         "identifier": "nowicka2017"
         },
-        "Simmons, Caleb. ‘Maṭhas: Towards Understanding the Public Religious, Educational, and Political Ascetic Institution in South Asian religions’. Religion Compass 17 (2023): 1-9.": {
-        "html": "Simmons, Caleb. ‘Maṭhas: Towards Understanding the Public Religious, Educational, and Political Ascetic Institution in South Asian religions’. <i>Religion Compass</i> 17 (2023): 1-9.",
+        "Simmons, Caleb. ‘Maṭhas: Towards Understanding the Public Religious, Educational, and Political Ascetic Institution in South Asian religions’. Religion Compass 17 (2023): 1–9.": {
+        "html": "Simmons, Caleb. ‘Maṭhas: Towards Understanding the Public Religious, Educational, and Political Ascetic Institution in South Asian religions’. <i>Religion Compass</i> 17 (2023): 1–9.",
         "identifier": "simmons2023"
         },
-        "Stoker, Valerie. 'Darbār, Maṭha, Devasthānam: The Politics of Intellectual Commitment and Religious Organization in Sixteenth-Century South India’. South Asian History and Culture 6(1) (2015): 130-146.": {
-        "html": "Stoker, Valerie. 'Darbār, Maṭha, Devasthānam: The Politics of Intellectual Commitment and Religious Organization in Sixteenth-Century South India’. <i>South Asian History and Culture</i> 6(1) (2015): 130-146.",
+        "Stoker, Valerie. 'Darbār, Maṭha, Devasthānam: The Politics of Intellectual Commitment and Religious Organization in Sixteenth-Century South India’. South Asian History and Culture 6(1) (2015): 130–146.": {
+        "html": "Stoker, Valerie. 'Darbār, Maṭha, Devasthānam: The Politics of Intellectual Commitment and Religious Organization in Sixteenth-Century South India’. <i>South Asian History and Culture</i> 6(1) (2015): 130–146.",
         "identifier": "stoker2015"
         },
-        "Trento, Margherita. ‘Early Modern Tamil Prose: A Note on Some Manuscripts of the Tiruvāvaṭutuṟai Ātīṉam. In For the Love of Tamil: Essays in Honor of E. Annamalai, edited by Margherita Trento et al., pp. 455-477. Napoli, 2025.": {
-        "html": "Trento, Margherita. ‘Early Modern Tamil Prose: A Note on Some Manuscripts of the Tiruvāvaṭutuṟai Ātīṉam. In <i>For the Love of Tamil: Essays in Honor of E. Annamalai</i>, edited by Margherita Trento et al., pp. 455-477. Napoli, 2025.",
+        "Trento, Margherita. ‘Early Modern Tamil Prose: A Note on Some Manuscripts of the Tiruvāvaṭutuṟai Ātīṉam. In For the Love of Tamil: Essays in Honor of E. Annamalai, edited by Margherita Trento et al., pp. 455–477. Napoli, 2025.": {
+        "html": "Trento, Margherita. ‘Early Modern Tamil Prose: A Note on Some Manuscripts of the Tiruvāvaṭutuṟai Ātīṉam. In <i>For the Love of Tamil: Essays in Honor of E. Annamalai</i>, edited by Margherita Trento et al., pp. 455–477. Napoli, 2025.",
         "identifier": "trento2025"
         },
-        "Ariav, Talia and Whitney Cox. ‘On Unresolved Tensions in Rāmabhadra Dīkṣita’s Śṛṅgāratilakabhāṇa.’ Journal of South Asian Intellectual History 4 (2021): 47-71.": {
-        "html": "Ariav, Talia and Whitney Cox. ‘On Unresolved Tensions in Rāmabhadra Dīkṣita’s <i>Śṛṅgāratilakabhāṇa</i>.’ <i>Journal of South Asian Intellectual History</i> 4 (2021): 47-71.",
+        "Ariav, Talia and Whitney Cox. ‘On Unresolved Tensions in Rāmabhadra Dīkṣita’s Śṛṅgāratilakabhāṇa.’ Journal of South Asian Intellectual History 4 (2021): 47–71.": {
+        "html": "Ariav, Talia and Whitney Cox. ‘On Unresolved Tensions in Rāmabhadra Dīkṣita’s <i>Śṛṅgāratilakabhāṇa</i>.’ <i>Journal of South Asian Intellectual History</i> 4 (2021): 47–71.",
         "identifier": "ariav2021"
         },
-        "New Catalogus Catalogorum (NCC). Vols 1-36.": {
+        "New Catalogus Catalogorum (NCC). Vols 1–36.": {
         "html": "New Catalogus Catalogorum (NCC). Vols 1–36.",
         "identifier": "ncc"
         },

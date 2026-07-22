@@ -234,8 +234,8 @@ TEMPLATE_CONFIG = {
     "bibliographical_references": [
         ("", "-- Select Reference --"),
         ("Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.", "Debates in the Delta: An Intellectual History of Late Advaita"),
-        ("Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.", "Śāhendravilāsa of Śrīdhara Veṅkaṭeśa"),
-        ("Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.", "Ramabhadra-Dikshita and the Southern Poets of his Time"),
+        ("Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684–1710). Tiruchi: The Kalyan Press, 1952.", "Śāhendravilāsa of Śrīdhara Veṅkaṭeśa"),
+        ("Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126–142 and pp. 176–196, 2004.", "Ramabhadra-Dikshita and the Southern Poets of his Time"),
         ("Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.", "Rāmabhadra Dīkṣita and His Works: A Study"),
         ("New Catalogus Catalogorum (NCC). Vols 1–36.", "New Catalogus Catalogorum (NCC)"),
         ("A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.", "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library"),
