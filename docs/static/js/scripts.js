@@ -276,3 +276,25 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
   }
 });
+
+// Scroll to hash target with navbar offset
+function scrollToHashTarget(offset = 70) {
+  const hash = window.location.hash;
+  if (!hash) return;
+
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  setTimeout(() => {
+    const y = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    });
+  }, 50);
+}
+
+window.addEventListener('load', () => {
+  scrollToHashTarget();
+});
