@@ -390,24 +390,24 @@ TEMPLATE_CONFIG = {
         "html": "Ariav, Talia and Whitney Cox. ‘On Unresolved Tensions in Rāmabhadra Dīkṣita’s <i>Śṛṅgāratilakabhāṇa</i>.’ <i>Journal of South Asian Intellectual History</i> 4 (2021): 47-71.",
         "identifier": "ariav2021"
         },
-        "New Catalogus Catalogorum (NCC). Vols 1-36.": {
-        "html": "New Catalogus Catalogorum (NCC). Vols 1-36.",
+        "New Catalogus Catalogorum (NCC). Vols 1–36.": {
+        "html": "New Catalogus Catalogorum (NCC). Vols 1–36.",
         "identifier": "ncc"
         },
-        "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1-19.": {
-        "html": "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1-19.",
+        "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.": {
+        "html": "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.",
         "identifier": "sml-catalogue"
         },
-        "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1-25.": {
-        "html": "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1-25.",
+        "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.": {
+        "html": "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.",
         "identifier": "goml-catalogue"
         },
-        "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1-2": {
-        "html": "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1-2",
+        "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2": {
+        "html": "Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2",
         "identifier": "oppert-private-libraries"
         },
-        "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1-13.": {
-        "html": "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1-13.",
+        "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.": {
+        "html": "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.",
         "identifier": "adyar-catalogue"
         },
         "A Descriptive Catalogue of Sanskrit Manuscripts in the Government Oriental Library, Mysore (Mysore). Vol. 3.": {
