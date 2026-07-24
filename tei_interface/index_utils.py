@@ -371,7 +371,29 @@ def delete_connection_entry(xml_id, form_data):
 
 
 def related_add(relationship, key, person_a_key, person_a_text, reverse_type, config, person_a_from=None, person_a_to=None):    
+    """
+    Add the reciprocal relationship to a related person record.
 
+    When Person A is linked to Person B (e.g. "teacher"),
+    this function creates the inverse relationship (e.g. "student")
+    in Person B's XML record.
+
+    Args:
+        relationship (str): Relationship being created.
+        key (str): XML ID of the related person (Person B).
+        person_a_key (str): XML ID of the originating person (Person A).
+        person_a_text (str): Display name of the originating person.
+        reverse_type (str): Inverse relationship type to add to Person B.
+        config (dict): Entity configuration for person records.
+        person_a_from (str, optional): Relationship start date.
+        person_a_to (str, optional): Relationship end date.
+
+    Returns:
+        dict: {"ok": True} if the reciprocal relationship was added,
+        otherwise {"ok": False}.
+    """
+
+    #load the related person's record.
     context = load_or_create_entity(
         entity_name="person",
         config=config,
@@ -383,21 +405,25 @@ def related_add(relationship, key, person_a_key, person_a_text, reverse_type, co
     if context:
         person_b = context["entity_elem"]
 
+        #the current record must already have an ID and display name.
         if not person_a_key or not person_a_text:
             flash("Record needs to be saved with name to create relationship.", "rel-persons-error")
             return {"ok": False}
 
+        #build the attributes for the reciprocal relationship.
         element_attrs = {
             "type": reverse_type,
             "key": person_a_key,
         }
 
+        #add date range if one was supplied.
         if person_a_from and person_a_to:
             element_attrs.update({
                 "from": person_a_from,
                 "to": person_a_to
         })
 
+        #create the reciprocal relationship element.
         el = build_section(
             parent=person_b,
             item_tag="trait",
@@ -408,21 +434,43 @@ def related_add(relationship, key, person_a_key, person_a_text, reverse_type, co
             child_text=person_a_text,
         )
 
+        #insert into the correct position in TEI.
         child_order = config["child_order"]
-
         insert_in_order(person_b, "trait", el, child_order, NSMAP)
 
+        #save the updated related record and refresh its index entry.
         write_entity_to_file(context)
+        #refresh the person index (connection indexes are updated elsewhere).
         update_index_entry("person", context["xml_id"])
 
         return {"ok": True}
 
 
 def related_delete(entity_a_key, entity, form_data, config):
+    """
+    Remove the reciprocal relationship from a related person record.
 
+    When a relationship from Person A to Person B is deleted,
+    this function removes the corresponding inverse relationship
+    from Person B's XML record and updates the relationship index.
+
+    Args:
+        entity_a_key (str): XML ID of the originating person (Person A).
+        entity (str): Entity type to load (normally "person").
+        form_data (ImmutableMultiDict | dict): Submitted form data
+            containing the related person's ID and relationship type.
+        config (dict): Entity configuration for person records.
+
+    Returns:
+        dict: {"ok": True} if the reciprocal relationship was removed,
+        otherwise {"ok": False}.
+    """
+
+    #values describing the related person and relationship to remove.
     key = form_data.get("key")
-    type = form_data.get("name_type")
+    relationship_type = form_data.get("name_type")
 
+    #load the related person's record
     context = load_or_create_entity(        
         entity_name=entity,
         config=config,
@@ -434,15 +482,18 @@ def related_delete(entity_a_key, entity, form_data, config):
     if context:
         entity = context["entity_elem"]
 
-    reverse_type = RELATIONSHIP_INVERSES.get(type)
+    #determine the inverse relationship to remove from Person B.
+    reverse_type = RELATIONSHIP_INVERSES.get(relationship_type)
 
-
+    #if the related person's record could not be loaded, abort.
     if not context:
         flash("Related record could not be loaded, perhaps deleted in other location.", "rel-persons-error")
         return {"ok": False}
 
+    #track whether a reciprocal relationship was found and removed.
     removed = False
 
+    #find and remove the matching reciprocal relationship
     for trait in entity.findall(".//tei:trait", namespaces=NSMAP):
         if trait.get("type") == reverse_type and trait.get("key") == entity_a_key:
             entity.remove(trait)
@@ -450,81 +501,126 @@ def related_delete(entity_a_key, entity, form_data, config):
             break
 
     if removed:
+        #save updated related record
         write_entity_to_file(context)
 
+        #remove both directions of the relationship from the
+        #person connection index.
         path = get_index_file("person_connections")
         if not os.path.exists(path):
             return
+        
         index_data = read_hjson(path)
 
+        #remove Person A from Person B's connection index.
         for i, item in enumerate(index_data.get(key, [])):
             if item[0] == entity_a_key:
                 del index_data[key][i]
                 break
 
+        #remove Person B from Person A's connection index.
         for i, item in enumerate(index_data.get(entity_a_key, [])):
             if item[0] == key:
                 del index_data[entity_a_key][i]
                 break
 
+        #save the updated connection index.
         write_hjson(index_data, path)
 
     return {"ok": removed}
 
 
 def remove_connection_index(entity, key, xml_id, target_type):
+    """
+    Remove a single matching connection entry from an entity connection index.
+
+    The connection index is stored using the entity-specific index file
+    (e.g. work_connections). The function removes only the first entry
+    matching both the target XML id and target type.
+
+    If the key becomes empty after removal, the key is removed from the index.
+
+    Args:
+        entity (str): Entity type used to locate the connection index file.
+        key (str): Entity key whose connections should be updated.
+        xml_id (str): XML identifier of the connected record.
+        target_type (str): Type of the connected target.
+
+    Returns:
+        None
+    """
+
+    #determine the appropriate connection index
     entity_ind_name = f"{entity}_connections"
     path = get_index_file(entity_ind_name)
 
+    #nothing to remove if the index file does not exist
     if not os.path.exists(path):
         return
 
+    #load the current connection index data
     index_data = read_hjson(path)
 
+    #nothing to remove if the entity key is not present
     if key not in index_data:
         return
 
-    # Remove only ONE matching entry
+    #find and remove only the first connection matching
     for i, item in enumerate(index_data[key]):
         if item[0] == xml_id and item[1] == target_type:
             del index_data[key][i]
             break
 
-    # Clean up if empty
+    #remove the key completely if no connections remain
     if not index_data[key]:
         del index_data[key]
 
+    #save the updated connection index.
     write_hjson(index_data, path)
 
 
 def remove_all_connections_from_index(entity, xml_id):
     """
-    Remove all entries in a specific entity connection index that reference the given xml_id.
+    Remove all entries in a specific entity connection index that reference
+    the given xml_id.
 
     Args:
         entity (str): Entity type, e.g., "place", "person", "work".
         xml_id (str): The ID of the entity being deleted.
+
+    Returns:
+        None
     """
 
+    #determine the appropriate connection index
     index_name = f"{entity}_connections"
     path = get_index_file(index_name)
 
+    #nothing to remove if the index file does not exist
     if not os.path.exists(path):
         return
 
+    #load the current connection index data
     index_data = read_hjson(path)
 
+    #track whether any changes were made before writing back to disk
     changed = False
+    
+    #remove all connection entries pointing to the deleted xml_id
     for key, entries in list(index_data.items()):
-        # Keep only entries not matching xml_id
         new_entries = [entry for entry in entries if entry[0] != xml_id]
+        #only update the index if matching entries were removed
         if len(new_entries) != len(entries):
             changed = True
+            
+            #keep the key if other connections still exist
             if new_entries:
                 index_data[key] = new_entries
+            #remove the key completely if no connections remain
             else:
                 del index_data[key]
-
+    
+    #write changes back only when the index was modified
     if changed:
         write_hjson(index_data, path)
 
