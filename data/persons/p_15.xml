@@ -33,6 +33,12 @@
           <trait type="patron" key="p_42">
             <label>Sarabhoji</label>
           </trait>
+          <trait type="member of family" key="p_12">
+            <label>Bhagavantarāyamakhin</label>
+          </trait>
+          <trait type="member of family" key="p_5">
+            <label>Tryambakarāyamakhin</label>
+          </trait>
           <floruit from="1700" to="1700">ca. 1700</floruit>
           <note>Since he was the son of Nṛsiṃharāya I, who was minister of Ekoji I, and that the latter ruled around 1676-83, I add roughly one generation (approx. 25 years) to get his date of activity.</note>
         </person>

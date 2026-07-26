@@ -27,6 +27,9 @@
           <trait type="contemporary of" key="p_4">
             <label>Rāmabhadra Dīkṣita</label>
           </trait>
+          <trait type="member of family" key="p_15">
+            <label>Ānandarāyamakhin</label>
+          </trait>
           <floruit from="1700" to="1700">ca. 1700</floruit>
         </person>
       </listPerson>

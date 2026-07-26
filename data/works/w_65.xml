@@ -8,6 +8,10 @@
           <name>Hershini Soneji</name>
           <resp>Contributor</resp>
         </respStmt>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -23,8 +27,10 @@
         <bibl xml:id="w_65">
           <title type="preferred">Vidyāpariṇayanāṭaka</title>
           <title type="variant">Vidyāpariṇāma</title>
-          <editor key="p_25" role="aut">Vedakavīśvara</editor>
-          <editor key="p_15" role="att">Ānandarāyamakhin</editor>
+          <editor key="p_15" role="aut">Ānandarāyamakhin</editor>
+          <pubPlace key="l_24" role="Performance">
+            <placeName>Bṛhadīśvara temple</placeName>
+          </pubPlace>
           <note type="genre">Play</note>
           <note type="subject" source="other">Philosophical allegorical play (see Raghavan, intro to Śāhendravilāsa pg. 29)  </note>
           <note type="bibliographical" subtype="31" n="147">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
@@ -33,12 +39,12 @@
           <note type="bibliographical" subtype="5" n="491–492, mss. 1553–1554">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.</note>
           <note type="bibliographical" subtype="1" n="292, ms. 3484">Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2</note>
           <note type="general">Written during the reign of Serfoji. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 29.</note>
-          <note type="general">Has a commentary by the author Vedakavīśvara (Vidyapariṇayavyākhyā)</note>
           <note type="general">'An allegorical drama like the Prabodhacandrodaya, in 7 acts. The plot is based on the marriage between the Jīvātman or the individual soul and Vidyā or spiritual wisdom. The drama is said to have been enacted on the occasion of the festival of goddess Ānandavallī, worshipped in Tanjore. See S. N. Dasgupta, HSL. Classical Period, Vol. I. pp. 486. 764.' New Catalogus Catalogurum (NCC). Vols 1-36: vol. 31, p. 147.</note>
           <note type="general">See New Catalogus Catalogurum (NCC). Vols 1-36: vol. 29, p. 132 for the alternative name Vidyāpariṇāma.</note>
           <note type="general">Printed in Kāvyamālā 39 </note>
           <note type="general">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13: vol. 5, p. 491, mss. 1555–1556 are commentaries by Ānandarāyamakhin titled Vidyapariṇayavyākhyā.</note>
-          <note type="general">For the claim that Ānandarāyamakhin is the author of this work, see the entry on Jīvānandananāṭaka</note>
+          <note type="general">For the claim that Ānandarāyamakhin is the author of this work, see the entry on Jīvānandananāṭaka. In the prologue to the Vidyāpariṇaya, the author is clearly presented as Ānandarāyamakhin</note>
+          <note type="general">Has a commentary by Vedakavīśvara (Vidyapariṇayavyākhyā) </note>
         </bibl>
       </listBibl>
     </body>

@@ -426,6 +426,11 @@
       person
       Tryambakarāyamakhin
     ]
+    [
+      p_15
+      person
+      Tryambakarāyamakhin
+    ]
   ]
   p_7:
   [
@@ -584,6 +589,11 @@
       person
       Bhagavantarāyamakhin
     ]
+    [
+      p_15
+      person
+      Bhagavantarāyamakhin
+    ]
   ]
   p_13:
   [
@@ -629,16 +639,6 @@
       Ānandarāyamakhin
     ]
     [
-      w_64
-      work
-      Ānandarāyamakhin
-    ]
-    [
-      w_65
-      work
-      Ānandarāyamakhin
-    ]
-    [
       w_66
       work
       Ānandarāyamakhin
@@ -656,6 +656,26 @@
     [
       p_42
       person
+      Ānandarāyamakhin
+    ]
+    [
+      p_12
+      person
+      Ānandarāyamakhin
+    ]
+    [
+      p_5
+      person
+      Ānandarāyamakhin
+    ]
+    [
+      w_64
+      work
+      Ānandarāyamakhin
+    ]
+    [
+      w_65
+      work
       Ānandarāyamakhin
     ]
   ]
@@ -979,16 +999,6 @@
     [
       p_15
       person
-      Vedakavīśvara
-    ]
-    [
-      w_64
-      work
-      Vedakavīśvara
-    ]
-    [
-      w_65
-      work
       Vedakavīśvara
     ]
     [
