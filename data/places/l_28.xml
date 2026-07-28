@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_28">
+          <placeName type="preferred">Viranarasimha temple</placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.8155178, 79.1388678</note>
+          <note type="general">Has a nartana mandapam built by Serfoji II</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

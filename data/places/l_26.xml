@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_26">
+          <placeName type="preferred">Karunaswamy Temple</placeName>
+          <placeName type="variant">Vasishtesvarar Temple</placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.8052430, 79.1403660</note>
+          <note type="general">Previously known as Vasisthewarar temple, the Karunaswami temple is located in Karunthittaikudi in Thanjavur. </note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

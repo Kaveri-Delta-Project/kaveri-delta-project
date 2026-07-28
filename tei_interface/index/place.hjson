@@ -4,6 +4,10 @@
     name: Adaiyapulam
   }
   {
+    xml_id: l_27
+    name: Agastheesvarasvami Temple
+  }
+  {
     xml_id: l_11
     name: Bhāskararāyapuram
   }
@@ -18,6 +22,10 @@
   {
     xml_id: l_4
     name: Kandaramanikkam
+  }
+  {
+    xml_id: l_26
+    name: Karunaswamy Temple
   }
   {
     xml_id: l_3
@@ -56,6 +64,10 @@
     name: Svamimalai
   }
   {
+    xml_id: l_29
+    name: Thanjapureswara temple
+  }
+  {
     xml_id: l_2
     name: Thanjavur
   }
@@ -86,5 +98,13 @@
   {
     xml_id: l_1
     name: Thiruvisanallur
+  }
+  {
+    xml_id: l_30
+    name: Vedapuriswarar temple
+  }
+  {
+    xml_id: l_28
+    name: Viranarasimha temple
   }
 ]
