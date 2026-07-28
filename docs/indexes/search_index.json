@@ -519,10 +519,47 @@
   },
   {
     "type": "place",
+    "id": "l_26",
+    "name": "Karunaswamy Temple",
+    "alt_names": [
+      "Vasishtesvarar Temple"
+    ],
+    "url": "indexes/place_index.html#l_26"
+  },
+  {
+    "type": "place",
+    "id": "l_27",
+    "name": "Agastheesvarasvami Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_27"
+  },
+  {
+    "type": "place",
+    "id": "l_28",
+    "name": "Viranarasimha temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_28"
+  },
+  {
+    "type": "place",
+    "id": "l_29",
+    "name": "Thanjapureswara temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_29"
+  },
+  {
+    "type": "place",
     "id": "l_3",
     "name": "Kumbakonam",
     "alt_names": [],
     "url": "indexes/place_index.html#l_3"
+  },
+  {
+    "type": "place",
+    "id": "l_30",
+    "name": "Vedapuriswarar temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_30"
   },
   {
     "type": "place",
@@ -1376,7 +1413,7 @@
     ],
     "url": "indexes/work_index.html#w_65",
     "places": [
-      "Bṛhadīśvara temple [l_24]"
+      "Thanjapureswara temple [l_29]"
     ],
     "persons": [
       "Ānandarāyamakhin [p_15]"
