@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_32">
+          <placeName type="preferred">Sridhara Ventakesa Ayyaval mutt</placeName>
+          <placeName type="variant">Sathguru Swamigal Avathara Sthalam</placeName>
+          <desc type="function">Head Matha</desc>
+          <note type="coordinates">11.002395964340332, 79.4258162</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

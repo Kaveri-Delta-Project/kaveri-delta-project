@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Vinoth Murali</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_44">
+          <persName type="preferred">Sadguru Swamigal</persName>
+          <affiliation key="l_33" role="Pontiff of Matha">
+            <placeName>Sadguru Swamigal mutt</placeName>
+          </affiliation>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

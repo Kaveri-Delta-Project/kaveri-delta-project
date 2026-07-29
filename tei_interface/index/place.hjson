@@ -48,12 +48,20 @@
     name: Marudanallur
   }
   {
+    xml_id: l_33
+    name: Sadguru Swamigal mutt
+  }
+  {
     xml_id: l_14
     name: Sakkottai
   }
   {
     xml_id: l_19
     name: Sri Bodhendra Mutt
+  }
+  {
+    xml_id: l_32
+    name: Sridhara Ventakesa Ayyaval mutt
   }
   {
     xml_id: l_20
