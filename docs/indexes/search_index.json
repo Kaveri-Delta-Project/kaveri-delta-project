@@ -715,7 +715,9 @@
     "type": "work",
     "id": "w_17",
     "name": "Śāhajivilāsagītā",
-    "alt_names": [],
+    "alt_names": [
+      "Śāhavilāsagīta"
+    ],
     "url": "indexes/work_index.html#w_17",
     "places": [],
     "persons": [
@@ -1521,7 +1523,8 @@
     ],
     "url": "indexes/work_index.html#w_74",
     "places": [
-      "Thiruvisanallur [l_1]"
+      "Thiruvisanallur [l_1]",
+      "Mahalingeswarar Temple [l_7]"
     ],
     "persons": [
       "Cokkanāthamakhin (younger) [p_32]"
