@@ -339,6 +339,16 @@
   },
   {
     "type": "person",
+    "id": "p_44",
+    "name": "Sadguru Swamigal",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_44",
+    "places": [
+      "Sadguru Swamigal mutt [l_33]"
+    ]
+  },
+  {
+    "type": "person",
     "id": "p_5",
     "name": "Tryambakarāyamakhin",
     "alt_names": [
@@ -560,6 +570,22 @@
     "name": "Vedapuriswarar temple",
     "alt_names": [],
     "url": "indexes/place_index.html#l_30"
+  },
+  {
+    "type": "place",
+    "id": "l_32",
+    "name": "Sridhara Ventakesa Ayyaval mutt",
+    "alt_names": [
+      "Sathguru Swamigal Avathara Sthalam"
+    ],
+    "url": "indexes/place_index.html#l_32"
+  },
+  {
+    "type": "place",
+    "id": "l_33",
+    "name": "Sadguru Swamigal mutt",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_33"
   },
   {
     "type": "place",
