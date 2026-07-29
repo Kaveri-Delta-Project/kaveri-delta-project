@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -18,8 +22,11 @@
       <listBibl>
         <bibl xml:id="w_17">
           <title type="preferred">Śāhajivilāsagītā</title>
+          <title type="variant">Śāhavilāsagīta</title>
           <editor key="p_9" role="aut">Ḍhuṇḍirāja Vyāsa</editor>
           <editor key="p_6" role="pat">Śāhaji I (of Thanjavur)</editor>
+          <note type="genre">Musical</note>
+          <note type="general">Modelled on the Gītagovinda: just as there are three main characters in the Gītagovinda - Krishna, Radhā and her maid - in this work the three characters are king Śahaji I, the courtesan Līlavatī and her maid. Consists of eight sargas and 24 aṣṭapadis.</note>
         </bibl>
       </listBibl>
     </body>

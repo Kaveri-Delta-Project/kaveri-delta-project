@@ -27,6 +27,9 @@
           <pubPlace key="l_1" role="Composition">
             <placeName>Thiruvisanallur</placeName>
           </pubPlace>
+          <pubPlace key="l_7" role="Performance">
+            <placeName>Mahalingeswarar Temple</placeName>
+          </pubPlace>
           <note type="genre">Play</note>
           <note type="subject" source="other">The marriage of King Śāhaji and Kāntimatī</note>
           <note type="bibliographical" subtype="8" n="3371–3373, mss. 4339–4341">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
