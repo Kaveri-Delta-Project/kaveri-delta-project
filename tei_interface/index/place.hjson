@@ -8,6 +8,10 @@
     name: Agastheesvarasvami Temple
   }
   {
+    xml_id: l_35
+    name: Arulmigu Swaminatha Swamy Temple
+  }
+  {
     xml_id: l_11
     name: Bhāskararāyapuram
   }
@@ -46,6 +50,10 @@
   {
     xml_id: l_21
     name: Marudanallur
+  }
+  {
+    xml_id: l_34
+    name: Mazhuvendinathar temple
   }
   {
     xml_id: l_33

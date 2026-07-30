@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_34">
+          <placeName type="preferred">Mazhuvendinathar temple </placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.9661878, 79.3432443</note>
+          <note type="general">Śaiva temple located in the north-east corner of Babhurajapuram. There used to be two agrahāras linked to it: the South agrahāra and the East one. There have been recent developments in the East agrahāra but the South has kept more of its traditional features.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>
