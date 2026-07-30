@@ -591,6 +591,22 @@
   },
   {
     "type": "place",
+    "id": "l_34",
+    "name": "Mazhuvendinathar temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_34"
+  },
+  {
+    "type": "place",
+    "id": "l_35",
+    "name": "Arulmigu Swaminatha Swamy Temple",
+    "alt_names": [
+      "Thiruveragam"
+    ],
+    "url": "indexes/place_index.html#l_35"
+  },
+  {
+    "type": "place",
     "id": "l_4",
     "name": "Kandaramanikkam",
     "alt_names": [],
