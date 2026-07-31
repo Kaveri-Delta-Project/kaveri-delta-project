@@ -16,11 +16,11 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_33">
-          <placeName type="preferred">Sadguru Swamigal mutt </placeName>
-          <desc type="function">Matha</desc>
-          <note type="coordinates">10.924090080990824, 79.40259466680706</note>
-          <note type="general">The heads of this mutt are coronated by Śaṅkarācāryas of the Kanchi mutt (a practice that began with the 68th pontiff of that mutt).</note>
+        <place xml:id="l_37">
+          <placeName type="preferred">Kabartheeswarar Temple</placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.9459803, 79.3285752</note>
+          <note type="general">Gaṇapati temple</note>
         </place>
       </listPlace>
     </body>

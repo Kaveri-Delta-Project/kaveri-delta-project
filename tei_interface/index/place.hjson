@@ -8,6 +8,14 @@
     name: Agastheesvarasvami Temple
   }
   {
+    xml_id: l_36
+    name: Ahobila mutt
+  }
+  {
+    xml_id: l_38
+    name: Alavandipuram
+  }
+  {
     xml_id: l_35
     name: Arulmigu Swaminatha Swamy Temple
   }
@@ -20,8 +28,16 @@
     name: Bṛhadīśvara temple
   }
   {
+    xml_id: l_39
+    name: Gangadharapuram
+  }
+  {
     xml_id: l_18
     name: Govindapuram
+  }
+  {
+    xml_id: l_37
+    name: Kabartheeswarar Temple
   }
   {
     xml_id: l_4
