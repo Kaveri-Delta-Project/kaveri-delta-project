@@ -194,7 +194,9 @@
       "Bhagavatpāda",
       "Bālakṛṣṇānandasarasvatī",
       "Kṛṣṇānandayati",
-      "Bālakṛṣna Bhagavatpāda"
+      "Bālakṛṣna Bhagavatpāda",
+      "Kṛṣṇānandaguru",
+      "Kṛṣṇānandapūjyapāda"
     ],
     "url": "indexes/person_index.html#p_27",
     "places": []
@@ -218,7 +220,8 @@
     "alt_names": [
       "Rāmānanda Sarasvatī",
       "Rāmabhadrānanda Sarasvatī",
-      "Rāmayati (possible)"
+      "Rāmayati (possible)",
+      "Lakṣmana or Lakṃsīdhara (before saṃnyāsa, see notes)"
     ],
     "url": "indexes/person_index.html#p_29",
     "places": []
@@ -698,6 +701,18 @@
     "places": [],
     "persons": [
       "Gaṅgādhara Sarasvatī [p_39]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_101",
+    "name": "Ratnatūlikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_101",
+    "places": [],
+    "persons": [
+      "Bhāskara Dīkṣita [p_33]"
     ],
     "resided_places": []
   },
