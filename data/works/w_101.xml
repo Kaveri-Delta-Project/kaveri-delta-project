@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_101">
+          <title type="preferred">Ratnatūlikā</title>
+          <editor key="p_33" role="aut">Bhāskara Dīkṣita</editor>
+          <note type="genre" source="commentary" key="w_69">Siddhāntasiddhāñjana</note>
+          <note type="bibliographical" source="other" n="68">Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

@@ -23,6 +23,8 @@
           <persName type="variant">Bālakṛṣṇānandasarasvatī</persName>
           <persName type="variant">Kṛṣṇānandayati</persName>
           <persName type="variant">Bālakṛṣna Bhagavatpāda</persName>
+          <persName type="variant">Kṛṣṇānandaguru</persName>
+          <persName type="variant">Kṛṣṇānandapūjyapāda</persName>
           <trait type="teacher" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
@@ -41,7 +43,9 @@
           <bibl n="30–31">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
           <bibl subtype="5" n="14a">New Catalogus Catalogurum (NCC). Vols 1-36.</bibl>
           <bibl subtype="9">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.</bibl>
+          <bibl source="other">Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946.</bibl>
           <note>For the alternative name Kṛṣṇānandayati, see Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13: vol. 9, p. 349.</note>
+          <note>For the alternative names Kṛṣṇānandaguru and Kṛṣṇānandapūjyapāda, see Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946.</note>
         </person>
       </listPerson>
     </body>
