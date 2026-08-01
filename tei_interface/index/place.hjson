@@ -12,6 +12,10 @@
     name: Ahobila mutt
   }
   {
+    xml_id: l_42
+    name: Airavatesvara Temple
+  }
+  {
     xml_id: l_38
     name: Alavandipuram
   }
@@ -26,6 +30,10 @@
   {
     xml_id: l_24
     name: Bṛhadīśvara temple
+  }
+  {
+    xml_id: l_41
+    name: Ganapaty agrahara
   }
   {
     xml_id: l_39

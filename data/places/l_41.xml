@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_41">
+          <placeName type="preferred">Ganapaty agrahara</placeName>
+          <desc type="function">Settlement</desc>
+          <note type="coordinates">10.9182620, 79.1829956</note>
+          <note type="general">This agrahāra has three temples: one Śaiva (Brahmanagareshwara Temple, located in the north-east of the agrahāra), one Vaiṣṇava (Varadarāja Temple, located in the south-west) and one dedicated to Ganapati, for which the settlement has become famous.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>
