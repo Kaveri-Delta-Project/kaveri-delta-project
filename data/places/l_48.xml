@@ -16,11 +16,11 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_15">
-          <placeName type="preferred">Svamimalai</placeName>
-          <placeName type="variant">Svamigiri</placeName>
-          <desc type="function">City/Town</desc>
-          <note type="coordinates">10.95989672343953, 79.33280683150029</note>
+        <place xml:id="l_48">
+          <placeName type="preferred">Sarangapani temple</placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.959930520382596, 79.3760754685183</note>
+          <note type="general">Major Vaiṣṇava temple in Kumbhakonam</note>
         </place>
       </listPlace>
     </body>

@@ -1054,6 +1054,16 @@
       work
       Periyappā Kavi
     ]
+    [
+      p_49
+      person
+      Periyappā Kavi
+    ]
+    [
+      p_50
+      person
+      Periyappā Kavi
+    ]
   ]
   p_26:
   [
@@ -1288,6 +1298,22 @@
       w_103
       work
       Yajñasvāmī Śāstrī
+    ]
+  ]
+  p_49:
+  [
+    [
+      p_24
+      person
+      Aṇṇā Śāstrī
+    ]
+  ]
+  p_50:
+  [
+    [
+      p_24
+      person
+      Vainateya
     ]
   ]
 }

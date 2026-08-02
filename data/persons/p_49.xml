@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_49">
+          <persName type="preferred">Aṇṇā Śāstrī</persName>
+          <persName type="variant">Patañjali Śāstrī</persName>
+          <trait type="father" key="p_24">
+            <label>Periyappā Kavi</label>
+          </trait>
+          <affiliation key="l_4" role="Resided">
+            <placeName>Kandaramanikkam</placeName>
+          </affiliation>
+          <bibl n="p.44">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <note>This scholar's father (and therefore the grand-father of Periappā Kavi) was named Kṛṣṇa, and according to the prologue of the Śṛṅgāramañjarīśāhajīya, he was proficient in Vedānta: kṛtavedāntasiddhāntaḥ kṛṣṇo yasya pitāmahaḥ |</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

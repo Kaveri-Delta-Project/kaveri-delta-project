@@ -16,11 +16,11 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_15">
-          <placeName type="preferred">Svamimalai</placeName>
-          <placeName type="variant">Svamigiri</placeName>
-          <desc type="function">City/Town</desc>
-          <note type="coordinates">10.95989672343953, 79.33280683150029</note>
+        <place xml:id="l_46">
+          <placeName type="preferred">Adi Kumbeswarar Temple</placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.958733159151555, 79.37217580317454</note>
+          <note type="general">Major Śaiva temple in Kumbhakonam</note>
         </place>
       </listPlace>
     </body>

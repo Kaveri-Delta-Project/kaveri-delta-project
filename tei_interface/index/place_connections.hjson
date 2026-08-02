@@ -99,6 +99,11 @@
       person
       Kandaramanikkam
     ]
+    [
+      p_49
+      person
+      Kandaramanikkam
+    ]
   ]
   l_12: []
   l_6:
@@ -185,14 +190,6 @@
       p_10
       person
       Sakkottai
-    ]
-  ]
-  l_8:
-  [
-    [
-      w_45
-      work
-      Thiruvaiyaru
     ]
   ]
   l_23:
@@ -291,6 +288,14 @@
       p_48
       person
       Kumbakonam
+    ]
+  ]
+  l_50:
+  [
+    [
+      w_45
+      work
+      Aiyarappar temple
     ]
   ]
 }

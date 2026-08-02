@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_50">
+          <persName type="preferred">Vainateya</persName>
+          <trait type="member of family" key="p_24">
+            <label>Periyappā Kavi</label>
+          </trait>
+          <note>Wrote a commentary on Rucidatta’s Prakāśa on Tattvacintāmaṇi</note>
+          <note>Paternal uncle of Periappā Kavi</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

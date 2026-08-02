@@ -4,6 +4,10 @@
     name: Adaiyapulam
   }
   {
+    xml_id: l_46
+    name: Adi Kumbeswarar Temple
+  }
+  {
     xml_id: l_27
     name: Agastheesvarasvami Temple
   }
@@ -14,6 +18,10 @@
   {
     xml_id: l_42
     name: Airavatesvara Temple
+  }
+  {
+    xml_id: l_50
+    name: Aiyarappar temple
   }
   {
     xml_id: l_38
@@ -80,12 +88,24 @@
     name: Mazhuvendinathar temple
   }
   {
+    xml_id: l_49
+    name: Nageswaraswamy Temple
+  }
+  {
+    xml_id: l_47
+    name: Ramaswamy temple
+  }
+  {
     xml_id: l_33
     name: Sadguru Swamigal mutt
   }
   {
     xml_id: l_14
     name: Sakkottai
+  }
+  {
+    xml_id: l_48
+    name: Sarangapani temple
   }
   {
     xml_id: l_45

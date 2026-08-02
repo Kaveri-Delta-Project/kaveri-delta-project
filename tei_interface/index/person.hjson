@@ -8,6 +8,10 @@
     name: Ayyaṇṇa Dīkṣita
   }
   {
+    xml_id: p_49
+    name: Aṇṇā Śāstrī
+  }
+  {
     xml_id: p_12
     name: Bhagavantarāyamakhin
   }
@@ -122,6 +126,10 @@
   {
     xml_id: p_22
     name: Vaidyanātha Dīkṣita
+  }
+  {
+    xml_id: p_50
+    name: Vainateya
   }
   {
     xml_id: p_25

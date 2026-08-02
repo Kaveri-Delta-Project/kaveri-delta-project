@@ -16,11 +16,10 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_15">
-          <placeName type="preferred">Svamimalai</placeName>
-          <placeName type="variant">Svamigiri</placeName>
-          <desc type="function">City/Town</desc>
-          <note type="coordinates">10.95989672343953, 79.33280683150029</note>
+        <place xml:id="l_47">
+          <placeName type="preferred">Ramaswamy temple</placeName>
+          <note type="coordinates">10.954626342408762, 79.37469926825389</note>
+          <note type="general">Famous 16th-century Hindu shrine dedicated to Lord Rāma in Kumbhakonam</note>
         </place>
       </listPlace>
     </body>
