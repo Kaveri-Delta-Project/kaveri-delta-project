@@ -390,6 +390,18 @@
   },
   {
     "type": "person",
+    "id": "p_49",
+    "name": "Aṇṇā Śāstrī",
+    "alt_names": [
+      "Patañjali Śāstrī"
+    ],
+    "url": "indexes/person_index.html#p_49",
+    "places": [
+      "Kandaramanikkam [l_4]"
+    ]
+  },
+  {
+    "type": "person",
     "id": "p_5",
     "name": "Tryambakarāyamakhin",
     "alt_names": [
@@ -400,6 +412,14 @@
     "places": [
       "Svamimalai [l_15]"
     ]
+  },
+  {
+    "type": "person",
+    "id": "p_50",
+    "name": "Vainateya",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_50",
+    "places": []
   },
   {
     "type": "person",
@@ -709,10 +729,45 @@
   },
   {
     "type": "place",
+    "id": "l_46",
+    "name": "Adi Kumbeswarar Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_46"
+  },
+  {
+    "type": "place",
+    "id": "l_47",
+    "name": "Ramaswamy temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_47"
+  },
+  {
+    "type": "place",
+    "id": "l_48",
+    "name": "Sarangapani temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_48"
+  },
+  {
+    "type": "place",
+    "id": "l_49",
+    "name": "Nageswaraswamy Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_49"
+  },
+  {
+    "type": "place",
     "id": "l_5",
     "name": "Mannargudi",
     "alt_names": [],
     "url": "indexes/place_index.html#l_5"
+  },
+  {
+    "type": "place",
+    "id": "l_50",
+    "name": "Aiyarappar temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_50"
   },
   {
     "type": "place",
@@ -1256,7 +1311,7 @@
     "alt_names": [],
     "url": "indexes/work_index.html#w_45",
     "places": [
-      "Thiruvaiyaru [l_8]"
+      "Aiyarappar temple [l_50]"
     ],
     "persons": [
       "Periyappā Kavi [p_24]"
