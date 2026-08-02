@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_47">
+          <persName type="preferred">Tyāgarājamakhin</persName>
+          <persName type="variant">Mannargudi Raju Sastrigal</persName>
+          <trait type="descendant" key="p_2">
+            <label>Appayya Dīkṣita</label>
+          </trait>
+          <trait type="teacher" key="p_48">
+            <label>Yajñasvāmī Śāstrī</label>
+          </trait>
+          <trait type="grandfather" key="p_48">
+            <label>Yajñasvāmī Śāstrī</label>
+          </trait>
+          <birth when="1815">1815</birth>
+          <death when="1903">c. 1903</death>
+          <affiliation key="l_5" role="Resided">
+            <placeName>Mannargudi</placeName>
+          </affiliation>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

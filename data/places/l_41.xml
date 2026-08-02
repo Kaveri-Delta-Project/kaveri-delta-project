@@ -18,9 +18,10 @@
       <listPlace>
         <place xml:id="l_41">
           <placeName type="preferred">Ganapaty agrahara</placeName>
-          <desc type="function">Settlement</desc>
+          <desc type="function">Agrahāra/Brahmadeya</desc>
           <note type="coordinates">10.9182620, 79.1829956</note>
           <note type="general">This agrahāra has three temples: one Śaiva (Brahmanagareshwara Temple, located in the north-east of the agrahāra), one Vaiṣṇava (Varadarāja Temple, located in the south-west) and one dedicated to Ganapati, for which the settlement has become famous.</note>
+          <note type="general">Birthplace of Kuppusvāmī Śāstrī (1880-1943)</note>
         </place>
       </listPlace>
     </body>

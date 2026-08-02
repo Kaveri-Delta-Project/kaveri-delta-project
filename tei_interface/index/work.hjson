@@ -216,6 +216,10 @@
     name: Siddhāntacandrikāvyākhyā Udgāraḥ
   }
   {
+    xml_id: w_103
+    name: Siddhāntakalpataru
+  }
+  {
     xml_id: w_69
     name: Siddhāntasiddhāñjana
   }
@@ -234,6 +238,10 @@
   {
     xml_id: w_28
     name: Tripuravijayacampū
+  }
+  {
+    xml_id: w_102
+    name: Tyāgarājavijaya
   }
   {
     xml_id: w_81

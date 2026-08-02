@@ -16,11 +16,10 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_38">
-          <placeName type="preferred">Alavandipuram</placeName>
+        <place xml:id="l_44">
+          <placeName type="preferred">Thirumazhapadi</placeName>
           <desc type="function">Agrahāra/Brahmadeya</desc>
-          <note type="coordinates">10.9515586, 79.3149400</note>
-          <note type="general">Located in Papanasam taluk; possibly founded, according to sources living there, in 1897. Has two temples: one Vaiṣṇava (Kalinga nartana [Laksmi-Narayana] temple) and one Śaiva (Candrasekhara Swami [Śivakamasundari] temple)</note>
+          <note type="coordinates">10.898193902869352, 79.05550527386566</note>
         </place>
       </listPlace>
     </body>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_102">
+          <title type="preferred">Tyāgarājavijaya</title>
+          <editor key="p_48" role="aut">Yajñasvāmī Śāstrī</editor>
+          <persName key="p_47" role="mention" type="referenced">Tyāgarājamakhin<note>Biography</note>
+          </persName>
+          <note type="genre" source="other">Biography</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

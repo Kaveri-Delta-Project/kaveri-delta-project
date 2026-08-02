@@ -88,6 +88,10 @@
     name: Sakkottai
   }
   {
+    xml_id: l_45
+    name: Someshvarapuram
+  }
+  {
     xml_id: l_19
     name: Sri Bodhendra Mutt
   }
@@ -114,6 +118,10 @@
   {
     xml_id: l_23
     name: Thayumanaswami Temple
+  }
+  {
+    xml_id: l_44
+    name: Thirumazhapadi
   }
   {
     xml_id: l_8

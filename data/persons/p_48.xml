@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_48">
+          <persName type="preferred">Yajñasvāmī Śāstrī</persName>
+          <persName type="variant">Yajñeśa Śarman</persName>
+          <trait type="student" key="p_47">
+            <label>Tyāgarājamakhin</label>
+          </trait>
+          <trait type="grandson" key="p_47">
+            <label>Tyāgarājamakhin</label>
+          </trait>
+          <birth when="1876">1876</birth>
+          <death when="1940">1940</death>
+          <affiliation key="l_39" role="Died">
+            <placeName>Gangadharapuram</placeName>
+          </affiliation>
+          <affiliation key="l_3" role="Sabhāpandita of the Advaita Sabhā in Kumbakonam " from="1920" to="1938">
+            <placeName>Kumbakonam</placeName>
+          </affiliation>
+          <affiliation key="l_5" role="Born">
+            <placeName>Mannargudi</placeName>
+          </affiliation>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

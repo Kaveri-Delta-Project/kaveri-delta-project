@@ -16,17 +16,15 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_2">
-          <persName type="preferred">Appayya Dīkṣita</persName>
-          <trait type="member of family" key="p_1">
-            <label>Nīlakaṇṭha Dīkṣita</label>
+        <person xml:id="p_46">
+          <persName type="preferred">Kuppusvāmī Śāstrī </persName>
+          <trait type="student" key="p_5">
+            <label>Tryambakarāyamakhin</label>
           </trait>
-          <trait type="ancestor" key="p_47">
-            <label>Tyāgarājamakhin</label>
-          </trait>
-          <floruit from="1520" to="1593">c. 1520-1593</floruit>
-          <affiliation key="l_13" role="Born">
-            <placeName>Adaiyapulam</placeName>
+          <birth when="1880">1880</birth>
+          <death when="1943">1943</death>
+          <affiliation key="l_41" role="Born">
+            <placeName>Ganapaty agrahara</placeName>
           </affiliation>
         </person>
       </listPerson>

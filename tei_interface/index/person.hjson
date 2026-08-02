@@ -44,6 +44,10 @@
     name: Gaṅgādharādhvarin (alias Kākoji)
   }
   {
+    xml_id: p_46
+    name: Kuppusvāmī Śāstrī
+  }
+  {
     xml_id: p_27
     name: Kṛṣṇānanda Sarasvatī
   }
@@ -112,6 +116,10 @@
     name: Tryambakarāyamakhin
   }
   {
+    xml_id: p_47
+    name: Tyāgarājamakhin
+  }
+  {
     xml_id: p_22
     name: Vaidyanātha Dīkṣita
   }
@@ -126,6 +134,10 @@
   {
     xml_id: p_34
     name: Vātsya Subrahmaṇya
+  }
+  {
+    xml_id: p_48
+    name: Yajñasvāmī Śāstrī
   }
   {
     xml_id: p_15

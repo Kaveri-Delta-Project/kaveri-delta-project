@@ -21,6 +21,11 @@
       person
       Appayya Dīkṣita
     ]
+    [
+      p_47
+      person
+      Appayya Dīkṣita
+    ]
   ]
   p_1:
   [
@@ -428,6 +433,11 @@
     ]
     [
       p_15
+      person
+      Tryambakarāyamakhin
+    ]
+    [
+      p_46
       person
       Tryambakarāyamakhin
     ]
@@ -1115,6 +1125,11 @@
       person
       Kṛṣṇānanda Sarasvatī
     ]
+    [
+      w_45
+      work
+      Kṛṣṇānanda Sarasvatī
+    ]
   ]
   p_28:
   [
@@ -1219,6 +1234,60 @@
       w_76
       work
       Rāmānuja
+    ]
+  ]
+  p_47:
+  [
+    [
+      p_2
+      person
+      Tyāgarājamakhin
+    ]
+    [
+      p_48
+      person
+      Tyāgarājamakhin
+    ]
+    [
+      p_48
+      person
+      Tyāgarājamakhin
+    ]
+    [
+      w_102
+      work
+      Tyāgarājamakhin
+    ]
+  ]
+  p_46:
+  [
+    [
+      p_5
+      person
+      Kuppusvāmī Śāstrī
+    ]
+  ]
+  p_48:
+  [
+    [
+      p_47
+      person
+      Yajñasvāmī Śāstrī
+    ]
+    [
+      p_47
+      person
+      Yajñasvāmī Śāstrī
+    ]
+    [
+      w_102
+      work
+      Yajñasvāmī Śāstrī
+    ]
+    [
+      w_103
+      work
+      Yajñasvāmī Śāstrī
     ]
   ]
 }
