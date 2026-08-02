@@ -354,6 +354,42 @@
   },
   {
     "type": "person",
+    "id": "p_46",
+    "name": "Kuppusvāmī Śāstrī",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_46",
+    "places": [
+      "Ganapaty agrahara [l_41]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_47",
+    "name": "Tyāgarājamakhin",
+    "alt_names": [
+      "Mannargudi Raju Sastrigal"
+    ],
+    "url": "indexes/person_index.html#p_47",
+    "places": [
+      "Mannargudi [l_5]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_48",
+    "name": "Yajñasvāmī Śāstrī",
+    "alt_names": [
+      "Yajñeśa Śarman"
+    ],
+    "url": "indexes/person_index.html#p_48",
+    "places": [
+      "Gangadharapuram [l_39]",
+      "Kumbakonam [l_3]",
+      "Mannargudi [l_5]"
+    ]
+  },
+  {
+    "type": "person",
     "id": "p_5",
     "name": "Tryambakarāyamakhin",
     "alt_names": [
@@ -659,6 +695,20 @@
   },
   {
     "type": "place",
+    "id": "l_44",
+    "name": "Thirumazhapadi",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_44"
+  },
+  {
+    "type": "place",
+    "id": "l_45",
+    "name": "Someshvarapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_45"
+  },
+  {
+    "type": "place",
     "id": "l_5",
     "name": "Mannargudi",
     "alt_names": [],
@@ -727,6 +777,30 @@
     "places": [],
     "persons": [
       "Bhāskara Dīkṣita [p_33]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_102",
+    "name": "Tyāgarājavijaya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_102",
+    "places": [],
+    "persons": [
+      "Yajñasvāmī Śāstrī [p_48]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_103",
+    "name": "Siddhāntakalpataru",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_103",
+    "places": [],
+    "persons": [
+      "Yajñasvāmī Śāstrī [p_48]"
     ],
     "resided_places": []
   },
