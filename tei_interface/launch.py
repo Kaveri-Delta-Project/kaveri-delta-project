@@ -15,16 +15,33 @@ def create_venv():
 def install_requirements():
     """Install dependencies into the venv."""
     venv_dir = "venv"
+
     if platform.system() == "Windows":
-        pip_exe = os.path.join(venv_dir, "Scripts", "pip.exe")
+        python_exe = os.path.join(venv_dir, "Scripts", "python.exe")
     else:
-        pip_exe = os.path.join(venv_dir, "bin", "pip")
-    
+        python_exe = os.path.join(venv_dir, "bin", "python")
+
+    requirements = os.path.join(os.path.dirname(__file__), "requirements.txt")
+
     print("Upgrading pip...")
-    subprocess.check_call([pip_exe, "install", "--upgrade", "pip"])
-    
+    subprocess.check_call([
+        python_exe,
+        "-m",
+        "pip",
+        "install",
+        "--upgrade",
+        "pip"
+    ])
+
     print("Installing requirements...")
-    subprocess.check_call([pip_exe, "install", "-r", "requirements.txt"])
+    subprocess.check_call([
+        python_exe,
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        requirements
+    ])
 
 def run_app():
     """Run the Flask app inside the venv."""
