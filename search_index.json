@@ -896,7 +896,10 @@
     "type": "work",
     "id": "w_104",
     "name": "Āmodarañjanī",
-    "alt_names": [],
+    "alt_names": [
+      "Śivatattvaratnakalikāvyākhyā",
+      "Śivatattvakalikāmodarañjanī"
+    ],
     "url": "indexes/work_index.html#w_104",
     "places": [],
     "persons": [
@@ -909,12 +912,39 @@
     "type": "work",
     "id": "w_105",
     "name": "Pañcaratnavyākhyā",
-    "alt_names": [],
+    "alt_names": [
+      "Pañcaratnaprakāśa"
+    ],
     "url": "indexes/work_index.html#w_105",
     "places": [],
     "persons": [
       "Vātsya Subrahmaṇya [p_34]",
       "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_106",
+    "name": "Svārājyasiddhi",
+    "alt_names": [
+      "Ātmasāmrājya",
+      "Mokṣasāmrājya"
+    ],
+    "url": "indexes/work_index.html#w_106",
+    "places": [],
+    "persons": [],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_107",
+    "name": "Kaivalyakalpadruma",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_107",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
     ],
     "resided_places": []
   },
