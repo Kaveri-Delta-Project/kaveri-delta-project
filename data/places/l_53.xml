@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_53">
+          <placeName type="preferred">Sri Bodhendra Saraswathi Mutt</placeName>
+          <desc type="function">Matha</desc>
+          <note type="coordinates">11.0109331, 79.4639064</note>
+          <note type="general">There we find Bodhendra Sarasvatī's adhiṣṭhānam (his place of samādhi).</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

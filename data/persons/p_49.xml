@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_49">
-          <persName type="preferred">Aṇṇā Śāstrī</persName>
+          <persName type="preferred">Aṇṇan Śāstrī</persName>
           <persName type="variant">Patañjali Śāstrī</persName>
           <trait type="father" key="p_24">
             <label>Periyappā Kavi</label>
@@ -25,8 +25,13 @@
           <affiliation key="l_4" role="Resided">
             <placeName>Kandaramanikkam</placeName>
           </affiliation>
+          <affiliation key="l_56" role="Recipient (Land Donation)">
+            <placeName>Erakaram</placeName>
+          </affiliation>
           <bibl n="p.44">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <bibl source="other">A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C.</bibl>
           <note>This scholar's father (and therefore the grand-father of Periappā Kavi) was named Kṛṣṇa, and according to the prologue of the Śṛṅgāramañjarīśāhajīya, he was proficient in Vedānta: kṛtavedāntasiddhāntaḥ kṛṣṇo yasya pitāmahaḥ |</note>
+          <note>Aṇṇan Śāstrī himself would have been gifted a village (Erakaram/Eraharam) by the Vijayanagara ruler Veṅkaṭapatirāya (c. 1547-1614). See: A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C., p. 2575.</note>
         </person>
       </listPerson>
     </body>

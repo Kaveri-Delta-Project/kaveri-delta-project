@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_54">
+          <placeName type="preferred">Thirukoteeswarar Temple</placeName>
+          <desc type="function">Temple</desc>
+          <bibl source="other">Seetha, S. (2001), Tanjore as a Seat of Music. Madras: University of Madras</bibl>
+          <note type="coordinates">11.0496948, 79.5135200</note>
+          <note type="general">A Śaiva temple at Thirukodikaval in the Thiruvidaimarudur taluk of Thanjavur district, with Śrīvidyā connexions (the goddess Tripurasundarī is also worshipped there).</note>
+          <note type="general">The village of Thirukodikaval, where this temple is located, was renamed at some point as Deepambalpuram as it was donated by Deepambal, the queen consort of Veṅkoji a.k.a. Ekoji Bhonsle (r. 1675-1684). See Seetha, S. (2001), Tanjore as a Seat of Music. Madras: University of Madras.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

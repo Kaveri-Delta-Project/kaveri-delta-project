@@ -23,12 +23,18 @@
           <trait type="student" key="p_7">
             <label>Gaṅgādharavājapeyin</label>
           </trait>
+          <birth when="1690">c. 1690</birth>
+          <death when="1785">c. 1785</death>
           <affiliation key="l_11" role="Resided">
             <placeName>Bhāskararāyapuram</placeName>
           </affiliation>
           <affiliation key="l_6" role="Died">
             <placeName>Thiruvidaimarudur</placeName>
           </affiliation>
+          <affiliation key="l_54" role="Visited">
+            <placeName>Thirukoteeswarar Temple</placeName>
+          </affiliation>
+          <note>One story, recounted (August 2026) by the young priest at the Thirukoteeswarar temple, is that Bhāskararāyamakhin would have written his bhāṣya on the Lalitasahasranāma in that location (others say that he did so at the Madhyarjuna temple).</note>
         </person>
       </listPerson>
     </body>

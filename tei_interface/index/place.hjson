@@ -40,6 +40,10 @@
     name: Bṛhadīśvara temple
   }
   {
+    xml_id: l_56
+    name: Erakaram
+  }
+  {
     xml_id: l_41
     name: Ganapaty agrahara
   }
@@ -50,6 +54,10 @@
   {
     xml_id: l_18
     name: Govindapuram
+  }
+  {
+    xml_id: l_51
+    name: Jakath Rakshaka Perumal temple
   }
   {
     xml_id: l_37
@@ -66,6 +74,14 @@
   {
     xml_id: l_3
     name: Kumbakonam
+  }
+  {
+    xml_id: l_52
+    name: l_52
+  }
+  {
+    xml_id: l_55
+    name: l_55
   }
   {
     xml_id: l_10
@@ -116,6 +132,10 @@
     name: Sri Bodhendra Mutt
   }
   {
+    xml_id: l_53
+    name: Sri Bodhendra Saraswathi Mutt
+  }
+  {
     xml_id: l_32
     name: Sridhara Ventakesa Ayyaval mutt
   }
@@ -138,6 +158,10 @@
   {
     xml_id: l_23
     name: Thayumanaswami Temple
+  }
+  {
+    xml_id: l_54
+    name: Thirukoteeswarar Temple
   }
   {
     xml_id: l_44
