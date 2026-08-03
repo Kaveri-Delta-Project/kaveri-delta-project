@@ -349,7 +349,8 @@
     ],
     "url": "indexes/person_index.html#p_44",
     "places": [
-      "Sadguru Swamigal mutt [l_33]"
+      "Sadguru Swamigal mutt [l_33]",
+      "Jakath Rakshaka Perumal temple [l_51]"
     ]
   },
   {
@@ -391,13 +392,14 @@
   {
     "type": "person",
     "id": "p_49",
-    "name": "Aṇṇā Śāstrī",
+    "name": "Aṇṇan Śāstrī",
     "alt_names": [
       "Patañjali Śāstrī"
     ],
     "url": "indexes/person_index.html#p_49",
     "places": [
-      "Kandaramanikkam [l_4]"
+      "Kandaramanikkam [l_4]",
+      "Erakaram [l_56]"
     ]
   },
   {
@@ -456,7 +458,8 @@
     "url": "indexes/person_index.html#p_8",
     "places": [
       "Bhāskararāyapuram [l_11]",
-      "Thiruvidaimarudur [l_6]"
+      "Thiruvidaimarudur [l_6]",
+      "Thirukoteeswarar Temple [l_54]"
     ]
   },
   {
@@ -768,6 +771,50 @@
     "name": "Aiyarappar temple",
     "alt_names": [],
     "url": "indexes/place_index.html#l_50"
+  },
+  {
+    "type": "place",
+    "id": "l_51",
+    "name": "Jakath Rakshaka Perumal temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_51"
+  },
+  {
+    "type": "place",
+    "id": "l_52",
+    "name": "l_52",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_52"
+  },
+  {
+    "type": "place",
+    "id": "l_53",
+    "name": "Sri Bodhendra Saraswathi Mutt",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_53"
+  },
+  {
+    "type": "place",
+    "id": "l_54",
+    "name": "Thirukoteeswarar Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_54"
+  },
+  {
+    "type": "place",
+    "id": "l_55",
+    "name": "l_55",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_55"
+  },
+  {
+    "type": "place",
+    "id": "l_56",
+    "name": "Erakaram",
+    "alt_names": [
+      "Eraharam"
+    ],
+    "url": "indexes/place_index.html#l_56"
   },
   {
     "type": "place",
