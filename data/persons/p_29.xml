@@ -29,6 +29,9 @@
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
           </trait>
+          <trait type="teacher" key="p_39">
+            <label>Gaṅgādhara Sarasvatī</label>
+          </trait>
           <floruit from="1670" to="1670">1670</floruit>
           <bibl subtype="24" n="275b">New Catalogus Catalogurum (NCC). Vols 1-36.</bibl>
           <bibl>Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.</bibl>

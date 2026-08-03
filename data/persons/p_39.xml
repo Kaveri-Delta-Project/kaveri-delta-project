@@ -23,6 +23,11 @@
         <person xml:id="p_39">
           <persName type="preferred">Gaṅgādhara Sarasvatī</persName>
           <persName type="variant">Gaṅgādharendra Sarasvatī</persName>
+          <trait type="student" key="p_29">
+            <label>Rāmānanda Yati</label>
+          </trait>
+          <bibl>Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <note>Gaṅgādharendra Sarasvatī was the pupil of Rāmānanda. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 33.</note>
         </person>
       </listPerson>
     </body>

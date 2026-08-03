@@ -22,10 +22,13 @@
       <listBibl>
         <bibl xml:id="w_105">
           <title type="preferred">Pañcaratnavyākhyā</title>
+          <title type="variant">Pañcaratnaprakāśa</title>
           <editor key="p_34" role="aut">Vātsya Subrahmaṇya</editor>
           <editor key="p_27" role="att">Kṛṣṇānanda Sarasvatī</editor>
           <note type="bibliographical" n="32">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
           <note type="bibliographical" subtype="5" n="14b">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" subtype="13" n="5632–5634, ms. 7552">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
+          <note type="general">Although this text is sometimes attributed to Kṛṣṇānanda Sarasvatī, Vātsya Subrahmanya writes that he is the author. See A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19: vol. 13, ms. 7552.</note>
         </bibl>
       </listBibl>
     </body>
