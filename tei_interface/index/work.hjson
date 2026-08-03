@@ -156,6 +156,10 @@
     name: Patañjalicarita
   }
   {
+    xml_id: w_105
+    name: Pañcaratnavyākhyā
+  }
+  {
     xml_id: w_21
     name: Prasāda (on Kāṇādasiddhāntacandrikā)
   }
@@ -282,6 +286,10 @@
   {
     xml_id: w_78
     name: Ākhyāṣaṣṭi
+  }
+  {
+    xml_id: w_104
+    name: Āmodarañjanī
   }
   {
     xml_id: w_97
