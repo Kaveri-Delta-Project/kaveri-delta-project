@@ -288,7 +288,10 @@ def create_kaveri_map(nodes_df, gdf_layers, output_path=OUTPUT_PATH):
         row_type = row_type.lower()
         if isinstance(row_type, list):
             # pick first valid type that exists in placetype_fgs
-            row_type = next((t for t in row_type if t in placetype_fgs), None) 
+            row_type = next((t for t in row_type if t in placetype_fgs), None)
+
+        if "matha" in row_type:
+            row_type = "matha"
 
         if not row_type or row_type not in placetype_fgs:
             row_type = "other"
