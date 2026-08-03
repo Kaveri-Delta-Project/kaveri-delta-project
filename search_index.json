@@ -908,6 +908,32 @@
   },
   {
     "type": "work",
+    "id": "w_104",
+    "name": "Āmodarañjanī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_104",
+    "places": [],
+    "persons": [
+      "Vātsya Subrahmaṇya [p_34]",
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_105",
+    "name": "Pañcaratnavyākhyā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_105",
+    "places": [],
+    "persons": [
+      "Vātsya Subrahmaṇya [p_34]",
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
     "id": "w_11",
     "name": "Kuvalayānanda",
     "alt_names": [],
