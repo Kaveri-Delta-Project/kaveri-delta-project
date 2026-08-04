@@ -422,11 +422,6 @@
       Tryambakarāyamakhin
     ]
     [
-      p_13
-      person
-      Tryambakarāyamakhin
-    ]
-    [
       p_12
       person
       Tryambakarāyamakhin
@@ -438,6 +433,11 @@
     ]
     [
       p_46
+      person
+      Tryambakarāyamakhin
+    ]
+    [
+      p_7
       person
       Tryambakarāyamakhin
     ]
@@ -476,6 +476,21 @@
     ]
     [
       p_8
+      person
+      Gaṅgādharavājapeyin
+    ]
+    [
+      p_5
+      person
+      Gaṅgādharavājapeyin
+    ]
+    [
+      p_12
+      person
+      Gaṅgādharavājapeyin
+    ]
+    [
+      p_15
       person
       Gaṅgādharavājapeyin
     ]
@@ -580,11 +595,6 @@
   p_12:
   [
     [
-      p_13
-      person
-      Bhagavantarāyamakhin
-    ]
-    [
       p_5
       person
       Bhagavantarāyamakhin
@@ -611,6 +621,11 @@
     ]
     [
       p_15
+      person
+      Bhagavantarāyamakhin
+    ]
+    [
+      p_7
       person
       Bhagavantarāyamakhin
     ]
@@ -664,11 +679,6 @@
       Ānandarāyamakhin
     ]
     [
-      p_13
-      person
-      Ānandarāyamakhin
-    ]
-    [
       p_6
       person
       Ānandarāyamakhin
@@ -696,6 +706,11 @@
     [
       w_65
       work
+      Ānandarāyamakhin
+    ]
+    [
+      p_7
+      person
       Ānandarāyamakhin
     ]
   ]
