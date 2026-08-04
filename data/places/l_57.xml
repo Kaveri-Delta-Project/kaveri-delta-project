@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_57">
+          <placeName type="preferred">Mellatur</placeName>
+          <desc type="function">Settlement</desc>
+          <desc type="function">Land Donation</desc>
+          <note type="coordinates">10.856212086812356, 79.23868178890949</note>
+          <note type="general">During the Nāyaka dynasty, Acyutaparāya (1577-1614) gifted Mellatur village to 500+ brahmin actors families and scholars to preserve and continue the tradition of the Bhagavatamela - a regional form of theatre in Telugu blending classical dance and Carnatic music performed by male brahmin actors.</note>
+          <note type="general">The village has three temples: Śaiva (Unnadharapurisvara), Vaiṣṇava (Varadaraja Perumal temple) and a temple to Ganapati. </note>
+          <note type="general">Every year, on Narasimha Jayanti, the Bhagavatamela festival takes place for ten days in the agrahāra street facing the Varadaraja temple. The actors face the temple while the audience sits in the street. </note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>
