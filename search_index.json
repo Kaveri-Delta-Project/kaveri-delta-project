@@ -40,14 +40,6 @@
   },
   {
     "type": "person",
-    "id": "p_13",
-    "name": "Gaṅgādharādhvarin (alias Kākoji)",
-    "alt_names": [],
-    "url": "indexes/person_index.html#p_13",
-    "places": []
-  },
-  {
-    "type": "person",
     "id": "p_14",
     "name": "Nṛsiṃharāya II",
     "alt_names": [
@@ -349,8 +341,8 @@
     ],
     "url": "indexes/person_index.html#p_44",
     "places": [
-      "Sadguru Swamigal mutt [l_33]",
-      "Jakath Rakshaka Perumal temple [l_51]"
+      "Jakath Rakshaka Perumal temple [l_51]",
+      "Sri Bodhendra Saraswathi Mutt [l_53]"
     ]
   },
   {
@@ -439,12 +431,14 @@
     "name": "Gaṅgādharavājapeyin",
     "alt_names": [
       "Gaṅgādharamakhin",
-      "Gaṅgādhara Vājabeyi"
+      "Gaṅgādharādhvarin (alias Kākoji)"
     ],
     "url": "indexes/person_index.html#p_7",
     "places": [
       "Thiruvalangadu (Delta) [l_17]",
-      "Thiruvalangadu [l_25]"
+      "Thiruvalangadu [l_25]",
+      "Vadaranyeswarar Temple [l_58]",
+      "Utpaleswarar Shiva Temple [l_59]"
     ]
   },
   {
@@ -459,7 +453,8 @@
     "places": [
       "Bhāskararāyapuram [l_11]",
       "Thiruvidaimarudur [l_6]",
-      "Thirukoteeswarar Temple [l_54]"
+      "Thirukoteeswarar Temple [l_54]",
+      "Mahalingeswarar Temple [l_7]"
     ]
   },
   {
@@ -808,6 +803,22 @@
     "name": "Mellatur",
     "alt_names": [],
     "url": "indexes/place_index.html#l_57"
+  },
+  {
+    "type": "place",
+    "id": "l_58",
+    "name": "Vadaranyeswarar Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_58"
+  },
+  {
+    "type": "place",
+    "id": "l_59",
+    "name": "Utpaleswarar Shiva Temple",
+    "alt_names": [
+      "Cinna Kovil (local appellation)"
+    ],
+    "url": "indexes/place_index.html#l_59"
   },
   {
     "type": "place",

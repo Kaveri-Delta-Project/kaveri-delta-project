@@ -1,591 +1,587 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>  <title>People Index</title>
-  <link rel='stylesheet' href='../static/css/index.css'>
-   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65' crossorigin='anonymous'>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/> <title>People Index</title>
+<link href="../static/css/index.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet"/>
 </head>
 <body>
-<div class='sticky-top bg-white border-bottom'>
-<div class='index-header d-flex flex-column flex-md-row justify-content-between align-items-md-center'>
-  <h1>People Index</h1>
-  <form id='index-search-form' class='d-flex mt-3 mt-md-0 index-search-form' onsubmit='return false;'>
-    <div class='input-group input-group-sm search-group'>
-      <input type='text' id='index-search' class='search-input form-control' placeholder='Search by name, diacritics ignored..' autocomplete='off'>
-      <button type='button' id='search-clear' class='btn btn-secondary search-button search-clear-btn'>Clear</button>
-    </div>
-  </form>
+<div class="sticky-top bg-white border-bottom">
+<div class="index-header d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+<h1>People Index</h1>
+<form class="d-flex mt-3 mt-md-0 index-search-form" id="index-search-form" onsubmit="return false;">
+<div class="input-group input-group-sm search-group">
+<input autocomplete="off" class="search-input form-control" id="index-search" placeholder="Search by name, diacritics ignored.." type="text"/>
+<button class="btn btn-secondary search-button search-clear-btn" id="search-clear" type="button">Clear</button>
 </div>
-  <div class='alphabet mb-3 d-flex flex-wrap gap-2' id='alphabet-nav'>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='A'>A</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='B'>B</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='C'>C</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='D'>D</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='E'>E</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='F'>F</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='G'>G</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='H'>H</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='I'>I</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='J'>J</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='K'>K</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='L'>L</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='M'>M</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='N'>N</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='O'>O</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='P'>P</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='Q'>Q</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='R'>R</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='S'>S</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='T'>T</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='U'>U</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='V'>V</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='W'>W</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='X'>X</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='Y'>Y</button>
-    <button class='btn btn-sm btn-outline-secondary alphabet-btn' data-letter='Z'>Z</button>
-   <button type='button' class='btn btn-sm btn-outline-primary show-all alphabet-btn' data-letter='all'>Show All</button>
-  </div>
-  <div id='entry-count' class='px-2 py-2 results-num'></div>
+</form>
 </div>
-  <main>
-<ul class='index-list list-unstyled' id='all-entries'>
-<li class='letter-entry' data-letter='A'><div class='index-entry' id='p_15'>
-<div class='entry-header'>
-<span class='entry-title'>Ānandarāyamakhin</span>
-<span class='entry-id'>(p_15)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+<div class="alphabet mb-3 d-flex flex-wrap gap-2" id="alphabet-nav">
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="A">A</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="B">B</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="C">C</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="D">D</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="E">E</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="F">F</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="G">G</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="H">H</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="I">I</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="J">J</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="K">K</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="L">L</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="M">M</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="N">N</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="O">O</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="P">P</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="Q">Q</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="R">R</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="S">S</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="T">T</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="U">U</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="V">V</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="W">W</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="X">X</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="Y">Y</button>
+<button class="btn btn-sm btn-outline-secondary alphabet-btn" data-letter="Z">Z</button>
+<button class="btn btn-sm btn-outline-primary show-all alphabet-btn" data-letter="all" type="button">Show All</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_12'  data-connection='member of family'>Bhagavantarāyamakhin (p_12) </a>
+<div class="px-2 py-2 results-num" id="entry-count"></div>
 </div>
-<div class='item-name'>
-  <span>relationship: grandson of</span>
-  <a href='#p_13'  data-connection='grandson'>Gaṅgādharādhvarin (alias Kākoji) (p_13) </a>
+<main>
+<ul class="index-list list-unstyled" id="all-entries">
+<li class="letter-entry" data-letter="A"><div class="index-entry" id="p_15">
+<div class="entry-header">
+<span class="entry-title">Ānandarāyamakhin</span>
+<span class="entry-id">(p_15)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-name'>
-  <span>relationship: father of</span>
-  <a href='#p_14'  data-connection='father'>Nṛsiṃharāya II (p_14) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_12">Bhagavantarāyamakhin (p_12) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_6'  data-connection='patron' data-from='1683' data-to='1711'>Śāhaji I (of Thanjavur) (p_6)  (1683-1711)</a>
+<div class="item-name">
+<span>relationship: grandson of</span>
+<a data-connection="grandson">Gaṅgādharādhvarin (alias Kākoji) (p_13)  [entity no longer indexed at location]</a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_42'  data-connection='patron'>Sarabhoji (p_42) </a>
+<div class="item-name">
+<span>relationship: grandson of</span>
+<a data-connection="grandson" href="#p_7">Gaṅgādharavājapeyin (p_7) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_5'  data-connection='member of family'>Tryambakarāyamakhin (p_5) </a>
+<div class="item-name">
+<span>relationship: father of</span>
+<a data-connection="father" href="#p_14">Nṛsiṃharāya II (p_14) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_25'  data-connection='patron'>Vedakavīśvara (p_25) </a>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" data-from="1683" data-to="1711" href="#p_6">Śāhaji I (of Thanjavur) (p_6)  (1683-1711)</a>
+</div>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_42">Sarabhoji (p_42) </a>
+</div>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_5">Tryambakarāyamakhin (p_5) </a>
+</div>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_25">Vedakavīśvara (p_25) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1700' data-to='1700' class='item-name'>ca. 1700</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1700" data-to="1700">ca. 1700</span>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_64' target='work-index' class='item-name'>Jīvānandananāṭaka (w_64) (role: Author)</a>
-<a href='work_index.html#w_65' target='work-index' class='item-name'>Vidyāpariṇayanāṭaka (w_65) (role: Author)</a>
-<a href='work_index.html#w_66' target='work-index' class='item-name'>Vidyāpariṇayavyākhyā (w_66) (role: Attributed Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_64" target="work-index">Jīvānandananāṭaka (w_64) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_65" target="work-index">Vidyāpariṇayanāṭaka (w_65) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_66" target="work-index">Vidyāpariṇayavyākhyā (w_66) (role: Attributed Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Since he was the son of Nṛsiṃharāya I, who was minister of Ekoji I, and that the latter ruled around 1676-83, I add roughly one generation (approx. 25 years) to get his date of activity.</div>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='A'><div class='index-entry' id='p_49'>
-<div class='entry-header'>
-<span class='entry-title'>Aṇṇan Śāstrī</span>
-<span class='entry-id'>(p_49)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="A"><div class="index-entry" id="p_49">
+<div class="entry-header">
+<span class="entry-title">Aṇṇan Śāstrī</span>
+<span class="entry-id">(p_49)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Patañjali Śāstrī</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: father of</span>
-  <a href='#p_24'  data-connection='father'>Periyappā Kavi (p_24) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: father of</span>
+<a data-connection="father" href="#p_24">Periyappā Kavi (p_24) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_56' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Erakaram (l_56)  (connection: Recipient (Land Donation))</a>
-<a href='place_index.html#l_4' target='place-index' class='item-name'  data-role='Resided'>Kandaramanikkam (l_4)  (connection: Resided)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_56" target="place-index">Erakaram (l_56)  (connection: Recipient (Land Donation))</a>
+<a class="item-name" data-role="Resided" href="place_index.html#l_4" target="place-index">Kandaramanikkam (l_4)  (connection: Resided)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Aṇṇan Śāstrī himself would have been gifted a village (Erakaram/Eraharam) by the Vijayanagara ruler Veṅkaṭapatirāya (c. 1547-1614). See: A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C., p. 2575.</div>
 <div class="item-name">This scholar's father (and therefore the grand-father of Periappā Kavi) was named Kṛṣṇa, and according to the prologue of the Śṛṅgāramañjarīśāhajīya, he was proficient in Vedānta: kṛtavedāntasiddhāntaḥ kṛṣṇo yasya pitāmahaḥ |</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page' data-page='p.44'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952. (Page(s) p.44)</a>
-<span class='item-name reference'>A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C.</span>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" data-page="p.44" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952. (Page(s) p.44)</a>
+<span class="item-name reference">A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C.</span>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='A'><div class='index-entry' id='p_2'>
-<div class='entry-header'>
-<span class='entry-title'>Appayya Dīkṣita</span>
-<span class='entry-id'>(p_2)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="A"><div class="index-entry" id="p_2">
+<div class="entry-header">
+<span class="entry-title">Appayya Dīkṣita</span>
+<span class="entry-id">(p_2)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_1'  data-connection='member of family'>Nīlakaṇṭha Dīkṣita (p_1) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_1">Nīlakaṇṭha Dīkṣita (p_1) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: ancestor of</span>
-  <a href='#p_47'  data-connection='ancestor'>Tyāgarājamakhin (p_47) </a>
-</div>
-</div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1520' data-to='1593' class='item-name'>c. 1520-1593</span>
-</div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_13' target='place-index' class='item-name'  data-role='Born'>Adaiyapulam (l_13)  (connection: Born)</a>
-</div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_11' target='work-index' class='item-name'>Kuvalayānanda (w_11) (role: Author)</a>
-</div>
-</div></li>
-<li class='letter-entry' data-letter='A'><div class='index-entry' id='p_38'>
-<div class='entry-header'>
-<span class='entry-title'>Ayyaṇṇa Dīkṣita</span>
-<span class='entry-id'>(p_38)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
-</div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_17'  data-connection='student'>Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
+<div class="item-name">
+<span>relationship: ancestor of</span>
+<a data-connection="ancestor" href="#p_47">Tyāgarājamakhin (p_47) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Resided'>Thiruvisanallur (l_1)  (connection: Resided)</a>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1520" data-to="1593">c. 1520-1593</span>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_99' target='work-index' class='item-name'>Vyāsatātparyanirṇaya (w_99) (role: Author)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Born" href="place_index.html#l_13" target="place-index">Adaiyapulam (l_13)  (connection: Born)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='B'><div class='index-entry' id='p_12'>
-<div class='entry-header'>
-<span class='entry-title'>Bhagavantarāyamakhin</span>
-<span class='entry-id'>(p_12)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_11" target="work-index">Kuvalayānanda (w_11) (role: Author)</a>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_15'  data-connection='member of family'>Ānandarāyamakhin (p_15) </a>
+</div></div></li>
+<li class="letter-entry" data-letter="A"><div class="index-entry" id="p_38">
+<div class="entry-header">
+<span class="entry-title">Ayyaṇṇa Dīkṣita</span>
+<span class="entry-id">(p_38)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-name'>
-  <span>relationship: son of</span>
-  <a href='#p_13'  data-connection='son'>Gaṅgādharādhvarin (alias Kākoji) (p_13) </a>
-</div>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_4'  data-connection='contemporary of'>Rāmabhadra Dīkṣita (p_4) </a>
-</div>
-<div class='item-name'>
-  <span>relationship: brother of</span>
-  <a href='#p_5'  data-connection='brother'>Tryambakarāyamakhin (p_5) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_17">Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1700' data-to='1700' class='item-name'>ca. 1700</span>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Resided)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_25' target='work-index' class='item-name'>Mukundavilāsa (w_25) (role: Author)</a>
-<a href='work_index.html#w_27' target='work-index' class='item-name'>Rāghavābhyudaya (w_27) (role: Author)</a>
-<a href='work_index.html#w_26' target='work-index' class='item-name'>Uttaracampū (w_26) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_99" target="work-index">Vyāsatātparyanirṇaya (w_99) (role: Author)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='B'><div class='index-entry' id='p_33'>
-<div class='entry-header'>
-<span class='entry-title'>Bhāskara Dīkṣita</span>
-<span class='entry-id'>(p_33)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="B"><div class="index-entry" id="p_12">
+<div class="entry-header">
+<span class="entry-title">Bhagavantarāyamakhin</span>
+<span class="entry-id">(p_12)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_27'  data-connection='student'>Kṛṣṇānanda Sarasvatī (p_27) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_15">Ānandarāyamakhin (p_15) </a>
+</div>
+<div class="item-name">
+<span>relationship: son of</span>
+<a data-connection="son">Gaṅgādharādhvarin (alias Kākoji) (p_13)  [entity no longer indexed at location]</a>
+</div>
+<div class="item-name">
+<span>relationship: son of</span>
+<a data-connection="son" href="#p_7">Gaṅgādharavājapeyin (p_7) </a>
+</div>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_4">Rāmabhadra Dīkṣita (p_4) </a>
+</div>
+<div class="item-name">
+<span>relationship: brother of</span>
+<a data-connection="brother" href="#p_5">Tryambakarāyamakhin (p_5) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1700" data-to="1700">ca. 1700</span>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_101' target='work-index' class='item-name'>Ratnatūlikā (w_101) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_25" target="work-index">Mukundavilāsa (w_25) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_27" target="work-index">Rāghavābhyudaya (w_27) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_26" target="work-index">Uttaracampū (w_26) (role: Author)</a>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<span class='item-name reference'>Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946: p. 68</span>
+</div></div></li>
+<li class="letter-entry" data-letter="B"><div class="index-entry" id="p_33">
+<div class="entry-header">
+<span class="entry-title">Bhāskara Dīkṣita</span>
+<span class="entry-id">(p_33)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='B'><div class='index-entry' id='p_8'>
-<div class='entry-header'>
-<span class='entry-title'>Bhāskararāyamakhin</span>
-<span class='entry-id'>(p_8)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_27">Kṛṣṇānanda Sarasvatī (p_27) </a>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+</div>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
+</div>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_101" target="work-index">Ratnatūlikā (w_101) (role: Author)</a>
+</div>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<span class="item-name reference">Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946: p. 68</span>
+</div>
+</div></div></li>
+<li class="letter-entry" data-letter="B"><div class="index-entry" id="p_8">
+<div class="entry-header">
+<span class="entry-title">Bhāskararāyamakhin</span>
+<span class="entry-id">(p_8)</span>
+<button aria-label="Show details" class="toggle">▸</button>
+</div>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Bhāskararāya</div>
 <div class="item-name">Bhāsurānandanātha</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_7'  data-connection='student'>Gaṅgādharavājapeyin (p_7) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_7">Gaṅgādharavājapeyin (p_7) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: associate of</span>
-  <a href='#p_7'  data-connection='associate'>Gaṅgādharavājapeyin (p_7) </a>
+<div class="item-name">
+<span>relationship: associate of</span>
+<a data-connection="associate" href="#p_7">Gaṅgādharavājapeyin (p_7) </a>
 </div>
 </div>
-<div class='entry-block entry-birth'>
-<span class='subheading'>Birth Date</span>
-<span data-when='1690' class='item-name'>c. 1690</span>
+<div class="entry-block entry-birth">
+<span class="subheading">Birth Date</span>
+<span class="item-name" data-when="1690">c. 1690</span>
 </div>
-<div class='entry-block entry-death'>
-<span class='subheading'>Death Date</span>
-<span data-when='1785' class='item-name'>c. 1785</span>
+<div class="entry-block entry-death">
+<span class="subheading">Death Date</span>
+<span class="item-name" data-when="1785">c. 1785</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_11' target='place-index' class='item-name'  data-role='Resided'>Bhāskararāyapuram (l_11)  (connection: Resided)</a>
-<a href='place_index.html#l_54' target='place-index' class='item-name'  data-role='Visited'>Thirukoteeswarar Temple (l_54)  (connection: Visited)</a>
-<a href='place_index.html#l_6' target='place-index' class='item-name'  data-role='Died'>Thiruvidaimarudur (l_6)  (connection: Died)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_11" target="place-index">Bhāskararāyapuram (l_11)  (connection: Resided)</a>
+<a class="item-name" data-role="Worshipped" href="place_index.html#l_7" target="place-index">Mahalingeswarar Temple (l_7)  (connection: Worshipped)</a>
+<a class="item-name" data-role="Visited" href="place_index.html#l_54" target="place-index">Thirukoteeswarar Temple (l_54)  (connection: Visited)</a>
+<a class="item-name" data-role="Died" href="place_index.html#l_6" target="place-index">Thiruvidaimarudur (l_6)  (connection: Died)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">'The post-script in the manuscript of the Avaidikadarśanasaṃgraha of Gaṅgādhara Vājapeyin is very important (Tanjore Ms. 8244, Des. Cat. XIV, pp. 6410-12) in that it shows not only the great and well-known friendship between Gaṅgādhara Vājapeyin and Bhāskararāya, but also the relation that the two had with King Śāhaji; the manuscript was copied by Bhāskararāya; and he went out of the way to express at the end of the manuscript his feelings of regard towards Śāhaji with an eulogy of eight verses on him'. (See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 19).</div>
 <div class="item-name">He was of an earlier generation to King Śāhaji. (See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710) Tiruchi: The Kalyan Press, 1952: p. 21).</div>
 <div class="item-name">One story, recounted (August 2026) by the young priest at the Thirukoteeswarar temple, is that Bhāskararāyamakhin would have written his bhāṣya on the Lalitasahasranāma in that location (others say that he did so at the Madhyarjuna temple).</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='B'><div class='index-entry' id='p_18'>
-<div class='entry-header'>
-<span class='entry-title'>Bhūminātha Kavi</span>
-<span class='entry-id'>(p_18)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="B"><div class="index-entry" id="p_18">
+<div class="entry-header">
+<span class="entry-title">Bhūminātha Kavi</span>
+<span class="entry-id">(p_18)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Nallā Dīkṣita</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_4'  data-connection='student'>Rāmabhadra Dīkṣita (p_4) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_4">Rāmabhadra Dīkṣita (p_4) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_6'  data-connection='beneficiary'>Śāhaji I (of Thanjavur) (p_6) </a>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_6">Śāhaji I (of Thanjavur) (p_6) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Resided'>Thiruvisanallur (l_1)  (connection: Resided)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Resided)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_36' target='work-index' class='item-name'>Dharmavijayacampū (w_36) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_36" target="work-index">Dharmavijayacampū (w_36) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Same lineage as Rāmabhadra Dīkṣita (rāmabhadrādhvarivarapriyaśiṣyasya tadīyavaṃśajanmanaḥ), see Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 24.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='C'><div class='index-entry' id='p_3'>
-<div class='entry-header'>
-<span class='entry-title'>Cokkanāthamakhin</span>
-<span class='entry-id'>(p_3)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="C"><div class="index-entry" id="p_3">
+<div class="entry-header">
+<span class="entry-title">Cokkanāthamakhin</span>
+<span class="entry-id">(p_3)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Cokkanāthakavi</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_1'  data-connection='student'>Nīlakaṇṭha Dīkṣita (p_1) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_1">Nīlakaṇṭha Dīkṣita (p_1) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_4'  data-connection='teacher'>Rāmabhadra Dīkṣita (p_4) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_4">Rāmabhadra Dīkṣita (p_4) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_4'  data-connection='member of family'>Rāmabhadra Dīkṣita (p_4) </a>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_4">Rāmabhadra Dīkṣita (p_4) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_4' target='place-index' class='item-name'>Kandaramanikkam (l_4)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" href="place_index.html#l_4" target="place-index">Kandaramanikkam (l_4)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_3' target='work-index' class='item-name'>Dhāturatnāvali (w_3) (role: Author)</a>
-<a href='work_index.html#w_2' target='work-index' class='item-name'>Mahābhāṣyaratnāvali (w_2) (role: Author)</a>
-<a href='work_index.html#w_14' target='work-index' class='item-name'>Śabdakaumudī (w_14) (role: Author)</a>
-<a href='work_index.html#w_15' target='work-index' class='item-name'>Śābdikarakṣā (w_15) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_3" target="work-index">Dhāturatnāvali (w_3) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_2" target="work-index">Mahābhāṣyaratnāvali (w_2) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_14" target="work-index">Śabdakaumudī (w_14) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_15" target="work-index">Śābdikarakṣā (w_15) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Son of Nārāyaṇa alias Dvādaśāhayājin of Kauśika gotra</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<span class='item-name reference' data-vol='7' data-page='85'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 7, Page(s) 85)</span>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<span class="item-name reference" data-page="85" data-vol="7">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 7, Page(s) 85)</span>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='C'><div class='index-entry' id='p_32'>
-<div class='entry-header'>
-<span class='entry-title'>Cokkanāthamakhin (younger)</span>
-<span class='entry-id'>(p_32)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="C"><div class="index-entry" id="p_32">
+<div class="entry-header">
+<span class="entry-title">Cokkanāthamakhin (younger)</span>
+<span class="entry-id">(p_32)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_1'  data-connection='student'>Nīlakaṇṭha Dīkṣita (p_1) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_1">Nīlakaṇṭha Dīkṣita (p_1) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Resided'>Thiruvisanallur (l_1)  (connection: Resided)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Resided)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_74' target='work-index' class='item-name'>Kāntimatīpariṇaya (w_74) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_74" target="work-index">Kāntimatīpariṇaya (w_74) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">He was the son of Tippādhvarin, one of the recipients of the land donation at Thiruvisanallur, and so was a native of Thiruvisanallur. See A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19: Vol. 8, p. 3371.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#sml-catalogue' target='reference-page' data-vol='8'>A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19. (Volume 8)</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" data-vol="8" href="../references.html#sml-catalogue" target="reference-page">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19. (Volume 8)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='D'><div class='index-entry' id='p_9'>
-<div class='entry-header'>
-<span class='entry-title'>Ḍhuṇḍirāja Vyāsa</span>
-<span class='entry-id'>(p_9)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="D"><div class="index-entry" id="p_9">
+<div class="entry-header">
+<span class="entry-title">Ḍhuṇḍirāja Vyāsa</span>
+<span class="entry-id">(p_9)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_6'  data-connection='beneficiary'>Śāhaji I (of Thanjavur) (p_6) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_6">Śāhaji I (of Thanjavur) (p_6) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_10'  data-connection='beneficiary'>Serfoji Bhonsle (p_10) </a>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_10">Serfoji Bhonsle (p_10) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_5'  data-connection='beneficiary'>Tryambakarāyamakhin (p_5) </a>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_5">Tryambakarāyamakhin (p_5) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1680' data-to='1680' class='item-name'>fl. 1680</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1680" data-to="1680">fl. 1680</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_15' target='place-index' class='item-name'  data-role='Resided'>Svamimalai (l_15)  (connection: Resided)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_15" target="place-index">Svamimalai (l_15)  (connection: Resided)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_8' target='work-index' class='item-name'>Dharmākūtam (w_8) (role: Author)</a>
-<a href='work_index.html#w_16' target='work-index' class='item-name'>Mudrārākṣasavyākhyāna (w_16) (role: Author)</a>
-<a href='work_index.html#w_18' target='work-index' class='item-name'>Rājavyavahārakośa (w_18) (role: Author)</a>
-<a href='work_index.html#w_17' target='work-index' class='item-name'>Śāhajivilāsagītā (w_17) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_8" target="work-index">Dharmākūtam (w_8) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_16" target="work-index">Mudrārākṣasavyākhyāna (w_16) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_18" target="work-index">Rājavyavahārakośa (w_18) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_17" target="work-index">Śāhajivilāsagītā (w_17) (role: Author)</a>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
-<span class='item-name reference' data-vol='8' data-page='11–12'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 8, Page(s) 11–12)</span>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<span class="item-name reference" data-page="11–12" data-vol="8">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 8, Page(s) 11–12)</span>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='G'><div class='index-entry' id='p_39'>
-<div class='entry-header'>
-<span class='entry-title'>Gaṅgādhara Sarasvatī</span>
-<span class='entry-id'>(p_39)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="G"><div class="index-entry" id="p_39">
+<div class="entry-header">
+<span class="entry-title">Gaṅgādhara Sarasvatī</span>
+<span class="entry-id">(p_39)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Gaṅgādharendra Sarasvatī</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_29'  data-connection='student'>Rāmānanda Yati (p_29) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_29">Rāmānanda Yati (p_29) </a>
 </div>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_107' target='work-index' class='item-name'>Kaivalyakalpadruma (w_107) (role: Author)</a>
-<a href='work_index.html#w_100' target='work-index' class='item-name'>Siddhāntacandrikāvyākhyā Udgāraḥ (w_100) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_107" target="work-index">Kaivalyakalpadruma (w_107) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_100" target="work-index">Siddhāntacandrikāvyākhyā Udgāraḥ (w_100) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Gaṅgādharendra Sarasvatī was the pupil of Rāmānanda. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 33.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='G'><div class='index-entry' id='p_13'>
-<div class='entry-header'>
-<span class='entry-title'>Gaṅgādharādhvarin (alias Kākoji)</span>
-<span class='entry-id'>(p_13)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="G"><div class="index-entry" id="p_7">
+<div class="entry-header">
+<span class="entry-title">Gaṅgādharavājapeyin</span>
+<span class="entry-id">(p_7)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: grandfather of</span>
-  <a href='#p_15'  data-connection='grandfather'>Ānandarāyamakhin (p_15) </a>
-</div>
-<div class='item-name'>
-  <span>relationship: father of</span>
-  <a href='#p_12'  data-connection='father'>Bhagavantarāyamakhin (p_12) </a>
-</div>
-<div class='item-name'>
-  <span>relationship: father of</span>
-  <a href='#p_5'  data-connection='father'>Tryambakarāyamakhin (p_5) </a>
-</div>
-</div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
-<div class="item-name">Minister of Ekoji</div>
-</div>
-</div></li>
-<li class='letter-entry' data-letter='G'><div class='index-entry' id='p_7'>
-<div class='entry-header'>
-<span class='entry-title'>Gaṅgādharavājapeyin</span>
-<span class='entry-id'>(p_7)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
-</div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
-<div class="item-name">Gaṅgādhara Vājabeyi</div>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
+<div class="item-name">Gaṅgādharādhvarin (alias Kākoji)</div>
 <div class="item-name">Gaṅgādharamakhin</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_8'  data-connection='teacher'>Bhāskararāyamakhin (p_8) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: grandfather of</span>
+<a data-connection="grandfather" href="#p_15">Ānandarāyamakhin (p_15) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: associate of</span>
-  <a href='#p_8'  data-connection='associate'>Bhāskararāyamakhin (p_8) </a>
+<div class="item-name">
+<span>relationship: father of</span>
+<a data-connection="father" href="#p_12">Bhagavantarāyamakhin (p_12) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: associate of</span>
-  <a href='#p_6'  data-connection='associate'>Śāhaji I (of Thanjavur) (p_6) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_8">Bhāskararāyamakhin (p_8) </a>
+</div>
+<div class="item-name">
+<span>relationship: associate of</span>
+<a data-connection="associate" href="#p_8">Bhāskararāyamakhin (p_8) </a>
+</div>
+<div class="item-name">
+<span>relationship: associate of</span>
+<a data-connection="associate" href="#p_6">Śāhaji I (of Thanjavur) (p_6) </a>
+</div>
+<div class="item-name">
+<span>relationship: father of</span>
+<a data-connection="father" href="#p_5">Tryambakarāyamakhin (p_5) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1690' data-to='1690' class='item-name'>ca. 1690</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1690" data-to="1690">ca. 1690</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_25' target='place-index' class='item-name'  data-role='Born'>Thiruvalangadu (l_25)  (connection: Born)</a>
-<a href='place_index.html#l_17' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Thiruvalangadu (Delta) (l_17)  (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Born" href="place_index.html#l_25" target="place-index">Thiruvalangadu (l_25)  (connection: Born)</a>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_17" target="place-index">Thiruvalangadu (Delta) (l_17)  (connection: Recipient (Land Donation))</a>
+<a class="item-name" data-role="Worshipped" href="place_index.html#l_59" target="place-index">Utpaleswarar Shiva Temple (l_59)  (connection: Worshipped)</a>
+<a class="item-name" data-role="Worshipped" href="place_index.html#l_58" target="place-index">Vadaranyeswarar Temple (l_58)  (connection: Worshipped)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_13' target='work-index' class='item-name'>Avaidikadarśanasaṃgraha (w_13) (role: Author)</a>
-<a href='work_index.html#w_20' target='work-index' class='item-name'>Kāṇādasiddhāntacandrikā (w_20) (role: Author)</a>
-<a href='work_index.html#w_21' target='work-index' class='item-name'>Prasāda (on Kāṇādasiddhāntacandrikā) (w_21) (role: Author)</a>
-<a href='work_index.html#w_12' target='work-index' class='item-name'>Rasikarañjanī (w_12) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_13" target="work-index">Avaidikadarśanasaṃgraha (w_13) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_20" target="work-index">Kāṇādasiddhāntacandrikā (w_20) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_21" target="work-index">Prasāda (on Kāṇādasiddhāntacandrikā) (w_21) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_12" target="work-index">Rasikarañjanī (w_12) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">He acquired the title vājapeyi due to the performance of the vājapeya yajña. (See Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979: p. 30)</div>
-<div class="item-name">He was a native of Thiruvalangadu near Madras, and was brought over to Tiruvalangadu in the Thanjavur district by Tikambararāya, minister of King Śāhaji, at the instance of the king. (See Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979: p. 30)</div>
-<div class="item-name">He was brought over to Thiruvalangadu in mayavarum taluk of the Thanjavur district by by Tikambararaya, minister of Śāhaji. (See Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979: p. 30). This Thiruvalangadu near the Delta was a colony of the other (older, Northern) Thiruvalangadu near Chennai, Madras, (See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 36).</div>
+<div class="item-name">He was brought over to Thiruvalangadu in mayavarum taluk of the Thanjavur district by Tryambakaraya, minister of Śāhaji. (See Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979: p. 30). This Thiruvalangadu near the Delta was a colony of the other (older, Northern) Thiruvalangadu near Chennai, Madras, (See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 36).</div>
 <div class="item-name">He was of an earlier generation to King Śāhaji. (See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710) Tiruchi: The Kalyan Press, 1952: p. 21).</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#krishnamurthy1979' target='reference-page'>Krishnamurthy, R. <i>The Saints of the Cauvery Delta</i>. New Delhi: Concept Publishing Company, 1979.</a>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#krishnamurthy1979" target="reference-page">Krishnamurthy, R. <i>The Saints of the Cauvery Delta</i>. New Delhi: Concept Publishing Company, 1979.</a>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='K'><div class='index-entry' id='p_27'>
-<div class='entry-header'>
-<span class='entry-title'>Kṛṣṇānanda Sarasvatī</span>
-<span class='entry-id'>(p_27)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="K"><div class="index-entry" id="p_27">
+<div class="entry-header">
+<span class="entry-title">Kṛṣṇānanda Sarasvatī</span>
+<span class="entry-id">(p_27)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Bālakṛṣna Bhagavatpāda</div>
 <div class="item-name">Bālakṛṣṇa Guru</div>
 <div class="item-name">Bālakṛṣṇānandasarasvatī</div>
@@ -594,313 +590,313 @@
 <div class="item-name">Kṛṣṇānandapūjyapāda</div>
 <div class="item-name">Kṛṣṇānandayati</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_33'  data-connection='teacher'>Bhāskara Dīkṣita (p_33) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_33">Bhāskara Dīkṣita (p_33) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_24'  data-connection='teacher'>Periyappā Kavi (p_24) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_24">Periyappā Kavi (p_24) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_29'  data-connection='teacher'>Rāmānanda Yati (p_29) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_29">Rāmānanda Yati (p_29) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_28'  data-connection='teacher'>Raṅganātha Sūri (p_28) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_28">Raṅganātha Sūri (p_28) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_26'  data-connection='teacher'>Viśvanātha Dīkṣita (p_26) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_26">Viśvanātha Dīkṣita (p_26) </a>
 </div>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_54' target='work-index' class='item-name'>Ācāryastavarājabhūṣaṇa (w_54) (role: Honoree)</a>
-<a href='work_index.html#w_104' target='work-index' class='item-name'>Āmodarañjanī (w_104) (role: Attributed Author)</a>
-<a href='work_index.html#w_72' target='work-index' class='item-name'>Anuṣṭhānapaddhati (w_72) (role: Author)</a>
-<a href='work_index.html#w_71' target='work-index' class='item-name'>Brahmasūtrakutūhala (w_71) (role: Author)</a>
-<a href='work_index.html#w_105' target='work-index' class='item-name'>Pañcaratnavyākhyā (w_105) (role: Attributed Author)</a>
-<a href='work_index.html#w_67' target='work-index' class='item-name'>Puruṣārtharatnākara (w_67) (role: Attributed Author)</a>
-<a href='work_index.html#w_69' target='work-index' class='item-name'>Siddhāntasiddhāñjana (w_69) (role: Author)</a>
-<a href='work_index.html#w_70' target='work-index' class='item-name'>Śivatattvaratnakalikā (w_70) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_54" target="work-index">Ācāryastavarājabhūṣaṇa (w_54) (role: Honoree)</a>
+<a class="item-name" href="work_index.html#w_104" target="work-index">Āmodarañjanī (w_104) (role: Attributed Author)</a>
+<a class="item-name" href="work_index.html#w_72" target="work-index">Anuṣṭhānapaddhati (w_72) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_71" target="work-index">Brahmasūtrakutūhala (w_71) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_105" target="work-index">Pañcaratnavyākhyā (w_105) (role: Attributed Author)</a>
+<a class="item-name" href="work_index.html#w_67" target="work-index">Puruṣārtharatnākara (w_67) (role: Attributed Author)</a>
+<a class="item-name" href="work_index.html#w_69" target="work-index">Siddhāntasiddhāñjana (w_69) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_70" target="work-index">Śivatattvaratnakalikā (w_70) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">For the alternative name Kṛṣṇānandayati, see Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13: vol. 9, p. 349.</div>
 <div class="item-name">For the alternative names Kṛṣṇānandaguru and Kṛṣṇānandapūjyapāda, see Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946.</div>
 <div class="item-name">He was the pupil of Rāmabhadrānanda Sarasvatī in Vedānta, and Vāsudevendra Sarasvatī with regard to the saṁnyāsaśrama. See Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13: vol. 9, pp. 466–468.</div>
 <div class="item-name">Some of the leading writers of Thiruvisanallur looked to his blessings. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 30.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page' data-page='30–31'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952. (Page(s) 30–31)</a>
-<span class='item-name reference' data-vol='5' data-page='14a'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 5, Page(s) 14a)</span>
-<a class='item-name reference' href='../references.html#adyar-catalogue' target='reference-page' data-vol='9'>Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13. (Volume 9)</a>
-<span class='item-name reference'>Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946.</span>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" data-page="30–31" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952. (Page(s) 30–31)</a>
+<span class="item-name reference" data-page="14a" data-vol="5">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 5, Page(s) 14a)</span>
+<a class="item-name reference" data-vol="9" href="../references.html#adyar-catalogue" target="reference-page">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13. (Volume 9)</a>
+<span class="item-name reference">Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946.</span>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='K'><div class='index-entry' id='p_46'>
-<div class='entry-header'>
-<span class='entry-title'>Kuppusvāmī Śāstrī</span>
-<span class='entry-id'>(p_46)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="K"><div class="index-entry" id="p_46">
+<div class="entry-header">
+<span class="entry-title">Kuppusvāmī Śāstrī</span>
+<span class="entry-id">(p_46)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_5'  data-connection='student'>Tryambakarāyamakhin (p_5) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_5">Tryambakarāyamakhin (p_5) </a>
 </div>
 </div>
-<div class='entry-block entry-birth'>
-<span class='subheading'>Birth Date</span>
-<span data-when='1880' class='item-name'>1880</span>
+<div class="entry-block entry-birth">
+<span class="subheading">Birth Date</span>
+<span class="item-name" data-when="1880">1880</span>
 </div>
-<div class='entry-block entry-death'>
-<span class='subheading'>Death Date</span>
-<span data-when='1943' class='item-name'>1943</span>
+<div class="entry-block entry-death">
+<span class="subheading">Death Date</span>
+<span class="item-name" data-when="1943">1943</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_41' target='place-index' class='item-name'  data-role='Born'>Ganapaty agrahara (l_41)  (connection: Born)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Born" href="place_index.html#l_41" target="place-index">Ganapaty agrahara (l_41)  (connection: Born)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='N'><div class='index-entry' id='p_19'>
-<div class='entry-header'>
-<span class='entry-title'>Nallādhvarin</span>
-<span class='entry-id'>(p_19)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="N"><div class="index-entry" id="p_19">
+<div class="entry-header">
+<span class="entry-title">Nallādhvarin</span>
+<span class="entry-id">(p_19)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Nallā Dīkṣita</div>
 <div class="item-name">Nallābudha</div>
 <div class="item-name">Nallākavi</div>
 <div class="item-name">Nallāsudhī</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_11'  data-connection='student'>Paramaśivendra Sarasvatī (p_11) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_11">Paramaśivendra Sarasvatī (p_11) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_4'  data-connection='contemporary of'>Rāmabhadra Dīkṣita (p_4) </a>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_4">Rāmabhadra Dīkṣita (p_4) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_20'  data-connection='student'>Rāmanāthamakhin (p_20) </a>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_20">Rāmanāthamakhin (p_20) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_21'  data-connection='student'>Sadāśivendra Sarasvatī (p_21) </a>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_21">Sadāśivendra Sarasvatī (p_21) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_4' target='place-index' class='item-name'  data-role='Resided'>Kandaramanikkam (l_4)  (connection: Resided)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_4" target="place-index">Kandaramanikkam (l_4)  (connection: Resided)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_48' target='work-index' class='item-name'>Advaitarasamañjarī (w_48) (role: Author)</a>
-<a href='work_index.html#w_46' target='work-index' class='item-name'>Cittavṛttikalyāṇa (w_46) (role: Author)</a>
-<a href='work_index.html#w_40' target='work-index' class='item-name'>Jīvanmuktikalyāṇa (w_40) (role: Author)</a>
-<a href='work_index.html#w_43' target='work-index' class='item-name'>Padamaṇimañjarī (w_43) (role: Co-Author)</a>
-<a href='work_index.html#w_42' target='work-index' class='item-name'>Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
-<a href='work_index.html#w_47' target='work-index' class='item-name'>Śṛṅgārasarvasvabhāṇa (w_47) (role: Author)</a>
-<a href='work_index.html#w_5' target='work-index' class='item-name'>Subhadrāpariṇaya (w_5) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_48" target="work-index">Advaitarasamañjarī (w_48) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_46" target="work-index">Cittavṛttikalyāṇa (w_46) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_40" target="work-index">Jīvanmuktikalyāṇa (w_40) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_43" target="work-index">Padamaṇimañjarī (w_43) (role: Co-Author)</a>
+<a class="item-name" href="work_index.html#w_42" target="work-index">Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
+<a class="item-name" href="work_index.html#w_47" target="work-index">Śṛṅgārasarvasvabhāṇa (w_47) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_5" target="work-index">Subhadrāpariṇaya (w_5) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Son of Bālacandramakhin and of the Kauśikagotra. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 53.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<span class='item-name reference' data-vol='9' data-page='381'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 9, Page(s) 381)</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<span class="item-name reference" data-page="381" data-vol="9">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 9, Page(s) 381)</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='N'><div class='index-entry' id='p_1'>
-<div class='entry-header'>
-<span class='entry-title'>Nīlakaṇṭha Dīkṣita</span>
-<span class='entry-id'>(p_1)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="N"><div class="index-entry" id="p_1">
+<div class="entry-header">
+<span class="entry-title">Nīlakaṇṭha Dīkṣita</span>
+<span class="entry-id">(p_1)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_2'  data-connection='member of family'>Appayya Dīkṣita (p_2) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_2">Appayya Dīkṣita (p_2) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_3'  data-connection='teacher'>Cokkanāthamakhin (p_3) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_3">Cokkanāthamakhin (p_3) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_32'  data-connection='teacher'>Cokkanāthamakhin (younger) (p_32) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_32">Cokkanāthamakhin (younger) (p_32) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1638' data-to='1638' class='item-name'>Active around 1638</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1638" data-to="1638">Active around 1638</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Affiliation to this place'>Thiruvisanallur (l_1)  (connection: Affiliation to this place)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Affiliation to this place" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Affiliation to this place)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_35' target='work-index' class='item-name'>Gaṅgāvataraṇa (w_35) (role: Author)</a>
-<a href='work_index.html#w_6' target='work-index' class='item-name'>Kaliviḍambana (w_6) (role: Author)</a>
-<a href='work_index.html#w_1' target='work-index' class='item-name'>Nīlakaṇṭhavijayacampū (w_1) (role: Author)</a>
-<a href='work_index.html#w_53' target='work-index' class='item-name'>Rāmabāṇastava (w_53) (role: Mentor)</a>
-<a href='work_index.html#w_32' target='work-index' class='item-name'>Śivalīlārṇava (w_32) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_35" target="work-index">Gaṅgāvataraṇa (w_35) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_6" target="work-index">Kaliviḍambana (w_6) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_1" target="work-index">Nīlakaṇṭhavijayacampū (w_1) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_53" target="work-index">Rāmabāṇastava (w_53) (role: Mentor)</a>
+<a class="item-name" href="work_index.html#w_32" target="work-index">Śivalīlārṇava (w_32) (role: Author)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='N'><div class='index-entry' id='p_14'>
-<div class='entry-header'>
-<span class='entry-title'>Nṛsiṃharāya II</span>
-<span class='entry-id'>(p_14)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="N"><div class="index-entry" id="p_14">
+<div class="entry-header">
+<span class="entry-title">Nṛsiṃharāya II</span>
+<span class="entry-id">(p_14)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Nṛsiṃhāmātya</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: son of</span>
-  <a href='#p_15'  data-connection='son'>Ānandarāyamakhin (p_15) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: son of</span>
+<a data-connection="son" href="#p_15">Ānandarāyamakhin (p_15) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1735' data-to='1736' class='item-name'>ca. 1735-36</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1735" data-to="1736">ca. 1735-36</span>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_28' target='work-index' class='item-name'>Tripuravijayacampū (w_28) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_28" target="work-index">Tripuravijayacampū (w_28) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Grandson of Nṛsiṃharāya I, who was the brother of Tryambakarāyamakhin and Bhagavantarāyamakhin. He was minister of Ekoji II alias Bāvā Saheb. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 28.</div>
 <div class="item-name">Since he was the minister of Ekoji II, who ruled around 1735-36, I take the latter as his date of activity.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='P'><div class='index-entry' id='p_11'>
-<div class='entry-header'>
-<span class='entry-title'>Paramaśivendra Sarasvatī</span>
-<span class='entry-id'>(p_11)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="P"><div class="index-entry" id="p_11">
+<div class="entry-header">
+<span class="entry-title">Paramaśivendra Sarasvatī</span>
+<span class="entry-id">(p_11)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_19'  data-connection='teacher'>Nallādhvarin (p_19) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_19">Nallādhvarin (p_19) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_21'  data-connection='teacher'>Sadāśivendra Sarasvatī (p_21) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_21">Sadāśivendra Sarasvatī (p_21) </a>
 </div>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_19' target='work-index' class='item-name'>Daharavidyāprakāśikā (w_19) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_19" target="work-index">Daharavidyāprakāśikā (w_19) (role: Author)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='P'><div class='index-entry' id='p_24'>
-<div class='entry-header'>
-<span class='entry-title'>Periyappā Kavi</span>
-<span class='entry-id'>(p_24)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="P"><div class="index-entry" id="p_24">
+<div class="entry-header">
+<span class="entry-title">Periyappā Kavi</span>
+<span class="entry-id">(p_24)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Periappā Kavi</div>
 <div class="item-name">Periappā Śāstrī</div>
 <div class="item-name">Vainateya</div>
 <div class="item-name">Vinateya</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: son of</span>
-  <a href='#p_49'  data-connection='son'>Aṇṇan Śāstrī (p_49) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: son of</span>
+<a data-connection="son" href="#p_49">Aṇṇan Śāstrī (p_49) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_27'  data-connection='student'>Kṛṣṇānanda Sarasvatī (p_27) </a>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_27">Kṛṣṇānanda Sarasvatī (p_27) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_6'  data-connection='beneficiary'>Śāhaji I (of Thanjavur) (p_6) </a>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_6">Śāhaji I (of Thanjavur) (p_6) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_17'  data-connection='contemporary of'>Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_17">Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_50'  data-connection='member of family'>Vainateya (p_50) </a>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_50">Vainateya (p_50) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_25'  data-connection='contemporary of'>Vedakavīśvara (p_25) </a>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_25">Vedakavīśvara (p_25) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: brother of</span>
-  <a href='#p_26'  data-connection='brother'>Viśvanātha Dīkṣita (p_26) </a>
+<div class="item-name">
+<span>relationship: brother of</span>
+<a data-connection="brother" href="#p_26">Viśvanātha Dīkṣita (p_26) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1635' data-to='1720' class='item-name'>ca. 1635-1720</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1635" data-to="1720">ca. 1635-1720</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_42' target='work-index' class='item-name'>Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
-<a href='work_index.html#w_45' target='work-index' class='item-name'>Śṛṅgāramañjarīśāhajīya (w_45) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_42" target="work-index">Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
+<a class="item-name" href="work_index.html#w_45" target="work-index">Śṛṅgāramañjarīśāhajīya (w_45) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Periappā Kavi had apparently the same age as Śrīdhara Veṅkaṭeśa (see Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 64). I therefore use the same dates as reported in Śrīdhara Veṅkaṭeśa's entry.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='R'><div class='index-entry' id='p_4'>
-<div class='entry-header'>
-<span class='entry-title'>Rāmabhadra Dīkṣita</span>
-<span class='entry-id'>(p_4)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="R"><div class="index-entry" id="p_4">
+<div class="entry-header">
+<span class="entry-title">Rāmabhadra Dīkṣita</span>
+<span class="entry-id">(p_4)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Ācārya Rāmabhadra</div>
 <div class="item-name">Ayyā Dīkṣita</div>
 <div class="item-name">Pratyagra Patañjali</div>
@@ -908,421 +904,421 @@
 <div class="item-name">Rāmabhadrācārya</div>
 <div class="item-name">Rāmabhadrādhvarin</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_12'  data-connection='contemporary of'>Bhagavantarāyamakhin (p_12) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_12">Bhagavantarāyamakhin (p_12) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_18'  data-connection='teacher'>Bhūminātha Kavi (p_18) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_18">Bhūminātha Kavi (p_18) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_3'  data-connection='student'>Cokkanāthamakhin (p_3) </a>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_3">Cokkanāthamakhin (p_3) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_3'  data-connection='member of family'>Cokkanāthamakhin (p_3) </a>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_3">Cokkanāthamakhin (p_3) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_19'  data-connection='contemporary of'>Nallādhvarin (p_19) </a>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_19">Nallādhvarin (p_19) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_22'  data-connection='member of family'>Vaidyanātha Dīkṣita (p_22) </a>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_22">Vaidyanātha Dīkṣita (p_22) </a>
 </div>
 </div>
-<div class='entry-block entry-idno'>
-<span class='subheading'>Authority Identifier</span>
-<span class='item-name'>Q113774201 (Wikidata)</span>
+<div class="entry-block entry-idno">
+<span class="subheading">Authority Identifier</span>
+<span class="item-name">Q113774201 (Wikidata)</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_4' target='place-index' class='item-name'  data-role='Born'>Kandaramanikkam (l_4)  (connection: Born)</a>
-<a href='place_index.html#l_10' target='place-index' class='item-name'  data-role='Visited'>Madurai (l_10)  (connection: Visited)</a>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Resided'>Thiruvisanallur (l_1)  (connection: Resided)</a>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Born" href="place_index.html#l_4" target="place-index">Kandaramanikkam (l_4)  (connection: Born)</a>
+<a class="item-name" data-role="Visited" href="place_index.html#l_10" target="place-index">Madurai (l_10)  (connection: Visited)</a>
+<a class="item-name" data-role="Resided" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Resided)</a>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_54' target='work-index' class='item-name'>Ācāryastavarājabhūṣaṇa (w_54) (role: Author)</a>
-<a href='work_index.html#w_60' target='work-index' class='item-name'>Anunāsikanirdeśavicāra (w_60) (role: Attributed Author)</a>
-<a href='work_index.html#w_37' target='work-index' class='item-name'>Jānakīpariṇaya (w_37) (role: Author)</a>
-<a href='work_index.html#w_49' target='work-index' class='item-name'>Paribhāṣāvṛttivyākhyāna (w_49) (role: Author)</a>
-<a href='work_index.html#w_30' target='work-index' class='item-name'>Patañjalicarita (w_30) (role: Author)</a>
-<a href='work_index.html#w_53' target='work-index' class='item-name'>Rāmabāṇastava (w_53) (role: Author)</a>
-<a href='work_index.html#w_52' target='work-index' class='item-name'>Rāmacāpastava (w_52) (role: Author)</a>
-<a href='work_index.html#w_51' target='work-index' class='item-name'>Rāmacitrastava (w_51) (role: Author)</a>
-<a href='work_index.html#w_56' target='work-index' class='item-name'>Rāmakarṇarasāyaṇastava (w_56) (role: Author)</a>
-<a href='work_index.html#w_57' target='work-index' class='item-name'>Rāmaprasādastava (w_57) (role: Author)</a>
-<a href='work_index.html#w_59' target='work-index' class='item-name'>Rāmāṣṭaprāsastava (w_59) (role: Author)</a>
-<a href='work_index.html#w_63' target='work-index' class='item-name'>Rāmatūnīrastava (w_63) (role: Author)</a>
-<a href='work_index.html#w_39' target='work-index' class='item-name'>Śabdabhedanirūpaṇa (w_39) (role: Author)</a>
-<a href='work_index.html#w_42' target='work-index' class='item-name'>Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
-<a href='work_index.html#w_62' target='work-index' class='item-name'>Siddhāntasāra (w_62) (role: Author)</a>
-<a href='work_index.html#w_31' target='work-index' class='item-name'>Śṛṅgāratilakabhāṇa (w_31) (role: Author)</a>
-<a href='work_index.html#w_61' target='work-index' class='item-name'>Śukasandeśa (w_61) (role: Advisor/Minister)</a>
-<a href='work_index.html#w_50' target='work-index' class='item-name'>Uṇādimaṇidīpikā (w_50) (role: Author)</a>
-<a href='work_index.html#w_58' target='work-index' class='item-name'>Varṇamālāstava (w_58) (role: Author)</a>
-<a href='work_index.html#w_55' target='work-index' class='item-name'>Viśvagarbhastava (w_55) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_54" target="work-index">Ācāryastavarājabhūṣaṇa (w_54) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_60" target="work-index">Anunāsikanirdeśavicāra (w_60) (role: Attributed Author)</a>
+<a class="item-name" href="work_index.html#w_37" target="work-index">Jānakīpariṇaya (w_37) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_49" target="work-index">Paribhāṣāvṛttivyākhyāna (w_49) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_30" target="work-index">Patañjalicarita (w_30) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_53" target="work-index">Rāmabāṇastava (w_53) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_52" target="work-index">Rāmacāpastava (w_52) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_51" target="work-index">Rāmacitrastava (w_51) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_56" target="work-index">Rāmakarṇarasāyaṇastava (w_56) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_57" target="work-index">Rāmaprasādastava (w_57) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_59" target="work-index">Rāmāṣṭaprāsastava (w_59) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_63" target="work-index">Rāmatūnīrastava (w_63) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_39" target="work-index">Śabdabhedanirūpaṇa (w_39) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_42" target="work-index">Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
+<a class="item-name" href="work_index.html#w_62" target="work-index">Siddhāntasāra (w_62) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_31" target="work-index">Śṛṅgāratilakabhāṇa (w_31) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_61" target="work-index">Śukasandeśa (w_61) (role: Advisor/Minister)</a>
+<a class="item-name" href="work_index.html#w_50" target="work-index">Uṇādimaṇidīpikā (w_50) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_58" target="work-index">Varṇamālāstava (w_58) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_55" target="work-index">Viśvagarbhastava (w_55) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Due to his profiency in vyākaraṇa, he was called Pratyagra-Patañjali, i.e. 'The Modern Patañjali', by his contemporaries. See Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004: p. 129.</div>
 <div class="item-name">He was a recipient of 4 shares of Thiruvisanallur, as he was a master in 4 śāstras: alaṁkāra, vyākaraṇa, mīmāṁsā, and vedānta. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952. See also Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002.</div>
 <div class="item-name">He was a Ṛgvedin, Kauṇḍinyagotra. See  Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 40.</div>
 <div class="item-name">He was hailed as pratyagrapatañjali, dvitīyaprācetasa, dvitīyavālmīki, sāhiytaratnakośa, śabdabrahmasvarūpī, and rāmabhaktyabdhi by his contemporaries. See Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002: p. 13.</div>
 <div class="item-name">Raghavan suggests a sojourn at Madura for Rāmabhadra Dīkṣita on account of the mention of Madura as the venue of the enactment of of his Śṛṅgāratilakabhāṇa. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 41. See also Thiruvengadathan, A. Rāmabhadra Dīkṣita and His Works: A Study. Chennai: The Kuppuswami Sastri Research Institute, 2002: p. 11.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#kuppuswamisastri2004' target='reference-page'>Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.</a>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
-<a class='item-name reference' href='../references.html#thiruvengadathan2002' target='reference-page'>Thiruvengadathan, A. <i>Rāmabhadra Dīkṣita and His Works: A Study</i>. Chennai: The Kuppuswami Sastri Research Institute, 2002.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#kuppuswamisastri2004" target="reference-page">Sastri, T. S. Kuppuswami Sastri. ‘Ramabhadra-Dikshita and the Southern Poets of his Time.’ Indian Antiquary, Vol. XXXIII, pp. 126-142 and pp. 176-196, 2004.</a>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<a class="item-name reference" href="../references.html#thiruvengadathan2002" target="reference-page">Thiruvengadathan, A. <i>Rāmabhadra Dīkṣita and His Works: A Study</i>. Chennai: The Kuppuswami Sastri Research Institute, 2002.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='R'><div class='index-entry' id='p_29'>
-<div class='entry-header'>
-<span class='entry-title'>Rāmānanda Yati</span>
-<span class='entry-id'>(p_29)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="R"><div class="index-entry" id="p_29">
+<div class="entry-header">
+<span class="entry-title">Rāmānanda Yati</span>
+<span class="entry-id">(p_29)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Lakṣmana or Lakṃsīdhara (before saṃnyāsa, see notes)</div>
 <div class="item-name">Rāmabhadrānanda Sarasvatī</div>
 <div class="item-name">Rāmānanda Sarasvatī</div>
 <div class="item-name">Rāmayati (possible)</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_39'  data-connection='teacher'>Gaṅgādhara Sarasvatī (p_39) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_39">Gaṅgādhara Sarasvatī (p_39) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_27'  data-connection='student'>Kṛṣṇānanda Sarasvatī (p_27) </a>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_27">Kṛṣṇānanda Sarasvatī (p_27) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1670' data-to='1670' class='item-name'>1670</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1670" data-to="1670">1670</span>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_68' target='work-index' class='item-name'>Siddhāntacandrikā (w_68) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_68" target="work-index">Siddhāntacandrikā (w_68) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">According to V. Krishnamacharya, Rāmānanda is the name undertaken by Lakṣmaṇa (or Lakṣmīdhara) of the Carakūri family. Before he became a saṃnyāsin with the name Rāmananda, after being married for a long time, under the preceptor Kṛṣṇānandayati (author of the Siddhāntasiddhāñjana), he authored the following: 1) Ṣaḍbhāṣācandrikā, 2) Prasannarāghavavyākhyā: Timmabhūpālīyā, 3) Gītagovindavyākhyā: Srutirañjanī, and 4) Anargharāghavavyākhyā: Iṣṭārthakalpavallī. Rāmānanda mentions these biographical details in the colophon of the Anargharāghavavyākhyā. (See Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946: p. 65)</div>
 <div class="item-name">He copied Kṛṣṇānanda Sarasvatī's Siddhāntasiddhāñjana in 1670.</div>
 <div class="item-name">He is different from another Rāmānanda Sarasvatī, the author of a subcommentary on Śaṅkara's Brahmasūtrabhāṣya called Ratnaprabhā and a treatise aligned with the Vivaraṇa interpretation of the Brahmasūtras titled Vivaraṇopanyāsa. See Duquette, Jonathan. Debates in the Delta: An Intellectual History of Late Advaita. Brill, forthcoming.</div>
 <div class="item-name">It is possible that he was called Rāmayati. See New Catalogus Catalogurum (NCC). Vols 1-36: vol. 24, p. 202b.</div>
 <div class="item-name">V. Krishnamacharya gives the date that Rāmananda copied the Siddhāntasiddhāñjana as 16th Jan 1670 AD (the 5th day of the bright fortnight in the Makara month of the year Saumya). (See Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946: p. 67).</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<span class='item-name reference' data-vol='24' data-page='275b'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 24, Page(s) 275b)</span>
-<a class='item-name reference' href='../references.html#duquette-forthcoming' target='reference-page'>Duquette, Jonathan. <i>Debates in the Delta: An Intellectual History of Late Advaita</i>. Brill, forthcoming.</a>
-<span class='item-name reference'>Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946</span>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<span class="item-name reference" data-page="275b" data-vol="24">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 24, Page(s) 275b)</span>
+<a class="item-name reference" href="../references.html#duquette-forthcoming" target="reference-page">Duquette, Jonathan. <i>Debates in the Delta: An Intellectual History of Late Advaita</i>. Brill, forthcoming.</a>
+<span class="item-name reference">Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946</span>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='R'><div class='index-entry' id='p_20'>
-<div class='entry-header'>
-<span class='entry-title'>Rāmanāthamakhin</span>
-<span class='entry-id'>(p_20)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="R"><div class="index-entry" id="p_20">
+<div class="entry-header">
+<span class="entry-title">Rāmanāthamakhin</span>
+<span class="entry-id">(p_20)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_19'  data-connection='teacher'>Nallādhvarin (p_19) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_19">Nallādhvarin (p_19) </a>
 </div>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_42' target='work-index' class='item-name'>Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_42" target="work-index">Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Described as a sarvantantrasvatantra and sarvatomukhayājin by Nallādhvarin in the latter's prologue to his Śṛṅgārasarvasvabhāṇa. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 53.</div>
 <div class="item-name">Possibly mentioned in a letter preserved in A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19: vol. 11, p. 4788–4792, ms. 6594.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
-<a class='item-name reference' href='../references.html#sml-catalogue' target='reference-page' data-vol='11'>A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19. (Volume 11)</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<a class="item-name reference" data-vol="11" href="../references.html#sml-catalogue" target="reference-page">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19. (Volume 11)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='R'><div class='index-entry' id='p_36'>
-<div class='entry-header'>
-<span class='entry-title'>Rāmānuja</span>
-<span class='entry-id'>(p_36)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="R"><div class="index-entry" id="p_36">
+<div class="entry-header">
+<span class="entry-title">Rāmānuja</span>
+<span class="entry-id">(p_36)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_76' target='work-index' class='item-name'>Śrībhāṣya (w_76) (role: Author)</a>
+<div class="item-details">
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_76" target="work-index">Śrībhāṣya (w_76) (role: Author)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='R'><div class='index-entry' id='p_28'>
-<div class='entry-header'>
-<span class='entry-title'>Raṅganātha Sūri</span>
-<span class='entry-id'>(p_28)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="R"><div class="index-entry" id="p_28">
+<div class="entry-header">
+<span class="entry-title">Raṅganātha Sūri</span>
+<span class="entry-id">(p_28)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Raṅganātha Śāstri</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_27'  data-connection='student'>Kṛṣṇānanda Sarasvatī (p_27) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_27">Kṛṣṇānanda Sarasvatī (p_27) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_67' target='work-index' class='item-name'>Puruṣārtharatnākara (w_67) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_67" target="work-index">Puruṣārtharatnākara (w_67) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">He must have lived towards the end of the 17th century. See New Catalogus Catalogurum (NCC). Vols 1-36: vol. 9, p. 349.</div>
 <div class="item-name">He was of Ātreyagotra and belonged to a family called Kuraviśeri. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 32.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
-<span class='item-name reference' data-vol='9'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 9)</span>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<span class="item-name reference" data-vol="9">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 9)</span>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_21'>
-<div class='entry-header'>
-<span class='entry-title'>Sadāśivendra Sarasvatī</span>
-<span class='entry-id'>(p_21)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_21">
+<div class="entry-header">
+<span class="entry-title">Sadāśivendra Sarasvatī</span>
+<span class="entry-id">(p_21)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_19'  data-connection='teacher'>Nallādhvarin (p_19) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_19">Nallādhvarin (p_19) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_11'  data-connection='student'>Paramaśivendra Sarasvatī (p_11) </a>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_11">Paramaśivendra Sarasvatī (p_11) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Born'>Thiruvisanallur (l_1)  (connection: Born)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Born" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Born)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_48' target='work-index' class='item-name'>Advaitarasamañjarī (w_48) (role: Mentor)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_48" target="work-index">Advaitarasamañjarī (w_48) (role: Mentor)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_44'>
-<div class='entry-header'>
-<span class='entry-title'>Sadguru Swamigal</span>
-<span class='entry-id'>(p_44)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_44">
+<div class="entry-header">
+<span class="entry-title">Sadguru Swamigal</span>
+<span class="entry-id">(p_44)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Marudanallur Veṅkaṭarāma Sadguru Svāmi</div>
 </div>
-<div class='entry-block entry-birth'>
-<span class='subheading'>Birth Date</span>
-<span data-when='1777' class='item-name'>c. 1777</span>
+<div class="entry-block entry-birth">
+<span class="subheading">Birth Date</span>
+<span class="item-name" data-when="1777">c. 1777</span>
 </div>
-<div class='entry-block entry-death'>
-<span class='subheading'>Death Date</span>
-<span data-when='1817' class='item-name'>c. 1817</span>
+<div class="entry-block entry-death">
+<span class="subheading">Death Date</span>
+<span class="item-name" data-when="1817">c. 1817</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_51' target='place-index' class='item-name'  data-role='Died'>Jakath Rakshaka Perumal temple (l_51)  (connection: Died)</a>
-<a href='place_index.html#l_33' target='place-index' class='item-name'  data-role='Pontiff of Matha'>Sadguru Swamigal mutt (l_33)  (connection: Pontiff of Matha)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Died" href="place_index.html#l_51" target="place-index">Jakath Rakshaka Perumal temple (l_51)  (connection: Died)</a>
+<a class="item-name" data-role="Visited" href="place_index.html#l_53" target="place-index">Sri Bodhendra Saraswathi Mutt (l_53)  (connection: Visited)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_6'>
-<div class='entry-header'>
-<span class='entry-title'>Śāhaji I (of Thanjavur)</span>
-<span class='entry-id'>(p_6)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_6">
+<div class="entry-header">
+<span class="entry-title">Śāhaji I (of Thanjavur)</span>
+<span class="entry-id">(p_6)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_15'  data-connection='beneficiary' data-from='1683' data-to='1711'>Ānandarāyamakhin (p_15)  (1683-1711)</a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" data-from="1683" data-to="1711" href="#p_15">Ānandarāyamakhin (p_15)  (1683-1711)</a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_18'  data-connection='patron'>Bhūminātha Kavi (p_18) </a>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_18">Bhūminātha Kavi (p_18) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_9'  data-connection='patron'>Ḍhuṇḍirāja Vyāsa (p_9) </a>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_9">Ḍhuṇḍirāja Vyāsa (p_9) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: associate of</span>
-  <a href='#p_7'  data-connection='associate'>Gaṅgādharavājapeyin (p_7) </a>
+<div class="item-name">
+<span>relationship: associate of</span>
+<a data-connection="associate" href="#p_7">Gaṅgādharavājapeyin (p_7) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_24'  data-connection='patron'>Periyappā Kavi (p_24) </a>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_24">Periyappā Kavi (p_24) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: brother of</span>
-  <a href='#p_10'  data-connection='brother'>Serfoji Bhonsle (p_10) </a>
+<div class="item-name">
+<span>relationship: brother of</span>
+<a data-connection="brother" href="#p_10">Serfoji Bhonsle (p_10) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_17'  data-connection='patron'>Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_17">Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: associate of</span>
-  <a href='#p_5'  data-connection='associate'>Tryambakarāyamakhin (p_5) </a>
+<div class="item-name">
+<span>relationship: associate of</span>
+<a data-connection="associate" href="#p_5">Tryambakarāyamakhin (p_5) </a>
 </div>
 </div>
-<div class='entry-block entry-death'>
-<span class='subheading'>Death Date</span>
-<span data-when='1711' class='item-name'>1711</span>
+<div class="entry-block entry-death">
+<span class="subheading">Death Date</span>
+<span class="item-name" data-when="1711">1711</span>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1684' data-to='1711' class='item-name'>r. 1684-1711</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1684" data-to="1711">r. 1684-1711</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_2' target='place-index' class='item-name'  data-role='Resided'>Thanjavur (l_2)  (connection: Resided)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_2" target="place-index">Thanjavur (l_2)  (connection: Resided)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_13' target='work-index' class='item-name'>Avaidikadarśanasaṃgraha (w_13) (role: Patron)</a>
-<a href='work_index.html#w_22' target='work-index' class='item-name'>Candraśekharavilāsa (w_22) (role: Attributed Author)</a>
-<a href='work_index.html#w_36' target='work-index' class='item-name'>Dharmavijayacampū (w_36) (role: Honoree)</a>
-<a href='work_index.html#w_43' target='work-index' class='item-name'>Padamaṇimañjarī (w_43) (role: Patron)</a>
-<a href='work_index.html#w_12' target='work-index' class='item-name'>Rasikarañjanī (w_12) (role: Patron)</a>
-<a href='work_index.html#w_39' target='work-index' class='item-name'>Śabdabhedanirūpaṇa (w_39) (role: Patron)</a>
-<a href='work_index.html#w_23' target='work-index' class='item-name'>Śabdaratnasamanvayakośa (w_23) (role: Attributed Author)</a>
-<a href='work_index.html#w_24' target='work-index' class='item-name'>Śabdārthasaṃgraha (w_24) (role: Attributed Author)</a>
-<a href='work_index.html#w_17' target='work-index' class='item-name'>Śāhajivilāsagītā (w_17) (role: Patron)</a>
-<a href='work_index.html#w_29' target='work-index' class='item-name'>Śāhendravilāsa (w_29) (role: Patron)</a>
-<a href='work_index.html#w_50' target='work-index' class='item-name'>Uṇādimaṇidīpikā (w_50) (role: Patron)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_13" target="work-index">Avaidikadarśanasaṃgraha (w_13) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_22" target="work-index">Candraśekharavilāsa (w_22) (role: Attributed Author)</a>
+<a class="item-name" href="work_index.html#w_36" target="work-index">Dharmavijayacampū (w_36) (role: Honoree)</a>
+<a class="item-name" href="work_index.html#w_43" target="work-index">Padamaṇimañjarī (w_43) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_12" target="work-index">Rasikarañjanī (w_12) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_39" target="work-index">Śabdabhedanirūpaṇa (w_39) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_23" target="work-index">Śabdaratnasamanvayakośa (w_23) (role: Attributed Author)</a>
+<a class="item-name" href="work_index.html#w_24" target="work-index">Śabdārthasaṃgraha (w_24) (role: Attributed Author)</a>
+<a class="item-name" href="work_index.html#w_17" target="work-index">Śāhajivilāsagītā (w_17) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_29" target="work-index">Śāhendravilāsa (w_29) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_50" target="work-index">Uṇādimaṇidīpikā (w_50) (role: Patron)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">A few Sanskrit works are ascribed to Śāhaji and an even larger 'number of works are ascribed to him in Telugu and Marathi. See the Catalogues of the Telugu and Marathi Manuscripts in the Sarasvati Mahal Library. No less than 21 works in Telugu and more than 10 in Marathi are ascribed to him'. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 22.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_42'>
-<div class='entry-header'>
-<span class='entry-title'>Sarabhoji</span>
-<span class='entry-id'>(p_42)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_42">
+<div class="entry-header">
+<span class="entry-title">Sarabhoji</span>
+<span class="entry-id">(p_42)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Serfoji I</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_15'  data-connection='beneficiary'>Ānandarāyamakhin (p_15) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_15">Ānandarāyamakhin (p_15) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1711' data-to='1730' class='item-name'>r. 1711-1730</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1711" data-to="1730">r. 1711-1730</span>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_10'>
-<div class='entry-header'>
-<span class='entry-title'>Serfoji Bhonsle</span>
-<span class='entry-id'>(p_10)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_10">
+<div class="entry-header">
+<span class="entry-title">Serfoji Bhonsle</span>
+<span class="entry-id">(p_10)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Śarabhoji Bhonsle</div>
 <div class="item-name">Serfoji I</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_9'  data-connection='patron'>Ḍhuṇḍirāja Vyāsa (p_9) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_9">Ḍhuṇḍirāja Vyāsa (p_9) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: brother of</span>
-  <a href='#p_6'  data-connection='brother'>Śāhaji I (of Thanjavur) (p_6) </a>
-</div>
-</div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1711' data-to='1728' class='item-name'>r. 1711-1728</span>
-</div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_14' target='place-index' class='item-name'  data-role='Resided'>Sakkottai (l_14)  (connection: Resided)</a>
-</div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_8' target='work-index' class='item-name'>Dharmākūtam (w_8) (role: Patron)</a>
-<a href='work_index.html#w_16' target='work-index' class='item-name'>Mudrārākṣasavyākhyāna (w_16) (role: Patron)</a>
-</div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_37'>
-<div class='entry-header'>
-<span class='entry-title'>Śrīdhara Liṅgārya</span>
-<span class='entry-id'>(p_37)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
-</div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: father of</span>
-  <a href='#p_17'  data-connection='father'>Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
+<div class="item-name">
+<span>relationship: brother of</span>
+<a data-connection="brother" href="#p_6">Śāhaji I (of Thanjavur) (p_6) </a>
 </div>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_17'>
-<div class='entry-header'>
-<span class='entry-title'>Śrīdhara Veṅkaṭeśa Ayyāvāḷ</span>
-<span class='entry-id'>(p_17)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1711" data-to="1728">r. 1711-1728</span>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_14" target="place-index">Sakkottai (l_14)  (connection: Resided)</a>
+</div>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_8" target="work-index">Dharmākūtam (w_8) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_16" target="work-index">Mudrārākṣasavyākhyāna (w_16) (role: Patron)</a>
+</div>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_37">
+<div class="entry-header">
+<span class="entry-title">Śrīdhara Liṅgārya</span>
+<span class="entry-id">(p_37)</span>
+<button aria-label="Show details" class="toggle">▸</button>
+</div>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: father of</span>
+<a data-connection="father" href="#p_17">Śrīdhara Veṅkaṭeśa Ayyāvāḷ (p_17) </a>
+</div>
+</div>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_17">
+<div class="entry-header">
+<span class="entry-title">Śrīdhara Veṅkaṭeśa Ayyāvāḷ</span>
+<span class="entry-id">(p_17)</span>
+<button aria-label="Show details" class="toggle">▸</button>
+</div>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Ayyāvāḷ</div>
 <div class="item-name">Śrīdhara Veṅkaṭeśvaraparameśapāda</div>
 <div class="item-name">Śrīdharaveṅkateśa Śāstri</div>
@@ -1330,378 +1326,382 @@
 <div class="item-name">Veṅkaṭeśa Śāstrin</div>
 <div class="item-name">Veṅkaṭeśvaraśāstri</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_38'  data-connection='teacher'>Ayyaṇṇa Dīkṣita (p_38) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_38">Ayyaṇṇa Dīkṣita (p_38) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_24'  data-connection='contemporary of'>Periyappā Kavi (p_24) </a>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_24">Periyappā Kavi (p_24) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_6'  data-connection='beneficiary'>Śāhaji I (of Thanjavur) (p_6) </a>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_6">Śāhaji I (of Thanjavur) (p_6) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: son of</span>
-  <a href='#p_37'  data-connection='son'>Śrīdhara Liṅgārya (p_37) </a>
+<div class="item-name">
+<span>relationship: son of</span>
+<a data-connection="son" href="#p_37">Śrīdhara Liṅgārya (p_37) </a>
 </div>
 </div>
-<div class='entry-block entry-idno'>
-<span class='subheading'>Authority Identifier</span>
-<span class='item-name'>Q7586366 (Wikidata)</span>
+<div class="entry-block entry-idno">
+<span class="subheading">Authority Identifier</span>
+<span class="item-name">Q7586366 (Wikidata)</span>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1635' data-to='1720' class='item-name'>c. 1635 - 1720</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1635" data-to="1720">c. 1635 - 1720</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_7' target='place-index' class='item-name'  data-role='Worshipped'>Mahalingeswarar Temple (l_7)  (connection: Worshipped)</a>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Resided'>Thiruvisanallur (l_1)  (connection: Resided)</a>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-from='1693' data-to='1693' data-role='Recipient (Land Donation)'>Thiruvisanallur (l_1)  (1693) (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Worshipped" href="place_index.html#l_7" target="place-index">Mahalingeswarar Temple (l_7)  (connection: Worshipped)</a>
+<a class="item-name" data-role="Resided" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Resided)</a>
+<a class="item-name" data-from="1693" data-role="Recipient (Land Donation)" data-to="1693" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (1693) (connection: Recipient (Land Donation))</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_77' target='work-index' class='item-name'>Acyutāṣṭaka (w_77) (role: Author)</a>
-<a href='work_index.html#w_78' target='work-index' class='item-name'>Ākhyāṣaṣṭi (w_78) (role: Author)</a>
-<a href='work_index.html#w_97' target='work-index' class='item-name'>Ārtiharastuti (w_97) (role: Author)</a>
-<a href='work_index.html#w_95' target='work-index' class='item-name'>Bhagavannāmabhūṣaṇa (w_95) (role: Author)</a>
-<a href='work_index.html#w_86' target='work-index' class='item-name'>Bhaktaikalpalatikā (w_86) (role: Author)</a>
-<a href='work_index.html#w_85' target='work-index' class='item-name'>Bhaktalakṣaṇa (w_85) (role: Author)</a>
-<a href='work_index.html#w_87' target='work-index' class='item-name'>Bhaktitilaka (w_87) (role: Author)</a>
-<a href='work_index.html#w_82' target='work-index' class='item-name'>Dayāśataka (w_82) (role: Author)</a>
-<a href='work_index.html#w_83' target='work-index' class='item-name'>Ḍolānavaratnamālā (w_83) (role: Author)</a>
-<a href='work_index.html#w_84' target='work-index' class='item-name'>Doṣaparihārāṣṭaka (w_84) (role: Author)</a>
-<a href='work_index.html#w_80' target='work-index' class='item-name'>Jambūnāthāṣṭaka (w_80) (role: Author)</a>
-<a href='work_index.html#w_79' target='work-index' class='item-name'>Kṛṣṇadvādaśamañjarī (w_79) (role: Author)</a>
-<a href='work_index.html#w_98' target='work-index' class='item-name'>Kulīrāṣṭaka (w_98) (role: Author)</a>
-<a href='work_index.html#w_89' target='work-index' class='item-name'>Mātṛbhūtaśataka (w_89) (role: Author)</a>
-<a href='work_index.html#w_88' target='work-index' class='item-name'>Mātṛkācakraviveka (w_88) (role: Author)</a>
-<a href='work_index.html#w_43' target='work-index' class='item-name'>Padamaṇimañjarī (w_43) (role: Co-Author)</a>
-<a href='work_index.html#w_42' target='work-index' class='item-name'>Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
-<a href='work_index.html#w_29' target='work-index' class='item-name'>Śāhendravilāsa (w_29) (role: Author)</a>
-<a href='work_index.html#w_91' target='work-index' class='item-name'>Śivabhaktalakṣaṇa (w_91) (role: Author)</a>
-<a href='work_index.html#w_92' target='work-index' class='item-name'>Śivabhaktikalpalatikā (w_92) (role: Author)</a>
-<a href='work_index.html#w_94' target='work-index' class='item-name'>Śivākhyāśataka (w_94) (role: Author)</a>
-<a href='work_index.html#w_96' target='work-index' class='item-name'>Stutipaddhati (w_96) (role: Author)</a>
-<a href='work_index.html#w_81' target='work-index' class='item-name'>Tārāvalīstotra (w_81) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_77" target="work-index">Acyutāṣṭaka (w_77) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_78" target="work-index">Ākhyāṣaṣṭi (w_78) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_97" target="work-index">Ārtiharastuti (w_97) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_95" target="work-index">Bhagavannāmabhūṣaṇa (w_95) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_86" target="work-index">Bhaktaikalpalatikā (w_86) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_85" target="work-index">Bhaktalakṣaṇa (w_85) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_87" target="work-index">Bhaktitilaka (w_87) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_82" target="work-index">Dayāśataka (w_82) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_83" target="work-index">Ḍolānavaratnamālā (w_83) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_84" target="work-index">Doṣaparihārāṣṭaka (w_84) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_80" target="work-index">Jambūnāthāṣṭaka (w_80) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_79" target="work-index">Kṛṣṇadvādaśamañjarī (w_79) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_98" target="work-index">Kulīrāṣṭaka (w_98) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_89" target="work-index">Mātṛbhūtaśataka (w_89) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_88" target="work-index">Mātṛkācakraviveka (w_88) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_43" target="work-index">Padamaṇimañjarī (w_43) (role: Co-Author)</a>
+<a class="item-name" href="work_index.html#w_42" target="work-index">Ṣaḍdarśanīsiddhāntasaṃgrahaḥ (w_42) (role: Co-Author)</a>
+<a class="item-name" href="work_index.html#w_29" target="work-index">Śāhendravilāsa (w_29) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_91" target="work-index">Śivabhaktalakṣaṇa (w_91) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_92" target="work-index">Śivabhaktikalpalatikā (w_92) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_94" target="work-index">Śivākhyāśataka (w_94) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_96" target="work-index">Stutipaddhati (w_96) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_81" target="work-index">Tārāvalīstotra (w_81) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Biographer of King Śāhaji</div>
 <div class="item-name">That he was as a resident of Thiruvisanallur is borne out by the existence in that village of his house and the annual festival (Ayyāvāl utsava) that takes place there in his honour. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 60–64.</div>
 <div class="item-name">The above date is provided by Soneji, Davesh. ‘The Powers of Polyglossia: Marathi Kīrtan, Multilingualism, and the Making of a South Indian Devotional Tradition.’ International Journal of Hindu Studies 17 (3) (2014): p. 340.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
-<span class='item-name reference' data-vol='36' data-page='17ff'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 36, Page(s) 17ff)</span>
-<a class='item-name reference' href='../references.html#soneji2014' target='reference-page'>Soneji, Davesh. ‘The Powers of Polyglossia: Marathi Kīrtan, Multilingualism, and the Making of a South Indian Devotional Tradition.’ <i>International Journal of Hindu Studies</i> 17 (3) (2014): 339-369</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<span class="item-name reference" data-page="17ff" data-vol="36">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 36, Page(s) 17ff)</span>
+<a class="item-name reference" href="../references.html#soneji2014" target="reference-page">Soneji, Davesh. ‘The Powers of Polyglossia: Marathi Kīrtan, Multilingualism, and the Making of a South Indian Devotional Tradition.’ <i>International Journal of Hindu Studies</i> 17 (3) (2014): 339-369</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='S'><div class='index-entry' id='p_35'>
-<div class='entry-header'>
-<span class='entry-title'>Sudarśanasūri</span>
-<span class='entry-id'>(p_35)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="S"><div class="index-entry" id="p_35">
+<div class="entry-header">
+<span class="entry-title">Sudarśanasūri</span>
+<span class="entry-id">(p_35)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1250' data-to='1300' class='item-name'>ca. 1250-1300</span>
+<div class="item-details">
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1250" data-to="1300">ca. 1250-1300</span>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_75' target='work-index' class='item-name'>Śrutaprakāśikā (w_75) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_75" target="work-index">Śrutaprakāśikā (w_75) (role: Author)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='T'><div class='index-entry' id='p_5'>
-<div class='entry-header'>
-<span class='entry-title'>Tryambakarāyamakhin</span>
-<span class='entry-id'>(p_5)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="T"><div class="index-entry" id="p_5">
+<div class="entry-header">
+<span class="entry-title">Tryambakarāyamakhin</span>
+<span class="entry-id">(p_5)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Tryaṃbakādhvarin</div>
 <div class="item-name">Tryambakayajvan</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_15'  data-connection='member of family'>Ānandarāyamakhin (p_15) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_15">Ānandarāyamakhin (p_15) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: brother of</span>
-  <a href='#p_12'  data-connection='brother'>Bhagavantarāyamakhin (p_12) </a>
+<div class="item-name">
+<span>relationship: brother of</span>
+<a data-connection="brother" href="#p_12">Bhagavantarāyamakhin (p_12) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: patron of</span>
-  <a href='#p_9'  data-connection='patron'>Ḍhuṇḍirāja Vyāsa (p_9) </a>
+<div class="item-name">
+<span>relationship: patron of</span>
+<a data-connection="patron" href="#p_9">Ḍhuṇḍirāja Vyāsa (p_9) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: son of</span>
-  <a href='#p_13'  data-connection='son'>Gaṅgādharādhvarin (alias Kākoji) (p_13) </a>
+<div class="item-name">
+<span>relationship: son of</span>
+<a data-connection="son">Gaṅgādharādhvarin (alias Kākoji) (p_13)  [entity no longer indexed at location]</a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_46'  data-connection='teacher'>Kuppusvāmī Śāstrī (p_46) </a>
+<div class="item-name">
+<span>relationship: son of</span>
+<a data-connection="son" href="#p_7">Gaṅgādharavājapeyin (p_7) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: associate of</span>
-  <a href='#p_6'  data-connection='associate'>Śāhaji I (of Thanjavur) (p_6) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_46">Kuppusvāmī Śāstrī (p_46) </a>
+</div>
+<div class="item-name">
+<span>relationship: associate of</span>
+<a data-connection="associate" href="#p_6">Śāhaji I (of Thanjavur) (p_6) </a>
 </div>
 </div>
-<div class='entry-block entry-floruit'>
-<span class='subheading'>Floruit (Period of Activity)</span>
-<span data-from='1680' data-to='1680' class='item-name'>fl. 1680</span>
+<div class="entry-block entry-floruit">
+<span class="subheading">Floruit (Period of Activity)</span>
+<span class="item-name" data-from="1680" data-to="1680">fl. 1680</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_15' target='place-index' class='item-name'  data-role='Performed a grand-scale yajña in 1698 in Svāmimalai, evidenced in the Ācāraṇavanitā by Appādhvarin.'>Svamimalai (l_15)  (connection: Performed a grand-scale yajña in 1698 in Svāmimalai, evidenced in the Ācāraṇavanitā by Appādhvarin.)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Performed a grand-scale yajña in 1698 in Svāmimalai, evidenced in the Ācāraṇavanitā by Appādhvarin." href="place_index.html#l_15" target="place-index">Svamimalai (l_15)  (connection: Performed a grand-scale yajña in 1698 in Svāmimalai, evidenced in the Ācāraṇavanitā by Appādhvarin.)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_19' target='work-index' class='item-name'>Daharavidyāprakāśikā (w_19) (role: Patron)</a>
-<a href='work_index.html#w_8' target='work-index' class='item-name'>Dharmākūtam (w_8) (role: Attributed Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_19" target="work-index">Daharavidyāprakāśikā (w_19) (role: Patron)</a>
+<a class="item-name" href="work_index.html#w_8" target="work-index">Dharmākūtam (w_8) (role: Attributed Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">He was the mantrin of Śāhaji I of Thanjavur.</div>
 <div class="item-name">Much of the earlier patronage of scholars by Śāhaji I flowed through Tryambakarāyamakhin’s hands. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 27.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='T'><div class='index-entry' id='p_47'>
-<div class='entry-header'>
-<span class='entry-title'>Tyāgarājamakhin</span>
-<span class='entry-id'>(p_47)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="T"><div class="index-entry" id="p_47">
+<div class="entry-header">
+<span class="entry-title">Tyāgarājamakhin</span>
+<span class="entry-id">(p_47)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Mannargudi Raju Sastrigal</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: descendant of</span>
-  <a href='#p_2'  data-connection='descendant'>Appayya Dīkṣita (p_2) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: descendant of</span>
+<a data-connection="descendant" href="#p_2">Appayya Dīkṣita (p_2) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: teacher of</span>
-  <a href='#p_48'  data-connection='teacher'>Yajñasvāmī Śāstrī (p_48) </a>
+<div class="item-name">
+<span>relationship: teacher of</span>
+<a data-connection="teacher" href="#p_48">Yajñasvāmī Śāstrī (p_48) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: grandfather of</span>
-  <a href='#p_48'  data-connection='grandfather'>Yajñasvāmī Śāstrī (p_48) </a>
-</div>
-</div>
-<div class='entry-block entry-birth'>
-<span class='subheading'>Birth Date</span>
-<span data-when='1815' class='item-name'>1815</span>
-</div>
-<div class='entry-block entry-death'>
-<span class='subheading'>Death Date</span>
-<span data-when='1903' class='item-name'>c. 1903</span>
-</div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_5' target='place-index' class='item-name'  data-role='Resided'>Mannargudi (l_5)  (connection: Resided)</a>
-</div>
-</div></li>
-<li class='letter-entry' data-letter='V'><div class='index-entry' id='p_22'>
-<div class='entry-header'>
-<span class='entry-title'>Vaidyanātha Dīkṣita</span>
-<span class='entry-id'>(p_22)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
-</div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_4'  data-connection='member of family'>Rāmabhadra Dīkṣita (p_4) </a>
+<div class="item-name">
+<span>relationship: grandfather of</span>
+<a data-connection="grandfather" href="#p_48">Yajñasvāmī Śāstrī (p_48) </a>
 </div>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_44' target='work-index' class='item-name'>Paribhāṣārthasaṃgraha (w_44) (role: Author)</a>
-<a href='work_index.html#w_14' target='work-index' class='item-name'>Śabdakaumudī (w_14) (role: Writer of added commentary)</a>
-<a href='work_index.html#w_47' target='work-index' class='item-name'>Śṛṅgārasarvasvabhāṇa (w_47) (role: Mentor)</a>
-<a href='work_index.html#w_5' target='work-index' class='item-name'>Subhadrāpariṇaya (w_5) (role: Mentor)</a>
+<div class="entry-block entry-birth">
+<span class="subheading">Birth Date</span>
+<span class="item-name" data-when="1815">1815</span>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-death">
+<span class="subheading">Death Date</span>
+<span class="item-name" data-when="1903">c. 1903</span>
+</div>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Resided" href="place_index.html#l_5" target="place-index">Mannargudi (l_5)  (connection: Resided)</a>
+</div>
+</div></div></li>
+<li class="letter-entry" data-letter="V"><div class="index-entry" id="p_22">
+<div class="entry-header">
+<span class="entry-title">Vaidyanātha Dīkṣita</span>
+<span class="entry-id">(p_22)</span>
+<button aria-label="Show details" class="toggle">▸</button>
+</div>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_4">Rāmabhadra Dīkṣita (p_4) </a>
+</div>
+</div>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_44" target="work-index">Paribhāṣārthasaṃgraha (w_44) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_14" target="work-index">Śabdakaumudī (w_14) (role: Writer of added commentary)</a>
+<a class="item-name" href="work_index.html#w_47" target="work-index">Śṛṅgārasarvasvabhāṇa (w_47) (role: Mentor)</a>
+<a class="item-name" href="work_index.html#w_5" target="work-index">Subhadrāpariṇaya (w_5) (role: Mentor)</a>
+</div>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Nephew of Rāmabhadra Dīkṣita</div>
 <div class="item-name">Son of Ratnagiri Dīkṣita</div>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='V'><div class='index-entry' id='p_50'>
-<div class='entry-header'>
-<span class='entry-title'>Vainateya</span>
-<span class='entry-id'>(p_50)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="V"><div class="index-entry" id="p_50">
+<div class="entry-header">
+<span class="entry-title">Vainateya</span>
+<span class="entry-id">(p_50)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: member  family of</span>
-  <a href='#p_24'  data-connection='member of family'>Periyappā Kavi (p_24) </a>
+<div class="item-details">
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: member  family of</span>
+<a data-connection="member of family" href="#p_24">Periyappā Kavi (p_24) </a>
 </div>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">Paternal uncle of Periappā Kavi</div>
 <div class="item-name">Wrote a commentary on Rucidatta’s Prakāśa on Tattvacintāmaṇi</div>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='V'><div class='index-entry' id='p_34'>
-<div class='entry-header'>
-<span class='entry-title'>Vātsya Subrahmaṇya</span>
-<span class='entry-id'>(p_34)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="V"><div class="index-entry" id="p_34">
+<div class="entry-header">
+<span class="entry-title">Vātsya Subrahmaṇya</span>
+<span class="entry-id">(p_34)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_104' target='work-index' class='item-name'>Āmodarañjanī (w_104) (role: Author)</a>
-<a href='work_index.html#w_105' target='work-index' class='item-name'>Pañcaratnavyākhyā (w_105) (role: Author)</a>
+<div class="item-details">
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_104" target="work-index">Āmodarañjanī (w_104) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_105" target="work-index">Pañcaratnavyākhyā (w_105) (role: Author)</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='V'><div class='index-entry' id='p_25'>
-<div class='entry-header'>
-<span class='entry-title'>Vedakavīśvara</span>
-<span class='entry-id'>(p_25)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="V"><div class="index-entry" id="p_25">
+<div class="entry-header">
+<span class="entry-title">Vedakavīśvara</span>
+<span class="entry-id">(p_25)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Vedakavi Svāmin (NCC vol. 31, 147)</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: beneficiary of</span>
-  <a href='#p_15'  data-connection='beneficiary'>Ānandarāyamakhin (p_15) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: beneficiary of</span>
+<a data-connection="beneficiary" href="#p_15">Ānandarāyamakhin (p_15) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: contemporary of</span>
-  <a href='#p_24'  data-connection='contemporary of'>Periyappā Kavi (p_24) </a>
+<div class="item-name">
+<span>relationship: contemporary of</span>
+<a data-connection="contemporary of" href="#p_24">Periyappā Kavi (p_24) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_66' target='work-index' class='item-name'>Vidyāpariṇayavyākhyā (w_66) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_66" target="work-index">Vidyāpariṇayavyākhyā (w_66) (role: Author)</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">For the alternative name Vedakavi Svāmin, see New Catalogus Catalogurum (NCC). Vols 1-36: vol. 31, p. 147.</div>
 <div class="item-name">Periappā Kavi mentions him in the prologue to his Śṛṇgāramañjarī-Śāhajīya as one of the most celebrated poets of the time. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 43.</div>
 <div class="item-name">Received 3 shares of Thiruvisannalur, for he had mastered 3 śāstras. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 38–39.</div>
 <div class="item-name">While V. Raghavan claims that the Jīvānandananāṭaka and Vidyāpariṇayanāṭaka are 'really the work of Vedakavi' (see Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 29), others claim that there is no evidence to this effect and prefer to attribute the authorship to Ānandarāyamakhin. See entry on Jīvānandananāṭaka for further details.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<span class='item-name reference' data-vol='31'>New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 31)</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<span class="item-name reference" data-vol="31">New Catalogus Catalogurum (NCC). Vols 1-36. (Volume 31)</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='V'><div class='index-entry' id='p_26'>
-<div class='entry-header'>
-<span class='entry-title'>Viśvanātha Dīkṣita</span>
-<span class='entry-id'>(p_26)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="V"><div class="index-entry" id="p_26">
+<div class="entry-header">
+<span class="entry-title">Viśvanātha Dīkṣita</span>
+<span class="entry-id">(p_26)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Viśvanātha Śāstrī</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_27'  data-connection='student'>Kṛṣṇānanda Sarasvatī (p_27) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_27">Kṛṣṇānanda Sarasvatī (p_27) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: brother of</span>
-  <a href='#p_24'  data-connection='brother'>Periyappā Kavi (p_24) </a>
+<div class="item-name">
+<span>relationship: brother of</span>
+<a data-connection="brother" href="#p_24">Periyappā Kavi (p_24) </a>
 </div>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_1' target='place-index' class='item-name'  data-role='Recipient (Land Donation)'>Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Recipient (Land Donation)" href="place_index.html#l_1" target="place-index">Thiruvisanallur (l_1)  (connection: Recipient (Land Donation))</a>
 </div>
-<div class='entry-block entry-notes'>
-<span class='subheading'>Notes</span>
+<div class="entry-block entry-notes">
+<span class="subheading">Notes</span>
 <div class="item-name">He specialised in the exposition of Kṛṣṇānanda Sarasvatī's works. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 31.</div>
 </div>
-<div class='entry-block entry-reference'>
-<span class='subheading'>References</span>
-<a class='item-name reference' href='../references.html#raghavan1952' target='reference-page'>Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
+<div class="entry-block entry-reference">
+<span class="subheading">References</span>
+<a class="item-name reference" href="../references.html#raghavan1952" target="reference-page">Raghavan, Venkataraman. <i>Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710)</i>. Tiruchi: The Kalyan Press, 1952.</a>
 </div>
-</div></li>
-<li class='letter-entry' data-letter='Y'><div class='index-entry' id='p_48'>
-<div class='entry-header'>
-<span class='entry-title'>Yajñasvāmī Śāstrī</span>
-<span class='entry-id'>(p_48)</span>
-  <button class='toggle' aria-label='Show details'>▸</button>
+</div></div></li>
+<li class="letter-entry" data-letter="Y"><div class="index-entry" id="p_48">
+<div class="entry-header">
+<span class="entry-title">Yajñasvāmī Śāstrī</span>
+<span class="entry-id">(p_48)</span>
+<button aria-label="Show details" class="toggle">▸</button>
 </div>
-<div class='item-details'>
-<div class='entry-block entry-alt-names'>
-<span class='subheading'>Alternative Names</span>
+<div class="item-details">
+<div class="entry-block entry-alt-names">
+<span class="subheading">Alternative Names</span>
 <div class="item-name">Yajñeśa Śarman</div>
 </div>
-<div class='entry-block entry-relationships'>
-<span class='subheading'>Associated Persons</span>
-<div class='item-name'>
-  <span>relationship: student of</span>
-  <a href='#p_47'  data-connection='student'>Tyāgarājamakhin (p_47) </a>
+<div class="entry-block entry-relationships">
+<span class="subheading">Associated Persons</span>
+<div class="item-name">
+<span>relationship: student of</span>
+<a data-connection="student" href="#p_47">Tyāgarājamakhin (p_47) </a>
 </div>
-<div class='item-name'>
-  <span>relationship: grandson of</span>
-  <a href='#p_47'  data-connection='grandson'>Tyāgarājamakhin (p_47) </a>
+<div class="item-name">
+<span>relationship: grandson of</span>
+<a data-connection="grandson" href="#p_47">Tyāgarājamakhin (p_47) </a>
 </div>
 </div>
-<div class='entry-block entry-birth'>
-<span class='subheading'>Birth Date</span>
-<span data-when='1876' class='item-name'>1876</span>
+<div class="entry-block entry-birth">
+<span class="subheading">Birth Date</span>
+<span class="item-name" data-when="1876">1876</span>
 </div>
-<div class='entry-block entry-death'>
-<span class='subheading'>Death Date</span>
-<span data-when='1940' class='item-name'>1940</span>
+<div class="entry-block entry-death">
+<span class="subheading">Death Date</span>
+<span class="item-name" data-when="1940">1940</span>
 </div>
-<div class='entry-block entry-affils'>
-<span class='subheading'>Associated Places</span>
-<a href='place_index.html#l_39' target='place-index' class='item-name'  data-role='Died'>Gangadharapuram (l_39)  (connection: Died)</a>
-<a href='place_index.html#l_3' target='place-index' class='item-name'  data-from='1920' data-to='1938' data-role='Sabhāpandita of the Advaita Sabhā in Kumbakonam'>Kumbakonam (l_3)  (1920-1938) (connection: Sabhāpandita of the Advaita Sabhā in Kumbakonam)</a>
-<a href='place_index.html#l_5' target='place-index' class='item-name'  data-role='Born'>Mannargudi (l_5)  (connection: Born)</a>
+<div class="entry-block entry-affils">
+<span class="subheading">Associated Places</span>
+<a class="item-name" data-role="Died" href="place_index.html#l_39" target="place-index">Gangadharapuram (l_39)  (connection: Died)</a>
+<a class="item-name" data-from="1920" data-role="Sabhāpandita of the Advaita Sabhā in Kumbakonam" data-to="1938" href="place_index.html#l_3" target="place-index">Kumbakonam (l_3)  (1920-1938) (connection: Sabhāpandita of the Advaita Sabhā in Kumbakonam)</a>
+<a class="item-name" data-role="Born" href="place_index.html#l_5" target="place-index">Mannargudi (l_5)  (connection: Born)</a>
 </div>
-<div class='entry-block entry-person-works'>
-<span class='subheading'>Associated Works</span>
-<a href='work_index.html#w_103' target='work-index' class='item-name'>Siddhāntakalpataru (w_103) (role: Author)</a>
-<a href='work_index.html#w_102' target='work-index' class='item-name'>Tyāgarājavijaya (w_102) (role: Author)</a>
+<div class="entry-block entry-person-works">
+<span class="subheading">Associated Works</span>
+<a class="item-name" href="work_index.html#w_103" target="work-index">Siddhāntakalpataru (w_103) (role: Author)</a>
+<a class="item-name" href="work_index.html#w_102" target="work-index">Tyāgarājavijaya (w_102) (role: Author)</a>
 </div>
-</div></li>
+</div></div></li>
 </ul>
-  </main>
-  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4' crossorigin='anonymous'></script>
-  <script src='../static/js/index.js'></script>
+</main>
+<script crossorigin="anonymous" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/index.js"></script>
 </body>
 </html>
