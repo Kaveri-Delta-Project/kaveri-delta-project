@@ -22,9 +22,12 @@
       <listBibl>
         <bibl xml:id="w_107">
           <title type="preferred">Kaivalyakalpadruma</title>
+          <title type="variant">Kalpadruma</title>
           <editor key="p_39" role="aut">Gaṅgādhara Sarasvatī</editor>
           <note type="genre" source="commentary" key="w_106">Svārājyasiddhi</note>
-          <note type="bibliographical" subtype="5" n="77a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" subtype="5">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" subtype="3" n="234b">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="general">It was composed in 1826. See New Catalogus Catalogorum (NCC). Vols 1–36: vol. 5, p. 77a.</note>
         </bibl>
       </listBibl>
     </body>

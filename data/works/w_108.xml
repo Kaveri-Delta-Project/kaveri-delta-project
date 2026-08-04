@@ -4,10 +4,6 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
-        <respStmt>
-          <name>Hershini Soneji</name>
-          <resp>Contributor</resp>
-        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -20,13 +16,11 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_106">
-          <title type="preferred">Svārājyasiddhi</title>
-          <title type="variant">Ātmasāmrājya</title>
-          <title type="variant">Mokṣasāmrājya</title>
-          <title type="variant">Ātmasāmrājyasiddhi</title>
-          <editor key="p_39" role="aut">Gaṅgādhara Sarasvatī</editor>
+        <bibl xml:id="w_108">
+          <title type="preferred">Anubhavatriṁśacchlokī</title>
+          <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
           <note type="bibliographical" n="33">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
+          <note type="bibliographical" subtype="5" n="14a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
         </bibl>
       </listBibl>
     </body>
