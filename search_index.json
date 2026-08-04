@@ -217,8 +217,7 @@
       "Rāmabhadrānanda Sarasvatī",
       "Rāmayati",
       "Lakṣmana or Lakṃsīdhara (before saṃnyāsa, see notes)",
-      "Rāmabhadra Bhagavatpāda",
-      "Rāmacandra Sarasvatī"
+      "Rāmabhadra Bhagavatpāda"
     ],
     "url": "indexes/person_index.html#p_29",
     "places": []
@@ -888,7 +887,9 @@
     "type": "work",
     "id": "w_100",
     "name": "Siddhāntacandrikāvyākhyā Udgāraḥ",
-    "alt_names": [],
+    "alt_names": [
+      "Udgāra"
+    ],
     "url": "indexes/work_index.html#w_100",
     "places": [],
     "persons": [
@@ -1040,6 +1041,18 @@
     "places": [],
     "persons": [
       "Muddurāmakavi [p_52]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_111",
+    "name": "Vedāntasiddhāntasūktimañjarī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_111",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
     ],
     "resided_places": []
   },
