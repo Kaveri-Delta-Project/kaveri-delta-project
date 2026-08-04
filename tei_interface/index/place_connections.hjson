@@ -212,6 +212,11 @@
       work
       Mahalingeswarar Temple
     ]
+    [
+      p_8
+      person
+      Mahalingeswarar Temple
+    ]
   ]
   l_24:
   [
@@ -245,14 +250,7 @@
       Thanjapureswara temple
     ]
   ]
-  l_33:
-  [
-    [
-      p_44
-      person
-      Sadguru Swamigal mutt
-    ]
-  ]
+  l_33: []
   l_41:
   [
     [
@@ -320,6 +318,30 @@
       p_49
       person
       Erakaram
+    ]
+  ]
+  l_53:
+  [
+    [
+      p_44
+      person
+      Sri Bodhendra Saraswathi Mutt
+    ]
+  ]
+  l_58:
+  [
+    [
+      p_7
+      person
+      Vadaranyeswarar Temple
+    ]
+  ]
+  l_59:
+  [
+    [
+      p_7
+      person
+      Utpaleswarar Shiva Temple
     ]
   ]
 }

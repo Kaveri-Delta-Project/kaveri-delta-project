@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_59">
+          <placeName type="preferred">Utpaleswarar Shiva Temple</placeName>
+          <placeName type="variant">Cinna Kovil (local appellation)</placeName>
+          <desc type="function">Temple</desc>
+          <bibl source="other">Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979.</bibl>
+          <note type="coordinates">11.0480340, 79.5246889</note>
+          <note type="general">According to locals, it was established by Gaṅgādhara Vājapeyin. It is a small temple located on an agrahāra street in Thiruvalengadu. Until recently, it was looked after by descendants of Gaṅgādhara Vājapeyin. See: Krishnamurthy, R. The Saints of the Cauvery Delta. New Delhi: Concept Publishing Company, 1979, p. 30.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

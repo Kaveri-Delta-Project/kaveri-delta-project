@@ -38,6 +38,9 @@
           <trait type="teacher" key="p_46">
             <label>Kuppusvāmī Śāstrī</label>
           </trait>
+          <trait type="son" key="p_7">
+            <label>Gaṅgādharavājapeyin</label>
+          </trait>
           <floruit from="1680" to="1680">fl. 1680</floruit>
           <affiliation key="l_15" role="Performed a grand-scale yajña in 1698 in Svāmimalai, evidenced in the Ācāraṇavanitā by Appādhvarin.">
             <placeName>Svamimalai</placeName>
