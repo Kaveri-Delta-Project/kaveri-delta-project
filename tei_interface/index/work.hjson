@@ -92,6 +92,10 @@
     name: Jīvānandananāṭaka
   }
   {
+    xml_id: w_107
+    name: Kaivalyakalpadruma
+  }
+  {
     xml_id: w_6
     name: Kaliviḍambana
   }
@@ -238,6 +242,10 @@
   {
     xml_id: w_5
     name: Subhadrāpariṇaya
+  }
+  {
+    xml_id: w_106
+    name: Svārājyasiddhi
   }
   {
     xml_id: w_28
