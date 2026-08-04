@@ -23,11 +23,18 @@
         <person xml:id="p_26">
           <persName type="preferred">Viśvanātha Dīkṣita</persName>
           <persName type="variant">Viśvanātha Śāstrī</persName>
+          <persName type="variant">Viśvanāthārya Dīkṣita</persName>
           <trait type="brother" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
+          </trait>
+          <trait type="son" key="p_49">
+            <label>Aṇṇā Śāstrī</label>
+          </trait>
+          <trait type="brother" key="p_50">
+            <label>Vainateya</label>
           </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>

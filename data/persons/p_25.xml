@@ -29,6 +29,9 @@
           <trait type="beneficiary" key="p_15">
             <label>Ānandarāyamakhin</label>
           </trait>
+          <trait type="contemporary of" key="p_24">
+            <label>Periyappā Kavi</label>
+          </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>

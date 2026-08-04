@@ -22,6 +22,7 @@
           <persName type="variant">Vinateya</persName>
           <persName type="variant">Periappā Śāstrī</persName>
           <persName type="variant">Vainateya</persName>
+          <persName type="variant">Appā Śāstrī</persName>
           <trait type="contemporary of" key="p_25">
             <label>Vedakavīśvara</label>
           </trait>
@@ -38,17 +39,30 @@
             <label>Śrīdhara Veṅkaṭeśa Ayyāvāḷ</label>
           </trait>
           <trait type="son" key="p_49">
-            <label>Aṇṇan Śāstrī</label>
+            <label>Aṇṇā Śāstrī</label>
           </trait>
           <trait type="member of family" key="p_50">
             <label>Vainateya</label>
+          </trait>
+          <trait type="contemporary of" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
+          </trait>
+          <trait type="contemporary of" key="p_17">
+            <label>Śrīdhara Veṅkaṭeśa Ayyāvāḷ</label>
+          </trait>
+          <trait type="contemporary of" key="p_25">
+            <label>Vedakavīśvara</label>
           </trait>
           <floruit from="1635" to="1720">ca. 1635-1720</floruit>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <affiliation key="l_8" role="Resided">
+            <placeName>Thiruvaiyaru</placeName>
+          </affiliation>
           <bibl>Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
           <note>Periappā Kavi had apparently the same age as Śrīdhara Veṅkaṭeśa (see Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 64). I therefore use the same dates as reported in Śrīdhara Veṅkaṭeśa's entry.</note>
+          <note>Given the title of Kavitārkikasārvabhauma by Kṛṣṇānanda Sarasvatī, as evident from the prologue to the Śṛṅgāramañjarīśāhajīya</note>
         </person>
       </listPerson>
     </body>

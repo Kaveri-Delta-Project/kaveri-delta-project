@@ -40,6 +40,9 @@
           <trait type="teacher" key="p_38">
             <label>Ayyaṇṇa Dīkṣita</label>
           </trait>
+          <trait type="contemporary of" key="p_24">
+            <label>Periyappā Kavi</label>
+          </trait>
           <idno type="Wikidata">Q7586366</idno>
           <floruit from="1635" to="1720">c. 1635 - 1720</floruit>
           <affiliation key="l_1" role="Resided">

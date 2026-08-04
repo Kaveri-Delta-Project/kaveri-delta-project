@@ -42,6 +42,9 @@
           <trait type="beneficiary" key="p_15" from="1683" to="1711">
             <label>Ānandarāyamakhin</label>
           </trait>
+          <trait type="patron" key="p_52">
+            <label>Muddurāmakavi</label>
+          </trait>
           <death when="1711">1711</death>
           <floruit from="1684" to="1711">r. 1684-1711</floruit>
           <affiliation key="l_2" role="Resided">

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_52">
+          <persName type="preferred">Muddurāmakavi</persName>
+          <persName type="variant">Kavirākṣasa</persName>
+          <trait type="beneficiary" key="p_6">
+            <label>Śāhaji I (of Thanjavur)</label>
+          </trait>
+          <bibl subtype="3" n="281">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <note>Of Kauṇḍinyagotra; son of Raghunāthādhvarin and Jānakī. See New Catalogus Catalogorum (NCC), Vol. 3, p. 281.</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

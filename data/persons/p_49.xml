@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -17,10 +21,17 @@
     <body>
       <listPerson>
         <person xml:id="p_49">
-          <persName type="preferred">Aṇṇan Śāstrī</persName>
+          <persName type="preferred">Aṇṇā Śāstrī</persName>
           <persName type="variant">Patañjali Śāstrī</persName>
+          <persName type="variant">Patañjali Sūri</persName>
           <trait type="father" key="p_24">
             <label>Periyappā Kavi</label>
+          </trait>
+          <trait type="father" key="p_50">
+            <label>Vainateya</label>
+          </trait>
+          <trait type="father" key="p_26">
+            <label>Viśvanātha Dīkṣita</label>
           </trait>
           <affiliation key="l_4" role="Resided">
             <placeName>Kandaramanikkam</placeName>
@@ -29,9 +40,12 @@
             <placeName>Erakaram</placeName>
           </affiliation>
           <bibl n="p.44">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
-          <bibl source="other">A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C.</bibl>
+          <bibl source="other" n="2575">A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C.</bibl>
+          <bibl subtype="1" n="270">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <bibl subtype="1" n="96">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
           <note>This scholar's father (and therefore the grand-father of Periappā Kavi) was named Kṛṣṇa, and according to the prologue of the Śṛṅgāramañjarīśāhajīya, he was proficient in Vedānta: kṛtavedāntasiddhāntaḥ kṛṣṇo yasya pitāmahaḥ |</note>
-          <note>Aṇṇan Śāstrī himself would have been gifted a village (Erakaram/Eraharam) by the Vijayanagara ruler Veṅkaṭapatirāya (c. 1547-1614). See: A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C., p. 2575.</note>
+          <note>Aṇṇā Śāstrī himself would have been gifted a village (Erakaram/Eraharam) by the Vijayanagara ruler Veṅkaṭapatirāya III (c. 1632-1642) after defeated Kāmadeva and Raṅgoji. See: A Triennial Catalogue of Manuscripts, GOML, Vol. II, Part I, Sanskrit C., p. 2575 and NCC, Vol. 1, p. 270.</note>
+          <note>Author of many tracts on Navyanyāya</note>
         </person>
       </listPerson>
     </body>

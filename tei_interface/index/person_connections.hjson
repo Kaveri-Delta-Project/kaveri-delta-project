@@ -300,6 +300,11 @@
       work
       Rāmabhadra Dīkṣita
     ]
+    [
+      p_24
+      person
+      Rāmabhadra Dīkṣita
+    ]
   ]
   p_6:
   [
@@ -395,6 +400,11 @@
     ]
     [
       p_15
+      person
+      Śāhaji I (of Thanjavur)
+    ]
+    [
+      p_52
       person
       Śāhaji I (of Thanjavur)
     ]
@@ -862,6 +872,11 @@
       person
       Śrīdhara Veṅkaṭeśa Ayyāvāḷ
     ]
+    [
+      p_24
+      person
+      Śrīdhara Veṅkaṭeśa Ayyāvāḷ
+    ]
   ]
   p_18:
   [
@@ -1041,6 +1056,16 @@
       work
       Vedakavīśvara
     ]
+    [
+      p_24
+      person
+      Vedakavīśvara
+    ]
+    [
+      w_45
+      work
+      Vedakavīśvara
+    ]
   ]
   p_24:
   [
@@ -1089,6 +1114,21 @@
       person
       Periyappā Kavi
     ]
+    [
+      p_4
+      person
+      Periyappā Kavi
+    ]
+    [
+      p_17
+      person
+      Periyappā Kavi
+    ]
+    [
+      p_25
+      person
+      Periyappā Kavi
+    ]
   ]
   p_26:
   [
@@ -1099,6 +1139,16 @@
     ]
     [
       p_27
+      person
+      Viśvanātha Dīkṣita
+    ]
+    [
+      p_49
+      person
+      Viśvanātha Dīkṣita
+    ]
+    [
+      p_50
       person
       Viśvanātha Dīkṣita
     ]
@@ -1161,17 +1211,17 @@
       Kṛṣṇānanda Sarasvatī
     ]
     [
-      w_45
-      work
-      Kṛṣṇānanda Sarasvatī
-    ]
-    [
       w_104
       work
       Kṛṣṇānanda Sarasvatī
     ]
     [
       w_105
+      work
+      Kṛṣṇānanda Sarasvatī
+    ]
+    [
+      w_45
       work
       Kṛṣṇānanda Sarasvatī
     ]
@@ -1355,13 +1405,33 @@
     [
       p_24
       person
-      Aṇṇan Śāstrī
+      Aṇṇā Śāstrī
+    ]
+    [
+      p_50
+      person
+      Aṇṇā Śāstrī
+    ]
+    [
+      p_26
+      person
+      Aṇṇā Śāstrī
     ]
   ]
   p_50:
   [
     [
       p_24
+      person
+      Vainateya
+    ]
+    [
+      p_49
+      person
+      Vainateya
+    ]
+    [
+      p_26
       person
       Vainateya
     ]
@@ -1377,6 +1447,24 @@
       w_105
       work
       Vātsya Subrahmaṇya
+    ]
+  ]
+  p_52:
+  [
+    [
+      p_6
+      person
+      Muddurāmakavi
+    ]
+    [
+      w_45
+      work
+      Muddurāmakavi
+    ]
+    [
+      w_110
+      work
+      Muddurāmakavi
     ]
   ]
 }
