@@ -212,8 +212,10 @@
     "alt_names": [
       "Rāmānanda Sarasvatī",
       "Rāmabhadrānanda Sarasvatī",
-      "Rāmayati (possible)",
-      "Lakṣmana or Lakṃsīdhara (before saṃnyāsa, see notes)"
+      "Rāmayati",
+      "Lakṣmana or Lakṃsīdhara (before saṃnyāsa, see notes)",
+      "Rāmabhadra Bhagavatpāda",
+      "Rāmacandra Sarasvatī"
     ],
     "url": "indexes/person_index.html#p_29",
     "places": []
@@ -297,7 +299,9 @@
     "id": "p_39",
     "name": "Gaṅgādhara Sarasvatī",
     "alt_names": [
-      "Gaṅgādharendra Sarasvatī"
+      "Gaṅgādharendra Sarasvatī",
+      "Gaṅgādhara Yati",
+      "Gaṅgādhara Bhikṣu"
     ],
     "url": "indexes/person_index.html#p_39",
     "places": []
@@ -947,19 +951,50 @@
     "name": "Svārājyasiddhi",
     "alt_names": [
       "Ātmasāmrājya",
-      "Mokṣasāmrājya"
+      "Mokṣasāmrājya",
+      "Ātmasāmrājyasiddhi"
     ],
     "url": "indexes/work_index.html#w_106",
     "places": [],
-    "persons": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
+    ],
     "resided_places": []
   },
   {
     "type": "work",
     "id": "w_107",
     "name": "Kaivalyakalpadruma",
-    "alt_names": [],
+    "alt_names": [
+      "Kalpadruma"
+    ],
     "url": "indexes/work_index.html#w_107",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_108",
+    "name": "Anubhavatriṁśacchlokī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_108",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_109",
+    "name": "Bhāṭṭasārasarvasvoddyotacandrikā",
+    "alt_names": [
+      "Uddyotacandrodaya"
+    ],
+    "url": "indexes/work_index.html#w_109",
     "places": [],
     "persons": [
       "Gaṅgādhara Sarasvatī [p_39]"
