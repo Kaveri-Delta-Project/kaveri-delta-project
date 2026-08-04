@@ -146,11 +146,13 @@
       "Periappā Kavi",
       "Vinateya",
       "Periappā Śāstrī",
-      "Vainateya"
+      "Vainateya",
+      "Appā Śāstrī"
     ],
     "url": "indexes/person_index.html#p_24",
     "places": [
-      "Thiruvisanallur [l_1]"
+      "Thiruvisanallur [l_1]",
+      "Thiruvaiyaru [l_8]"
     ]
   },
   {
@@ -170,7 +172,8 @@
     "id": "p_26",
     "name": "Viśvanātha Dīkṣita",
     "alt_names": [
-      "Viśvanātha Śāstrī"
+      "Viśvanātha Śāstrī",
+      "Viśvanāthārya Dīkṣita"
     ],
     "url": "indexes/person_index.html#p_26",
     "places": [
@@ -388,9 +391,10 @@
   {
     "type": "person",
     "id": "p_49",
-    "name": "Aṇṇan Śāstrī",
+    "name": "Aṇṇā Śāstrī",
     "alt_names": [
-      "Patañjali Śāstrī"
+      "Patañjali Śāstrī",
+      "Patañjali Sūri"
     ],
     "url": "indexes/person_index.html#p_49",
     "places": [
@@ -415,8 +419,20 @@
     "type": "person",
     "id": "p_50",
     "name": "Vainateya",
-    "alt_names": [],
+    "alt_names": [
+      "Vainateya Sūri"
+    ],
     "url": "indexes/person_index.html#p_50",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_52",
+    "name": "Muddurāmakavi",
+    "alt_names": [
+      "Kavirākṣasa"
+    ],
+    "url": "indexes/person_index.html#p_52",
     "places": []
   },
   {
@@ -844,7 +860,9 @@
     "type": "place",
     "id": "l_8",
     "name": "Thiruvaiyaru",
-    "alt_names": [],
+    "alt_names": [
+      "Pañcanada/Pañcanadī"
+    ],
     "url": "indexes/place_index.html#l_8"
   },
   {
@@ -1010,6 +1028,18 @@
     "places": [],
     "persons": [
       "Appayya Dīkṣita [p_2]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_110",
+    "name": "Rasatilakabhāṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_110",
+    "places": [],
+    "persons": [
+      "Muddurāmakavi [p_52]"
     ],
     "resided_places": []
   },
@@ -1458,7 +1488,9 @@
     "persons": [
       "Periyappā Kavi [p_24]"
     ],
-    "resided_places": []
+    "resided_places": [
+      "Thiruvaiyaru [l_8]"
+    ]
   },
   {
     "type": "work",
