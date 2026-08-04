@@ -23,11 +23,16 @@
         <person xml:id="p_39">
           <persName type="preferred">Gaṅgādhara Sarasvatī</persName>
           <persName type="variant">Gaṅgādharendra Sarasvatī</persName>
+          <persName type="variant">Gaṅgādhara Yati</persName>
+          <persName type="variant">Gaṅgādhara Bhikṣu</persName>
           <trait type="student" key="p_29">
             <label>Rāmānanda Yati</label>
           </trait>
           <bibl>Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <bibl subtype="5">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
           <note>Gaṅgādharendra Sarasvatī was the pupil of Rāmānanda. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 33.</note>
+          <note>For the alternative names Gaṅgādhara Yati and Gaṅgādhara Bhikṣu, see New Catalogus Catalogorum (NCC). Vols 1–36: vol. 5, p. 207a</note>
+          <note>He was the pupil of Rāmacandra Sarasvatī and grand pupil of Sarvajña Sarasvatī, and the teacher of Ānandabodhendra Sarasvatī (author of the commentary Tātparyaprakāśa on the Yogavāsiṣṭha). See New Catalogus Catalogorum (NCC). Vols 1–36: vol. 5, p. 207a</note>
         </person>
       </listPerson>
     </body>
