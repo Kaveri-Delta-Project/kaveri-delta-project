@@ -28,6 +28,9 @@
           <trait type="grandfather" key="p_48">
             <label>Yajñasvāmī Śāstrī</label>
           </trait>
+          <trait type="teacher" key="p_55">
+            <label>Brahmasri Paruthiyur Krishna Sastri</label>
+          </trait>
           <birth when="1815">1815</birth>
           <death when="1903">c. 1903</death>
           <affiliation key="l_5" role="Resided">

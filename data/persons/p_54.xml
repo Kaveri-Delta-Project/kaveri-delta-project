@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_54">
+          <persName type="preferred">Sengalipuram Anantarama Dikshitar</persName>
+          <trait type="brother" key="p_53">
+            <label>Sengalipuram Vaidyanatha Dikshitar</label>
+          </trait>
+          <trait type="student" key="p_55">
+            <label>Brahmasri Paruthiyur Krishna Sastri</label>
+          </trait>
+          <birth when="1903">1903</birth>
+          <death when="1969">1969</death>
+          <affiliation key="l_60" role="Born">
+            <placeName>Sengalipuram</placeName>
+          </affiliation>
+          <affiliation key="l_60" role="Resided">
+            <placeName>Sengalipuram</placeName>
+          </affiliation>
+          <note>Well for his upanyāsas (discourses on epics, philosophy, etc.)</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

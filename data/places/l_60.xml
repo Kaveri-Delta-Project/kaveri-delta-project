@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_60">
+          <placeName type="preferred">Sengalipuram</placeName>
+          <desc type="function">Settlement</desc>
+          <note type="coordinates">10.8504042, 79.5142501</note>
+          <note type="general">A very well preserved agrahāra, with a Śaiva temple and a Varadarāja temple being built (as of August 2026). One of the eighteen Vathima villages inhabited mostly by smārta brahmins.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

@@ -4,10 +4,6 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
-        <respStmt>
-          <name>Vinoth Murali</name>
-          <resp>Contributor</resp>
-        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -20,19 +16,23 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_44">
-          <persName type="preferred">Sadguru Swamigal</persName>
-          <persName type="variant">Marudanallur Veṅkaṭarāma Sadguru Svāmi</persName>
+        <person xml:id="p_53">
+          <persName type="preferred">Sengalipuram Vaidyanatha Dikshitar</persName>
+          <persName type="variant">Sengalipuram Muthanna</persName>
+          <persName type="variant">Muthannaval</persName>
+          <trait type="brother" key="p_54">
+            <label>Sengalipuram Anantarama Dikshitar</label>
+          </trait>
           <trait type="teacher" key="p_55">
             <label>Brahmasri Paruthiyur Krishna Sastri</label>
           </trait>
-          <birth when="1777">c. 1777</birth>
-          <death when="1817">c. 1817</death>
-          <affiliation key="l_51" role="Died">
-            <placeName>Jakath Rakshaka Perumal temple</placeName>
+          <birth when="1830">1830</birth>
+          <death when="1893">1893</death>
+          <affiliation key="l_60" role="Born">
+            <placeName>Sengalipuram</placeName>
           </affiliation>
-          <affiliation key="l_53" role="Visited">
-            <placeName>Sri Bodhendra Saraswathi Mutt</placeName>
+          <affiliation key="l_60" role="Resided">
+            <placeName>Sengalipuram</placeName>
           </affiliation>
         </person>
       </listPerson>

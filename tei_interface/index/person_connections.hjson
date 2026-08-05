@@ -1393,6 +1393,11 @@
       work
       Tyāgarājamakhin
     ]
+    [
+      p_55
+      person
+      Tyāgarājamakhin
+    ]
   ]
   p_46:
   [
@@ -1490,6 +1495,63 @@
       w_110
       work
       Muddurāmakavi
+    ]
+  ]
+  p_53:
+  [
+    [
+      p_54
+      person
+      Sengalipuram Vaidyanatha Dikshitar
+    ]
+    [
+      p_55
+      person
+      Sengalipuram Vaidyanatha Dikshitar
+    ]
+  ]
+  p_54:
+  [
+    [
+      p_53
+      person
+      Sengalipuram Anantarama Dikshitar
+    ]
+    [
+      p_55
+      person
+      Sengalipuram Anantarama Dikshitar
+    ]
+  ]
+  p_55:
+  [
+    [
+      p_47
+      person
+      Brahmasri Paruthiyur Krishna Sastri
+    ]
+    [
+      p_53
+      person
+      Brahmasri Paruthiyur Krishna Sastri
+    ]
+    [
+      p_44
+      person
+      Brahmasri Paruthiyur Krishna Sastri
+    ]
+    [
+      p_54
+      person
+      Brahmasri Paruthiyur Krishna Sastri
+    ]
+  ]
+  p_44:
+  [
+    [
+      p_55
+      person
+      Sadguru Swamigal
     ]
   ]
 }

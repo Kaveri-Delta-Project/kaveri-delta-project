@@ -28,6 +28,10 @@
     name: Bhūminātha Kavi
   }
   {
+    xml_id: p_55
+    name: Brahmasri Paruthiyur Krishna Sastri
+  }
+  {
     xml_id: p_3
     name: Cokkanāthamakhin
   }
@@ -106,6 +110,14 @@
   {
     xml_id: p_42
     name: Sarabhoji
+  }
+  {
+    xml_id: p_54
+    name: Sengalipuram Anantarama Dikshitar
+  }
+  {
+    xml_id: p_53
+    name: Sengalipuram Vaidyanatha Dikshitar
   }
   {
     xml_id: p_10

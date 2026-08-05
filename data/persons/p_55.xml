@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_55">
+          <persName type="preferred">Brahmasri Paruthiyur Krishna Sastri</persName>
+          <trait type="student" key="p_47">
+            <label>Tyāgarājamakhin</label>
+          </trait>
+          <trait type="student" key="p_53">
+            <label>Sengalipuram Vaidyanatha Dikshitar</label>
+          </trait>
+          <trait type="student" key="p_44">
+            <label>Sadguru Swamigal</label>
+          </trait>
+          <trait type="teacher" key="p_54">
+            <label>Sengalipuram Anantarama Dikshitar</label>
+          </trait>
+          <birth when="1842">1842</birth>
+          <death when="1911">1911</death>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>
