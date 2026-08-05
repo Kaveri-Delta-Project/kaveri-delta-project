@@ -436,6 +436,39 @@
   },
   {
     "type": "person",
+    "id": "p_53",
+    "name": "Sengalipuram Vaidyanatha Dikshitar",
+    "alt_names": [
+      "Sengalipuram Muthanna",
+      "Muthannaval"
+    ],
+    "url": "indexes/person_index.html#p_53",
+    "places": [
+      "Sengalipuram [l_60]",
+      "Sengalipuram [l_60]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_54",
+    "name": "Sengalipuram Anantarama Dikshitar",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_54",
+    "places": [
+      "Sengalipuram [l_60]",
+      "Sengalipuram [l_60]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_55",
+    "name": "Brahmasri Paruthiyur Krishna Sastri",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_55",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_6",
     "name": "Śāhaji I (of Thanjavur)",
     "alt_names": [],
@@ -847,6 +880,13 @@
       "Madhyarjuna"
     ],
     "url": "indexes/place_index.html#l_6"
+  },
+  {
+    "type": "place",
+    "id": "l_60",
+    "name": "Sengalipuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_60"
   },
   {
     "type": "place",
