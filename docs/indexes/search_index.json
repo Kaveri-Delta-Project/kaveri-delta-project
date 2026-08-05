@@ -1058,6 +1058,18 @@
   },
   {
     "type": "work",
+    "id": "w_112",
+    "name": "Manassambodhana",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_112",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
     "id": "w_12",
     "name": "Rasikarañjanī",
     "alt_names": [
@@ -1872,7 +1884,8 @@
     "id": "w_68",
     "name": "Siddhāntacandrikā",
     "alt_names": [
-      "Vedāntasiddhāntacandrikā"
+      "Vedāntasiddhāntacandrikā",
+      "Vedāntacandrikā"
     ],
     "url": "indexes/work_index.html#w_68",
     "places": [],
