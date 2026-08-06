@@ -349,7 +349,6 @@
     ],
     "url": "indexes/person_index.html#p_44",
     "places": [
-      "Jakath Rakshaka Perumal temple [l_51]",
       "Sri Bodhendra Saraswathi Mutt [l_53]"
     ]
   },
@@ -860,20 +859,6 @@
   },
   {
     "type": "place",
-    "id": "l_50",
-    "name": "Aiyarappar temple",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_50"
-  },
-  {
-    "type": "place",
-    "id": "l_51",
-    "name": "Jakath Rakshaka Perumal temple",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_51"
-  },
-  {
-    "type": "place",
     "id": "l_53",
     "name": "Sri Bodhendra Saraswathi Mutt",
     "alt_names": [],
@@ -964,10 +949,54 @@
   },
   {
     "type": "place",
+    "id": "l_64",
+    "name": "Pancanadesvara temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_64"
+  },
+  {
+    "type": "place",
+    "id": "l_66",
+    "name": "l_66",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_66"
+  },
+  {
+    "type": "place",
+    "id": "l_67",
+    "name": "Umayalpuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_67"
+  },
+  {
+    "type": "place",
+    "id": "l_68",
+    "name": "Tillaisthanam",
+    "alt_names": [
+      "Thirunayathanam"
+    ],
+    "url": "indexes/place_index.html#l_68"
+  },
+  {
+    "type": "place",
+    "id": "l_69",
+    "name": "Kapisthalapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_69"
+  },
+  {
+    "type": "place",
     "id": "l_7",
     "name": "Mahalingeswarar Temple",
     "alt_names": [],
     "url": "indexes/place_index.html#l_7"
+  },
+  {
+    "type": "place",
+    "id": "l_70",
+    "name": "Eraharam",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_70"
   },
   {
     "type": "place",
@@ -1648,7 +1677,7 @@
     "alt_names": [],
     "url": "indexes/work_index.html#w_45",
     "places": [
-      "Aiyarappar temple [l_50]"
+      "Pancanadesvara temple [l_64]"
     ],
     "persons": [
       "Periyappā Kavi [p_24]"
