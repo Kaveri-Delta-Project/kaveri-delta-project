@@ -524,6 +524,14 @@
   },
   {
     "type": "person",
+    "id": "p_60",
+    "name": "Raṅgaśāyiyajñendra",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_60",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_7",
     "name": "Gaṅgādharavājapeyin",
     "alt_names": [
@@ -1185,6 +1193,18 @@
     ],
     "persons": [
       "Nārāyaṇa Dīkṣita [p_57]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_114",
+    "name": "Adbhutapañjarakathā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_114",
+    "places": [],
+    "persons": [
+      "Raṅgaśāyiyajñendra [p_60]"
     ],
     "resided_places": []
   },
