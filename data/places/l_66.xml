@@ -16,11 +16,8 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_50">
-          <placeName type="preferred">Aiyarappar temple</placeName>
-          <desc type="function">Temple</desc>
-          <note type="coordinates">10.880738331490146, 79.10535510925922</note>
-          <note type="general">Śaiva temple in Thiruvaiyaru</note>
+        <place xml:id="l_66">
+          <note type="coordinates">10.8809011, 79.1049915</note>
         </place>
       </listPlace>
     </body>

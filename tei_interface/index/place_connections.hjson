@@ -298,22 +298,8 @@
       Kumbakonam
     ]
   ]
-  l_50:
-  [
-    [
-      w_45
-      work
-      Aiyarappar temple
-    ]
-  ]
-  l_51:
-  [
-    [
-      p_44
-      person
-      Jakath Rakshaka Perumal temple
-    ]
-  ]
+  l_50: []
+  l_51: []
   l_54:
   [
     [
@@ -414,6 +400,14 @@
       p_59
       person
       Pallakaceri
+    ]
+  ]
+  l_64:
+  [
+    [
+      w_45
+      work
+      Pancanadesvara temple
     ]
   ]
 }

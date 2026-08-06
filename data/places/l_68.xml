@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_68">
+          <placeName type="preferred">Tillaisthanam</placeName>
+          <placeName type="variant">Thirunayathanam</placeName>
+          <desc type="function">Settlement</desc>
+          <note type="coordinates">10.8778505, 79.0880123</note>
+          <note type="general">An agrahāra is in decline, mostly occupied by non-brahmins as of 2026. It would have been donated by Serfoji II according to a local resident. One Śaiva temple (Neyadiappar temple).</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

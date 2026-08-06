@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_70">
+          <placeName type="preferred">Eraharam</placeName>
+          <desc type="function">Settlement</desc>
+          <note type="coordinates">10.9916181, 79.3551191</note>
+          <note type="general">Agrahāra in decline, with two streets but only two original houses left. One Śaiva (Kandhasvami) temple and one Vaiṣṇava temple.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

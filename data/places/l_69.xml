@@ -16,10 +16,11 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_51">
-          <placeName type="preferred">Jakath Rakshaka Perumal temple</placeName>
-          <desc type="function">Temple</desc>
-          <note type="coordinates">10.925416618771568, 79.20331611349206</note>
+        <place xml:id="l_69">
+          <placeName type="preferred">Kapisthalapuram</placeName>
+          <desc type="function">Settlement</desc>
+          <note type="coordinates">10.9473593, 79.2571253</note>
+          <note type="general">An agrahāra in decline, with Śaiva and Vaiṣṇava (Gajendra Perumal temple). </note>
         </place>
       </listPlace>
     </body>

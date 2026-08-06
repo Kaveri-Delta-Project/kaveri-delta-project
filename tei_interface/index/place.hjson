@@ -20,10 +20,6 @@
     name: Airavatesvara Temple
   }
   {
-    xml_id: l_50
-    name: Aiyarappar temple
-  }
-  {
     xml_id: l_38
     name: Alavandipuram
   }
@@ -38,6 +34,10 @@
   {
     xml_id: l_24
     name: Bṛhadīśvara temple
+  }
+  {
+    xml_id: l_70
+    name: Eraharam
   }
   {
     xml_id: l_56
@@ -56,16 +56,16 @@
     name: Govindapuram
   }
   {
-    xml_id: l_51
-    name: Jakath Rakshaka Perumal temple
-  }
-  {
     xml_id: l_37
     name: Kabartheeswarar Temple
   }
   {
     xml_id: l_4
     name: Kandaramanikkam
+  }
+  {
+    xml_id: l_69
+    name: Kapisthalapuram
   }
   {
     xml_id: l_26
@@ -78,6 +78,10 @@
   {
     xml_id: l_55
     name: l_55
+  }
+  {
+    xml_id: l_66
+    name: l_66
   }
   {
     xml_id: l_10
@@ -110,6 +114,10 @@
   {
     xml_id: l_62
     name: Pallakaceri
+  }
+  {
+    xml_id: l_64
+    name: Pancanadesvara temple
   }
   {
     xml_id: l_47
@@ -196,12 +204,20 @@
     name: Thiruvisanallur
   }
   {
+    xml_id: l_68
+    name: Tillaisthanam
+  }
+  {
     xml_id: l_63
     name: Tippirajapuram
   }
   {
     xml_id: l_61
     name: Tyagaraja Temple
+  }
+  {
+    xml_id: l_67
+    name: Umayalpuram
   }
   {
     xml_id: l_59

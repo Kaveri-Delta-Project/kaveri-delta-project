@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_64">
+          <placeName type="preferred">Pancanadesvara temple</placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.8809011, 79.1049915</note>
+          <note type="general">Important Śaiva temple located in Thiruvaiyaru dedicated to Śiva as Pancanadesvara and his consort Dharmasamvardhini.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>
