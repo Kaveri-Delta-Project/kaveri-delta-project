@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_114">
+          <title type="preferred">Adbhutapañjarakathā</title>
+          <editor key="p_60" role="aut">Raṅgaśāyiyajñendra</editor>
+          <rs key="w_113" role="Resume of">Adbhutapañjara<note/>
+          </rs>
+          <note type="genre" source="other">Metrical resume</note>
+          <note type="bibliographical" subtype="22" n="284">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

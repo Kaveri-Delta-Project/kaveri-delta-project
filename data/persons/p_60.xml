@@ -16,16 +16,10 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_57">
-          <persName type="preferred">Nārāyaṇa Dīkṣita</persName>
-          <trait type="student" key="p_4">
-            <label>Rāmabhadra Dīkṣita</label>
-          </trait>
-          <trait type="student" key="p_56">
-            <label>Tippā Dīkṣita</label>
-          </trait>
-          <trait type="son" key="p_60">
-            <label>Raṅgaśāyiyajñendra</label>
+        <person xml:id="p_60">
+          <persName type="preferred">Raṅgaśāyiyajñendra</persName>
+          <trait type="father" key="p_57">
+            <label>Nārāyaṇa Dīkṣita</label>
           </trait>
         </person>
       </listPerson>
