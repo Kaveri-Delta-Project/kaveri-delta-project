@@ -109,7 +109,7 @@
     "alt_names": [],
     "url": "indexes/person_index.html#p_2",
     "places": [
-      "Adaiyapulam [l_13]"
+      "Adaiyapalam [l_13]"
     ]
   },
   {
@@ -531,6 +531,14 @@
   },
   {
     "type": "person",
+    "id": "p_62",
+    "name": "Mṛtyuñjaya",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_62",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_7",
     "name": "Gaṅgādharavājapeyin",
     "alt_names": [
@@ -541,7 +549,7 @@
     "places": [
       "Thiruvalangadu (Delta) [l_17]",
       "Thiruvalangadu [l_25]",
-      "Vadaranyeswarar Temple [l_58]",
+      "Vataranyeswarar Temple [l_58]",
       "Utpaleswarar Shiva Temple [l_59]"
     ]
   },
@@ -603,7 +611,7 @@
   {
     "type": "place",
     "id": "l_13",
-    "name": "Adaiyapulam",
+    "name": "Adaiyapalam",
     "alt_names": [],
     "url": "indexes/place_index.html#l_13"
   },
@@ -897,7 +905,7 @@
   {
     "type": "place",
     "id": "l_58",
-    "name": "Vadaranyeswarar Temple",
+    "name": "Vataranyeswarar Temple",
     "alt_names": [],
     "url": "indexes/place_index.html#l_58"
   },
@@ -929,7 +937,7 @@
   {
     "type": "place",
     "id": "l_61",
-    "name": "Tyagaraja Temple",
+    "name": "Tyagarajaswami Temple",
     "alt_names": [],
     "url": "indexes/place_index.html#l_61"
   },
@@ -1234,6 +1242,18 @@
     "places": [],
     "persons": [
       "Raṅgaśāyiyajñendra [p_60]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_115",
+    "name": "Pradyumnottaracarita",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_115",
+    "places": [],
+    "persons": [
+      "Mṛtyuñjaya [p_62]"
     ],
     "resided_places": []
   },
