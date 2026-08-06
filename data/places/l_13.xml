@@ -17,7 +17,8 @@
     <body>
       <listPlace>
         <place xml:id="l_13">
-          <placeName type="preferred">Adaiyapulam</placeName>
+          <placeName type="preferred">Adaiyapalam</placeName>
+          <bibl source="other" n="41">Sri Appayya Dikshita by Dr N Ramesan</bibl>
           <note type="coordinates">12.712667420077201, 79.26913609253174</note>
         </place>
       </listPlace>
