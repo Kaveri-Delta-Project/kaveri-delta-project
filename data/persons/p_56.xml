@@ -25,6 +25,9 @@
           <trait type="teacher" key="p_57">
             <label>Nārāyaṇa Dīkṣita</label>
           </trait>
+          <trait type="teacher" key="p_62">
+            <label>Mṛtyuñjaya</label>
+          </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>

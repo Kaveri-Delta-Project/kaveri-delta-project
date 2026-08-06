@@ -3,7 +3,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Sanskrit Project – Place</title>
+        <title>Sanskrit Project – Work</title>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -15,13 +15,13 @@
   </teiHeader>
   <text>
     <body>
-      <listPlace>
-        <place xml:id="l_58">
-          <placeName type="preferred">Vataranyeswarar Temple</placeName>
-          <desc type="function">Temple</desc>
-          <note type="coordinates">11.0465144, 79.5266182</note>
-        </place>
-      </listPlace>
+      <listBibl>
+        <bibl xml:id="w_115">
+          <title type="preferred">Pradyumnottaracarita</title>
+          <editor key="p_62" role="aut">Mṛtyuñjaya</editor>
+          <note type="genre">Poetry</note>
+        </bibl>
+      </listBibl>
     </body>
   </text>
 </TEI>

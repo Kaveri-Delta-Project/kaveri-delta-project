@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_62">
+          <persName type="preferred">Mṛtyuñjaya</persName>
+          <trait type="student" key="p_56">
+            <label>Tippā Dīkṣita</label>
+          </trait>
+          <bibl subtype="21" n="119">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <note>'Son of Ayyādīkṣita, who could compose 100 ślokas in one ghaṭikā; belonging to the family of Ratnakheṭa Śrinivāsa Dīkṣita'; see NCC, Vol. 21, p. 119.</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>
