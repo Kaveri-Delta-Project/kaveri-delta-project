@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_63">
+          <placeName type="preferred">Tippirajapuram</placeName>
+          <desc type="function">Settlement</desc>
+          <bibl source="other">Fuller, C. J. and Narasimhan, Haripriya. ‘The agraharam: The Transformation of Social Space and Brahman Status in Tamilnadu during the Colonial and Postcolonial periods.’ In Ritual, Caste, and Religion in Colonial South India, edited by Michael Bergunder, Heiko Freise and Ulrike Schröder, pp. 219-37. Halle: Neue Hallesche Berichte, 2010.</bibl>
+          <note type="coordinates">10.9084196, 79.4033356</note>
+          <note type="general">Nicely preserved agrahāra with two temples: Vaiṣṇava (Varadarāja, with Venugopala during festivals) situated at the end of South street; and Śaiva (Viracolesvara). </note>
+          <note type="general">One of the eighteen Vathima villages inhabited mostly by smārta brahmins. Structured as a square formed of North, South, East, and West streets; a short extension of South Street, Sannidhi street, leads to the Vaiṣṇava temple in the south-west corner. South street is more orthodox and used to be composed exclusively of brahmins; the North street, by contrast, includes non-brahmin households. This difference between the two main streets of the agrahāra is reflected in their different materials: sand for South street, and tar for North street. See: Fuller, C. J. and Narasimhan, Haripriya. ‘The agraharam: The Transformation of Social Space and Brahman Status in Tamilnadu during the Colonial and Postcolonial periods.’ In Ritual, Caste, and Religion in Colonial South India, edited by Michael Bergunder, Heiko Freise and Ulrike Schröder, pp. 219-37. Halle: Neue Hallesche Berichte, 2010, pp. 224ff.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

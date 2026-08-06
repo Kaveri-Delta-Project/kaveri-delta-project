@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_56">
+          <persName type="preferred">Tippā Dīkṣita</persName>
+          <persName type="variant">Tippādhvarin</persName>
+          <trait type="father" key="p_32">
+            <label>Cokkanāthamakhin (younger)</label>
+          </trait>
+          <trait type="teacher" key="p_57">
+            <label>Nārāyaṇa Dīkṣita</label>
+          </trait>
+          <affiliation key="l_1" role="Recipient (Land Donation)">
+            <placeName>Thiruvisanallur</placeName>
+          </affiliation>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

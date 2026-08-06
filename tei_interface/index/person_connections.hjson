@@ -305,6 +305,16 @@
       person
       Rāmabhadra Dīkṣita
     ]
+    [
+      p_57
+      person
+      Rāmabhadra Dīkṣita
+    ]
+    [
+      w_113
+      work
+      Rāmabhadra Dīkṣita
+    ]
   ]
   p_6:
   [
@@ -1279,6 +1289,11 @@
       person
       Cokkanāthamakhin (younger)
     ]
+    [
+      p_56
+      person
+      Cokkanāthamakhin (younger)
+    ]
   ]
   p_33:
   [
@@ -1290,6 +1305,11 @@
     [
       w_101
       work
+      Bhāskara Dīkṣita
+    ]
+    [
+      p_59
+      person
       Bhāskara Dīkṣita
     ]
   ]
@@ -1552,6 +1572,45 @@
       p_55
       person
       Sadguru Swamigal
+    ]
+  ]
+  p_56:
+  [
+    [
+      p_32
+      person
+      Tippā Dīkṣita
+    ]
+    [
+      p_57
+      person
+      Tippā Dīkṣita
+    ]
+  ]
+  p_57:
+  [
+    [
+      p_4
+      person
+      Nārāyaṇa Dīkṣita
+    ]
+    [
+      p_56
+      person
+      Nārāyaṇa Dīkṣita
+    ]
+    [
+      w_113
+      work
+      Nārāyaṇa Dīkṣita
+    ]
+  ]
+  p_59:
+  [
+    [
+      p_33
+      person
+      Vijayarāghava Dīkṣita
     ]
   ]
 }

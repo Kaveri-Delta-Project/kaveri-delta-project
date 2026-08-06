@@ -81,6 +81,16 @@
       person
       Thiruvisanallur
     ]
+    [
+      p_56
+      person
+      Thiruvisanallur
+    ]
+    [
+      p_58
+      person
+      Thiruvisanallur
+    ]
   ]
   l_4:
   [
@@ -373,6 +383,37 @@
       p_54
       person
       Sengalipuram
+    ]
+  ]
+  l_46:
+  [
+    [
+      w_113
+      work
+      Adi Kumbeswarar Temple
+    ]
+  ]
+  l_62:
+  [
+    [
+      p_33
+      person
+      Pallakaceri
+    ]
+    [
+      p_26
+      person
+      Pallakaceri
+    ]
+    [
+      p_58
+      person
+      Pallakaceri
+    ]
+    [
+      p_59
+      person
+      Pallakaceri
     ]
   ]
 }

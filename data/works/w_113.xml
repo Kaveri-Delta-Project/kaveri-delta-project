@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_113">
+          <title type="preferred">Adbhutapañjara</title>
+          <date type="Performance" from="1705" to="1705">1705</date>
+          <editor key="p_57" role="aut">Nārāyaṇa Dīkṣita</editor>
+          <persName key="p_4" role="mention" type="referenced">Rāmabhadra Dīkṣita<note>Referenced as Pratyagrapatañjali and Dvitīyāvālmikī</note>
+          </persName>
+          <pubPlace key="l_46" role="Performance">
+            <placeName>Adi Kumbeswarar Temple</placeName>
+          </pubPlace>
+          <note type="genre">Play</note>
+          <note type="bibliographical" n="52">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
+          <note type="general">Play in 7 acts on the marriage of Śāhaji and Līlāvatī. To be enacted  at that Mahāmakam festival of God Kumbheśvara at Kumbakonam. See: Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

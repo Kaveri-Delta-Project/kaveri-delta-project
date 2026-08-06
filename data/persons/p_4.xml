@@ -53,6 +53,9 @@
           <trait type="contemporary of" key="p_24">
             <label>Periyappā Kavi</label>
           </trait>
+          <trait type="teacher" key="p_57">
+            <label>Nārāyaṇa Dīkṣita</label>
+          </trait>
           <idno type="Wikidata">Q113774201</idno>
           <affiliation key="l_4" role="Born">
             <placeName>Kandaramanikkam</placeName>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_59">
+          <persName type="preferred">Vijayarāghava Dīkṣita</persName>
+          <trait type="teacher" key="p_33">
+            <label>Bhāskara Dīkṣita</label>
+          </trait>
+          <affiliation key="l_62" role="Born">
+            <placeName>Pallakaceri</placeName>
+          </affiliation>
+          <bibl n="40">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <note>Following Raghavan, it is assumed here that it is the Vijayarāghava Dīkṣita who was the guru of Bhāskara Dīkṣita; both hailed from the same place. See: Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952, p. 40.</note>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_57">
+          <persName type="preferred">Nārāyaṇa Dīkṣita</persName>
+          <trait type="student" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
+          </trait>
+          <trait type="student" key="p_56">
+            <label>Tippā Dīkṣita</label>
+          </trait>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>

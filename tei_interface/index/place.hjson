@@ -108,6 +108,10 @@
     name: Nageswaraswamy Temple
   }
   {
+    xml_id: l_62
+    name: Pallakaceri
+  }
+  {
     xml_id: l_47
     name: Ramaswamy temple
   }
@@ -190,6 +194,10 @@
   {
     xml_id: l_1
     name: Thiruvisanallur
+  }
+  {
+    xml_id: l_63
+    name: Tippirajapuram
   }
   {
     xml_id: l_61

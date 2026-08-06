@@ -64,6 +64,10 @@
     name: Nallādhvarin
   }
   {
+    xml_id: p_57
+    name: Nārāyaṇa Dīkṣita
+  }
+  {
     xml_id: p_1
     name: Nīlakaṇṭha Dīkṣita
   }
@@ -128,6 +132,10 @@
     name: Sudarśanasūri
   }
   {
+    xml_id: p_56
+    name: Tippā Dīkṣita
+  }
+  {
     xml_id: p_5
     name: Tryambakarāyamakhin
   }
@@ -148,8 +156,16 @@
     name: Vedakavīśvara
   }
   {
+    xml_id: p_59
+    name: Vijayarāghava Dīkṣita
+  }
+  {
     xml_id: p_26
     name: Viśvanātha Dīkṣita
+  }
+  {
+    xml_id: p_58
+    name: Vāsudeva Dīkṣita
   }
   {
     xml_id: p_34

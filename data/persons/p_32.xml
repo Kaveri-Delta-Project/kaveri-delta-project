@@ -25,6 +25,9 @@
           <trait type="student" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
+          <trait type="son" key="p_56">
+            <label>Tippā Dīkṣita</label>
+          </trait>
           <affiliation key="l_1" role="Resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
