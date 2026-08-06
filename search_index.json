@@ -177,7 +177,8 @@
     ],
     "url": "indexes/person_index.html#p_26",
     "places": [
-      "Thiruvisanallur [l_1]"
+      "Thiruvisanallur [l_1]",
+      "Pallakaceri [l_62]"
     ]
   },
   {
@@ -251,7 +252,8 @@
     "alt_names": [],
     "url": "indexes/person_index.html#p_33",
     "places": [
-      "Thiruvisanallur [l_1]"
+      "Thiruvisanallur [l_1]",
+      "Pallakaceri [l_62]"
     ]
   },
   {
@@ -466,6 +468,49 @@
     "alt_names": [],
     "url": "indexes/person_index.html#p_55",
     "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_56",
+    "name": "Tippā Dīkṣita",
+    "alt_names": [
+      "Tippādhvarin"
+    ],
+    "url": "indexes/person_index.html#p_56",
+    "places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_57",
+    "name": "Nārāyaṇa Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_57",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_58",
+    "name": "Vāsudeva Dīkṣita",
+    "alt_names": [
+      "Vāsudevādhvarin"
+    ],
+    "url": "indexes/person_index.html#p_58",
+    "places": [
+      "Pallakaceri [l_62]",
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "person",
+    "id": "p_59",
+    "name": "Vijayarāghava Dīkṣita",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_59",
+    "places": [
+      "Pallakaceri [l_62]"
+    ]
   },
   {
     "type": "person",
@@ -897,6 +942,20 @@
   },
   {
     "type": "place",
+    "id": "l_62",
+    "name": "Pallakaceri",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_62"
+  },
+  {
+    "type": "place",
+    "id": "l_63",
+    "name": "Tippirajapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_63"
+  },
+  {
+    "type": "place",
     "id": "l_7",
     "name": "Mahalingeswarar Temple",
     "alt_names": [],
@@ -1112,6 +1171,20 @@
     "places": [],
     "persons": [
       "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_113",
+    "name": "Adbhutapañjara",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_113",
+    "places": [
+      "Adi Kumbeswarar Temple [l_46]"
+    ],
+    "persons": [
+      "Nārāyaṇa Dīkṣita [p_57]"
     ],
     "resided_places": []
   },
