@@ -1008,6 +1008,27 @@
   },
   {
     "type": "place",
+    "id": "l_71",
+    "name": "Pāṇṭuraṅka pajaṉai kōyil",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_71"
+  },
+  {
+    "type": "place",
+    "id": "l_72",
+    "name": "Śrī Leṭcumi naṟacimma cuvāmi purātaṉam kōvil",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_72"
+  },
+  {
+    "type": "place",
+    "id": "l_73",
+    "name": "Kōtaṇṭarāmar kōyil",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_73"
+  },
+  {
+    "type": "place",
     "id": "l_8",
     "name": "Thiruvaiyaru",
     "alt_names": [
@@ -2503,5 +2524,39 @@
     "resided_places": [
       "Thiruvisanallur [l_1]"
     ]
+  },
+  {
+    "type": "inscription",
+    "id": "isc_1",
+    "name": "Tañcavūr viṭṭōpā kōyil kalveṭṭu",
+    "alt_names": [],
+    "url": "indexes/inscription_index.html#isc_1",
+    "places": [
+      "Pāṇṭuraṅka pajaṉai kōyil [l_71]"
+    ]
+  },
+  {
+    "type": "inscription",
+    "id": "isc_2",
+    "name": "Tañcavūr kīḻa naraciṅkapperumāḷ kōyil kalveṭṭu",
+    "alt_names": [],
+    "url": "indexes/inscription_index.html#isc_2",
+    "places": []
+  },
+  {
+    "type": "inscription",
+    "id": "isc_3",
+    "name": "Tañcavūr kōtaṇṭarāmar kōyil kalveṭṭu",
+    "alt_names": [],
+    "url": "indexes/inscription_index.html#isc_3",
+    "places": []
+  },
+  {
+    "type": "inscription",
+    "id": "isc_4",
+    "name": "Tañcavūr taṇṇīr toṭṭi kalveṭṭu",
+    "alt_names": [],
+    "url": "indexes/inscription_index.html#isc_4",
+    "places": []
   }
 ]
