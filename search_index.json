@@ -539,6 +539,22 @@
   },
   {
     "type": "person",
+    "id": "p_63",
+    "name": "Kōvintā Pāy Ammāḷ",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_63",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_64",
+    "name": "Raja Shivaji",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_64",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_7",
     "name": "Gaṅgādharavājapeyin",
     "alt_names": [
@@ -2541,7 +2557,9 @@
     "name": "Tañcavūr kīḻa naraciṅkapperumāḷ kōyil kalveṭṭu",
     "alt_names": [],
     "url": "indexes/inscription_index.html#isc_2",
-    "places": []
+    "places": [
+      "Śrī Leṭcumi naṟacimma cuvāmi purātaṉam kōvil [l_72]"
+    ]
   },
   {
     "type": "inscription",
@@ -2549,7 +2567,9 @@
     "name": "Tañcavūr kōtaṇṭarāmar kōyil kalveṭṭu",
     "alt_names": [],
     "url": "indexes/inscription_index.html#isc_3",
-    "places": []
+    "places": [
+      "Kōtaṇṭarāmar kōyil [l_73]"
+    ]
   },
   {
     "type": "inscription",
