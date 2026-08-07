@@ -76,6 +76,10 @@
     name: Kumbakonam
   }
   {
+    xml_id: l_73
+    name: Kōtaṇṭarāmar kōyil
+  }
+  {
     xml_id: l_55
     name: l_55
   }
@@ -118,6 +122,10 @@
   {
     xml_id: l_64
     name: Pancanadesvara temple
+  }
+  {
+    xml_id: l_71
+    name: Pāṇṭuraṅka pajaṉai kōyil
   }
   {
     xml_id: l_47
@@ -234,5 +242,9 @@
   {
     xml_id: l_28
     name: Viranarasimha temple
+  }
+  {
+    xml_id: l_72
+    name: Śrī Leṭcumi naṟacimma cuvāmi purātaṉam kōvil
   }
 ]

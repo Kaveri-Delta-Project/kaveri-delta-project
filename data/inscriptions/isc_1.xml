@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Inscription</title>
+        <respStmt>
+          <name>Margherita Trento</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc xml:id="isc_1">
+          <msIdentifier>
+            <msName type="preferred">Tañcavūr viṭṭōpā kōyil kalveṭṭu</msName>
+          </msIdentifier>
+          <msContents>
+            <summary>
+              <orgName type="recipient">Temple</orgName>
+            </summary>
+          </msContents>
+          <physDesc>
+            <p>
+              <material>Stone</material>
+            </p>
+          </physDesc>
+          <history>
+            <origin>
+              <origDate from="1819" to="1819">1819</origDate>
+              <origPlace key="l_71">Pāṇṭuraṅka pajaṉai kōyil</origPlace>
+              <lang>Tamil</lang>
+            </origin>
+          </history>
+        </msDesc>
+        <listPerson>
+          <person ana="donor">
+            <persName key="p_10" role="dnr">Serfoji Bhonsle</persName>
+          </person>
+        </listPerson>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p/>
+    </body>
+  </text>
+</TEI>
