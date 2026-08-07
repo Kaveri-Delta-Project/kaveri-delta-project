@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Inscription</title>
+        <respStmt>
+          <name>Margherita Trento</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -14,8 +18,9 @@
             <msName type="preferred">Tañcavūr kōtaṇṭarāmar kōyil kalveṭṭu</msName>
           </msIdentifier>
           <msContents>
-            <summary>                            
-                        </summary>
+            <summary>
+              <orgName type="recipient">Temple</orgName>
+            </summary>
           </msContents>
           <physDesc>
             <p>
@@ -24,11 +29,18 @@
           </physDesc>
           <history>
             <origin>
-                        </origin>
+              <origDate from="1865" to="1865">1865</origDate>
+              <origPlace key="l_73">Kōtaṇṭarāmar kōyil</origPlace>
+              <lang>Tamil</lang>
+            </origin>
+            <provenance>Donation of land in Akkirākāra Tiruppūnturutti Kirāmam as an endowment for different temple rituals; and a donation of money to build a monastic school next to the temple (maṭappaḷḷi).</provenance>
           </history>
         </msDesc>
         <listPerson>
-                </listPerson>
+          <person ana="donor">
+            <persName key="p_63" role="dnr">Kōvintā Pāy Ammāḷ</persName>
+          </person>
+        </listPerson>
       </sourceDesc>
     </fileDesc>
   </teiHeader>

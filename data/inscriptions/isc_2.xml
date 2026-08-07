@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Inscription</title>
+        <respStmt>
+          <name>Margherita Trento</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -14,8 +18,9 @@
             <msName type="preferred">Tañcavūr kīḻa naraciṅkapperumāḷ kōyil kalveṭṭu</msName>
           </msIdentifier>
           <msContents>
-            <summary>                            
-                        </summary>
+            <summary>
+              <orgName type="recipient">Temple</orgName>
+            </summary>
           </msContents>
           <physDesc>
             <p>
@@ -24,11 +29,18 @@
           </physDesc>
           <history>
             <origin>
-                        </origin>
+              <origDate from="1820" to="1820">1820</origDate>
+              <origPlace key="l_72">Śrī Leṭcumi naṟacimma cuvāmi purātaṉam kōvil</origPlace>
+              <lang>Tamil</lang>
+            </origin>
+            <provenance>Complete temple renovation of the temple where the record is located.</provenance>
           </history>
         </msDesc>
         <listPerson>
-                </listPerson>
+          <person ana="donor">
+            <persName key="p_10" role="dnr">Serfoji Bhonsle</persName>
+          </person>
+        </listPerson>
       </sourceDesc>
     </fileDesc>
   </teiHeader>

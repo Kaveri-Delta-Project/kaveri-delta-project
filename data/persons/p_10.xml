@@ -26,6 +26,9 @@
           <trait type="brother" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
+          <trait type="associate" key="p_63">
+            <label>Kōvintā Pāy Ammāḷ</label>
+          </trait>
           <floruit from="1711" to="1728">r. 1711-1728</floruit>
           <affiliation key="l_14" role="Resided">
             <placeName>Sakkottai</placeName>

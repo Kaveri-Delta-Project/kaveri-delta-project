@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Inscription</title>
+        <respStmt>
+          <name>Margherita Trento</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -14,8 +18,9 @@
             <msName type="preferred">Tañcavūr taṇṇīr toṭṭi kalveṭṭu</msName>
           </msIdentifier>
           <msContents>
-            <summary>                            
-                        </summary>
+            <summary>
+              <orgName type="recipient" source="other">The city</orgName>
+            </summary>
           </msContents>
           <physDesc>
             <p>
@@ -24,11 +29,17 @@
           </physDesc>
           <history>
             <origin>
-                        </origin>
+              <origDate from="1901-11-05" to="1901-11-05">5 November 1901</origDate>
+              <lang>Tamil</lang>
+            </origin>
+            <provenance>Water tank</provenance>
           </history>
         </msDesc>
         <listPerson>
-                </listPerson>
+          <person ana="associated">
+            <persName key="p_64" role="oth">Raja Shivaji</persName>
+          </person>
+        </listPerson>
       </sourceDesc>
     </fileDesc>
   </teiHeader>

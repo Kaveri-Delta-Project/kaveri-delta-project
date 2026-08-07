@@ -598,6 +598,16 @@
       inscription
       Serfoji Bhonsle
     ]
+    [
+      isc_2
+      inscription
+      Serfoji Bhonsle
+    ]
+    [
+      p_63
+      person
+      Serfoji Bhonsle
+    ]
   ]
   p_11:
   [
@@ -1652,6 +1662,27 @@
       w_115
       work
       Mṛtyuñjaya
+    ]
+  ]
+  p_63:
+  [
+    [
+      p_10
+      person
+      Kōvintā Pāy Ammāḷ
+    ]
+    [
+      isc_3
+      inscription
+      Kōvintā Pāy Ammāḷ
+    ]
+  ]
+  p_64:
+  [
+    [
+      isc_4
+      inscription
+      Raja Shivaji
     ]
   ]
 }
