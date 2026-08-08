@@ -16,9 +16,12 @@
   <text>
     <body>
       <listPerson>
-        <person xml:id="p_64">
-          <persName type="preferred">Shivaji II</persName>
-          <floruit from="1832-03-17" to="1855-10-29">17 March 1832 – 29 October 1855</floruit>
+        <person xml:id="p_65">
+          <persName type="preferred">Serfoji II</persName>
+          <persName type="variant">Sarabhoji II Bhonsle</persName>
+          <birth when="1777">1777</birth>
+          <death when="1832">1832</death>
+          <floruit from="1787" to="1793">r. 1787-1793</floruit>
         </person>
       </listPerson>
     </body>

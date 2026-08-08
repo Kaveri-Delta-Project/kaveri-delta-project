@@ -33,11 +33,12 @@
               <origPlace key="l_71">Pāṇṭuraṅka pajaṉai kōyil</origPlace>
               <lang>Tamil</lang>
             </origin>
+            <provenance>The prayer hall (pacaṉa cālā) of the temple where the record is located.</provenance>
           </history>
         </msDesc>
         <listPerson>
           <person ana="donor">
-            <persName key="p_10" role="dnr">Serfoji Bhonsle</persName>
+            <persName key="p_65" role="dnr">Serfoji II</persName>
           </person>
         </listPerson>
       </sourceDesc>

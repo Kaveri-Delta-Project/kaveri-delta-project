@@ -30,6 +30,7 @@
           <history>
             <origin>
               <origDate from="1901-11-05" to="1901-11-05">5 November 1901</origDate>
+              <note type="general">The two women donors are identified as queens of Shivaji II (1832-1855), the last Maratha king of Thanjavur. </note>
               <lang>Tamil</lang>
             </origin>
             <provenance>Water tank</provenance>
@@ -37,7 +38,7 @@
         </msDesc>
         <listPerson>
           <person ana="associated">
-            <persName key="p_64" role="oth">Raja Shivaji</persName>
+            <persName key="p_64" role="oth">Shivaji II</persName>
           </person>
         </listPerson>
       </sourceDesc>

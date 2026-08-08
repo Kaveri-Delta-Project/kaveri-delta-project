@@ -92,10 +92,6 @@
     name: Periyappā Kavi
   }
   {
-    xml_id: p_64
-    name: Raja Shivaji
-  }
-  {
     xml_id: p_28
     name: Raṅganātha Sūri
   }
@@ -142,6 +138,14 @@
   {
     xml_id: p_10
     name: Serfoji Bhonsle
+  }
+  {
+    xml_id: p_65
+    name: Serfoji II
+  }
+  {
+    xml_id: p_64
+    name: Shivaji II
   }
   {
     xml_id: p_35

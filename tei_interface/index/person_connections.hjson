@@ -594,16 +594,6 @@
       Serfoji Bhonsle
     ]
     [
-      isc_1
-      inscription
-      Serfoji Bhonsle
-    ]
-    [
-      isc_2
-      inscription
-      Serfoji Bhonsle
-    ]
-    [
       p_63
       person
       Serfoji Bhonsle
@@ -1682,7 +1672,20 @@
     [
       isc_4
       inscription
-      Raja Shivaji
+      Shivaji II
+    ]
+  ]
+  p_65:
+  [
+    [
+      isc_2
+      inscription
+      Serfoji II
+    ]
+    [
+      isc_1
+      inscription
+      Serfoji II
     ]
   ]
 }
