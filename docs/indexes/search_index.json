@@ -548,9 +548,19 @@
   {
     "type": "person",
     "id": "p_64",
-    "name": "Raja Shivaji",
+    "name": "Shivaji II",
     "alt_names": [],
     "url": "indexes/person_index.html#p_64",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_65",
+    "name": "Serfoji II",
+    "alt_names": [
+      "Sarabhoji II Bhonsle"
+    ],
+    "url": "indexes/person_index.html#p_65",
     "places": []
   },
   {
