@@ -26,6 +26,9 @@
           <trait type="associate" key="p_7">
             <label>Gaṅgādharavājapeyin</label>
           </trait>
+          <trait type="teacher" key="p_66">
+            <label>Jagannātha</label>
+          </trait>
           <birth when="1690">c. 1690</birth>
           <death when="1785">c. 1785</death>
           <affiliation key="l_11" role="Resided">

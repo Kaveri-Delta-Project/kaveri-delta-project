@@ -532,6 +532,16 @@
       person
       Bhāskararāyamakhin
     ]
+    [
+      p_66
+      person
+      Bhāskararāyamakhin
+    ]
+    [
+      w_118
+      work
+      Bhāskararāyamakhin
+    ]
   ]
   p_9:
   [
@@ -1346,6 +1356,16 @@
       person
       Ayyaṇṇa Dīkṣita
     ]
+    [
+      w_116
+      work
+      Ayyaṇṇa Dīkṣita
+    ]
+    [
+      w_117
+      work
+      Ayyaṇṇa Dīkṣita
+    ]
   ]
   p_39:
   [
@@ -1686,6 +1706,19 @@
       isc_1
       inscription
       Serfoji II
+    ]
+  ]
+  p_66:
+  [
+    [
+      p_8
+      person
+      Jagannātha
+    ]
+    [
+      w_118
+      work
+      Jagannātha
     ]
   ]
 }

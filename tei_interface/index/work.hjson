@@ -48,6 +48,10 @@
     name: Bhaktitilaka
   }
   {
+    xml_id: w_118
+    name: Bhāskaravilāsa
+  }
+  {
     xml_id: w_109
     name: Bhāṭṭasārasarvasvoddyotacandrikā
   }
@@ -192,6 +196,10 @@
     name: Prasāda (on Kāṇādasiddhāntacandrikā)
   }
   {
+    xml_id: w_116
+    name: Praṇavārthaprakāśa
+  }
+  {
     xml_id: w_67
     name: Puruṣārtharatnākara
   }
@@ -318,6 +326,10 @@
   {
     xml_id: w_99
     name: Vyāsatātparyanirṇaya
+  }
+  {
+    xml_id: w_117
+    name: Yajñaśāstrārthanirṇaya
   }
   {
     xml_id: w_54

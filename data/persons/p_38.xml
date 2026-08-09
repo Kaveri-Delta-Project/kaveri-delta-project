@@ -22,12 +22,20 @@
       <listPerson>
         <person xml:id="p_38">
           <persName type="preferred">Ayyaṇṇa Dīkṣita</persName>
+          <persName type="variant">Ayyaṇṇa Sūri</persName>
+          <persName type="variant">Ayyaṇṇa Vidvat</persName>
+          <persName type="variant">Vīṇai Ayyaṇṇa Kavi</persName>
           <trait type="student" key="p_17">
             <label>Śrīdhara Veṅkaṭeśa Ayyāvāḷ</label>
           </trait>
+          <floruit from="1750" to="1750">c. 1750</floruit>
           <affiliation key="l_1" role="Resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <affiliation key="l_1" role="Born">
+            <placeName>Thiruvisanallur</placeName>
+          </affiliation>
+          <bibl subtype="1" n="366">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
         </person>
       </listPerson>
     </body>
