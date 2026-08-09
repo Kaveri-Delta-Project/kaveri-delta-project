@@ -292,9 +292,14 @@
     "type": "person",
     "id": "p_38",
     "name": "Ayyaṇṇa Dīkṣita",
-    "alt_names": [],
+    "alt_names": [
+      "Ayyaṇṇa Sūri",
+      "Ayyaṇṇa Vidvat",
+      "Vīṇai Ayyaṇṇa Kavi"
+    ],
     "url": "indexes/person_index.html#p_38",
     "places": [
+      "Thiruvisanallur [l_1]",
       "Thiruvisanallur [l_1]"
     ]
   },
@@ -561,6 +566,14 @@
       "Sarabhoji II Bhonsle"
     ],
     "url": "indexes/person_index.html#p_65",
+    "places": []
+  },
+  {
+    "type": "person",
+    "id": "p_66",
+    "name": "Jagannātha",
+    "alt_names": [],
+    "url": "indexes/person_index.html#p_66",
     "places": []
   },
   {
@@ -1301,6 +1314,48 @@
     "places": [],
     "persons": [
       "Mṛtyuñjaya [p_62]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_116",
+    "name": "Praṇavārthaprakāśa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_116",
+    "places": [],
+    "persons": [
+      "Ayyaṇṇa Dīkṣita [p_38]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_117",
+    "name": "Yajñaśāstrārthanirṇaya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_117",
+    "places": [],
+    "persons": [
+      "Ayyaṇṇa Dīkṣita [p_38]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_118",
+    "name": "Bhāskaravilāsa",
+    "alt_names": [
+      "Bhuvanābhoga"
+    ],
+    "url": "indexes/work_index.html#w_118",
+    "places": [],
+    "persons": [
+      "Jagannātha [p_66]"
     ],
     "resided_places": []
   },
