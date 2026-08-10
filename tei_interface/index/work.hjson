@@ -28,6 +28,10 @@
     name: Anuṣṭhānapaddhati
   }
   {
+    xml_id: w_126
+    name: Anyāpadeśaśataka
+  }
+  {
     xml_id: w_13
     name: Avaidikadarśanasaṃgraha
   }
@@ -120,6 +124,10 @@
     name: Kaliviḍambana
   }
   {
+    xml_id: w_124
+    name: Kaliviḍambana
+  }
+  {
     xml_id: w_98
     name: Kulīrāṣṭaka
   }
@@ -156,12 +164,20 @@
     name: Mukundavilāsa
   }
   {
+    xml_id: w_123
+    name: Mukundavilāsa
+  }
+  {
     xml_id: w_89
     name: Mātṛbhūtaśataka
   }
   {
     xml_id: w_88
     name: Mātṛkācakraviveka
+  }
+  {
+    xml_id: w_120
+    name: Nalacaritram
   }
   {
     xml_id: w_1
@@ -190,6 +206,10 @@
   {
     xml_id: w_115
     name: Pradyumnottaracarita
+  }
+  {
+    xml_id: w_119
+    name: Prapañcasārasārasaṅgraha
   }
   {
     xml_id: w_21
@@ -250,6 +270,10 @@
   {
     xml_id: w_59
     name: Rāmāṣṭaprāsastava
+  }
+  {
+    xml_id: w_125
+    name: Sabhārañjana
   }
   {
     xml_id: w_68

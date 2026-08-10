@@ -4,6 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -22,8 +30,16 @@
           <note type="genre">Poetry</note>
           <note type="bibliographical" n="17, n. 1">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
           <note type="bibliographical" subtype="10" n="172">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
-          <note type="bibliographical" subtype="5" n="217">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" subtype="5" n="217a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" source="other">Unni, N. P. Nilakantha Diksita. Sahitya Akademi, 1995.</note>
+          <note type="bibliographical" subtype="2" n="p. 5, ms. 68">Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2</note>
+          <note type="bibliographical" subtype="2" n="5a" source="other">A Catalogue of the Sanskrit Manuscripts in the Adyar Library. Parts 1–2.</note>
+          <note type="bibliographical" subtype="5" n="p. 160–161, ms. 505">Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.</note>
+          <note type="bibliographical" source="other" n="244">Catalogue of Sanskrit Manuscripts in the Govt. Oriental Library, Mysore, 1992.</note>
+          <note type="bibliographical" source="other" n="157b">A Classified Index to the Sanskrit Mss. In the Palace at Tanjore (Burnell).</note>
           <note type="general">Printed in Kāvyamālā 76, 1916 (see from Raghavan Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 17).</note>
+          <note type="general">The poem consists of 8 cantos.</note>
+          <note type="general">It describes the descent of the River Ganga from the heavens. See Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13: vol. 5, p. 160–161, ms. 505.</note>
         </bibl>
       </listBibl>
     </body>

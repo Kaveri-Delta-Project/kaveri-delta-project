@@ -27,10 +27,19 @@
           <trait type="teacher" key="p_32">
             <label>Cokkanāthamakhin (younger)</label>
           </trait>
+          <trait type="student" key="p_67">
+            <label>Gīrvaṇendrasarasvatī</label>
+          </trait>
+          <trait type="teacher" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
+          </trait>
           <floruit from="1638" to="1638">Active around 1638</floruit>
           <affiliation key="l_1" role="Affiliation to this place">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <bibl source="other">Talia Ariav. "Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship". The Indian Economic and Social History Review 59(3) (2022): 273–298.</bibl>
+          <note>Another of his teachers is Veṅkaṭeśvara Makhin. See Talia, Ariav. "Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship". The Indian Economic and Social History Review 59(3) (2022): 273–298: p. 275.</note>
+          <note>His younger brother was Atirātra Yajvan. See Talia, Ariav. "Nīlakaṇṭha Dīkṣita: An Independent Poet of the Kaveri Delta, or: The Forgotten Model of Genealogical Authorship". The Indian Economic and Social History Review 59(3) (2022): 273–298.</note>
         </person>
       </listPerson>
     </body>

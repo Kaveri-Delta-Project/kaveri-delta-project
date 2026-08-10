@@ -56,6 +56,9 @@
           <trait type="teacher" key="p_57">
             <label>Nārāyaṇa Dīkṣita</label>
           </trait>
+          <trait type="student" key="p_1">
+            <label>Nīlakaṇṭha Dīkṣita</label>
+          </trait>
           <idno type="Wikidata">Q113774201</idno>
           <affiliation key="l_4" role="Born">
             <placeName>Kandaramanikkam</placeName>

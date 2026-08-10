@@ -16,15 +16,12 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_1">
-          <title type="preferred">Nīlakaṇṭhavijayacampū</title>
-          <date type="Composition" from="1637" to="1638">1637–1638</date>
+        <bibl xml:id="w_126">
+          <title type="preferred">Anyāpadeśaśataka</title>
           <editor key="p_1" role="aut">Nīlakaṇṭha Dīkṣita</editor>
-          <note type="genre">Narrative (Historical, Fiction, Biographical, etc.)</note>
-          <note type="genre">Poetry</note>
-          <note type="genre">Verse and Prose (Campū)</note>
-          <note type="subject">Saiva</note>
+          <note type="genre">Didactic</note>
           <note type="bibliographical" source="other">Unni, N. P. Nilakantha Diksita. Sahitya Akademi, 1995.</note>
+          <note type="general">The Anyāpadeśaśataka is a collection of 101 stanzas composed in the Śārdūlavikrīḍita metre, satirizing social ills.</note>
         </bibl>
       </listBibl>
     </body>

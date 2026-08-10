@@ -69,6 +69,41 @@
       person
       Nīlakaṇṭha Dīkṣita
     ]
+    [
+      p_67
+      person
+      Nīlakaṇṭha Dīkṣita
+    ]
+    [
+      p_4
+      person
+      Nīlakaṇṭha Dīkṣita
+    ]
+    [
+      w_120
+      work
+      Nīlakaṇṭha Dīkṣita
+    ]
+    [
+      w_123
+      work
+      Nīlakaṇṭha Dīkṣita
+    ]
+    [
+      w_124
+      work
+      Nīlakaṇṭha Dīkṣita
+    ]
+    [
+      w_125
+      work
+      Nīlakaṇṭha Dīkṣita
+    ]
+    [
+      w_126
+      work
+      Nīlakaṇṭha Dīkṣita
+    ]
   ]
   p_3:
   [
@@ -313,6 +348,11 @@
     [
       w_113
       work
+      Rāmabhadra Dīkṣita
+    ]
+    [
+      p_1
+      person
       Rāmabhadra Dīkṣita
     ]
   ]
@@ -1719,6 +1759,19 @@
       w_118
       work
       Jagannātha
+    ]
+  ]
+  p_67:
+  [
+    [
+      p_1
+      person
+      Gīrvaṇendrasarasvatī
+    ]
+    [
+      w_119
+      work
+      Gīrvaṇendrasarasvatī
     ]
   ]
 }

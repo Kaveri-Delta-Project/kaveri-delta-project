@@ -16,15 +16,12 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_1">
-          <title type="preferred">Nīlakaṇṭhavijayacampū</title>
-          <date type="Composition" from="1637" to="1638">1637–1638</date>
+        <bibl xml:id="w_124">
+          <title type="preferred">Kaliviḍambana</title>
           <editor key="p_1" role="aut">Nīlakaṇṭha Dīkṣita</editor>
-          <note type="genre">Narrative (Historical, Fiction, Biographical, etc.)</note>
-          <note type="genre">Poetry</note>
-          <note type="genre">Verse and Prose (Campū)</note>
-          <note type="subject">Saiva</note>
+          <note type="genre">Didactic</note>
           <note type="bibliographical" source="other">Unni, N. P. Nilakantha Diksita. Sahitya Akademi, 1995.</note>
+          <note type="general">The work consists of 102 verses in the anuṣṭubh metre, presenting the characteristics of the Kali age (kaliyuga) in a realistic and humorous manner.</note>
         </bibl>
       </listBibl>
     </body>

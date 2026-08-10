@@ -48,12 +48,12 @@
     name: Gaṅgādharavājapeyin
   }
   {
-    xml_id: p_66
-    name: Jagannātha
-  }
-  {
     xml_id: p_67
     name: Gīrvaṇendrasarasvatī
+  }
+  {
+    xml_id: p_66
+    name: Jagannātha
   }
   {
     xml_id: p_46
