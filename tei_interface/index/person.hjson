@@ -48,8 +48,13 @@
     name: Gaṅgādharavājapeyin
   }
   {
+<<<<<<< Updated upstream
     xml_id: p_66
     name: Jagannātha
+=======
+    xml_id: p_67
+    name: Gīrvaṇendrasarasvatī
+>>>>>>> Stashed changes
   }
   {
     xml_id: p_46
