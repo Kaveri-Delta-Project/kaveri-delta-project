@@ -580,7 +580,10 @@
     "type": "person",
     "id": "p_67",
     "name": "Gīrvaṇendrasarasvatī",
-    "alt_names": [],
+    "alt_names": [
+      "Gīrvaṇendra",
+      "Gīrvaṇendrasarasvatī II"
+    ],
     "url": "indexes/person_index.html#p_67",
     "places": []
   },
@@ -1369,6 +1372,18 @@
   },
   {
     "type": "work",
+    "id": "w_119",
+    "name": "Prapañcasārasārasaṅgraha",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_119",
+    "places": [],
+    "persons": [
+      "Gīrvaṇendrasarasvatī [p_67]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
     "id": "w_12",
     "name": "Rasikarañjanī",
     "alt_names": [
@@ -1379,6 +1394,68 @@
     "persons": [
       "Gaṅgādharavājapeyin [p_7]",
       "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_120",
+    "name": "Nalacaritram",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_120",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_123",
+    "name": "Mukundavilāsa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_123",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_124",
+    "name": "Kaliviḍambana",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_124",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_125",
+    "name": "Sabhārañjana",
+    "alt_names": [
+      "Sabhārañjanaśataka"
+    ],
+    "url": "indexes/work_index.html#w_125",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_126",
+    "name": "Anyāpadeśaśataka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_126",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
     ],
     "resided_places": []
   },
