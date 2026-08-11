@@ -16,14 +16,13 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_132">
-          <title type="preferred">Raghuvīrastava</title>
-          <title type="variant">Rāmāyaṇasārasaṅgraha</title>
+        <bibl xml:id="w_136">
+          <title type="preferred">Śāntivilāsa</title>
           <editor key="p_1" role="aut">Nīlakaṇṭha Dīkṣita</editor>
-          <note type="genre">Hymn</note>
-          <note type="subject">Vaiṣṇava</note>
+          <note type="genre">Didactic</note>
+          <note type="subject">Saiva</note>
           <note type="bibliographical" source="other">Unni, N. P. Nilakantha Diksita. Sahitya Akademi, 1995.</note>
-          <note type="general">The Raghuvīrastava is composed of 33 verses in the Vasantatilaka metre.</note>
+          <note type="general">The Śāntivilāsa consists of 51 stanzas composed in the Mandākrāntā metre.</note>
         </bibl>
       </listBibl>
     </body>

@@ -80,6 +80,10 @@
     name: Daharavidyāprakāśikā
   }
   {
+    xml_id: w_138
+    name: Dakṣināmūrtimantrārṇavamuktāvali
+  }
+  {
     xml_id: w_82
     name: Dayāśataka
   }
@@ -102,6 +106,10 @@
   {
     xml_id: w_35
     name: Gaṅgāvataraṇa
+  }
+  {
+    xml_id: w_133
+    name: Gurutattvamālikā
   }
   {
     xml_id: w_80
@@ -150,6 +158,10 @@
   {
     xml_id: w_79
     name: Kṛṣṇadvādaśamañjarī
+  }
+  {
+    xml_id: w_135
+    name: Mahābhāṣyapradīpaprakāśa
   }
   {
     xml_id: w_2
@@ -220,6 +232,10 @@
     name: Prasāda (on Kāṇādasiddhāntacandrikā)
   }
   {
+    xml_id: w_137
+    name: Praśamāmṛta
+  }
+  {
     xml_id: w_116
     name: Praṇavārthaprakāśa
   }
@@ -282,6 +298,10 @@
   {
     xml_id: w_125
     name: Sabhārañjana
+  }
+  {
+    xml_id: w_134
+    name: Saubhāgyacandrātapa
   }
   {
     xml_id: w_68
@@ -454,6 +474,10 @@
   {
     xml_id: w_29
     name: Śāhendravilāsa
+  }
+  {
+    xml_id: w_136
+    name: Śāntivilāsa
   }
   {
     xml_id: w_45
