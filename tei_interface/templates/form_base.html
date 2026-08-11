@@ -8,12 +8,14 @@
 
 <div>
 
+  {# determine whether the form is editing an existing entity or creating a new one #}
   {% if data %}
     {% set form_action = url_for('edit_entity', entity=entity, xml_id=data.xml_id) %}
   {% else %}
     {% set form_action = url_for('new_entity', entity=entity) %}
   {% endif %}
 
+  {# provide navigation links back to the home page and entity index #}
   <div class="mb-3">
     <a href="{{ url_for('index') }}" class="btn btn-secondary me-2">
       <i class="bi bi-house-door-fill"></i> Return to Home
@@ -23,13 +25,14 @@
     </a>
   </div>
 
-
+  {# display the XML identifier when editing an existing entity #}
   {% if xml_id %}
     <div class="alert alert-info">
       XML ID: <strong>{{ xml_id }}</strong>
     </div>
   {% endif %}
 
+  {# provide the main container for the entity-specific form #}
   <div class="card shadow-sm">
   <div class="card-body">
 

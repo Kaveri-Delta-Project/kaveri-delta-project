@@ -14,7 +14,7 @@
     "+ add inscription name", 
     "resetEditForm('main_isc_name'); toggleEntryForm('main-isc-name-form')") }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('main-isc-name-error') %}
     <div class="alert alert-danger">
       {{ section_messages['main-isc-name-error'] }}
@@ -40,12 +40,13 @@
     </div>
   {% endfor %}
 
-  <!-- Preferred name -->
+  {# provide the form for adding or editing the inscription name #}
   <div id="main-isc-name-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="main_isc_name">
       <input type="hidden" name="edit_index" id="main-isc-name-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="main-isc-name-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -76,7 +77,7 @@
       "+ add alternative inscription name", 
       "resetEditForm('alt_isc_name'); toggleEntryForm('alt-isc-name-form')") }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('alt-isc-name-error') %}
     <div class="alert alert-danger">
       {{ section_messages['alt-isc-name-error'] }}
@@ -101,11 +102,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing an alternative inscription name #}
   <div id="alt-isc-name-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="alt_isc_name">
       <input type="hidden" name="edit_index" id="alt-isc-name-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}      
       <div id="alt-isc-name-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -134,14 +137,13 @@
     "+ add associated dates", 
     "resetEditForm('dates'); toggleEntryForm('dates-form')") }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('dates-error') %}
     <div class="alert alert-danger">
       {{ section_messages['dates-error'] }}
     </div>
   {% endif %}
 
-  <!-- Existing dates entries -->
   {% for text, from, to in zip(data.dates_text, data.dates_from, data.dates_to) %}
     <div class="border rounded p-2 mb-2">
 
@@ -167,11 +169,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing associated dates #}
   <div id="dates-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="dates">
       <input type="hidden" name="edit_index" id="dates-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="dates-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -231,7 +235,7 @@
         "resetEditForm('donor'); toggleEntryForm('donor-form')"
   ) }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('donor-error') %}
     <div class="alert alert-danger">
       {{ section_messages['donor-error'] }}
@@ -268,11 +272,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a donor #}
   <div id="donor-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="donor">
       <input type="hidden" name="edit_index" id="donor-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="donor-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -309,7 +315,7 @@
         "resetEditForm('assoc_person'); toggleEntryForm('assoc-person-form')") 
   }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('assoc-person-error') %}
     <div class="alert alert-danger">
       {{ section_messages['assoc-person-error'] }}
@@ -347,11 +353,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing an associated person #}
   <div id="assoc-person-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="assoc_person">
       <input type="hidden" name="edit_index" id="assoc-person-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="assoc-person-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -403,7 +411,7 @@
       "+ add recipient", 
       "resetEditForm('recipient'); toggleEntryForm('recipient-form')") }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('recipient-error') %}
     <div class="alert alert-danger">
       {{ section_messages['recipient-error'] }}
@@ -427,11 +435,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a recipient type #}
   <div id="recipient-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="recipient">
       <input type="hidden" name="edit_index" id="recipient-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="recipient-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -466,7 +476,7 @@
       "resetEditForm('language'); toggleEntryForm('language-form')"
   ) }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('language-error') %}
     <div class="alert alert-danger">
       {{ section_messages['language-error'] }}
@@ -490,11 +500,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a language for inscription #}
   <div id="language-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="language">
       <input type="hidden" name="edit_index" id="language-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="language-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>      
@@ -528,7 +540,7 @@
       "resetEditForm('donation_type'); toggleEntryForm('donation-type-form')"
   ) }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('donation-type-error') %}
     <div class="alert alert-danger">
       {{ section_messages['donation-type-error'] }}
@@ -552,11 +564,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a donation type #}
   <div id="donation-type-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="donation_type">
       <input type="hidden" name="edit_index" id="donation-type-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="donation-type-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>      
@@ -585,7 +599,7 @@
       "+ add material", 
       "resetEditForm('material'); toggleEntryForm('material-form')") }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('material-error') %}
     <div class="alert alert-danger">
       {{ section_messages['material-error'] }}
@@ -609,11 +623,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a material for inscription #}
   <div id="material-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="material">
       <input type="hidden" name="edit_index" id="material-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="material-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -645,7 +661,7 @@
       "+ add location", 
       "resetEditForm('location'); toggleEntryForm('location-form')") }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('location-error') %}
     <div class="alert alert-danger">
       {{ section_messages['location-error'] }}
@@ -678,11 +694,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a location #}
   <div id="location-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="location">
       <input type="hidden" name="edit_index" id="location-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="location-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -718,7 +736,7 @@
       "resetEditForm('notes'); toggleEntryForm('notes-form')"
   ) }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('notes-error') %}
     <div class="alert alert-danger">
       {{ section_messages['notes-error'] }}
@@ -743,11 +761,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a general note #}
   <div id="notes-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="notes">
       <input type="hidden" name="edit_index" id="notes-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="notes-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
@@ -778,7 +798,7 @@
       "resetEditForm('reference'); toggleEntryForm('reference-form')"
   ) }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('reference-error') %}
     <div class="alert alert-danger">
       {{ section_messages['reference-error'] }}
@@ -827,11 +847,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a bibliographical reference #}
   <div id="reference-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="reference">
       <input type="hidden" name="edit_index" id="reference-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="reference-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>      
@@ -883,7 +905,7 @@
       "resetEditForm('record_contributor'); toggleEntryForm('record-contributor-form')"
   ) }}
 
-  <!-- Section-level error -->
+  {# display section-level validation errors #}
   {% if section_messages.get('record-contributor-error') %}
     <div class="alert alert-danger">
       {{ section_messages['record-contributor-error'] }}
@@ -908,11 +930,13 @@
     </div>
   {% endfor %}
 
+  {# provide the form for adding or editing a record contributor #}
   <div id="record-contributor-form" class="border rounded p-3 mt-3 d-none">
     <form method="POST" action="{{ form_action }}">
       <input type="hidden" name="section" value="record_contributor">
       <input type="hidden" name="edit_index" id="record-contributor-edit-index" value="">
 
+      {# display an edit-mode indicator when editing an existing entry #}
       <div id="record-contributor-edit-label" class="mb-2 d-none">
         <span class="badge bg-warning text-dark">Edit Mode</span>
       </div>
