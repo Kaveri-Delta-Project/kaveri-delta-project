@@ -1461,6 +1461,42 @@
   },
   {
     "type": "work",
+    "id": "w_127",
+    "name": "Ānandasāgarastava",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_127",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_128",
+    "name": "Vairāgyaśataka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_128",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_129",
+    "name": "Śivotkarṣamañjarī",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_129",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
     "id": "w_13",
     "name": "Avaidikadarśanasaṃgraha",
     "alt_names": [
@@ -1471,6 +1507,44 @@
     "persons": [
       "Gaṅgādharavājapeyin [p_7]",
       "Śāhaji I (of Thanjavur) [p_6]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_130",
+    "name": "Caṇḍīrahasya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_130",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_131",
+    "name": "Śivatattvarahasya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_131",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_132",
+    "name": "Raghuvīrastava",
+    "alt_names": [
+      "Rāmāyaṇasārasaṅgraha"
+    ],
+    "url": "indexes/work_index.html#w_132",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
     ],
     "resided_places": []
   },
