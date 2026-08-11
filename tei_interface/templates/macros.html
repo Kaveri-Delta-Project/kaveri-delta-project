@@ -1,3 +1,4 @@
+{# reusable form input field with optional entity lookup and help text #}
 {% macro input_field(
     id,
     name,
@@ -18,8 +19,8 @@
     {% endif %}
   </label>
 
+  {# use a visible lookup input and hidden submitted value for entity selection #}
   {% if entity_lookup %}
-    <!-- Visible input for typing only (no name) -->
     <input type="text"
            class="form-control"
            id="{{ id }}"
@@ -30,19 +31,20 @@
            data-results-id="{{ results_id }}"
            data-hidden-id="{{ hidden_id }}">
 
-    <!-- Hidden input that actually gets submitted -->
+    {# hidden input containing the value submitted with the form #}
     <input type="hidden"
            id="{{ hidden_id }}"
            name="{{ name }}"
            value="{{ value }}"
            required>
 
-    <!-- Results container -->
+    {# container for displaying entity lookup results #}
     <div id="{{ results_id }}"
          class="list-group position-absolute w-100 d-none"
          style="z-index: 1000;"></div>
   {% else %}
-    <!-- Normal input -->
+    
+    {# standard text input when entity lookup is not required #}
     <input type="text"
            class="form-control"
            id="{{ id }}"
@@ -52,11 +54,13 @@
            {{ extra_attrs }}>
   {% endif %}
 
+  {# display optional help text below the input #}
   {% if help_text %}
     <div class="form-text ps-1">{{ help_text }}</div>
   {% endif %}
 {% endmacro %}
 
+{# provide standard Save and Cancel form actions for submitting section data #}
 {% macro form_actions(on_cancel) %}
   <div class="mt-3 d-flex gap-2">
     <button type="submit" class="btn btn-primary">Save</button>
@@ -68,6 +72,7 @@
   </div>
 {% endmacro %}
 
+{# provide a section heading within the entity form with an action button #}
 {% macro section_header(title, button_label, onclick) %}
   <div class="d-flex justify-content-between align-items-center mb-2">
     <h3 class="mb-0">{{ title }}</h3>
@@ -79,6 +84,7 @@
   </div>
 {% endmacro %}
 
+{# provide a reusable delete form for removing an entity from a form section #}
 {% macro delete_button(section, index, extra_fields=None) %}
   <form method="POST"
         action="{{ form_action }}"
@@ -87,6 +93,7 @@
     <input type="hidden" name="delete" value="{{ section }}">
     <input type="hidden" name="delete_index" value="{{ index }}">
     
+    {# include additional form values needed during deletion #}
     {% if extra_fields %}
       {% for name, value in extra_fields.items() %}
         <input type="hidden" name="{{ name }}" value="{{ value }}">
@@ -101,6 +108,7 @@
   </form>
 {% endmacro %}
 
+{# provide a reusable select field with optional custom-value input #}
 {% macro select_field(name, options, selected=None, required=False, allow_other=False) %}
 <label>
     <select name="{{ name }}"
@@ -117,6 +125,7 @@
   </select>
 </label>
 
+{# display an additional input when custom values are allowed #}
 {% if allow_other %}
   <input type="text"
          id="{{ name }}_other"

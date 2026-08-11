@@ -10,6 +10,8 @@
 
 {% block content %}
 <ul class="home-list">
+
+  {# display each entity category and its number of entries #}
   {% for entity, info in all_entities.items() %}
     <li>
       <a href="{{ url_for('entity_index', entity=entity) }}" class="entity-link fw-semibold">
