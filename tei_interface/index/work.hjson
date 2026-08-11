@@ -68,6 +68,10 @@
     name: Candraśekharavilāsa
   }
   {
+    xml_id: w_130
+    name: Caṇḍīrahasya
+  }
+  {
     xml_id: w_46
     name: Cittavṛttikalyāṇa
   }
@@ -224,6 +228,10 @@
     name: Puruṣārtharatnākara
   }
   {
+    xml_id: w_132
+    name: Raghuvīrastava
+  }
+  {
     xml_id: w_110
     name: Rasatilakabhāṇa
   }
@@ -328,6 +336,10 @@
     name: Uṇādimaṇidīpikā
   }
   {
+    xml_id: w_128
+    name: Vairāgyaśataka
+  }
+  {
     xml_id: w_58
     name: Varṇamālāstava
   }
@@ -368,6 +380,10 @@
     name: Āmodarañjanī
   }
   {
+    xml_id: w_127
+    name: Ānandasāgarastava
+  }
+  {
     xml_id: w_97
     name: Ārtiharastuti
   }
@@ -400,8 +416,16 @@
     name: Śivalīlārṇava
   }
   {
+    xml_id: w_131
+    name: Śivatattvarahasya
+  }
+  {
     xml_id: w_70
     name: Śivatattvaratnakalikā
+  }
+  {
+    xml_id: w_129
+    name: Śivotkarṣamañjarī
   }
   {
     xml_id: w_94

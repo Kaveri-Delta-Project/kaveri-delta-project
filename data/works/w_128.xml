@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_128">
+          <title type="preferred">Vairāgyaśataka</title>
+          <editor key="p_1" role="aut">Nīlakaṇṭha Dīkṣita</editor>
+          <note type="genre">Didactic</note>
+          <note type="bibliographical" source="other">Unni, N. P. Nilakantha Diksita. Sahitya Akademi, 1995.</note>
+          <note type="general">The Vairāgyaśataka is a collection of 101 stanzas composed in the Āryā metre, dealing with the fickleness of worldly life; it recalls Bhartṛhari's famous Vairāgyaśataka and also draws on ideas from Śaṅkarācārya's Mohamudgara.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

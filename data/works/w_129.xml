@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_129">
+          <title type="preferred">Śivotkarṣamañjarī</title>
+          <editor key="p_1" role="aut">Nīlakaṇṭha Dīkṣita</editor>
+          <persName key="p_2" role="mention" type="referenced">Appayya Dīkṣita<note>The concluding stanza of the Śivotkarṣamañjarī pays homage to the poet's ancestor, Appayya Dīkṣita.</note>
+          </persName>
+          <note type="genre">Hymn</note>
+          <note type="subject">Saiva</note>
+          <note type="bibliographical" source="other">Unni, N. P. Nilakantha Diksita. Sahitya Akademi, 1995.</note>
+          <note type="bibliographical" source="other">Filliozat, Pierre-Sylvain. Oeuvres poétiques de Nīlakaṇṭha Dīkṣita. Pondichéry: Institut Français de Pondichéry, 1967.</note>
+          <note type="general">The Śivotkarṣamañjarī is a collection of 52 stanzas composed in the Śārdūlavikrīḍita metre, seeking to establish the supremacy of Lord Śiva.</note>
+          <note type="general">Śivānanda Yogīndra is the commentator on the Śivotkarṣamañjarī. He is another descendant of the family who also wrote Appaya’s hagiography, the Śrīmadappayyadīkṣitendravijaya in 1880. See Filliozat, Pierre-Sylvain. Oeuvres poétiques de Nīlakaṇṭha Dīkṣita. Pondichéry: Institut Français de Pondichéry, 1967: p. 7.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
