@@ -1550,6 +1550,82 @@
   },
   {
     "type": "work",
+    "id": "w_133",
+    "name": "Gurutattvamālikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_133",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_134",
+    "name": "Saubhāgyacandrātapa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_134",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_135",
+    "name": "Mahābhāṣyapradīpaprakāśa",
+    "alt_names": [
+      "Prakāśa"
+    ],
+    "url": "indexes/work_index.html#w_135",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_136",
+    "name": "Śāntivilāsa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_136",
+    "places": [],
+    "persons": [
+      "Nīlakaṇṭha Dīkṣita [p_1]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_137",
+    "name": "Praśamāmṛta",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_137",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_138",
+    "name": "Dakṣināmūrtimantrārṇavamuktāvali",
+    "alt_names": [
+      "Dakṣiṇāmūrtimantrārṇamuktāvali"
+    ],
+    "url": "indexes/work_index.html#w_138",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
     "id": "w_14",
     "name": "Śabdakaumudī",
     "alt_names": [],
