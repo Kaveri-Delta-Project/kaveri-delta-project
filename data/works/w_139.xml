@@ -20,12 +20,13 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_112">
-          <title type="preferred">Manassambodhana</title>
+        <bibl xml:id="w_139">
+          <title type="preferred">Bhaktivivardhanastava</title>
           <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
           <note type="bibliographical" subtype="5" n="15a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
           <note type="bibliographical" n="33">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
-          <note type="general">It is printed in the Journal of the Tanjore Sarasvati Mahal Library III, ii-iii. pp. 11-13.</note>
+          <note type="bibliographical" subtype="19" n="p. 47, ms. 23244">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
+          <note type="general">It is noted as kāvya in the 1909 'List of Sanskrit, Jain, and Hindi manuscripts purchased by order of Government and deposited in the Sanskrit College, Benares', p. 3 (ms. 1791). See New Catalogus Catalogorum (NCC). Vols 1–36: vol. 5, p. 14a.</note>
         </bibl>
       </listBibl>
     </body>

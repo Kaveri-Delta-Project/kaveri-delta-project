@@ -52,6 +52,10 @@
     name: Bhaktitilaka
   }
   {
+    xml_id: w_139
+    name: Bhaktivivardhanastava
+  }
+  {
     xml_id: w_118
     name: Bhāskaravilāsa
   }
@@ -192,6 +196,14 @@
     name: Mātṛkācakraviveka
   }
   {
+    xml_id: w_141
+    name: Mīnākṣīstotra
+  }
+  {
+    xml_id: w_140
+    name: Mṛtyuñjayāṣṭaka
+  }
+  {
     xml_id: w_120
     name: Nalacaritram
   }
@@ -300,6 +312,10 @@
     name: Sabhārañjana
   }
   {
+    xml_id: w_143
+    name: Saparyāparyāya
+  }
+  {
     xml_id: w_134
     name: Saubhāgyacandrātapa
   }
@@ -336,6 +352,10 @@
     name: Svārājyasiddhi
   }
   {
+    xml_id: w_144
+    name: Sūryastotra
+  }
+  {
     xml_id: w_28
     name: Tripuravijayacampū
   }
@@ -346,6 +366,10 @@
   {
     xml_id: w_81
     name: Tārāvalīstotra
+  }
+  {
+    xml_id: w_142
+    name: Upadeśadaśaka
   }
   {
     xml_id: w_26
