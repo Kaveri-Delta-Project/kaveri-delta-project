@@ -1626,6 +1626,18 @@
   },
   {
     "type": "work",
+    "id": "w_139",
+    "name": "Bhaktivivardhanastava",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_139",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
     "id": "w_14",
     "name": "Śabdakaumudī",
     "alt_names": [],
@@ -1634,6 +1646,66 @@
     "persons": [
       "Cokkanāthamakhin [p_3]",
       "Vaidyanātha Dīkṣita [p_22]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_140",
+    "name": "Mṛtyuñjayāṣṭaka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_140",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_141",
+    "name": "Mīnākṣīstotra",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_141",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_142",
+    "name": "Upadeśadaśaka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_142",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_143",
+    "name": "Saparyāparyāya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_143",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_144",
+    "name": "Sūryastotra",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_144",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
     ],
     "resided_places": []
   },
