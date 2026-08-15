@@ -1,11 +1,12 @@
-/* ----------------------------
+/* ============================================================
    Global Form & Input Styles
----------------------------- */
+   ============================================================ */
 
 form {
-  margin: 0; /* reset default form margins */
+  margin: 0;
 }
 
+/* Keep form controls consistent with the surrounding page font. */
 input,
 textarea,
 select {
@@ -15,18 +16,24 @@ select {
   appearance: none;
 }
 
+/* Set a consistent line height for text-entry fields. */
 input[type="text"],
 input[type="search"],
 textarea {
   line-height: 1.4;
 }
 
-/* Stop Chrome autofill background */
+/* Prevent Chrome from applying its default autofill background. */
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
   box-shadow: 0 0 0 1000px white inset !important;
 }
 
+/* ============================================================
+   Loading State
+   ============================================================ */
+
+/* Display a message across the top of the page while saving. */
 body.loading::before {
   content: "Saving… This may take a moment (processing request)";
   position: fixed;
@@ -41,9 +48,9 @@ body.loading::before {
   font-weight: bold;
 }
 
-/* ----------------------------
-   Toolbar & Search Inputs
----------------------------- */
+/* ============================================================
+   Toolbar & Search
+   ============================================================ */
 
 .entity-toolbar {
   display: flex;
@@ -53,44 +60,53 @@ body.loading::before {
   gap: 1rem;
 }
 
+/* Remove the default bottom margin from the toolbar search form. */
 .entity-toolbar form {
-  margin-bottom: 0; /* remove extra spacing inside inline forms */
+  margin-bottom: 0;
 }
 
+/* Limit the width of the search input group. */
 .entity-toolbar .search-group {
   width: 100%;
-  max-width: 500px; /* controls overall input group width */
+  max-width: 500px;
 }
 
+/* Allow the search input to expand while keeping a usable minimum width. */
 .entity-toolbar .search-group .form-control {
-  flex: 1 1 auto;   /* allow input to expand */
-  min-width: 300px; /* don’t shrink too small */
-  height: 2.5rem;   /* slightly taller input */
-  font-size: 1rem;  /* larger font for usability */
+  flex: 1 1 auto;
+  min-width: 300px;
+  height: 2.5rem;
+  font-size: 1rem;
 }
 
-/* ----------------------------
+/* ============================================================
    Buttons
----------------------------- */
+   ============================================================ */
 
 button {
   cursor: pointer;
   padding: 0.3em 0.6em;
 }
 
+/* Give buttons a subtle hover state. */
 button:hover {
   background-color: #eee;
 }
 
+/* Give submit buttons slightly stronger text emphasis. */
 button[type="submit"] {
   font-weight: 500;
 }
 
+/* Use softer corners for small buttons. */
 .btn-sm {
-  border-radius: 0.5rem; /* softer corners for small buttons */
+  border-radius: 0.5rem;
 }
 
-/* Delete button (toolbar / list items) */
+/* ============================================================
+   Delete Button
+   ============================================================ */
+
 .delete-btn {
   width: 1.25rem;
   height: 1.25rem;
@@ -108,14 +124,15 @@ button[type="submit"] {
   transform: translateY(1px);
 }
 
+/* Highlight the delete button when the user hovers over it. */
 .delete-btn:hover {
   background-color: #dc3545;
   color: #fff;
 }
 
-/* ----------------------------
+/* ============================================================
    Alphabet Navigation
----------------------------- */
+   ============================================================ */
 
 .alphabet-btn {
   min-width: 2.2rem;
@@ -124,40 +141,45 @@ button[type="submit"] {
   transition: background 0.15s;
 }
 
+/* Give alphabet buttons a subtle hover background. */
 .alphabet-btn:hover {
   background-color: #e9ecef;
 }
 
-/* ----------------------------
-   Entity links / letter groups
----------------------------- */
+/* ============================================================
+   Entity Index
+   ============================================================ */
 
+/* Remove the default underline from entity links. */
 .entity-link {
-  text-decoration: none;          /* remove underline */
-  color: #1c1c1c;;                 /* dark text */
+  text-decoration: none;
+  color: #1c1c1c;
   transition: color 0.15s ease, text-decoration 0.15s ease;
 }
 
+/* Underline entity links when the user hovers over them. */
 .entity-link:hover {
-  color: #495057;                 /* Bootstrap primary on hover */
-  text-decoration: underline;     /* subtle underline on hover */
-  text-decoration-color: currentColor; 
+  color: #495057;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
 }
 
+/* Display entity names as normal-weight text. */
 .entity-name {
-  color: #212529;                 /* normal text */
-  font-weight: normal;            /* not bold */
+  color: #212529;
+  font-weight: normal;
 }
 
+/* Display entity IDs as muted secondary text. */
 .entity-id {
-  color: #6c757d;                 /* muted secondary text */
-  font-weight: normal;            /* not bold */
+  color: #6c757d;
+  font-weight: normal;
 }
 
 
-/* ----------------------------
-   Panels / Sections
----------------------------- */
+/* ============================================================
+   Panels & Sections
+   ============================================================ */
 
 .panel {
   border: 1px solid #ddd;
@@ -166,6 +188,7 @@ button[type="submit"] {
   background: #fafafa;
 }
 
+/* Keep panel headings compact and aligned with the panel. */
 .panel h3 {
   margin-top: 0;
   font-size: 1.1rem;
@@ -184,17 +207,19 @@ button[type="submit"] {
   border-radius: 0.5rem;
 }
 
+/* Add spacing between home-page links. */
 .home-list li {
   padding: 0.4rem 0;
 }
 
+/* Remove any bottom border from the final list item. */
 .home-list li:last-child {
   border-bottom: none;
 }
 
-/* ----------------------------
-   Error / Section messages
----------------------------- */
+/* ============================================================
+   Error & Section Messages
+   ============================================================ */
 
 .section-error {
   color: #842029;
@@ -205,9 +230,9 @@ button[type="submit"] {
   font-size: 0.9rem;
 }
 
-/* ----------------------------
-   Page / Headings
----------------------------- */
+/* ============================================================
+   Page Headings & Dividers
+   ============================================================ */
 
 .page-heading {
   margin-top: 1.5rem;
@@ -215,7 +240,7 @@ button[type="submit"] {
   font-weight: 600;
 }
 
-/* Optional: subtle divider instead of harsh <hr> */
+/* Make horizontal dividers less visually prominent. */
 hr {
   opacity: 0.15;
 }
