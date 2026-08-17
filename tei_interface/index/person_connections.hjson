@@ -1167,11 +1167,6 @@
   p_25:
   [
     [
-      p_24
-      person
-      Vedakavīśvara
-    ]
-    [
       p_15
       person
       Vedakavīśvara
@@ -1194,11 +1189,6 @@
   ]
   p_24:
   [
-    [
-      p_25
-      person
-      Periyappā Kavi
-    ]
     [
       w_45
       work
@@ -1397,6 +1387,11 @@
     ]
     [
       w_144
+      work
+      Kṛṣṇānanda Sarasvatī
+    ]
+    [
+      w_145
       work
       Kṛṣṇānanda Sarasvatī
     ]

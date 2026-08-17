@@ -20,13 +20,14 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="w_112">
-          <title type="preferred">Manassambodhana</title>
+        <bibl xml:id="w_145">
+          <title type="preferred">Vedāntavādārtha</title>
           <editor key="p_27" role="aut">Kṛṣṇānanda Sarasvatī</editor>
           <note type="subject">Vedānta</note>
           <note type="bibliographical" subtype="5" n="15a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
-          <note type="bibliographical" n="33">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
-          <note type="general">It is printed in the Journal of the Tanjore Sarasvati Mahal Library III, ii-iii. pp. 11-13.</note>
+          <note type="bibliographical" subtype="13" n="p. 5576–5579, mss. 7516–7518">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
+          <note type="bibliographical" source="other" n="94b">A Classified Index to the Sanskrit Mss. In the Palace at Tanjore (Burnell).</note>
+          <note type="general">In ms. 7516 in the Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore, the author mentions Rāmabhadra and Vāsudevayati as his gurus.</note>
         </bibl>
       </listBibl>
     </body>
