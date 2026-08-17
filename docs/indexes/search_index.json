@@ -1161,7 +1161,8 @@
     "name": "Āmodarañjanī",
     "alt_names": [
       "Śivatattvaratnakalikāvyākhyā",
-      "Śivatattvakalikāmodarañjanī"
+      "Śivatattvakalikāmodarañjanī",
+      "Āmodarañjana"
     ],
     "url": "indexes/work_index.html#w_104",
     "places": [],
@@ -1703,6 +1704,18 @@
     "name": "Sūryastotra",
     "alt_names": [],
     "url": "indexes/work_index.html#w_144",
+    "places": [],
+    "persons": [
+      "Kṛṣṇānanda Sarasvatī [p_27]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_145",
+    "name": "Vedāntavādārtha",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_145",
     "places": [],
     "persons": [
       "Kṛṣṇānanda Sarasvatī [p_27]"
