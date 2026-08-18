@@ -22,6 +22,9 @@
       <listPerson>
         <person xml:id="p_34">
           <persName type="preferred">Vātsya Subrahmaṇya</persName>
+          <trait type="student" key="p_27">
+            <label>Kṛṣṇānanda Sarasvatī</label>
+          </trait>
         </person>
       </listPerson>
     </body>

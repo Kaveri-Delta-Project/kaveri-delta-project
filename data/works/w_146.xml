@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_146">
+          <title type="preferred">Tattvamasyakhaṇḍārthanirūpaṇa</title>
+          <editor key="p_29" role="att">Rāmānanda Yati</editor>
+          <note type="subject">Vedānta</note>
+          <note type="bibliographical">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
+          <note type="bibliographical" source="other" n="p. 4217–4217, ms. 2921">A Triennial Catalogue of Manuscripts, GOML, Vol. IV, Part I, Sanskrit A.</note>
+          <note type="general">V. Raghavan writes that the author of this work seems to be identical with the author of the Siddhāntacandrikā, i.e., Rāmananda. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 33–34.</note>
+          <note type="general">This work is a criticism of the Viśiṣṭādvaita and Dvaita interpretations of tat tvam asi. </note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
