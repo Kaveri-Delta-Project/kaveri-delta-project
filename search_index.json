@@ -510,10 +510,13 @@
     "type": "person",
     "id": "p_59",
     "name": "Vijayarāghava Dīkṣita",
-    "alt_names": [],
+    "alt_names": [
+      "Vijayarāghava Śāstrin"
+    ],
     "url": "indexes/person_index.html#p_59",
     "places": [
-      "Pallakaceri [l_62]"
+      "Pallakaceri [l_62]",
+      "Thiruvisanallur [l_1]"
     ]
   },
   {
@@ -1123,7 +1126,9 @@
     "type": "work",
     "id": "w_101",
     "name": "Ratnatūlikā",
-    "alt_names": [],
+    "alt_names": [
+      "Siddhāntasiddhāñjanavyākhyā"
+    ],
     "url": "indexes/work_index.html#w_101",
     "places": [],
     "persons": [
