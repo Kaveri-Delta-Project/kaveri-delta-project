@@ -26,6 +26,9 @@
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
           </trait>
+          <trait type="member of family" key="p_33">
+            <label>Bhāskara Dīkṣita</label>
+          </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>

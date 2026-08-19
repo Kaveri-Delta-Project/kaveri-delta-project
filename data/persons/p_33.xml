@@ -28,6 +28,9 @@
           <trait type="student" key="p_59">
             <label>Vijayarāghava Dīkṣita</label>
           </trait>
+          <trait type="member of family" key="p_28">
+            <label>Raṅganātha Sūri</label>
+          </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
@@ -36,7 +39,9 @@
           </affiliation>
           <bibl source="other">Krishnamacharya, V. ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin, Vol. 10, pp. 63–68, 1946: p. 68</bibl>
           <bibl subtype="17" n="129a">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
-          <bibl n="30">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <bibl>Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <note>He was a recipient of four shares of the land donation at Thiruvisanallur because he had mastered four śāstras. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 38.</note>
+          <note>He was a Sarvotamukhayājin. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 40.</note>
         </person>
       </listPerson>
     </body>

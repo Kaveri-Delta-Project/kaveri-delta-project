@@ -4,6 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -18,11 +26,15 @@
       <listPerson>
         <person xml:id="p_59">
           <persName type="preferred">Vijayarāghava Dīkṣita</persName>
+          <persName type="variant">Vijayarāghava Śāstrin</persName>
           <trait type="teacher" key="p_33">
             <label>Bhāskara Dīkṣita</label>
           </trait>
           <affiliation key="l_62" role="Born">
             <placeName>Pallakaceri</placeName>
+          </affiliation>
+          <affiliation key="l_1" role="Recipient (Land Donation)">
+            <placeName>Thiruvisanallur</placeName>
           </affiliation>
           <bibl n="40">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
           <note>Following Raghavan, it is assumed here that it is the Vijayarāghava Dīkṣita who was the guru of Bhāskara Dīkṣita; both hailed from the same place. See: Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952, p. 40.</note>
