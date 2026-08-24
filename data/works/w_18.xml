@@ -4,6 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -21,6 +29,9 @@
           <title type="variant">Rājakośanighaṇṭu</title>
           <editor key="p_9" role="aut">Ḍhuṇḍirāja Vyāsa</editor>
           <note type="genre">Lexicon</note>
+          <note type="bibliographical">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</note>
+          <note type="bibliographical" subtype="9" n="pp. 3880–3883, mss. 5029–5031">A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
+          <note type="general">This is a lexicon of political and administrative terms. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 55.</note>
         </bibl>
       </listBibl>
     </body>
