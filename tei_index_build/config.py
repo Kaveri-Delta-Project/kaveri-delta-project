@@ -4,6 +4,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "data"))
 BUILD_DIR = os.path.join(BASE_DIR, "build")
 
+
+#namespace settings
+
 NS_TEI = "http://www.tei-c.org/ns/1.0"
 NS_XML = "http://www.w3.org/XML/1998/namespace"
 
@@ -12,6 +15,11 @@ NSMAP = {
     "xml": NS_XML,
 }
 
+
+#entity extraction mappings
+#
+#each mapping describes how TEI elements and attributes are extracted into
+#the internal dictionaries used by the rendering pipeline
 
 PERSON_MAPPING = {
     "xml_id": {"attr": f"{{{NS_XML}}}id"}, 
@@ -134,6 +142,9 @@ ISC_MAPPING = {
     "record_contributor": {"parent_tag": "respStmt", "child_elements": ["name", "resp"], "from_root": True}
 }
 
+
+#MARC relator codes mapped to human-readable role labels
+
 ROLES = {
     "ann": "Annotator",
     "arr": "Arranger",
@@ -211,6 +222,8 @@ ENTITY_CONFIG = {
     }
 }
 
+
+#Bibliographical reference templates
 
 TEMPLATE_CONFIG = {
     "bibliographical_references": {
