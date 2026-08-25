@@ -19,6 +19,7 @@
         <person xml:id="p_3">
           <persName type="preferred">Cokkanāthamakhin</persName>
           <persName type="variant">Cokkanāthakavi</persName>
+          <persName type="variant">Cokkanātha Dīkṣita</persName>
           <trait type="student" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
@@ -27,6 +28,9 @@
           </trait>
           <trait type="member of family" key="p_4">
             <label>Rāmabhadra Dīkṣita</label>
+          </trait>
+          <trait type="contemporary of" key="p_32">
+            <label>Cokkanāthamakhin (younger)</label>
           </trait>
           <affiliation key="l_4">
             <placeName>Kandaramanikkam</placeName>

@@ -4,6 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Jonathan Duquette</name>
+          <resp>Contributor</resp>
+        </respStmt>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -31,6 +39,8 @@
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <bibl>Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <note>Tippādhvarin and his eldest son (of 5) Kuppādhvarin were recipients of the land donation at Thiruvisanallur. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 56.</note>
         </person>
       </listPerson>
     </body>
