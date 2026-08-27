@@ -1,8 +1,19 @@
+/* ============================================================
+   Leaflet interaction
+   ============================================================ */
+
+/* Remove the default focus styling from interactive Leaflet elements. */
 .leaflet-interactive:focus {
     outline: none !important;
     box-shadow: none !important;
 }
 
+
+/* ============================================================
+   Popup content
+   ============================================================ */
+
+/* Set the general appearance and text formatting of popup content. */
 .popup-content {
     font-family: Arial, sans-serif;
     font-size: 12px;       
@@ -12,17 +23,20 @@
     white-space: normal;
 }
 
+/* Emphasise the main title displayed in a popup. */
 .popup-title {
     font-weight: bold;
     font-size: 15px;
 }
 
+/* Style clickable popup subtitles. */
 .popup-subtitle {
     font-weight: bold;
     font-size: 13px;
     cursor: pointer;
 }
 
+/* Remove the default list styling from popup lists. */
 .popup-content ul {
     list-style: none;
     padding-left: 5px;
@@ -30,16 +44,24 @@
     margin-top: 0;
 }
 
+/* Add a small amount of spacing between expandable popup sections. */
 .popup-content details {
-    margin-bottom: 3px;    /* optional spacing between dropdowns */
+    margin-bottom: 3px; 
     margin-left: 1px;
 }
 
+/* Style links within popup content. */
 .popup-content a {
-    color: maroon;         /* make links maroon */
-    text-decoration: underline;  /* optional: keep underline for clarity */
+    color: maroon;       
+    text-decoration: underline;  
 }
 
+
+/* ============================================================
+   Scale selector
+   ============================================================ */
+
+/* Position the node-scaling selector over the map. */
 .scale-selector {
     position: fixed;
     bottom: 230px;      
@@ -53,12 +75,18 @@
     font-family: Arial, sans-serif;
 }
 
+/* Add spacing between the selector and its menu contents. */
 .scale-menu {
     margin-top: 5px;
     padding: 2px;
 }     
 
-/* Labels */
+
+/* ============================================================
+   Map labels
+   ============================================================ */
+
+/* Set the general appearance of labels displayed on the map. */
 .map-label {
     color: white;
     font-weight: bold;
@@ -67,15 +95,22 @@
     padding: 1px;
 }
 
+/* Use a larger font for labels shown at lower zoom levels. */
 .label-large { 
     font-size: 14px; 
 }
 
+/* Use a smaller font for labels shown at higher zoom levels. */
 .label-small { 
     font-size: 10px; 
 }
 
-/* Legend */
+
+/* ============================================================
+   Map legend
+   ============================================================ */
+
+/* Position and style the map legend as an overlay. */
 .map-legend {
     position: fixed;
     bottom: 20px;
@@ -92,16 +127,24 @@
     pointer-events: auto;
 }
 
+/* Arrange each legend item horizontally with its marker and text. */
 .legend-item {
     display: flex;
     align-items: center;
     margin: 3px;
 }
 
+/* Add spacing between the legend marker and its text. */
 .legend-item-text {
     margin-left: 7px;
 }
 
+
+/* ============================================================
+   Responsive layout
+   ============================================================ */
+
+/* Reduce popup width on smaller screens to keep it within the viewport. */
 @media (max-width: 768px) {
     .leaflet-popup-content {
         max-width: 80vw;   /* responsive width */

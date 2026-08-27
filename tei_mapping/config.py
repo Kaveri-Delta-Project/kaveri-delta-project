@@ -1,16 +1,20 @@
 from pathlib import Path
 
-# BASE_DIR points to repo root
+
+#project directories
+#BASE_DIR points to the repository root
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Data lives in repo root
-DATA_DIR = BASE_DIR / "data"
 
-# Static assets are inside tei_mapping/static
+#data and static assets used by the application
+DATA_DIR = BASE_DIR / "data"
 STATIC_DIR = BASE_DIR / "tei_mapping" / "static"
+
 CSS_PATH = STATIC_DIR / "css" / "map.css"
 GIS_PATH = STATIC_DIR / "gis"
 
+
+#data directories for each TEI entity type
 DATA_PATHS = {
     "places": DATA_DIR / "places",
     "persons": DATA_DIR / "persons",
@@ -18,6 +22,9 @@ DATA_PATHS = {
     "inscriptions": DATA_DIR / "inscriptions"
 }
 
+
+#schemas defining which TEI elements and attributes are extracted
+#for each entity type
 
 PLACE_SCHEMA = {
     "place_id": dict(element="place", attribute="xml:id", flatten=True),
