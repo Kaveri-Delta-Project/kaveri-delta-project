@@ -22,7 +22,7 @@
       <listPerson>
         <person xml:id="p_25">
           <persName type="preferred">Vedakavīśvara</persName>
-          <persName type="variant">Vedakavi Svāmin (NCC vol. 31, 147)</persName>
+          <persName type="variant">Vedakavi Svāmin</persName>
           <trait type="beneficiary" key="p_15">
             <label>Ānandarāyamakhin</label>
           </trait>
