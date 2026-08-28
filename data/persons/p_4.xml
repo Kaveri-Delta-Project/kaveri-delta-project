@@ -59,6 +59,9 @@
           <trait type="student" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
+          <trait type="associate" key="p_18">
+            <label>Bhūminātha Kavi</label>
+          </trait>
           <idno type="Wikidata">Q113774201</idno>
           <affiliation key="l_4" role="Born">
             <placeName>Kandaramanikkam</placeName>

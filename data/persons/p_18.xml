@@ -25,6 +25,9 @@
           <trait type="beneficiary" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
+          <trait type="associate" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
+          </trait>
           <affiliation key="l_1" role="Resided">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>

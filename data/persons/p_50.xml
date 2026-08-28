@@ -19,14 +19,14 @@
         <person xml:id="p_50">
           <persName type="preferred">Vainateya</persName>
           <persName type="variant">Vainateya Sūri</persName>
-          <trait type="member of family" key="p_24">
-            <label>Periyappā Kavi</label>
-          </trait>
           <trait type="son" key="p_49">
             <label>Aṇṇā Śāstrī</label>
           </trait>
           <trait type="brother" key="p_26">
             <label>Viśvanātha Dīkṣita</label>
+          </trait>
+          <trait type="brother" key="p_24">
+            <label>Periyappā Kavi</label>
           </trait>
           <note>Paternal uncle of Periyappā Kavi</note>
           <note>Author of a commentary on Rucidatta's Tattvacintāmaṇiprakāśa</note>

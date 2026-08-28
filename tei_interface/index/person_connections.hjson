@@ -420,6 +420,11 @@
       person
       Rāmabhadra Dīkṣita
     ]
+    [
+      p_18
+      person
+      Rāmabhadra Dīkṣita
+    ]
   ]
   p_6:
   [
@@ -1030,6 +1035,11 @@
       person
       Bhūminātha Kavi
     ]
+    [
+      p_4
+      person
+      Bhūminātha Kavi
+    ]
   ]
   p_19:
   [
@@ -1235,11 +1245,6 @@
       Periyappā Kavi
     ]
     [
-      p_50
-      person
-      Periyappā Kavi
-    ]
-    [
       p_4
       person
       Periyappā Kavi
@@ -1251,6 +1256,11 @@
     ]
     [
       p_25
+      person
+      Periyappā Kavi
+    ]
+    [
+      p_50
       person
       Periyappā Kavi
     ]
@@ -1671,17 +1681,17 @@
   p_50:
   [
     [
-      p_24
-      person
-      Vainateya
-    ]
-    [
       p_49
       person
       Vainateya
     ]
     [
       p_26
+      person
+      Vainateya
+    ]
+    [
+      p_24
       person
       Vainateya
     ]
