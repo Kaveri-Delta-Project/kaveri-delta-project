@@ -240,7 +240,7 @@ TEMPLATE_CONFIG = {
         ("New Catalogus Catalogorum (NCC). Vols 1–36.", "New Catalogus Catalogorum (NCC)"),
         ("A Descriptive Catalogue of the Sanskrit Manuscripts in the Tanjore Maharaja Serfoji’s Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.", "A Descriptive Catalogue of the Sanskrit Manuscripts in the Sarasvati Mahal Library"),
         ("Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML). Vols. 1–25.", "Descriptive Catalogue of the Sanskrit Manuscripts in the Government Oriental Manuscripts Library, Madras (GOML)"),
-        ("Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2", "Lists of Sanskrit Manuscripts in Private Libraries of Southern India"),
+        ("Lists of Sanskrit Manuscripts in Private Libraries of Southern India (Oppert). Vols 1–2.", "Lists of Sanskrit Manuscripts in Private Libraries of Southern India"),
         ("Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar). Vols. 1–13.", "Descriptive Catalogue of Sanskrit Manuscripts in the Adyar Library (Adyar)"),
         ("Other", "Other")
     ],
