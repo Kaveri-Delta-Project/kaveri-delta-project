@@ -1185,22 +1185,28 @@ def render_inscription(inscription):
     #location names and identifiers are kept paired using zip so that
     #each place remains associated with its correct identifier and links
     #to the corresponding place index entry
+    #and includes the location type - inscription or donation
     location_names = inscription.get("location")
     location_keys = inscription.get("location_key")
+    location_types = inscription.get("location_type")
     
-    if location_names and location_keys:
-        locations = sorted(zip(location_names, location_keys), key=lambda x: normalize_for_sort(x[0]))
+    #the location fields are stored as parallel lists, with each position
+    #representing one location/type combination
+    if location_names and location_keys and location_types:
+        locations = sorted(zip(location_names, location_keys, location_types), key=lambda x: normalize_for_sort(x[0]))
 
         html.append("<div class='entry-block entry-locations'>")
         html.append("<span class='subheading'>Locations</span>")
 
-        for place_name, key in locations:
+        #display each location's name and identifier together with
+        #the location type
+        for place_name, key, type in locations:
             
             url = make_entity_url("place", key, single_page=False)
 
             html.append(
                 f"<a href='{esc(url)}' target='place-index' class='item-name'>"
-                f"{esc(place_name)} ({esc(key)})"
+                f"{esc(place_name)} ({esc(key)}) (type: {esc(type)})"
                 f"</a>"
             )
 

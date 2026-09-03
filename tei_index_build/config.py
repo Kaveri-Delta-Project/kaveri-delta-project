@@ -130,6 +130,7 @@ ISC_MAPPING = {
     "material": {"element": "material", "all_results": True},
     "location": {"element": "origPlace", "all_results": True},
     "location_key": {"element": "origPlace", "element_attr": "key", "all_results": True},
+    "location_type": {"element": "origPlace", "element_attr": "type", "all_results": True},
     "reference" : {
         "parent_tag": "note", 
         "filter_attr": "type", 
