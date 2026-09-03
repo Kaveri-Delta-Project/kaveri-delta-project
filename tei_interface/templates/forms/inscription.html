@@ -668,11 +668,10 @@
     </div>
   {% endif %}
 
-  {% for text, key in zip(data.location, data.location_key) %}
+  {% for text, key, type in zip(data.location, data.location_key, data.location_type) %}
     <div class="border rounded p-2 mb-2">
       <span class="fw-semibold">{{ text }}</span>
-      <span class="text-muted">[{{ key }}]</span>
-
+      <span class="text-muted">(type: {{ type }}) [{{ key }}]</span>
       {{ ui.delete_button("origPlace", 
           loop.index0,
           extra_fields={"connection": "cascade", "name_type": "place", "key": key, "name": text}
@@ -684,8 +683,9 @@
             "location",
             {{ loop.index0 }},
             {{ {
-                "location": text,
+                "location_search": text,
                 "location_key": key,
+                "location_type": type
             }|tojson }}
         ); showEntryForm("location-form");'>
         ✎ Edit
@@ -707,20 +707,32 @@
 
       <div class="editable-fields">
         <div class="mb-3">
-          {{ ui.input_field(
-              id="location_search",
-              name="location_key",
-              label="Search Location",
-              label_option="(required)",
-              placeholder="Type to search places...",
-              entity_lookup="place",
-              results_id="location_results",
-              hidden_id="location_key",
-              extra_attrs="required",
-              help_text="Search for an existing place and select it from the list."
+          {{ ui.select_field("location_type",
+                [
+                  ("", "-- Select type --"),
+                  ("Inscription", "Inscription"),
+                  ("Donation", "Donation"),
+                ],
+              required=True
           ) }}
-        </div>
-      </div>  
+        </div>  
+
+        <div class="editable-fields">
+          <div class="mb-3">
+            {{ ui.input_field(
+                id="location_search",
+                name="location_key",
+                label="Search Location",
+                label_option="(required)",
+                placeholder="Type to search places...",
+                entity_lookup="place",
+                results_id="location_results",
+                hidden_id="location_key",
+                extra_attrs="required",
+                help_text="Search for an existing place and select it from the list."
+            ) }}
+          </div>
+        </div>  
 
       {{ ui.form_actions("resetEditForm('location'); toggleEntryForm('location-form')") }}
      

@@ -800,14 +800,16 @@ def handle_location(inscription, context, form_data):
     """
     Add or update a location associated with an inscription.
 
-    Validates the selected location, resolves the location name from the
-    place entity file, and determines whether the request is an edit or a
-    new addition. Creates a location entry, maintains the connection index
+    Validates the selected location and location type: inscription or donation related
+    to inscription, resolves the location name from the place entity file, 
+    and determines whether the request is an edit or a new addition. 
+    Creates a location entry, maintains the connection index
     when the relationship changes. Allows multiple locations to exist
     for the inscription.
     """
 
     location_key = form_data.get("location_key")
+    location_type = form_data.get("location_type")
 
     #validate the selected location key
     if not location_key:
@@ -818,6 +820,11 @@ def handle_location(inscription, context, form_data):
     location_text = load_ent_name_by_key("place", PLACE_CONFIG, location_key, "placeName", NSMAP)
     if not location_text:
         flash("Selected location could not be resolved.", "location-error")
+        return failure()
+
+    #validate the location type
+    if not location_type:
+        flash("No location type entered.", "location-type-error")
         return failure()
 
     #retrieve the origin element from the TEI document
@@ -846,7 +853,7 @@ def handle_location(inscription, context, form_data):
             tag="origPlace",
             text=location_text,
             ns=NS_TEI,
-            update_attrs={"key": location_key},
+            update_attrs={"key": location_key, "type": location_type},
             index=index
         )
 
@@ -867,7 +874,7 @@ def handle_location(inscription, context, form_data):
             nsmap=NSMAP,
             ns=NS_TEI,            
             text=location_text,
-            attrs={"key": location_key},
+            attrs={"key": location_key, "type": location_type},
             allow_multiple=True
         )
 
