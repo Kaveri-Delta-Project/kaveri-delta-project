@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_77">
+          <placeName type="preferred">Thanjapureeswarar Sri Shiva Temple Aanandavalli Amman Temple</placeName>
+          <desc type="function">Temple</desc>
+          <note type="coordinates">10.815657332855192, 79.14005267248672</note>
+          <note type="general">In all probability, this is the temple where the Vidyāpariṇayanāṭaka (see entry) was enacted. </note>
+          <note type="general">Used to be surrounded by agrahāras. Has a nartana mandapam built by Serfoji II.</note>
+          <note type="general">The temple has a Chola foundation with additions by Nāyakas and Marathas.</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>

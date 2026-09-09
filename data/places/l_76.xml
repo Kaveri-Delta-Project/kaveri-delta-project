@@ -16,12 +16,10 @@
   <text>
     <body>
       <listPlace>
-        <place xml:id="l_29">
-          <placeName type="preferred">Thanjapureswara temple</placeName>
-          <desc type="function">Temple</desc>
-          <note type="coordinates">10.8153585, 79.1395844</note>
-          <note type="general">Used to be surrounded by agrahāras. Has a nartana mandapam built by Serfoji II.</note>
-          <note type="general">The temple has a Chola foundation with additions by Nāyakas and Marathas.</note>
+        <place xml:id="l_76">
+          <placeName type="preferred">Konerirājapuram</placeName>
+          <desc type="function">Settlement</desc>
+          <note type="coordinates">10.986241509533713, 79.52748560819845</note>
         </place>
       </listPlace>
     </body>
