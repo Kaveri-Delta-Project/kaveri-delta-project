@@ -769,13 +769,6 @@
   },
   {
     "type": "place",
-    "id": "l_29",
-    "name": "Thanjapureswara temple",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_29"
-  },
-  {
-    "type": "place",
     "id": "l_3",
     "name": "Kumbakonam",
     "alt_names": [],
@@ -1079,6 +1072,34 @@
     "name": "Kōtaṇṭarāmar kōyil",
     "alt_names": [],
     "url": "indexes/place_index.html#l_73"
+  },
+  {
+    "type": "place",
+    "id": "l_74",
+    "name": "l_74",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_74"
+  },
+  {
+    "type": "place",
+    "id": "l_75",
+    "name": "Thiruppanandal",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_75"
+  },
+  {
+    "type": "place",
+    "id": "l_76",
+    "name": "Konerirājapuram",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_76"
+  },
+  {
+    "type": "place",
+    "id": "l_77",
+    "name": "Thanjapureeswarar Sri Shiva Temple Aanandavalli Amman Temple",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_77"
   },
   {
     "type": "place",
@@ -2472,7 +2493,7 @@
     ],
     "url": "indexes/work_index.html#w_65",
     "places": [
-      "Thanjapureswara temple [l_29]"
+      "Thanjapureeswarar Sri Shiva Temple Aanandavalli Amman Temple [l_77]"
     ],
     "persons": [
       "Ānandarāyamakhin [p_15]"
