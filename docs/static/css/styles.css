@@ -362,33 +362,52 @@ h1 {
     color: #555;
 }
 
-
 /* -----------------------------
    Fieldwork Page
 ----------------------------- */
 
-.fieldwork-text {
-    max-width: 70%;  /* Adjust proportion as needed */
-}
-
-.fieldwork-img {
-    width: 70%;
-    max-width: 600px; 
-    width: 100%;       
-    height: auto;
-    display: block;     
-    margin-bottom: 1rem; 
-}
-
-.fieldwork-entries article h3 {
+.field-entries article h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
-.fieldwork-entries article p {
+.field-entries article p {
     margin-bottom: 0.75rem;
 }
 
+.field-card {
+    display: flex;
+    padding: 13px 0;
+}
+
+.field-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.field-info {
+    max-width: 50%;  /* Adjust proportion as needed */
+}
+
+.field-info h5 {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.field-info p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.field-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(0,0,0,0.8);
+    margin: 0.5rem 0;
+}
 
 /* -----------------------------
    Events Page
