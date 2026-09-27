@@ -403,6 +403,13 @@ h1 {
     color: #555;
 }
 
+.field-info a {
+    color: #6b1f2b;          /* Deep maroon */
+    text-decoration: none;   /* Remove underline */
+    font-weight: 550;        /* Slight emphasis */
+    transition: color 0.2s ease;
+}
+
 .field-divider {
     border: none;
     height: 1px;
