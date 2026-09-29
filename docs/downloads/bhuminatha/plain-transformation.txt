@@ -1,0 +1,148 @@
+Bhūmināthakavi (Nallādīkṣita): Dharmavijayacampū, prathamastabakaḥ (first stabaka)
+
+Based on the edition: Dharmavijaya Campu by Bhuminatha Kavi or Nalla Dikshita. Tanjore Maharaja Serfoji's Sarasvati Mahal Library, Thanjavur, 1980
+
+Data entry: Team of the Kaveri Delta project
+
+This file was created as part of the AHRC-funded project 'Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800' (UKRI2578), based at the University of Cambridge (UK).
+
+Encoding: Unicode (UTF-8), IAST transliteration; dandas rendered / and //.
+Verse references: DhVC_1.<verse>; prose paragraphs: DhVC_1.p<n> (the numbering of the
+source: verses 1-29 and prose passages 1-14 are numbered separately).
+† … † = crux (corrupt passage) marked in the edition.
+
+# Text
+
+śrīmane hayagrīvāya namaḥ
+
+bhūmināthakavikṛtā dharmavijayacampūḥ
+prathamastabakaḥ
+
+vibudhakulasamṛddhiḥ susthirā yena klṛptā
+praṇamadabhayadāne yasya dīkṣā pratītā /
+janakanṛpatikanyādhanyapārśvaḥ sa devaḥ
+śahajinarapatīndoḥ śreyase bhūyase 'stu // DhVC_1.1 //
+
+viśvakhyātaikarājāmitasukṛtaparīpākabhūto 'nutaśrīḥ
+kausalyāyām ivābhūd raghukulatilako yo 'tra dīpāmbikāyām /
+sa śrīmadbhosalākhyāmalakulajaladher indur indhānatejaḥ-
+sāndraḥ śāhāvanīndro jagati vijayatāṃ mūrtimān rājadharmaḥ // DhVC_1.2 //
+
+rāmabhadracaraṇāravindayor āśrayaprabalitaś cikīrṣati /
+bhūmināthakavicakravarty asau śāhadharmavijayoktisāhasam // DhVC_1.3 //
+
+asmābhiḥ pañcaviṃśe vayasi madavaśe paṇḍitammanyamukhyais tattādṛkṣāticitrakramakavanapathavyāpṛtais tāpitāsi /
+tatpuṇyaślokaśāhādhipacaritasudhāpūragāḍhavagāhair
+niḥśeṣaṃ yātu śāntiṃ bhuvanajanani vāgdevi me samprasīda // DhVC_1.4 //
+
+icchāmātrāt trayam idam upānamratāṃ yāti yeṣāṃ
+hṛdyollekhaḥ saralaracanā komalaṃ saṃvidhānam /
+ācandrārkaṃ sarasakavayaḥ kṣemam ete bhajantaḥ
+pṛthvīcakraṃ kukavinihataṃ śaśvad ujjīvayantu // DhVC_1.5 //
+
+śaṅkāsaṅkulam īritaiḥ sumahatā yatnena padyādhamaiḥ
+dvitrair eva duranvayaiḥ pratimuhur vismṛtya cetodhṛtaiḥ /
+bhūyo vaśyagirāṃ mahāmatimatām udgīrṇakarṇajvaraiḥ
+śreyaḥ svānucitaṃ bhajanti katicid dhiṅ mūrkhabhāvaṃ vidheḥ // DhVC_1.6 //
+
+sāhityaratnakośāya śabdabrahmasvarūpiṇe /
+rāmabhadrāya makhine rāmabhaktyabdhaye namaḥ // DhVC_1.7 //
+
+iha khalu nikhilalokapāvanagaṅgātaraṅgaśīkaranikarotkirasamīrakiśorāpanudyamānaratāntaśrāntibhir uddāmasaundaryasampadabhidarpitāntaḥkaraṇais taruṇair aharniśam abhiśobhitena śāradaśaśāṅkamaṇḍalasahodareṇa ramyatareṇa harmyasahasreṇa pariṣkṛtāṃ, annapūrṇāmbikānukampāsampāditaparipoṣaṇasusthatarapauraparibhāsurāṃ, yuvajanaratāntānandamūrcchāvasareṣv api tārakamantropadeśavyagrasya bhagavato viśvanāthasya sāṃnidhyasātatyād ananyasāmānyadhanyatādhurandharāṃ vārāṇasīm adhigamya paritaḥ prasṛtayavanajālahālāhalagaralagurupariploṣito, nijānubhavamātrasaṃsūcyamānamahimā, dharmapuruṣaḥ kālakūṭanigrahasamudagraśaktisamagraṃ, viśrutāgaṇyakāruṇyabharaṃ, viśveśvaraṃ śaraṇīkaraṇīyam avadhārya nigamāntasantatipraśastaguṇastomaṃ tam itthaṃ prārthayata — // DhVC_1.p1 //
+
+dadhatam urasi nistulāṃ viśāle giritanayākucakuṅkumāṅkaśobhām /
+tuhinakarakalāvilāsimauliṃ śaraṇam ahaṃ kalayāmi viśvanātham // DhVC_1.8 //
+
+praṇatiparasamastadevamaulisphuritakirīṭamahāmaṇiprabhābhiḥ /
+vilasitanijapādapuṇḍarīkaṃ śaraṇam ahaṃ kalayāmi viśvanātham // DhVC_1.9 //
+
+munihṛdayasarojacañcarīkaṃ bhavaparitāpadavāgnivārivāham /
+caraṇavinatalokapārijātaṃ śaraṇam ahaṃ kalayāmi viśvanātham // DhVC_1.10 //
+
+nikhilanigamamūrdhamṛgyam ekaṃ jagati vacomanasor atīva dūram /
+bahuvidhajagadātmanā sphurantaṃ śaraṇam ahaṃ kalayāmi viśvanātham // DhVC_1.11 //
+
+tṛṣṇāṃ vārayate havīṃṣi vahate śrautakriyās tanvate kokān modayate jagat sukhayate tadvaibhavaṃ vibhrate /
+gandhaṃ dharmayate mṛgaṃ hayayate sṛṣṭiṃ sthitiṃ saṃhṛtiṃ kurvāṇāya namo 'ṣṭamūrtaya idaṃ bhūyāt trimūrtyātmane // DhVC_1.12 //
+
+iti prapattyā praṇatyā ca viracitasāṃnidhyaṃ so 'yam evaṃ sarvajñaṃ vyajñāpayata — svāmin adhunā kila sakalalokanāthe tvayi jāgarūke 'py adhvarān vidhvaṃsayatā, vedaghoṣaṃ viśoṣayatā, puṇyatīrthāni kadarthayatā, kṣetrāṇi paritrāsayatā, mahīdevān paridevayatā, citraguptaparārddhenāpy avilekhanīyapāpanilayena, †tucchetām api†, mlecchapatinā tiraścām api dayanīyām īdṛśīṃ daśām upagamitaṃ vijānann api māṃ sakalāntaryāmin nijālayāpacāram apy avicārayan katham upekṣyamāṇa evāṣṭamūrte vartase // DhVC_1.p2 //
+
+tat tena durvinītena tapyamānāḥ prajā imāḥ /
+kāruṇyāmṛtavarṣeṇa siñca māṃ ca dayasva bhoḥ // DhVC_1.13 // iti
+
+tataḥ prasannaḥ pramathādhināthaḥ kāruṇyaniṣyandikaṭākṣapātaḥ /
+ānandayat taṃ vacanair gabhīrair yathā mayūraṃ rasitaiḥ payodaḥ // DhVC_1.14 //
+
+adya kila sākṣāt kaler uttamāvatārasya mlecchapater nirāsecchayā sakalaprajāparirakṣaṇavicakṣaṇo dharaṇim avatīrṇo madīyāṃśa eva bhosalavaṃśaṃ pariṣkurvan sarvasadguṇaratnaratnākaraḥ śāhamahārājo nāma mañjutaraviniveśasamañcitāṃ tañjānagarīm adhivasati // DhVC_1.p3 //
+
+tad viṣādam imaṃ muñca cañcaletaramānasaḥ /
+bhaja rājavareṇyaṃ tam antarā naiva te gatiḥ // DhVC_1.15 //
+
+ity uditavatā prahito jagatprabhuṇā, tatkṣaṇam eva prasthitaś cirakālaparicayavaśena dustyajam apy āryāvartam apagatasajjanavārtaṃ kathaṃkathañcid ativāhya stambhitabāṣpāmbhaḥprasaraḥ, pratipadaṃ yavanasañcaraṇaprapañcitabhītiḥ, puṇyatīrthakṣetradharmāraṇyādimārgeṇa tirohitākṛtir mandamandam āgacchan, vyatītya nadīvarāṃ godāvarīṃ, tadīyataṭanikaṭe nityasannihitaṃ bhaktajanābhīṣṭadānadhurandharaṃ paraṃ dhāma kodaṇḍamaṇḍitabhujadaṇḍaṃ natvā, stutvā, dhyātvā ca vidhivan nijahṛdayakamalakuhare, vilaṅghitakṛṣṇāsindhur niṣevitaśrīśailapatiḥ samuttīrya tūrṇaṃ suvarṇamukharīṃ, ārādhitakālahastinātho, vyatītaḥ kuśasthalīṃ, kāñcīnāyakam ekāmravibhuṃ kāmākṣīṃ ca parāśaktim abhivandya, kampābāhusaritpinākinīgaruḍāpagāśvetanadīḥ krameṇātikramya, pavitraṃ vimuktikṣetraṃ cidambaram āsādya, vedāntavidyāvedyaṃ kanakasabhāvibhuṃ paramātmānam ātmani bhāvayan, uttarakāverīm uttīrya, śāhamahīkṣitā surakṣitām akhilakaraṇasamāhlādinīm āsīdan mahanīyāṃ colamahīṃ so 'yaṃ prapannavaidyeśvaraḥ, sahyadharaṇīdharakīrtipatākāṃ, nijasapatnyāṃ yamunāyām asūyayeva sakalalokapāpanikaranirākaraṇena tadbhrātur vivasvattanayasyādhikārabhraṃśam āpādayantīṃ, tīrānokahanivahavigalitakusumapālibhis taraṅgasaṅgavalibhaṅgais tīradvayanīlaśilāsopānasantatikāntisandohasaṅkrāntapravāhanailyena ca coladharaṇīveṇīvilāsam ullāsayantīṃ, nirmalasalilabimbitanīlajaladharapaṭalakalaṅkitanijatalāvalokanād aṅkuritapaṅkaśaṅkānāṃ kathañcid apy ādhoraṇapreraṇakṛtāvataraṇānāṃ śahajirājavetaṇḍaprakāṇḍānāṃ majjanakelisaṅkalitair madajalāsārair adhivāsitāṃ, rājanīticatureṇa bhosalakulāvataṃsena rājanvati colarāṣṭre nityamuditanirantaranīravihāraparataruṇījanavyāvalgatkucakulācalaprakṣobhaparipreṅkhitatuṅgataraṅgasaṅghasaṅkulāṃ, svapayaḥ paripoṣitatayā tīramahīruhair mātṛgauravād iva vikīrṇapuṣpanikaraiḥ phalabharavahanāsahanāpadeśena vinamitaśirobhir abhisevitāṃ, svavīcīśīkarāsāracorasamīrakiśorasaṃsparśanena nijadarśanena cāśeṣakilbiṣaviśoṣaṇāt kevalaṃ sakalajananirṇejanamātralambhitaphalasalilāṃ, caturdaśavidyānavadyabrāhmaṇarūpatayā deveṣu śāhamahīmahendreṇa surakṣyamāṇāṃ, tridivād api spṛhaṇīyatarasaubhāgyāṃ, colabhuvaṃ samavatīrya grāmarūpān vimānān adhyāsiteṣu tadīyapānocitāṃ sudhām iva pravahantīṃ, apatyanirviśeṣam ātmaparirakṣitānāṃ śāharājarāṣṭravāsinām amitramadyasaṅghaṃ nihantum iva taraṅgahastavidhūnitāyatamīnakṛpāṇāṃ, pratipadavivartitāvartakheṭāṃ, vijṛmbhitasaṅkulataraṅgaghoṣaparikṣvelitāṃ svargasamādhirohaṇasopānarājiṃ hṛdayagranthinikartanakartarīṃ, duravagāhavedāntakāntāradīpikāṃ, mokṣadvārakavāṭikodghāṭanakuñcikāṃ, śāhanṛparipunṛpasenām iva meduramādhurīdharāṃ, tadīyabhujām iva sattaravāriśobhitāṃ, pinākivedyamāhātmyām apy apinākivedyamāhātmyāṃ, kavitatihāriṇīm apy akavitatihāriṇīṃ, sakalamohakāriṇīm api sakalamohanivāraṇīṃ, vāṅmanasātibhūmivaibhavāṃ, kāverīm arcati sma vidhūtānandāśrumakarandābhyāṃ vilocanāravindābhyām // DhVC_1.p4 //
+
+yasyām ajasraṃ sarasāntarāyāṃ sakte 'nuvelaṃ saritām adhīśe /
+anyās taṭinyo bhuvi santv asaṅkhyāḥ saivāsti gaṅgā viraheṇa pāṇḍuḥ // DhVC_1.16 //
+
+tadanu tasyāṃ mathitaduritasārthe māyūratīrthe yathāvidhi kṛtābhiṣavaṇo dharmapuruṣo 'yam abhivanditacandracūḍacaraṇāravindaḥ prakampanaparikampitaśākhākaśāgratāḍanair eva dinakaraturagapracodanayā viśrāṇitāruṇasārathyāyāsaviśrāntisukhānāṃ, pālikākoṭiparividdhasudhākarabimbaviniḥsṛtais tanmārgeṇaiva samāścyotanād antarabhilīnair amṛtair iva madhurataraiḥ salilaiḥ paripūritena phalabhareṇa vivardhitakāminīkucaspardhānāṃ, parasparaparighaṭitaśākhāpaṭalakāyamānasyādhārastambhaśobhām abhijṛmbhayatāṃ, bhosalakulapatividvajjanānuṣṭhīyamānamakhaparamparāsu nirjaranikaragatāgatopāyabhūtānāṃ, nirantaranipatitapariṇamraphalajāladanturīkṛtāntaramūlabhāgānāṃ, koṭaragatakīramadhurataravirutāmṛtāni śrutipuṭābhyām āpivadbhiḥ pracchāyaśītale mūlatale susnigdhakomalaśāḍvalaśayyām adhiśayānair adhvaśramaviśrāntimantharapānthanikaraiḥ sādarakaṭākṣapātaṃ praśasyamānasaubhāgyānāṃ nālikerāṇām // DhVC_1.p5 //
+
+surabhilakusumapālīvigalitabālakadalīdalāntarālasaraṇikulyāpravāhibahalamakarandarasapūraparipūritālavālānāṃ, abhaṅguramadhumadasaṅgamitajhāṅkārakaitavena madhurataranijamadhurasapraśaṃsāmukharasya madhukaranikarasya niḥsvanitasārasyam uddiśya mandagandhavahaspanditāgratayā śiraḥkampam iva saṃpradarśayantīnāṃ, mandamārutavilolaviśālakomalamaratakaśilāphalakaruciradalāntarālaviniṣaṇṇaphalāsvādapramadataralitaśukadampatisamanubhūyamānaḍolāvibhramaparibhrājitānāndadāmatāruṇyamadaśaraṇyābhir agaṇyamahimaśāhadharaṇīpapuṇyataracaritagītininādinībhiḥ śāligopasundarībhiḥ savilāsasamāsevitasnigdhaśyāmalamahekṣuprativalayaparimaṇḍitānāṃ, kadalīnām // DhVC_1.p6 //
+
+jaladharanikarapratyādeśaprasnigdhaparisāndranijābhogasandarśanasantatasantuṣṭaśikhaṇḍimaṇḍalapracaṇḍīkṛtatāṇḍavena kisalayacarvaṇagarvitabālakokilaprapañcitālāpabandikolāhalena makarandamandacañcalacañcarīkasaṅghajhaṅkṛtisaṅgītasampadā ca nikhilatalasārvabhaumatāṃ prakaṭayatāṃ makarandamandadhārāniṣyandanena lolambanikurumbanibiḍatayā ca gandhasindhuraśriyam āśrayatāṃ salīlasañcaraṇataruṇasāraṅgakhurapuṭavidalitapatitapariṇamraphalabharaprasṛtarasaprasarārūpīkṛtamūladeśānāṃ samudagranijāgrasurabhilakusumastabakaparāgasamadhivāsitaviyadāpagāsalilānāṃ samīrakiśorasamullalitataruṇapallavāṅgulivyāpārair ātapakathānabhijñe mandānilavalanakamanīye nijatale madanavilāsākalanāya yuvajanāhvānam iva vitanvatām ākandānām itareṣām api mahīruhāṃ kānanair alaṅkṛtāṃ, alaṅkṛtiṃ jambūdvīpasya, khaniṃ vidvatkaviratnānāṃ, pratisṛṣṭiṃ triviṣṭapasya, mahotsavapariṇatiṃ paśyajjanadṛśām āvasathaṃ praśastasamastavastūnām agocaraṃ vacasām uccāvacasaubhāgyadhurandharāṃ colavasundharāṃ paryaṭan avindata mahāntam antarānandam // DhVC_1.p7 //
+
+samedhinānāvidhasasyabhāsurāṃ surakṣitāṃ śāhanareśvareṇa yām /
+kṛṣīvalastrīnayanāmbujārcitāṃ trir ekamāsasya ghano 'bhivarṣati // DhVC_1.17 //
+
+aratnimātraiḥ paripākapāṇḍurīkṛtākhilāśaiḥ kaṇiśair vinamritāḥ /
+atīva śālyaḥ pariśobhayanti yāṃ mahārhabhūṣā iva divyasundarīm // DhVC_1.18 //
+
+yasyām atipraśastavaibhavāni, amitakusumabharanamitanānāvidhatarulatānilīnamadhukarārāvavirāvitair abhraṃlihaparisnigdhamaratakamecakamandamārutāpūritamadhurasvarasuṣirakīcakaparivṛtaiḥ parito 'pi devodyānair upavilasitāni, kuhacana mahati maṇḍapāntare māṇavakādhīyamānanamakacamakaninadamukharitaharinmukhair, anyatra vividhāgamavyākhyānavisṛmaraghoṣaparighoṣitair, anyatra devānudhyānaniyamitahṛdayaniruddhaniśvasitaparamaśivayogipariśobhitair, itaratra devāpadānasamupavīṇanaparavaipañcikagītāmṛtarasāsvādaprasitaniścalīkṛtāṅgadevasāraṅgapotakadarśanīyatarair naṭanapaṭunaṭīcaṭulacaraṇaraṇitamaṇimañjīrānunādamedurair devasaṃnidhisamudīryamāṇaśāhavasundharāpurandaravijayāśīḥparamparair nabhovilaṅghanajāṅghikadīpraprākāravalayair adhyāsitamadhyaparipāvitāni, girirājakumārikāvilulokayiṣāsamāgatakulācalavilāsakarasyandanavṛndasundaritarathyāni, pade pade vibhānti pavitrāṇi kṣetrāṇi // DhVC_1.p8 //
+
+yasyāṃ mahānty āvasatāṃ sthalāni dveṣyo na ṣaḍvargata īṣad anyaḥ /
+kāṅkṣyo na mokṣād itaraḥ pumarthaḥ sevyo na cānyas taruṇendumauleḥ // DhVC_1.19 //
+
+yā kila sakalavidyāvīrudavalambanavidvajjanasuratarukṣīrasāgaraiś, catuṣpathaparimilitalīlālolabālakakulagīyamānakalamadhuraśāhamahārājavijayapraśastisamāsvādanāsāvadhānaparismeravidagdhajanasārthapariṣkṛtaiḥ, prāvṛṣeṇyapayodharādvaitaviyattalavisṛmaratretāgnidhūmastomasamavalokaharṣabharataralitamaṇḍalīkṛtakalāpataruṇakalāpilāsyapariṣkṛtaniṣkuṭavanasamañcitair, mahākavivarṇyamānabhosalavaṃśāvataṃsapāvanataracaritapraśastirasāyanasevanānandamantharāntaravipulabahirvedikāmilitapaṇḍitaprakāṇḍaparimaṇḍitair, amarapurasundarīsaundaryagarvasarvaṅkaṣapuṣpāpacāyivaravarṇinīkamanīyadehakāntisandohadhavalitasaudāminīrucipuñjapiñjaritanīlajaladharasahodarārāmamahīruhollasitair aśrāntotsavaśālibhir, anāśritasaṅkhyāyogair, akhilasaubhāgyasamagrair, agrahārair alaṅkriyate // DhVC_1.p9 //
+
+pratyagrahāraṃ pramadena yasyāṃ śāhādhirājasya śubhaṃ caritram /
+janāḥ stuvanto 'nugṛhaṃ mahāntaṃ kṣipanti kālaṃ kṣaṇatulyam eva // DhVC_1.20 //
+
+yasyāṃ samañcitavāggumphaprapañcitavaiduṣīviśeṣacchātrajanacchaladiktaṭapratiṣṭhāpitajaitradhvajair, mahāphalanidānacaturdaśavidyāvīrudupaghnabhūruhaiḥ, ṣaṭkarmānuṣṭhānānalādhiṣṭhitavasiṣṭhādimunivariṣṭhair, bṛhaspatipratyādeśair, ādiśeṣapratinidhibhiḥ, satkavikāvyair iva puṇyaślokaiḥ, purāṇajālair iva sabhārataiḥ, śāharājacaritair iva sadāmodibhiḥ, saṅkhyāvadbhir apy asaṅkhyaiḥ, sadveṣair apy adveṣaiḥ, samadāntair apy asamadāntaiḥ, paṇḍitaprakāṇḍaiḥ parimaṇḍitam ekarājapuram iti praśastaṃ cakāstitarām // DhVC_1.p10 //
+
+yāṃ nityaṃ lālayaty uccaiḥ kurvan mṛdukaragraham /
+sudṛśāṃ lālane dakṣaḥ śāhabhūmipurandaraḥ // DhVC_1.21 //
+
+tām etām atṛptimatā nayanayugalena bahumānayan asau dharmapuruṣaḥ parikramya krameṇa niṣevitanikhilapuṇyakṣetro vilocanarasāyanīkṛtābhirūpatarāgrahāraparamparaḥ kutūhalena colamahīmahanīyabhūṣaṇāyamānaṃ śāharājapuram upagamya samyag ānandād antara evam acintayat // DhVC_1.p11 //
+
+mandaspandidalollasatphalabharavyānamrarambhāvanīkheladbālaśukānukāritabudhavyākhyānavākyakramaḥ /
+eṣo 'śeṣam idaṃ nirasya sahasā maddainyam anyādṛśaṃ
+hantānandabharaṃ tanoti vibudhagrāmo 'bhirāmo hṛdi // DhVC_1.22 //
+
+vidvatsahasraparipuṣṭasamastavidyāghoṣeṇa bhittiṣu diśāṃ mukharīkṛtena /
+ekendranandanayaśojayaḍiṇḍimākhyā vyākhyāyate hi muhur atra mahāgrahāre // DhVC_1.23 //
+
+ayam akhilalokapraśaṃsāprathamapadam agrahāraḥ svayam ucitajñaśekhareṇa śāhamahīndreṇa nānādigantarataḥ krameṇa saprayatnam upānītair ujjvalataratejaḥśālibhis trāsaleśarahitaiḥ suvṛttair atyarghapātrabhūtaiḥ sakalasujanābhinandanīyair vidvanmaṇibhir abhigumphitaś colapariṣkāro hāraḥ // DhVC_1.p12 //
+
+ihatyavidvadvaravāṅnigumbhān gaṅgā yad anvañcati vīcivegaiḥ /
+tan nityam atyādaraṇena dhatte sarvajña enāṃ śiva uttamāṅge // DhVC_1.24 //
+
+atra khalu vicitrataracaritrapavitrīkṛtadharitrītalāḥ sakalavidyāsv anavadyavaiśadyahṛdyā matimanto 'ntevāsijanam adhyāpayanto niścalavṛttayo vipaścitaḥ pariṣkurvate bahirvedim // DhVC_1.p13 //
+
+sa kila jagati śeṣaḥ khyātamedhāviśeṣaḥ
+paṭuvadanasahasreṇaiva yaṃ vyācakāra /
+viśadayati mukhenaikena sarvaṃ tam arthaṃ
+karabadaram ivāsau deśikaḥ śābdikānām // DhVC_1.25 //
+
+cintāmaṇiprabhṛtibhūrigabhīrabhāvagranthāntarasthaghanavākyaśilāvibhedān /
+vākcandrikāvisaraṇaiḥ sarasīkaroti naiyyāyikendur iha saiṣa jagatprakāśaḥ // DhVC_1.26 //
+
+śrutivacanagocarābhir vāgdhāṭībhir nirargalābhir asau /
+mīmāṃsate 'dhvaram aho jaiminir iva mūrtimān ito dhīmān // DhVC_1.27 //
+
+vedāntavindhyavipine durāsade mandavaibhavair itaraiḥ /
+viharati vidvatsiṃhas tadīyavṛddher nidānam ita eṣaḥ // DhVC_1.28 //
+
+adhunā kila nānādigantavāstavyāgantukapaṇḍitajanaśiraḥkampābhinandyamānakarkaśamahāgranthamarmabhedanālaṃkarmīṇavibudhakuñjarasamañcitaḥ, śiṣyajanapratijñāprakrāntavaktretaravādāṭopavikaṭabhrūkuṭīvilokanavismerodahārataruṇīvivalitamukhacandramañjularucipuñjarañjitavīthyantaro, vyavahāraparicchedanecchāsamāgatajānapadajanavivādānuyogacaṭulakakṣapuṭanyastapustakamāṇavakavirājitacchātrajanavijṛmbhitamānyataropanyāsavilekhanakṛtodyogasamāgatavaideśikagranthakṛtsūrinivirīso, mahākavivitīrṇabhosalavaṃśāvataṃsayaśaḥpraśastisamasyāpūraṇāhamahamikāpravṛtyāsaktanānāvidhollekhasamāhitacchātrajanaparistimitamukhāvalokanānandamantharāntaravidvadbṛndaḥ, kadalīpaṭṭamithyāpustakahastanāṭitaśiṣyabhāvasavayaḥparivṛtavyākhyākṛtābhinayakamanīyānupanatacaturabālakavilasitavidvadgṛhabahirvedikākoṇaḥ, kośagṛhaṃ sārasvatasarvasvasya, janmabhūmiḥ śrautasmārtakarmācaraṇasya, samuccāṭanamantraḥ kalimahāgrahasya, kīrtipatākā śāhasārvabhaumasya, sakalasadguṇasamagro 'yaṃ vidvadgrāmaḥ prāpto mama diṣṭyā dṛṣṭigocaratām // DhVC_1.p14 //
+
+atrādya vidvatkavivarṇitāni śāhāvanīndoś caritāmṛtāni /
+kṛtvā muhuḥ karṇarasāyanaṃ śvo gantāsmi taṃ rājavaraṃ vareṇyam // DhVC_1.29 //
+
+iti śrīmadviśvaviditabhosalakulapayodhisambhavaśahajirājasandarśanamātrasamudvelakṛtasārasvatasāgarasya nallādīkṣitasya kṛtau dharmavijaye prathamaḥ stabakaḥ //

@@ -298,7 +298,7 @@ h1 {
         width: 100%;              /* take full width */
     }
     
-}
+}x
 
 /* -----------------------------
    Members Page
@@ -488,6 +488,18 @@ h1 {
 .bibliography-entry a:hover {
     color: #C08000;           /* gold highlight on hover */
     text-decoration: underline; /* optional: underline on hover for clarity */
+}
+
+.complete-entry {
+    text-indent: 0;
+}
+
+.complete-entry h5 {
+    color: #3b3a36;
+}
+
+.complete-entry a {
+    font-size: 14px;
 }
 
 

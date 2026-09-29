@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_nallAdhvarin-jIvanmuktikalyANa">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Jīvanmuktikalyāṇa (first aṅka)</title>
+	<author>Nallādhvarin</author>
+	<respStmt>
+	 <resp when-custom="29th September 2026">data entry</resp>
+	 <name>Jonathan Duquette</name>
+	</respStmt>
+	<respStmt>
+	 <resp when-custom="29th September 2026">data entry</resp>
+	 <name>Vinoth Murali</name>
+	</respStmt>
+	<funder>Arts and Humanities Research Council (AHRC), project UKRI2578 “Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800”, University of Cambridge</funder>
+  </titleStmt>
+
+    <notesStmt>
+	<note>This file was created as part of the AHRC-funded project 'Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800' (UKRI2578), based at the University of Cambridge (UK).</note>
+	<note type="legacyheader">
+	Nallādhvarin: Jīvanmuktikalyāṇa (first aṅka)
+<lb/>Data entry: Jonathan Duquette and Vinoth Murali
+<lb/>Date of this version: 29th September 2026
+<lb/>Source:
+<lb/>      - Jīvanmuktikalyāṇam, A Drama by Nallādhvari, edited by Sri T. K. Balasubrahmanya Aiyar. Srirangam: Sri Vani Vilas Press, 1944.
+<lb/>Notes:
+<lb/>      This file was created as part of the AHRC-funded project 'Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800' (UKRI2578), based at the University of Cambridge (UK).
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Jīvanmuktikalyāṇam, A Drama by Nallādhvari, edited by Sri T. K. Balasubrahmanya Aiyar. Srirangam: Sri Vani Vilas Press, 1944.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>Text prepared within the AHRC-funded project “Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800” (UKRI2578), University of Cambridge.</p>
+  </projectDesc>
+
+  	<normalization>
+	 <p>The text is normalized in accordance with the International Alphabet of Sanskrit Transliteration (IAST).
+	 Daṇḍas are rendered as / and //; the avagraha is rendered by the apostrophe; ṁ has been normalized to ṃ.
+	 Non-conformant characters that carry additional information (here: ï, marking hiatus in Prakrit) are kept in <gi>orig</gi> elements inside <gi>choice</gi>, with the IAST-conformant equivalent in <gi>reg</gi>, so that a plain text can be derived.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>t</cell>
+	 <cell>LATIN SMALL LETTER T</cell>
+	 <cell>U+0074</cell>
+	 </row>
+	 <row>
+	 <cell>d</cell>
+	 <cell>LATIN SMALL LETTER D</cell>
+	 <cell>U+0064</cell>
+	 </row>
+	 <row>
+	 <cell>n</cell>
+	 <cell>LATIN SMALL LETTER N</cell>
+	 <cell>U+006E</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+	</normalization>
+
+	<segmentation>
+	 <p>The text is structured by <gi>div</gi> elements (the act, its prologue), by speeches (<gi>sp</gi>), verses (<gi>lg</gi>, one <gi>l</gi> per line of the input) and prose (<gi>p</gi>). Stage directions are marked as <gi>stage</gi>. Prakrit speech is marked with <att>xml:lang</att>="pra-Latn"; the Sanskrit chāyā given in square brackets in the input is marked <gi>seg</gi> type="chāyā". Editorial supplements in square brackets inside a word are marked <gi>supplied</gi>.</p>
+	</segmentation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes of the verses, consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Jīvanmuktikalyāṇa = JMK,</item>
+	<item>the number of the <label>aṅka</label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  <language ident="pra-Latn">Prakrit</language>
+  </langUsage>
+  <particDesc>
+  <listPerson>
+	<person xml:id="sutradhara"><persName xml:lang="sa-Latn">sūtradhāraḥ</persName></person>
+	<person xml:id="nati"><persName xml:lang="sa-Latn">naṭī</persName></person>
+	<person xml:id="ramaniyacarana"><persName xml:lang="sa-Latn">ramaṇīyacaraṇaḥ</persName></person>
+	<person xml:id="sattvasuddhi"><persName xml:lang="sa-Latn">sattvaśuddhiḥ</persName></person>
+	<person xml:id="jiva"><persName xml:lang="sa-Latn">jīvaḥ</persName></person>
+	<person xml:id="buddhi"><persName xml:lang="sa-Latn">buddhiḥ</persName></person>
+  </listPerson>
+  </particDesc>
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Drama</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  </teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="JMK">
+  <body>
+<head type="main">// jīvanmuktikalyāṇam nallādhvariviracitam //</head>
+<head type="act">// prathamo 'ṅkaḥ //</head>
+<div type="prologue" n="prastāvanā">
+  <lg xml:id="JMK_1.1" n="1" type="verse">
+    <l>bhadrākāraparigrahocitamadārambhapriyaṃbhāvukāḥ</l>
+    <l>svīkurvañ śubhavāsanāḥ katicid apy āśāpariṣkāriṇīḥ /</l>
+    <l>śrutyantābhyasanair alivyatikarād ātmānam unmocayan</l>
+    <l>sa śrīmān kṛpayā mahāgaṇapatiḥ puṣṇātu niḥśreyasam //</l>
+  </lg>
+  <stage>nāndyante</stage>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <lg xml:id="JMK_1.2" n="2" type="verse">
+      <l>tādātmyena nirantarālamilitāṃ gaurīṃ vihārecchayā</l>
+      <l>vismṛtyātha tayā viyojita ivātanvaṃs tadanveṣaṇam /</l>
+      <l>senānyā bhagavan bhavāny api bhavān evety anūdbodhitas</l>
+      <l>tallābhād iva nirvṛto diśatu vaḥ śreyo 'rdhanārīśvaraḥ //</l>
+    </lg>
+    <p><stage>iti puṣpāñjaliṃ vikīrya, nepathyābhimukham avalokya,</stage> ārye, itas tāvat /</p>
+  </sp>
+  <stage>praviśya</stage>
+  <sp who="#nati">
+    <speaker>naṭī</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, <choice><orig>ï</orig><reg>i</reg></choice>amhi /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, iyam asmi /</seg></p>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <p>ārye, adya khalu bhagavato madhyārjunaprabhor yātrāpratyupasthitaiḥ śamadamapradhānair brahmaniṣṭhair ādiṣṭo 'smi sāmājikair adhyātmakathānubandhabandhuraṃ kim apy apūrvaṃ nāṭakaṃ nāṭayitavyam iti / tad anucintyatāṃ tvayā tathāvidhaṃ nāṭakam /</p>
+  </sp>
+  <sp who="#nati">
+    <speaker>naṭī</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, kiṃ vi me ṇa paḍihāi /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, kim api me na pratibhāti /</seg></p>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <p>ayi vismaraṇaśīle, tvam ajaivāsi prakṛtyā /</p>
+  </sp>
+  <sp who="#nati">
+    <speaker>naṭī</speaker>
+    <p><stage>sakrodham</stage> <seg xml:lang="pra-Latn">jai evvaṃ tado ajjassa aṇurūvā bhavissaṃ /</seg> <seg type="chāyā" xml:lang="sa-Latn">yady evaṃ tata āryasyānurūpā bhaviṣyāmi /</seg></p>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <p><stage>sakrodhāvegam</stage> mugdhe, prakṛtyāham api yady ajaḥ syām tarhi tadanurūpa ācāraḥ pakṣe tvatparityāgarūpa eva paryavasyed iti mahad aniṣṭam āpadyeta / tathā khalv ajānām ācāro dṛśyate /</p>
+    <lg xml:id="JMK_1.3" n="3" type="verse">
+      <l>ekām ajāṃ lohitaśuklakṛṣṇāṃ</l>
+      <l>bahvīḥ prajāḥ svānuguṇāḥ sṛjantīṃ /</l>
+      <l>eko hy ajas tām anuśeta eva</l>
+      <l>jahāti enām aparo 'nubhuktām //</l>
+    </lg>
+  </sp>
+  <sp who="#nati">
+    <speaker>naṭī</speaker>
+    <p><seg xml:lang="pra-Latn">bhuttabhoaṃ maṃ ujjhia aṇṇāe ka e vi kaṇṇāe saṃgadua ṇivvudo hodu ajjo /</seg> <seg type="chāyā" xml:lang="sa-Latn">bhuktabhogāṃ mām ujjhitvā 'nyayā kayāpi kanyayā saṃgatya nirvṛto bhavatv āryaḥ /</seg> <stage>iti sāṭopaṃ parāvartate</stage></p>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <p><stage>sānunayaṃ haste gṛhītvā</stage> ayi sadasadvilakṣaṇe, vācārambhaṇamātra eva prapañco na paramārthaḥ / tad ehi, mā nivartasva / nartitavyaṃ nāma tvayā yāvat pratibhāsaṃ prārabdhānusāreṇa / tatas tu paraṃ svata eva parāvartiṣyase /</p>
+  </sp>
+  <sp who="#nati">
+    <speaker>naṭī</speaker>
+    <p><stage>saprasādaunmukhyam</stage> <seg xml:lang="pra-Latn">ajja, mae kiṃ ṇañcidavvaṃ?</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, mayā kiṃ nartitavyam?</seg></p>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <p>jīvanmuktikalyāṇaṃ nāma nāṭakam, yasya kaviḥ subhadrāpariṇayaśṛṅgārasarvasvacittavṛttikalyāṇādvaitarasamañjaryādyanekaprabandhanibandhanābhinandanīyaḥ śrībālacandramakhindranandano nallādhvarī /</p>
+  </sp>
+  <sp who="#nati">
+    <speaker>naṭī</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, sumarāvidamhi / visumaraṇakido uṇa maha avarāho marisidavvo /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, smāritā 'smi / vismaraṇakṛtaḥ punar mamāparādho marṣitavyaḥ /</seg></p>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <p>astu nāmedam / prastūyatāṃ saṃgītakam / saṃprati hi,</p>
+    <lg xml:id="JMK_1.4" n="4" type="verse">
+      <l>śāradānugrahavaśād viśadīkṛtamānasāḥ /</l>
+      <l>haṃsābhyudayaśaṃsinyo vāsarāṇāṃ vibhūtayaḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#nati">
+    <speaker>naṭī</speaker>
+    <lg xml:id="JMK_1.5" n="5" type="verse" xml:lang="pra-Latn">
+      <l>dāṇiṃ paḍippahādaṃ sujjāloapphuḍīkidaṣpasirī /</l>
+      <l>ṇa khu sā rājīvatadī khamadi bhamaralakkhaṇappaparihūdiṃ //</l>
+    </lg>
+    <lg type="chāyā" xml:lang="sa-Latn" corresp="#JMK_1.5">
+      <l>idānīṃ pratiprabhātaṃ sūryālokasphuṭīkṛtātmaśrīḥ /</l>
+      <l>na khalu sā rājīvatatiḥ kṣamate bhramaralakṣaṇātmaparibhūtim //</l>
+    </lg>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <lg xml:id="JMK_1.6" n="6" type="verse">
+      <l>kavir atimanojñasūktiḥ kathā jagatpāvanī vayaṃ kṛtinaḥ /</l>
+      <l>pariṣad iyaṃ guṇaniṣṭhā bhavyasya vidheḥ prasādavibhavo 'yam //</l>
+    </lg>
+  </sp>
+  <sp ana="offstage-or-unassigned">
+    <stage>nepathye</stage>
+    <p>aye bharatakulaśekhara, vidhiprasādavibhava iti māṃ nirdiśañ ślāghanīyo 'si /</p>
+    <lg xml:id="JMK_1.7" n="7" type="verse">
+      <l>codanātmā vidhis tasya prasādo janako mama /</l>
+      <l>vidhiprasādavibhavas tasmād aham udāhṛtaḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#sutradhara">
+    <speaker>sūtradhāraḥ</speaker>
+    <p><stage>smṛtim abhinīya</stage> katham eṣa praviṣṭa eva bhāvo jīvāmātyasya ramaṇīyacaraṇasya bhūmikām ādāya raṅgamaṇḍapam / ārye, tadā āvām apy anantarakaraṇīyāya sajjībhavāvaḥ / <stage>iti niṣkrāntau</stage></p>
+  </sp>
+  <trailer>// prastāvanā //</trailer>
+</div>
+<div type="act" n="1">
+  <stage>tataḥ praviśati ramaṇīyacaraṇaḥ</stage>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <lg xml:id="JMK_1.8" n="8" type="verse">
+      <l>vidhigocarakarmanirmitatvād</l>
+      <l>vimalo 'haṃ sakalābhilāṣapātram /</l>
+      <l>upajīvyatayā tataḥ pareṣāṃ</l>
+      <l>prathitaḥ prāthamikaḥ svayaṃ samarthaḥ //</l>
+    </lg>
+    <p>api ca,</p>
+    <lg xml:id="JMK_1.9" n="9" type="verse">
+      <l>svargādinaśvaraphalānabhisaṃdhibandha-</l>
+      <l>nirvyūḍhayā bhagavadarthatayānvito yaḥ /</l>
+      <l>tasmān nisargamahataḥ śubhakarmarāśer</l>
+      <l>jātasya me kim itareṇa guṇottareṇa //</l>
+    </lg>
+    <p>kiṃ ca,</p>
+    <lg xml:id="JMK_1.10" n="10" type="verse">
+      <l>anenaivānubhāvena mayā labdhā mahonnatā /</l>
+      <l>sattvaśuddhir iti khyātā kanyā kalmaṣahāriṇī //</l>
+    </lg>
+  </sp>
+  <stage>praviśya</stage>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">āṇavedu ajjo jaṃ mae aṇuciṭṭhiadu /</seg> <seg type="chāyā" xml:lang="sa-Latn">ājñāpayaty āryo yan mayā 'nuṣṭhīyatām /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>vatse, kim anyat? devasya tvayā sāhāyakam ācaritavyam /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ko so devo?</seg> <seg type="chāyā" xml:lang="sa-Latn">kaḥ sa devaḥ?</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <lg xml:id="JMK_1.11" n="11" type="verse">
+      <l>so 'yaṃ yaḥ svayam advitīyapadavīsāmrājyadhauraṃdharīm</l>
+      <l>āsādya pratitiṣṭhati sma mahimākāre svabhadrāsane /</l>
+      <l>yaś ca vyādhakule vasann iva mahīpālātmajo vyādhatāṃ</l>
+      <l>jīvatvaṃ gatavān vimohavaśataḥ svasmāt padād bhraṃśitaḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, kiṃ patthudaṃ tassa devassa /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, kiṃ prastutaṃ tasya devasya /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>pāṇigrahaṇamahotsavaḥ /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, atthi khu tassa puḍhamo paḍiggaho devī, yā buddhi tti andakaraṇam tti maṇaṃ tti cittaṃ tti a bhaṇ<choice><orig>ï</orig><reg>i</reg></choice>adi /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, asti khalu tasya prathamaḥ pratigraho devī, yā buddhir ity antaḥkaraṇam iti mana iti cittam iti ca bhaṇyate /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>saṃprati tasyāṃ vairasyenopajātajihāso devaḥ /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">haddhi haddhi, chāādavāṇaṃ v<choice><orig>ï</orig><reg>i</reg></choice>a samaṇ<choice><orig>ï</orig><reg>i</reg></choice>adāṇaṃ vi tāṇaṃ īriso dasāpariṇāmo</seg> <seg type="chāyā" xml:lang="sa-Latn">hā dhik, hā dhik / chāyātapayor iva samaniyatayor api tayor īdṛśo daśāpariṇāmaḥ /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>vatse, chāyātapayor iveti viṣamo dṛṣṭāntaḥ /</p>
+    <lg xml:id="JMK_1.12" n="12" type="verse">
+      <l>chāyaiṣā punar ātapo 'yam iti ca spaṣṭaṃ pratītātmanor</l>
+      <l>anyonyaṃ vyatiṣaktayor api tayor bhedaḥ sukhaṃ gṛhyate /</l>
+      <l>anyonyātmakayor anādisamayād anyonyatāddharmyayor</l>
+      <l>buddhir jīva iti dvayor api tayor bhedagraho durlabhaḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, īrisī a devī kīsa deveṇa virasadāe goarīkidā?</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, īdṛśī devī kasmād devena virasatāyā gocarīkṛtā?</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>yatas tatsamgamaprabhṛti sukham iti kiṃcin na jānāti devaḥ / tathā hi,</p>
+    <lg xml:id="JMK_1.13" n="13" type="verse">
+      <l>rāgadveṣakaṣāyitasvavapuṣā buddhyā samāliṅgitaḥ</l>
+      <l>puṇyāpuṇyamayeṣu karmasu tato mohāt pravṛttaḥ svayam /</l>
+      <l>dehādyātmatayā 'tha karmajanitaṃ svargādirūpaṃ phalaṃ</l>
+      <l>bhuñjāno janihāniduḥkhajaladher āvarta āvartate //</l>
+    </lg>
+    <p>uktaṃ ca māṃ prati garbhagṛhaṃ praviṣṭena devena,</p>
+    <lg xml:id="JMK_1.14" n="14" type="verse">
+      <l>saṃsārādhvani saṃkaṭe niravadhau tāpatrayopaplute</l>
+      <l>yātāyātakṛtā yayā mama cirād ātmettham āyāsyate /</l>
+      <l>asmād garbhagṛhād bahir yadi vinirgamyeta kiṃcin mayā</l>
+      <l>saiṣā 'narthakarī tadaiva sahasotsṛṣṭeti niścīyatām //</l>
+    </lg>
+    <p>iti</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">haddhi, haddhi / sāhasavvavasāo devo / ajja, kahaṃ so gabbhadharaaṃ paviṭṭo? iṭhṭhādikāridāe dhūmādimaggeṇa candaloaṃ gado tti khu suṇijja<choice><orig>ï</orig><reg>i</reg></choice> /</seg> <seg type="chāyā" xml:lang="sa-Latn">hā dhik, hā dhik / sāhasavyavasāyo devaḥ / ārya, kathaṃ sa garbhagṛhaṃ praviṣṭaḥ? iṣṭādikāritayā dhūmādimārgeṇa candralokaṃ gata iti khalu śrūyate /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>vatse, śrūyatām,</p>
+    <lg xml:id="JMK_1.15" n="15" type="verse">
+      <l>gatvā candramasaṃ vibhūtyanubhavāt prakṣīṇapuṇyas tato</l>
+      <l>bhūloke 'vataran kapūyacaraṇaṃ jitvā mayā ''lambitaḥ /</l>
+      <l>śraddhādyāhutipañcakena ca pathā yoniṃ gato brāhmaṇīṃ</l>
+      <l>garbhāgāram anupraviśya daśame māse tato nirgataḥ //</l>
+    </lg>
+    <p>saṃprati ca,</p>
+    <lg xml:id="JMK_1.16" n="16" type="verse">
+      <l>indriyahayaṃ manomayaraśmicayaṃ buddhisārathisanātham /</l>
+      <l>deharatham āsthito 'yaṃ devo viṣayāṭavīṣu paryaṭati //</l>
+    </lg>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">kahaṃ idaṃ vi evvaṃ ṇāma /</seg> <seg type="chāyā" xml:lang="sa-Latn">katham idam apy evaṃ nāma /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>vatse, anyad apy asti kāraṇaṃ devījihāsāyāṃ devasya, yat purāṇajyotirvidām anukramaṇam / yathā,</p>
+    <lg xml:id="JMK_1.17" n="17" type="verse">
+      <l>buddhityāgena devasya svapadaprāptir iṣyate /</l>
+      <l>buddhityāgaś ca viśvātiśāyidārāntarānvayāt //</l>
+    </lg>
+    <p>iti</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, kā uṇa kaṇṇā tārisī jāe joeṇa devassa sapadappattī vavadisijja<choice><orig>ï</orig><reg>i</reg></choice> /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, kā punaḥ kanyā tādṛśī, yasyā yogena devasya svapadaprāptir vyapadiśyate /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>adyāpi nāvadhāryate / preṣitas tāvan mayā tādṛśakanyānveṣaṇāyāpātabodho <supplied>nā</supplied>mādhuniko devānucaraḥ /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">kahaṃ v<choice><orig>ï</orig><reg>i</reg></choice>a edaṃ ghaḍijja<choice><orig>ï</orig><reg>i</reg></choice>?</seg> <seg type="chāyā" xml:lang="sa-Latn">katham ivaitad ghaṭiṣyate?</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>kiṃ tādṛśī kanyaiva durupalambheti tathā bravīṣi, āho svid upalabdhāpi devasya durlabheti?</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">taha taha a /</seg> <seg type="chāyā" xml:lang="sa-Latn">tathā tathā ca /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>ayi vatse,</p>
+    <lg xml:id="JMK_1.18" n="18" type="verse">
+      <l>devo 'yaṃ svapadāc cyutaḥ kila kuto bhūyo 'pi tasyodayaḥ</l>
+      <l>śreyo vā tad idaṃ pumarthapariṣanmūrdhābhiṣiktaṃ kutaḥ /</l>
+      <l>ity evaṃ yadi manyase hṛdi tadā mithyaiva te niścayas</l>
+      <l>tat tasya kva gataṃ padaṃ kva nu gato devaḥ sa vā saṃprati //</l>
+    </lg>
+    <p>paraṃ tu mocanīyo devaḥ pāśabandhād ajñānavarmaṇa aindrajālikasya / ya eṣaḥ,</p>
+    <lg xml:id="JMK_1.19" n="19" type="verse">
+      <l>vikṣepāvṛtiśaktimāñ jaḍamayo mohātmako duḥkhabhūr</l>
+      <l>asthānapratibimbataḥ prakaṭayann ātmānam apy anyathā /</l>
+      <l>ākāśānilahavyavāhasalilakṣoṇyātmabhiḥ pañcabhir</l>
+      <l>bhūtair ātanute nijāṃ pariṇatiṃ pañcīkṛtiprakramaiḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, kiṃ so jo devīe tādo tti suṇijja<choice><orig>ï</orig><reg>i</reg></choice> / haddhi haddhi / dujjao khu so /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, kiṃ sa yo devyās tāta iti śrūyate / hā dhik, hā dhik / durjayaḥ khalu saḥ /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p><stage>saroṣam</stage> vatse, kim ucyate durjaya iti /</p>
+    <lg xml:id="JMK_1.20" n="20" type="verse">
+      <l>ātmasvāminam indrajālavidhinā pāśena badhnāti yaḥ</l>
+      <l>paśyainaṃ paśukalpam alpadhiṣaṇaṃ baddhvā padākramya ca /</l>
+      <l>chindan krandata eva tattvam asinā tasyāṅgakaṃ khaṇḍaśo</l>
+      <l>viśvagrāsaparasya tena mahato bhūtasya kuryāṃ balim //</l>
+    </lg>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ajja, mā kuppa / arihi kāmādihiṃ karijjantasāhāao so saṅkidavvo tti taha mantemi /</seg> <seg type="chāyā" xml:lang="sa-Latn">ārya, mā kupya / aribhiḥ kāmādibhiḥ kriyamāṇasāhāyakaḥ sa śaṅkitavya iti tathā mantrayāmi /</seg></p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <lg xml:id="JMK_1.21" n="21" type="verse">
+      <l>kāmādayaḥ santu sahasram asya</l>
+      <l>sahāyabhūtā balinas tathāpi /</l>
+      <l>mahattarair ātmaguṇair bhṛtasya</l>
+      <l>mamāgrataḥ sthātum iha kṣamaḥ kaḥ //</l>
+    </lg>
+  </sp>
+  <stage>ubhau parikrāmataḥ</stage>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p><stage>nirūpya</stage> katham ita eva devaḥ /</p>
+    <lg xml:id="JMK_1.22" n="22" type="verse">
+      <l>cirāya so 'yaṃ mṛgayāpravṛttaḥ pramattayā sārathibhāvabhājā /</l>
+      <l>vikṛṣyamāṇaḥ parito 'pi devyā guruvyathaḥ saṃmukham abhyupaiti //</l>
+    </lg>
+  </sp>
+  <stage>tataḥ praviśati yathānirdiṣṭo jīvaḥ, buddhiś ca rathena vibhavataś ca parivāraḥ /</stage>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <lg xml:id="JMK_1.23" n="23" type="verse">
+      <l>sa eṣa madhuraḥ svaro rucira eṣa rūpoccayaḥ</l>
+      <l>susaurabham idaṃ tv iyaṃ śiśiratā raso 'sāv iti /</l>
+      <l>itaḥ śravaṇam ekato nayanam anyato ghrāṇam</l>
+      <l>apy atas tvag api hanta māṃ rasanam agrataḥ karṣati //</l>
+    </lg>
+    <p>devi, stimitagatayaḥ kriyantāṃ vājinaḥ / yataḥ,</p>
+    <lg xml:id="JMK_1.24" n="24" type="verse">
+      <l>dhāvanto viṣayeṣu sāṃpratam amī rathyās tava preraṇād</l>
+      <l>vyākarṣanti yathāyathaṃ tata itas tvām antato mām api /</l>
+      <l>āstāṃ tāvad idaṃ rathasya tu mahān āyāsayogaḥ paraṃ</l>
+      <l>na hy eṣa kṣamate śirīṣasumato 'py atyantam āpeśalaḥ //</l>
+    </lg>
+    <p>katham eṣā madvacanam ākarṇya vighūrṇate bhūtāviṣṭeva / bhavatu, etān evāśvān pratisāntvayāmi /</p>
+    <lg xml:id="JMK_1.25" n="25" type="verse">
+      <l>śravaṇarasanaghrāṇatvaṅnetra hanta bhavanmukhaiḥ</l>
+      <l>sthitam abhimate vastuny astokasāhasavṛttibhiḥ /</l>
+      <l>alam alam itaḥ śrāntaṃ bhūyaḥ sukhena viramyatām</l>
+      <l>aham uparato mā mā karṣantu mām ayam añjaliḥ //</l>
+    </lg>
+    <p>atha vā na durmadeṣv eteṣu sāntvavādaḥ kramate / hanta hanta,</p>
+    <lg xml:id="JMK_1.26" n="26" type="verse">
+      <l>ayaṃ śatāṅgaḥ parijarjarāṅgaḥ</l>
+      <l>pade pade śaṅkitabhaṅgam āste /</l>
+      <l>duṣṭā hayāḥ kaṣṭadaśā ca devī</l>
+      <l>kathaṃ nu kalyāṇapadaṃ bhajeyam //</l>
+    </lg>
+    <p><stage>ākāśe</stage> ramaṇīyacaraṇa, kvāsi bhoḥ kvāsi /</p>
+    <lg xml:id="JMK_1.27" n="27" type="verse">
+      <l>cirād etāvantaṃ samayam atighore bhavapathe</l>
+      <l>na kiṃ paryāpnoti bhramaṇam idam etāvad api me /</l>
+      <l>kiyantaṃ vā kālaṃ bhramayitum ito 'pi vyavasitaṃ</l>
+      <l>yathāsaṃkalpaṃ te bhavatu mama vā kiṃ pratihatam //</l>
+    </lg>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p><stage>apasṛtya</stage> vijayatāṃ devaḥ /</p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>aye ramaṇīyacaraṇa,</p>
+    <lg xml:id="JMK_1.28" n="28" type="verse">
+      <l>ahaṃ bhrāmaṃ bhrāmaṃ krakacaparuṣe vai śrutipathe</l>
+      <l>pariśrānto nātaḥ padam api samartho vicalitum /</l>
+      <l>prabhutvaṃ mayy ārte prakaṭayasi kiṃ sāṃpratam idaṃ</l>
+      <l>tavopekṣāyā vā kimu samucito 'sāv avasaraḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>dāsajane 'smin na sāṃpratam atimātraṃ vacanaṃ kalyāṇaśevadher devasya /</p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p><stage>sanirvedam</stage> aticāriṇyā buddhyā saha saṃsarato mama kalyāṇe kā nyūnatā nāma / yathā,</p>
+    <lg xml:id="JMK_1.29" n="29" type="verse">
+      <l>rathyānā januṣaḥ parāṅmukhatayā nityaṃ pravṛttyunmukhān</l>
+      <l>bhūyaḥ preraṇakarmaṇā svayam api protsāhayantī muhuḥ /</l>
+      <l>svasthaṃ māṃ viṣameṣv amīṣu viṣayeṣv ākṛṣya cākṛṣya ca</l>
+      <l>bhrāmyantī kṛpayā hriyā ca rahitā nādyāpi viśrāmyati //</l>
+    </lg>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>deva, samakṣam eva devyāḥ katham evam ākrośaḥ kriyate /</p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>eṣā saṃpraty ātmānam api na jānāti / paśya, paśya,</p>
+    <lg xml:id="JMK_1.30" n="30" type="verse">
+      <l>kāsārāntaram āsthitā jalajharī kulyā 'dhvanā niḥsṛtā</l>
+      <l>kedārābhigatā yathaiva hi tadākāreṇa saṃpadyate /</l>
+      <l>tadvad buddhir apīyam indriyacayadvārā bahir nirgatā</l>
+      <l>vyāpya svān viṣayāṃs tadākṛtigaṇenākāritā vartate //</l>
+    </lg>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>tarhi na khedāvasaro devasya /</p>
+    <lg xml:id="JMK_1.31" n="31" type="verse">
+      <l>dīrghā pradīpavalayasya marīcikeva</l>
+      <l>buddhir bahiḥ prasṛbharā viṣayān prayātu /</l>
+      <l>āruhya gacchatu bhavān api tāṃ pramātā</l>
+      <l>dolāvihṛtyanubhavena vinodyamānaḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>ko nāma vinodaḥ saṃsāraviṣavallarībījanyāsena pramātṛbhāvena / tathā hi,</p>
+    <lg xml:id="JMK_1.32" n="32" type="verse">
+      <l>pramātṛtvāveśe sati bhavati karmasv adhikṛtis tataḥ</l>
+      <l>kartṛtvaṃ syāt tadanu phalabhoktṛtvam api ca /</l>
+      <l>vimuktasyānena dhruvam akhiladuḥkhapraśamanaṃ</l>
+      <l>vimuktyarthopāyas tad anusaraṇīyaḥ prathamataḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p><stage>kiṃcid iva parāvṛtya</stage> vatse sattvaśuddhe, ehi vandasva devam /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><stage>upasṛtya</stage> <seg xml:lang="pra-Latn">deva, paṇamāmi /</seg> <seg type="chāyā" xml:lang="sa-Latn">deva, praṇamāmi /</seg></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>vatse, abhimatena yujyasva /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">ahimadā me devī /</seg> <seg type="chāyā" xml:lang="sa-Latn">abhimatā me devī /</seg> <stage>iti buddher aṅkam ārohati /</stage></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>aho, sattvaśuddhyāḥ saṃsparśamātreṇa prasannā devī prakṛtisthā ca saṃvṛttā /</p>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">vacche sattasuddhe, aviralaṃ maṃ parissajehi /</seg> <seg type="chāyā" xml:lang="sa-Latn">vatse sattvaśuddhe, aviralaṃ māṃ pariṣvajasva /</seg></p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><stage>tathā karoti</stage></p>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">vacche, ajjautto vi saṃbhāv<choice><orig>ï</orig><reg>i</reg></choice>adu parisaṅgeṇa /</seg> <seg type="chāyā" xml:lang="sa-Latn">vatse, āryaputro 'pi saṃbhāvyatāṃ pariṣvaṅgeṇa /</seg></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>devi, mā maivam / yatas tvayi pariṣvaktāyām aham api pariṣvaktaprāya eva /</p>
+    <lg xml:id="JMK_1.33" n="33" type="verse">
+      <l>dhyāyatīva janas tv eṣa dhyāyantyām tvayi vallabhe /</l>
+      <l>calatīva calantyāṃ ca na svatantraḥ svayaṃ kvacit //</l>
+    </lg>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">īriso ahiṇiveso assim jaṇammi ajjautassa /</seg> <seg type="chāyā" xml:lang="sa-Latn">īdṛśo 'bhiniveśo 'smiñ jane āryaputrasya /</seg></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>kim etad upacāraḥ /</p>
+    <lg xml:id="JMK_1.34" n="34" type="verse">
+      <l>nīrakṣīravad āvayor upanatā kālād bahor ekatā</l>
+      <l>viśleṣasya kathā kathaṃcid api na svapne 'pi saṃbhāvyate /</l>
+      <l>kiṃ ca tvadguṇasāratāmahimataḥ karteti bhokteti ca</l>
+      <l>prāyeṇa vyapadeśabhājanam ahaṃ jāto jaganmaṇḍale //</l>
+    </lg>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">edaṃ vi ṇāma ajjauttassa paḍiggahappahā go / kahaṃ aṇṇahā muddhapakidīe maha taha taha ppahāsaṃbhavo /</seg> <seg type="chāyā" xml:lang="sa-Latn">etad api nāmāryaputrasya parigrahaprabhāvaḥ / katham anyathā mugdhaprakṛter api mama tathā tathā prathāsaṃbhavaḥ /</seg></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <lg xml:id="JMK_1.35" n="35" type="verse">
+      <l>mugdhā tava prakṛtir astu taveyatā</l>
+      <l>kim āyātam āyataviśālaviloladṛṣṭe /</l>
+      <l>mūḍhaḥ piteti tanayo 'pi kathaṃ tathā syāl</l>
+      <l>lālājalāyitasamastakalākalāpaḥ //</l>
+    </lg>
+    <p>api ca,</p>
+    <lg xml:id="JMK_1.36" n="36" type="verse">
+      <l>mugdhe devi parigrahas tvam iti yat tenānubhāvena me</l>
+      <l>jīvo jīva iti praśastir iyatī viśvaṃ yayā vyāpyate /</l>
+      <l>no ced evam apāṇipādavapuṣaḥ sattāva(ti/śi)ṣṭasya te</l>
+      <l>kāntasyāsya guṇojjhitasya bhuvane nāmāpi gṛhṇātu kaḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>devyāyatta eva devasya saṃsārikaḥ sarvo vyavahāra ity etal likhitapaṭhitam eva lokānām /</p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>ayi devi,</p>
+    <lg xml:id="JMK_1.37" n="37" type="verse">
+      <l>tāvat saṃsṛtivibhramo mama bhaved yāvat tvayā saṃgamo</l>
+      <l>viśleṣo yadi magnam eva bhuvanaṃ manye kim anyat tadā /</l>
+      <l>kiṃ paśyāmi kimu spṛśāmi kim ahaṃ jalpāmi jighrāmi kiṃ</l>
+      <l>kiṃ vā nāma śṛṇomi kiṃ punar ahaṃ jānāmi yatkevalaḥ //</l>
+    </lg>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">mai rūḍhamūlo mamadāhimāṇo ajjauttaṃ evvaṃ vāhārei /</seg> <seg type="chāyā" xml:lang="sa-Latn">mayi rūḍhamūlo mamatābhimāna āryaputram evaṃ vyāhārayati /</seg></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>devi, ahaṃtābhimāna iti vaktavyam /</p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>īdṛśam abhinnaṃ dāmpatyam ardhanārīrūpasya mahato devasya devasya vā /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">evvaṃ edaṃ /</seg> <seg type="chāyā" xml:lang="sa-Latn">evam etat /</seg></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>ramaṇīyacaraṇa, kutaḥ praśāntavega iva ratho dṛśyate?</p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>avasito viṣamo jāgaritanāmā vanoddeśaḥ, pratyāsannaś ca svapnārāmaḥ / tataś ca,</p>
+    <lg xml:id="JMK_1.38" n="38" type="verse">
+      <l>svapnārāmasya sāṃnidhyāt supteṣv indriyavājiṣu /</l>
+      <l>praśāntaspandasaṃbādho ratho 'yam avatiṣṭhate //</l>
+    </lg>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>kathaṃ saṃnihitaḥ svapnārāmaḥ? <stage>parito dṛṣṭiṃ prasārya</stage></p>
+    <lg xml:id="JMK_1.39" n="39" type="verse">
+      <l>kuṭajavakulamallīkundamandāranānāmadhu-</l>
+      <l>parimalapālīmāṃsalāṅkāvakāśā /</l>
+      <l>samadaśakunibṛndāmandanād ābhirāmā</l>
+      <l>sphurati nirūpameyaṃ svāpnikārāmasīmā //</l>
+    </lg>
+    <p>aye ramaṇīyacaraṇa, ihasthena tvayā paripālyatām eṣa rathaḥ / yāvad aham amum ārāmaṃ praviśya sattvaśuddhidvitīyayā devyā saha viharāmi /</p>
+  </sp>
+  <sp who="#ramaniyacarana">
+    <speaker>ramaṇīyacaraṇaḥ</speaker>
+    <p>tathā / <stage>iti sthitaḥ</stage></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p><stage>devyā sattvaśuddhyā ca saha nāḍīdvārā svapnārāmapraveśaṃ nāṭayitvā /</stage> devi, atrāyaṃ puruṣaḥ svayaṃjyotir atrabhavatyāḥ sāhāyakam apekṣate /</p>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><seg xml:lang="pra-Latn">piaṃ me /</seg> <seg type="chāyā" xml:lang="sa-Latn">priyaṃ me /</seg></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p><stage>samantād avalokya</stage> aho asya svapnārāmasya rāmaṇīyakam / devi, dṛśyatām ābhirūpyam ārāmasya / iha hi,</p>
+    <lg xml:id="JMK_1.40" n="40" type="verse">
+      <l>marakatamaṇicchāyāḥ kecin mahīruharāśayaḥ</l>
+      <l>kanakanikaṣasnigdhāś cānye pare sphaṭikasphuṭāḥ /</l>
+      <l>valabhidupalaśyāmāś caike kusumbhaviḍambinaḥ</l>
+      <l>katicid itare nānāvarṇāḥ suvarṇaphalodgamāḥ //</l>
+    </lg>
+    <p>api ca,</p>
+    <lg xml:id="JMK_1.41" n="41" type="verse">
+      <l>kvacit pratinavāṅkuraṃ kvacana pallavollāsavat</l>
+      <l>kvacid vikacakuṭmalaṃ kuhacid acchagucchacchavi /</l>
+      <l>kvacit phalabharānataṃ kvacana bhṛṅgasaṃghātabhṛt</l>
+      <l>samullasati nandanaṃ vanam ivedam ānandanam //</l>
+    </lg>
+    <p>hanta hanta dṛṣṭanaṣṭasvarūpāṇi pūrvadṛṣṭasarūpāṇi pratikṣaṇonnidravyaktyākṛtijātyanyathātvabhāñjyatratyāni vastūni / tathā hi,</p>
+    <lg xml:id="JMK_1.42" n="42" type="verse">
+      <l>hastīty ākalitaḥ kṣaṇena sa mahān adriḥ samāpadyate</l>
+      <l>sadyaḥ sa drumatām upaiti sa punaḥ pakṣiprathāṃ gāhate /</l>
+      <l>ajñātaṃ śatayojanāntaritam apy adhyakṣam ālakṣyate</l>
+      <l>vastu prāptimad apy apūrvam iva saṃprāptavyam āste punaḥ //</l>
+    </lg>
+    <p>devi, dīyatām ito dṛṣṭiḥ /</p>
+    <lg xml:id="JMK_1.43" n="43" type="verse">
+      <l>bālātapaś candrikayā taruṇyā</l>
+      <l>saṃśliṣyate saṃprati nirvirodham /</l>
+      <l>hriyeva kiṃcin mukulīkṛtāni</l>
+      <l>vāpībhir abjotpalalocanāni //</l>
+    </lg>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><stage>vilokya vismayastaimityaṃ rūpayati</stage></p>
+  </sp>
+  <stage>nepathye kalakalaḥ /</stage>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p><stage>karṇam dattvā, sollāsam</stage></p>
+    <lg xml:id="JMK_1.44" n="44" type="verse">
+      <l>śukakekikokilamadhuvratasvanair avibhāvyamānanijabhedavaibhavam /</l>
+      <l>lalitasvarakramaviśeṣalakṣitaṃ</l>
+      <l>sutanor iva vyavahṛtaṃ niśamyate //</l>
+    </lg>
+    <p>devi, ārāmasīmāyām avadhāraya śrutim /</p>
+  </sp>
+  <sp who="#buddhi">
+    <speaker>buddhiḥ</speaker>
+    <p><stage>aśrutim abhinīya sāṅgabhaṅgaṃ tiṣṭhati</stage></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p>sattvaśuddhe, devī nidrālaseva lakṣyate / dhārayasva tāvad enām /</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><stage>tathā karoti</stage></p>
+  </sp>
+  <sp ana="offstage-or-unassigned">
+    <stage>punar nepathye</stage>
+    <lg xml:id="JMK_1.45" n="45" type="verse">
+      <l>ārāmam eva māyotthaṃ svapnanirmāṇalakṣaṇam /</l>
+      <l>mama sarve 'pi paśyanti na māṃ paśyati kaścana //</l>
+    </lg>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p><stage>śrutvā</stage> atigabhīramanoharaṃ vacanam /</p>
+  </sp>
+  <sp ana="offstage-or-unassigned">
+    <stage>punar nepathye</stage>
+    <lg xml:id="JMK_1.46" n="46" type="verse">
+      <l>upary upari saṃcarann api na kaścid akṣetravid-</l>
+      <l>dhiraṇyanidhim antasthe vinihitaṃ yathā vindati /</l>
+      <l>na vindati tathaiva mām ahar ahar bhajann apy aho</l>
+      <l>vimohapihito janas tad iha kasya kiṃ vā bruve //</l>
+    </lg>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p><stage>śrutvā</stage> asaṃśayaṃ niratiśayarūpalāvaṇyasaundaryaparyavasānabhūmitayā svasyānurūparamaṇānupalambhasaṃbhūtam ārāmābhimāninyā nigūḍhāyāḥ kasyāś cit kanyakāyā vacanam etad iti me niścayaḥ / hanta, hanta,</p>
+    <lg xml:id="JMK_1.47" n="47" type="verse">
+      <l>akṛtrimamanojño 'yam akṣarāṇām anukramaḥ /</l>
+      <l>akhaṇḍānandapadavīm adhyāropayatīva mām //</l>
+    </lg>
+    <p>vatse sattvaśuddhe,</p>
+    <lg xml:id="JMK_1.48" n="48" type="verse">
+      <l>mīnastrīva mahānadītaṭabhuvoḥ svapnāntabuddhāntayoḥ</l>
+      <l>paryāyeṇa gatāgataṃ vidadhatī devī nikāmaklamā /</l>
+      <l>eṣo 'haṃ ca tathā tathā vyavaharan prāpto 'smi nāma śramaṃ</l>
+      <l>vyomāgre parimaṇḍalāni vicaran nātho yathā pakṣiṇām //</l>
+    </lg>
+    <p>tad atisaṃnihite 'sminn atimuktātmamaṇḍape nidrālasāṃ devīṃ sukhaśāyinīṃ vidhehi / aham apy ārāmavirāmabhuvam abhigamya nirdhāritaśabdapravṛttimūlas tad evātimuktātmamaṇḍapam anupravekṣyāmi //</p>
+  </sp>
+  <sp who="#sattvasuddhi">
+    <speaker>sattvaśuddhiḥ</speaker>
+    <p><stage>tathā karoti</stage></p>
+  </sp>
+  <sp who="#jiva">
+    <speaker>jīvaḥ</speaker>
+    <p><stage>parikramyāvalokya ca, saharṣāścaryasaṃbhramautsukyam</stage> hanta, saphalam adya saṃjātaṃ janma /</p>
+    <lg xml:id="JMK_1.49" n="49" type="verse">
+      <l>iyaṃ sā kalyāṇī sulalitalatāmūlanilayā</l>
+      <l>payodenālīḍhā taḍid iva jaganmohanatanuḥ /</l>
+      <l>avasthābhedena sthitim upagatā kācid adhunā</l>
+      <l>sadānandasphūrtiḥ sutanur iti saṃmohayati mām //</l>
+    </lg>
+    <p>hanta, na paryāpnuvanti sahasram api locanāni sahasralocanasya saundaryam asyā nirvarṇayituṃ, varṇayituṃ vā vāco 'pi vācaspateḥ / tathā hy asyāḥ,</p>
+    <lg xml:id="JMK_1.50" n="50" type="verse">
+      <l>śrībinduḥ śaradindur āsyagalito dṛkkoṇa indīvaraṃ</l>
+      <l>leśā hāsarucāṃ sumāny adharabhūsaṃpallavaḥ pallavaḥ /</l>
+      <l>aṃśo merur asaṃśayaṃ mṛgadṛśo vakṣojayor uccayos</l>
+      <l>tan manye vapurekadeśavibhavo viśvaśriyo 'pi śriyaḥ //</l>
+    </lg>
+    <p>api ca,</p>
+    <lg xml:id="JMK_1.51" n="51" type="verse">
+      <l>pādau padmabhuvaḥ śriyaḥ sahacarau pāṇī śivavyañjanau</l>
+      <l>keśāḥ keśavadivyarūpasuhṛdaḥ śrutyantaraṅge dṛśau /</l>
+      <l>etasyās trijagaty acumbitacamatkārāvalambākṛter</l>
+      <l>aṅgaṃ sarvam anaṅgamaṅgalam aho varṇyeta kiṃ kena vā //</l>
+    </lg>
+    <p>kiṃ bahunā,</p>
+    <lg xml:id="JMK_1.52" n="52" type="verse">
+      <l>karambayati ced iyaṃ kamalagarvasarvaṃkaṣām</l>
+      <l>apāṅgaparipāṭikām alam alaṃ surāṇāṃ śriyā /</l>
+      <l>atha svarasam ātmanā yadi kadācid āliṅganaṃ</l>
+      <l>taraṅgayati jīvato mama sa eva mokṣotsavaḥ //</l>
+    </lg>
+    <p>kā punar eṣā bhavet / atha vā bhavatu yā kācid eṣā / paścād aśeṣaṃ vicārayiṣyāmi / sarvathā tāvad enayā saṃpraty eṣa saṃpadye / <stage>iti parikramya, niṣkrāntāḥ sarve</stage></p>
+  </sp>
+</div>
+<trailer>// iti prathamo 'ṅkaḥ //</trailer>
+  </body>
+</text>
+</TEI>

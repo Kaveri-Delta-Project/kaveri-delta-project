@@ -1,0 +1,497 @@
+Nallādhvarin: Jīvanmuktikalyāṇa (first aṅka)
+
+## Data entry: Jonathan Duquette and Vinoth Murali
+## Version: 2026-09-29
+
+## Source:  ‘Jīvanmuktikalyāṇam, A Drama by Nallādhvari’. Edited by Sri T. K. Balasubrahmanya Aiyar. Srirangam: Sri Vani Vilas Press, 1944.
+
+## This file was created as part of the AHRC-funded project 'Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800' (UKRI2578), based at the University of Cambridge (UK).
+
+## Encoding: Unicode (UTF-8), IAST transliteration; dandas rendered / and //;
+Prakrit passages are followed by their Sanskrit chāyā in square brackets.
+Verse references: JMK_1.<verse>
+
+# Text
+
+// jīvanmuktikalyāṇam nallādhvariviracitam //
+// prathamo 'ṅkaḥ //
+
+bhadrākāraparigrahocitamadārambhapriyaṃbhāvukāḥ
+svīkurvañ śubhavāsanāḥ katicid apy āśāpariṣkāriṇīḥ /
+śrutyantābhyasanair alivyatikarād ātmānam unmocayan
+sa śrīmān kṛpayā mahāgaṇapatiḥ puṣṇātu niḥśreyasam // JMK_1.1 //
+
+(nāndyante)
+
+sūtradhāraḥ —
+tādātmyena nirantarālamilitāṃ gaurīṃ vihārecchayā
+vismṛtyātha tayā viyojita ivātanvaṃs tadanveṣaṇam /
+senānyā bhagavan bhavāny api bhavān evety anūdbodhitas
+tallābhād iva nirvṛto diśatu vaḥ śreyo 'rdhanārīśvaraḥ // JMK_1.2 //
+
+(iti puṣpāñjaliṃ vikīrya, nepathyābhimukham avalokya,) ārye, itas tāvat /
+
+(praviśya)
+
+naṭī — ajja, iamhi / [ārya, iyam asmi /]
+
+sūtradhāraḥ — ārye, adya khalu bhagavato madhyārjunaprabhor yātrāpratyupasthitaiḥ śamadamapradhānair brahmaniṣṭhair ādiṣṭo 'smi sāmājikair adhyātmakathānubandhabandhuraṃ kim apy apūrvaṃ nāṭakaṃ nāṭayitavyam iti / tad anucintyatāṃ tvayā tathāvidhaṃ nāṭakam /
+
+naṭī — ajja, kiṃ vi me ṇa paḍihāi / [ārya, kim api me na pratibhāti /]
+
+sūtradhāraḥ — ayi vismaraṇaśīle, tvam ajaivāsi prakṛtyā /
+
+naṭī — (sakrodham) jai evvaṃ tado ajjassa aṇurūvā bhavissaṃ / [yady evaṃ tata āryasyānurūpā bhaviṣyāmi /]
+
+sūtradhāraḥ — (sakrodhāvegam) mugdhe, prakṛtyāham api yady ajaḥ syām tarhi tadanurūpa ācāraḥ pakṣe tvatparityāgarūpa eva paryavasyed iti mahad aniṣṭam āpadyeta / tathā khalv ajānām ācāro dṛśyate /
+
+ekām ajāṃ lohitaśuklakṛṣṇāṃ
+bahvīḥ prajāḥ svānuguṇāḥ sṛjantīṃ /
+eko hy ajas tām anuśeta eva
+jahāti enām aparo 'nubhuktām // JMK_1.3 //
+
+naṭī — bhuttabhoaṃ maṃ ujjhia aṇṇāe ka e vi kaṇṇāe saṃgadua ṇivvudo hodu ajjo / [bhuktabhogāṃ mām ujjhitvā 'nyayā kayāpi kanyayā saṃgatya nirvṛto bhavatv āryaḥ /] (iti sāṭopaṃ parāvartate)
+
+sūtradhāraḥ — (sānunayaṃ haste gṛhītvā) ayi sadasadvilakṣaṇe, vācārambhaṇamātra eva prapañco na paramārthaḥ / tad ehi, mā nivartasva / nartitavyaṃ nāma tvayā yāvat pratibhāsaṃ prārabdhānusāreṇa / tatas tu paraṃ svata eva parāvartiṣyase /
+
+naṭī — (saprasādaunmukhyam) ajja, mae kiṃ ṇañcidavvaṃ? [ārya, mayā kiṃ nartitavyam?]
+
+sūtradhāraḥ — jīvanmuktikalyāṇaṃ nāma nāṭakam, yasya kaviḥ subhadrāpariṇayaśṛṅgārasarvasvacittavṛttikalyāṇādvaitarasamañjaryādyanekaprabandhanibandhanābhinandanīyaḥ śrībālacandramakhindranandano nallādhvarī /
+
+naṭī — ajja, sumarāvidamhi / visumaraṇakido uṇa maha avarāho marisidavvo / [ārya, smāritā 'smi / vismaraṇakṛtaḥ punar mamāparādho marṣitavyaḥ /]
+
+sūtradhāraḥ — astu nāmedam / prastūyatāṃ saṃgītakam / saṃprati hi,
+
+śāradānugrahavaśād viśadīkṛtamānasāḥ /
+haṃsābhyudayaśaṃsinyo vāsarāṇāṃ vibhūtayaḥ // JMK_1.4 //
+
+naṭī —
+dāṇiṃ paḍippahādaṃ sujjāloapphuḍīkidaṣpasirī /
+ṇa khu sā rājīvatadī khamadi bhamaralakkhaṇappaparihūdiṃ // JMK_1.5 //
+
+[idānīṃ pratiprabhātaṃ sūryālokasphuṭīkṛtātmaśrīḥ /
+na khalu sā rājīvatatiḥ kṣamate bhramaralakṣaṇātmaparibhūtim //]
+
+sūtradhāraḥ —
+kavir atimanojñasūktiḥ kathā jagatpāvanī vayaṃ kṛtinaḥ /
+pariṣad iyaṃ guṇaniṣṭhā bhavyasya vidheḥ prasādavibhavo 'yam // JMK_1.6 //
+
+(nepathye)
+
+aye bharatakulaśekhara, vidhiprasādavibhava iti māṃ nirdiśañ ślāghanīyo 'si /
+
+codanātmā vidhis tasya prasādo janako mama /
+vidhiprasādavibhavas tasmād aham udāhṛtaḥ // JMK_1.7 //
+
+sūtradhāraḥ — (smṛtim abhinīya) katham eṣa praviṣṭa eva bhāvo jīvāmātyasya ramaṇīyacaraṇasya bhūmikām ādāya raṅgamaṇḍapam / ārye, tadā āvām apy anantarakaraṇīyāya sajjībhavāvaḥ / (iti niṣkrāntau)
+
+// prastāvanā //
+
+(tataḥ praviśati ramaṇīyacaraṇaḥ)
+
+ramaṇīyacaraṇaḥ —
+vidhigocarakarmanirmitatvād
+vimalo 'haṃ sakalābhilāṣapātram /
+upajīvyatayā tataḥ pareṣāṃ
+prathitaḥ prāthamikaḥ svayaṃ samarthaḥ // JMK_1.8 //
+
+api ca,
+
+svargādinaśvaraphalānabhisaṃdhibandha-
+nirvyūḍhayā bhagavadarthatayānvito yaḥ /
+tasmān nisargamahataḥ śubhakarmarāśer
+jātasya me kim itareṇa guṇottareṇa // JMK_1.9 //
+
+kiṃ ca,
+
+anenaivānubhāvena mayā labdhā mahonnatā /
+sattvaśuddhir iti khyātā kanyā kalmaṣahāriṇī // JMK_1.10 //
+
+(praviśya)
+
+sattvaśuddhiḥ — āṇavedu ajjo jaṃ mae aṇuciṭṭhiadu / [ājñāpayaty āryo yan mayā 'nuṣṭhīyatām /]
+
+ramaṇīyacaraṇaḥ — vatse, kim anyat? devasya tvayā sāhāyakam ācaritavyam /
+
+sattvaśuddhiḥ — ko so devo? [kaḥ sa devaḥ?]
+
+ramaṇīyacaraṇaḥ —
+so 'yaṃ yaḥ svayam advitīyapadavīsāmrājyadhauraṃdharīm
+āsādya pratitiṣṭhati sma mahimākāre svabhadrāsane /
+yaś ca vyādhakule vasann iva mahīpālātmajo vyādhatāṃ
+jīvatvaṃ gatavān vimohavaśataḥ svasmāt padād bhraṃśitaḥ // JMK_1.11 //
+
+sattvaśuddhiḥ — ajja, kiṃ patthudaṃ tassa devassa / [ārya, kiṃ prastutaṃ tasya devasya /]
+
+ramaṇīyacaraṇaḥ — pāṇigrahaṇamahotsavaḥ /
+
+sattvaśuddhiḥ — ajja, atthi khu tassa puḍhamo paḍiggaho devī, yā buddhi tti andakaraṇam tti maṇaṃ tti cittaṃ tti a bhaṇiadi / [ārya, asti khalu tasya prathamaḥ pratigraho devī, yā buddhir ity antaḥkaraṇam iti mana iti cittam iti ca bhaṇyate /]
+
+ramaṇīyacaraṇaḥ — saṃprati tasyāṃ vairasyenopajātajihāso devaḥ /
+
+sattvaśuddhiḥ — haddhi haddhi, chāādavāṇaṃ via samaṇiadāṇaṃ vi tāṇaṃ īriso dasāpariṇāmo [hā dhik, hā dhik / chāyātapayor iva samaniyatayor api tayor īdṛśo daśāpariṇāmaḥ /]
+
+ramaṇīyacaraṇaḥ — vatse, chāyātapayor iveti viṣamo dṛṣṭāntaḥ /
+
+chāyaiṣā punar ātapo 'yam iti ca spaṣṭaṃ pratītātmanor
+anyonyaṃ vyatiṣaktayor api tayor bhedaḥ sukhaṃ gṛhyate /
+anyonyātmakayor anādisamayād anyonyatāddharmyayor
+buddhir jīva iti dvayor api tayor bhedagraho durlabhaḥ // JMK_1.12 //
+
+sattvaśuddhiḥ — ajja, īrisī a devī kīsa deveṇa virasadāe goarīkidā? [ārya, īdṛśī devī kasmād devena virasatāyā gocarīkṛtā?]
+
+ramaṇīyacaraṇaḥ — yatas tatsamgamaprabhṛti sukham iti kiṃcin na jānāti devaḥ / tathā hi,
+
+rāgadveṣakaṣāyitasvavapuṣā buddhyā samāliṅgitaḥ
+puṇyāpuṇyamayeṣu karmasu tato mohāt pravṛttaḥ svayam /
+dehādyātmatayā 'tha karmajanitaṃ svargādirūpaṃ phalaṃ
+bhuñjāno janihāniduḥkhajaladher āvarta āvartate // JMK_1.13 //
+
+uktaṃ ca māṃ prati garbhagṛhaṃ praviṣṭena devena,
+
+saṃsārādhvani saṃkaṭe niravadhau tāpatrayopaplute
+yātāyātakṛtā yayā mama cirād ātmettham āyāsyate /
+asmād garbhagṛhād bahir yadi vinirgamyeta kiṃcin mayā
+saiṣā 'narthakarī tadaiva sahasotsṛṣṭeti niścīyatām // JMK_1.14 //
+
+iti
+
+sattvaśuddhiḥ — haddhi, haddhi / sāhasavvavasāo devo / ajja, kahaṃ so gabbhadharaaṃ paviṭṭo? iṭhṭhādikāridāe dhūmādimaggeṇa candaloaṃ gado tti khu suṇijjai / [hā dhik, hā dhik / sāhasavyavasāyo devaḥ / ārya, kathaṃ sa garbhagṛhaṃ praviṣṭaḥ? iṣṭādikāritayā dhūmādimārgeṇa candralokaṃ gata iti khalu śrūyate /]
+
+ramaṇīyacaraṇaḥ — vatse, śrūyatām,
+
+gatvā candramasaṃ vibhūtyanubhavāt prakṣīṇapuṇyas tato
+bhūloke 'vataran kapūyacaraṇaṃ jitvā mayālambitaḥ /
+śraddhādyāhutipañcakena ca pathā yoniṃ gato brāhmaṇīṃ
+garbhāgāram anupraviśya daśame māse tato nirgataḥ // JMK_1.15 //
+
+saṃprati ca,
+
+indriyahayaṃ manomayaraśmicayaṃ buddhisārathisanātham /
+deharatham āsthito 'yaṃ devo viṣayāṭavīṣu paryaṭati // JMK_1.16 //
+
+sattvaśuddhiḥ — kahaṃ idaṃ vi evvaṃ ṇāma / [katham idam apy evaṃ nāma /]
+
+ramaṇīyacaraṇaḥ — vatse, anyad apy asti kāraṇaṃ devījihāsāyāṃ devasya, yat purāṇajyotirvidām anukramaṇam / yathā,
+
+buddhityāgena devasya svapadaprāptir iṣyate /
+buddhityāgaś ca viśvātiśāyidārāntarānvayāt // JMK_1.17 //
+
+iti
+
+sattvaśuddhiḥ — ajja, kā uṇa kaṇṇā tārisī jāe joeṇa devassa sapadappattī vavadisijjai / [ārya, kā punaḥ kanyā tādṛśī, yasyā yogena devasya svapadaprāptir vyapadiśyate /]
+
+ramaṇīyacaraṇaḥ — adyāpi nāvadhāryate / preṣitas tāvan mayā tādṛśakanyānveṣaṇāyāpātabodho [nā]mādhuniko devānucaraḥ /
+
+sattvaśuddhiḥ — kahaṃ via edaṃ ghaḍijjai? [katham ivaitad ghaṭiṣyate?]
+
+ramaṇīyacaraṇaḥ — kiṃ tādṛśī kanyaiva durupalambheti tathā bravīṣi, āho svid upalabdhāpi devasya durlabheti?
+
+sattvaśuddhiḥ — taha taha a / [tathā tathā ca /]
+
+ramaṇīyacaraṇaḥ — ayi vatse,
+
+devo 'yaṃ svapadāc cyutaḥ kila kuto bhūyo 'pi tasyodayaḥ
+śreyo vā tad idaṃ pumarthapariṣanmūrdhābhiṣiktaṃ kutaḥ /
+ity evaṃ yadi manyase hṛdi tadā mithyaiva te niścayas
+tat tasya kva gataṃ padaṃ kva nu gato devaḥ sa vā saṃprati // JMK_1.18 //
+
+paraṃ tu mocanīyo devaḥ pāśabandhād ajñānavarmaṇa aindrajālikasya / ya eṣaḥ,
+
+vikṣepāvṛtiśaktimāñ jaḍamayo mohātmako duḥkhabhūr
+asthānapratibimbataḥ prakaṭayann ātmānam apy anyathā /
+ākāśānilahavyavāhasalilakṣoṇyātmabhiḥ pañcabhir
+bhūtair ātanute nijāṃ pariṇatiṃ pañcīkṛtiprakramaiḥ // JMK_1.19 //
+
+sattvaśuddhiḥ — ajja, kiṃ so jo devīe tādo tti suṇijjai / haddhi haddhi / dujjao khu so / [ārya, kiṃ sa yo devyās tāta iti śrūyate / hā dhik, hā dhik / durjayaḥ khalu saḥ /]
+
+ramaṇīyacaraṇaḥ — (saroṣam) vatse, kim ucyate durjaya iti /
+
+ātmasvāminam indrajālavidhinā pāśena badhnāti yaḥ
+paśyainaṃ paśukalpam alpadhiṣaṇaṃ baddhvā padākramya ca /
+chindan krandata eva tattvam asinā tasyāṅgakaṃ khaṇḍaśo
+viśvagrāsaparasya tena mahato bhūtasya kuryāṃ balim // JMK_1.20 //
+
+sattvaśuddhiḥ — ajja, mā kuppa / arihi kāmādihiṃ karijjantasāhāao so saṅkidavvo tti taha mantemi / [ārya, mā kupya / aribhiḥ kāmādibhiḥ kriyamāṇasāhāyakaḥ sa śaṅkitavya iti tathā mantrayāmi /]
+
+ramaṇīyacaraṇaḥ —
+kāmādayaḥ santu sahasram asya
+sahāyabhūtā balinas tathāpi /
+mahattarair ātmaguṇair bhṛtasya
+mamāgrataḥ sthātum iha kṣamaḥ kaḥ // JMK_1.21 //
+
+(ubhau parikrāmataḥ)
+
+ramaṇīyacaraṇaḥ — (nirūpya) katham ita eva devaḥ /
+
+cirāya so 'yaṃ mṛgayāpravṛttaḥ pramattayā sārathibhāvabhājā /
+vikṛṣyamāṇaḥ parito 'pi devyā guruvyathaḥ saṃmukham abhyupaiti // JMK_1.22 //
+
+(tataḥ praviśati yathānirdiṣṭo jīvaḥ, buddhiś ca rathena vibhavataś ca parivāraḥ |)
+
+jīvaḥ —
+sa eṣa madhuraḥ svaro rucira eṣa rūpoccayaḥ
+susaurabham idaṃ tv iyaṃ śiśiratā raso 'sāv iti /
+itaḥ śravaṇam ekato nayanam anyato ghrāṇam
+apy atas tvag api hanta māṃ rasanam agrataḥ karṣati // JMK_1.23 //
+
+devi, stimitagatayaḥ kriyantāṃ vājinaḥ / yataḥ,
+
+dhāvanto viṣayeṣu sāṃpratam amī rathyās tava preraṇād
+vyākarṣanti yathāyathaṃ tata itas tvām antato mām api /
+āstāṃ tāvad idaṃ rathasya tu mahān āyāsayogaḥ paraṃ
+na hy eṣa kṣamate śirīṣasumato 'py atyantam āpeśalaḥ // JMK_1.24 //
+
+katham eṣā madvacanam ākarṇya vighūrṇate bhūtāviṣṭeva / bhavatu, etān evāśvān pratisāntvayāmi /
+
+śravaṇarasanaghrāṇatvaṅnetra hanta bhavanmukhaiḥ
+sthitam abhimate vastuny astokasāhasavṛttibhiḥ /
+alam alam itaḥ śrāntaṃ bhūyaḥ sukhena viramyatām
+aham uparato mā mā karṣantu mām ayam añjaliḥ // JMK_1.25 //
+
+atha vā na durmadeṣv eteṣu sāntvavādaḥ kramate / hanta hanta,
+
+ayaṃ śatāṅgaḥ parijarjarāṅgaḥ
+pade pade śaṅkitabhaṅgam āste /
+duṣṭā hayāḥ kaṣṭadaśā ca devī
+kathaṃ nu kalyāṇapadaṃ bhajeyam // JMK_1.26 //
+
+(ākāśe) ramaṇīyacaraṇa, kvāsi bhoḥ kvāsi /
+
+cirād etāvantaṃ samayam atighore bhavapathe
+na kiṃ paryāpnoti bhramaṇam idam etāvad api me /
+kiyantaṃ vā kālaṃ bhramayitum ito 'pi vyavasitaṃ
+yathāsaṃkalpaṃ te bhavatu mama vā kiṃ pratihatam // JMK_1.27 //
+
+ramaṇīyacaraṇaḥ — (apasṛtya) vijayatāṃ devaḥ /
+
+jīvaḥ — aye ramaṇīyacaraṇa,
+
+ahaṃ bhrāmaṃ bhrāmaṃ krakacaparuṣe vai śrutipathe
+pariśrānto nātaḥ padam api samartho vicalitum /
+prabhutvaṃ mayy ārte prakaṭayasi kiṃ sāṃpratam idaṃ
+tavopekṣāyā vā kimu samucito 'sāv avasaraḥ // JMK_1.28 //
+
+ramaṇīyacaraṇaḥ — dāsajane 'smin na sāṃpratam atimātraṃ vacanaṃ kalyāṇaśevadher devasya /
+
+jīvaḥ — (sanirvedam) aticāriṇyā buddhyā saha saṃsarato mama kalyāṇe kā nyūnatā nāma / yathā,
+
+rathyānā januṣaḥ parāṅmukhatayā nityaṃ pravṛttyunmukhān
+bhūyaḥ preraṇakarmaṇā svayam api protsāhayantī muhuḥ /
+svasthaṃ māṃ viṣameṣv amīṣu viṣayeṣv ākṛṣya cākṛṣya ca
+bhrāmyantī kṛpayā hriyā ca rahitā nādyāpi viśrāmyati // JMK_1.29 //
+
+ramaṇīyacaraṇaḥ — deva, samakṣam eva devyāḥ katham evam ākrośaḥ kriyate /
+
+jīvaḥ — eṣā saṃpraty ātmānam api na jānāti / paśya, paśya,
+
+kāsārāntaram āsthitā jalajharī kulyā 'dhvanā niḥsṛtā
+kedārābhigatā yathaiva hi tadākāreṇa saṃpadyate /
+tadvad buddhir apīyam indriyacayadvārā bahir nirgatā
+vyāpya svān viṣayāṃs tadākṛtigaṇenākāritā vartate // JMK_1.30 //
+
+ramaṇīyacaraṇaḥ — tarhi na khedāvasaro devasya /
+
+dīrghā pradīpavalayasya marīcikeva
+buddhir bahiḥ prasṛbharā viṣayān prayātu /
+āruhya gacchatu bhavān api tāṃ pramātā
+dolāvihṛtyanubhavena vinodyamānaḥ // JMK_1.31 //
+
+jīvaḥ — ko nāma vinodaḥ saṃsāraviṣavallarībījanyāsena pramātṛbhāvena / tathā hi,
+
+pramātṛtvāveśe sati bhavati karmasv adhikṛtis tataḥ
+kartṛtvaṃ syāt tadanu phalabhoktṛtvam api ca /
+vimuktasyānena dhruvam akhiladuḥkhapraśamanaṃ
+vimuktyarthopāyas tad anusaraṇīyaḥ prathamataḥ // JMK_1.32 //
+
+ramaṇīyacaraṇaḥ — (kiṃcid iva parāvṛtya) vatse sattvaśuddhe, ehi vandasva devam /
+
+sattvaśuddhiḥ — (upasṛtya) deva, paṇamāmi / [deva, praṇamāmi /]
+
+jīvaḥ — vatse, abhimatena yujyasva /
+
+sattvaśuddhiḥ — ahimadā me devī / [abhimatā me devī /] (iti buddher aṅkam ārohati /)
+
+jīvaḥ — aho, sattvaśuddhyāḥ saṃsparśamātreṇa prasannā devī prakṛtisthā ca saṃvṛttā /
+
+buddhiḥ — vacche sattasuddhe, aviralaṃ maṃ parissajehi / [vatse sattvaśuddhe, aviralaṃ māṃ pariṣvajasva /]
+
+sattvaśuddhiḥ — (tathā karoti)
+
+buddhiḥ — vacche, ajjautto vi saṃbhāviadu parisaṅgeṇa / [vatse, āryaputro 'pi saṃbhāvyatāṃ pariṣvaṅgeṇa /]
+
+jīvaḥ — devi, mā maivam / yatas tvayi pariṣvaktāyām aham api pariṣvaktaprāya eva /
+
+dhyāyatīva janas tv eṣa dhyāyantyām tvayi vallabhe /
+calatīva calantyāṃ ca na svatantraḥ svayaṃ kvacit // JMK_1.33 //
+
+buddhiḥ — īriso ahiṇiveso assim jaṇammi ajjautassa / [īdṛśo 'bhiniveśo 'smiñ jane āryaputrasya /]
+
+jīvaḥ — kim etad upacāraḥ /
+
+nīrakṣīravad āvayor upanatā kālād bahor ekatā
+viśleṣasya kathā kathaṃcid api na svapne 'pi saṃbhāvyate /
+kiṃ ca tvadguṇasāratāmahimataḥ karteti bhokteti ca
+prāyeṇa vyapadeśabhājanam ahaṃ jāto jaganmaṇḍale // JMK_1.34 //
+
+buddhiḥ — edaṃ vi ṇāma ajjauttassa paḍiggahappahā go / kahaṃ aṇṇahā muddhapakidīe maha taha taha ppahāsaṃbhavo / [etad api nāmāryaputrasya parigrahaprabhāvaḥ / katham anyathā mugdhaprakṛter api mama tathā tathā prathāsaṃbhavaḥ /]
+
+jīvaḥ —
+mugdhā tava prakṛtir astu taveyatā
+kim āyātam āyataviśālaviloladṛṣṭe /
+mūḍhaḥ piteti tanayo 'pi kathaṃ tathā syāl
+lālājalāyitasamastakalākalāpaḥ // JMK_1.35 //
+
+api ca,
+
+mugdhe devi parigrahas tvam iti yat tenānubhāvena me
+jīvo jīva iti praśastir iyatī viśvaṃ yayā vyāpyate /
+no ced evam apāṇipādavapuṣaḥ sattāva(ti/śi)ṣṭasya te
+kāntasyāsya guṇojjhitasya bhuvane nāmāpi gṛhṇātu kaḥ // JMK_1.36 //
+
+ramaṇīyacaraṇaḥ — devyāyatta eva devasya saṃsārikaḥ sarvo vyavahāra ity etal likhitapaṭhitam eva lokānām /
+
+jīvaḥ — ayi devi,
+
+tāvat saṃsṛtivibhramo mama bhaved yāvat tvayā saṃgamo
+viśleṣo yadi magnam eva bhuvanaṃ manye kim anyat tadā /
+kiṃ paśyāmi kimu spṛśāmi kim ahaṃ jalpāmi jighrāmi kiṃ
+kiṃ vā nāma śṛṇomi kiṃ punar ahaṃ jānāmi yatkevalaḥ // JMK_1.37 //
+
+buddhiḥ — mai rūḍhamūlo mamadāhimāṇo ajjauttaṃ evvaṃ vāhārei / [mayi rūḍhamūlo mamatābhimāna āryaputram evaṃ vyāhārayati /]
+
+jīvaḥ — devi, ahaṃtābhimāna iti vaktavyam /
+
+ramaṇīyacaraṇaḥ — īdṛśam abhinnaṃ dāmpatyam ardhanārīrūpasya mahato devasya devasya vā /
+
+sattvaśuddhiḥ — evvaṃ edaṃ / [evam etat /]
+
+jīvaḥ — ramaṇīyacaraṇa, kutaḥ praśāntavega iva ratho dṛśyate?
+
+ramaṇīyacaraṇaḥ — avasito viṣamo jāgaritanāmā vanoddeśaḥ, pratyāsannaś ca svapnārāmaḥ / tataś ca,
+
+svapnārāmasya sāṃnidhyāt supteṣv indriyavājiṣu /
+praśāntaspandasaṃbādho ratho 'yam avatiṣṭhate // JMK_1.38 //
+
+jīvaḥ — kathaṃ saṃnihitaḥ svapnārāmaḥ? (parito dṛṣṭiṃ prasārya)
+
+kuṭajavakulamallīkundamandāranānāmadhu-
+parimalapālīmāṃsalāṅkāvakāśā /
+samadaśakunibṛndāmandanād ābhirāmā
+sphurati nirūpameyaṃ svāpnikārāmasīmā // JMK_1.39 //
+
+aye ramaṇīyacaraṇa, ihasthena tvayā paripālyatām eṣa rathaḥ / yāvad aham amum ārāmaṃ praviśya sattvaśuddhidvitīyayā devyā saha viharāmi /
+
+ramaṇīyacaraṇaḥ — tathā / (iti sthitaḥ)
+
+jīvaḥ — (devyā sattvaśuddhyā ca saha nāḍīdvārā svapnārāmapraveśaṃ nāṭayitvā /) devi, atrāyaṃ puruṣaḥ svayaṃjyotir atrabhavatyāḥ sāhāyakam apekṣate /
+
+buddhiḥ — piaṃ me / [priyaṃ me /]
+
+jīvaḥ — (samantād avalokya) aho asya svapnārāmasya rāmaṇīyakam / devi, dṛśyatām ābhirūpyam ārāmasya / iha hi,
+
+marakatamaṇicchāyāḥ kecin mahīruharāśayaḥ
+kanakanikaṣasnigdhāś cānye pare sphaṭikasphuṭāḥ /
+valabhidupalaśyāmāś caike kusumbhaviḍambinaḥ
+katicid itare nānāvarṇāḥ suvarṇaphalodgamāḥ // JMK_1.40 //
+
+api ca,
+
+kvacit pratinavāṅkuraṃ kvacana pallavollāsavat
+kvacid vikacakuṭmalaṃ kuhacid acchagucchacchavi /
+kvacit phalabharānataṃ kvacana bhṛṅgasaṃghātabhṛt
+samullasati nandanaṃ vanam ivedam ānandanam // JMK_1.41 //
+
+hanta hanta dṛṣṭanaṣṭasvarūpāṇi pūrvadṛṣṭasarūpāṇi pratikṣaṇonnidravyaktyākṛtijātyanyathātvabhāñjy atratyāni vastūni / tathā hi,
+
+hastīty ākalitaḥ kṣaṇena sa mahān adriḥ samāpadyate
+sadyaḥ sa drumatām upaiti sa punaḥ pakṣiprathāṃ gāhate /
+ajñātaṃ śatayojanāntaritam apy adhyakṣam ālakṣyate
+vastu prāptimad apy apūrvam iva saṃprāptavyam āste punaḥ // JMK_1.42 //
+
+devi, dīyatām ito dṛṣṭiḥ /
+
+bālātapaś candrikayā taruṇyā
+saṃśliṣyate saṃprati nirvirodham /
+hriyeva kiṃcin mukulīkṛtāni
+vāpībhir abjotpalalocanāni // JMK_1.43 //
+
+buddhiḥ — (vilokya vismayastaimityaṃ rūpayati)
+
+(nepathye kalakalaḥ |)
+
+jīvaḥ — (karṇam dattvā, sollāsam)
+
+śukakekikokilamadhuvratasvanair avibhāvyamānanijabhedavaibhavam /
+lalitasvarakramaviśeṣalakṣitaṃ
+sutanor iva vyavahṛtaṃ niśamyate // JMK_1.44 //
+
+devi, ārāmasīmāyām avadhāraya śrutim /
+
+buddhiḥ — (aśrutim abhinīya sāṅgabhaṅgaṃ tiṣṭhati)
+
+jīvaḥ — sattvaśuddhe, devī nidrālaseva lakṣyate / dhārayasva tāvad enām /
+
+sattvaśuddhiḥ — (tathā karoti)
+
+(punar nepathye)
+
+ārāmam eva māyotthaṃ svapnanirmāṇalakṣaṇam /
+mama sarve 'pi paśyanti na māṃ paśyati kaścana // JMK_1.45 //
+
+jīvaḥ — (śrutvā) atigabhīramanoharaṃ vacanam /
+
+(punar nepathye)
+
+upary upari saṃcarann api na kaścid akṣetravid-
+dhiraṇyanidhim antasthe vinihitaṃ yathā vindati /
+na vindati tathaiva mām ahar ahar bhajann apy aho
+vimohapihito janas tad iha kasya kiṃ vā bruve // JMK_1.46 //
+
+jīvaḥ — (śrutvā) asaṃśayaṃ niratiśayarūpalāvaṇyasaundaryaparyavasānabhūmitayā svasyānurūparamaṇānupalambhasaṃbhūtam ārāmābhimāninyā nigūḍhāyāḥ kasyāś cit kanyakāyā vacanam etad iti me niścayaḥ / hanta, hanta,
+
+akṛtrimamanojño 'yam akṣarāṇām anukramaḥ /
+akhaṇḍānandapadavīm adhyāropayatīva mām // JMK_1.47 //
+
+vatse sattvaśuddhe,
+
+mīnastrīva mahānadītaṭabhuvoḥ svapnāntabuddhāntayoḥ
+paryāyeṇa gatāgataṃ vidadhatī devī nikāmaklamā /
+eṣo 'haṃ ca tathā tathā vyavaharan prāpto 'smi nāma śramaṃ
+vyomāgre parimaṇḍalāni vicaran nātho yathā pakṣiṇām // JMK_1.48 //
+
+tad atisaṃnihite 'sminn atimuktātmamaṇḍape nidrālasāṃ devīṃ sukhaśāyinīṃ vidhehi / aham apy ārāmavirāmabhuvam abhigamya nirdhāritaśabdapravṛttimūlas tad evātimuktātmamaṇḍapam anupravekṣyāmi //
+
+sattvaśuddhiḥ — (tathā karoti)
+
+jīvaḥ — (parikramyāvalokya ca, saharṣāścaryasaṃbhramautsukyam) hanta, saphalam adya saṃjātaṃ janma /
+
+iyaṃ sā kalyāṇī sulalitalatāmūlanilayā
+payodenālīḍhā taḍid iva jaganmohanatanuḥ /
+avasthābhedena sthitim upagatā kācid adhunā
+sadānandasphūrtiḥ sutanur iti saṃmohayati mām // JMK_1.49 //
+
+hanta, na paryāpnuvanti sahasram api locanāni sahasralocanasya saundaryam asyā nirvarṇayituṃ, varṇayituṃ vā vāco 'pi vācaspateḥ / tathā hy asyāḥ,
+
+śrībinduḥ śaradindur āsyagalito dṛkkoṇa indīvaraṃ
+leśā hāsarucāṃ sumāny adharabhūsaṃpallavaḥ pallavaḥ /
+aṃśo merur asaṃśayaṃ mṛgadṛśo vakṣojayor uccayos
+tan manye vapurekadeśavibhavo viśvaśriyo 'pi śriyaḥ // JMK_1.50 //
+
+api ca,
+
+pādau padmabhuvaḥ śriyaḥ sahacarau pāṇī śivavyañjanau
+keśāḥ keśavadivyarūpasuhṛdaḥ śrutyantaraṅge dṛśau /
+etasyās trijagaty acumbitacamatkārāvalambākṛter
+aṅgaṃ sarvam anaṅgamaṅgalam aho varṇyeta kiṃ kena vā // JMK_1.51 //
+
+kiṃ bahunā,
+
+karambayati ced iyaṃ kamalagarvasarvaṃkaṣām
+apāṅgaparipāṭikām alam alaṃ surāṇāṃ śriyā /
+atha svarasam ātmanā yadi kadācid āliṅganaṃ
+taraṅgayati jīvato mama sa eva mokṣotsavaḥ // JMK_1.52 //
+
+kā punar eṣā bhavet / atha vā bhavatu yā kācid eṣā / paścād aśeṣaṃ vicārayiṣyāmi / sarvathā tāvad enayā saṃpraty eṣa saṃpadye / (iti parikramya, niṣkrāntāḥ sarve)
+
+// iti prathamo 'ṅkaḥ //

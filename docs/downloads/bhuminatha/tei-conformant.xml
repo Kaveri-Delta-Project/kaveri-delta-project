@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_bhUminAthakavi-dharmavijayacampU-1">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Dharmavijayacampū, prathamastabakaḥ (first stabaka)</title>
+	<author>Bhūmināthakavi (Nallādīkṣita)</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Team of the Kaveri Delta project</name>
+	</respStmt>
+	<funder>Arts and Humanities Research Council (AHRC), project UKRI2578 “Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800”, University of Cambridge</funder>
+  </titleStmt>
+
+    <notesStmt>
+	<note>This file was created as part of the AHRC-funded project 'Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800' (UKRI2578), based at the University of Cambridge (UK).</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Dharmavijaya Campu by Bhuminatha Kavi or Nalla Dikshita. Tanjore Maharaja Serfoji's Sarasvati Mahal Library, Thanjavur, 1980</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>Text prepared within the AHRC-funded project “Beyond the Court: Sanskrit Expert Knowledge in Brahmanical Communities of the Kaveri Delta, 1650-1800” (UKRI2578), University of Cambridge.</p>
+  </projectDesc>
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.
+	 The crux (†…†) of the printed edition is retained and encoded as <gi>sic</gi> with <att>rend</att>="crux".</p>
+	</correction>
+
+	<normalization>
+	 <p>The text is normalized in accordance with the International Alphabet of Sanskrit Transliteration (IAST), as in the rest of the GRETIL corpus.
+	 Daṇḍas are rendered as / and //; the avagraha is rendered by the apostrophe; ṁ has been normalized to ṃ.</p>
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>t</cell>
+	 <cell>LATIN SMALL LETTER T</cell>
+	 <cell>U+0074</cell>
+	 </row>
+	 <row>
+	 <cell>d</cell>
+	 <cell>LATIN SMALL LETTER D</cell>
+	 <cell>U+0064</cell>
+	 </row>
+	 <row>
+	 <cell>n</cell>
+	 <cell>LATIN SMALL LETTER N</cell>
+	 <cell>U+006E</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+	</normalization>
+
+	<segmentation>
+	 <p>The text of the stabaka is a <gi>div</gi> containing verses (<gi>lg</gi>, one <gi>l</gi> per line of the input) and prose paragraphs (<gi>p</gi>) in the order of the edition.
+	 The final daṇḍa(s) that carry the numbers of the edition are retained as // and the number is given in <att>n</att>.</p>
+	</segmentation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>References are given in the <att>xml:id</att> attributes:
+  <list>
+	<item>verses: DhVC_1.<label>n</label> (abbreviation of the title, number of the stabaka, number of the verse: DhVC = Dharmavijayacampū),</item>
+	<item>prose passages: DhVC_1.p<label>n</label> (the prose passages are numbered separately in the edition).</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Kāvya -- Campū</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2026-09-29" who="#conv">TEI encoding of the input file</change>
+  </listChange>
+  </revisionDesc>
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="DhVC">
+  <body>
+<div type="stabaka" n="1">
+  <head type="invocation">śrīmane hayagrīvāya namaḥ</head>
+  <head type="main">bhūmināthakavikṛtā dharmavijayacampūḥ</head>
+  <head type="stabaka">prathamastabakaḥ</head>
+  <lg xml:id="DhVC_1.1" n="1" type="verse">
+    <l>vibudhakulasamṛddhiḥ susthirā yena klṛptā</l>
+    <l>praṇamadabhayadāne yasya dīkṣā pratītā /</l>
+    <l>janakanṛpatikanyādhanyapārśvaḥ sa devaḥ</l>
+    <l>śahajinarapatīndoḥ śreyase bhūyase 'stu //</l>
+  </lg>
+  <lg xml:id="DhVC_1.2" n="2" type="verse">
+    <l>viśvakhyātaikarājāmitasukṛtaparīpākabhūto 'nutaśrīḥ</l>
+    <l>kausalyāyām ivābhūd raghukulatilako yo 'tra dīpāmbikāyām /</l>
+    <l>sa śrīmadbhosalākhyāmalakulajaladher indur indhānatejaḥ-</l>
+    <l>sāndraḥ śāhāvanīndro jagati vijayatāṃ mūrtimān rājadharmaḥ //</l>
+  </lg>
+  <lg xml:id="DhVC_1.3" n="3" type="verse">
+    <l>rāmabhadracaraṇāravindayor āśrayaprabalitaś cikīrṣati /</l>
+    <l>bhūmināthakavicakravarty asau śāhadharmavijayoktisāhasam //</l>
+  </lg>
+  <lg xml:id="DhVC_1.4" n="4" type="verse">
+    <l>asmābhiḥ pañcaviṃśe vayasi madavaśe paṇḍitammanyamukhyais tattādṛkṣāticitrakramakavanapathavyāpṛtais tāpitāsi /</l>
+    <l>tatpuṇyaślokaśāhādhipacaritasudhāpūragāḍhavagāhair</l>
+    <l>niḥśeṣaṃ yātu śāntiṃ bhuvanajanani vāgdevi me samprasīda //</l>
+  </lg>
+  <lg xml:id="DhVC_1.5" n="5" type="verse">
+    <l>icchāmātrāt trayam idam upānamratāṃ yāti yeṣāṃ</l>
+    <l>hṛdyollekhaḥ saralaracanā komalaṃ saṃvidhānam /</l>
+    <l>ācandrārkaṃ sarasakavayaḥ kṣemam ete bhajantaḥ</l>
+    <l>pṛthvīcakraṃ kukavinihataṃ śaśvad ujjīvayantu //</l>
+  </lg>
+  <lg xml:id="DhVC_1.6" n="6" type="verse">
+    <l>śaṅkāsaṅkulam īritaiḥ sumahatā yatnena padyādhamaiḥ</l>
+    <l>dvitrair eva duranvayaiḥ pratimuhur vismṛtya cetodhṛtaiḥ /</l>
+    <l>bhūyo vaśyagirāṃ mahāmatimatām udgīrṇakarṇajvaraiḥ</l>
+    <l>śreyaḥ svānucitaṃ bhajanti katicid dhiṅ mūrkhabhāvaṃ vidheḥ //</l>
+  </lg>
+  <lg xml:id="DhVC_1.7" n="7" type="verse">
+    <l>sāhityaratnakośāya śabdabrahmasvarūpiṇe /</l>
+    <l>rāmabhadrāya makhine rāmabhaktyabdhaye namaḥ //</l>
+  </lg>
+  <p xml:id="DhVC_1.p1" n="1">iha khalu nikhilalokapāvanagaṅgātaraṅgaśīkaranikarotkirasamīrakiśorāpanudyamānaratāntaśrāntibhir uddāmasaundaryasampadabhidarpitāntaḥkaraṇais taruṇair aharniśam abhiśobhitena śāradaśaśāṅkamaṇḍalasahodareṇa ramyatareṇa harmyasahasreṇa pariṣkṛtāṃ, annapūrṇāmbikānukampāsampāditaparipoṣaṇasusthatarapauraparibhāsurāṃ, yuvajanaratāntānandamūrcchāvasareṣv api tārakamantropadeśavyagrasya bhagavato viśvanāthasya sāṃnidhyasātatyād ananyasāmānyadhanyatādhurandharāṃ vārāṇasīm adhigamya paritaḥ prasṛtayavanajālahālāhalagaralagurupariploṣito, nijānubhavamātrasaṃsūcyamānamahimā, dharmapuruṣaḥ kālakūṭanigrahasamudagraśaktisamagraṃ, viśrutāgaṇyakāruṇyabharaṃ, viśveśvaraṃ śaraṇīkaraṇīyam avadhārya nigamāntasantatipraśastaguṇastomaṃ tam itthaṃ prārthayata — //</p>
+  <lg xml:id="DhVC_1.8" n="8" type="verse">
+    <l>dadhatam urasi nistulāṃ viśāle giritanayākucakuṅkumāṅkaśobhām /</l>
+    <l>tuhinakarakalāvilāsimauliṃ śaraṇam ahaṃ kalayāmi viśvanātham //</l>
+  </lg>
+  <lg xml:id="DhVC_1.9" n="9" type="verse">
+    <l>praṇatiparasamastadevamaulisphuritakirīṭamahāmaṇiprabhābhiḥ /</l>
+    <l>vilasitanijapādapuṇḍarīkaṃ śaraṇam ahaṃ kalayāmi viśvanātham //</l>
+  </lg>
+  <lg xml:id="DhVC_1.10" n="10" type="verse">
+    <l>munihṛdayasarojacañcarīkaṃ bhavaparitāpadavāgnivārivāham /</l>
+    <l>caraṇavinatalokapārijātaṃ śaraṇam ahaṃ kalayāmi viśvanātham //</l>
+  </lg>
+  <lg xml:id="DhVC_1.11" n="11" type="verse">
+    <l>nikhilanigamamūrdhamṛgyam ekaṃ jagati vacomanasor atīva dūram /</l>
+    <l>bahuvidhajagadātmanā sphurantaṃ śaraṇam ahaṃ kalayāmi viśvanātham //</l>
+  </lg>
+  <lg xml:id="DhVC_1.12" n="12" type="verse">
+    <l>tṛṣṇāṃ vārayate havīṃṣi vahate śrautakriyās tanvate kokān modayate jagat sukhayate tadvaibhavaṃ vibhrate /</l>
+    <l>gandhaṃ dharmayate mṛgaṃ hayayate sṛṣṭiṃ sthitiṃ saṃhṛtiṃ kurvāṇāya namo 'ṣṭamūrtaya idaṃ bhūyāt trimūrtyātmane //</l>
+  </lg>
+  <p xml:id="DhVC_1.p2" n="2">iti prapattyā praṇatyā ca viracitasāṃnidhyaṃ so 'yam evaṃ sarvajñaṃ vyajñāpayata — svāmin adhunā kila sakalalokanāthe tvayi jāgarūke 'py adhvarān vidhvaṃsayatā, vedaghoṣaṃ viśoṣayatā, puṇyatīrthāni kadarthayatā, kṣetrāṇi paritrāsayatā, mahīdevān paridevayatā, citraguptaparārddhenāpy avilekhanīyapāpanilayena, <sic rend="crux">tucchetām api</sic>, mlecchapatinā tiraścām api dayanīyām īdṛśīṃ daśām upagamitaṃ vijānann api māṃ sakalāntaryāmin nijālayāpacāram apy avicārayan katham upekṣyamāṇa evāṣṭamūrte vartase //</p>
+  <lg xml:id="DhVC_1.13" n="13" type="verse">
+    <l>tat tena durvinītena tapyamānāḥ prajā imāḥ /</l>
+    <l>kāruṇyāmṛtavarṣeṇa siñca māṃ ca dayasva bhoḥ //</l>
+    <trailer>iti</trailer>
+  </lg>
+  <lg xml:id="DhVC_1.14" n="14" type="verse">
+    <l>tataḥ prasannaḥ pramathādhināthaḥ kāruṇyaniṣyandikaṭākṣapātaḥ /</l>
+    <l>ānandayat taṃ vacanair gabhīrair yathā mayūraṃ rasitaiḥ payodaḥ //</l>
+  </lg>
+  <p xml:id="DhVC_1.p3" n="3">adya kila sākṣāt kaler uttamāvatārasya mlecchapater nirāsecchayā sakalaprajāparirakṣaṇavicakṣaṇo dharaṇim avatīrṇo madīyāṃśa eva bhosalavaṃśaṃ pariṣkurvan sarvasadguṇaratnaratnākaraḥ śāhamahārājo nāma mañjutaraviniveśasamañcitāṃ tañjānagarīm adhivasati //</p>
+  <lg xml:id="DhVC_1.15" n="15" type="verse">
+    <l>tad viṣādam imaṃ muñca cañcaletaramānasaḥ /</l>
+    <l>bhaja rājavareṇyaṃ tam antarā naiva te gatiḥ //</l>
+  </lg>
+  <p xml:id="DhVC_1.p4" n="4">ity uditavatā prahito jagatprabhuṇā, tatkṣaṇam eva prasthitaś cirakālaparicayavaśena dustyajam apy āryāvartam apagatasajjanavārtaṃ kathaṃkathañcid ativāhya stambhitabāṣpāmbhaḥprasaraḥ, pratipadaṃ yavanasañcaraṇaprapañcitabhītiḥ, puṇyatīrthakṣetradharmāraṇyādimārgeṇa tirohitākṛtir mandamandam āgacchan, vyatītya nadīvarāṃ godāvarīṃ, tadīyataṭanikaṭe nityasannihitaṃ bhaktajanābhīṣṭadānadhurandharaṃ paraṃ dhāma kodaṇḍamaṇḍitabhujadaṇḍaṃ natvā, stutvā, dhyātvā ca vidhivan nijahṛdayakamalakuhare, vilaṅghitakṛṣṇāsindhur niṣevitaśrīśailapatiḥ samuttīrya tūrṇaṃ suvarṇamukharīṃ, ārādhitakālahastinātho, vyatītaḥ kuśasthalīṃ, kāñcīnāyakam ekāmravibhuṃ kāmākṣīṃ ca parāśaktim abhivandya, kampābāhusaritpinākinīgaruḍāpagāśvetanadīḥ krameṇātikramya, pavitraṃ vimuktikṣetraṃ cidambaram āsādya, vedāntavidyāvedyaṃ kanakasabhāvibhuṃ paramātmānam ātmani bhāvayan, uttarakāverīm uttīrya, śāhamahīkṣitā surakṣitām akhilakaraṇasamāhlādinīm āsīdan mahanīyāṃ colamahīṃ so 'yaṃ prapannavaidyeśvaraḥ, sahyadharaṇīdharakīrtipatākāṃ, nijasapatnyāṃ yamunāyām asūyayeva sakalalokapāpanikaranirākaraṇena tadbhrātur vivasvattanayasyādhikārabhraṃśam āpādayantīṃ, tīrānokahanivahavigalitakusumapālibhis taraṅgasaṅgavalibhaṅgais tīradvayanīlaśilāsopānasantatikāntisandohasaṅkrāntapravāhanailyena ca coladharaṇīveṇīvilāsam ullāsayantīṃ, nirmalasalilabimbitanīlajaladharapaṭalakalaṅkitanijatalāvalokanād aṅkuritapaṅkaśaṅkānāṃ kathañcid apy ādhoraṇapreraṇakṛtāvataraṇānāṃ śahajirājavetaṇḍaprakāṇḍānāṃ majjanakelisaṅkalitair madajalāsārair adhivāsitāṃ, rājanīticatureṇa bhosalakulāvataṃsena rājanvati colarāṣṭre nityamuditanirantaranīravihāraparataruṇījanavyāvalgatkucakulācalaprakṣobhaparipreṅkhitatuṅgataraṅgasaṅghasaṅkulāṃ, svapayaḥ paripoṣitatayā tīramahīruhair mātṛgauravād iva vikīrṇapuṣpanikaraiḥ phalabharavahanāsahanāpadeśena vinamitaśirobhir abhisevitāṃ, svavīcīśīkarāsāracorasamīrakiśorasaṃsparśanena nijadarśanena cāśeṣakilbiṣaviśoṣaṇāt kevalaṃ sakalajananirṇejanamātralambhitaphalasalilāṃ, caturdaśavidyānavadyabrāhmaṇarūpatayā deveṣu śāhamahīmahendreṇa surakṣyamāṇāṃ, tridivād api spṛhaṇīyatarasaubhāgyāṃ, colabhuvaṃ samavatīrya grāmarūpān vimānān adhyāsiteṣu tadīyapānocitāṃ sudhām iva pravahantīṃ, apatyanirviśeṣam ātmaparirakṣitānāṃ śāharājarāṣṭravāsinām amitramadyasaṅghaṃ nihantum iva taraṅgahastavidhūnitāyatamīnakṛpāṇāṃ, pratipadavivartitāvartakheṭāṃ, vijṛmbhitasaṅkulataraṅgaghoṣaparikṣvelitāṃ svargasamādhirohaṇasopānarājiṃ hṛdayagranthinikartanakartarīṃ, duravagāhavedāntakāntāradīpikāṃ, mokṣadvārakavāṭikodghāṭanakuñcikāṃ, śāhanṛparipunṛpasenām iva meduramādhurīdharāṃ, tadīyabhujām iva sattaravāriśobhitāṃ, pinākivedyamāhātmyām apy apinākivedyamāhātmyāṃ, kavitatihāriṇīm apy akavitatihāriṇīṃ, sakalamohakāriṇīm api sakalamohanivāraṇīṃ, vāṅmanasātibhūmivaibhavāṃ, kāverīm arcati sma vidhūtānandāśrumakarandābhyāṃ vilocanāravindābhyām //</p>
+  <lg xml:id="DhVC_1.16" n="16" type="verse">
+    <l>yasyām ajasraṃ sarasāntarāyāṃ sakte 'nuvelaṃ saritām adhīśe /</l>
+    <l>anyās taṭinyo bhuvi santv asaṅkhyāḥ saivāsti gaṅgā viraheṇa pāṇḍuḥ //</l>
+  </lg>
+  <p xml:id="DhVC_1.p5" n="5">tadanu tasyāṃ mathitaduritasārthe māyūratīrthe yathāvidhi kṛtābhiṣavaṇo dharmapuruṣo 'yam abhivanditacandracūḍacaraṇāravindaḥ prakampanaparikampitaśākhākaśāgratāḍanair eva dinakaraturagapracodanayā viśrāṇitāruṇasārathyāyāsaviśrāntisukhānāṃ, pālikākoṭiparividdhasudhākarabimbaviniḥsṛtais tanmārgeṇaiva samāścyotanād antarabhilīnair amṛtair iva madhurataraiḥ salilaiḥ paripūritena phalabhareṇa vivardhitakāminīkucaspardhānāṃ, parasparaparighaṭitaśākhāpaṭalakāyamānasyādhārastambhaśobhām abhijṛmbhayatāṃ, bhosalakulapatividvajjanānuṣṭhīyamānamakhaparamparāsu nirjaranikaragatāgatopāyabhūtānāṃ, nirantaranipatitapariṇamraphalajāladanturīkṛtāntaramūlabhāgānāṃ, koṭaragatakīramadhurataravirutāmṛtāni śrutipuṭābhyām āpivadbhiḥ pracchāyaśītale mūlatale susnigdhakomalaśāḍvalaśayyām adhiśayānair adhvaśramaviśrāntimantharapānthanikaraiḥ sādarakaṭākṣapātaṃ praśasyamānasaubhāgyānāṃ nālikerāṇām //</p>
+  <p xml:id="DhVC_1.p6" n="6">surabhilakusumapālīvigalitabālakadalīdalāntarālasaraṇikulyāpravāhibahalamakarandarasapūraparipūritālavālānāṃ, abhaṅguramadhumadasaṅgamitajhāṅkārakaitavena madhurataranijamadhurasapraśaṃsāmukharasya madhukaranikarasya niḥsvanitasārasyam uddiśya mandagandhavahaspanditāgratayā śiraḥkampam iva saṃpradarśayantīnāṃ, mandamārutavilolaviśālakomalamaratakaśilāphalakaruciradalāntarālaviniṣaṇṇaphalāsvādapramadataralitaśukadampatisamanubhūyamānaḍolāvibhramaparibhrājitānāndadāmatāruṇyamadaśaraṇyābhir agaṇyamahimaśāhadharaṇīpapuṇyataracaritagītininādinībhiḥ śāligopasundarībhiḥ savilāsasamāsevitasnigdhaśyāmalamahekṣuprativalayaparimaṇḍitānāṃ, kadalīnām //</p>
+  <p xml:id="DhVC_1.p7" n="7">jaladharanikarapratyādeśaprasnigdhaparisāndranijābhogasandarśanasantatasantuṣṭaśikhaṇḍimaṇḍalapracaṇḍīkṛtatāṇḍavena kisalayacarvaṇagarvitabālakokilaprapañcitālāpabandikolāhalena makarandamandacañcalacañcarīkasaṅghajhaṅkṛtisaṅgītasampadā ca nikhilatalasārvabhaumatāṃ prakaṭayatāṃ makarandamandadhārāniṣyandanena lolambanikurumbanibiḍatayā ca gandhasindhuraśriyam āśrayatāṃ salīlasañcaraṇataruṇasāraṅgakhurapuṭavidalitapatitapariṇamraphalabharaprasṛtarasaprasarārūpīkṛtamūladeśānāṃ samudagranijāgrasurabhilakusumastabakaparāgasamadhivāsitaviyadāpagāsalilānāṃ samīrakiśorasamullalitataruṇapallavāṅgulivyāpārair ātapakathānabhijñe mandānilavalanakamanīye nijatale madanavilāsākalanāya yuvajanāhvānam iva vitanvatām ākandānām itareṣām api mahīruhāṃ kānanair alaṅkṛtāṃ, alaṅkṛtiṃ jambūdvīpasya, khaniṃ vidvatkaviratnānāṃ, pratisṛṣṭiṃ triviṣṭapasya, mahotsavapariṇatiṃ paśyajjanadṛśām āvasathaṃ praśastasamastavastūnām agocaraṃ vacasām uccāvacasaubhāgyadhurandharāṃ colavasundharāṃ paryaṭan avindata mahāntam antarānandam //</p>
+  <lg xml:id="DhVC_1.17" n="17" type="verse">
+    <l>samedhinānāvidhasasyabhāsurāṃ surakṣitāṃ śāhanareśvareṇa yām /</l>
+    <l>kṛṣīvalastrīnayanāmbujārcitāṃ trir ekamāsasya ghano 'bhivarṣati //</l>
+  </lg>
+  <lg xml:id="DhVC_1.18" n="18" type="verse">
+    <l>aratnimātraiḥ paripākapāṇḍurīkṛtākhilāśaiḥ kaṇiśair vinamritāḥ /</l>
+    <l>atīva śālyaḥ pariśobhayanti yāṃ mahārhabhūṣā iva divyasundarīm //</l>
+  </lg>
+  <p xml:id="DhVC_1.p8" n="8">yasyām atipraśastavaibhavāni, amitakusumabharanamitanānāvidhatarulatānilīnamadhukarārāvavirāvitair abhraṃlihaparisnigdhamaratakamecakamandamārutāpūritamadhurasvarasuṣirakīcakaparivṛtaiḥ parito 'pi devodyānair upavilasitāni, kuhacana mahati maṇḍapāntare māṇavakādhīyamānanamakacamakaninadamukharitaharinmukhair, anyatra vividhāgamavyākhyānavisṛmaraghoṣaparighoṣitair, anyatra devānudhyānaniyamitahṛdayaniruddhaniśvasitaparamaśivayogipariśobhitair, itaratra devāpadānasamupavīṇanaparavaipañcikagītāmṛtarasāsvādaprasitaniścalīkṛtāṅgadevasāraṅgapotakadarśanīyatarair naṭanapaṭunaṭīcaṭulacaraṇaraṇitamaṇimañjīrānunādamedurair devasaṃnidhisamudīryamāṇaśāhavasundharāpurandaravijayāśīḥparamparair nabhovilaṅghanajāṅghikadīpraprākāravalayair adhyāsitamadhyaparipāvitāni, girirājakumārikāvilulokayiṣāsamāgatakulācalavilāsakarasyandanavṛndasundaritarathyāni, pade pade vibhānti pavitrāṇi kṣetrāṇi //</p>
+  <lg xml:id="DhVC_1.19" n="19" type="verse">
+    <l>yasyāṃ mahānty āvasatāṃ sthalāni dveṣyo na ṣaḍvargata īṣad anyaḥ /</l>
+    <l>kāṅkṣyo na mokṣād itaraḥ pumarthaḥ sevyo na cānyas taruṇendumauleḥ //</l>
+  </lg>
+  <p xml:id="DhVC_1.p9" n="9">yā kila sakalavidyāvīrudavalambanavidvajjanasuratarukṣīrasāgaraiś, catuṣpathaparimilitalīlālolabālakakulagīyamānakalamadhuraśāhamahārājavijayapraśastisamāsvādanāsāvadhānaparismeravidagdhajanasārthapariṣkṛtaiḥ, prāvṛṣeṇyapayodharādvaitaviyattalavisṛmaratretāgnidhūmastomasamavalokaharṣabharataralitamaṇḍalīkṛtakalāpataruṇakalāpilāsyapariṣkṛtaniṣkuṭavanasamañcitair, mahākavivarṇyamānabhosalavaṃśāvataṃsapāvanataracaritapraśastirasāyanasevanānandamantharāntaravipulabahirvedikāmilitapaṇḍitaprakāṇḍaparimaṇḍitair, amarapurasundarīsaundaryagarvasarvaṅkaṣapuṣpāpacāyivaravarṇinīkamanīyadehakāntisandohadhavalitasaudāminīrucipuñjapiñjaritanīlajaladharasahodarārāmamahīruhollasitair aśrāntotsavaśālibhir, anāśritasaṅkhyāyogair, akhilasaubhāgyasamagrair, agrahārair alaṅkriyate //</p>
+  <lg xml:id="DhVC_1.20" n="20" type="verse">
+    <l>pratyagrahāraṃ pramadena yasyāṃ śāhādhirājasya śubhaṃ caritram /</l>
+    <l>janāḥ stuvanto 'nugṛhaṃ mahāntaṃ kṣipanti kālaṃ kṣaṇatulyam eva //</l>
+  </lg>
+  <p xml:id="DhVC_1.p10" n="10">yasyāṃ samañcitavāggumphaprapañcitavaiduṣīviśeṣacchātrajanacchaladiktaṭapratiṣṭhāpitajaitradhvajair, mahāphalanidānacaturdaśavidyāvīrudupaghnabhūruhaiḥ, ṣaṭkarmānuṣṭhānānalādhiṣṭhitavasiṣṭhādimunivariṣṭhair, bṛhaspatipratyādeśair, ādiśeṣapratinidhibhiḥ, satkavikāvyair iva puṇyaślokaiḥ, purāṇajālair iva sabhārataiḥ, śāharājacaritair iva sadāmodibhiḥ, saṅkhyāvadbhir apy asaṅkhyaiḥ, sadveṣair apy adveṣaiḥ, samadāntair apy asamadāntaiḥ, paṇḍitaprakāṇḍaiḥ parimaṇḍitam ekarājapuram iti praśastaṃ cakāstitarām //</p>
+  <lg xml:id="DhVC_1.21" n="21" type="verse">
+    <l>yāṃ nityaṃ lālayaty uccaiḥ kurvan mṛdukaragraham /</l>
+    <l>sudṛśāṃ lālane dakṣaḥ śāhabhūmipurandaraḥ //</l>
+  </lg>
+  <p xml:id="DhVC_1.p11" n="11">tām etām atṛptimatā nayanayugalena bahumānayan asau dharmapuruṣaḥ parikramya krameṇa niṣevitanikhilapuṇyakṣetro vilocanarasāyanīkṛtābhirūpatarāgrahāraparamparaḥ kutūhalena colamahīmahanīyabhūṣaṇāyamānaṃ śāharājapuram upagamya samyag ānandād antara evam acintayat //</p>
+  <lg xml:id="DhVC_1.22" n="22" type="verse">
+    <l>mandaspandidalollasatphalabharavyānamrarambhāvanīkheladbālaśukānukāritabudhavyākhyānavākyakramaḥ /</l>
+    <l>eṣo 'śeṣam idaṃ nirasya sahasā maddainyam anyādṛśaṃ</l>
+    <l>hantānandabharaṃ tanoti vibudhagrāmo 'bhirāmo hṛdi //</l>
+  </lg>
+  <lg xml:id="DhVC_1.23" n="23" type="verse">
+    <l>vidvatsahasraparipuṣṭasamastavidyāghoṣeṇa bhittiṣu diśāṃ mukharīkṛtena /</l>
+    <l>ekendranandanayaśojayaḍiṇḍimākhyā vyākhyāyate hi muhur atra mahāgrahāre //</l>
+  </lg>
+  <p xml:id="DhVC_1.p12" n="12">ayam akhilalokapraśaṃsāprathamapadam agrahāraḥ svayam ucitajñaśekhareṇa śāhamahīndreṇa nānādigantarataḥ krameṇa saprayatnam upānītair ujjvalataratejaḥśālibhis trāsaleśarahitaiḥ suvṛttair atyarghapātrabhūtaiḥ sakalasujanābhinandanīyair vidvanmaṇibhir abhigumphitaś colapariṣkāro hāraḥ //</p>
+  <lg xml:id="DhVC_1.24" n="24" type="verse">
+    <l>ihatyavidvadvaravāṅnigumbhān gaṅgā yad anvañcati vīcivegaiḥ /</l>
+    <l>tan nityam atyādaraṇena dhatte sarvajña enāṃ śiva uttamāṅge //</l>
+  </lg>
+  <p xml:id="DhVC_1.p13" n="13">atra khalu vicitrataracaritrapavitrīkṛtadharitrītalāḥ sakalavidyāsv anavadyavaiśadyahṛdyā matimanto 'ntevāsijanam adhyāpayanto niścalavṛttayo vipaścitaḥ pariṣkurvate bahirvedim //</p>
+  <lg xml:id="DhVC_1.25" n="25" type="verse">
+    <l>sa kila jagati śeṣaḥ khyātamedhāviśeṣaḥ</l>
+    <l>paṭuvadanasahasreṇaiva yaṃ vyācakāra /</l>
+    <l>viśadayati mukhenaikena sarvaṃ tam arthaṃ</l>
+    <l>karabadaram ivāsau deśikaḥ śābdikānām //</l>
+  </lg>
+  <lg xml:id="DhVC_1.26" n="26" type="verse">
+    <l>cintāmaṇiprabhṛtibhūrigabhīrabhāvagranthāntarasthaghanavākyaśilāvibhedān /</l>
+    <l>vākcandrikāvisaraṇaiḥ sarasīkaroti naiyyāyikendur iha saiṣa jagatprakāśaḥ //</l>
+  </lg>
+  <lg xml:id="DhVC_1.27" n="27" type="verse">
+    <l>śrutivacanagocarābhir vāgdhāṭībhir nirargalābhir asau /</l>
+    <l>mīmāṃsate 'dhvaram aho jaiminir iva mūrtimān ito dhīmān //</l>
+  </lg>
+  <lg xml:id="DhVC_1.28" n="28" type="verse">
+    <l>vedāntavindhyavipine durāsade mandavaibhavair itaraiḥ /</l>
+    <l>viharati vidvatsiṃhas tadīyavṛddher nidānam ita eṣaḥ //</l>
+  </lg>
+  <p xml:id="DhVC_1.p14" n="14">adhunā kila nānādigantavāstavyāgantukapaṇḍitajanaśiraḥkampābhinandyamānakarkaśamahāgranthamarmabhedanālaṃkarmīṇavibudhakuñjarasamañcitaḥ, śiṣyajanapratijñāprakrāntavaktretaravādāṭopavikaṭabhrūkuṭīvilokanavismerodahārataruṇīvivalitamukhacandramañjularucipuñjarañjitavīthyantaro, vyavahāraparicchedanecchāsamāgatajānapadajanavivādānuyogacaṭulakakṣapuṭanyastapustakamāṇavakavirājitacchātrajanavijṛmbhitamānyataropanyāsavilekhanakṛtodyogasamāgatavaideśikagranthakṛtsūrinivirīso, mahākavivitīrṇabhosalavaṃśāvataṃsayaśaḥpraśastisamasyāpūraṇāhamahamikāpravṛtyāsaktanānāvidhollekhasamāhitacchātrajanaparistimitamukhāvalokanānandamantharāntaravidvadbṛndaḥ, kadalīpaṭṭamithyāpustakahastanāṭitaśiṣyabhāvasavayaḥparivṛtavyākhyākṛtābhinayakamanīyānupanatacaturabālakavilasitavidvadgṛhabahirvedikākoṇaḥ, kośagṛhaṃ sārasvatasarvasvasya, janmabhūmiḥ śrautasmārtakarmācaraṇasya, samuccāṭanamantraḥ kalimahāgrahasya, kīrtipatākā śāhasārvabhaumasya, sakalasadguṇasamagro 'yaṃ vidvadgrāmaḥ prāpto mama diṣṭyā dṛṣṭigocaratām //</p>
+  <lg xml:id="DhVC_1.29" n="29" type="verse">
+    <l>atrādya vidvatkavivarṇitāni śāhāvanīndoś caritāmṛtāni /</l>
+    <l>kṛtvā muhuḥ karṇarasāyanaṃ śvo gantāsmi taṃ rājavaraṃ vareṇyam //</l>
+  </lg>
+  <trailer>iti śrīmadviśvaviditabhosalakulapayodhisambhavaśahajirājasandarśanamātrasamudvelakṛtasārasvatasāgarasya nallādīkṣitasya kṛtau dharmavijaye prathamaḥ stabakaḥ //</trailer>
+</div>
+  </body>
+</text>
+</TEI>
