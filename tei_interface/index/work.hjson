@@ -68,6 +68,10 @@
     name: Brahmasūtrakutūhala
   }
   {
+    xml_id: w_147
+    name: Candrakalāśāhajīyam
+  }
+  {
     xml_id: w_22
     name: Candraśekharavilāsa
   }
@@ -318,6 +322,10 @@
   {
     xml_id: w_134
     name: Saubhāgyacandrātapa
+  }
+  {
+    xml_id: w_148
+    name: Sevāntikāpariṇaya
   }
   {
     xml_id: w_68

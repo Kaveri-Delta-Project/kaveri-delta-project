@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_147">
+          <title type="preferred">Candrakalāśāhajīyam</title>
+          <editor key="p_32" role="aut">Cokkanāthamakhin (younger)</editor>
+          <note type="genre">Play</note>
+          <note type="bibliographical" source="other">Ariav, Talia. Intimately Cosmopolitan: Genealogical Poets and Orchestrated Selves in 17–18th Century Sanskrit Literature from South India.</note>
+          <note type="general">This play embeds Telugu and Sanskrit songs. (See Ariav, Talia. Intimately Cosmopolitan: Genealogical Poets and Orchestrated Selves in 17–18th Century Sanskrit Literature from South India: p. 32).</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
