@@ -1762,6 +1762,34 @@
   },
   {
     "type": "work",
+    "id": "w_147",
+    "name": "Candrakalāśāhajīyam",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_147",
+    "places": [],
+    "persons": [
+      "Cokkanāthamakhin (younger) [p_32]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
+    "id": "w_148",
+    "name": "Sevāntikāpariṇaya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_148",
+    "places": [],
+    "persons": [
+      "Cokkanāthamakhin (younger) [p_32]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
     "id": "w_15",
     "name": "Śābdikarakṣā",
     "alt_names": [],
