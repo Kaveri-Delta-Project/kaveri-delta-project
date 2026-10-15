@@ -1790,6 +1790,20 @@
   },
   {
     "type": "work",
+    "id": "w_149",
+    "name": "Rasavilāsabhāṇa",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_149",
+    "places": [],
+    "persons": [
+      "Cokkanāthamakhin (younger) [p_32]"
+    ],
+    "resided_places": [
+      "Thiruvisanallur [l_1]"
+    ]
+  },
+  {
+    "type": "work",
     "id": "w_15",
     "name": "Śābdikarakṣā",
     "alt_names": [],
@@ -2626,7 +2640,8 @@
     "id": "w_74",
     "name": "Kāntimatīpariṇaya",
     "alt_names": [
-      "Kāntimatī-Śāharājīya"
+      "Kāntimatī-Śāharājīya",
+      "Kāntimatī-Śāharājīyanāṭaka"
     ],
     "url": "indexes/work_index.html#w_74",
     "places": [
