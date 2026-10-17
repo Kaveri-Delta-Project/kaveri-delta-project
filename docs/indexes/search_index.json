@@ -1103,6 +1103,13 @@
   },
   {
     "type": "place",
+    "id": "l_78",
+    "name": "Subrahmanya",
+    "alt_names": [],
+    "url": "indexes/place_index.html#l_78"
+  },
+  {
+    "type": "place",
     "id": "l_8",
     "name": "Thiruvaiyaru",
     "alt_names": [
@@ -1780,7 +1787,9 @@
     "name": "Sevāntikāpariṇaya",
     "alt_names": [],
     "url": "indexes/work_index.html#w_148",
-    "places": [],
+    "places": [
+      "Subrahmanya [l_78]"
+    ],
     "persons": [
       "Cokkanāthamakhin (younger) [p_32]"
     ],
