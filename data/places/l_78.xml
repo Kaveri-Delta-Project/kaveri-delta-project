@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Place</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPlace>
+        <place xml:id="l_78">
+          <placeName type="preferred">Subrahmanya</placeName>
+          <idno type="Wikidata">Q7631893</idno>
+          <bibl n="56">Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
+          <note type="coordinates">12.659844467935516, 75.60830619545557</note>
+        </place>
+      </listPlace>
+    </body>
+  </text>
+</TEI>
