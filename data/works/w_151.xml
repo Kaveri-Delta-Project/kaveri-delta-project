@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_151">
+          <title type="preferred">Taptamudrāvidrāvaṇa</title>
+          <title type="variant">Taptamudrāvidalana</title>
+          <editor key="p_33" role="aut">Bhāskara Dīkṣita</editor>
+          <note type="subject">Vedānta</note>
+          <note type="bibliographical" subtype="17" n="129a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" source="other" n="370">Thangaswami, R (1980). A Bibliographical Survey of Advaita Vedānta Literature. Madras: Rathnam Press. </note>
+          <note type="general">This work refutes Viśiṣṭādvaita doctrines</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
