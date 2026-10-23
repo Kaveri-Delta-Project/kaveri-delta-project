@@ -1827,8 +1827,24 @@
     "type": "work",
     "id": "w_150",
     "name": "Ātmatattvaparīkṣā",
-    "alt_names": [],
+    "alt_names": [
+      "Ātmaparīkṣā"
+    ],
     "url": "indexes/work_index.html#w_150",
+    "places": [],
+    "persons": [
+      "Bhāskara Dīkṣita [p_33]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_151",
+    "name": "Taptamudrāvidrāvaṇa",
+    "alt_names": [
+      "Taptamudrāvidalana"
+    ],
+    "url": "indexes/work_index.html#w_151",
     "places": [],
     "persons": [
       "Bhāskara Dīkṣita [p_33]"
