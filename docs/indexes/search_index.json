@@ -253,7 +253,8 @@
     "url": "indexes/person_index.html#p_33",
     "places": [
       "Thiruvisanallur [l_1]",
-      "Pallakaceri [l_62]"
+      "Pallakaceri [l_62]",
+      "Konerirājapuram [l_76]"
     ]
   },
   {
@@ -1091,7 +1092,9 @@
     "type": "place",
     "id": "l_76",
     "name": "Konerirājapuram",
-    "alt_names": [],
+    "alt_names": [
+      "Konerirājendrapura"
+    ],
     "url": "indexes/place_index.html#l_76"
   },
   {
@@ -1162,7 +1165,9 @@
     "persons": [
       "Bhāskara Dīkṣita [p_33]"
     ],
-    "resided_places": []
+    "resided_places": [
+      "Konerirājapuram [l_76]"
+    ]
   },
   {
     "type": "work",
@@ -1835,7 +1840,9 @@
     "persons": [
       "Bhāskara Dīkṣita [p_33]"
     ],
-    "resided_places": []
+    "resided_places": [
+      "Konerirājapuram [l_76]"
+    ]
   },
   {
     "type": "work",
@@ -1845,11 +1852,15 @@
       "Taptamudrāvidalana"
     ],
     "url": "indexes/work_index.html#w_151",
-    "places": [],
+    "places": [
+      "Konerirājapuram [l_76]"
+    ],
     "persons": [
       "Bhāskara Dīkṣita [p_33]"
     ],
-    "resided_places": []
+    "resided_places": [
+      "Konerirājapuram [l_76]"
+    ]
   },
   {
     "type": "work",
