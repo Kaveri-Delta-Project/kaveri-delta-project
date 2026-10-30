@@ -62,6 +62,9 @@
           <trait type="associate" key="p_18">
             <label>Bhūminātha Kavi</label>
           </trait>
+          <trait type="contemporary of" key="p_33">
+            <label>Bhāskara Dīkṣita</label>
+          </trait>
           <idno type="Wikidata">Q113774201</idno>
           <affiliation key="l_4" role="Born">
             <placeName>Kandaramanikkam</placeName>

@@ -18,6 +18,7 @@
       <listPlace>
         <place xml:id="l_76">
           <placeName type="preferred">Konerirājapuram</placeName>
+          <placeName type="variant">Konerirājendrapura</placeName>
           <desc type="function">Settlement</desc>
           <note type="coordinates">10.986241509533713, 79.52748560819845</note>
         </place>

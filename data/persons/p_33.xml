@@ -31,17 +31,26 @@
           <trait type="member of family" key="p_28">
             <label>Raṅganātha Sūri</label>
           </trait>
+          <trait type="contemporary of" key="p_4">
+            <label>Rāmabhadra Dīkṣita</label>
+          </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
           <affiliation key="l_62" role="Born">
             <placeName>Pallakaceri</placeName>
           </affiliation>
+          <affiliation key="l_76" role="Resided">
+            <placeName>Konerirājapuram</placeName>
+          </affiliation>
           <bibl source="other" n="68">Krishnamacharya, V. (1946). ‘Śāstradīpikāvyākhyā: Prabhāmaṇḍala’. In The Adyar Library Bulletin 10: 63–68.</bibl>
           <bibl subtype="17" n="129a">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
           <bibl>Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952.</bibl>
-          <note>He was a recipient of four shares of the land donation at Thiruvisanallur, alongside six other scholars, because he had mastered four śāstras. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 38.</note>
+          <bibl source="other">Thangaswami, R. A Bibliographical Survey of Advaita Vedānta Literature. Madras: Rathnam Press, 1980.</bibl>
+          <note>He was a recipient of four shares of the land donation at Thiruvisanallur, alongside six other scholars, because he had mastered four śāstras. (See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 38).</note>
           <note>He was a Sarvotamukhayājin. See Raghavan, Venkataraman. Śāhendravilāsa of Śrīdhara Veṅkaṭeśa (A Poem on the Life of King Śāhaji of Tanjore, 1684-1710). Tiruchi: The Kalyan Press, 1952: p. 40.</note>
+          <note>He was the son of Nāccamāmbā and Veṅkaṭapati Yajvan (also known as Umāmaheśvarācārya and famed as 'Abhinava Kālidāsa'), who was native to Pallakaceri and was a disciple of Nṛsiṃhāśramin. (See Thangaswami, R. A Bibliographical Survey of Advaita Vedānta Literature. Madras: Rathnam Press, 1980: p. 369).</note>
+          <note>He was born in the Hārīta gotra, and is known to have lived during the latter part of the 17th century. (See Thangaswami, R. A Bibliographical Survey of Advaita Vedānta Literature. Madras: Rathnam Press, 1980: p. 369).</note>
         </person>
       </listPerson>
     </body>
