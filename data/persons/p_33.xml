@@ -34,6 +34,9 @@
           <trait type="contemporary of" key="p_4">
             <label>Rāmabhadra Dīkṣita</label>
           </trait>
+          <trait type="son" key="p_68">
+            <label>Umāmaheśvara</label>
+          </trait>
           <affiliation key="l_1" role="Recipient (Land Donation)">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
