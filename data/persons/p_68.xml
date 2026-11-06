@@ -27,6 +27,16 @@
           <trait type="father" key="p_33">
             <label>Bhāskara Dīkṣita</label>
           </trait>
+          <trait type="teacher" key="p_33">
+            <label>Bhāskara Dīkṣita</label>
+          </trait>
+          <affiliation key="l_76" role="Resided">
+            <placeName>Konerirājapuram</placeName>
+          </affiliation>
+          <bibl subtype="2" n="47a">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <bibl subtype="2" n="393b">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <note>He was the pupil of Nṛsiṁhāśramin (also known as Nṛsiṁhāśramayogin), who was the author of the Tattvaviveka. (See New Catalogus Catalogorum (NCC): vol. 2, p. 47a.)</note>
+          <note>He was of the Harita gotra, and was described as the crest-jewel of Cola land and as ‘Sarvatantra-pravartaka’. (See New Catalogus Catalogorum (NCC): vol. 2, p. 393b.)</note>
         </person>
       </listPerson>
     </body>
