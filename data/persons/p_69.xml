@@ -23,11 +23,13 @@
         <person xml:id="p_69">
           <persName type="preferred">Ayyādhvarin</persName>
           <persName type="variant">Āryadhvarin</persName>
+          <persName type="variant">Āryadhvarīndra</persName>
           <trait type="student" key="p_27">
             <label>Kṛṣṇānanda Sarasvatī</label>
           </trait>
           <bibl subtype="5" n="14b">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
           <bibl subtype="1" n="367a">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <bibl subtype="2" n="176a">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
         </person>
       </listPerson>
     </body>

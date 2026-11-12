@@ -28,6 +28,10 @@
     name: Anuṣṭhānapaddhati
   }
   {
+    xml_id: w_153
+    name: Anuṣṭhānapaddhati (vyākhyā)
+  }
+  {
     xml_id: w_126
     name: Anyāpadeśaśataka
   }
@@ -514,6 +518,10 @@
   {
     xml_id: w_61
     name: Śukasandeśa
+  }
+  {
+    xml_id: w_152
+    name: Śukāṣṭakavyākhyāna
   }
   {
     xml_id: w_15

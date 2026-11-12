@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_153">
+          <title type="preferred">Anuṣṭhānapaddhati (vyākhyā)</title>
+          <editor key="p_69" role="aut">Ayyādhvarin</editor>
+          <note type="genre" source="commentary" key="w_72">Anuṣṭhānapaddhati</note>
+          <note type="bibliographical" subtype="5" n="14a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" subtype="1" n="367a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" subtype="17" n="ms. 11816">A Descriptive Catalogue of the Sanskrit Manuscripts in the Tanjore Maharaja Serfoji’s Sarasvati Mahal Library, Tanjore (Tanjore). Vols. 1–19.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
