@@ -609,7 +609,8 @@
     "id": "p_69",
     "name": "Ayyādhvarin",
     "alt_names": [
-      "Āryadhvarin"
+      "Āryadhvarin",
+      "Āryadhvarīndra"
     ],
     "url": "indexes/person_index.html#p_69",
     "places": []
@@ -1877,6 +1878,30 @@
     "resided_places": [
       "Konerirājapuram [l_76]"
     ]
+  },
+  {
+    "type": "work",
+    "id": "w_152",
+    "name": "Śukāṣṭakavyākhyāna",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_152",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_153",
+    "name": "Anuṣṭhānapaddhati (vyākhyā)",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_153",
+    "places": [],
+    "persons": [
+      "Ayyādhvarin [p_69]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
