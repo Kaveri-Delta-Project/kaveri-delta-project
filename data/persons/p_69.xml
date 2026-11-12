@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listPerson>
+        <person xml:id="p_69">
+          <persName type="preferred">Ayyādhvarin</persName>
+          <persName type="variant">Āryadhvarin</persName>
+          <trait type="student" key="p_27">
+            <label>Kṛṣṇānanda Sarasvatī</label>
+          </trait>
+          <bibl subtype="5" n="14b">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <bibl subtype="1" n="367a">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+        </person>
+      </listPerson>
+    </body>
+  </text>
+</TEI>
