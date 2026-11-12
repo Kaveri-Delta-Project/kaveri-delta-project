@@ -606,6 +606,16 @@
   },
   {
     "type": "person",
+    "id": "p_69",
+    "name": "Ayyādhvarin",
+    "alt_names": [
+      "Āryadhvarin"
+    ],
+    "url": "indexes/person_index.html#p_69",
+    "places": []
+  },
+  {
+    "type": "person",
     "id": "p_7",
     "name": "Gaṅgādharavājapeyin",
     "alt_names": [
@@ -1058,13 +1068,6 @@
     "name": "Mahalingeswarar Temple",
     "alt_names": [],
     "url": "indexes/place_index.html#l_7"
-  },
-  {
-    "type": "place",
-    "id": "l_70",
-    "name": "Eraharam",
-    "alt_names": [],
-    "url": "indexes/place_index.html#l_70"
   },
   {
     "type": "place",
