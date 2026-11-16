@@ -1249,7 +1249,9 @@
     "alt_names": [
       "Ātmasāmrājya",
       "Mokṣasāmrājya",
-      "Ātmasāmrājyasiddhi"
+      "Ātmasāmrājyasiddhi",
+      "Ātmasāmrājyasiddhi",
+      "Sāmrājyasiddhi"
     ],
     "url": "indexes/work_index.html#w_106",
     "places": [],
@@ -1901,6 +1903,20 @@
     "places": [],
     "persons": [
       "Ayyādhvarin [p_69]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_154",
+    "name": "Vedāntasiddhāntasūktimañjarīprakāśa",
+    "alt_names": [
+      "Prakāśa"
+    ],
+    "url": "indexes/work_index.html#w_154",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
     ],
     "resided_places": []
   },
