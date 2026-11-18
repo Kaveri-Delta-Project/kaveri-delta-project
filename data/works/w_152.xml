@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished research data</p>
@@ -19,6 +23,12 @@
         <bibl xml:id="w_152">
           <title type="preferred">Śukāṣṭakavyākhyāna</title>
           <editor key="p_39" role="aut">Gaṅgādhara Sarasvatī</editor>
+          <note type="bibliographical" subtype="5" n="207a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" source="other" n="347, ms. 960">Notices of Sanskrit MSS by Rajendralala Mitra. Vol. II, Part I. Calcutta: Baptist Mission Press, 1872.</note>
+          <note type="bibliographical" subtype="10" n="23a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="general">This is a commentary on the Śukāṣṭaka (also known as Nirvāṇāṣṭaka). (See New Catalogus Catalogorum (NCC). Vols 1–36: Vol. 5, p. 207a.)</note>
+          <note type="general">This work is titled 'Śukāṣṭaka, saṭika' in Notices of Sanskrit MSS by Rajendralala Mitra. Vol. II, Part I. Calcutta: Baptist Mission Press, 1872.</note>
+          <note type="general">The Śukāṣṭaka is a work of eight verses on jīvanmuktas according to Advaita Vedānta. It is also known as the Vyāsaputrāṣṭaka, Nirvāṇāṣṭaka, Nirvāṇaprakaraṇa, or Śukadevāṣṭaka, and is ascribed to Śukācārya. (See New Catalogus Catalogorum (NCC). Vols 1–36: Vol. 10, p. 23a.)</note>
         </bibl>
       </listBibl>
     </body>
