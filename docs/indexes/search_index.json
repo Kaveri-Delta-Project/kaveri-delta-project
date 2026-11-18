@@ -1329,7 +1329,9 @@
     "type": "work",
     "id": "w_111",
     "name": "Vedāntasiddhāntasūktimañjarī",
-    "alt_names": [],
+    "alt_names": [
+      "Siddhāntasūktimañjarī"
+    ],
     "url": "indexes/work_index.html#w_111",
     "places": [],
     "persons": [
@@ -1914,6 +1916,18 @@
       "Prakāśa"
     ],
     "url": "indexes/work_index.html#w_154",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_155",
+    "name": "Praṇavakalpaprakāśa-Praṇavabhāṣya",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_155",
     "places": [],
     "persons": [
       "Gaṅgādhara Sarasvatī [p_39]"
