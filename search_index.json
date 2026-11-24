@@ -1925,9 +1925,21 @@
   {
     "type": "work",
     "id": "w_155",
-    "name": "Praṇavakalpaprakāśa-Praṇavabhāṣya",
+    "name": "Praṇavakalpaprakāśa",
     "alt_names": [],
     "url": "indexes/work_index.html#w_155",
+    "places": [],
+    "persons": [
+      "Gaṅgādhara Sarasvatī [p_39]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_156",
+    "name": "Siddhāntabinduśīkara",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_156",
     "places": [],
     "persons": [
       "Gaṅgādhara Sarasvatī [p_39]"
