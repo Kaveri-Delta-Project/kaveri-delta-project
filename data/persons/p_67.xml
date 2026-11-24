@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_67">
-          <persName type="preferred">Gīrvaṇendrasarasvatī</persName>
+          <persName type="preferred">Gīrvaṇendra Sarasvatī</persName>
           <persName type="variant">Gīrvaṇendra</persName>
           <persName type="variant">Gīrvaṇendrasarasvatī II</persName>
           <trait type="teacher" key="p_1">

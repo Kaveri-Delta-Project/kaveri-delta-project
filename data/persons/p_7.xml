@@ -25,7 +25,7 @@
     <body>
       <listPerson>
         <person xml:id="p_7">
-          <persName type="preferred">Gaṅgādharavājapeyin</persName>
+          <persName type="preferred">Gaṅgādhara Vājapeyin</persName>
           <persName type="variant">Gaṅgādharamakhin</persName>
           <persName type="variant">Gaṅgādharādhvarin (alias Kākoji) </persName>
           <trait type="associate" key="p_6">
