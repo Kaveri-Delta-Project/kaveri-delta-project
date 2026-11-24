@@ -257,7 +257,7 @@
   }
   {
     xml_id: w_155
-    name: Praṇavakalpaprakāśa-Praṇavabhāṣya
+    name: Praṇavakalpaprakāśa
   }
   {
     xml_id: w_116
@@ -338,6 +338,10 @@
   {
     xml_id: w_148
     name: Sevāntikāpariṇaya
+  }
+  {
+    xml_id: w_156
+    name: Siddhāntabinduśīkara
   }
   {
     xml_id: w_68
