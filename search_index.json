@@ -33,7 +33,7 @@
   {
     "type": "person",
     "id": "p_12",
-    "name": "Bhagavantarāyamakhin",
+    "name": "Bhagavantarāya Makhin",
     "alt_names": [],
     "url": "indexes/person_index.html#p_12",
     "places": []
@@ -51,7 +51,7 @@
   {
     "type": "person",
     "id": "p_15",
-    "name": "Ānandarāyamakhin",
+    "name": "Ānandarāya Makhin",
     "alt_names": [],
     "url": "indexes/person_index.html#p_15",
     "places": []
@@ -115,7 +115,7 @@
   {
     "type": "person",
     "id": "p_20",
-    "name": "Rāmanāthamakhin",
+    "name": "Rāmanātha Makhin",
     "alt_names": [],
     "url": "indexes/person_index.html#p_20",
     "places": []
@@ -225,7 +225,7 @@
   {
     "type": "person",
     "id": "p_3",
-    "name": "Cokkanāthamakhin",
+    "name": "Cokkanātha Makhin",
     "alt_names": [
       "Cokkanāthakavi",
       "Cokkanātha Dīkṣita"
@@ -238,7 +238,7 @@
   {
     "type": "person",
     "id": "p_32",
-    "name": "Cokkanāthamakhin (younger)",
+    "name": "Cokkanātha Makhin (younger)",
     "alt_names": [],
     "url": "indexes/person_index.html#p_32",
     "places": [
@@ -268,7 +268,7 @@
   {
     "type": "person",
     "id": "p_35",
-    "name": "Sudarśanasūri",
+    "name": "Sudarśana Sūri",
     "alt_names": [],
     "url": "indexes/person_index.html#p_35",
     "places": []
@@ -371,7 +371,7 @@
   {
     "type": "person",
     "id": "p_47",
-    "name": "Tyāgarājamakhin",
+    "name": "Tyāgarāja Makhin",
     "alt_names": [
       "Mannargudi Raju Sastrigal"
     ],
@@ -411,7 +411,7 @@
   {
     "type": "person",
     "id": "p_5",
-    "name": "Tryambakarāyamakhin",
+    "name": "Tryambakarāya Makhin",
     "alt_names": [
       "Tryambakayajvan",
       "Tryaṃbakādhvarin"
@@ -434,7 +434,7 @@
   {
     "type": "person",
     "id": "p_52",
-    "name": "Muddurāmakavi",
+    "name": "Muddurāma Kavi",
     "alt_names": [
       "Kavirākṣasa"
     ],
@@ -634,7 +634,7 @@
   {
     "type": "person",
     "id": "p_8",
-    "name": "Bhāskararāyamakhin",
+    "name": "Bhāskararāya Makhin",
     "alt_names": [
       "Bhāskararāya",
       "Bhāsurānandanātha"
@@ -1321,7 +1321,7 @@
     "url": "indexes/work_index.html#w_110",
     "places": [],
     "persons": [
-      "Muddurāmakavi [p_52]"
+      "Muddurāma Kavi [p_52]"
     ],
     "resided_places": []
   },
@@ -1705,7 +1705,7 @@
     "url": "indexes/work_index.html#w_14",
     "places": [],
     "persons": [
-      "Cokkanāthamakhin [p_3]",
+      "Cokkanātha Makhin [p_3]",
       "Vaidyanātha Dīkṣita [p_22]"
     ],
     "resided_places": []
@@ -1802,7 +1802,7 @@
     "url": "indexes/work_index.html#w_147",
     "places": [],
     "persons": [
-      "Cokkanāthamakhin (younger) [p_32]"
+      "Cokkanātha Makhin (younger) [p_32]"
     ],
     "resided_places": [
       "Thiruvisanallur [l_1]"
@@ -1818,7 +1818,7 @@
       "Subrahmanya [l_78]"
     ],
     "persons": [
-      "Cokkanāthamakhin (younger) [p_32]"
+      "Cokkanātha Makhin (younger) [p_32]"
     ],
     "resided_places": [
       "Thiruvisanallur [l_1]"
@@ -1832,7 +1832,7 @@
     "url": "indexes/work_index.html#w_149",
     "places": [],
     "persons": [
-      "Cokkanāthamakhin (younger) [p_32]"
+      "Cokkanātha Makhin (younger) [p_32]"
     ],
     "resided_places": [
       "Thiruvisanallur [l_1]"
@@ -1846,7 +1846,7 @@
     "url": "indexes/work_index.html#w_15",
     "places": [],
     "persons": [
-      "Cokkanāthamakhin [p_3]"
+      "Cokkanātha Makhin [p_3]"
     ],
     "resided_places": []
   },
@@ -2003,7 +2003,7 @@
     "places": [],
     "persons": [
       "Paramaśivendra Sarasvatī [p_11]",
-      "Tryambakarāyamakhin [p_5]"
+      "Tryambakarāya Makhin [p_5]"
     ],
     "resided_places": []
   },
@@ -2015,7 +2015,7 @@
     "url": "indexes/work_index.html#w_2",
     "places": [],
     "persons": [
-      "Cokkanāthamakhin [p_3]"
+      "Cokkanātha Makhin [p_3]"
     ],
     "resided_places": []
   },
@@ -2087,7 +2087,7 @@
     "url": "indexes/work_index.html#w_25",
     "places": [],
     "persons": [
-      "Bhagavantarāyamakhin [p_12]"
+      "Bhagavantarāya Makhin [p_12]"
     ],
     "resided_places": []
   },
@@ -2102,7 +2102,7 @@
     "url": "indexes/work_index.html#w_26",
     "places": [],
     "persons": [
-      "Bhagavantarāyamakhin [p_12]"
+      "Bhagavantarāya Makhin [p_12]"
     ],
     "resided_places": []
   },
@@ -2114,7 +2114,7 @@
     "url": "indexes/work_index.html#w_27",
     "places": [],
     "persons": [
-      "Bhagavantarāyamakhin [p_12]"
+      "Bhagavantarāya Makhin [p_12]"
     ],
     "resided_places": []
   },
@@ -2155,7 +2155,7 @@
     "url": "indexes/work_index.html#w_3",
     "places": [],
     "persons": [
-      "Cokkanāthamakhin [p_3]"
+      "Cokkanātha Makhin [p_3]"
     ],
     "resided_places": []
   },
@@ -2289,7 +2289,7 @@
     "places": [],
     "persons": [
       "Nallādhvarin [p_19]",
-      "Rāmanāthamakhin [p_20]",
+      "Rāmanātha Makhin [p_20]",
       "Rāmabhadra Dīkṣita [p_4]",
       "Śrīdhara Veṅkaṭeśa Ayyāvāḷ [p_17]",
       "Periyappā Kavi [p_24]"
@@ -2654,7 +2654,7 @@
       "Bṛhadīśvara temple [l_24]"
     ],
     "persons": [
-      "Ānandarāyamakhin [p_15]"
+      "Ānandarāya Makhin [p_15]"
     ],
     "resided_places": []
   },
@@ -2670,7 +2670,7 @@
       "Thanjapureeswarar Sri Shiva Temple Aanandavalli Amman Temple [l_77]"
     ],
     "persons": [
-      "Ānandarāyamakhin [p_15]"
+      "Ānandarāya Makhin [p_15]"
     ],
     "resided_places": []
   },
@@ -2683,7 +2683,7 @@
     "places": [],
     "persons": [
       "Vedakavīśvara [p_25]",
-      "Ānandarāyamakhin [p_15]"
+      "Ānandarāya Makhin [p_15]"
     ],
     "resided_places": []
   },
@@ -2781,7 +2781,7 @@
       "Mahalingeswarar Temple [l_7]"
     ],
     "persons": [
-      "Cokkanāthamakhin (younger) [p_32]"
+      "Cokkanātha Makhin (younger) [p_32]"
     ],
     "resided_places": [
       "Thiruvisanallur [l_1]"
@@ -2795,7 +2795,7 @@
     "url": "indexes/work_index.html#w_75",
     "places": [],
     "persons": [
-      "Sudarśanasūri [p_35]"
+      "Sudarśana Sūri [p_35]"
     ],
     "resided_places": []
   },
@@ -2870,7 +2870,7 @@
     "url": "indexes/work_index.html#w_8",
     "places": [],
     "persons": [
-      "Tryambakarāyamakhin [p_5]",
+      "Tryambakarāya Makhin [p_5]",
       "Ḍhuṇḍirāja Vyāsa [p_9]",
       "Serfoji Bhonsle [p_10]"
     ],
