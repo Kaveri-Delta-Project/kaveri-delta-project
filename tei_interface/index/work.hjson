@@ -16,6 +16,10 @@
     name: Advaitarasamañjarī
   }
   {
+    xml_id: w_160
+    name: Amṛtabindūpaniṣaddīpikā
+  }
+  {
     xml_id: w_108
     name: Anubhavatriṁśacchlokī
   }
@@ -230,6 +234,10 @@
   {
     xml_id: w_49
     name: Paribhāṣāvṛttivyākhyāna
+  }
+  {
+    xml_id: w_159
+    name: Parimala (on Advaitarasamañjarī)
   }
   {
     xml_id: w_30
@@ -474,6 +482,18 @@
   {
     xml_id: w_150
     name: Ātmatattvaparīkṣā
+  }
+  {
+    xml_id: w_157
+    name: Ātmavidyāvilāsa
+  }
+  {
+    xml_id: w_161
+    name: Ātmānātmaviveka
+  }
+  {
+    xml_id: w_162
+    name: Ātmānātmavivekaprakāśikā
   }
   {
     xml_id: w_39

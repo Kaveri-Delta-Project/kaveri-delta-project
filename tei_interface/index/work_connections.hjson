@@ -24,7 +24,14 @@
       Vidyāpariṇayanāṭaka
     ]
   ]
-  w_48: []
+  w_48:
+  [
+    [
+      w_159
+      work
+      Advaitarasamañjarī
+    ]
+  ]
   w_76:
   [
     [
@@ -111,6 +118,14 @@
       w_154
       work
       Vedāntasiddhāntasūktimañjarī
+    ]
+  ]
+  w_161:
+  [
+    [
+      w_162
+      work
+      Ātmānātmaviveka
     ]
   ]
 }

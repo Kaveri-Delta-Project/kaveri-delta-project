@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_161">
+          <title type="preferred">Ātmānātmaviveka</title>
+          <editor key="p_21" role="aut">Sadāśivendra Sarasvatī</editor>
+          <note type="genre">Didactic</note>
+          <note type="subject">Vedānta</note>
+          <note type="bibliographical" subtype="37" n="222a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" subtype="2" n="61b">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="general">A catechism on Advaita Vedānta.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

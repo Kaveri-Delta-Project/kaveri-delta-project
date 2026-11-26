@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Sanskrit Project – Person</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
       </titleStmt>
       <publicationStmt>
         <p>Research data</p>
@@ -18,15 +22,24 @@
       <listPerson>
         <person xml:id="p_21">
           <persName type="preferred">Sadāśivendra Sarasvatī</persName>
+          <persName type="variant">Sadāśiva Brahmendra</persName>
           <trait type="teacher" key="p_19">
             <label>Nallādhvarin</label>
           </trait>
           <trait type="student" key="p_11">
             <label>Paramaśivendra Sarasvatī</label>
           </trait>
+          <trait type="contemporary of" key="p_42">
+            <label>Sarabhoji</label>
+          </trait>
+          <trait type="contemporary of" key="p_17">
+            <label>Śrīdhara Veṅkaṭeśa Ayyāvāḷ</label>
+          </trait>
           <affiliation key="l_1" role="Born">
             <placeName>Thiruvisanallur</placeName>
           </affiliation>
+          <bibl subtype="37" n="221b">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
+          <bibl subtype="37" n="222a">New Catalogus Catalogorum (NCC). Vols 1–36.</bibl>
         </person>
       </listPerson>
     </body>

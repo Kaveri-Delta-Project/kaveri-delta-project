@@ -22,6 +22,9 @@
           <trait type="beneficiary" key="p_15">
             <label>Ānandarāya Makhin</label>
           </trait>
+          <trait type="contemporary of" key="p_21">
+            <label>Sadāśivendra Sarasvatī</label>
+          </trait>
           <floruit from="1711" to="1730">r. 1711-1730</floruit>
         </person>
       </listPerson>

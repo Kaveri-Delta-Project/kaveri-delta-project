@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_162">
+          <title type="preferred">Ātmānātmavivekaprakāśikā</title>
+          <editor key="p_21" role="aut">Sadāśivendra Sarasvatī</editor>
+          <note type="genre" source="commentary" key="w_161">Ātmānātmaviveka</note>
+          <note type="bibliographical" subtype="37" n="222a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

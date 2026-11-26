@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sanskrit Project – Work</title>
+        <respStmt>
+          <name>Hershini Soneji</name>
+          <resp>Contributor</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Unpublished research data</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <bibl xml:id="w_160">
+          <title type="preferred">Amṛtabindūpaniṣaddīpikā</title>
+          <editor key="p_21" role="aut">Sadāśivendra Sarasvatī</editor>
+          <note type="bibliographical" subtype="37" n="222a">New Catalogus Catalogorum (NCC). Vols 1–36.</note>
+          <note type="bibliographical" source="other" n="2107">A Triennial Catalogue of Manuscripts, GOML Madras, Vol. II, Part I, Sanskrit C, 1917.</note>
+          <note type="general">This is a commentary on the Amṛtabindūpaniṣad.</note>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
