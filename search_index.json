@@ -124,7 +124,9 @@
     "type": "person",
     "id": "p_21",
     "name": "Sadāśivendra Sarasvatī",
-    "alt_names": [],
+    "alt_names": [
+      "Sadāśiva Brahmendra"
+    ],
     "url": "indexes/person_index.html#p_21",
     "places": [
       "Thiruvisanallur [l_1]"
@@ -1948,6 +1950,34 @@
   },
   {
     "type": "work",
+    "id": "w_157",
+    "name": "Ātmavidyāvilāsa",
+    "alt_names": [
+      "Brahmavidyāvilāsa"
+    ],
+    "url": "indexes/work_index.html#w_157",
+    "places": [],
+    "persons": [
+      "Sadāśivendra Sarasvatī [p_21]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_159",
+    "name": "Parimala (on Advaitarasamañjarī)",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_159",
+    "places": [],
+    "persons": [
+      "Nallādhvarin [p_19]"
+    ],
+    "resided_places": [
+      "Kandaramanikkam [l_4]"
+    ]
+  },
+  {
+    "type": "work",
     "id": "w_16",
     "name": "Mudrārākṣasavyākhyāna",
     "alt_names": [],
@@ -1960,6 +1990,42 @@
     "resided_places": [
       "Svamimalai [l_15]"
     ]
+  },
+  {
+    "type": "work",
+    "id": "w_160",
+    "name": "Amṛtabindūpaniṣaddīpikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_160",
+    "places": [],
+    "persons": [
+      "Sadāśivendra Sarasvatī [p_21]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_161",
+    "name": "Ātmānātmaviveka",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_161",
+    "places": [],
+    "persons": [
+      "Sadāśivendra Sarasvatī [p_21]"
+    ],
+    "resided_places": []
+  },
+  {
+    "type": "work",
+    "id": "w_162",
+    "name": "Ātmānātmavivekaprakāśikā",
+    "alt_names": [],
+    "url": "indexes/work_index.html#w_162",
+    "places": [],
+    "persons": [
+      "Sadāśivendra Sarasvatī [p_21]"
+    ],
+    "resided_places": []
   },
   {
     "type": "work",
