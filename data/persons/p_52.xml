@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_52">
-          <persName type="preferred">Muddurāmakavi</persName>
+          <persName type="preferred">Muddurāma Kavi</persName>
           <persName type="variant">Kavirākṣasa</persName>
           <trait type="beneficiary" key="p_6">
             <label>Śāhaji I (of Thanjavur)</label>

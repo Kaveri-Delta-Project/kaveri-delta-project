@@ -21,7 +21,7 @@
     <body>
       <listPerson>
         <person xml:id="p_32">
-          <persName type="preferred">Cokkanāthamakhin (younger)</persName>
+          <persName type="preferred">Cokkanātha Makhin (younger)</persName>
           <trait type="student" key="p_1">
             <label>Nīlakaṇṭha Dīkṣita</label>
           </trait>
@@ -32,7 +32,7 @@
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
           <trait type="contemporary of" key="p_3">
-            <label>Cokkanāthamakhin</label>
+            <label>Cokkanātha Makhin</label>
           </trait>
           <affiliation key="l_1" role="Resided">
             <placeName>Thiruvisanallur</placeName>

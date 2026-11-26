@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_5">
-          <persName type="preferred">Tryambakarāyamakhin</persName>
+          <persName type="preferred">Tryambakarāya Makhin</persName>
           <persName type="variant">Tryambakayajvan</persName>
           <persName type="variant">Tryaṃbakādhvarin</persName>
           <trait type="associate" key="p_6">
@@ -30,10 +30,10 @@
             <label>Gaṅgādharādhvarin (alias Kākoji)</label>
           </trait>
           <trait type="brother" key="p_12">
-            <label>Bhagavantarāyamakhin</label>
+            <label>Bhagavantarāya Makhin</label>
           </trait>
           <trait type="member of family" key="p_15">
-            <label>Ānandarāyamakhin</label>
+            <label>Ānandarāya Makhin</label>
           </trait>
           <trait type="teacher" key="p_46">
             <label>Kuppusvāmī Śāstrī</label>

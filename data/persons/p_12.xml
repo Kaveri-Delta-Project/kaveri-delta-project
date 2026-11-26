@@ -17,18 +17,18 @@
     <body>
       <listPerson>
         <person xml:id="p_12">
-          <persName type="preferred">Bhagavantarāyamakhin</persName>
+          <persName type="preferred">Bhagavantarāya Makhin</persName>
           <trait type="son" key="p_13">
             <label>Gaṅgādharādhvarin (alias Kākoji)</label>
           </trait>
           <trait type="brother" key="p_5">
-            <label>Tryambakarāyamakhin</label>
+            <label>Tryambakarāya Makhin</label>
           </trait>
           <trait type="contemporary of" key="p_4">
             <label>Rāmabhadra Dīkṣita</label>
           </trait>
           <trait type="member of family" key="p_15">
-            <label>Ānandarāyamakhin</label>
+            <label>Ānandarāya Makhin</label>
           </trait>
           <trait type="son" key="p_7">
             <label>Gaṅgādhara Vājapeyin</label>

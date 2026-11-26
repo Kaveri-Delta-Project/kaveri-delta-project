@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_35">
-          <persName type="preferred">Sudarśanasūri</persName>
+          <persName type="preferred">Sudarśana Sūri</persName>
           <floruit from="1250" to="1300">ca. 1250-1300</floruit>
         </person>
       </listPerson>

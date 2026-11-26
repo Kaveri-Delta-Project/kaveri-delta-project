@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_15">
-          <persName type="preferred">Ānandarāyamakhin</persName>
+          <persName type="preferred">Ānandarāya Makhin</persName>
           <trait type="father" key="p_14">
             <label>Nṛsiṃharāya II</label>
           </trait>
@@ -34,10 +34,10 @@
             <label>Sarabhoji</label>
           </trait>
           <trait type="member of family" key="p_12">
-            <label>Bhagavantarāyamakhin</label>
+            <label>Bhagavantarāya Makhin</label>
           </trait>
           <trait type="member of family" key="p_5">
-            <label>Tryambakarāyamakhin</label>
+            <label>Tryambakarāya Makhin</label>
           </trait>
           <trait type="grandson" key="p_7">
             <label>Gaṅgādhara Vājapeyin</label>

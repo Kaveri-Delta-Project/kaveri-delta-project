@@ -32,19 +32,19 @@
             <label>Śāhaji I (of Thanjavur)</label>
           </trait>
           <trait type="teacher" key="p_8">
-            <label>Bhāskararāyamakhin</label>
+            <label>Bhāskararāya Makhin</label>
           </trait>
           <trait type="associate" key="p_8">
-            <label>Bhāskararāyamakhin</label>
+            <label>Bhāskararāya Makhin</label>
           </trait>
           <trait type="father" key="p_5">
-            <label>Tryambakarāyamakhin</label>
+            <label>Tryambakarāya Makhin</label>
           </trait>
           <trait type="father" key="p_12">
-            <label>Bhagavantarāyamakhin</label>
+            <label>Bhagavantarāya Makhin</label>
           </trait>
           <trait type="grandfather" key="p_15">
-            <label>Ānandarāyamakhin</label>
+            <label>Ānandarāya Makhin</label>
           </trait>
           <floruit from="1690" to="1690">ca. 1690</floruit>
           <affiliation key="l_17" role="Recipient (Land Donation)">

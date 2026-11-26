@@ -17,7 +17,7 @@
     <body>
       <listPerson>
         <person xml:id="p_8">
-          <persName type="preferred">Bhāskararāyamakhin</persName>
+          <persName type="preferred">Bhāskararāya Makhin</persName>
           <persName type="variant">Bhāskararāya</persName>
           <persName type="variant">Bhāsurānandanātha</persName>
           <trait type="student" key="p_7">
